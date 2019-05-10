@@ -8,5 +8,6 @@
 	<classpathentry kind="lib" path="data/lib/xmlpull.jar"/>
 	<classpathentry kind="lib" path="data/lib/xpp.jar"/>
 	<classpathentry kind="lib" path="data/lib/xstream.jar"/>
+	<classpathentry kind="lib" path="data/lib/core.jar"/>
 	<classpathentry kind="output" path="core/bin"/>
 </classpath>
