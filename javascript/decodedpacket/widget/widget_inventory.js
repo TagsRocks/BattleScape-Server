@@ -1096,7 +1096,6 @@ DecodedPacketWidget.prototype.widget_149 = function(player, index, childID, slot
         player.getInventory().deleteItem(itemID, 1, slot);
         var mediumClueSlot = Utils.randomE(ttMedium.length);
         var mediumItemID = ttMedium[mediumClueSlot];
-        Logger.println(mediumClueSlot + ": " + mediumItemID);
         player.getInventory().addItem(mediumItemID, 1, slot);
         if (Utils.randomE(5) == 0) {
             var extraItemID = ttLoot[Utils.randomE(ttLoot.length)];

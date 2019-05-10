@@ -1,6 +1,7 @@
 .DS_Store
 thumbs.db
 [Dd]esktop.ini
+nohup.out
 .gitmodules
 /core
 /data/dynamic
