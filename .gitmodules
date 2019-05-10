@@ -1,0 +1,3 @@
+[submodule "BattleScapeCore"]
+	path = BattleScapeCore
+	url = https://github.com/Palidino/BattleScapeCore.git
