@@ -26,5 +26,6 @@
     "files.insertFinalNewline": true,
     "javascript.validate.enable": false,
     "java.dependency.syncWithFolderExplorer": true,
-    "java.dependency.packagePresentation": "flat"
+    "java.dependency.packagePresentation": "flat",
+    "search.useIgnoreFiles": false
 }
