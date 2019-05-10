@@ -1,0 +1,96 @@
+[
+  {
+    "id": "NpcID.HETTY",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2968,
+    "y": 3205
+  },
+  {
+    "id": "NpcID.BRIAN_1309",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2955,
+    "y": 3203
+  },
+  {
+    "id": "NpcID.ROMMIK",
+    "direction": 1,
+    "moveDistance": 2,
+    "x": 2949,
+    "y": 3205
+  },
+  {
+    "id": "NpcID.PHIALS",
+    "direction": 1,
+    "moveDistance": 2,
+    "x": 2949,
+    "y": 3212
+  },
+  {
+    "id": "NpcID.SHOP_KEEPER_516",
+    "direction": 1,
+    "x": 2947,
+    "y": 3217
+  },
+  {
+    "id": "NpcID.SHOP_ASSISTANT",
+    "direction": 4,
+    "x": 2948,
+    "y": 3217
+  },
+  {
+    "id": "NpcID.IMP_7",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 2947,
+    "y": 3221
+  },
+  {
+    "id": "NpcID.TOOL_LEPRECHAUN",
+    "direction": 1,
+    "x": 2940,
+    "y": 3225
+  },
+  {
+    "id": "NpcID.TARIA",
+    "direction": 1,
+    "moveDistance": 2,
+    "x": 2943,
+    "y": 3224
+  },
+  {
+    "id": "NpcID.IMP_7",
+    "direction": 1,
+    "moveDistance": 8,
+    "x": 2937,
+    "y": 3234
+  },
+  {
+    "id": "NpcID.CHANCY",
+    "direction": 1,
+    "x": 2929,
+    "y": 3222
+  },
+  {
+    "id": "NpcID.HOPS",
+    "direction": 1,
+    "moveDistance": 2,
+    "x": 2931,
+    "y": 3220
+  },
+  {
+    "id": "NpcID.DA_VINCI",
+    "direction": 1,
+    "moveDistance": 2,
+    "x": 2928,
+    "y": 3218
+  },
+  {
+    "id": "NpcID.CHEMIST",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2932,
+    "y": 3209
+  }
+]

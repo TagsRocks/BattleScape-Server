@@ -1,0 +1,8 @@
+{
+  "name": "Culinaromancer Shop",
+  "items": [
+    { "id": "ItemID.HARDLEATHER_GLOVES", "price": 65 },
+    { "id": "ItemID.BRONZE_GLOVES", "price": 130 },
+    { "id": "ItemID.IRON_GLOVES", "price": 325 }
+  ]
+}
