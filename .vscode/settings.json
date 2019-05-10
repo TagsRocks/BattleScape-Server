@@ -1,0 +1,30 @@
+{
+    "files.exclude": {
+        "Client/bin/": true,
+        "Server/core/bin/": true,
+        "Server/data/dynamic/": true,
+        "core/bin/": true,
+        "data/dynamic/": true,
+        "**/nohup.out": true
+    },
+    "search.exclude": {
+        "Client/": true,
+        "Server/data/cache/": true,
+        "Server/data/lib/": true,
+        "Server/data/json/map/xtea.json": true,
+        "data/cache/": true,
+        "data/lib/": true,
+        "data/json/map/xtea.json": true,
+        "**/*.zip": true
+    },
+    "editor.wordWrap": "wordWrapColumn",
+    "editor.wordWrapColumn": 120,
+    "editor.rulers": [
+        120
+    ],
+    "editor.wrappingIndent": "deepIndent",
+    "files.insertFinalNewline": true,
+    "javascript.validate.enable": false,
+    "java.dependency.syncWithFolderExplorer": true,
+    "java.dependency.packagePresentation": "flat"
+}
