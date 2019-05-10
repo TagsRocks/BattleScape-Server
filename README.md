@@ -1,3 +1,3 @@
 # BattleScape
 
-A portion of the BS code. Requires access to the core library to properly test changes.
+A portion of the BS code. Requires access to the core library to properly test changes and run the server.
