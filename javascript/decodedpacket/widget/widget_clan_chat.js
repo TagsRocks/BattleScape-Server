@@ -23,7 +23,7 @@ DecodedPacketWidget.prototype.widget_94 = function(player, index, childID, slot,
     switch (childID) {
     case 10:
         if (index == 0) {
-            player.getGameEncoder().sendEnterString("Enter chat prefix:", new ValueEntered.StringEvent() {
+            player.getGameEncoder().sendEnterString("Enter chat prefix:", new ValueEnteredEvent.StringEvent() {
                 execute: function(value) {
                     player.getMessaging().sendClanSetupName(value);
                     RequestManager.getInstance().addClanSetting(player, Clan.NAME, value);

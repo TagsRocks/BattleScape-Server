@@ -29,7 +29,7 @@ DecodedPacketWidget.prototype.widget_12 = function(player, index, childID, slot,
         } else if (index == 4) {
             player.getBank().withdraw(itemID, realSlot, player.getBank().getLastEnteredX());
         } else if (index == 5) {
-            player.getGameEncoder().sendEnterAmount(new ValueEntered.IntegerEvent() {
+            player.getGameEncoder().sendEnterAmount(new ValueEnteredEvent.IntegerEvent() {
                 execute: function(value) {
                     player.getBank().setLastEnteredX(value);
                     player.getBank().withdraw(itemID, realSlot, value);
@@ -114,7 +114,7 @@ DecodedPacketWidget.prototype.widget_15 = function(player, index, childID, slot,
     case 3:
         if (index == 1) {
             if (player.getBank().getDefaultQuantity() == Bank.DefaultQuantity.X) {
-                player.getGameEncoder().sendEnterAmount(new ValueEntered.IntegerEvent() {
+                player.getGameEncoder().sendEnterAmount(new ValueEnteredEvent.IntegerEvent() {
                     execute: function(value) {
                         player.getBank().setLastEnteredX(value);
                         player.getBank().deposit(itemID, slot, value);
@@ -132,7 +132,7 @@ DecodedPacketWidget.prototype.widget_15 = function(player, index, childID, slot,
         } else if (index == 5) {
             player.getBank().deposit(itemID, slot, player.getBank().getLastEnteredX());
         } else if (index == 6) {
-            player.getGameEncoder().sendEnterAmount(new ValueEntered.IntegerEvent() {
+            player.getGameEncoder().sendEnterAmount(new ValueEnteredEvent.IntegerEvent() {
                 execute: function(value) {
                     player.getBank().setLastEnteredX(value);
                     player.getBank().deposit(itemID, slot, value);
@@ -167,7 +167,7 @@ DecodedPacketWidget.prototype.widget_192 = function(player, index, childID, slot
         } else if (index == 4) {
             player.getBank().deposit(itemID, slot, Item.MAX_AMOUNT);
         } else if (index == 5) {
-            player.getGameEncoder().sendEnterAmount(new ValueEntered.IntegerEvent() {
+            player.getGameEncoder().sendEnterAmount(new ValueEnteredEvent.IntegerEvent() {
                 execute: function(value) {
                     player.getBank().deposit(itemID, slot, value);
                 }

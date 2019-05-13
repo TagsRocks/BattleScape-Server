@@ -456,7 +456,7 @@ skill = new SkillContainer() {
             }
             if (amount == -2) {
                 var js = this;
-                player.getGameEncoder().sendEnterAmount(new ValueEntered.IntegerEvent() {
+                player.getGameEncoder().sendEnterAmount(new ValueEnteredEvent.IntegerEvent() {
                     execute: function(value) {
                         js.tanHide(player, itemID, value);
                     }
@@ -494,7 +494,7 @@ skill = new SkillContainer() {
             } else if (index == 2) {
                 skill.startEvent(player, entry, 10);
             } else if (index == 3) {
-                player.getGameEncoder().sendEnterAmount(new ValueEntered.IntegerEvent() {
+                player.getGameEncoder().sendEnterAmount(new ValueEnteredEvent.IntegerEvent() {
                     execute: function(value) {
                         skill.startEvent(player, entry, value);
                     }

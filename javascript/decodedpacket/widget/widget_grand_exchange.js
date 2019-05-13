@@ -61,7 +61,7 @@ DecodedPacketWidget.prototype.widget_465 = function(player, index, childID, slot
                 player.getGrandExchange().setAmount(player.getInventory().getCount(player.getAttributeInt("ge_id")));
             }
         } else if (slot == 7) {
-            player.getGameEncoder().sendEnterAmount(new ValueEntered.IntegerEvent() {
+            player.getGameEncoder().sendEnterAmount(new ValueEnteredEvent.IntegerEvent() {
                 execute: function(value) {
                     player.getGrandExchange().setAmount(value);
                 }
@@ -75,7 +75,7 @@ DecodedPacketWidget.prototype.widget_465 = function(player, index, childID, slot
         } else if (slot == 11) {
             player.getGrandExchange().setPrice(-1);
         } else if (slot == 12) {
-            player.getGameEncoder().sendEnterAmount(new ValueEntered.IntegerEvent() {
+            player.getGameEncoder().sendEnterAmount(new ValueEnteredEvent.IntegerEvent() {
                 execute: function(value) {
                     player.getGrandExchange().setPrice(value);
                 }

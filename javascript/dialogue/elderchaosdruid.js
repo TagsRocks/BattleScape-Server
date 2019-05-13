@@ -33,7 +33,7 @@ instance = new DialogueScript() {
             } else if (slot == 2) {
                 amount = Item.MAX_AMOUNT;
             }
-            var valueEntered = new ValueEntered.IntegerEvent() {
+            var valueEntered = new ValueEnteredEvent.IntegerEvent() {
                 execute: function(value) {
                     value = Math.min(value, player.getInventory().getCount(itemID));
                     value = Math.min(value, player.getInventory().getRemainingSlots());

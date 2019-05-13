@@ -113,7 +113,7 @@ instance = new DialogueScript() {
             } else if (slot == 4) {
                 player.putAttribute("loadout_spellbook", !player.getAttributeBool("loadout_spellbook"));
             } else if (slot == 5) {
-                player.getGameEncoder().sendEnterString("Enter Loadout Name:", new ValueEntered.StringEvent() {
+                player.getGameEncoder().sendEnterString("Enter Loadout Name:", new ValueEnteredEvent.StringEvent() {
                     execute: function(value) {
                         player.getCombat().addCustomLoadout(player.getAttributeInt("loadout_slot"),
                                 new CustomLoadout(player, value));
@@ -150,7 +150,7 @@ instance = new DialogueScript() {
             } else if (slot == 3) {
                 player.putAttribute("loadout_spellbook", !player.getAttributeBool("loadout_spellbook"));
             } else if (slot == 4) {
-                player.getGameEncoder().sendEnterString("Enter Loadout Name:", new ValueEntered.StringEvent() {
+                player.getGameEncoder().sendEnterString("Enter Loadout Name:", new ValueEnteredEvent.StringEvent() {
                     execute: function(value) {
                         player.getCombat().addCustomLoadout(player.getAttributeInt("loadout_slot"),
                                 new CustomLoadout(player, value));

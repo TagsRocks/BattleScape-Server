@@ -7,7 +7,7 @@ DecodedPacketWidget.prototype.widget_182 = function(player, index, childID, slot
     case 3:
         player.getWidgetManager().sendWidget(WidgetChild.ViewportContainer.LOGOUT, WidgetID.WORLD_SELECT);
         player.getGameEncoder().sendWidgetSettings(WidgetID.WORLD_SELECT, 18, 0, 20, 2);
-        /*player.getGameEncoder().sendEnterString("Quick feedback:", new ValueEntered.StringEvent() {
+        /*player.getGameEncoder().sendEnterString("Quick feedback:", new ValueEnteredEvent.StringEvent() {
             execute: function(value) {
                 Logger.println("[QUICK FEEDBACK; " + player.getIP() + "] " + player.getUsername() + ": " + value);
             }

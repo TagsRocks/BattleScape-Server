@@ -1,11 +1,11 @@
 {
     "files.exclude": {
         "Client/bin/": true,
-        "Server/core/bin/": true,
+        "Server/bin/": true,
+        "bin/": true,
         "Server/data/dynamic/": true,
-        "core/bin/": true,
         "data/dynamic/": true,
-        "**/nohup.out": true
+        "**/nohup*.out": true
     },
     "search.exclude": {
         "Client/": true,
@@ -23,9 +23,9 @@
         120
     ],
     "editor.wrappingIndent": "deepIndent",
+    "[java]": { "editor.formatOnSave": true },
     "files.insertFinalNewline": true,
+    "search.useIgnoreFiles": false,
     "javascript.validate.enable": false,
-    "java.dependency.syncWithFolderExplorer": true,
-    "java.dependency.packagePresentation": "flat",
-    "search.useIgnoreFiles": false
+    "java.format.onType.enabled": true
 }

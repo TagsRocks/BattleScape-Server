@@ -19,7 +19,7 @@ DecodedPacketWidget.prototype.widget_100 = function(player, index, childID, slot
         } else if (index == 4) {
             player.getShop().buyShopItem(player, itemID, slot, 50);
         } else if (index == 5) {
-            player.getGameEncoder().sendEnterAmount(new ValueEntered.IntegerEvent() {
+            player.getGameEncoder().sendEnterAmount(new ValueEnteredEvent.IntegerEvent() {
                 execute: function(value) {
                     player.getShop().buyShopItem(player, itemID, slot, value);
                 }
@@ -65,7 +65,7 @@ DecodedPacketWidget.prototype.widget_300 = function(player, index, childID, slot
             } else if (index == 3) {
                 player.getGrandExchange().buyShopItem(itemID, slot, 10);
             } else if (index == 4) {
-                player.getGameEncoder().sendEnterAmount(new ValueEntered.IntegerEvent() {
+                player.getGameEncoder().sendEnterAmount(new ValueEnteredEvent.IntegerEvent() {
                     execute: function(value) {
                         player.getGrandExchange().buyShopItem(itemID, slot, value);
                     }
@@ -102,7 +102,7 @@ DecodedPacketWidget.prototype.widget_301 = function(player, index, childID, slot
             } else if (index == 4) {
                 player.getShop().sellInventoryItem(player, itemID, slot, 50);
             } else if (index == 5) {
-                player.getGameEncoder().sendEnterAmount(new ValueEntered.IntegerEvent() {
+                player.getGameEncoder().sendEnterAmount(new ValueEnteredEvent.IntegerEvent() {
                     execute: function(value) {
                         player.getShop().sellInventoryItem(player, itemID, slot, value);
                     }
@@ -120,7 +120,7 @@ DecodedPacketWidget.prototype.widget_301 = function(player, index, childID, slot
             } else if (index == 4) {
                 player.getGrandExchange().sellInventoryItem(itemID, slot, 50);
             } else if (index == 5) {
-                player.getGameEncoder().sendEnterAmount(new ValueEntered.IntegerEvent() {
+                player.getGameEncoder().sendEnterAmount(new ValueEnteredEvent.IntegerEvent() {
                     execute: function(value) {
                         player.getGrandExchange().sellInventoryItem(itemID, slot, value);
                     }

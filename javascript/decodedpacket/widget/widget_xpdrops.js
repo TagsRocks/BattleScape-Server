@@ -35,7 +35,7 @@ DecodedPacketWidget.prototype.widget_137 = function(player, index, childID, slot
         }
         if (index == 5) {
             player.getGameEncoder().sendEnterAmount("Set " + typeName + " start point: (skill level)",
-                    new ValueEntered.IntegerEvent() {
+                    new ValueEnteredEvent.IntegerEvent() {
                 execute: function(value) {
                     var index = player.getAttributeInt("xp_drops_index");
                     if (XPDrops.POINTS_TO_SKILLS[index] != -1 && value > 0 && value < Skills.XP_TABLE.length) {
@@ -48,7 +48,7 @@ DecodedPacketWidget.prototype.widget_137 = function(player, index, childID, slot
             if (XPDrops.POINTS_TO_SKILLS[player.getAttributeInt("xp_drops_index")] == -1) {
                 message = "Set " + typeName + " start point in THOUSANDS of XP:";
             }
-            player.getGameEncoder().sendEnterAmount(message, new ValueEntered.IntegerEvent() {
+            player.getGameEncoder().sendEnterAmount(message, new ValueEnteredEvent.IntegerEvent() {
                 execute: function(value) {
                     var index = player.getAttributeInt("xp_drops_index");
                     if (value >= 0 && value < Skills.MAX_XP) {
@@ -63,7 +63,7 @@ DecodedPacketWidget.prototype.widget_137 = function(player, index, childID, slot
     case 41:
         if (index == 5) {
             player.getGameEncoder().sendEnterAmount("Set goal end point: (skill level)",
-                    new ValueEntered.IntegerEvent() {
+                    new ValueEnteredEvent.IntegerEvent() {
                 execute: function(value) {
                     var index = player.getAttributeInt("xp_drops_index");
                     if (XPDrops.POINTS_TO_SKILLS[index] != -1 && value > 0 && value < Skills.XP_TABLE.length) {
@@ -76,7 +76,7 @@ DecodedPacketWidget.prototype.widget_137 = function(player, index, childID, slot
             if (XPDrops.POINTS_TO_SKILLS[player.getAttributeInt("xp_drops_index")] == -1) {
                 message = "Set goal start end in THOUSANDS of XP:";
             }
-            player.getGameEncoder().sendEnterAmount(message, new ValueEntered.IntegerEvent() {
+            player.getGameEncoder().sendEnterAmount(message, new ValueEnteredEvent.IntegerEvent() {
                 execute: function(value) {
                     var index = player.getAttributeInt("xp_drops_index");
                     if (value >= 0 && value < Skills.MAX_XP) {

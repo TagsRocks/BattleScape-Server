@@ -90,7 +90,7 @@ DecodedPacketWidget.prototype.widget_481 = function(player, index, childID, slot
         } else if (slot == 4) {
             player.getDuel().addOffer(player.getInventory().getSlotByID(itemID), itemID, 1000);
         } else if (slot == 5) {
-            player.getGameEncoder().sendEnterAmount(new ValueEntered.IntegerEvent() {
+            player.getGameEncoder().sendEnterAmount(new ValueEnteredEvent.IntegerEvent() {
                 execute: function(value) {
                     var currentCount = player.getDuel().getCount(itemID);
                     if (currentCount > value) {
@@ -117,7 +117,7 @@ DecodedPacketWidget.prototype.widget_481 = function(player, index, childID, slot
         } else if (slot == 4) {
             player.getDuel().addOffer(player.getInventory().getSlotByID(itemID), itemID, 10000000);
         } else if (slot == 5) {
-            player.getGameEncoder().sendEnterAmount(new ValueEntered.IntegerEvent() {
+            player.getGameEncoder().sendEnterAmount(new ValueEnteredEvent.IntegerEvent() {
                 execute: function(value) {
                     var currentCount = player.getDuel().getCount(itemID);
                     if (currentCount > value) {

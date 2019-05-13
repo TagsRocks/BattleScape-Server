@@ -769,7 +769,7 @@ pc = new PController() {
                     sharedStorage.deleteItem(item.getID(), resp.successAmount);
                 } else if (index == 4) {
                     var js = this;
-                    player.getGameEncoder().sendEnterAmount(new ValueEntered.IntegerEvent() {
+                    player.getGameEncoder().sendEnterAmount(new ValueEnteredEvent.IntegerEvent() {
                         execute: function(value) {
                             var resp = player.getInventory().addItem(item.getID(), Math.min(value, item.getAmount()));
                             sharedStorage.deleteItem(item.getID(), resp.successAmount);
@@ -810,7 +810,7 @@ pc = new PController() {
                     player.getInventory().deleteItem(item.getID(), resp.successAmount);
                 } else if (index == 4) {
                     var js = this;
-                    player.getGameEncoder().sendEnterAmount(new ValueEntered.IntegerEvent() {
+                    player.getGameEncoder().sendEnterAmount(new ValueEnteredEvent.IntegerEvent() {
                         execute: function(value) {
                             var itemAmount = player.getInventory().getCount(item.getID());
                             var resp = sharedStorage.addItem(item.getID(), Math.min(value, itemAmount));

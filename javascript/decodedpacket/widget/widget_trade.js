@@ -17,7 +17,7 @@ DecodedPacketWidget.prototype.widget_335 = function(player, index, childID, slot
         } else if (index == 3) {
             player.getTrade().removeOffer(itemID, slot, Item.MAX_AMOUNT);
         } else if (index == 4) {
-            player.getGameEncoder().sendEnterAmount(new ValueEntered.IntegerEvent() {
+            player.getGameEncoder().sendEnterAmount(new ValueEnteredEvent.IntegerEvent() {
                 execute: function(value) {
                     player.getTrade().removeOffer(itemID, slot, value);
                 }
@@ -43,7 +43,7 @@ DecodedPacketWidget.prototype.widget_336 = function(player, index, childID, slot
         } else if (index == 3) {
             player.getTrade().offerItem(itemID, slot, Item.MAX_AMOUNT);
         } else if (index == 4) {
-            player.getGameEncoder().sendEnterAmount(new ValueEntered.IntegerEvent() {
+            player.getGameEncoder().sendEnterAmount(new ValueEnteredEvent.IntegerEvent() {
                 execute: function(value) {
                     player.getTrade().offerItem(itemID, slot, value);
                 }

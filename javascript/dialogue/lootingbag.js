@@ -64,7 +64,7 @@ instance = new DialogueScript() {
             } else if (slot == 4) {
                 amount = player.getInventory().getAmount(depositingSlot);
             }
-            var valueEntered = new ValueEntered.IntegerEvent() {
+            var valueEntered = new ValueEnteredEvent.IntegerEvent() {
                 execute: function(value) {
                     value = Math.min(value, player.getInventory().getCount(depositingID));
                     value = player.getWidgetManager().getLootingBag().canAddAmount(depositingID, value);

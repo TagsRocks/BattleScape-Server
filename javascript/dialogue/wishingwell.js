@@ -67,13 +67,13 @@ instance = new DialogueScript() {
             }
         } else if (index == 2) {
             if (slot == 0) {
-                player.getGameEncoder().sendEnterAmount(new ValueEntered.IntegerEvent() {
+                player.getGameEncoder().sendEnterAmount(new ValueEnteredEvent.IntegerEvent() {
                     execute: function(value) {
                         WishingWell.donate(player, value, false);
                     }
                 });
             } else if (slot == 1) {
-                player.getGameEncoder().sendEnterAmount(new ValueEntered.IntegerEvent() {
+                player.getGameEncoder().sendEnterAmount(new ValueEnteredEvent.IntegerEvent() {
                     execute: function(value) {
                         WishingWell.donate(player, value, true);
                     }

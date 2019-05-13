@@ -13,7 +13,7 @@ DecodedPacketWidget.prototype.widget_65 = function(player, index, childID, slot,
             player.getInventory().deleteItem(ItemID.OLD_SCHOOL_BOND, 1);
             player.setBondPouch(Utils.addInt(player.getBondPouch(), 1, Item.MAX_AMOUNT));
         } else if (index == 1) {
-            player.getGameEncoder().sendEnterAmount(new ValueEntered.IntegerEvent() {
+            player.getGameEncoder().sendEnterAmount(new ValueEnteredEvent.IntegerEvent() {
                 execute: function(value) {
                     var inventoryCount = player.getInventory().getCount(ItemID.OLD_SCHOOL_BOND);
                     value = Math.min(value, inventoryCount);
@@ -38,7 +38,7 @@ DecodedPacketWidget.prototype.widget_65 = function(player, index, childID, slot,
             player.setBondPouch(player.getBondPouch() - maxWithdraw);
             player.getInventory().addItem(ItemID.OLD_SCHOOL_BOND, maxWithdraw);
         } else if (index == 1) {
-            player.getGameEncoder().sendEnterAmount(new ValueEntered.IntegerEvent() {
+            player.getGameEncoder().sendEnterAmount(new ValueEnteredEvent.IntegerEvent() {
                 execute: function(value) {
                     var maxWithdraw = Math.min(player.getBondPouch(), player.getInventory().getRemainingSlots());
                     value = Math.min(value, maxWithdraw);

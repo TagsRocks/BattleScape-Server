@@ -31,7 +31,7 @@ instance = new DialogueScript() {
                 player.getController().instance();
                 player.getMovement().teleport(3327, 4752, 0);
             } else if (slot == 2) {
-                player.getGameEncoder().sendEnterString("Enter username:", new ValueEntered.StringEvent() {
+                player.getGameEncoder().sendEnterString("Enter username:", new ValueEnteredEvent.StringEvent() {
                     execute: function(value) {
                         var player2 = player.getWorld().getPlayerByUsername(value);
                         if (player2 == null) {

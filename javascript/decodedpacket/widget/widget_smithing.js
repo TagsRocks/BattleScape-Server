@@ -15,7 +15,7 @@ DecodedPacketWidget.prototype.widget_312 = function(player, index, childID, slot
     } else if (index == 2) {
         Smithing.start(player, itemID, 10);
     } else if (index == 3) {
-        player.getGameEncoder().sendEnterAmount(new ValueEntered.IntegerEvent() {
+        player.getGameEncoder().sendEnterAmount(new ValueEnteredEvent.IntegerEvent() {
             execute: function(value) {
                 Smithing.start(player, itemID, value);
             }

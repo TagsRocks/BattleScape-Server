@@ -42,14 +42,14 @@ instance = new DialogueScript() {
             if (slot == 0) {
                 player.getGrandExchange().open();
             } else if (slot == 1) {
-                player.getGameEncoder().sendItemSearch("Search for an item", new ValueEntered.IntegerEvent() {
+                player.getGameEncoder().sendItemSearch("Search for an item", new ValueEnteredEvent.IntegerEvent() {
                     execute: function(value) {
                         RequestManager.getInstance().addGEList(player, GrandExchangeUser.LIST_ITEM, value,
                                 ItemDef.getName(value));
                     }
                 });
             } else if (slot == 2) {
-                player.getGameEncoder().sendEnterString("Enter username:", new ValueEntered.StringEvent() {
+                player.getGameEncoder().sendEnterString("Enter username:", new ValueEnteredEvent.StringEvent() {
                     execute: function(value) {
                         RequestManager.getInstance().addGEShop(player, value);
                     }

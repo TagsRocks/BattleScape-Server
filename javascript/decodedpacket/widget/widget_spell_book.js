@@ -640,7 +640,7 @@ DecodedPacketWidget.prototype.widget_190 = function(player, index, childID, slot
         } else if (index == 2) {
             player.getMagic().removeRunesFromPouch(slot, Item.MAX_AMOUNT);
         } else if (index == 3) {
-            player.getGameEncoder().sendEnterAmount(new ValueEntered.IntegerEvent() {
+            player.getGameEncoder().sendEnterAmount(new ValueEnteredEvent.IntegerEvent() {
                 execute: function(value) {
                     player.getMagic().removeRunesFromPouch(slot, value);
                 }
@@ -655,7 +655,7 @@ DecodedPacketWidget.prototype.widget_190 = function(player, index, childID, slot
         } else if (index == 2) {
             player.getMagic().addRunesToPouch(slot, Item.MAX_AMOUNT);
         } else if (index == 3) {
-            player.getGameEncoder().sendEnterAmount(new ValueEntered.IntegerEvent() {
+            player.getGameEncoder().sendEnterAmount(new ValueEnteredEvent.IntegerEvent() {
                 execute: function(value) {
                     player.getMagic().addRunesToPouch(slot, value);
                 }

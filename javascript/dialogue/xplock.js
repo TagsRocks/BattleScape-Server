@@ -146,7 +146,7 @@ instance = new DialogueScript() {
                     player.putAttribute("change_skill", index);
                     return;
                 }
-                player.getGameEncoder().sendEnterAmount(new ValueEntered.IntegerEvent() {
+                player.getGameEncoder().sendEnterAmount(new ValueEnteredEvent.IntegerEvent() {
                     execute: function(value) {
                         player.getSkills().changeCombatXP(index, value);
                         if (player.getController().getLevelForXP(index)
@@ -163,7 +163,7 @@ instance = new DialogueScript() {
             }
         } else if (index == 15) {
             index = player.getAttributeInt("change_skill");
-            player.getGameEncoder().sendEnterAmount(new ValueEntered.IntegerEvent() {
+            player.getGameEncoder().sendEnterAmount(new ValueEnteredEvent.IntegerEvent() {
                 execute: function(value) {
                     player.getSkills().changeCombatXP(index, value);
                     if (player.getController().getLevelForXP(index)
