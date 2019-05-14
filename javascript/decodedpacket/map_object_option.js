@@ -105,7 +105,7 @@ function DecodedPacketObjectOption(index) {
             if (player.getFarming().mapObjectOptionHook(decodedPacket.index(), mapObject)) {
                 return true;
             }
-            var scriptName = "object_" + mapObject.getID();
+            /*var scriptName = "object_" + mapObject.getID();
             if (invalid.contains(scriptName)
                     || !DecodedPacketObjectOption.prototype.hasOwnProperty(scriptName)) {
                 player.getGameEncoder().sendMessage("Nothing interesting happens.");
@@ -113,6 +113,16 @@ function DecodedPacketObjectOption(index) {
             }
             try {
                 DecodedPacketObjectOption.prototype[scriptName](player, decodedPacket.index(), mapObject);
+            } catch (e) {
+                invalid.add(scriptName);
+                throw e;
+            }*/
+            try {
+                var className = "decodedpacket.mapobjectoption.MapObject" + Math.floor(mapObject.getID() / 16384);
+                var classObj = Java.type("java.lang.Class").forName(className);
+                var methodName = "mapObject" + mapObject.getID();
+                var methodObj = classObj.getMethod(methodName, Player.class, Integer.TYPE, MapObject.class);
+                methodObj.invoke(null, player, decodedPacket.index(), mapObject);
             } catch (e) {
                 invalid.add(scriptName);
                 throw e;
