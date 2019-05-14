@@ -59,7 +59,7 @@ function DecodedPacketMapItemOption(index) {
                 var isStackableAndCarrying = ItemDef.getStackable(id) && player.getInventory().hasItem(id);
                 var result = player.getWorld().pickupMapItem(player, id, x, y);
                 if (result.partialSuccess() && (id == ItemID.BLOODY_KEY || id == ItemID.BLOODIER_KEY)
-                        && player.inWilderness()) {
+                        && (player.getController().inWilderness() || player.getController().inPvPWorld())) {
                     player.getCombat().setPKSkullDelay(PCombat.SKULL_DELAY);
                     player.getMovement().setEnergy(0);
                     player.getGameEncoder().sendMessage("<col=ff0000>Carrying the key prevents you from teleporting.");

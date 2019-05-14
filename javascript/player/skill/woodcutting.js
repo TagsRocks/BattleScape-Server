@@ -114,6 +114,15 @@ skill = new SkillContainer() {
         return ENTRIES;
     },
 
+    script: function(name, args) {
+        if (name.equals("farming_resources")) {
+            return 8;
+        } else if (name.equals("animation")) {
+            return getHatchet(args[0]).animation;
+        }
+        return null;
+    },
+
     getEventTick: function(player, event, npc, mapObject, entry) {
         return 5;
     },
@@ -169,7 +178,7 @@ skill = new SkillContainer() {
         var power = (player.getSkills().getLevel(skill.getSkillID()) / 2)
                 + (getHatchet(player).level / 2) + 8;
         var failure = entry.getLevel() + 2;
-        if (player.inWoodcuttingGuild()) {
+        if (this.inWoodcuttingGuild(player)) {
             power += 7;
         }
         var chance = 0;
@@ -200,7 +209,7 @@ skill = new SkillContainer() {
             nestChance /= 1.1;
         }
         if (Utils.randomE(nestChance - entry.level) == 0) {
-            if (player.inWoodcuttingGuild()) {
+            if (this.inWoodcuttingGuild(player)) {
                 player.getController().addMapItem(Utils.arrayRandom(COLORED_EGG_NESTS), player, player);
             } else {
                 player.getController().addMapItem(new Item(ItemID.BIRD_NEST_5073, 1), player, player);
@@ -249,5 +258,10 @@ skill = new SkillContainer() {
             return true;
         }
         return false;
+    },
+
+    inWoodcuttingGuild: function(tile) {
+        return tile.getX() >= 1607 && tile.getX() <= 1657 && tile.getY() >= 3487 && tile.getY() <= 3518
+                || tile.getX() >= 1563 && tile.getX() <= 1600 && tile.getY() >= 3472 && tile.getY() <= 3503;
     }
 }

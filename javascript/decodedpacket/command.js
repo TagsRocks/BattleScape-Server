@@ -377,8 +377,11 @@ function DecodedPacket60() {
             if (player2 == null) {
                 player.getGameEncoder().sendMessage("Unable to find user " + username + ".");
                 return;
-            } else if (player2.inWilderness()) {
+            } else if (player2.getController().inWilderness()) {
                 player.getGameEncoder().sendMessage("This player is in the wilderness.");
+                return;
+            } else if (player2.getController().inPvPWorld()) {
+                player.getGameEncoder().sendMessage("This player is in the PvP world.");
                 return;
             }
             player2.getGameEncoder().sendMessage(player.getUsername() + " has kicked you.");
@@ -467,7 +470,8 @@ function DecodedPacket60() {
                 player.getGameEncoder().sendMessage(username + " is in an instance located at: "
                         + player2.getX() + ", " + player2.getY() + ", " + player2.getHeight() + ".");
                 return;
-            } else if (player.isUsergroup(Player.GROUP_OVERSEER) && player2.inWilderness()) {
+            } else if (player.isUsergroup(Player.GROUP_OVERSEER) && (player2.getController().inWilderness()
+                    || player2.getController().inPvPWorld())) {
                 player.getGameEncoder().sendMessage("This player is in the wilderness.");
                 return;
             }
@@ -489,7 +493,8 @@ function DecodedPacket60() {
                 player.getGameEncoder().sendMessage(username + " is in an instance located at: "
                         + player.getX() + ", " + player.getY() + ", " + player.getHeight() + ".");
                 return;
-            } else if (player.isUsergroup(Player.GROUP_OVERSEER) && player2.inWilderness()) {
+            } else if (player.isUsergroup(Player.GROUP_OVERSEER) && (player2.getController().inWilderness()
+            || player2.getController().inPvPWorld())) {
                 player.getGameEncoder().sendMessage("This player is in the wilderness.");
                 return;
             }
@@ -539,7 +544,7 @@ function DecodedPacket60() {
             } else if (player.getController().isInstanced()) {
                 player.getGameEncoder().sendMessage("You can't teleport while in an instance.");
                 return;
-            } else if (player.inWilderness()) {
+            } else if (player.getController().inWilderness() || player.getController().inPvPWorld()) {
                 player.getGameEncoder().sendMessage("You can't teleport while in the wilderness.");
                 return;
             } else if (player2.getController().isInstanced()) {
@@ -1019,8 +1024,10 @@ function DecodedPacket60() {
                 } else if (player2.getX() >= 2864 && player2.getY() >= 3648 && player2.getX() <= 2921
                         && player2.getY() <= 3706) {
                     location = "Trollheim";
-                } else if (player2.inWilderness()) {
+                } else if (player2.getController().inWilderness()) {
                     location = "Wilderness";
+                } else if (player2.getController().inPvPWorld()) {
+                    location = "PvP World";
                 } else if (player2.getX() >= 1137 && player2.getY() >= 2491 && player2.getX() <= 3905
                         && player2.getY() <= 4163) {
                     location = "Mainland";

@@ -191,7 +191,7 @@ skill = new SkillContainer() {
         if (player.inWildernessResourceArea()) {
             failure /= 2;
         }
-        if (player.inFishingGuild()) {
+        if (inFishingGuild(player)) {
             power += 7;
         }
         var chance = 0;
@@ -289,5 +289,9 @@ skill = new SkillContainer() {
     usingUnchargedInfernalHarpoon: function(player, entry) {
         return player.getSkills().getLevel(skill.getSkillID()) >= 75 && entry.usesTool(ItemID.HARPOON)
                 && player.carryingItem(ItemID.INFERNAL_HARPOON);
+    },
+
+    inFishingGuild: function(tile) {
+        return tile.getX() >= 2595 && tile.getX() <= 2622 && tile.getY() >= 3405 && tile.getY() <= 3446;
     }
 }

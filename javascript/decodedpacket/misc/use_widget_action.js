@@ -85,10 +85,8 @@ DecodedPacketWidgetOnWidget.prototype.doAction = function(player, fromInterfaceI
                 break;
             }
             if (player.getHeight() != player.getClientHeight()) {
-                if (player.inEdgeville() || player.getController().inWilderness()) {
-                    player.getGameEncoder().sendMessage("You can't do this here.");
-                    break;
-                }
+                player.getGameEncoder().sendMessage("You can't do this here.");
+                break;
             }
             player.setAnimation(719);
             player.setGraphic(114, 92);
@@ -121,10 +119,8 @@ DecodedPacketWidgetOnWidget.prototype.doAction = function(player, fromInterfaceI
                 break;
             }
             if (player.getHeight() != player.getClientHeight()) {
-                if (player.inEdgeville() || player.getController().inWilderness()) {
-                    player.getGameEncoder().sendMessage("You can't do this here.");
-                    break;
-                }
+                player.getGameEncoder().sendMessage("You can't do this here.");
+                break;
             }
             player.setAnimation(719);
             player.setGraphic(114, 92);
@@ -199,10 +195,8 @@ DecodedPacketWidgetOnWidget.prototype.doAction = function(player, fromInterfaceI
                 break;
             }
             if (player.getHeight() != player.getClientHeight()) {
-                if (player.inEdgeville() || player.getController().inWilderness()) {
-                    player.getGameEncoder().sendMessage("You can't do this here.");
-                    break;
-                }
+                player.getGameEncoder().sendMessage("You can't do this here.");
+                break;
             }
             player.setAnimation(720);
             player.setGraphic(115, 92);
@@ -247,10 +241,8 @@ DecodedPacketWidgetOnWidget.prototype.doAction = function(player, fromInterfaceI
                 break;
             }
             if (player.getHeight() != player.getClientHeight()) {
-                if (player.inEdgeville() || player.getController().inWilderness()) {
-                    player.getGameEncoder().sendMessage("You can't do this here.");
-                    break;
-                }
+                player.getGameEncoder().sendMessage("You can't do this here.");
+                break;
             }
             var value = ItemDef.getHighAlch(onItemID);
             var inventoryCoinCount = player.getInventory().getCount(ItemID.COINS);
@@ -285,10 +277,8 @@ DecodedPacketWidgetOnWidget.prototype.doAction = function(player, fromInterfaceI
                 break;
             }
             if (player.getHeight() != player.getClientHeight()) {
-                if (player.inEdgeville() || player.getController().inWilderness()) {
-                    player.getGameEncoder().sendMessage("You can't do this here.");
-                    break;
-                }
+                player.getGameEncoder().sendMessage("You can't do this here.");
+                break;
             }
             player.setAnimation(720);
             player.setGraphic(115, 92);
@@ -321,9 +311,8 @@ DecodedPacketWidgetOnWidget.prototype.doAction = function(player, fromInterfaceI
                 break;
             }
             if (player.getHeight() != player.getClientHeight()) {
-                if (player.inEdgeville() || player.getController().inWilderness()) {
-                    player.getGameEncoder().sendMessage("You can't do this here.");
-                    break;
+                player.getGameEncoder().sendMessage("You can't do this here.");
+                break;
                 }
             }
             player.setAnimation(721);
@@ -356,10 +345,8 @@ DecodedPacketWidgetOnWidget.prototype.doAction = function(player, fromInterfaceI
                 break;
             }
             if (player.getHeight() != player.getClientHeight()) {
-                if (player.inEdgeville() || player.getController().inWilderness()) {
-                    player.getGameEncoder().sendMessage("You can't do this here.");
-                    break;
-                }
+                player.getGameEncoder().sendMessage("You can't do this here.");
+                break;
             }
             player.setAnimation(721);
             player.setGraphic(452, 92);
@@ -393,10 +380,8 @@ DecodedPacketWidgetOnWidget.prototype.doAction = function(player, fromInterfaceI
                 break;
             }
             if (player.getHeight() != player.getClientHeight()) {
-                if (player.inEdgeville() || player.getController().inWilderness()) {
-                    player.getGameEncoder().sendMessage("You can't do this here.");
-                    break;
-                }
+                player.getGameEncoder().sendMessage("You can't do this here.");
+                break;
             }
             player.setAnimation(721);
             player.setGraphic(452, 92);

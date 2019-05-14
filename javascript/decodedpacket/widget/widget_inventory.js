@@ -618,7 +618,7 @@ DecodedPacketWidget.prototype.widget_149 = function(player, index, childID, slot
             player.getWidgetManager().getLootingBag().displayItemList();
         } else if (index == 2) {
             player.getWidgetManager().initLootingBag();
-            if (!player.getController().inWilderness()) {
+            if (!player.getController().inWilderness() && !player.getController().inPvPWorld()) {
                 player.getGameEncoder().sendMessage("You can't put items in the bag unless you're in the Wilderness.");
                 break;
             }

@@ -450,8 +450,10 @@ DecodedPacketWidget.prototype.widget_399 = function(player, index, childID, slot
             } else if (player2.getX() >= 2864 && player2.getY() >= 3648 && player2.getX() <= 2921
                     && player2.getY() <= 3706) {
                 location = "Trollheim";
-            } else if (player2.inWilderness()) {
+            } else if (player2.getController().inWilderness()) {
                 location = "Wilderness";
+            } else if (player2.getController().inPvPWorld()) {
+                location = "PvP World";
             } else if (player2.getX() >= 1137 && player2.getY() >= 2491 && player2.getX() <= 3905
                     && player2.getY() <= 4163) {
                 location = "Mainland";

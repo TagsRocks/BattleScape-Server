@@ -39,7 +39,7 @@ instance = new DialogueScript() {
         if (index == 0) {
             var depositingSlot = player.getAttributeInt("looting_bag_item_slot");
             var depositingID = player.getInventory().getID(depositingSlot);
-            if (!player.getController().inWilderness()) {
+            if (!player.getController().inWilderness() && !player.getController().inPvPWorld()) {
                 player.getGameEncoder().sendMessage("You can't put items in the bag unless you're in the Wilderness.");
                 return;
             } else if (ItemDef.getUntradable(depositingID)) {
