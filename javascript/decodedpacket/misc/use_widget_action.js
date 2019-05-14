@@ -313,7 +313,6 @@ DecodedPacketWidgetOnWidget.prototype.doAction = function(player, fromInterfaceI
             if (player.getHeight() != player.getClientHeight()) {
                 player.getGameEncoder().sendMessage("You can't do this here.");
                 break;
-                }
             }
             player.setAnimation(721);
             player.setGraphic(116, 92);
