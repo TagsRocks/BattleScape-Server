@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
-	<classpathentry kind="src" path="core/src"/>
+	<classpathentry kind="src" path="core/src">
+		<attributes>
+			<attribute name="optional" value="true"/>
+		</attributes>
+	</classpathentry>
 	<classpathentry kind="src" path="script/src"/>
 	<classpathentry kind="lib" path="data/lib/filestore.jar"/>
 	<classpathentry kind="lib" path="data/lib/gson.jar"/>
@@ -9,6 +13,10 @@
 	<classpathentry kind="lib" path="data/lib/xmlpull.jar"/>
 	<classpathentry kind="lib" path="data/lib/xpp.jar"/>
 	<classpathentry kind="lib" path="data/lib/xstream.jar"/>
-	<classpathentry kind="lib" path="data/lib/core.jar"/>
+	<classpathentry kind="lib" path="data/lib/core.jar">
+		<attributes>
+			<attribute name="optional" value="true"/>
+		</attributes>
+	</classpathentry>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

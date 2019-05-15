@@ -6826,7 +6826,7 @@ public class MapObject1 {
 
     // Box of Health
     public static void mapObject23709(Player player, int index, MapObject mapObject) {
-        if (player.inPvPWorld()) {
+        if (player.getController().inPvPWorld()) {
             player.getGameEncoder().sendMessage("You can't use this here.");
             return;
         }
@@ -13123,7 +13123,7 @@ public class MapObject1 {
 
     // Altar of the Occult
     public static void mapObject29150(Player player, int index, MapObject mapObject) {
-        if (player.inPvPWorld()) {
+        if (player.getController().inPvPWorld()) {
             player.getGameEncoder().sendMessage("You can't use this here.");
             return;
         }
@@ -13435,7 +13435,7 @@ public class MapObject1 {
 
     // Ornate rejuvenation pool
     public static void mapObject29241(Player player, int index, MapObject mapObject) {
-        if (player.inPvPWorld()) {
+        if (player.getController().inPvPWorld()) {
             player.getGameEncoder().sendMessage("You can't use this here.");
             return;
         }

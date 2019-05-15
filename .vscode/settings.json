@@ -1,21 +1,21 @@
 {
     "files.exclude": {
-        "Client/bin/": true,
-        "Server/bin/": true,
-        "bin/": true,
-        "Server/data/dynamic/": true,
-        "data/dynamic/": true,
-        "**/nohup*.out": true
+        "**/.vscode": true,
+        "**/.github": true,
+        "**/.gitmodules": true,
+        "**/.gitignore": true,
+        "**/.settings": true,
+        "**/.classpath": true,
+        "**/.project": true,
+        "**/bin": true,
+        "**/data/dynamic": true,
+        "**/data/cache": true,
+        "**/data/lib": true,
+        "**/*.zip": true
     },
     "search.exclude": {
         "Client/": true,
-        "Server/data/cache/": true,
-        "Server/data/lib/": true,
-        "Server/data/json/map/xtea.json": true,
-        "data/cache/": true,
-        "data/lib/": true,
-        "data/json/map/xtea.json": true,
-        "**/*.zip": true
+        "**/data/json/map/xtea.json": true,
     },
     "editor.wordWrap": "wordWrapColumn",
     "editor.wordWrapColumn": 120,
