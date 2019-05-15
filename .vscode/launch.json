@@ -16,9 +16,9 @@
         },
         {
             "type": "java",
-            "projectName": "Spawn Server",
+            "projectName": "Server",
             "cwd": "Server",
-            "name": "Server",
+            "name": "Spawn Server",
             "request": "launch",
             "vmArgs": "-Xmx768m -XX:MinHeapFreeRatio=5 -XX:MaxHeapFreeRatio=25 -XX:MaxGCPauseMillis=50",
             "mainClass": "com.palidino.osrs.Main",

@@ -7,8 +7,6 @@
     { "id": "ItemID.SWORDFISH" },
     { "id": "ItemID.MONKFISH" },
     { "id": "ItemID.SHARK" },
-    { "id": "ItemID.DARK_CRAB" },
-    { "id": "ItemID.COOKED_KARAMBWAN" },
     { "id": "ItemID.ANCHOVY_PIZZA" },
     { "id": "ItemID.PINEAPPLE_PIZZA" },
     { "id": "ItemID.DWARVEN_ROCK_CAKE_7510" },
