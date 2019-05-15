@@ -1,0 +1,20 @@
+{
+  "name": "Legends' Shop",
+  "exchangePriceMultiplier": 1.0,
+  "ceilPrice": true,
+  "items": [
+    { "id": "ItemID.CAPE_OF_LEGENDS", "price": 675 },
+    { "id": "ItemID.MYTHICAL_CAPE", "price": 100000 },
+    { "id": "ItemID.DRAGON_SQ_SHIELD" },
+    { "id": "ItemID.DRAGON_SPEAR_P_PLUS_PLUS" },
+    { "id": "ItemID.DRAGON_MED_HELM" },
+    { "id": "ItemID.AVAS_ACCUMULATOR", "price": 10000 },
+    { "id": "ItemID.STEAM_RUNE" },
+    { "id": "ItemID.MIST_RUNE" },
+    { "id": "ItemID.DUST_RUNE" },
+    { "id": "ItemID.SMOKE_RUNE" },
+    { "id": "ItemID.MUD_RUNE" },
+    { "id": "ItemID.LAVA_RUNE" },
+    { "id": "ItemID.WRATH_RUNE" }
+  ]
+}

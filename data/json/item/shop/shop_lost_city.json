@@ -1,0 +1,13 @@
+{
+  "name": "Lost City Shop",
+  "exchangePriceMultiplier": 1.5,
+  "ceilPrice": true,
+  "items": [
+    { "id": "ItemID.DRAGON_LONGSWORD" },
+    { "id": "ItemID.DRAGON_DAGGER_P_PLUS_PLUS" },
+    { "id": "ItemID.DRAGON_BATTLEAXE" },
+    { "id": "ItemID.DRAGON_MACE" },
+    { "id": "ItemID.HUNTERS_CROSSBOW" },
+    { "id": "ItemID.LONG_KEBBIT_BOLTS" }
+  ]
+}

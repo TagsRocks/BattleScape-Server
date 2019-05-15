@@ -1,0 +1,40 @@
+{
+  "currency": "ItemID.BLOOD_MONEY",
+  "name": "Blood Money Shop",
+  "items": [
+    {
+      "id": "ItemID.MYSTERIOUS_EMBLEM",
+      "price": 0,
+      "costItems": [ [ { "id": "ItemID.COINS",  "amount": 50000 } ] ]
+    },
+    { "id": "ItemID.DARK_CRAB", "price": 25000, "stack": 800 },
+    { "id": "ItemID.SUPER_ATTACK_4", "price": 25000, "stack": 400 },
+    { "id": "ItemID.SUPER_STRENGTH_4", "price": 25000, "stack": 400 },
+    { "id": "ItemID.SUPER_DEFENCE_4", "price": 25000, "stack": 400 },
+    { "id": "ItemID.RANGING_POTION_4", "price": 25000, "stack": 400 },
+    { "id": "ItemID.MAGIC_POTION_4", "price": 25000, "stack": 400 },
+    { "id": "ItemID.PRAYER_POTION_4", "price": 25000, "stack": 150 },
+    { "id": "ItemID.SUPER_RESTORE_4", "price": 25000, "stack": 100 },
+    { "id": "ItemID.ANTI_VENOM_PLUS_4", "price": 25000, "stack": 50 },
+    { "id": "ItemID.SARADOMIN_BREW_4", "price": 25000, "stack": 350 },
+    { "id": "ItemID.VOLCANIC_WHIP_MIX", "price": 50000 },
+    { "id": "ItemID.FROZEN_WHIP_MIX", "price": 50000 },
+    { "id": "ItemID.DRAGON_PICKAXE_UPGRADE_KIT", "price": 30000 },
+    { "id": "ItemID.WARD_UPGRADE_KIT", "price": 35000 },
+    { "id": "ItemID.GRANITE_CLAMP", "price": 25000 },
+    { "id": "ItemID.SARADOMINS_TEAR", "price": 100000 },
+    { "id": "ItemID.RUNE_POUCH", "price": 100000 },
+    { "id": "ItemID.BOUNTY_TELEPORT_SCROLL", "price": 200000 },
+    { "id": "ItemID.HUNTERS_HONOUR", "price": 50000 },
+    { "id": "ItemID.ROGUES_REVENGE", "price": 50000 },
+    { "id": "ItemID.LOOTING_BAG", "price": 10000 },
+    { "id": "ItemID.BAG_FULL_OF_GEMS", "price": 25000 },
+    { "id": "ItemID.CLUE_BOX", "price": 25000 },
+    { "id": "ItemID.MAGIC_SHORTBOW_I", "price": 5000 },
+    { "id": "ItemID.SARADOMIN_HALO", "price": 150000 },
+    { "id": "ItemID.ZAMORAK_HALO", "price": 150000 },
+    { "id": "ItemID.GUTHIX_HALO", "price": 150000 },
+    { "id": "ItemID.HELL_CAT", "price": 100000 },
+    { "id": "ItemID.WILY_HELLCAT", "price": 200000 }
+  ]
+}

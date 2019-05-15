@@ -1,0 +1,110 @@
+<list>
+	<mapobject>
+		<!-- Wall -->
+		<id>1631</id>
+		<type>0</type>
+		<direction>1</direction>
+		<x>2198</x>
+		<y>4943</y>
+	</mapobject>
+	<mapobject>
+		<!-- Wall -->
+		<id>1631</id>
+		<type>0</type>
+		<direction>2</direction>
+		<x>2191</x>
+		<y>4950</y>
+	</mapobject>
+	<mapobject>
+		<!-- Wall -->
+		<id>1631</id>
+		<type>0</type>
+		<direction>2</direction>
+		<x>2191</x>
+		<y>4958</y>
+	</mapobject>
+	<mapobject>
+		<!-- Wall -->
+		<id>1631</id>
+		<type>0</type>
+		<direction>2</direction>
+		<x>2191</x>
+		<y>4961</y>
+	</mapobject>
+	<mapobject>
+		<!-- Wall -->
+		<id>1631</id>
+		<type>0</type>
+		<direction>2</direction>
+		<x>2191</x>
+		<y>4969</y>
+	</mapobject>
+	<mapobject>
+		<!-- Wall -->
+		<id>1631</id>
+		<type>0</type>
+		<direction>3</direction>
+		<x>2198</x>
+		<y>4976</y>
+	</mapobject>
+	<mapobject>
+		<!-- Wall -->
+		<id>1631</id>
+		<type>0</type>
+		<direction>3</direction>
+		<x>2206</x>
+		<y>4976</y>
+	</mapobject>
+	<mapobject>
+		<!-- Wall -->
+		<id>1631</id>
+		<type>0</type>
+		<direction>3</direction>
+		<x>2209</x>
+		<y>4976</y>
+	</mapobject>
+	<mapobject>
+		<!-- Wall -->
+		<id>1631</id>
+		<type>0</type>
+		<direction>3</direction>
+		<x>2217</x>
+		<y>4976</y>
+	</mapobject>
+	<mapobject>
+		<!-- Wall -->
+		<id>1631</id>
+		<type>0</type>
+		<x>2224</x>
+		<y>4969</y>
+	</mapobject>
+	<mapobject>
+		<!-- Wall -->
+		<id>1631</id>
+		<type>0</type>
+		<x>2224</x>
+		<y>4961</y>
+	</mapobject>
+	<mapobject>
+		<!-- Wall -->
+		<id>1631</id>
+		<type>0</type>
+		<x>2224</x>
+		<y>4958</y>
+	</mapobject>
+	<mapobject>
+		<!-- Wall -->
+		<id>1631</id>
+		<type>0</type>
+		<x>2224</x>
+		<y>4950</y>
+	</mapobject>
+	<mapobject>
+		<!-- Wall -->
+		<id>1631</id>
+		<type>0</type>
+		<direction>1</direction>
+		<x>2217</x>
+		<y>4943</y>
+	</mapobject>
+</list>

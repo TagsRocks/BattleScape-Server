@@ -1,0 +1,13 @@
+.DS_Store
+thumbs.db
+[Dd]esktop.ini
+.gitmodules
+.github
+README.md
+/bin
+/core
+/data/dynamic
+/data/lib/core.jar
+emergency.log
+nohup*.out
+*.zip

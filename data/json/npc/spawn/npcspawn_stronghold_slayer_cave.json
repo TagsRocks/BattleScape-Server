@@ -1,0 +1,506 @@
+[
+  {
+    "id": "NpcID.HELLHOUND_122",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2408,
+    "y": 9801
+  },
+  {
+    "id": "NpcID.HELLHOUND_122",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2410,
+    "y": 9795
+  },
+  {
+    "id": "NpcID.HELLHOUND_122",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2417,
+    "y": 9796
+  },
+  {
+    "id": "NpcID.HELLHOUND_122",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2417,
+    "y": 9803
+  },
+  {
+    "id": "NpcID.HELLHOUND_122",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2413,
+    "y": 9802
+  },
+  {
+    "id": "NpcID.HELLHOUND_122",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2414,
+    "y": 9797
+  },
+  {
+    "id": "NpcID.HELLHOUND_122",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2409,
+    "y": 9786
+  },
+  {
+    "id": "NpcID.HELLHOUND_122",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2413,
+    "y": 9784
+  },
+  {
+    "id": "NpcID.HELLHOUND_122",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2415,
+    "y": 9788
+  },
+  {
+    "id": "NpcID.HELLHOUND_122",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2425,
+    "y": 9782
+  },
+  {
+    "id": "NpcID.HELLHOUND_122",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2429,
+    "y": 9786
+  },
+  {
+    "id": "NpcID.HELLHOUND_122",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2433,
+    "y": 9784
+  },
+  {
+    "id": "NpcID.HELLHOUND_122",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2430,
+    "y": 9776
+  },
+  {
+    "id": "NpcID.HELLHOUND_122",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2426,
+    "y": 9773
+  },
+  {
+    "id": "NpcID.HELLHOUND_122",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2429,
+    "y": 9770
+  },
+  {
+    "id": "NpcID.HELLHOUND_122",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2433,
+    "y": 9772
+  },
+  {
+    "id": "NpcID.FIRE_GIANT_86",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2402,
+    "y": 9784
+  },
+  {
+    "id": "NpcID.FIRE_GIANT_86",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2401,
+    "y": 9780
+  },
+  {
+    "id": "NpcID.FIRE_GIANT_86",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2399,
+    "y": 9777
+  },
+  {
+    "id": "NpcID.FIRE_GIANT_86",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2394,
+    "y": 9786
+  },
+  {
+    "id": "NpcID.FIRE_GIANT_86",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2391,
+    "y": 9783
+  },
+  {
+    "id": "NpcID.FIRE_GIANT_86",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2393,
+    "y": 9779
+  },
+  {
+    "id": "NpcID.FIRE_GIANT_86",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2395,
+    "y": 9771
+  },
+  {
+    "id": "NpcID.FIRE_GIANT_86",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2400,
+    "y": 9770
+  },
+  {
+    "id": "NpcID.FIRE_GIANT_86",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2405,
+    "y": 9770
+  },
+  {
+    "id": "NpcID.FIRE_GIANT_86",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2410,
+    "y": 9777
+  },
+  {
+    "id": "NpcID.FIRE_GIANT_86",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2412,
+    "y": 9774
+  },
+  {
+    "id": "NpcID.FIRE_GIANT_86",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2415,
+    "y": 9771
+  },
+  {
+    "id": "NpcID.ABERRANT_SPECTRE_96",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2444,
+    "y": 9785
+  },
+  {
+    "id": "NpcID.ABERRANT_SPECTRE_96",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2443,
+    "y": 9781
+  },
+  {
+    "id": "NpcID.ABERRANT_SPECTRE_96",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2445,
+    "y": 9777
+  },
+  {
+    "id": "NpcID.ABERRANT_SPECTRE_96",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2441,
+    "y": 9776
+  },
+  {
+    "id": "NpcID.ABERRANT_SPECTRE_96",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2457,
+    "y": 9775
+  },
+  {
+    "id": "NpcID.ABERRANT_SPECTRE_96",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2461,
+    "y": 9777
+  },
+  {
+    "id": "NpcID.ABERRANT_SPECTRE_96",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2457,
+    "y": 9780
+  },
+  {
+    "id": "NpcID.ABERRANT_SPECTRE_96",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2452,
+    "y": 9794
+  },
+  {
+    "id": "NpcID.ABERRANT_SPECTRE_96",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2460,
+    "y": 9792
+  },
+  {
+    "id": "NpcID.ABERRANT_SPECTRE_96",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2458,
+    "y": 9789
+  },
+  {
+    "id": "NpcID.ABERRANT_SPECTRE_96",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2454,
+    "y": 9790
+  },
+  {
+    "id": "NpcID.ABERRANT_SPECTRE_96",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2471,
+    "y": 9776
+  },
+  {
+    "id": "NpcID.ABERRANT_SPECTRE_96",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2469,
+    "y": 9779
+  },
+  {
+    "id": "NpcID.ABERRANT_SPECTRE_96",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2470,
+    "y": 9783
+  },
+  {
+    "id": "NpcID.ANKOU_75",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2472,
+    "y": 9796
+  },
+  {
+    "id": "NpcID.ANKOU_75",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2475,
+    "y": 9798
+  },
+  {
+    "id": "NpcID.ANKOU_75",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2479,
+    "y": 9798
+  },
+  {
+    "id": "NpcID.ANKOU_75",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2482,
+    "y": 9800
+  },
+  {
+    "id": "NpcID.ANKOU_75",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2477,
+    "y": 9804
+  },
+  {
+    "id": "NpcID.ANKOU_75",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2475,
+    "y": 9807
+  },
+  {
+    "id": "NpcID.ANKOU_75",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2472,
+    "y": 9805
+  },
+  {
+    "id": "NpcID.ANKOU_75",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2470,
+    "y": 9802
+  },
+  {
+    "id": "NpcID.ANKOU_75",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2470,
+    "y": 9798
+  },
+  {
+    "id": "NpcID.ANKOU_75",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2477,
+    "y": 9801
+  },
+  {
+    "id": "NpcID.BLOODVELD_76",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2489,
+    "y": 9817
+  },
+  {
+    "id": "NpcID.BLOODVELD_76",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2484,
+    "y": 9819
+  },
+  {
+    "id": "NpcID.BLOODVELD_76",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2485,
+    "y": 9825
+  },
+  {
+    "id": "NpcID.BLOODVELD_76",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2492,
+    "y": 9825
+  },
+  {
+    "id": "NpcID.BLOODVELD_76",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2489,
+    "y": 9829
+  },
+  {
+    "id": "NpcID.BLOODVELD_76",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2473,
+    "y": 9829
+  },
+  {
+    "id": "NpcID.BLOODVELD_76",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2470,
+    "y": 9834
+  },
+  {
+    "id": "NpcID.BLOODVELD_76",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2466,
+    "y": 9829
+  },
+  {
+    "id": "NpcID.BLOODVELD_76",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2463,
+    "y": 9825
+  },
+  {
+    "id": "NpcID.BLOODVELD_76",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2464,
+    "y": 9834
+  },
+  {
+    "id": "NpcID.BLOODVELD_76",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2452,
+    "y": 9814
+  },
+  {
+    "id": "NpcID.BLOODVELD_76",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2454,
+    "y": 9819
+  },
+  {
+    "id": "NpcID.BLOODVELD_76",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2446,
+    "y": 9819
+  },
+  {
+    "id": "NpcID.BLOODVELD_76",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2449,
+    "y": 9823
+  },
+  {
+    "id": "NpcID.BLOODVELD_76",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2439,
+    "y": 9818
+  },
+  {
+    "id": "NpcID.BLOODVELD_76",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2434,
+    "y": 9815
+  },
+  {
+    "id": "NpcID.BLOODVELD_76",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2435,
+    "y": 9822
+  },
+  {
+    "id": "NpcID.BLOODVELD_76",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2440,
+    "y": 9823
+  },
+  {
+    "id": "NpcID.BLOODVELD_76",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2439,
+    "y": 9831
+  },
+  {
+    "id": "NpcID.BLOODVELD_76",
+    "direction": 1,
+    "moveDistance": 4,
+    "x": 2444,
+    "y": 9832
+  }
+]

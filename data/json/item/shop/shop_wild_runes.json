@@ -1,0 +1,18 @@
+{
+  "name": "Runes Shop",
+  "exchangePriceMultiplier": 1.5,
+  "ceilPrice": true,
+  "items": [
+    { "id": "ItemID.FIRE_RUNE" },
+    { "id": "ItemID.WATER_RUNE" },
+    { "id": "ItemID.AIR_RUNE" },
+    { "id": "ItemID.EARTH_RUNE" },
+    { "id": "ItemID.MIND_RUNE" },
+    { "id": "ItemID.CHAOS_RUNE" },
+    { "id": "ItemID.DEATH_RUNE" },
+    { "id": "ItemID.SOUL_RUNE" },
+    { "id": "ItemID.NATURE_RUNE" },
+    { "id": "ItemID.LAW_RUNE" },
+    { "id": "ItemID.COSMIC_RUNE" }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "name": "Boss Slayer Rewards",
+  "virtualCurrency": "boss slayer points",
+  "ceilPrice": true,
+  "items": [
+    { "id": "ItemID.INFINITY_HAT", "price": 1500 },
+    { "id": "ItemID.INFINITY_TOP", "price": 1800 },
+    { "id": "ItemID.INFINITY_BOTTOMS", "price": 1800 },
+    { "id": "ItemID.INFINITY_GLOVES", "price": 1200 },
+    { "id": "ItemID.INFINITY_BOOTS", "price": 2400 },
+    { "id": "ItemID.MASTER_WAND", "price": 1000 },
+    { "id": "ItemID.MAGES_BOOK", "price": 2400 },
+    {
+      "id": "ItemID.ZAMORAKIAN_HASTA",
+      "price": 2000,
+      "costItems": [ [ { "id": "ItemID.ZAMORAKIAN_SPEAR",  "amount": 1 } ] ]
+    },
+    { "id": "ItemID.KERIS_P_PLUS_PLUS", "price": 500 },
+    { "id": "ItemID.CORPOREAL_BEAST_TASKS_32301", "price": 200 },
+    {
+      "id": "ItemID.SLAYER_RING_8",
+      "price": 250,
+      "attachment": 0
+    },
+    { "id": "ItemID.ECUMENICAL_KEY", "price": 200 },
+    { "id": "ItemID.HOLY_WRENCH", "price": 250 },
+    { "id": "ItemID.CLUE_SCROLL_MASTER", "price": 250 },
+    { "id": "ItemID.HERB_BOX", "price": 200 },
+    { "id": "ItemID.BONES_TO_PEACHES_8015", "price": 5 },
+    { "id": "ItemID.SHAYZIEN_HELM_5", "price": 600 },
+    { "id": "ItemID.SHAYZIEN_PLATEBODY_5", "price": 600 },
+    { "id": "ItemID.SHAYZIEN_GREAVES_5", "price": 600 },
+    { "id": "ItemID.SHAYZIEN_GLOVES_5", "price": 600 },
+    { "id": "ItemID.SHAYZIEN_BOOTS_5", "price": 600 },
+    { "id": "ItemID.RUNE_POUCH", "price": 1000 },
+    { "id": "ItemID.GODSWORD_SHARD_1", "price": 800 },
+    { "id": "ItemID.GODSWORD_SHARD_2", "price": 800 },
+    { "id": "ItemID.GODSWORD_SHARD_3", "price": 800 }
+  ]
+}

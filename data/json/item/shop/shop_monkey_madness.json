@@ -1,0 +1,16 @@
+{
+  "name": "Monkey Madness Shop",
+  "exchangePriceMultiplier": 1.5,
+  "ceilPrice": true,
+  "items": [
+    { "id": "ItemID.ROYAL_SEED_POD", "price": 250000 },
+    { "id": "ItemID.DRAGON_SCIMITAR" },
+    { "id": "ItemID.ANCIENT_MACE", "price": 20000 },
+    { "id": "ItemID.BARRELCHEST_ANCHOR", "price": 290000 },
+    { "id": "ItemID.MAGIC_SHORTBOW" },
+    { "id": "ItemID.RUNE_ARROW" },
+    { "id": "ItemID.RUNITE_BOLTS" },
+    { "id": "ItemID.ANCIENT_STAFF" },
+    { "id": "ItemID.BLOOD_RUNE" }
+  ]
+}

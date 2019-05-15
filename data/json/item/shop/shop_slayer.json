@@ -1,0 +1,20 @@
+{
+  "name": "Slayer",
+  "items": [
+    { "id": "ItemID.ENCHANTED_GEM", "price": 100 },
+    { "id": "ItemID.MIRROR_SHIELD", "price": 5000 },
+    { "id": "ItemID.LEAF_BLADED_SPEAR", "price": 31000 },
+    { "id": "ItemID.BROAD_ARROWS_4160", "price": 60 },
+    { "id": "ItemID.FACEMASK", "price": 200 },
+    { "id": "ItemID.EARMUFFS", "price": 200 },
+    { "id": "ItemID.NOSE_PEG", "price": 200 },
+    { "id": "ItemID.SLAYERS_STAFF", "price": 21000 },
+    { "id": "ItemID.SPINY_HELMET", "price": 650 },
+    { "id": "ItemID.SLAYER_GLOVES_6720", "price": 200 },
+    { "id": "ItemID.LIT_BUG_LANTERN", "price": 130 },
+    { "id": "ItemID.INSULATED_BOOTS", "price": 200 },
+    { "id": "ItemID.WITCHWOOD_ICON", "price": 900 },
+    { "id": "ItemID.UNFINISHED_BROAD_BOLTS", "price": 55 },
+    { "id": "ItemID.BOOTS_OF_STONE", "price": 200 }
+  ]
+}
