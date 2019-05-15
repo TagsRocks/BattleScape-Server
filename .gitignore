@@ -3,6 +3,7 @@ thumbs.db
 [Dd]esktop.ini
 .gitmodules
 .github
+README.md
 /bin
 /core
 /data/dynamic
