@@ -344,10 +344,10 @@ DecodedPacketNpcOption.prototype.npc_2459 = function(player, index, npc) { }
 
 // Ajjat
 DecodedPacketNpcOption.prototype.npc_2460 = function(player, index, npc) {
-    if (player.isGameModeNormal() || player.isGameModeHard()) {
-        player.openShop("equipment");
+    if (Main.isSpawn()) {
+        player.openShop("equipment_spawn");
     } else {
-        player.openShop("equipment_iron");
+        player.openShop((player.isGameModeNormal() || player.isGameModeHard()) ? "equipment" : "equipment_iron");
     }
 }
 

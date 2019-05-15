@@ -361,10 +361,10 @@ DecodedPacketNpcOption.prototype.npc_505 = function(player, index, npc) { }
 
 // Shop keeper
 DecodedPacketNpcOption.prototype.npc_506 = function(player, index, npc) {
-    if (player.isGameModeNormal()) {
-        player.openShop("supplies");
+    if (Main.isSpawn()) {
+        player.openShop("supplies_spawn");
     } else {
-        player.openShop("supplies_iron");
+        player.openShop((player.isGameModeNormal() || player.isGameModeHard()) ? "supplies" : "supplies_iron");
     }
 }
 

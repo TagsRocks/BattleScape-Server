@@ -382,37 +382,37 @@ DecodedPacketNpcOption.prototype.npc_1764 = function(player, index, npc) {
 
 // Squire
 DecodedPacketNpcOption.prototype.npc_1765 = function(player, index, npc) {
-    if (player.isGameModeNormal() || player.isGameModeHard()) {
-        player.openShop("equipment");
+    if (Main.isSpawn()) {
+        player.openShop("equipment_spawn");
     } else {
-        player.openShop("equipment_iron");
+        player.openShop((player.isGameModeNormal() || player.isGameModeHard()) ? "equipment" : "equipment_iron");
     }
 }
 
 // Squire
 DecodedPacketNpcOption.prototype.npc_1766 = function(player, index, npc) {
-    if (player.isGameModeNormal() || player.isGameModeHard()) {
-        player.openShop("equipment");
+    if (Main.isSpawn()) {
+        player.openShop("equipment_spawn");
     } else {
-        player.openShop("equipment_iron");
+        player.openShop((player.isGameModeNormal() || player.isGameModeHard()) ? "equipment" : "equipment_iron");
     }
 }
 
 // Squire
 DecodedPacketNpcOption.prototype.npc_1767 = function(player, index, npc) {
-    if (player.isGameModeNormal() || player.isGameModeHard()) {
-        player.openShop("equipment");
+    if (Main.isSpawn()) {
+        player.openShop("equipment_spawn");
     } else {
-        player.openShop("equipment_iron");
+        player.openShop((player.isGameModeNormal() || player.isGameModeHard()) ? "equipment" : "equipment_iron");
     }
 }
 
 // Squire
 DecodedPacketNpcOption.prototype.npc_1768 = function(player, index, npc) {
-    if (player.isGameModeNormal()) {
-        player.openShop("supplies");
+    if (Main.isSpawn()) {
+        player.openShop("supplies_spawn");
     } else {
-        player.openShop("supplies_iron");
+        player.openShop((player.isGameModeNormal() || player.isGameModeHard()) ? "supplies" : "supplies_iron");
     }
 }
 

@@ -214,10 +214,10 @@ DecodedPacketNpcOption.prototype.npc_2657 = function(player, index, npc) { }
 
 // Head chef
 DecodedPacketNpcOption.prototype.npc_2658 = function(player, index, npc) {
-    if (player.isGameModeNormal()) {
-        player.openShop("supplies");
+    if (Main.isSpawn()) {
+        player.openShop("supplies_spawn");
     } else {
-        player.openShop("supplies_iron");
+        player.openShop((player.isGameModeNormal() || player.isGameModeHard()) ? "supplies" : "supplies_iron");
     }
 }
 
