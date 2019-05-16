@@ -20,7 +20,7 @@ function DecodedPacket60() {
                 player.getInventory().setItem(i, null);
                 player.getInventory().setUpdate(true);
             }
-        } else if (action.equals("item") && (Main.ownerPrivledges(player) || Main.isBeta())) {
+        } else if (action.equals("item") && (Main.ownerPrivledges(player) || Main.isBeta() || Main.isSpawn())) {
             var id = -1;
             if (split.length == 1) {
                 return;
