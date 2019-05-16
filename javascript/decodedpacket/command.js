@@ -413,7 +413,7 @@ function DecodedPacket60() {
             if (player2 == null) {
                 player.getGameEncoder().sendMessage("Unable to find user " + username + ".");
                 return;
-            } else if (player == player2) {
+            } else if ((player == player2) && (!player.isUsergroup(Player.GROUP_ADMINISTRATOR))) {
                 player.getGameEncoder().sendMessage("You can't move yourself.");
                 return;
             } else if (player2.getController().isInstanced()) {
