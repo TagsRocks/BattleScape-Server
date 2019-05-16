@@ -354,9 +354,7 @@ DecodedPacketNpcOption.prototype.npc_3305 = function(player, index, npc) { }
 DecodedPacketNpcOption.prototype.npc_3306 = function(player, index, npc) { }
 
 // Combat Instructor
-DecodedPacketNpcOption.prototype.npc_3307 = function(player, index, npc) {
-    //player.openDialogue("xplock", 0);
-}
+DecodedPacketNpcOption.prototype.npc_3307 = function(player, index, npc) { }
 
 // RuneScape Guide
 DecodedPacketNpcOption.prototype.npc_3308 = function(player, index, npc) { }
