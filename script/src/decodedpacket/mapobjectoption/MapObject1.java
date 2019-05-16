@@ -32,6 +32,7 @@ import com.palidino.osrs.model.player.controller.BossInstancePC;
 import com.palidino.osrs.model.player.controller.ClanWarsFreeForAllPC;
 import com.palidino.osrs.model.player.controller.GodWarsPC;
 import com.palidino.osrs.util.RequestManager;
+import com.palidino.osrs.world.ClanWarsTournament;
 import com.palidino.util.Time;
 import com.palidino.util.Utils;
 import com.palidino.util.event.Event;
@@ -12988,7 +12989,11 @@ public class MapObject1 {
 
     // Coffer
     public static void mapObject29087(Player player, int index, MapObject mapObject) {
-        player.openDialogue("clanwars", 6);
+        if (player.getRights() == 2 || player.isUsergroup(Player.GROUP_ADVERTISER)) {
+            player.openDialogue("clanwars", 6);
+        } else {
+            ClanWarsTournament.viewDonatedItems(player);
+        }
     }
 
     // Shrine
