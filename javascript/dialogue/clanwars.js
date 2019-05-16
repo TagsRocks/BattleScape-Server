@@ -80,6 +80,10 @@ lines.add("View Prizes");
 actions.add("close|script");
 lines.add("Start Custom Tournament");
 actions.add("close|script");
+lines.add("Start Custom Tournament - Coin Prize");
+actions.add("close|script");
+lines.add("Start Custom Tournament - OSGP Prize");
+actions.add("close|script");
 var obj6 = new DialogueEntry();
 entries.add(obj6);
 obj6.setSelection(title, Utils.toStringArray(lines, true), Utils.toStringArray(actions, true));
@@ -122,14 +126,31 @@ instance = new DialogueScript() {
             if (slot == 0) {
                 ClanWarsTournament.viewDonatedItems(player);
             } else if (slot == 1) {
-                if (player.getRights() == 2 || player.isUsergroup(Player.GROUP_ADVERTISER)) {
-                    if (ClanWarsTournament.startCustom(player)) {
-                        player.openDialogue("clanwars", 4);
-                        Dialogue.setText(player, null, ClanWarsTournament.getWarModeNames());
-                    }
-                } else {
-                    player.getGameEncoder().sendMessage("Use items on the coffer to do this.");
+                if (ClanWarsTournament.startCustom(player, 0)) {
+                    player.openDialogue("clanwars", 4);
+                    Dialogue.setText(player, null, ClanWarsTournament.getWarModeNames());
                 }
+            } else if (slot == 2) {
+                player.getGameEncoder().sendEnterAmount("Prize (Ex. 8M entered: 1st: 8M, 2nd: 4M, 3rd: 2M, 4th: 1M):",
+                        new ValueEnteredEvent.IntegerEvent() {
+                    execute: function(value) {
+                        if (ClanWarsTournament.startCustom(player, value)) {
+                            player.openDialogue("clanwars", 4);
+                            Dialogue.setText(player, null, ClanWarsTournament.getWarModeNames());
+                        }
+                    }
+                });
+            } else if (slot == 3) {
+                player.getGameEncoder().sendEnterAmount("First place OSGP prize:",
+                        new ValueEnteredEvent.IntegerEvent() {
+                    execute: function(value) {
+                        if (ClanWarsTournament.startCustom(player, 0)) {
+                            ClanWarsTournament.setOSCoinsPrize(value);
+                            player.openDialogue("clanwars", 4);
+                            Dialogue.setText(player, null, ClanWarsTournament.getWarModeNames());
+                        }
+                    }
+                });
             }
         }
     },
