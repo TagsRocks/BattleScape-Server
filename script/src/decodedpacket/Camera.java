@@ -7,7 +7,7 @@ import com.palidino.osrs.model.player.Player;
 class Camera extends DecodedPacket {
     @Override
     public int[] getOpcodes() {
-        return new int[] {
+        return new int[] {// test
             39
         };
     }
