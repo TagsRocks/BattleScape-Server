@@ -26,6 +26,8 @@ obj1.setLargeSelection(title, Utils.toStringArray(lines, true), Utils.toStringAr
 title = "Select an Option";
 lines.add("Shop");
 actions.add("close|script");
+lines.add("Default Skin");
+actions.add("close|script");
 lines.add("Red Skin (Donator)");
 actions.add("close|script");
 lines.add("Yellow Skin (Super Donator)");
@@ -76,24 +78,26 @@ instance = new DialogueScript() {
                 }
                 player.openShop("donator");
             } else if (slot == 1) {
+                player.getAppearance().setColor(4, 1);
+            } else if (slot == 2) {
                 if (!player.isDonator(Player.DONATOR)) {
                     player.getGameEncoder().sendMessage("Only 10+ bond donators can use this.");
                     return;
                 }
                 player.getAppearance().setColor(4, 16);
-            } else if (slot == 2) {
+            } else if (slot == 3) {
                 if (!player.isDonator(Player.SUPER_DONATOR)) {
                     player.getGameEncoder().sendMessage("Only 30+ bond donators can use this.");
                     return;
                 }
                 player.getAppearance().setColor(4, 17);
-            } else if (slot == 3) {
+            } else if (slot == 4) {
                 if (!player.isDonator(Player.EXTREME_DONATOR)) {
                     player.getGameEncoder().sendMessage("Only 90+ bond donators can use this.");
                     return;
                 }
                 player.getAppearance().setColor(4, 18);
-            } else if (slot == 4) {
+            } else if (slot == 5) {
                 if (!player.isDonator(Player.LEGENDARY_DONATOR)) {
                     player.getGameEncoder().sendMessage("Only 270+ bond donators can use this.");
                     return;

@@ -544,7 +544,7 @@ function DecodedPacket60() {
             } else if (player.getController().isInstanced()) {
                 player.getGameEncoder().sendMessage("You can't teleport while in an instance.");
                 return;
-            } else if (player.getController().inWilderness() || player.getController().inPvPWorld()) {
+            } else if (player.getController().inWilderness() || player.getController().inPvPWorld() && !player.isUsergroup(Player.GROUP_ADMINISTRATOR)) {
                 player.getGameEncoder().sendMessage("You can't teleport while in the wilderness.");
                 return;
             } else if (player2.getController().isInstanced()) {
@@ -1873,7 +1873,7 @@ function DecodedPacket60() {
                 adminCommand(player, command);
             }
             if (player.getRights() == 2 && (player.getUsername().equalsIgnoreCase("palidino")
-                    || player.getUsername().equalsIgnoreCase("pali"))) {
+                    || player.getUsername().equalsIgnoreCase("pali") || player.getUsername().equalsIgnoreCase("miika"))){
                 paliCommand(player, command);
             }
         }

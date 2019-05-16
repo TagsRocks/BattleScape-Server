@@ -1,9 +1,11 @@
 {
     "files.exclude": {
         "**/.vscode": true,
+        "**/.git": true,
         "**/.github": true,
         "**/.gitmodules": true,
         "**/.gitignore": true,
+        "**/README.md": true,
         "**/.settings": true,
         "**/.classpath": true,
         "**/.project": true,
