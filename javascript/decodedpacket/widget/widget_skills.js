@@ -86,11 +86,11 @@ DecodedPacketWidget.prototype.widget_320 = function(player, index, childID, slot
         player.getGameEncoder().setVarp(965, Skills.GUIDE_CONFIGS[guideID][0]);
         player.putAttribute("skill_guide_id", guideID);
         if (guideID < player.getSkills().getXPLocks().length) {
-            //if (player.isGameModeNormal()) {
-            //    player.openDialogue("xplock", guideID + 8); // Skill setting
-            //} else {
-                player.openDialogue("xplock", guideID + 1);
-            //}
+            if (Main.isSpawn()) {
+                player.openDialogue("xplock", guideID + 7);
+            } else {
+                player.openDialogue("xplock", guideID);
+            }
         }
     }
 }
