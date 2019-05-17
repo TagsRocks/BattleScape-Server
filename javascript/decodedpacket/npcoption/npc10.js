@@ -196,9 +196,7 @@ DecodedPacketNpcOption.prototype.npc_2639 = function(player, index, npc) { }
 DecodedPacketNpcOption.prototype.npc_2640 = function(player, index, npc) { }
 
 // Fishing spot
-DecodedPacketNpcOption.prototype.npc_2653 = function(player, index, npc) {
-    Fishing.start(player, npc, index);
-}
+DecodedPacketNpcOption.prototype.npc_2653 = function(player, index, npc) { }
 
 // Fishing spot
 DecodedPacketNpcOption.prototype.npc_2654 = function(player, index, npc) { }
