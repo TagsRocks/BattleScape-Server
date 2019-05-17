@@ -392,9 +392,7 @@ DecodedPacketNpcOption.prototype.npc_1498 = function(player, index, npc) { }
 DecodedPacketNpcOption.prototype.npc_1499 = function(player, index, npc) { }
 
 // Fishing spot
-DecodedPacketNpcOption.prototype.npc_1500 = function(player, index, npc) {
-    Fishing.start(player, npc, index);
-}
+DecodedPacketNpcOption.prototype.npc_1500 = function(player, index, npc) { }
 
 // Aleck
 DecodedPacketNpcOption.prototype.npc_1501 = function(player, index, npc) { }
@@ -419,151 +417,91 @@ DecodedPacketNpcOption.prototype.npc_1504 = function(player, index, npc) {
 }
 
 // Fishing spot
-DecodedPacketNpcOption.prototype.npc_1506 = function(player, index, npc) {
-    Fishing.start(player, npc, index);
-}
+DecodedPacketNpcOption.prototype.npc_1506 = function(player, index, npc) { }
 
 // Fishing spot
-DecodedPacketNpcOption.prototype.npc_1507 = function(player, index, npc) {
-    Fishing.start(player, npc, index);
-}
+DecodedPacketNpcOption.prototype.npc_1507 = function(player, index, npc) { }
 
 // Fishing spot
-DecodedPacketNpcOption.prototype.npc_1508 = function(player, index, npc) {
-    Fishing.start(player, npc, index);
-}
+DecodedPacketNpcOption.prototype.npc_1508 = function(player, index, npc) { }
 
 // Fishing spot
-DecodedPacketNpcOption.prototype.npc_1509 = function(player, index, npc) {
-    Fishing.start(player, npc, index);
-}
+DecodedPacketNpcOption.prototype.npc_1509 = function(player, index, npc) { }
 
 // Fishing spot
-DecodedPacketNpcOption.prototype.npc_1510 = function(player, index, npc) {
-    Fishing.start(player, npc, index);
-}
+DecodedPacketNpcOption.prototype.npc_1510 = function(player, index, npc) { }
 
 // Fishing spot
-DecodedPacketNpcOption.prototype.npc_1511 = function(player, index, npc) {
-    Fishing.start(player, npc, index);
-}
+DecodedPacketNpcOption.prototype.npc_1511 = function(player, index, npc) { }
 
 // Fishing spot
-DecodedPacketNpcOption.prototype.npc_1512 = function(player, index, npc) {
-    Fishing.start(player, npc, index);
-}
+DecodedPacketNpcOption.prototype.npc_1512 = function(player, index, npc) { }
 
 // Fishing spot
-DecodedPacketNpcOption.prototype.npc_1513 = function(player, index, npc) {
-    Fishing.start(player, npc, index);
-}
+DecodedPacketNpcOption.prototype.npc_1513 = function(player, index, npc) { }
 
 // Fishing spot
-DecodedPacketNpcOption.prototype.npc_1514 = function(player, index, npc) {
-    Fishing.start(player, npc, index);
-}
+DecodedPacketNpcOption.prototype.npc_1514 = function(player, index, npc) { }
 
 // Fishing spot
-DecodedPacketNpcOption.prototype.npc_1515 = function(player, index, npc) {
-    Fishing.start(player, npc, index);
-}
+DecodedPacketNpcOption.prototype.npc_1515 = function(player, index, npc) { }
 
 // Fishing spot
-DecodedPacketNpcOption.prototype.npc_1516 = function(player, index, npc) {
-    Fishing.start(player, npc, index);
-}
+DecodedPacketNpcOption.prototype.npc_1516 = function(player, index, npc) { }
 
 // Fishing spot
-DecodedPacketNpcOption.prototype.npc_1517 = function(player, index, npc) {
-    Fishing.start(player, npc, index);
-}
+DecodedPacketNpcOption.prototype.npc_1517 = function(player, index, npc) { }
 
 // Fishing spot
-DecodedPacketNpcOption.prototype.npc_1518 = function(player, index, npc) {
-    Fishing.start(player, npc, index);
-}
+DecodedPacketNpcOption.prototype.npc_1518 = function(player, index, npc) { }
 
 // Fishing spot
-DecodedPacketNpcOption.prototype.npc_1519 = function(player, index, npc) {
-    Fishing.start(player, npc, index);
-}
+DecodedPacketNpcOption.prototype.npc_1519 = function(player, index, npc) { }
 
 // Fishing spot
-DecodedPacketNpcOption.prototype.npc_1520 = function(player, index, npc) {
-    Fishing.start(player, npc, index);
-}
+DecodedPacketNpcOption.prototype.npc_1520 = function(player, index, npc) { }
 
 // Fishing spot
-DecodedPacketNpcOption.prototype.npc_1521 = function(player, index, npc) {
-    Fishing.start(player, npc, index);
-}
+DecodedPacketNpcOption.prototype.npc_1521 = function(player, index, npc) { }
 
 // Fishing spot
-DecodedPacketNpcOption.prototype.npc_1522 = function(player, index, npc) {
-    Fishing.start(player, npc, index);
-}
+DecodedPacketNpcOption.prototype.npc_1522 = function(player, index, npc) { }
 
 // Fishing spot
-DecodedPacketNpcOption.prototype.npc_1523 = function(player, index, npc) {
-    Fishing.start(player, npc, index);
-}
+DecodedPacketNpcOption.prototype.npc_1523 = function(player, index, npc) { }
 
 // Fishing spot
-DecodedPacketNpcOption.prototype.npc_1524 = function(player, index, npc) {
-    Fishing.start(player, npc, index);
-}
+DecodedPacketNpcOption.prototype.npc_1524 = function(player, index, npc) { }
 
 // Fishing spot
-DecodedPacketNpcOption.prototype.npc_1525 = function(player, index, npc) {
-    Fishing.start(player, npc, index);
-}
+DecodedPacketNpcOption.prototype.npc_1525 = function(player, index, npc) { }
 
 // Fishing spot
-DecodedPacketNpcOption.prototype.npc_1526 = function(player, index, npc) {
-    Fishing.start(player, npc, index);
-}
+DecodedPacketNpcOption.prototype.npc_1526 = function(player, index, npc) { }
 
 // Fishing spot
-DecodedPacketNpcOption.prototype.npc_1527 = function(player, index, npc) {
-    Fishing.start(player, npc, index);
-}
+DecodedPacketNpcOption.prototype.npc_1527 = function(player, index, npc) { }
 
 // Fishing spot
-DecodedPacketNpcOption.prototype.npc_1528 = function(player, index, npc) {
-    Fishing.start(player, npc, index);
-}
+DecodedPacketNpcOption.prototype.npc_1528 = function(player, index, npc) { }
 
 // Fishing spot
-DecodedPacketNpcOption.prototype.npc_1529 = function(player, index, npc) {
-    Fishing.start(player, npc, index);
-}
+DecodedPacketNpcOption.prototype.npc_1529 = function(player, index, npc) { }
 
 // Fishing spot
-DecodedPacketNpcOption.prototype.npc_1530 = function(player, index, npc) {
-    Fishing.start(player, npc, index);
-}
+DecodedPacketNpcOption.prototype.npc_1530 = function(player, index, npc) { }
 
 // Fishing spot
-DecodedPacketNpcOption.prototype.npc_1531 = function(player, index, npc) {
-    Fishing.start(player, npc, index);
-}
+DecodedPacketNpcOption.prototype.npc_1531 = function(player, index, npc) { }
 
 // Fishing spot
-DecodedPacketNpcOption.prototype.npc_1532 = function(player, index, npc) {
-    Fishing.start(player, npc, index);
-}
+DecodedPacketNpcOption.prototype.npc_1532 = function(player, index, npc) { }
 
 // Fishing spot
-DecodedPacketNpcOption.prototype.npc_1533 = function(player, index, npc) {
-    Fishing.start(player, npc, index);
-}
+DecodedPacketNpcOption.prototype.npc_1533 = function(player, index, npc) { }
 
 // Fishing spot
-DecodedPacketNpcOption.prototype.npc_1534 = function(player, index, npc) {
-    Fishing.start(player, npc, index);
-}
+DecodedPacketNpcOption.prototype.npc_1534 = function(player, index, npc) { }
 
 // Fishing spot
-DecodedPacketNpcOption.prototype.npc_1535 = function(player, index, npc) {
-    Fishing.start(player, npc, index);
-}
+DecodedPacketNpcOption.prototype.npc_1535 = function(player, index, npc) { }

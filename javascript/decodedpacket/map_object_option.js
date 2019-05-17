@@ -124,7 +124,7 @@ function DecodedPacketObjectOption(index) {
                 var methodObj = classObj.getMethod(methodName, Player.class, Integer.TYPE, MapObject.class);
                 methodObj.invoke(null, player, decodedPacket.index(), mapObject);
             } catch (e) {
-                invalid.add(scriptName);
+                //invalid.add(scriptName);
                 throw e;
             }
             return true;

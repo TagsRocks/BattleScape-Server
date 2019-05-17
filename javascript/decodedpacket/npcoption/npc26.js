@@ -286,9 +286,7 @@ DecodedPacketNpcOption.prototype.npc_6814 = function(player, index, npc) { }
 DecodedPacketNpcOption.prototype.npc_6823 = function(player, index, npc) { }
 
 // Fishing spot
-DecodedPacketNpcOption.prototype.npc_6825 = function(player, index, npc) {
-    Fishing.start(player, npc, index);
-}
+DecodedPacketNpcOption.prototype.npc_6825 = function(player, index, npc) { }
 
 // Wounded soldier
 DecodedPacketNpcOption.prototype.npc_6826 = function(player, index, npc) { }

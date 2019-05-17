@@ -191,7 +191,7 @@ skill = new SkillContainer() {
         if (player.inWildernessResourceArea()) {
             failure /= 2;
         }
-        if (inFishingGuild(player)) {
+        if (this.inFishingGuild(player)) {
             power += 7;
         }
         var chance = 0;

@@ -106,24 +106,16 @@ DecodedPacketNpcOption.prototype.npc_7728 = function(player, index, npc) {
 }
 
 // Fishing spot
-DecodedPacketNpcOption.prototype.npc_7730 = function(player, index, npc) {
-    Fishing.start(player, npc, index);
-}
+DecodedPacketNpcOption.prototype.npc_7730 = function(player, index, npc) { }
 
 // Fishing spot
-DecodedPacketNpcOption.prototype.npc_7731 = function(player, index, npc) {
-    Fishing.start(player, npc, index);
-}
+DecodedPacketNpcOption.prototype.npc_7731 = function(player, index, npc) { }
 
 // Fishing spot
-DecodedPacketNpcOption.prototype.npc_7732 = function(player, index, npc) {
-    Fishing.start(player, npc, index);
-}
+DecodedPacketNpcOption.prototype.npc_7732 = function(player, index, npc) { }
 
 // Fishing spot
-DecodedPacketNpcOption.prototype.npc_7733 = function(player, index, npc) {
-    Fishing.start(player, npc, index);
-}
+DecodedPacketNpcOption.prototype.npc_7733 = function(player, index, npc) { }
 
 // Recruiter
 DecodedPacketNpcOption.prototype.npc_7734 = function(player, index, npc) { }
