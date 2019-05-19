@@ -16484,7 +16484,7 @@ public class MapObject0 {
 
     // Altar
     public static void mapObject13185(Player player, int index, MapObject mapObject) {
-        if (player.getController().inPvPWorld()) {
+        if (player.getController().inPvPWorldCombat()) {
             player.getGameEncoder().sendMessage("You can't use this here.");
             return;
         }
