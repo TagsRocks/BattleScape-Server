@@ -5838,7 +5838,11 @@ public class MapObject1 {
                 player.getGameEncoder().sendMessage(
                         "You need to risk at least " + Utils.formatNumber(entryRequirement) + " to enter.");
                 return;
+            } else if (player.getCombatDelay() > 0) {
+                player.getGameEncoder().sendMessage("You can't use this yet.");
+                return;
             }
+            player.getCombat().setPKSkullDelay(PCombat.SKULL_DELAY);
             if (mapObject.getDirection() == 1) {
                 player.getMovement().teleport(player.getX() + 2, player.getY());
             } else if (mapObject.getDirection() == 3) {
@@ -6827,7 +6831,7 @@ public class MapObject1 {
 
     // Box of Health
     public static void mapObject23709(Player player, int index, MapObject mapObject) {
-        if (player.getController().inPvPWorld()) {
+        if (player.getController().inPvPWorldCombat()) {
             player.getGameEncoder().sendMessage("You can't use this here.");
             return;
         }
@@ -13128,7 +13132,7 @@ public class MapObject1 {
 
     // Altar of the Occult
     public static void mapObject29150(Player player, int index, MapObject mapObject) {
-        if (player.getController().inPvPWorld()) {
+        if (player.getController().inPvPWorldCombat()) {
             player.getGameEncoder().sendMessage("You can't use this here.");
             return;
         }
@@ -13440,7 +13444,7 @@ public class MapObject1 {
 
     // Ornate rejuvenation pool
     public static void mapObject29241(Player player, int index, MapObject mapObject) {
-        if (player.getController().inPvPWorld()) {
+        if (player.getController().inPvPWorldCombat()) {
             player.getGameEncoder().sendMessage("You can't use this here.");
             return;
         }
