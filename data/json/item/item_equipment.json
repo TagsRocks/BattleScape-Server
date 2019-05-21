@@ -25148,7 +25148,7 @@
       "ATTACK_SLASH": "90",
       "MELEE_STRENGTH": "86"
     },
-    "degradeID": "12004",
+    "degradeID": "ItemID.KRAKEN_TENTACLE",
     "degradeTime": "20000",
     "degradeCombat": "true"
   },
@@ -27693,7 +27693,9 @@
       "ATTACK_CRUSH": "60",
       "MELEE_STRENGTH": "88",
       "PRAYER": "2"
-    }
+    },
+    "degradeID": "ItemID.SARADOMINS_BLESSED_SWORD",
+    "degradeCombat": "true"
   },
   {
     "id": "ItemID.SARADOMINS_BLESSED_SWORD",
@@ -27708,7 +27710,10 @@
       "ATTACK_CRUSH": "60",
       "MELEE_STRENGTH": "88",
       "PRAYER": "2"
-    }
+    },
+    "degradeID": "ItemID.SARADOMINS_TEAR",
+    "degradeTime": "10000",
+    "degradeCombat": "true"
   },
   {
     "id": "ItemID.IRONMAN_HELM",

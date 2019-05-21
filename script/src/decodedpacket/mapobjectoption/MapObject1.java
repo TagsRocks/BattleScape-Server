@@ -5813,21 +5813,21 @@ public class MapObject1 {
     public static void mapObject22945(Player player, int index, MapObject mapObject) {
         int entryRequirement = 0;
         if (mapObject.getX() == 2652 && mapObject.getY() == 5449) {
-            entryRequirement = 100000;
-        } else if (mapObject.getX() == 2658 && mapObject.getY() == 5449) {
-            entryRequirement = 500000;
-        } else if (mapObject.getX() == 2652 && mapObject.getY() == 5463) {
             entryRequirement = 1000000;
-        } else if (mapObject.getX() == 2658 && mapObject.getY() == 5463) {
+        } else if (mapObject.getX() == 2658 && mapObject.getY() == 5449) {
             entryRequirement = 5000000;
-        } else if (mapObject.getX() == 2652 && mapObject.getY() == 5478) {
+        } else if (mapObject.getX() == 2652 && mapObject.getY() == 5463) {
             entryRequirement = 10000000;
-        } else if (mapObject.getX() == 2658 && mapObject.getY() == 5478) {
+        } else if (mapObject.getX() == 2658 && mapObject.getY() == 5463) {
             entryRequirement = 25000000;
-        } else if (mapObject.getX() == 2652 && mapObject.getY() == 5493) {
+        } else if (mapObject.getX() == 2652 && mapObject.getY() == 5478) {
             entryRequirement = 50000000;
-        } else if (mapObject.getX() == 2658 && mapObject.getY() == 5493) {
+        } else if (mapObject.getX() == 2658 && mapObject.getY() == 5478) {
             entryRequirement = 100000000;
+        } else if (mapObject.getX() == 2652 && mapObject.getY() == 5493) {
+            entryRequirement = 250000000;
+        } else if (mapObject.getX() == 2658 && mapObject.getY() == 5493) {
+            entryRequirement = 500000000;
         }
         if (entryRequirement == 0) {
             return;

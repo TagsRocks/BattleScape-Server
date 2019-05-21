@@ -203,7 +203,7 @@ DecodedPacketItemOnItem.prototype.doAction = function(player, useInterfaceID, us
             // Saradomin sword and Saradomin's tear
             player.getInventory().deleteItem(useItemID, 1, useSlot);
             player.getInventory().deleteItem(onItemID, 1, onSlot);
-            player.getInventory().addItem(12809, 1, onSlot);
+            player.getInventory().addItem(12808, 1, onSlot);
         } else if (this.used(useItemID, onItemID, 10587, 4081)) {
             // Tarn's diary and Salve amulet
             player.getInventory().deleteItem(4081, 1, onSlot);

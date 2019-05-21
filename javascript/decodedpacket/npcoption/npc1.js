@@ -80,7 +80,9 @@ DecodedPacketNpcOption.prototype.npc_316 = function(player, index, npc) {
     if (index == 0) {
         player.openDialogue("emblemtrader", 0);
     } else if (index == 2) {
-        if (player.isGameModeNormal() || player.isGameModeHard()) {
+        if (Main.isSpawn()) {
+            player.openShop("blood_money_spawn");
+        } else if (player.isGameModeNormal() || player.isGameModeHard()) {
             player.openShop("blood_money");
         } else {
             player.openShop("blood_money_iron");

@@ -30,7 +30,9 @@ instance = new DialogueScript() {
         }
         if (index == 0) {
             if (slot == 0) {
-                if (player.isGameModeNormal() || player.isGameModeHard()) {
+                if (Main.isSpawn()) {
+                    player.openShop("blood_money_spawn");
+                } else if (player.isGameModeNormal() || player.isGameModeHard()) {
                     player.openShop("blood_money");
                 } else {
                     player.openShop("blood_money_iron");

@@ -1991,7 +1991,6 @@ DecodedPacketWidget.prototype.widget_149 = function(player, index, childID, slot
     case ItemID.BANDOS_GODSWORD_OR:
     case ItemID.SARADOMIN_GODSWORD_OR:
     case ItemID.ZAMORAK_GODSWORD_OR:
-    case ItemID.SARADOMINS_BLESSED_SWORD:
     case ItemID.DRAGON_BOOTS_G:
     case ItemID.DRAGON_PLATEBODY_G:
     case ItemID.DRAGON_KITESHIELD_G:
@@ -2157,12 +2156,24 @@ DecodedPacketWidget.prototype.widget_149 = function(player, index, childID, slot
         player.getInventory().deleteItem(20718, 10);
         player.getInventory().addItem(20714, 1, slot);
         break;
-    case 12006: // Abyssal tentacle
+    case ItemID.ABYSSAL_TENTACLE:
         if (index == 3) {
             player.getCharges().checkCharges(slot);
         } else if (index == 4) {
             player.getInventory().deleteItem(itemID, 1, slot);
-            player.getInventory().addItem(12004, 1, slot);
+            player.getInventory().addItem(ItemID.KRAKEN_TENTACLE, 1, slot);
+        }
+        break;
+    case ItemID.SARAS_BLESSED_SWORD_FULL:
+    case ItemID.SARADOMINS_BLESSED_SWORD:
+        if (index == 2) {
+            player.getCharges().checkCharges(slot);
+        } else if (index == 4) {
+            player.getInventory().deleteItem(itemID, 1, slot);
+            player.getInventory().addItem(ItemID.SARADOMINS_TEAR, 1, slot);
+            if (itemID == ItemID.SARAS_BLESSED_SWORD_FULL) {
+                player.getInventory().addOrDropItem(ItemID.SARADOMIN_SWORD, 1);
+            }
         }
         break;
     case 12922: // Tanzanite fang
