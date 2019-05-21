@@ -123,60 +123,6 @@
     "y": 3517
   },
   {
-    "id": "NpcID.JOSSIK",
-    "direction": 4,
-    "x": 3107,
-    "y": 3512
-  },
-  {
-    "id": "NpcID.EVIL_DAVE_4806",
-    "direction": 6,
-    "x": 3108,
-    "y": 3511
-  },
-  {
-    "id": "NpcID.RADIMUS_ERKLE",
-    "direction": 6,
-    "x": 3109,
-    "y": 3511
-  },
-  {
-    "id": "NpcID.GUILDMASTER",
-    "direction": 6,
-    "x": 3110,
-    "y": 3511
-  },
-  {
-    "id": "NpcID.MONK_OF_ENTRANA",
-    "direction": 3,
-    "x": 3111,
-    "y": 3512
-  },
-  {
-    "id": "NpcID.KING_NARNODE_SHAREEN",
-    "direction": 3,
-    "x": 3111,
-    "y": 3513
-  },
-  {
-    "id": "NpcID.ONEIROMANCER",
-    "direction": 3,
-    "x": 3111,
-    "y": 3514
-  },
-  {
-    "id": "NpcID.ZEALOT",
-    "direction": 3,
-    "x": 3111,
-    "y": 3515
-  },
-  {
-    "id": "NpcID.NIEVE",
-    "direction": 1,
-    "x": 3080,
-    "y": 3496
-  },
-  {
     "id": "NpcID.KRYSTILIA",
     "direction": 1,
     "x": 3079,
@@ -240,12 +186,6 @@
     "id": "NpcID.MAKE_OVER_MAGE",
     "direction": 1,
     "x": 3095,
-    "y": 3499
-  },
-  {
-    "id": "NpcID.ADAM",
-    "direction": 1,
-    "x": 3096,
     "y": 3499
   },
   {

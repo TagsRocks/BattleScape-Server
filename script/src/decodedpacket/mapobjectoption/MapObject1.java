@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
+import com.palidino.osrs.Main;
 import com.palidino.osrs.io.cache.ItemID;
 import com.palidino.osrs.io.cache.WidgetID;
 import com.palidino.osrs.model.ForceMovement;
@@ -16616,7 +16617,7 @@ public class MapObject1 {
 
     // the cloister bell
     public static void mapObject31669(Player player, int index, MapObject mapObject) {
-        if (!player.getSlayer().isAnyTask(7851) && !player.isUsergroup(Player.GROUP_YOUTUBER)) {
+        if (!Main.isSpawn() && !player.getSlayer().isAnyTask(7851) && !player.isUsergroup(Player.GROUP_YOUTUBER)) {
             player.getGameEncoder().sendMessage("This can only be killed on task.");
             return;
         } else if (player.getWorld().getNPC(7851, player) != null || player.getWorld().getNPC(7882, player) != null
@@ -16677,7 +16678,7 @@ public class MapObject1 {
 
     // roof entrance
     public static void mapObject31681(Player player, int index, MapObject mapObject) {
-        if (!player.getSlayer().isUnlocked(Slayer.GROTESQUE_GUARDIANS)) {
+        if (!Main.isSpawn() && !player.getSlayer().isUnlocked(Slayer.GROTESQUE_GUARDIANS)) {
             if (!player.getInventory().hasItem(21724)) {
                 player.getGameEncoder().sendMessage("You need a Brittle key to unlock this.");
                 return;
@@ -16686,7 +16687,7 @@ public class MapObject1 {
             player.getSlayer().unlock(Slayer.GROTESQUE_GUARDIANS);
             return;
         }
-        if (!player.getSlayer().isAnyTask(7851) && !player.isUsergroup(Player.GROUP_YOUTUBER)) {
+        if (!Main.isSpawn() && !player.getSlayer().isAnyTask(7851) && !player.isUsergroup(Player.GROUP_YOUTUBER)) {
             player.getGameEncoder().sendMessage("This can only be attacked on an appropriate Slayer task.");
             return;
         }

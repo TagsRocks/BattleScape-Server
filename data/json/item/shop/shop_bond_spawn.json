@@ -1,0 +1,9 @@
+{
+  "name": "Bond Shop",
+  "virtualCurrency": "bonds",
+  "items": [
+    { "id": "ItemID.MYSTERY_BOX", "price": 1 },
+    { "id": "ItemID.SUPER_MYSTERY_BOX_32286", "price": 2 },
+    { "id": "ItemID.COINS", "price": 1, "stack": 15000000 }
+  ]
+}

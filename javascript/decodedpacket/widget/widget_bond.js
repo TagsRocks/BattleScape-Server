@@ -59,7 +59,9 @@ DecodedPacketWidget.prototype.widget_65 = function(player, index, childID, slot,
         break;
     case 54:
         player.getWidgetManager().removeInteractiveWidgets();
-        if (player.isGameModeNormal() || player.isGameModeHard()) {
+        if (Main.isSpawn()) {
+            player.openShop("bond_spawn");
+        } else if (player.isGameModeNormal() || player.isGameModeHard()) {
             player.openShop("bond");
         } else {
             player.openShop("bond_iron");

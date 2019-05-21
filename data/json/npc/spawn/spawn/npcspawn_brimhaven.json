@@ -1,0 +1,16 @@
+[
+  {
+    "id": "NpcID.IMIAGO",
+    "direction": 1,
+    "moveDistance": 2,
+    "x": 2799,
+    "y": 3097
+  },
+  {
+    "id": "NpcID.GARTH",
+    "direction": 1,
+    "moveDistance": 2,
+    "x": 2766,
+    "y": 3215
+  }
+]

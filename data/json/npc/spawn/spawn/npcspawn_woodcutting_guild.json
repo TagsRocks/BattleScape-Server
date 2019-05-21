@@ -1,0 +1,37 @@
+[
+  {
+    "id": "NpcID.PERRY",
+    "direction": 1,
+    "moveDistance": 2,
+    "x": 1651,
+    "y": 3499
+  },
+  {
+    "id": "NpcID.MURFET",
+    "direction": 1,
+    "moveDistance": 2,
+    "x": 1607,
+    "y": 3508
+  },
+  {
+    "id": "NpcID.FORESTER_15_7238",
+    "direction": 1,
+    "moveDistance": 2,
+    "x": 1624,
+    "y": 3515
+  },
+  {
+    "id": "NpcID.FORESTER_15_7238",
+    "direction": 1,
+    "moveDistance": 2,
+    "x": 1615,
+    "y": 3489
+  },
+  {
+    "id": "NpcID.FORESTER_15_7238",
+    "direction": 1,
+    "moveDistance": 2,
+    "x": 1593,
+    "y": 3490
+  }
+]

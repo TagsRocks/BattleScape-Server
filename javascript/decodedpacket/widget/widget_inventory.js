@@ -249,7 +249,12 @@ DecodedPacketWidget.prototype.widget_149 = function(player, index, childID, slot
         player.openDialogue("spellbooks", 1);
         break;
     case ItemID.HYDRA_LEATHER:
-        player.getGameEncoder().sendMessage("This leather looks pretty tough to work with... Maybe the dragonkin had a way.");
+        if (Main.isSpawn()) {
+            player.getInventory().deleteItem(itemID, 1, slot);
+            player.getInventory().addItem(ItemID.FEROCIOUS_GLOVES, 1, slot);
+        } else {
+            player.getGameEncoder().sendMessage("This leather looks pretty tough to work with... Maybe the dragonkin had a way.");
+        }
         break;
     case ItemID.RANDOM_BARROWS_PIECE:
         items = [
