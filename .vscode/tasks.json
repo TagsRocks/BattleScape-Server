@@ -1,0 +1,17 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Core to Lib",
+            "type": "shell",
+            "command": "cd bin;zip -r ../data/lib/core.jar com -i \"*.class\""
+        },
+        {
+            "label": "Server to Lib",
+            "type": "shell",
+            "command": "cd bin;zip -r ../data/lib/server.jar * -i \"*.class\""
+        }
+    ]
+}

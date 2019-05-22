@@ -8,6 +8,7 @@ README.md
 /core
 /data/dynamic
 /data/lib/core.jar
+/data/lib/server.jar
 emergency.log
 nohup*.out
 *.zip
