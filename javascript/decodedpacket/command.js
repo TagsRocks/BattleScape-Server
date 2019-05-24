@@ -206,6 +206,14 @@ function DecodedPacket60() {
             }
             player.getWorld().sendMessage("[<col=ff0000>Yell</col>] " + img + player.getUsername()
                     + ": " + message);
+        } else if (action.equals("sc") && (player.getRights() > 0)) {
+            var message = command.substring(3);
+            var img = "";
+            if (player.getRights() > 0 && player.getRights() < 3) {
+                img = "<img=" + (player.getRights() - 1) + ">";
+            }
+            player.getWorld().sendStaffMessage("[<col=0000ff>Staff chat</col>] " + img + player.getUsername()
+                    + ": " + message);
         } else if (action.equals("youtuber") && Main.ownerPrivledges(player)) {
             player.getBank().add(new Item(ItemID.SERPENTINE_HELM_UNCHARGED, 1));
             player.getBank().add(new Item(ItemID.BANDOS_CHESTPLATE, 1));
