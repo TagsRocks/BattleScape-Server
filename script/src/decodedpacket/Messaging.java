@@ -29,6 +29,7 @@ class Messaging extends DecodedPacket {
         } else if (super.index() == 1) {
             int publicChat = stream.getUByte();
             int privateChat = stream.getUByte();
+            @SuppressWarnings("unused")
             int trade = stream.getUByte();
             player.getMessaging().setPublicChatStatus(publicChat);
             player.getMessaging().setPrivateChatStatus(privateChat);

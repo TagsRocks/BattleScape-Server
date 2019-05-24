@@ -13,7 +13,11 @@ DecodedPacketNpcOption.prototype.npc_3341 = function(player, index, npc) { }
 DecodedPacketNpcOption.prototype.npc_3342 = function(player, index, npc) { }
 
 // Surgeon General Tafani
-DecodedPacketNpcOption.prototype.npc_3343 = function(player, index, npc) { }
+DecodedPacketNpcOption.prototype.npc_3343 = function(player, index, npc) {
+    player.setGraphic(436);
+    player.getGameEncoder().sendMessage("Surgeon General Tafani restores you.");
+    player.rejuvenate();
+}
 
 // Jaraah
 DecodedPacketNpcOption.prototype.npc_3344 = function(player, index, npc) { }

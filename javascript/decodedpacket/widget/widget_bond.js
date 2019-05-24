@@ -1,9 +1,9 @@
-DecodedPacketWidget.prototype.widget_65 = function(player, index, childID, slot, itemID) {
+DecodedPacketWidget.prototype.widget_704 = function(player, index, childID, slot, itemID) {
     if (player.isLocked()) {
         return;
     }
     switch (childID) {
-    case 17:
+    case 28:
         var inventoryCount = player.getInventory().getCount(ItemID.OLD_SCHOOL_BOND);
         if (inventoryCount == 0) {
             player.getGameEncoder().sendMessage("You have no bonds in your inventory.");
@@ -27,7 +27,7 @@ DecodedPacketWidget.prototype.widget_65 = function(player, index, childID, slot,
             player.setBondPouch(Utils.addInt(player.getBondPouch(), inventoryCount, Item.MAX_AMOUNT));
         }
         break;
-    case 18:
+    case 29:
         if (player.getBondPouch() == 0) {
             player.getGameEncoder().sendMessage("You have no bonds in your pouch.");
             break;
@@ -53,12 +53,14 @@ DecodedPacketWidget.prototype.widget_65 = function(player, index, childID, slot,
             player.getInventory().addItem(ItemID.OLD_SCHOOL_BOND, maxWithdraw);
         }
         break;
-    case 49:
-        player.getWidgetManager().removeInteractiveWidgets();
-        player.getGameEncoder().sendOpenURL("https://www.battle-scape.com/store");
+    case 65:
+        if (Main.isSpawn()) {
+            player.getGameEncoder().sendOpenURL("https://www.battlewild.com/store");
+        } else {
+            player.getGameEncoder().sendOpenURL("https://www.battle-scape.com/store");
+        }
         break;
-    case 54:
-        player.getWidgetManager().removeInteractiveWidgets();
+    case 67:
         if (Main.isSpawn()) {
             player.openShop("bond_spawn");
         } else if (player.isGameModeNormal() || player.isGameModeHard()) {
@@ -67,9 +69,11 @@ DecodedPacketWidget.prototype.widget_65 = function(player, index, childID, slot,
             player.openShop("bond_iron");
         }
         break;
-    case 81:
-        player.getWidgetManager().removeInteractiveWidgets();
-        player.openDialogue("bond", 1);
+    case 69:
+        Guide.openEntry(player, "main", "bonds");
+        break;
+    case 71:
+        player.openDialogue("bond", 2);
         break;
     }
     player.getOptions().sendBondCounts();

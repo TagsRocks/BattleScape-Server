@@ -96,8 +96,6 @@ class MapObjectOption extends DecodedPacket {
         } else if (mapObject.getID() == 31561) { // Pillar
             range = 2;
         }
-        boolean standardDoor = (mapObject.getDef().hasOption("open") || mapObject.getDef().hasOption("close"))
-                && !mapObject.getDef().hasOption("pick-lock");
         if (player.isLocked()
                 || player.getMovement().isRouting() && mapObject.getOriginal() == null
                         && (player.getX() != mapObject.getX() || player.getY() != mapObject.getY())
@@ -121,6 +119,7 @@ class MapObjectOption extends DecodedPacket {
         if (player.getFarming().mapObjectOptionHook(super.index(), mapObject)) {
             return true;
         }
+        @SuppressWarnings("unused")
         String scriptName = "object_" + mapObject.getID();
         /*
          * if (invalid.contains(scriptName) ||

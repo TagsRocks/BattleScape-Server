@@ -7,12 +7,13 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="src" path="script/src"/>
-	<classpathentry kind="lib" path="data/lib/filestore.jar"/>
-	<classpathentry kind="lib" path="data/lib/gson.jar"/>
-	<classpathentry kind="lib" path="data/lib/mysql.jar"/>
 	<classpathentry kind="lib" path="data/lib/xmlpull.jar"/>
 	<classpathentry kind="lib" path="data/lib/xpp.jar"/>
 	<classpathentry kind="lib" path="data/lib/xstream.jar"/>
+	<classpathentry kind="lib" path="data/lib/gson.jar"/>
+	<classpathentry kind="lib" path="data/lib/mysql.jar"/>
+	<classpathentry kind="lib" path="data/lib/lombok.jar"/>
+	<classpathentry kind="lib" path="data/lib/filestore.jar"/>
 	<classpathentry kind="lib" path="data/lib/core.jar">
 		<attributes>
 			<attribute name="optional" value="true"/>

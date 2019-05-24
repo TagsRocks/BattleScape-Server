@@ -59,6 +59,7 @@ class Widget extends DecodedPacket {
         if (SkillContainer.widgetHooks(player, subIndex, widgetID, childID, slot, itemID)) {
             return;
         }
+        @SuppressWarnings("unused")
         String scriptName = "widget_" + widgetID;
         /*
          * if (!DecodedPacketWidget.prototype.hasOwnProperty(scriptName)) { return; } try {

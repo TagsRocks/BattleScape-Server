@@ -32,11 +32,11 @@ instance = new DialogueScript() {
     execute: function(player, index, childID, slot) {
         if (index == 1) {
             if (slot == 0) {
-                player.getBountyHunter().abandonTarget();
+                player.getCombat().getBountyHunter().abandonTarget();
             }
         } else if (index == 2) {
             if (slot == 0) {
-                player.getBountyHunter().teleportToTarget();
+                player.getCombat().getBountyHunter().teleportToTarget();
             }
         }
     },

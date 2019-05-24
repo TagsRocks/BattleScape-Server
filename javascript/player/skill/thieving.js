@@ -119,7 +119,7 @@ var ENTRIES = Utils.toList(
         .setPet(127056, ItemID.ROCKY),
     new SkillContainer.Entry().setLevel(84).setXP(100).setAnimation(881).setDelay(6)
         .setMapObject(new SkillContainer.Model(1, 26757))
-        .setCreate(new RandomItem(ItemID.BLOOD_MONEY, 10, 50))
+        .setCreate(new RandomItem(Main.isSpawn() ? ItemID.COINS : ItemID.BLOOD_MONEY, 10, 50))
         .setRandomCreate(new RandomItem(ItemID.DRAGONSTONE, 1).setWeight(1),
             new RandomItem(ItemID.RUNE_SCIMITAR, 1).setWeight(31))
         .setTemporaryMapObject(26758, 50, 0)

@@ -155,8 +155,8 @@ instance = new DialogueScript() {
                 if (player.getBank().needsPinInput(false)) {
                     return;
                 }
-                player.getBarrows().setTotalCompleted(0);
-                player.getBarrows().setTotalKeys(0);
+                player.getCombat().getBarrows().setTotalCompleted(0);
+                player.getCombat().getBarrows().setTotalKeys(0);
                 player.getCombat().clearNPCKillCounts();
                 player.getGameEncoder().sendMessage("All of your kill counts have reset.");
             }

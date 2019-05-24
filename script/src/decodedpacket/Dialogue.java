@@ -43,6 +43,7 @@ class Dialogue extends DecodedPacket {
         if (SkillContainer.widgetHooks(player, super.index(), widgetID, childID, slot, -1)) {
             return;
         }
+        @SuppressWarnings("unused")
         String scriptName = "widget_" + widgetID;
         /*
          * if (!DecodedPacketWidget.prototype.hasOwnProperty(scriptName)) { return; } try {

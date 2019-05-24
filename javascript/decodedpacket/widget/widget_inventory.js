@@ -676,12 +676,12 @@ DecodedPacketWidget.prototype.widget_149 = function(player, index, childID, slot
         player.getInventory().addItem(6883, bonesCount + bigBonesCount);
         break;
     case 12846: // Bounty teleport scroll
-        if (player.getBountyHunter().getTeleportUnlocked()) {
+        if (player.getCombat().getBountyHunter().getTeleportUnlocked()) {
             player.getGameEncoder().sendMessage("You already have this spell unlocked.");
             break;
         }
         player.getInventory().deleteItem(itemID, 1, slot);
-        player.getBountyHunter().setTeleportUnlocked(true);
+        player.getCombat().getBountyHunter().setTeleportUnlocked(true);
         player.getGameEncoder().sendMessage("You have unlocked the Teleport to Bounty Target spell.");
         break;
     case Hunter.BIRD_SNARE_ITEM:
@@ -949,6 +949,9 @@ DecodedPacketWidget.prototype.widget_149 = function(player, index, childID, slot
         if (height != 0) {
             homeTile = new Tile(World.DEFAULT_TILE).randomize(2);
             homeTile.setHeight(height);
+        }
+        if (player.getController.inPvPWorld()) {
+            homeTile = new Tile(3093, 3495, height);
         }
         player.getMovement().animatedTeleport(homeTile, Magic.TABLET_ANIMATION_START,
                 Magic.TABLET_ANIMATION_END, -1, null, Magic.TABLET_GRAPHIC, null, 0, 2);
@@ -1328,18 +1331,18 @@ DecodedPacketWidget.prototype.widget_149 = function(player, index, childID, slot
         player.getSkills().increaseClueScrollCount(Skills.CLUE_SCROLL_MASTER);
         break;
     case 952: // Spade
-        if (player.getBarrows().ahrimMound()) {
-            player.getBarrows().enterCrypt(Barrows.AHRIM);
-        } else if (player.getBarrows().dharokMound()) {
-            player.getBarrows().enterCrypt(Barrows.DHAROK);
-        } else if (player.getBarrows().guthanMound()) {
-            player.getBarrows().enterCrypt(Barrows.GUTHAN);
-        } else if (player.getBarrows().karilMound()) {
-            player.getBarrows().enterCrypt(Barrows.KARIL);
-        } else if (player.getBarrows().toragMound()) {
-            player.getBarrows().enterCrypt(Barrows.TORAG);
-        } else if (player.getBarrows().veracMound()) {
-            player.getBarrows().enterCrypt(Barrows.VERAC);
+        if (player.getCombat().getBarrows().ahrimMound()) {
+            player.getCombat().getBarrows().enterCrypt(NpcID.AHRIM_THE_BLIGHTED_98);
+        } else if (player.getCombat().getBarrows().dharokMound()) {
+            player.getCombat().getBarrows().enterCrypt(NpcID.DHAROK_THE_WRETCHED_115);
+        } else if (player.getCombat().getBarrows().guthanMound()) {
+            player.getCombat().getBarrows().enterCrypt(NpcID.GUTHAN_THE_INFESTED_115);
+        } else if (player.getCombat().getBarrows().karilMound()) {
+            player.getCombat().getBarrows().enterCrypt(NpcID.KARIL_THE_TAINTED_98);
+        } else if (player.getCombat().getBarrows().toragMound()) {
+            player.getCombat().getBarrows().enterCrypt(NpcID.TORAG_THE_CORRUPTED_115);
+        } else if (player.getCombat().getBarrows().veracMound()) {
+            player.getCombat().getBarrows().enterCrypt(NpcID.VERAC_THE_DEFILED_115);
         }
         break;
     case 6543: // Antique lamp
@@ -1417,18 +1420,18 @@ DecodedPacketWidget.prototype.widget_149 = function(player, index, childID, slot
         }
         break;
     case 20164: // Large spade
-        if (player.getBarrows().ahrimMound()) {
-            player.getBarrows().enterCrypt(Barrows.AHRIM);
-        } else if (player.getBarrows().dharokMound()) {
-            player.getBarrows().enterCrypt(Barrows.DHAROK);
-        } else if (player.getBarrows().guthanMound()) {
-            player.getBarrows().enterCrypt(Barrows.GUTHAN);
-        } else if (player.getBarrows().karilMound()) {
-            player.getBarrows().enterCrypt(Barrows.KARIL);
-        } else if (player.getBarrows().toragMound()) {
-            player.getBarrows().enterCrypt(Barrows.TORAG);
-        } else if (player.getBarrows().veracMound()) {
-            player.getBarrows().enterCrypt(Barrows.VERAC);
+        if (player.getCombat().getBarrows().ahrimMound()) {
+            player.getCombat().getBarrows().enterCrypt(Barrows.AHRIM);
+        } else if (player.getCombat().getBarrows().dharokMound()) {
+            player.getCombat().getBarrows().enterCrypt(Barrows.DHAROK);
+        } else if (player.getCombat().getBarrows().guthanMound()) {
+            player.getCombat().getBarrows().enterCrypt(Barrows.GUTHAN);
+        } else if (player.getCombat().getBarrows().karilMound()) {
+            player.getCombat().getBarrows().enterCrypt(Barrows.KARIL);
+        } else if (player.getCombat().getBarrows().toragMound()) {
+            player.getCombat().getBarrows().enterCrypt(Barrows.TORAG);
+        } else if (player.getCombat().getBarrows().veracMound()) {
+            player.getCombat().getBarrows().enterCrypt(Barrows.VERAC);
         }
         break;
     case 4566: // Rubber chicken

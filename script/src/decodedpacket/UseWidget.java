@@ -154,6 +154,7 @@ class UseWidget extends DecodedPacket {
         if (player.getController().widgetOnEntityHook(widgetID, childID, slot, entity)) {
             return true;
         }
+        @SuppressWarnings("unused")
         String scriptName = "doAction" + ((super.index() == 0 || super.index() == 2) ? "NPC" : "Player");
         // DecodedPacketWidgetOnEntity.prototype[scriptName](player, decodedPacket.index(), widgetID,
         // childID,

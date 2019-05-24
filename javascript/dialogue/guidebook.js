@@ -43,7 +43,7 @@ instance = new DialogueScript() {
         }
         if (index == 0) {
             if (slot == 0) {
-                player.getMessaging().joinClan(Main.SERVER_NAME.toLowerCase());
+                player.getMessaging().joinClan(Main.getName().toLowerCase());
             } else if (slot == 1) {
                 player.getGameEncoder().sendOpenURL("https://discord.gg/9UYUMaY");
             } else if (slot == 1) {
@@ -105,7 +105,7 @@ instance = new DialogueScript() {
                 Dialogue.openScroll(player, "Untradeable Items", Utils.toStringArray(lines));
             } else if (slot == 6) {
                 var lines = new ArrayList();
-                lines.add("You can vote for " + Main.SERVER_NAME + " which will reward you with Vote");
+                lines.add("You can vote for " + Main.getName() + " which will reward you with Vote");
                 lines.add("Tickets. You can exchange vote tickets with the Vote manager");
                 lines.add("located in the Edgeville bank for various items.");
                 lines.add("");

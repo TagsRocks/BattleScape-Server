@@ -111,6 +111,7 @@ class NpcOption extends DecodedPacket {
             player.getMovement().clear();
         }
         player.setFaceTile(npc);
+        @SuppressWarnings("unused")
         String scriptName = "npc_" + npc.getID();
         AchievementDiary.npcOptionHooks(player, super.index(), npc);
         if (player.getController().npcOptionHook(super.index(), npc)) {

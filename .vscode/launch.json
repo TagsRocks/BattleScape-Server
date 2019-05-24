@@ -12,7 +12,7 @@
             "request": "launch",
             "vmArgs": "-Xmx768m -XX:MinHeapFreeRatio=5 -XX:MaxHeapFreeRatio=25 -XX:MaxGCPauseMillis=50",
             "mainClass": "com.palidino.osrs.Main",
-            "args": "id=1 ip=0.0.0.0 dataip=0.0.0.0:43596 local=true"
+            "args": "settings_economy.json"
         },
         {
             "type": "java",
@@ -22,7 +22,7 @@
             "request": "launch",
             "vmArgs": "-Xmx768m -XX:MinHeapFreeRatio=5 -XX:MaxHeapFreeRatio=25 -XX:MaxGCPauseMillis=50",
             "mainClass": "com.palidino.osrs.Main",
-            "args": "id=1 ip=0.0.0.0 dataip=0.0.0.0:43596 local=true spawn=true"
+            "args": "settings_spawn.json"
         }
     ]
 }

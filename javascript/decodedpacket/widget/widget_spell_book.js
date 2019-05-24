@@ -24,10 +24,12 @@ DecodedPacketWidget.prototype.widget_218 = function(player, index, childID, slot
             break;
         }
         if (index == 0) {
-            player.getBountyHunter().selectTeleportToTarget();
+            player.getCombat().getBountyHunter().selectTeleportToTarget();
         } else if (index == 9) {
-            player.getBountyHunter().setTeleportWarning(!player.getBountyHunter().getTeleportWarning());
-            player.getGameEncoder().sendMessage("Teleport warning: " + player.getBountyHunter().getTeleportWarning());
+            player.getCombat().getBountyHunter().setTeleportWarning(!player.getCombat().getBountyHunter()
+                    .getTeleportWarning());
+            player.getGameEncoder().sendMessage("Teleport warning: " + player.getCombat().getBountyHunter()
+                    .getTeleportWarning());
         }
         break;
     case WidgetChild.SpellBook.LUMBRIDGE_HOME_TELEPORT:

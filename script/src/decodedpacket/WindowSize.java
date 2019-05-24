@@ -16,7 +16,9 @@ class WindowSize extends DecodedPacket {
     @Override
     public void execute(Player player, Stream stream) {
         WidgetManager.ViewportType viewportType = WidgetManager.ViewportType.get(stream.getUByte());
+        @SuppressWarnings("unused")
         int width = stream.getUShort();
+        @SuppressWarnings("unused")
         int height = stream.getUShort();
         WidgetManager.ViewportType currentViewportType = player.getWidgetManager().getViewportType();
         if (viewportType == null || viewportType == currentViewportType) {

@@ -15,6 +15,7 @@ class Command extends DecodedPacket {
     @Override
     public void execute(Player player, Stream stream) {
         if (super.index() == 0) {
+            @SuppressWarnings("unused")
             String command = stream.getString();
             player.clearIdleTime();
         } else if (super.index() == 1) {

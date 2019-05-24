@@ -50,6 +50,9 @@ instance = new DialogueScript() {
         }
         if (index == 0) {
             if (slot == 0) {
+                if (Main.isSpawn()) {
+                    return;
+                }
                 if ( player.getInventory().getCount(ItemID._14_DAYS_GOLD_MEMBERSHIP_32303) == 0) {
                     player.getGameEncoder().sendMessage("You need a bond to do this.");
                     return;

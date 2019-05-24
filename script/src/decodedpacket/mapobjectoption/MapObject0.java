@@ -15512,7 +15512,7 @@ public class MapObject0 {
 
     // Cave entrance
     public static void mapObject11834(Player player, int index, MapObject mapObject) {
-        player.getTzHaar().exitFightCave();
+        player.getCombat().getTzHaar().exitFightCave();
     }
 
     // Cave entrance

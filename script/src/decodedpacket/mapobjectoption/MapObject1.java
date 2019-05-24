@@ -6,6 +6,7 @@ import java.util.Comparator;
 import java.util.List;
 import com.palidino.osrs.Main;
 import com.palidino.osrs.io.cache.ItemID;
+import com.palidino.osrs.io.cache.NpcID;
 import com.palidino.osrs.io.cache.WidgetID;
 import com.palidino.osrs.model.ForceMovement;
 import com.palidino.osrs.model.Movement;
@@ -19,7 +20,6 @@ import com.palidino.osrs.model.map.Region;
 import com.palidino.osrs.model.map.TempMapObject;
 import com.palidino.osrs.model.npc.Npc;
 import com.palidino.osrs.model.player.AchievementDiary;
-import com.palidino.osrs.model.player.Barrows;
 import com.palidino.osrs.model.player.Equipment;
 import com.palidino.osrs.model.player.Magic;
 import com.palidino.osrs.model.player.PCombat;
@@ -4053,32 +4053,32 @@ public class MapObject1 {
 
     // Staircase
     public static void mapObject20667(Player player, int index, MapObject mapObject) {
-        player.getBarrows().exitCrypt(Barrows.AHRIM);
+        player.getCombat().getBarrows().exitCrypt(NpcID.AHRIM_THE_BLIGHTED_98);
     }
 
     // Staircase
     public static void mapObject20668(Player player, int index, MapObject mapObject) {
-        player.getBarrows().exitCrypt(Barrows.DHAROK);
+        player.getCombat().getBarrows().exitCrypt(NpcID.DHAROK_THE_WRETCHED_115);
     }
 
     // Staircase
     public static void mapObject20669(Player player, int index, MapObject mapObject) {
-        player.getBarrows().exitCrypt(Barrows.GUTHAN);
+        player.getCombat().getBarrows().exitCrypt(NpcID.GUTHAN_THE_INFESTED_115);
     }
 
     // Staircase
     public static void mapObject20670(Player player, int index, MapObject mapObject) {
-        player.getBarrows().exitCrypt(Barrows.KARIL);
+        player.getCombat().getBarrows().exitCrypt(NpcID.KARIL_THE_TAINTED_98);
     }
 
     // Staircase
     public static void mapObject20671(Player player, int index, MapObject mapObject) {
-        player.getBarrows().exitCrypt(Barrows.TORAG);
+        player.getCombat().getBarrows().exitCrypt(NpcID.TORAG_THE_CORRUPTED_115);
     }
 
     // Staircase
     public static void mapObject20672(Player player, int index, MapObject mapObject) {
-        player.getBarrows().exitCrypt(Barrows.VERAC);
+        player.getCombat().getBarrows().exitCrypt(NpcID.VERAC_THE_DEFILED_115);
     }
 
     // Ladder
@@ -4200,17 +4200,17 @@ public class MapObject1 {
 
     // Sarcophagus
     public static void mapObject20720(Player player, int index, MapObject mapObject) {
-        player.getBarrows().searchSarcophagus(Barrows.DHAROK);
+        player.getCombat().getBarrows().searchSarcophagus(NpcID.DHAROK_THE_WRETCHED_115);
     }
 
     // Sarcophagus
     public static void mapObject20721(Player player, int index, MapObject mapObject) {
-        player.getBarrows().searchSarcophagus(Barrows.TORAG);
+        player.getCombat().getBarrows().searchSarcophagus(NpcID.TORAG_THE_CORRUPTED_115);
     }
 
     // Sarcophagus
     public static void mapObject20722(Player player, int index, MapObject mapObject) {
-        player.getBarrows().searchSarcophagus(Barrows.GUTHAN);
+        player.getCombat().getBarrows().searchSarcophagus(NpcID.GUTHAN_THE_INFESTED_115);
     }
 
     // Chest
@@ -4224,17 +4224,17 @@ public class MapObject1 {
 
     // Sarcophagus
     public static void mapObject20770(Player player, int index, MapObject mapObject) {
-        player.getBarrows().searchSarcophagus(Barrows.AHRIM);
+        player.getCombat().getBarrows().searchSarcophagus(NpcID.AHRIM_THE_BLIGHTED_98);
     }
 
     // Sarcophagus
     public static void mapObject20771(Player player, int index, MapObject mapObject) {
-        player.getBarrows().searchSarcophagus(Barrows.KARIL);
+        player.getCombat().getBarrows().searchSarcophagus(NpcID.KARIL_THE_TAINTED_98);
     }
 
     // Sarcophagus
     public static void mapObject20772(Player player, int index, MapObject mapObject) {
-        player.getBarrows().searchSarcophagus(Barrows.VERAC);
+        player.getCombat().getBarrows().searchSarcophagus(NpcID.VERAC_THE_DEFILED_115);
     }
 
     // Spikey chain
@@ -4501,7 +4501,7 @@ public class MapObject1 {
 
     // Chest
     public static void mapObject20973(Player player, int index, MapObject mapObject) {
-        player.getBarrows().openChest(mapObject.getX() != 3551 || mapObject.getY() != 9695);
+        player.getCombat().getBarrows().openChest(mapObject.getX() != 3551 || mapObject.getY() != 9695);
     }
 
     // An anonymous looking door
@@ -10332,7 +10332,19 @@ public class MapObject1 {
                         player.getLogName() + " received " + item2.getLogName() + " from a bloodier key.");
             }
         } else if (player.getInventory().hasItem(ItemID.SINISTER_KEY)) {
-            player.getBarrows().openChest(mapObject.getX() != 3551 || mapObject.getY() != 9695);
+            player.getCombat().getBarrows().openChest(mapObject.getX() != 3551 || mapObject.getY() != 9695);
+        } else if (player.getInventory().hasItem(ItemID.DIAMOND_KEY_32309)) {
+            player.getInventory().deleteItem(ItemID.DIAMOND_KEY_32309, 1);
+            player.getInventory().addOrDropItem(MysteryBox.getDiamondKeyItem());
+        } else if (player.getInventory().hasItem(ItemID.GOLD_KEY_32308)) {
+            player.getInventory().deleteItem(ItemID.GOLD_KEY_32308, 1);
+            player.getInventory().addOrDropItem(MysteryBox.getGoldKeyItem());
+        } else if (player.getInventory().hasItem(ItemID.SILVER_KEY_32307)) {
+            player.getInventory().deleteItem(ItemID.SILVER_KEY_32307, 1);
+            player.getInventory().addOrDropItem(MysteryBox.getSilverKeyItem());
+        } else if (player.getInventory().hasItem(ItemID.BRONZE_KEY_32306)) {
+            player.getInventory().deleteItem(ItemID.BRONZE_KEY_32306, 1);
+            player.getInventory().addOrDropItem(MysteryBox.getBronzeKeyItem());
         } else {
             player.getGameEncoder().sendMessage("You need a key to open this chest.");
         }
@@ -14852,12 +14864,12 @@ public class MapObject1 {
 
     // cave exit
     public static void mapObject30283(Player player, int index, MapObject mapObject) {
-        player.getTzHaar().exitInferno();
+        player.getCombat().getTzHaar().exitInferno();
     }
 
     // the inferno
     public static void mapObject30352(Player player, int index, MapObject mapObject) {
-        if (player.getTzHaar().getInfernoSacrificedCape()) {
+        if (player.getCombat().getTzHaar().getInfernoSacrificedCape()) {
             player.openDialogue("tzhaar", 4);
         } else {
             player.openDialogue("tzhaar", 5);
