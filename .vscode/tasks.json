@@ -4,14 +4,9 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "Core to Lib",
+            "label": "Core as Lib",
             "type": "shell",
-            "command": "cd bin;zip -r ../data/lib/core.jar com -i \"*.class\""
-        },
-        {
-            "label": "Server to Lib",
-            "type": "shell",
-            "command": "cd bin;zip -r ../data/lib/server.jar * -i \"*.class\""
+            "command": "cd bin;rm ../data/lib/core.jar;zip -r ../data/lib/core.jar com -i \"*.class\";cd ../data/lib; java -cp emptymethods.jar Main core.jar core.jar"
         }
     ]
 }
