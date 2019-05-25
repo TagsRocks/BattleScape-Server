@@ -4,9 +4,9 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "Core as Lib",
+            "label": "Update Script Helper",
             "type": "shell",
-            "command": "cd bin;rm ../data/lib/core.jar;zip -r ../data/lib/core.jar com -i \"*.class\";cd ../data/lib; java -cp emptymethods.jar Main core.jar core.jar"
+            "command": "cd bin;rm ../data/lib/scripthelper.jar;zip -r ../data/lib/scripthelper.jar com -i \"*.class\";cd ../data/lib; java -cp emptymethods.jar Main scripthelper.jar scripthelper.jar"
         }
     ]
 }

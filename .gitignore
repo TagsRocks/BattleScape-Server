@@ -4,8 +4,9 @@ thumbs.db
 .gitmodules
 .github
 README.md
-/bin
 /core
+/bin
+/data/core
 /data/dynamic
 /data/lib/server.jar
 emergency.log
