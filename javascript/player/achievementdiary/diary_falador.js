@@ -112,8 +112,8 @@ diary = new AchievementDiary(AchievementDiary.Name.FALADOR) {
         }
     },
 
-    castSpellHook: function(player, spellBookChild, item, entity, mapObject) {
-        if (spellBookChild == WidgetChild.SpellBook.FALADOR_TELEPORT) {
+    castSpellHook: function(player, spellbookChild, item, entity, mapObject) {
+        if (spellbookChild == WidgetChild.SpellBook.FALADOR_TELEPORT) {
             diary.addCompletedTask(player, Task.FALADOR_TELEPORT);
         }
     },

@@ -1,6 +1,6 @@
 package script.packetdecoder.widget;
 
-import com.palidino.osrs.io.cache.varpId;
+import com.palidino.osrs.io.cache.VarpId;
 import com.palidino.osrs.io.cache.WidgetId;
 import com.palidino.osrs.model.player.Player;
 import com.palidino.osrs.model.player.Skills;
@@ -23,7 +23,7 @@ public class ChooseAdvanceSkillWidget {
                 return;
             }
             player.putAttribute("choose_skill_id", skillId);
-            player.getGameEncoder().setVarp(varpId.CHOOSE_ADVANCE_SKILL, childId - 2);
+            player.getGameEncoder().setVarp(VarpId.CHOOSE_ADVANCE_SKILL, childId - 2);
             int xpMultipler =
                     player.getSkills().getXPMultipler(skillId) * player.getAttributeInt("choose_xp_multiplier");
             if (xpMultipler == 0) {

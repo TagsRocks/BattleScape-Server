@@ -1,7 +1,7 @@
 package script.packetdecoder.widget;
 
 import com.palidino.osrs.io.cache.ItemId;
-import com.palidino.osrs.io.cache.varpId;
+import com.palidino.osrs.io.cache.VarpId;
 import com.palidino.osrs.io.cache.WidgetChild;
 import com.palidino.osrs.io.cache.WidgetId;
 import com.palidino.osrs.model.player.Magic;
@@ -19,8 +19,8 @@ public class CombatOptionsWidget {
         case 20:
         case 25:
             int varpValue = -1;
-            if (player.getMagic().getSpellBook() == Magic.LUNAR_MAGIC
-                    || player.getMagic().getSpellBook() == Magic.ARCEUUS_MAGIC) {
+            if (player.getMagic().getSpellbook() == Magic.LUNAR_MAGIC
+                    || player.getMagic().getSpellbook() == Magic.ARCEUUS_MAGIC) {
                 player.getGameEncoder().sendMessage("You can't autocast this spellbook.");
                 return;
             } else if (player.getEquipment().getWeaponId() == ItemId.TRIDENT_OF_THE_SEAS_FULL
@@ -37,7 +37,7 @@ public class CombatOptionsWidget {
                 player.getGameEncoder().sendMessage("This staff can't autocast spells.");
                 return;
             }
-            if (player.getMagic().getSpellBook() == Magic.ANCIENT_MAGIC) {
+            if (player.getMagic().getSpellbook() == Magic.ANCIENT_MAGIC) {
                 if (player.getEquipment().getWeaponId() == ItemId.ANCIENT_STAFF
                         || player.getEquipment().getWeaponId() == ItemId.ANCIENT_STAFF_20431
                         || player.getEquipment().getWeaponId() == ItemId.MASTER_WAND
@@ -54,7 +54,7 @@ public class CombatOptionsWidget {
                     player.getGameEncoder().sendMessage("This staff can't autocast Ancient Magicks.");
                     return;
                 }
-            } else if (player.getMagic().getSpellBook() == Magic.NORMAL_MAGIC) {
+            } else if (player.getMagic().getSpellbook() == Magic.STANDARD_MAGIC) {
                 if (player.getEquipment().getWeaponId() == ItemId.IBANS_STAFF) {
                     varpValue = ItemId.IBANS_STAFF;
                 } else if (player.getEquipment().getWeaponId() == ItemId.SLAYERS_STAFF
@@ -68,7 +68,7 @@ public class CombatOptionsWidget {
                     varpValue = ItemId.STAFF_OF_LIGHT;
                 }
             }
-            player.getGameEncoder().setVarp(varpId.SPELL_SELECT_WEAPON, varpValue);
+            player.getGameEncoder().setVarp(VarpId.SPELL_SELECT_WEAPON, varpValue);
             player.getWidgetManager().sendWidget(WidgetChild.ViewportContainer.COMBAT, WidgetId.SPELL_SELECT);
             player.getGameEncoder().sendWidgetSettings(WidgetId.SPELL_SELECT, 1, 0, 52, 2);
             player.putAttribute("magic_defensive", childId == 20);

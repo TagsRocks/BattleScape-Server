@@ -81,8 +81,7 @@ public class EdgevilleArea extends Area {
             if (!player.getController().canTeleport(tile, true)) {
                 return true;
             }
-            player.getMovement().animatedTeleport(tile, 2140, Magic.NORMAL_MAGIC_ANIMATION_START,
-                    Magic.NORMAL_MAGIC_ANIMATION_END, null, Magic.NORMAL_MAGIC_GRAPHIC, null, 1, 2);
+            player.getMagic().standardTeleport(tile);
             player.clearHits();
             return true;
         case 27269: // Deadman chest
@@ -94,13 +93,11 @@ public class EdgevilleArea extends Area {
                 } else {
                     item = RandomItem.getItem(MysteryBox.BARROWS_PIECES);
                 }
-                String itemName =
-                        ("aeiouAEIOU".indexOf(item.getName().charAt(0)) != -1 ? "an" : "a") + " " + item.getName();
+                String itemName = Utils.aOrAnCap(item.getName()) + " " + item.getName();
                 player.getWorld().sendNews(player.getMessaging().getIconImage() + player.getUsername()
                         + " has received " + itemName + " from a bloody key!");
                 player.getInventory().addOrDropItem(item);
-                RequestManager.addPlayerLog(player, "lootbox",
-                        player.getLogName() + " received " + item.getLogName() + " from a bloody key.");
+                RequestManager.addLootBoxLog(player, ItemId.BLOODY_KEY_32304, item);
             } else if (player.getInventory().hasItem(ItemId.BLOODIER_KEY_32305)) {
                 player.getInventory().deleteItem(ItemId.BLOODIER_KEY_32305, 1);
                 Item item1 = null;
@@ -108,27 +105,18 @@ public class EdgevilleArea extends Area {
                 if (player.isGameModeNormal() || player.isGameModeHard()) {
                     item1 = MysteryBox.getSuperBoxItem();
                     item2 = MysteryBox.getSuperBoxItem();
-                    String itemNames = ("aeiouAEIOU".indexOf(item1.getName().charAt(0)) != -1 ? "an" : "a") + " "
-                            + item1.getName();
-                    itemNames += " and " + ("aeiouAEIOU".indexOf(item2.getName().charAt(0)) != -1 ? "an" : "a") + " "
-                            + item2.getName();
+                    String itemNames = Utils.aOrAnCap(item1.getName()) + " " + item1.getName();
+                    itemNames += " and " + Utils.aOrAn(item2.getName()) + " " + item2.getName();
                     player.getWorld().sendNews(player.getMessaging().getIconImage() + player.getUsername()
                             + " has received " + itemNames + " from a bloodier key!");
                 } else {
                     item1 = RandomItem.getItem(MysteryBox.BARROWS_SETS);
-                    String itemName = ("aeiouAEIOU".indexOf(item1.getName().charAt(0)) != -1 ? "an" : "a") + " "
-                            + item1.getName();
+                    String itemName = Utils.aOrAnCap(item1.getName()) + " " + item1.getName();
                     player.getWorld().sendNews(player.getMessaging().getIconImage() + player.getUsername()
                             + " has received " + itemName + " from a bloodier key!");
                 }
                 player.getInventory().addOrDropItem(item1);
-                RequestManager.addPlayerLog(player, "lootbox",
-                        player.getLogName() + " received " + item1.getLogName() + " from a bloodier key.");
-                if (item2 != null) {
-                    player.getInventory().addOrDropItem(item2);
-                    RequestManager.addPlayerLog(player, "lootbox",
-                            player.getLogName() + " received " + item2.getLogName() + " from a bloodier key.");
-                }
+                RequestManager.addLootBoxLog(player, ItemId.BLOODY_KEY_32304, item1, item2);
             } else if (player.getInventory().hasItem(ItemId.SINISTER_KEY)) {
                 player.getCombat().getBarrows().openChest(mapObject.getX() != 3551 || mapObject.getY() != 9695);
             } else if (player.getInventory().hasItem(ItemId.DIAMOND_KEY_32309)) {
@@ -162,18 +150,18 @@ public class EdgevilleArea extends Area {
             if (index == 0) {
                 player.openDialogue("spellbooks", 0);
             } else if (index == 1) {
-                if (player.getMagic().getSpellBook() == Magic.NORMAL_MAGIC) {
-                    player.getMagic().setSpellBook(Magic.ANCIENT_MAGIC);
-                } else if (player.getMagic().getSpellBook() == Magic.ANCIENT_MAGIC
-                        || player.getMagic().getSpellBook() == Magic.LUNAR_MAGIC) {
-                    player.getMagic().setSpellBook(Magic.NORMAL_MAGIC);
+                if (player.getMagic().getSpellbook() == Magic.STANDARD_MAGIC) {
+                    player.getMagic().setSpellbook(Magic.ANCIENT_MAGIC);
+                } else if (player.getMagic().getSpellbook() == Magic.ANCIENT_MAGIC
+                        || player.getMagic().getSpellbook() == Magic.LUNAR_MAGIC) {
+                    player.getMagic().setSpellbook(Magic.STANDARD_MAGIC);
                 }
             } else if (index == 2) {
-                if (player.getMagic().getSpellBook() == Magic.NORMAL_MAGIC
-                        || player.getMagic().getSpellBook() == Magic.ANCIENT_MAGIC) {
-                    player.getMagic().setSpellBook(Magic.LUNAR_MAGIC);
-                } else if (player.getMagic().getSpellBook() == Magic.LUNAR_MAGIC) {
-                    player.getMagic().setSpellBook(Magic.ANCIENT_MAGIC);
+                if (player.getMagic().getSpellbook() == Magic.STANDARD_MAGIC
+                        || player.getMagic().getSpellbook() == Magic.ANCIENT_MAGIC) {
+                    player.getMagic().setSpellbook(Magic.LUNAR_MAGIC);
+                } else if (player.getMagic().getSpellbook() == Magic.LUNAR_MAGIC) {
+                    player.getMagic().setSpellbook(Magic.ANCIENT_MAGIC);
                 }
             }
             return true;
@@ -203,7 +191,7 @@ public class EdgevilleArea extends Area {
     }
 
     private void openCrystalChest(Player player) {
-        if (!player.getInventory().hasItem(989)) {
+        if (!player.getInventory().hasItem(ItemId.CRYSTAL_KEY)) {
             player.getGameEncoder().sendMessage("You need a Crystal key to open this.");
             return;
         }
@@ -211,22 +199,20 @@ public class EdgevilleArea extends Area {
             player.getInventory().notEnoughSpace();
             return;
         }
-        player.getInventory().deleteItem(989, 1);
-        player.getInventory().addItem(1632, 1);
+        player.getInventory().deleteItem(ItemId.CRYSTAL_KEY, 1);
+        player.getInventory().addItem(ItemId.UNCUT_DRAGONSTONE_NOTED, 1);
         RandomItem[] clueItems = new RandomItem[] {
-            new RandomItem(2677, 1).setWeight(8) /* Clue scroll (easy) */,
-            new RandomItem(2801, 1).setWeight(6) /* Clue scroll (medium) */,
-            new RandomItem(2722, 1).setWeight(4) /* Clue scroll (hard) */,
-            new RandomItem(12073, 1).setWeight(2) /* Clue scroll (elite) */,
-            new RandomItem(19835, 1).setWeight(1) /* Clue scroll (master) */
+            new RandomItem(ItemId.CLUE_SCROLL_EASY, 1).setWeight(8),
+            new RandomItem(ItemId.CLUE_SCROLL_MEDIUM, 1).setWeight(6),
+            new RandomItem(ItemId.CLUE_SCROLL_HARD, 1).setWeight(4),
+            new RandomItem(ItemId.CLUE_SCROLL_ELITE, 1).setWeight(2),
+            new RandomItem(ItemId.CLUE_SCROLL_MASTER, 1).setWeight(1)
         };
         if (Utils.randomE(4) == 0) {
             player.getInventory().addOrDropItem(RandomItem.getItem(clueItems));
         }
         RandomItem[] items = new RandomItem[] {
-            new RandomItem(987, 1).setWeight(128) /* Loop half */, new RandomItem(985, 1).setWeight(128) /*
-                                                                                                          * Tooth half
-                                                                                                          */,
+            new RandomItem(ItemId.LOOP_HALF_OF_KEY, 1).setWeight(128), new RandomItem(ItemId.TOOTH_HALF_OF_KEY, 1).setWeight(128),
 
             new RandomItem(532, 5, 10).setWeight(128) /* Big bones */,
             new RandomItem(534, 5, 10).setWeight(120) /* Babydragon bones */,

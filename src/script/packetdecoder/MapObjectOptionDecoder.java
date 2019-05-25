@@ -142,6 +142,9 @@ public class MapObjectOptionDecoder extends PacketDecoder {
         if (player.getFarming().mapObjectOptionHook(index, mapObject)) {
             return true;
         }
+        if (player.getArea().mapObjectOptionHook(index, mapObject)) {
+            return true;
+        }
         if (!actionMethods.containsKey(mapObject.getId())) {
             try {
                 var className = "script.packetdecoder.misc.MapObject" + mapObject.getId() / 16384;

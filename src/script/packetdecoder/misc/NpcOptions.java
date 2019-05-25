@@ -1174,12 +1174,12 @@ public class NpcOptions {
             player.openDialogue("spellbooks", 0);
         } else if (index == 2) {
             player.getMagic().setVengeanceCast(false);
-            if (player.getMagic().getSpellBook() == Magic.NORMAL_MAGIC) {
-                player.getMagic().setSpellBook(Magic.ANCIENT_MAGIC);
-            } else if (player.getMagic().getSpellBook() == Magic.ANCIENT_MAGIC) {
-                player.getMagic().setSpellBook(Magic.LUNAR_MAGIC);
+            if (player.getMagic().getSpellbook() == Magic.STANDARD_MAGIC) {
+                player.getMagic().setSpellbook(Magic.ANCIENT_MAGIC);
+            } else if (player.getMagic().getSpellbook() == Magic.ANCIENT_MAGIC) {
+                player.getMagic().setSpellbook(Magic.LUNAR_MAGIC);
             } else {
-                player.getMagic().setSpellBook(Magic.NORMAL_MAGIC);
+                player.getMagic().setSpellbook(Magic.STANDARD_MAGIC);
             }
         }
     }

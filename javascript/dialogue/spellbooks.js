@@ -35,15 +35,15 @@ instance = new DialogueScript() {
         if (index == 0) {
             player.getMagic().setVengeanceCast(false);
             if (slot == 0) {
-                player.getMagic().setSpellBook(Magic.NORMAL_MAGIC);
+                player.getMagic().setSpellbook(Magic.STANDARD_MAGIC);
             } else if (slot == 1) {
-                player.getMagic().setSpellBook(Magic.ANCIENT_MAGIC);
+                player.getMagic().setSpellbook(Magic.ANCIENT_MAGIC);
             } else if (slot == 2) {
-                player.getMagic().setSpellBook(Magic.LUNAR_MAGIC);
+                player.getMagic().setSpellbook(Magic.LUNAR_MAGIC);
             }
         } else if (index == 1) {
             if (slot == 0) {
-                player.getMagic().setMagicCapeSpellBook(Magic.NORMAL_MAGIC);
+                player.getMagic().setMagicCapeSpellBook(Magic.STANDARD_MAGIC);
             } else if (slot == 1) {
                 player.getMagic().setMagicCapeSpellBook(Magic.ANCIENT_MAGIC);
             } else if (slot == 2) {

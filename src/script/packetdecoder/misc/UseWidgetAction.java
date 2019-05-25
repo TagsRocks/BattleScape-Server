@@ -97,11 +97,11 @@ public class UseWidgetAction {
             if (onItemId != player.getInventory().getId(onSlot)) {
                 return;
             }
-            WidgetChild.SpellBook spellBookChild = WidgetChild.SpellBook.get(fromChildId);
-            if (spellBookChild == null) {
+            WidgetChild.SpellBook spellbookChild = WidgetChild.SpellBook.get(fromChildId);
+            if (spellbookChild == null) {
                 return;
             }
-            switch (spellBookChild) {
+            switch (spellbookChild) {
             case LVL_1_ENCHANT:
                 if (player.getSkills().getLevel(Skills.MAGIC) < 7) {
                     player.getGameEncoder().sendMessage("You need a Magic level of 7 to cast this spell.");

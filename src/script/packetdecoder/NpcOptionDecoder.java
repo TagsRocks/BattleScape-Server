@@ -132,6 +132,9 @@ public class NpcOptionDecoder extends PacketDecoder {
             player.getFamiliar().removeFamiliar();
             return true;
         }
+        if (player.getArea().npcOptionHook(index, npc)) {
+            return true;
+        }
         if (!actionMethods.containsKey(npc.getId())) {
             try {
                 var classReference = Class.forName("script.packetdecoder.misc.NpcOptions");

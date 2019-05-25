@@ -261,11 +261,6 @@ public class MapObject1 {
         }
     }
 
-    // Treasure chest
-    public static void mapObject18808(Player player, int index, MapObject mapObject) {
-        player.openDialogue("treasurechest", 0);
-    }
-
     // Ladder
     public static void mapObject18987(Player player, int index, MapObject mapObject) {
         if (mapObject.getX() == 3017 && mapObject.getY() == 3849) {
@@ -1808,30 +1803,6 @@ public class MapObject1 {
         Runecrafting.abyssTeleport(player, Runecrafting.Altar.BLOOD);
     }
 
-    // Gate
-    public static void mapObject26081(Player player, int index, MapObject mapObject) {
-        if (mapObject.getX() == 3085 && mapObject.getY() == 3484
-                || mapObject.getX() == 3086 && mapObject.getY() == 3484) {
-            if (!player.getInventory().isEmpty() || !player.getEquipment().isEmpty()) {
-                player.getGameEncoder().sendMessage("No items can be taken beyond this point.");
-                return;
-            }
-            player.getClanWars().openJoinTournament();
-        }
-    }
-
-    // Gate
-    public static void mapObject26082(Player player, int index, MapObject mapObject) {
-        if (mapObject.getX() == 3085 && mapObject.getY() == 3484
-                || mapObject.getX() == 3086 && mapObject.getY() == 3484) {
-            if (!player.getInventory().isEmpty() || !player.getEquipment().isEmpty()) {
-                player.getGameEncoder().sendMessage("No items can be taken beyond this point.");
-                return;
-            }
-            player.getClanWars().openJoinTournament();
-        }
-    }
-
     // Rock
     public static void mapObject26188(Player player, int index, MapObject mapObject) {
         if (!player.getInventory().hasItem(" pickaxe")) {
@@ -2223,32 +2194,6 @@ public class MapObject1 {
         }
     }
 
-    // Lever
-    public static void mapObject26761(Player player, int index, MapObject mapObject) {
-        if (player.getInventory().hasItem(ItemId.BLOODY_KEY) || player.getInventory().hasItem(ItemId.BLOODIER_KEY)) {
-            player.getGameEncoder().sendMessage("You can't use this right now.");
-            return;
-        }
-        if (mapObject.getX() == 3080 && mapObject.getY() == 3488) {
-            // Edgeville
-            if (player.getMovement().getTeleportBlock() > 0) {
-                player.getGameEncoder().sendMessage("A teleport block has been cast on you. It should wear off in "
-                        + player.getMovement().getTeleportBlockRemaining() + ".");
-                return;
-            }
-            Tile tile = new Tile(3153, 3923, 0);
-            if (player.getClientHeight() == tile.getHeight()) {
-                tile.setHeight(player.getHeight());
-            }
-            if (!player.getController().canTeleport(tile, true)) {
-                return;
-            }
-            player.getMovement().animatedTeleport(tile, 2140, Magic.NORMAL_MAGIC_ANIMATION_START,
-                    Magic.NORMAL_MAGIC_ANIMATION_END, null, Magic.NORMAL_MAGIC_GRAPHIC, null, 1, 2);
-            player.clearHits();
-        }
-    }
-
     // Cavern
     public static void mapObject26762(Player player, int index, MapObject mapObject) {
         if (mapObject.getX() == 3231 && mapObject.getY() == 3951) {
@@ -2365,70 +2310,6 @@ public class MapObject1 {
     // <col=ffff00>The Overseer</col>
     public static void mapObject27057(Player player, int index, MapObject mapObject) {
         player.openDialogue("bossinstance", 11);
-    }
-
-    // Deadman chest
-    public static void mapObject27269(Player player, int index, MapObject mapObject) {
-        if (player.getInventory().hasItem(ItemId.BLOODY_KEY_32304)) {
-            player.getInventory().deleteItem(ItemId.BLOODY_KEY_32304, 1);
-            Item item = null;
-            if (player.isGameModeNormal() || player.isGameModeHard()) {
-                item = MysteryBox.getBoxItem();
-            } else {
-                item = RandomItem.getItem(MysteryBox.BARROWS_PIECES);
-            }
-            String itemName =
-                    ("aeiouAEIOU".indexOf(item.getName().charAt(0)) != -1 ? "an" : "a") + " " + item.getName();
-            player.getWorld().sendNews(player.getMessaging().getIconImage() + player.getUsername() + " has received "
-                    + itemName + " from a bloody key!");
-            player.getInventory().addOrDropItem(item);
-            RequestManager.addPlayerLog(player, "lootbox",
-                    player.getLogName() + " received " + item.getLogName() + " from a bloody key.");
-        } else if (player.getInventory().hasItem(ItemId.BLOODIER_KEY_32305)) {
-            player.getInventory().deleteItem(ItemId.BLOODIER_KEY_32305, 1);
-            Item item1 = null;
-            Item item2 = null;
-            if (player.isGameModeNormal() || player.isGameModeHard()) {
-                item1 = MysteryBox.getSuperBoxItem();
-                item2 = MysteryBox.getSuperBoxItem();
-                String itemNames =
-                        ("aeiouAEIOU".indexOf(item1.getName().charAt(0)) != -1 ? "an" : "a") + " " + item1.getName();
-                itemNames += " and " + ("aeiouAEIOU".indexOf(item2.getName().charAt(0)) != -1 ? "an" : "a") + " "
-                        + item2.getName();
-                player.getWorld().sendNews(player.getMessaging().getIconImage() + player.getUsername()
-                        + " has received " + itemNames + " from a bloodier key!");
-            } else {
-                item1 = RandomItem.getItem(MysteryBox.BARROWS_SETS);
-                String itemName =
-                        ("aeiouAEIOU".indexOf(item1.getName().charAt(0)) != -1 ? "an" : "a") + " " + item1.getName();
-                player.getWorld().sendNews(player.getMessaging().getIconImage() + player.getUsername()
-                        + " has received " + itemName + " from a bloodier key!");
-            }
-            player.getInventory().addOrDropItem(item1);
-            RequestManager.addPlayerLog(player, "lootbox",
-                    player.getLogName() + " received " + item1.getLogName() + " from a bloodier key.");
-            if (item2 != null) {
-                player.getInventory().addOrDropItem(item2);
-                RequestManager.addPlayerLog(player, "lootbox",
-                        player.getLogName() + " received " + item2.getLogName() + " from a bloodier key.");
-            }
-        } else if (player.getInventory().hasItem(ItemId.SINISTER_KEY)) {
-            player.getCombat().getBarrows().openChest(mapObject.getX() != 3551 || mapObject.getY() != 9695);
-        } else if (player.getInventory().hasItem(ItemId.DIAMOND_KEY_32309)) {
-            player.getInventory().deleteItem(ItemId.DIAMOND_KEY_32309, 1);
-            player.getInventory().addOrDropItem(MysteryBox.getDiamondKeyItem());
-        } else if (player.getInventory().hasItem(ItemId.GOLD_KEY_32308)) {
-            player.getInventory().deleteItem(ItemId.GOLD_KEY_32308, 1);
-            player.getInventory().addOrDropItem(MysteryBox.getGoldKeyItem());
-        } else if (player.getInventory().hasItem(ItemId.SILVER_KEY_32307)) {
-            player.getInventory().deleteItem(ItemId.SILVER_KEY_32307, 1);
-            player.getInventory().addOrDropItem(MysteryBox.getSilverKeyItem());
-        } else if (player.getInventory().hasItem(ItemId.BRONZE_KEY_32306)) {
-            player.getInventory().deleteItem(ItemId.BRONZE_KEY_32306, 1);
-            player.getInventory().addOrDropItem(MysteryBox.getBronzeKeyItem());
-        } else {
-            player.getGameEncoder().sendMessage("You need a key to open this chest.");
-        }
     }
 
     // Handholds
@@ -2716,23 +2597,14 @@ public class MapObject1 {
         player.openDialogue("catacombsofkourend", 0);
     }
 
-    // Coffer
-    public static void mapObject29087(Player player, int index, MapObject mapObject) {
-        if (player.getRights() == 2 || player.isUsergroup(Player.GROUP_ADVERTISER)) {
-            player.openDialogue("clanwars", 6);
-        } else {
-            ClanWarsTournament.viewDonatedItems(player);
-        }
-    }
-
     // Ancient Altar
     public static void mapObject29147(Player player, int index, MapObject mapObject) {
         player.setAnimation(Prayer.PRAY_ANIMATION);
-        if (player.getMagic().getSpellBook() == Magic.NORMAL_MAGIC) {
-            player.getMagic().setSpellBook(Magic.ANCIENT_MAGIC);
+        if (player.getMagic().getSpellbook() == Magic.STANDARD_MAGIC) {
+            player.getMagic().setSpellbook(Magic.ANCIENT_MAGIC);
             player.getGameEncoder().sendMessage("Your spellbook is now Ancients.");
         } else {
-            player.getMagic().setSpellBook(Magic.NORMAL_MAGIC);
+            player.getMagic().setSpellbook(Magic.STANDARD_MAGIC);
             player.getGameEncoder().sendMessage("Your spellbook is now normal.");
         }
     }
@@ -2740,11 +2612,11 @@ public class MapObject1 {
     // Lunar Altar
     public static void mapObject29148(Player player, int index, MapObject mapObject) {
         player.setAnimation(Prayer.PRAY_ANIMATION);
-        if (player.getMagic().getSpellBook() == Magic.NORMAL_MAGIC) {
-            player.getMagic().setSpellBook(Magic.LUNAR_MAGIC);
+        if (player.getMagic().getSpellbook() == Magic.STANDARD_MAGIC) {
+            player.getMagic().setSpellbook(Magic.LUNAR_MAGIC);
             player.getGameEncoder().sendMessage("Your spellbook is now Lunars.");
         } else {
-            player.getMagic().setSpellBook(Magic.NORMAL_MAGIC);
+            player.getMagic().setSpellbook(Magic.STANDARD_MAGIC);
             player.getGameEncoder().sendMessage("Your spellbook is now normal.");
         }
     }
@@ -2758,35 +2630,19 @@ public class MapObject1 {
         if (index == 0) {
             player.openDialogue("spellbooks", 0);
         } else if (index == 1) {
-            if (player.getMagic().getSpellBook() == Magic.NORMAL_MAGIC) {
-                player.getMagic().setSpellBook(Magic.ANCIENT_MAGIC);
-            } else if (player.getMagic().getSpellBook() == Magic.ANCIENT_MAGIC
-                    || player.getMagic().getSpellBook() == Magic.LUNAR_MAGIC) {
-                player.getMagic().setSpellBook(Magic.NORMAL_MAGIC);
+            if (player.getMagic().getSpellbook() == Magic.STANDARD_MAGIC) {
+                player.getMagic().setSpellbook(Magic.ANCIENT_MAGIC);
+            } else if (player.getMagic().getSpellbook() == Magic.ANCIENT_MAGIC
+                    || player.getMagic().getSpellbook() == Magic.LUNAR_MAGIC) {
+                player.getMagic().setSpellbook(Magic.STANDARD_MAGIC);
             }
         } else if (index == 2) {
-            if (player.getMagic().getSpellBook() == Magic.NORMAL_MAGIC
-                    || player.getMagic().getSpellBook() == Magic.ANCIENT_MAGIC) {
-                player.getMagic().setSpellBook(Magic.LUNAR_MAGIC);
-            } else if (player.getMagic().getSpellBook() == Magic.LUNAR_MAGIC) {
-                player.getMagic().setSpellBook(Magic.ANCIENT_MAGIC);
+            if (player.getMagic().getSpellbook() == Magic.STANDARD_MAGIC
+                    || player.getMagic().getSpellbook() == Magic.ANCIENT_MAGIC) {
+                player.getMagic().setSpellbook(Magic.LUNAR_MAGIC);
+            } else if (player.getMagic().getSpellbook() == Magic.LUNAR_MAGIC) {
+                player.getMagic().setSpellbook(Magic.ANCIENT_MAGIC);
             }
-        }
-    }
-
-    // Ornate Jewellery Box
-    public static void mapObject29156(Player player, int index, MapObject mapObject) {
-        player.getWidgetManager().sendInteractiveOverlay(WidgetId.JEWELRY_BOX);
-        player.getGameEncoder().sendScript(1685, 15, "Ornate Jewellery Box", 3);
-        player.getGameEncoder().sendWidgetSettings(WidgetId.JEWELRY_BOX, 0, 0, 24, 1);
-    }
-
-    // Spiritual Fairy Tree
-    public static void mapObject29229(Player player, int index, MapObject mapObject) {
-        if (index == 0) {
-            player.openDialogue("spirittree", 0);
-        } else if (index == 1) {
-            player.openDialogue("fairyring", 0);
         }
     }
 
