@@ -34,11 +34,11 @@ var ARENA_2_SPAWNS = [
     [ 3105, 3930 ] // 2-3
 ];
 var SPECIAL_ITEMS = [
-    ItemID.SUPER_MAGIC_POTION_4, ItemID.SUPER_MAGIC_POTION_3, ItemID.SUPER_MAGIC_POTION_2, ItemID.SUPER_MAGIC_POTION_1,
-    ItemID.ABSORPTION_4, ItemID.ABSORPTION_3, ItemID.ABSORPTION_2, ItemID.ABSORPTION_1
+    ItemId.SUPER_MAGIC_POTION_4, ItemId.SUPER_MAGIC_POTION_3, ItemId.SUPER_MAGIC_POTION_2, ItemId.SUPER_MAGIC_POTION_1,
+    ItemId.ABSORPTION_4, ItemId.ABSORPTION_3, ItemId.ABSORPTION_2, ItemId.ABSORPTION_1
 ];
-var ABSORPTION_POTION = new Skills.Drink(ItemID.ABSORPTION_4, ItemID.ABSORPTION_3, ItemID.ABSORPTION_2,
-        ItemID.ABSORPTION_1, null);
+var ABSORPTION_POTION = new Skills.Drink(ItemId.ABSORPTION_4, ItemId.ABSORPTION_3, ItemId.ABSORPTION_2,
+        ItemId.ABSORPTION_1, null);
 ABSORPTION_POTION.empty = -1;
 ABSORPTION_POTION.action = (new Skills.ItemAction() {
     execute: function(player) {
@@ -51,7 +51,7 @@ var player;
 var monsters = new ArrayList();
 var spawnDelay = 8;
 var paused = false;
-var arena2WaveID = 1;
+var arena2WaveId = 1;
 var spawnIndex = Utils.randomE(ARENA_2_SPAWNS.length);
 var time = 0;
 var recurrentDamage = 0;
@@ -81,9 +81,9 @@ pc = new PController() {
         player.restore();
         player.getWorld().removeNPCs(monsters);
         player.getWorld().removeNPC(zapperNPC);
-        for each (var specialID in SPECIAL_ITEMS) {
-            player.getInventory().deleteAll(specialID);
-            player.getEquipment().deleteAll(specialID);
+        for each (var specialId in SPECIAL_ITEMS) {
+            player.getInventory().deleteAll(specialId);
+            player.getEquipment().deleteAll(specialId);
         }
         player = null;
     },
@@ -91,13 +91,13 @@ pc = new PController() {
     /* @Override */
     setVariableHook: function(name, object) {
         if (name.equals("arena2_wave_id")) {
-            arena2WaveID = object;
+            arena2WaveId = object;
         }
     },
 
     /* @Override */
     loadHook: function(map) {
-        arena2WaveID = map.get("controller.arena2WaveID");
+        arena2WaveId = map.get("controller.arena2WaveId");
         spawnIndex = map.get("controller.spawnIndex");
         time = map.get("controller.time");
     },
@@ -105,7 +105,7 @@ pc = new PController() {
     /* @Override */
     saveHook: function(map) {
         if (map != null) {
-            map.put("controller.arena2WaveID", arena2WaveID);
+            map.put("controller.arena2WaveId", arena2WaveId);
             map.put("controller.spawnIndex", spawnIndex);
             map.put("controller.time", time);
         }
@@ -135,10 +135,10 @@ pc = new PController() {
                 }
                 it.remove();
             }
-            if (monsters.isEmpty() && arena2WaveID > 0) {
+            if (monsters.isEmpty() && arena2WaveId > 0) {
                 player.getGameEncoder().sendMessage("Wave completed!");
                 spawnDelay = 4;
-                if (arena2WaveID++ == ARENA_2_MONSTERS.length) {
+                if (arena2WaveId++ == ARENA_2_MONSTERS.length) {
                     this.finishArena2();
                 }
             }
@@ -148,7 +148,7 @@ pc = new PController() {
         }
         if (spawnDelay > 0) {
             if (!paused && --spawnDelay == 0) {
-                player.getGameEncoder().sendMessage("<col=ff0000>Wave: " + arena2WaveID);
+                player.getGameEncoder().sendMessage("<col=ff0000>Wave: " + arena2$1IdeId);
                 this.spawnArena2Monsters();
             }
             return;
@@ -180,9 +180,9 @@ pc = new PController() {
         }
         if (Utils.randomE(128) == 0) {
             if (Utils.randomE(4) == 0) {
-                pc.addMapItem(new Item(ItemID.SUPER_MAGIC_POTION_4 + Utils.randomI(3), 1), player, player);
+                pc.addMapItem(new Item(ItemId.SUPER_MAGIC_POTION_4 + Utils.randomI(3), 1), player, player);
             } else {
-                pc.addMapItem(new Item(ItemID.ABSORPTION_4 + Utils.randomI(3), 1), player, player);
+                pc.addMapItem(new Item(ItemId.ABSORPTION_4 + Utils.randomI(3), 1), player, player);
             }
         }
     },
@@ -214,7 +214,7 @@ pc = new PController() {
     },
 
     /* @Override */
-    getDrinkHook: function(itemID, drink) {
+    getDrinkHook: function(itemId, drink) {
         if (drink != null && ABSORPTION_POTION.isDose(drink.dose1)) {
             return ABSORPTION_POTION;
         }
@@ -223,7 +223,7 @@ pc = new PController() {
 
     /* @Override */
     mapObjectOptionHook: function(index, mapObject) {
-        switch (mapObject.getID()) {
+        switch (mapObject.getId()) {
         case 12351: // Barrier
             pc.exitTileTeleport();
             return true;
@@ -247,7 +247,7 @@ pc = new PController() {
             pc.addMapObject(new MapObject(-1, mapObject));
             return true;
         case 26264: // Power surge
-            if (monsters.isEmpty() || arena2WaveID == ARENA_2_MONSTERS.length) {
+            if (monsters.isEmpty() || arena2WaveId == ARENA_2_MONSTERS.length) {
                 player.getGameEncoder().sendMessage("This seems to be useless now.");
                 return true;
             }
@@ -282,23 +282,23 @@ pc = new PController() {
     finishArena2: function() {
         pc.exitTileTeleport();
         player.getGameEncoder().sendMessage("Duration: <col=ff0000>" + Time.ticksToDuration(time));
-        if (!player.getInventory().addItem(ItemID.IMBUED_SARADOMIN_CAPE, 1).success()) {
-            player.getBank().add(new Item(ItemID.IMBUED_SARADOMIN_CAPE, 1));
+        if (!player.getInventory().addItem(ItemId.IMBUED_SARADOMIN_CAPE, 1).success()) {
+            player.getBank().add(new Item(ItemId.IMBUED_SARADOMIN_CAPE, 1));
         }
-        if (!player.getInventory().addItem(ItemID.IMBUED_GUTHIX_CAPE, 1).success()) {
-            player.getBank().add(new Item(ItemID.IMBUED_GUTHIX_CAPE, 1));
+        if (!player.getInventory().addItem(ItemId.IMBUED_GUTHIX_CAPE, 1).success()) {
+            player.getBank().add(new Item(ItemId.IMBUED_GUTHIX_CAPE, 1));
         }
-        if (!player.getInventory().addItem(ItemID.IMBUED_ZAMORAK_CAPE, 1).success()) {
-            player.getBank().add(new Item(ItemID.IMBUED_ZAMORAK_CAPE, 1));
+        if (!player.getInventory().addItem(ItemId.IMBUED_ZAMORAK_CAPE, 1).success()) {
+            player.getBank().add(new Item(ItemId.IMBUED_ZAMORAK_CAPE, 1));
         }
         player.getCombat().setMageArena2(true);
     },
 
     spawnArena2Monsters: function() {
-        var npcIDs = ARENA_2_MONSTERS[arena2WaveID - 1];
-        for (var i = 0; i < npcIDs.length; i++) {
-            var coords = this.getArena2Coords(npcIDs[i]);
-            var npc = new Npc(pc, npcIDs[i], new Tile(coords[0], coords[1], player.getHeight()));
+        var npcIds = ARENA_2_MONSTERS[arena2WaveId - 1];
+        for (var i = 0; i < npcIds.length; i++) {
+            var coords = this.getArena2Coords(npcIds[i]);
+            var npc = new Npc(pc, npcIds[i], new Tile(coords[0], coords[1], player.getHeight()));
             npc.getMovement().setClipNPCs(true);
             npc.getController().setMultiCombatFlag(true);
             npc.getCombat().setTarget(player);
@@ -306,7 +306,7 @@ pc = new PController() {
         }
     },
 
-    getArena2Coords: function(npcID) {
+    getArena2Coords: function(npcId) {
         spawnIndex = (spawnIndex + 1) % ARENA_2_SPAWNS.length;
         return ARENA_2_SPAWNS[spawnIndex];
     },

@@ -1,67 +1,67 @@
 [
   {
-    "id": "NpcID.TOOL_LEPRECHAUN",
+    "id": "NpcId.TOOL_LEPRECHAUN",
     "direction": 6,
     "x": 2348,
     "y": 3159
   },
   {
-    "id": "NpcID.LILIWEN",
+    "id": "NpcId.LILIWEN",
     "direction": 1,
     "moveDistance": 2,
     "x": 2344,
     "y": 3164
   },
   {
-    "id": "NpcID.WIZARD_4399",
+    "id": "NpcId.WIZARD_4399",
     "direction": 3,
     "x": 2353,
     "y": 3159
   },
   {
-    "id": "NpcID.GOREU",
+    "id": "NpcId.GOREU",
     "direction": 1,
     "moveDistance": 4,
     "x": 2345,
     "y": 3167
   },
   {
-    "id": "NpcID.YSGAWYN",
+    "id": "NpcId.YSGAWYN",
     "direction": 1,
     "moveDistance": 4,
     "x": 2353,
     "y": 3180
   },
   {
-    "id": "NpcID.ARVEL",
+    "id": "NpcId.ARVEL",
     "direction": 1,
     "moveDistance": 4,
     "x": 2353,
     "y": 3173
   },
   {
-    "id": "NpcID.MAWRTH",
+    "id": "NpcId.MAWRTH",
     "direction": 1,
     "moveDistance": 4,
     "x": 2340,
     "y": 3186
   },
   {
-    "id": "NpcID.KELYN",
+    "id": "NpcId.KELYN",
     "direction": 1,
     "moveDistance": 4,
     "x": 2324,
     "y": 3179
   },
   {
-    "id": "NpcID.GOREU",
+    "id": "NpcId.GOREU",
     "direction": 1,
     "moveDistance": 4,
     "x": 2327,
     "y": 3168
   },
   {
-    "id": "NpcID.YSGAWYN",
+    "id": "NpcId.YSGAWYN",
     "direction": 1,
     "moveDistance": 4,
     "x": 2333,
@@ -69,7 +69,7 @@
     "height": 1
   },
   {
-    "id": "NpcID.ARVEL",
+    "id": "NpcId.ARVEL",
     "direction": 1,
     "moveDistance": 4,
     "x": 2336,
@@ -77,26 +77,26 @@
     "height": 1
   },
   {
-    "id": "NpcID.MILES",
+    "id": "NpcId.MILES",
     "direction": 3,
     "x": 2356,
     "y": 3175,
     "height": 1
   },
   {
-    "id": "NpcID.BANKER_1479",
+    "id": "NpcId.BANKER_1479",
     "direction": 1,
     "x": 2352,
     "y": 3166
   },
   {
-    "id": "NpcID.BANKER_1480",
+    "id": "NpcId.BANKER_1480",
     "direction": 1,
     "x": 2354,
     "y": 3166
   },
   {
-    "id": "NpcID.ILFEEN",
+    "id": "NpcId.ILFEEN",
     "direction": 1,
     "moveDistance": 4,
     "x": 2324,

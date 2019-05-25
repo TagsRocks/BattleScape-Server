@@ -22,7 +22,7 @@ entries.add(obj1);
 obj1.setSelection(title, Utils.toStringArray(lines, true), Utils.toStringArray(actions, true));
 
 instance = new DialogueScript() {
-    execute: function(player, index, childID, slot) {
+    execute: function(player, index, childId, slot) {
         if (player.isLocked()) {
             return;
         }

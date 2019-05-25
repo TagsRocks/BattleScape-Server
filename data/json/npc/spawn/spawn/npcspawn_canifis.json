@@ -1,326 +1,326 @@
 [
   {
-    "id": "NpcID.HUNTING_EXPERT_1504",
+    "id": "NpcId.HUNTING_EXPERT_1504",
     "direction": 4,
     "x": 3508,
     "y": 3479
   },
   {
-    "id": "NpcID.WIZARD_4399",
+    "id": "NpcId.WIZARD_4399",
     "direction": 1,
     "x": 3509,
     "y": 3483
   },
   {
-    "id": "NpcID.YADVIGA_24",
+    "id": "NpcId.YADVIGA_24",
     "direction": 1,
     "moveDistance": 4,
     "x": 3481,
     "y": 3489
   },
   {
-    "id": "NpcID.IRINA_24",
+    "id": "NpcId.IRINA_24",
     "direction": 1,
     "moveDistance": 4,
     "x": 3483,
     "y": 3493
   },
   {
-    "id": "NpcID.SOFIYA_24",
+    "id": "NpcId.SOFIYA_24",
     "direction": 1,
     "moveDistance": 4,
     "x": 3482,
     "y": 3497
   },
   {
-    "id": "NpcID.BORIS_24",
+    "id": "NpcId.BORIS_24",
     "direction": 1,
     "moveDistance": 4,
     "x": 3490,
     "y": 3493
   },
   {
-    "id": "NpcID.YURI_24",
+    "id": "NpcId.YURI_24",
     "direction": 1,
     "moveDistance": 4,
     "x": 3496,
     "y": 3493
   },
   {
-    "id": "NpcID.SVETLANA_24",
+    "id": "NpcId.SVETLANA_24",
     "direction": 1,
     "moveDistance": 4,
     "x": 3500,
     "y": 3491
   },
   {
-    "id": "NpcID.ZOJA_24",
+    "id": "NpcId.ZOJA_24",
     "direction": 1,
     "moveDistance": 4,
     "x": 3503,
     "y": 3487
   },
   {
-    "id": "NpcID.LEV_24",
+    "id": "NpcId.LEV_24",
     "direction": 1,
     "moveDistance": 4,
     "x": 3506,
     "y": 3483
   },
   {
-    "id": "NpcID.SHOP_KEEPER",
+    "id": "NpcId.SHOP_KEEPER",
     "direction": 1,
     "moveDistance": 4,
     "x": 3477,
     "y": 3496
   },
   {
-    "id": "NpcID.SBOTT",
+    "id": "NpcId.SBOTT",
     "direction": 1,
     "moveDistance": 4,
     "x": 3491,
     "y": 3501
   },
   {
-    "id": "NpcID.RUFUS",
+    "id": "NpcId.RUFUS",
     "direction": 1,
     "moveDistance": 4,
     "x": 3507,
     "y": 3494
   },
   {
-    "id": "NpcID.MILLA_24",
+    "id": "NpcId.MILLA_24",
     "direction": 1,
     "moveDistance": 4,
     "x": 3499,
     "y": 3482
   },
   {
-    "id": "NpcID.NIKOLAI_24",
+    "id": "NpcId.NIKOLAI_24",
     "direction": 1,
     "moveDistance": 4,
     "x": 3493,
     "y": 3483
   },
   {
-    "id": "NpcID.GEORGY_24",
+    "id": "NpcId.GEORGY_24",
     "direction": 1,
     "moveDistance": 4,
     "x": 3478,
     "y": 3483
   },
   {
-    "id": "NpcID.TAXIDERMIST",
+    "id": "NpcId.TAXIDERMIST",
     "direction": 1,
     "moveDistance": 4,
     "x": 3479,
     "y": 3485
   },
   {
-    "id": "NpcID.BANKER",
+    "id": "NpcId.BANKER",
     "direction": 3,
     "x": 3514,
     "y": 3478
   },
   {
-    "id": "NpcID.BANKER",
+    "id": "NpcId.BANKER",
     "direction": 3,
     "x": 3514,
     "y": 3479
   },
   {
-    "id": "NpcID.BANKER",
+    "id": "NpcId.BANKER",
     "direction": 3,
     "x": 3514,
     "y": 3481
   },
   {
-    "id": "NpcID.BANKER_395",
+    "id": "NpcId.BANKER_395",
     "direction": 3,
     "x": 3514,
     "y": 3480
   },
   {
-    "id": "NpcID.BANKER_395",
+    "id": "NpcId.BANKER_395",
     "direction": 3,
     "x": 3514,
     "y": 3482
   },
   {
-    "id": "NpcID.BANKER_395",
+    "id": "NpcId.BANKER_395",
     "direction": 3,
     "x": 3514,
     "y": 3483
   },
   {
-    "id": "NpcID.ROAVAR",
+    "id": "NpcId.ROAVAR",
     "direction": 1,
     "moveDistance": 4,
     "x": 3494,
     "y": 3469
   },
   {
-    "id": "NpcID.VERA_24",
+    "id": "NpcId.VERA_24",
     "direction": 1,
     "moveDistance": 4,
     "x": 3490,
     "y": 3472
   },
   {
-    "id": "NpcID.IMRE_24",
+    "id": "NpcId.IMRE_24",
     "direction": 1,
     "moveDistance": 4,
     "x": 3491,
     "y": 3477
   },
   {
-    "id": "NpcID.MALAK",
+    "id": "NpcId.MALAK",
     "direction": 1,
     "moveDistance": 4,
     "x": 3496,
     "y": 3477
   },
   {
-    "id": "NpcID.STRANGER",
+    "id": "NpcId.STRANGER",
     "direction": 1,
     "x": 3503,
     "y": 3477
   },
   {
-    "id": "NpcID.SWAMP_LIZARD",
+    "id": "NpcId.SWAMP_LIZARD",
     "direction": 1,
     "moveDistance": 4,
     "x": 3539,
     "y": 3450
   },
   {
-    "id": "NpcID.SWAMP_LIZARD",
+    "id": "NpcId.SWAMP_LIZARD",
     "direction": 1,
     "moveDistance": 4,
     "x": 3535,
     "y": 3448
   },
   {
-    "id": "NpcID.SWAMP_LIZARD",
+    "id": "NpcId.SWAMP_LIZARD",
     "direction": 1,
     "moveDistance": 4,
     "x": 3530,
     "y": 3444
   },
   {
-    "id": "NpcID.SWAMP_LIZARD",
+    "id": "NpcId.SWAMP_LIZARD",
     "direction": 1,
     "moveDistance": 4,
     "x": 3538,
     "y": 3448
   },
   {
-    "id": "NpcID.SWAMP_LIZARD",
+    "id": "NpcId.SWAMP_LIZARD",
     "direction": 1,
     "moveDistance": 4,
     "x": 3535,
     "y": 3446
   },
   {
-    "id": "NpcID.SWAMP_LIZARD",
+    "id": "NpcId.SWAMP_LIZARD",
     "direction": 1,
     "moveDistance": 4,
     "x": 3549,
     "y": 3451
   },
   {
-    "id": "NpcID.SWAMP_LIZARD",
+    "id": "NpcId.SWAMP_LIZARD",
     "direction": 1,
     "moveDistance": 8,
     "x": 3545,
     "y": 3450
   },
   {
-    "id": "NpcID.SWAMP_LIZARD",
+    "id": "NpcId.SWAMP_LIZARD",
     "direction": 1,
     "moveDistance": 4,
     "x": 3556,
     "y": 3453
   },
   {
-    "id": "NpcID.SWAMP_LIZARD",
+    "id": "NpcId.SWAMP_LIZARD",
     "direction": 1,
     "moveDistance": 4,
     "x": 3555,
     "y": 3451
   },
   {
-    "id": "NpcID.SWAMP_LIZARD",
+    "id": "NpcId.SWAMP_LIZARD",
     "direction": 1,
     "moveDistance": 4,
     "x": 3550,
     "y": 3452
   },
   {
-    "id": "NpcID.SWAMP_LIZARD",
+    "id": "NpcId.SWAMP_LIZARD",
     "direction": 1,
     "moveDistance": 4,
     "x": 3548,
     "y": 3449
   },
   {
-    "id": "NpcID.SWAMP_LIZARD",
+    "id": "NpcId.SWAMP_LIZARD",
     "direction": 1,
     "moveDistance": 4,
     "x": 3561,
     "y": 3437
   },
   {
-    "id": "NpcID.SWAMP_LIZARD",
+    "id": "NpcId.SWAMP_LIZARD",
     "direction": 1,
     "moveDistance": 4,
     "x": 3558,
     "y": 3434
   },
   {
-    "id": "NpcID.SWAMP_LIZARD",
+    "id": "NpcId.SWAMP_LIZARD",
     "direction": 1,
     "moveDistance": 4,
     "x": 3561,
     "y": 3431
   },
   {
-    "id": "NpcID.SWAMP_LIZARD",
+    "id": "NpcId.SWAMP_LIZARD",
     "direction": 1,
     "moveDistance": 4,
     "x": 3554,
     "y": 3437
   },
   {
-    "id": "NpcID.SWAMP_LIZARD",
+    "id": "NpcId.SWAMP_LIZARD",
     "direction": 1,
     "moveDistance": 4,
     "x": 3551,
     "y": 3440
   },
   {
-    "id": "NpcID.SWAMP_LIZARD",
+    "id": "NpcId.SWAMP_LIZARD",
     "direction": 1,
     "moveDistance": 4,
     "x": 3550,
     "y": 3438
   },
   {
-    "id": "NpcID.SWAMP_LIZARD",
+    "id": "NpcId.SWAMP_LIZARD",
     "direction": 1,
     "moveDistance": 4,
     "x": 3546,
     "y": 3439
   },
   {
-    "id": "NpcID.SWAMP_LIZARD",
+    "id": "NpcId.SWAMP_LIZARD",
     "direction": 1,
     "moveDistance": 4,
     "x": 3548,
     "y": 3439
   },
   {
-    "id": "NpcID.SWAMP_LIZARD",
+    "id": "NpcId.SWAMP_LIZARD",
     "direction": 1,
     "moveDistance": 4,
     "x": 3554,

@@ -9,11 +9,11 @@ cs = new NCombatScript() {
         if (npc.isLocked()) {
             return;
         }
-        if (npc.getID() != NpcID.WYRM_99 && npc.getCombatDelay() == 0 && !npc.getAttacking()) {
-            npc.setTransformationID(NpcID.WYRM_99);
+        if (npc.getId() != NpcId.WYRM_99 && npc.getCombatDelay() == 0 && !npc.getAttacking()) {
+            npc.setTransformationId(NpcId.WYRM_99);
             npc.setAnimation(8269);
-        } else if (npc.getID() != NpcID.WYRM_99_8611 && (npc.getCombatDelay() > 0 || npc.getAttacking())) {
-            npc.setTransformationID(NpcID.WYRM_99_8611);
+        } else if (npc.getId() != NpcId.WYRM_99_8611 && (npc.getCombatDelay() > 0 || npc.getAttacking())) {
+            npc.setTransformationId(NpcId.WYRM_99_8611);
             npc.setAnimation(8268);
         }
     }

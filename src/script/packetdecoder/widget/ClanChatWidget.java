@@ -6,12 +6,12 @@ import com.palidino.osrs.util.RequestManager;
 import com.palidino.rs.Clan;
 
 public class ClanChatWidget {
-    public static void widget7(Player player, int index, int childID, int slot, int itemID) {
+    public static void widget7(Player player, int index, int childId, int slot, int itemId) {
         // Tab
         if (player.isLocked()) {
             return;
         }
-        switch (childID) {
+        switch (childId) {
         case 23:
             if (player.isGameModeGroupIronman()) {
                 player.openDialogue("clanchat", 0);
@@ -22,13 +22,13 @@ public class ClanChatWidget {
         }
     }
 
-    public static void widget94(Player player, int index, int childID, int slot, int itemID) {
+    public static void widget94(Player player, int index, int childId, int slot, int itemId) {
         // Settings
         if (player.isLocked()) {
             return;
         }
         int settingValue = 0;
-        switch (childID) {
+        switch (childId) {
         case 10:
             if (index == 0) {
                 player.getGameEncoder().sendEnterString("Enter chat prefix:", new ValueEnteredEvent.StringEvent() {

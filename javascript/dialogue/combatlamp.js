@@ -77,69 +77,69 @@ entries.add(obj4);
 obj4.setSelection(title, Utils.toStringArray(lines, true), Utils.toStringArray(actions, true));
 
 instance = new DialogueScript() {
-    execute: function(player, index, childID, slot) {
+    execute: function(player, index, childId, slot) {
         if (player.isLocked()) {
             return;
         }
         if (index == 0) {
-            var skillID = -1;
+            var skillId = -1;
             if (slot == 0) {
-                skillID = Skills.ATTACK;
+                skillId = Skills.ATTACK;
             } else if (slot == 1) {
-                skillID = Skills.STRENGTH;
+                skillId = Skills.STRENGTH;
             } else if (slot == 2) {
-                skillID = Skills.RANGED;
+                skillId = Skills.RANGED;
             } else if (slot == 3) {
-                skillID = Skills.MAGIC;
+                skillId = Skills.MAGIC;
             } else if (slot == 4) {
-                skillID = Skills.DEFENCE;
+                skillId = Skills.DEFENCE;
             }
-            if (skillID == -1) {
+            if (skillId == -1) {
                 return;
             }
             if (!player.getInventory().hasItem(10586)) {
                 return;
             }
-            if (player.getController().getLevelForXP(skillID) == 99) {
+            if (player.getController().getLevelForXP(skillId) == 99) {
                 player.getGameEncoder().sendMessage("You can't use this on a level 99 skill.");
                 return;
             }
             player.getInventory().deleteItem(10586, 1);
-            player.getSkills().addXP(skillID, 273742, false);
+            player.getSkills().addXP(skillId, 273742, false);
             player.getSkills().addXP(Skills.HITPOINTS, 91248, false);
         } else if (index == 1 || index == 2) {
-            var skillID = -1;
+            var skillId = -1;
             if (index == 1) {
                 if (slot == 0) {
-                    skillID = Skills.ATTACK;
+                    skillId = Skills.ATTACK;
                 } else if (slot == 1) {
-                    skillID = Skills.STRENGTH;
+                    skillId = Skills.STRENGTH;
                 } else if (slot == 2) {
-                    skillID = Skills.RANGED;
+                    skillId = Skills.RANGED;
                 } else if (slot == 3) {
-                    skillID = Skills.MAGIC;
+                    skillId = Skills.MAGIC;
                 }
             } else if (index == 2) {
                 if (slot == 0) {
-                    skillID = Skills.DEFENCE;
+                    skillId = Skills.DEFENCE;
                 } else if (slot == 1) {
-                    skillID = Skills.HITPOINTS;
+                    skillId = Skills.HITPOINTS;
                 } else if (slot == 2) {
-                    skillID = Skills.PRAYER;
+                    skillId = Skills.PRAYER;
                 }
             }
-            if (skillID == -1) {
+            if (skillId == -1) {
                 return;
             }
             if (!player.getInventory().hasItem(9656) && !player.getInventory().hasItem(9657)
                     && !player.getInventory().hasItem(9658)) {
                 return;
             }
-            if (player.getController().getLevelForXP(skillID) == 99) {
-                player.getGameEncoder().sendMessage("Your " + Skills.SKILL_NAMES[skillID] + " level is already 99.");
+            if (player.getController().getLevelForXP(skillId) == 99) {
+                player.getGameEncoder().sendMessage("Your " + Skills.SKILL_NAMES[skillId] + " level is already 99.");
                 return;
             }
-            var xp = Skills.XP_TABLE[99] - player.getSkills().getXP(skillID);
+            var xp = Skills.XP_TABLE[99] - player.getSkills().getXP(skillId);
             if (player.getInventory().hasItem(9656)) {
                 player.getInventory().deleteItem(9656, 1);
                 player.getInventory().addItem(9657, 1);
@@ -149,7 +149,7 @@ instance = new DialogueScript() {
             } else if (player.getInventory().hasItem(9658)) {
                 player.getInventory().deleteItem(9658, 1);
             }
-            player.getSkills().addXP(skillID, xp, false);
+            player.getSkills().addXP(skillId, xp, false);
         } else if (index == 3) {
             var level = -1;
             if (slot == 0) {
@@ -176,34 +176,34 @@ instance = new DialogueScript() {
             player.getInventory().deleteItem(10889, 1);
             player.getSkills().addXP(Skills.PRAYER, Skills.XP_TABLE[level], false);
         } else if (index == 4) {
-            var skillID = -1;
+            var skillId = -1;
             if (index == 4) {
                 if (slot == 0) {
-                    skillID = Skills.ATTACK;
+                    skillId = Skills.ATTACK;
                 } else if (slot == 1) {
-                    skillID = Skills.STRENGTH;
+                    skillId = Skills.STRENGTH;
                 } else if (slot == 2) {
-                    skillID = Skills.RANGED;
+                    skillId = Skills.RANGED;
                 } else if (slot == 3) {
-                    skillID = Skills.MAGIC;
+                    skillId = Skills.MAGIC;
                 } else if (slot == 3) {
-                    skillID = Skills.DEFENCE;
+                    skillId = Skills.DEFENCE;
                 }
             }
-            if (skillID == -1) {
+            if (skillId == -1) {
                 return;
             }
             if (!player.getInventory().hasItem(4447)) {
                 return;
             }
-            if (player.getController().getLevelForXP(skillID) == 99) {
-                player.getGameEncoder().sendMessage("Your " + Skills.SKILL_NAMES[skillID] + " level is already 99.");
+            if (player.getController().getLevelForXP(skillId) == 99) {
+                player.getGameEncoder().sendMessage("Your " + Skills.SKILL_NAMES[skillId] + " level is already 99.");
                 return;
             }
-            var xp = Skills.XP_TABLE[99] - player.getSkills().getXP(skillID);
+            var xp = Skills.XP_TABLE[99] - player.getSkills().getXP(skillId);
             var hitpointsXP = xp / 3;
             player.getInventory().deleteItem(4447, 1);
-            player.getSkills().addXP(skillID, xp, false);
+            player.getSkills().addXP(skillId, xp, false);
             player.getSkills().addXP(Skills.HITPOINTS, hitpointsXP, false);
         }
     },

@@ -1,9 +1,9 @@
 ﻿[
   {
-    "id": "NpcID.CURSED_HELLHOUND_260_16000",
+    "id": "NpcId.CURSED_HELLHOUND_260_16000",
     "combatScript": "cursedmonster",
     "hitpoints": 300,
-    "hitpointsBarID": 5,
+    "hitpointsBarId": 5,
     "slayerLevel": 91,
     "attackLevel": 110,
     "rangedLevel": 110,
@@ -32,7 +32,7 @@
         "maxHit": 12,
         "attackSpeed": 6,
         "targetGraphic": { "id": 1244, "height": 100 },
-        "projectileID": 1245
+        "projectileId": 1245
       },
       {
         "type": "MAGIC",
@@ -40,7 +40,7 @@
         "maxHit": 12,
         "attackSpeed": 6,
         "targetGraphic": { "id": 1243, "height": 100 },
-        "projectileID": 1242
+        "projectileId": 1242
       }
     ],
     "saveKillCount": true,
@@ -50,42 +50,42 @@
         "chance": 0.12,
         "logLoot": true,
         "items": [
-          [ { "id": "ItemID.IMBUED_HEART", "amount": 1, "weight": 1 } ],
-          [ { "id": "ItemID.ETERNAL_GEM", "amount": 1, "weight": 1 } ],
-          [ { "id": "ItemID.DUST_BATTLESTAFF", "amount": 1, "weight": 3 } ],
-          [ { "id": "ItemID.MIST_BATTLESTAFF", "amount": 1, "weight": 3 } ]
+          [ { "id": "ItemId.IMBUED_HEART", "amount": 1, "weight": 1 } ],
+          [ { "id": "ItemId.ETERNAL_GEM", "amount": 1, "weight": 1 } ],
+          [ { "id": "ItemId.DUST_BATTLESTAFF", "amount": 1, "weight": 3 } ],
+          [ { "id": "ItemId.MIST_BATTLESTAFF", "amount": 1, "weight": 3 } ]
         ]
       },
       {
         "chance": 0.39,
         "logLoot": true,
         "items": [
-          [ { "id": "ItemID.PRIMORDIAL_CRYSTAL", "amount": 1 } ],
-          [ { "id": "ItemID.PEGASIAN_CRYSTAL", "amount": 1 } ],
-          [ { "id": "ItemID.ETERNAL_CRYSTAL", "amount": 1 } ],
-          [ { "id": "ItemID.SMOULDERING_STONE", "amount": 1 } ]
+          [ { "id": "ItemId.PRIMORDIAL_CRYSTAL", "amount": 1 } ],
+          [ { "id": "ItemId.PEGASIAN_CRYSTAL", "amount": 1 } ],
+          [ { "id": "ItemId.ETERNAL_CRYSTAL", "amount": 1 } ],
+          [ { "id": "ItemId.SMOULDERING_STONE", "amount": 1 } ]
         ]
       },
       {
         "chance": 1.56,
         "logLoot": true,
         "items": [
-          [ { "id": "ItemID.CLUE_SCROLL_HARD", "amount": 1 } ]
+          [ { "id": "ItemId.CLUE_SCROLL_HARD", "amount": 1 } ]
         ]
       },
       {
         "chance": 100,
         "items": [
-          [ { "id": "ItemID.BONES", "amount": 1 } ]
+          [ { "id": "ItemId.BONES", "amount": 1 } ]
         ]
       }
     ]
   },
   {
-    "id": "NpcID.CURSED_JEWELLED_CRAB_180_16001",
+    "id": "NpcId.CURSED_JEWELLED_CRAB_180_16001",
     "combatScript": "cursedjewelledcrab",
     "hitpoints": 255,
-    "hitpointsBarID": 5,
+    "hitpointsBarId": 5,
     "attackLevel": 127,
     "defenceLevel": 127,
     "meleeDefenceBonus": 127,
@@ -110,105 +110,105 @@
         "chance": 0.12,
         "logLoot": true,
         "items": [
-          [ { "id": "ItemID.IMBUED_HEART", "amount": 1, "weight": 1 } ],
-          [ { "id": "ItemID.ETERNAL_GEM", "amount": 1, "weight": 1 } ],
-          [ { "id": "ItemID.DUST_BATTLESTAFF", "amount": 1, "weight": 3 } ],
-          [ { "id": "ItemID.MIST_BATTLESTAFF", "amount": 1, "weight": 3 } ]
+          [ { "id": "ItemId.IMBUED_HEART", "amount": 1, "weight": 1 } ],
+          [ { "id": "ItemId.ETERNAL_GEM", "amount": 1, "weight": 1 } ],
+          [ { "id": "ItemId.DUST_BATTLESTAFF", "amount": 1, "weight": 3 } ],
+          [ { "id": "ItemId.MIST_BATTLESTAFF", "amount": 1, "weight": 3 } ]
         ]
       },
       {
         "chance": 0.78,
         "logLoot": true,
         "items": [
-          [ { "id": "ItemID.BERSERKER_RING", "amount": 1 } ],
-          [ { "id": "ItemID.WARRIOR_RING", "amount": 1 } ],
-          [ { "id": "ItemID.ARCHERS_RING", "amount": 1 } ],
-          [ { "id": "ItemID.SEERS_RING", "amount": 1 } ]
+          [ { "id": "ItemId.BERSERKER_RING", "amount": 1 } ],
+          [ { "id": "ItemId.WARRIOR_RING", "amount": 1 } ],
+          [ { "id": "ItemId.ARCHERS_RING", "amount": 1 } ],
+          [ { "id": "ItemId.SEERS_RING", "amount": 1 } ]
         ]
       },
       {
         "chance": 0.8,
         "items": [
-          [ { "id": "ItemID.CLUE_SCROLL_MEDIUM", "amount": 1 } ]
+          [ { "id": "ItemId.CLUE_SCROLL_MEDIUM", "amount": 1 } ]
         ]
       },
       {
         "chance": 5,
         "items": [
-          [ { "id": "ItemID.WATER_RUNE", "amount": 1, "maxAmount": 40 } ],
-          [ { "id": "ItemID.EARTH_RUNE", "amount": 1, "maxAmount": 40 } ],
-          [ { "id": "ItemID.AIR_TALISMAN", "amount": 1 } ],
-          [ { "id": "ItemID.MIND_TALISMAN", "amount": 1 } ],
-          [ { "id": "ItemID.FIRE_TALISMAN", "amount": 1 } ],
-          [ { "id": "ItemID.COSMIC_TALISMAN", "amount": 1 } ],
-          [ { "id": "ItemID.BODY_TALISMAN", "amount": 1 } ],
-          [ { "id": "ItemID.WATER_TALISMAN", "amount": 1 } ],
-          [ { "id": "ItemID.EARTH_TALISMAN", "amount": 1 } ],
-          [ { "id": "ItemID.BLACK_WARHAMMER", "amount": 1 } ],
-          [ { "id": "ItemID.ADAMANT_LONGSWORD", "amount": 1 } ],
-          [ { "id": "ItemID.TOADFLAX_SEED", "amount": 1 } ],
-          [ { "id": "ItemID.RANARR_SEED", "amount": 1 } ],
-          [ { "id": "ItemID.IRIT_SEED", "amount": 1 } ],
-          [ { "id": "ItemID.AVANTOE_SEED", "amount": 1 } ],
-          [ { "id": "ItemID.SNAPDRAGON_SEED", "amount": 1 } ],
-          [ { "id": "ItemID.CADANTINE_SEED", "amount": 1 } ],
-          [ { "id": "ItemID.LANTADYME_SEED", "amount": 1 } ],
-          [ { "id": "ItemID.DWARF_WEED_SEED", "amount": 1 } ],
-          [ { "id": "ItemID.TORSTOL_SEED", "amount": 1 } ],
-          [ { "id": "ItemID.GRIMY_RANARR_WEED", "amount": 1 } ],
-          [ { "id": "ItemID.GRIMY_IRIT_LEAF", "amount": 1 } ],
-          [ { "id": "ItemID.GRIMY_AVANTOE", "amount": 1 } ],
-          [ { "id": "ItemID.GRIMY_KWUARM", "amount": 1 } ],
-          [ { "id": "ItemID.GRIMY_CADANTINE", "amount": 1 } ],
-          [ { "id": "ItemID.GRIMY_LANTADYME", "amount": 1 } ],
-          [ { "id": "ItemID.GRIMY_DWARF_WEED", "amount": 1 } ]
+          [ { "id": "ItemId.WATER_RUNE", "amount": 1, "maxAmount": 40 } ],
+          [ { "id": "ItemId.EARTH_RUNE", "amount": 1, "maxAmount": 40 } ],
+          [ { "id": "ItemId.AIR_TALISMAN", "amount": 1 } ],
+          [ { "id": "ItemId.MIND_TALISMAN", "amount": 1 } ],
+          [ { "id": "ItemId.FIRE_TALISMAN", "amount": 1 } ],
+          [ { "id": "ItemId.COSMIC_TALISMAN", "amount": 1 } ],
+          [ { "id": "ItemId.BODY_TALISMAN", "amount": 1 } ],
+          [ { "id": "ItemId.WATER_TALISMAN", "amount": 1 } ],
+          [ { "id": "ItemId.EARTH_TALISMAN", "amount": 1 } ],
+          [ { "id": "ItemId.BLACK_WARHAMMER", "amount": 1 } ],
+          [ { "id": "ItemId.ADAMANT_LONGSWORD", "amount": 1 } ],
+          [ { "id": "ItemId.TOADFLAX_SEED", "amount": 1 } ],
+          [ { "id": "ItemId.RANARR_SEED", "amount": 1 } ],
+          [ { "id": "ItemId.IRIT_SEED", "amount": 1 } ],
+          [ { "id": "ItemId.AVANTOE_SEED", "amount": 1 } ],
+          [ { "id": "ItemId.SNAPDRAGON_SEED", "amount": 1 } ],
+          [ { "id": "ItemId.CADANTINE_SEED", "amount": 1 } ],
+          [ { "id": "ItemId.LANTADYME_SEED", "amount": 1 } ],
+          [ { "id": "ItemId.DWARF_WEED_SEED", "amount": 1 } ],
+          [ { "id": "ItemId.TORSTOL_SEED", "amount": 1 } ],
+          [ { "id": "ItemId.GRIMY_RANARR_WEED", "amount": 1 } ],
+          [ { "id": "ItemId.GRIMY_IRIT_LEAF", "amount": 1 } ],
+          [ { "id": "ItemId.GRIMY_AVANTOE", "amount": 1 } ],
+          [ { "id": "ItemId.GRIMY_KWUARM", "amount": 1 } ],
+          [ { "id": "ItemId.GRIMY_CADANTINE", "amount": 1 } ],
+          [ { "id": "ItemId.GRIMY_LANTADYME", "amount": 1 } ],
+          [ { "id": "ItemId.GRIMY_DWARF_WEED", "amount": 1 } ]
         ]
       },
       {
         "chance": 20,
         "items": [
-          [ { "id": "ItemID.ROCK_SHELL_SPLINTER", "amount": 1 } ],
-          [ { "id": "ItemID.ROCK_SHELL_CHUNK", "amount": 1 } ],
-          [ { "id": "ItemID.ROCK_SHELL_SHARD", "amount": 1 } ],
-          [ { "id": "ItemID.STEEL_PLATEBODY", "amount": 1 } ],
-          [ { "id": "ItemID.BLACK_CLAWS", "amount": 1 } ],
-          [ { "id": "ItemID.BLACK_PLATEBODY", "amount": 1 } ],
-          [ { "id": "ItemID.MITHRIL_AXE", "amount": 1 } ],
-          [ { "id": "ItemID.ROCK_SHELL_GLOVES", "amount": 1 } ],
-          [ { "id": "ItemID.ROCK_SHELL_BOOTS", "amount": 1 } ],
-          [ { "id": "ItemID.POISON_IVY_SEED", "amount": 1 } ],
-          [ { "id": "ItemID.BELLADONNA_SEED", "amount": 1 } ],
-          [ { "id": "ItemID.GUAM_SEED", "amount": 1 } ],
-          [ { "id": "ItemID.MARRENTILL_SEED", "amount": 1 } ],
-          [ { "id": "ItemID.TARROMIN_SEED", "amount": 1 } ],
-          [ { "id": "ItemID.HARRALANDER_SEED", "amount": 1 } ],
-          [ { "id": "ItemID.GRIMY_GUAM_LEAF", "amount": 1 } ],
-          [ { "id": "ItemID.GRIMY_MARRENTILL", "amount": 1 } ],
-          [ { "id": "ItemID.GRIMY_TARROMIN", "amount": 1 } ],
-          [ { "id": "ItemID.GRIMY_HARRALANDER", "amount": 1 } ]
+          [ { "id": "ItemId.ROCK_SHELL_SPLINTER", "amount": 1 } ],
+          [ { "id": "ItemId.ROCK_SHELL_CHUNK", "amount": 1 } ],
+          [ { "id": "ItemId.ROCK_SHELL_SHARD", "amount": 1 } ],
+          [ { "id": "ItemId.STEEL_PLATEBODY", "amount": 1 } ],
+          [ { "id": "ItemId.BLACK_CLAWS", "amount": 1 } ],
+          [ { "id": "ItemId.BLACK_PLATEBODY", "amount": 1 } ],
+          [ { "id": "ItemId.MITHRIL_AXE", "amount": 1 } ],
+          [ { "id": "ItemId.ROCK_SHELL_GLOVES", "amount": 1 } ],
+          [ { "id": "ItemId.ROCK_SHELL_BOOTS", "amount": 1 } ],
+          [ { "id": "ItemId.POISON_IVY_SEED", "amount": 1 } ],
+          [ { "id": "ItemId.BELLADONNA_SEED", "amount": 1 } ],
+          [ { "id": "ItemId.GUAM_SEED", "amount": 1 } ],
+          [ { "id": "ItemId.MARRENTILL_SEED", "amount": 1 } ],
+          [ { "id": "ItemId.TARROMIN_SEED", "amount": 1 } ],
+          [ { "id": "ItemId.HARRALANDER_SEED", "amount": 1 } ],
+          [ { "id": "ItemId.GRIMY_GUAM_LEAF", "amount": 1 } ],
+          [ { "id": "ItemId.GRIMY_MARRENTILL", "amount": 1 } ],
+          [ { "id": "ItemId.GRIMY_TARROMIN", "amount": 1 } ],
+          [ { "id": "ItemId.GRIMY_HARRALANDER", "amount": 1 } ]
         ]
       },
       {
         "chance": 99,
         "items": [
-          [ { "id": "ItemID.RAW_LOBSTER", "amount": 1 } ],
-          [ { "id": "ItemID.RAW_BASS", "amount": 1 } ],
-          [ { "id": "ItemID.TINDERBOX", "amount": 1 } ]
+          [ { "id": "ItemId.RAW_LOBSTER", "amount": 1 } ],
+          [ { "id": "ItemId.RAW_BASS", "amount": 1 } ],
+          [ { "id": "ItemId.TINDERBOX", "amount": 1 } ]
         ]
       },
       {
         "chance": 100,
         "items": [
-          [ { "id": "ItemID.BONES", "amount": 1 } ]
+          [ { "id": "ItemId.BONES", "amount": 1 } ]
         ]
       }
     ]
   },
   {
-    "id": "NpcID.CURSED_JEWELLED_CRAB_RED_180_16002",
+    "id": "NpcId.CURSED_JEWELLED_CRAB_RED_180_16002",
     "combatScript": "cursedjewelledcrab",
     "hitpoints": 255,
-    "hitpointsBarID": 5,
+    "hitpointsBarId": 5,
     "attackLevel": 127,
     "defenceLevel": 127,
     "meleeDefenceBonus": 127,
@@ -233,105 +233,105 @@
         "chance": 0.12,
         "logLoot": true,
         "items": [
-          [ { "id": "ItemID.IMBUED_HEART", "amount": 1, "weight": 1 } ],
-          [ { "id": "ItemID.ETERNAL_GEM", "amount": 1, "weight": 1 } ],
-          [ { "id": "ItemID.DUST_BATTLESTAFF", "amount": 1, "weight": 3 } ],
-          [ { "id": "ItemID.MIST_BATTLESTAFF", "amount": 1, "weight": 3 } ]
+          [ { "id": "ItemId.IMBUED_HEART", "amount": 1, "weight": 1 } ],
+          [ { "id": "ItemId.ETERNAL_GEM", "amount": 1, "weight": 1 } ],
+          [ { "id": "ItemId.DUST_BATTLESTAFF", "amount": 1, "weight": 3 } ],
+          [ { "id": "ItemId.MIST_BATTLESTAFF", "amount": 1, "weight": 3 } ]
         ]
       },
       {
         "chance": 0.78,
         "logLoot": true,
         "items": [
-          [ { "id": "ItemID.BERSERKER_RING", "amount": 1 } ],
-          [ { "id": "ItemID.WARRIOR_RING", "amount": 1 } ],
-          [ { "id": "ItemID.ARCHERS_RING", "amount": 1 } ],
-          [ { "id": "ItemID.SEERS_RING", "amount": 1 } ]
+          [ { "id": "ItemId.BERSERKER_RING", "amount": 1 } ],
+          [ { "id": "ItemId.WARRIOR_RING", "amount": 1 } ],
+          [ { "id": "ItemId.ARCHERS_RING", "amount": 1 } ],
+          [ { "id": "ItemId.SEERS_RING", "amount": 1 } ]
         ]
       },
       {
         "chance": 0.8,
         "items": [
-          [ { "id": "ItemID.CLUE_SCROLL_MEDIUM", "amount": 1 } ]
+          [ { "id": "ItemId.CLUE_SCROLL_MEDIUM", "amount": 1 } ]
         ]
       },
       {
         "chance": 5,
         "items": [
-          [ { "id": "ItemID.WATER_RUNE", "amount": 1, "maxAmount": 40 } ],
-          [ { "id": "ItemID.EARTH_RUNE", "amount": 1, "maxAmount": 40 } ],
-          [ { "id": "ItemID.AIR_TALISMAN", "amount": 1 } ],
-          [ { "id": "ItemID.MIND_TALISMAN", "amount": 1 } ],
-          [ { "id": "ItemID.FIRE_TALISMAN", "amount": 1 } ],
-          [ { "id": "ItemID.COSMIC_TALISMAN", "amount": 1 } ],
-          [ { "id": "ItemID.BODY_TALISMAN", "amount": 1 } ],
-          [ { "id": "ItemID.WATER_TALISMAN", "amount": 1 } ],
-          [ { "id": "ItemID.EARTH_TALISMAN", "amount": 1 } ],
-          [ { "id": "ItemID.BLACK_WARHAMMER", "amount": 1 } ],
-          [ { "id": "ItemID.ADAMANT_LONGSWORD", "amount": 1 } ],
-          [ { "id": "ItemID.TOADFLAX_SEED", "amount": 1 } ],
-          [ { "id": "ItemID.RANARR_SEED", "amount": 1 } ],
-          [ { "id": "ItemID.IRIT_SEED", "amount": 1 } ],
-          [ { "id": "ItemID.AVANTOE_SEED", "amount": 1 } ],
-          [ { "id": "ItemID.SNAPDRAGON_SEED", "amount": 1 } ],
-          [ { "id": "ItemID.CADANTINE_SEED", "amount": 1 } ],
-          [ { "id": "ItemID.LANTADYME_SEED", "amount": 1 } ],
-          [ { "id": "ItemID.DWARF_WEED_SEED", "amount": 1 } ],
-          [ { "id": "ItemID.TORSTOL_SEED", "amount": 1 } ],
-          [ { "id": "ItemID.GRIMY_RANARR_WEED", "amount": 1 } ],
-          [ { "id": "ItemID.GRIMY_IRIT_LEAF", "amount": 1 } ],
-          [ { "id": "ItemID.GRIMY_AVANTOE", "amount": 1 } ],
-          [ { "id": "ItemID.GRIMY_KWUARM", "amount": 1 } ],
-          [ { "id": "ItemID.GRIMY_CADANTINE", "amount": 1 } ],
-          [ { "id": "ItemID.GRIMY_LANTADYME", "amount": 1 } ],
-          [ { "id": "ItemID.GRIMY_DWARF_WEED", "amount": 1 } ]
+          [ { "id": "ItemId.WATER_RUNE", "amount": 1, "maxAmount": 40 } ],
+          [ { "id": "ItemId.EARTH_RUNE", "amount": 1, "maxAmount": 40 } ],
+          [ { "id": "ItemId.AIR_TALISMAN", "amount": 1 } ],
+          [ { "id": "ItemId.MIND_TALISMAN", "amount": 1 } ],
+          [ { "id": "ItemId.FIRE_TALISMAN", "amount": 1 } ],
+          [ { "id": "ItemId.COSMIC_TALISMAN", "amount": 1 } ],
+          [ { "id": "ItemId.BODY_TALISMAN", "amount": 1 } ],
+          [ { "id": "ItemId.WATER_TALISMAN", "amount": 1 } ],
+          [ { "id": "ItemId.EARTH_TALISMAN", "amount": 1 } ],
+          [ { "id": "ItemId.BLACK_WARHAMMER", "amount": 1 } ],
+          [ { "id": "ItemId.ADAMANT_LONGSWORD", "amount": 1 } ],
+          [ { "id": "ItemId.TOADFLAX_SEED", "amount": 1 } ],
+          [ { "id": "ItemId.RANARR_SEED", "amount": 1 } ],
+          [ { "id": "ItemId.IRIT_SEED", "amount": 1 } ],
+          [ { "id": "ItemId.AVANTOE_SEED", "amount": 1 } ],
+          [ { "id": "ItemId.SNAPDRAGON_SEED", "amount": 1 } ],
+          [ { "id": "ItemId.CADANTINE_SEED", "amount": 1 } ],
+          [ { "id": "ItemId.LANTADYME_SEED", "amount": 1 } ],
+          [ { "id": "ItemId.DWARF_WEED_SEED", "amount": 1 } ],
+          [ { "id": "ItemId.TORSTOL_SEED", "amount": 1 } ],
+          [ { "id": "ItemId.GRIMY_RANARR_WEED", "amount": 1 } ],
+          [ { "id": "ItemId.GRIMY_IRIT_LEAF", "amount": 1 } ],
+          [ { "id": "ItemId.GRIMY_AVANTOE", "amount": 1 } ],
+          [ { "id": "ItemId.GRIMY_KWUARM", "amount": 1 } ],
+          [ { "id": "ItemId.GRIMY_CADANTINE", "amount": 1 } ],
+          [ { "id": "ItemId.GRIMY_LANTADYME", "amount": 1 } ],
+          [ { "id": "ItemId.GRIMY_DWARF_WEED", "amount": 1 } ]
         ]
       },
       {
         "chance": 20,
         "items": [
-          [ { "id": "ItemID.ROCK_SHELL_SPLINTER", "amount": 1 } ],
-          [ { "id": "ItemID.ROCK_SHELL_CHUNK", "amount": 1 } ],
-          [ { "id": "ItemID.ROCK_SHELL_SHARD", "amount": 1 } ],
-          [ { "id": "ItemID.STEEL_PLATEBODY", "amount": 1 } ],
-          [ { "id": "ItemID.BLACK_CLAWS", "amount": 1 } ],
-          [ { "id": "ItemID.BLACK_PLATEBODY", "amount": 1 } ],
-          [ { "id": "ItemID.MITHRIL_AXE", "amount": 1 } ],
-          [ { "id": "ItemID.ROCK_SHELL_GLOVES", "amount": 1 } ],
-          [ { "id": "ItemID.ROCK_SHELL_BOOTS", "amount": 1 } ],
-          [ { "id": "ItemID.POISON_IVY_SEED", "amount": 1 } ],
-          [ { "id": "ItemID.BELLADONNA_SEED", "amount": 1 } ],
-          [ { "id": "ItemID.GUAM_SEED", "amount": 1 } ],
-          [ { "id": "ItemID.MARRENTILL_SEED", "amount": 1 } ],
-          [ { "id": "ItemID.TARROMIN_SEED", "amount": 1 } ],
-          [ { "id": "ItemID.HARRALANDER_SEED", "amount": 1 } ],
-          [ { "id": "ItemID.GRIMY_GUAM_LEAF", "amount": 1 } ],
-          [ { "id": "ItemID.GRIMY_MARRENTILL", "amount": 1 } ],
-          [ { "id": "ItemID.GRIMY_TARROMIN", "amount": 1 } ],
-          [ { "id": "ItemID.GRIMY_HARRALANDER", "amount": 1 } ]
+          [ { "id": "ItemId.ROCK_SHELL_SPLINTER", "amount": 1 } ],
+          [ { "id": "ItemId.ROCK_SHELL_CHUNK", "amount": 1 } ],
+          [ { "id": "ItemId.ROCK_SHELL_SHARD", "amount": 1 } ],
+          [ { "id": "ItemId.STEEL_PLATEBODY", "amount": 1 } ],
+          [ { "id": "ItemId.BLACK_CLAWS", "amount": 1 } ],
+          [ { "id": "ItemId.BLACK_PLATEBODY", "amount": 1 } ],
+          [ { "id": "ItemId.MITHRIL_AXE", "amount": 1 } ],
+          [ { "id": "ItemId.ROCK_SHELL_GLOVES", "amount": 1 } ],
+          [ { "id": "ItemId.ROCK_SHELL_BOOTS", "amount": 1 } ],
+          [ { "id": "ItemId.POISON_IVY_SEED", "amount": 1 } ],
+          [ { "id": "ItemId.BELLADONNA_SEED", "amount": 1 } ],
+          [ { "id": "ItemId.GUAM_SEED", "amount": 1 } ],
+          [ { "id": "ItemId.MARRENTILL_SEED", "amount": 1 } ],
+          [ { "id": "ItemId.TARROMIN_SEED", "amount": 1 } ],
+          [ { "id": "ItemId.HARRALANDER_SEED", "amount": 1 } ],
+          [ { "id": "ItemId.GRIMY_GUAM_LEAF", "amount": 1 } ],
+          [ { "id": "ItemId.GRIMY_MARRENTILL", "amount": 1 } ],
+          [ { "id": "ItemId.GRIMY_TARROMIN", "amount": 1 } ],
+          [ { "id": "ItemId.GRIMY_HARRALANDER", "amount": 1 } ]
         ]
       },
       {
         "chance": 99,
         "items": [
-          [ { "id": "ItemID.RAW_LOBSTER", "amount": 1 } ],
-          [ { "id": "ItemID.RAW_BASS", "amount": 1 } ],
-          [ { "id": "ItemID.TINDERBOX", "amount": 1 } ]
+          [ { "id": "ItemId.RAW_LOBSTER", "amount": 1 } ],
+          [ { "id": "ItemId.RAW_BASS", "amount": 1 } ],
+          [ { "id": "ItemId.TINDERBOX", "amount": 1 } ]
         ]
       },
       {
         "chance": 100,
         "items": [
-          [ { "id": "ItemID.BONES", "amount": 1 } ]
+          [ { "id": "ItemId.BONES", "amount": 1 } ]
         ]
       }
     ]
   },
   {
-    "id": "NpcID.CURSED_JEWELLED_CRAB_GREEN_180_16003",
+    "id": "NpcId.CURSED_JEWELLED_CRAB_GREEN_180_16003",
     "combatScript": "cursedjewelledcrab",
     "hitpoints": 255,
-    "hitpointsBarID": 5,
+    "hitpointsBarId": 5,
     "attackLevel": 127,
     "defenceLevel": 127,
     "meleeDefenceBonus": 127,
@@ -356,105 +356,105 @@
         "chance": 0.12,
         "logLoot": true,
         "items": [
-          [ { "id": "ItemID.IMBUED_HEART", "amount": 1, "weight": 1 } ],
-          [ { "id": "ItemID.ETERNAL_GEM", "amount": 1, "weight": 1 } ],
-          [ { "id": "ItemID.DUST_BATTLESTAFF", "amount": 1, "weight": 3 } ],
-          [ { "id": "ItemID.MIST_BATTLESTAFF", "amount": 1, "weight": 3 } ]
+          [ { "id": "ItemId.IMBUED_HEART", "amount": 1, "weight": 1 } ],
+          [ { "id": "ItemId.ETERNAL_GEM", "amount": 1, "weight": 1 } ],
+          [ { "id": "ItemId.DUST_BATTLESTAFF", "amount": 1, "weight": 3 } ],
+          [ { "id": "ItemId.MIST_BATTLESTAFF", "amount": 1, "weight": 3 } ]
         ]
       },
       {
         "chance": 0.78,
         "logLoot": true,
         "items": [
-          [ { "id": "ItemID.BERSERKER_RING", "amount": 1 } ],
-          [ { "id": "ItemID.WARRIOR_RING", "amount": 1 } ],
-          [ { "id": "ItemID.ARCHERS_RING", "amount": 1 } ],
-          [ { "id": "ItemID.SEERS_RING", "amount": 1 } ]
+          [ { "id": "ItemId.BERSERKER_RING", "amount": 1 } ],
+          [ { "id": "ItemId.WARRIOR_RING", "amount": 1 } ],
+          [ { "id": "ItemId.ARCHERS_RING", "amount": 1 } ],
+          [ { "id": "ItemId.SEERS_RING", "amount": 1 } ]
         ]
       },
       {
         "chance": 0.8,
         "items": [
-          [ { "id": "ItemID.CLUE_SCROLL_MEDIUM", "amount": 1 } ]
+          [ { "id": "ItemId.CLUE_SCROLL_MEDIUM", "amount": 1 } ]
         ]
       },
       {
         "chance": 5,
         "items": [
-          [ { "id": "ItemID.WATER_RUNE", "amount": 1, "maxAmount": 40 } ],
-          [ { "id": "ItemID.EARTH_RUNE", "amount": 1, "maxAmount": 40 } ],
-          [ { "id": "ItemID.AIR_TALISMAN", "amount": 1 } ],
-          [ { "id": "ItemID.MIND_TALISMAN", "amount": 1 } ],
-          [ { "id": "ItemID.FIRE_TALISMAN", "amount": 1 } ],
-          [ { "id": "ItemID.COSMIC_TALISMAN", "amount": 1 } ],
-          [ { "id": "ItemID.BODY_TALISMAN", "amount": 1 } ],
-          [ { "id": "ItemID.WATER_TALISMAN", "amount": 1 } ],
-          [ { "id": "ItemID.EARTH_TALISMAN", "amount": 1 } ],
-          [ { "id": "ItemID.BLACK_WARHAMMER", "amount": 1 } ],
-          [ { "id": "ItemID.ADAMANT_LONGSWORD", "amount": 1 } ],
-          [ { "id": "ItemID.TOADFLAX_SEED", "amount": 1 } ],
-          [ { "id": "ItemID.RANARR_SEED", "amount": 1 } ],
-          [ { "id": "ItemID.IRIT_SEED", "amount": 1 } ],
-          [ { "id": "ItemID.AVANTOE_SEED", "amount": 1 } ],
-          [ { "id": "ItemID.SNAPDRAGON_SEED", "amount": 1 } ],
-          [ { "id": "ItemID.CADANTINE_SEED", "amount": 1 } ],
-          [ { "id": "ItemID.LANTADYME_SEED", "amount": 1 } ],
-          [ { "id": "ItemID.DWARF_WEED_SEED", "amount": 1 } ],
-          [ { "id": "ItemID.TORSTOL_SEED", "amount": 1 } ],
-          [ { "id": "ItemID.GRIMY_RANARR_WEED", "amount": 1 } ],
-          [ { "id": "ItemID.GRIMY_IRIT_LEAF", "amount": 1 } ],
-          [ { "id": "ItemID.GRIMY_AVANTOE", "amount": 1 } ],
-          [ { "id": "ItemID.GRIMY_KWUARM", "amount": 1 } ],
-          [ { "id": "ItemID.GRIMY_CADANTINE", "amount": 1 } ],
-          [ { "id": "ItemID.GRIMY_LANTADYME", "amount": 1 } ],
-          [ { "id": "ItemID.GRIMY_DWARF_WEED", "amount": 1 } ]
+          [ { "id": "ItemId.WATER_RUNE", "amount": 1, "maxAmount": 40 } ],
+          [ { "id": "ItemId.EARTH_RUNE", "amount": 1, "maxAmount": 40 } ],
+          [ { "id": "ItemId.AIR_TALISMAN", "amount": 1 } ],
+          [ { "id": "ItemId.MIND_TALISMAN", "amount": 1 } ],
+          [ { "id": "ItemId.FIRE_TALISMAN", "amount": 1 } ],
+          [ { "id": "ItemId.COSMIC_TALISMAN", "amount": 1 } ],
+          [ { "id": "ItemId.BODY_TALISMAN", "amount": 1 } ],
+          [ { "id": "ItemId.WATER_TALISMAN", "amount": 1 } ],
+          [ { "id": "ItemId.EARTH_TALISMAN", "amount": 1 } ],
+          [ { "id": "ItemId.BLACK_WARHAMMER", "amount": 1 } ],
+          [ { "id": "ItemId.ADAMANT_LONGSWORD", "amount": 1 } ],
+          [ { "id": "ItemId.TOADFLAX_SEED", "amount": 1 } ],
+          [ { "id": "ItemId.RANARR_SEED", "amount": 1 } ],
+          [ { "id": "ItemId.IRIT_SEED", "amount": 1 } ],
+          [ { "id": "ItemId.AVANTOE_SEED", "amount": 1 } ],
+          [ { "id": "ItemId.SNAPDRAGON_SEED", "amount": 1 } ],
+          [ { "id": "ItemId.CADANTINE_SEED", "amount": 1 } ],
+          [ { "id": "ItemId.LANTADYME_SEED", "amount": 1 } ],
+          [ { "id": "ItemId.DWARF_WEED_SEED", "amount": 1 } ],
+          [ { "id": "ItemId.TORSTOL_SEED", "amount": 1 } ],
+          [ { "id": "ItemId.GRIMY_RANARR_WEED", "amount": 1 } ],
+          [ { "id": "ItemId.GRIMY_IRIT_LEAF", "amount": 1 } ],
+          [ { "id": "ItemId.GRIMY_AVANTOE", "amount": 1 } ],
+          [ { "id": "ItemId.GRIMY_KWUARM", "amount": 1 } ],
+          [ { "id": "ItemId.GRIMY_CADANTINE", "amount": 1 } ],
+          [ { "id": "ItemId.GRIMY_LANTADYME", "amount": 1 } ],
+          [ { "id": "ItemId.GRIMY_DWARF_WEED", "amount": 1 } ]
         ]
       },
       {
         "chance": 20,
         "items": [
-          [ { "id": "ItemID.ROCK_SHELL_SPLINTER", "amount": 1 } ],
-          [ { "id": "ItemID.ROCK_SHELL_CHUNK", "amount": 1 } ],
-          [ { "id": "ItemID.ROCK_SHELL_SHARD", "amount": 1 } ],
-          [ { "id": "ItemID.STEEL_PLATEBODY", "amount": 1 } ],
-          [ { "id": "ItemID.BLACK_CLAWS", "amount": 1 } ],
-          [ { "id": "ItemID.BLACK_PLATEBODY", "amount": 1 } ],
-          [ { "id": "ItemID.MITHRIL_AXE", "amount": 1 } ],
-          [ { "id": "ItemID.ROCK_SHELL_GLOVES", "amount": 1 } ],
-          [ { "id": "ItemID.ROCK_SHELL_BOOTS", "amount": 1 } ],
-          [ { "id": "ItemID.POISON_IVY_SEED", "amount": 1 } ],
-          [ { "id": "ItemID.BELLADONNA_SEED", "amount": 1 } ],
-          [ { "id": "ItemID.GUAM_SEED", "amount": 1 } ],
-          [ { "id": "ItemID.MARRENTILL_SEED", "amount": 1 } ],
-          [ { "id": "ItemID.TARROMIN_SEED", "amount": 1 } ],
-          [ { "id": "ItemID.HARRALANDER_SEED", "amount": 1 } ],
-          [ { "id": "ItemID.GRIMY_GUAM_LEAF", "amount": 1 } ],
-          [ { "id": "ItemID.GRIMY_MARRENTILL", "amount": 1 } ],
-          [ { "id": "ItemID.GRIMY_TARROMIN", "amount": 1 } ],
-          [ { "id": "ItemID.GRIMY_HARRALANDER", "amount": 1 } ]
+          [ { "id": "ItemId.ROCK_SHELL_SPLINTER", "amount": 1 } ],
+          [ { "id": "ItemId.ROCK_SHELL_CHUNK", "amount": 1 } ],
+          [ { "id": "ItemId.ROCK_SHELL_SHARD", "amount": 1 } ],
+          [ { "id": "ItemId.STEEL_PLATEBODY", "amount": 1 } ],
+          [ { "id": "ItemId.BLACK_CLAWS", "amount": 1 } ],
+          [ { "id": "ItemId.BLACK_PLATEBODY", "amount": 1 } ],
+          [ { "id": "ItemId.MITHRIL_AXE", "amount": 1 } ],
+          [ { "id": "ItemId.ROCK_SHELL_GLOVES", "amount": 1 } ],
+          [ { "id": "ItemId.ROCK_SHELL_BOOTS", "amount": 1 } ],
+          [ { "id": "ItemId.POISON_IVY_SEED", "amount": 1 } ],
+          [ { "id": "ItemId.BELLADONNA_SEED", "amount": 1 } ],
+          [ { "id": "ItemId.GUAM_SEED", "amount": 1 } ],
+          [ { "id": "ItemId.MARRENTILL_SEED", "amount": 1 } ],
+          [ { "id": "ItemId.TARROMIN_SEED", "amount": 1 } ],
+          [ { "id": "ItemId.HARRALANDER_SEED", "amount": 1 } ],
+          [ { "id": "ItemId.GRIMY_GUAM_LEAF", "amount": 1 } ],
+          [ { "id": "ItemId.GRIMY_MARRENTILL", "amount": 1 } ],
+          [ { "id": "ItemId.GRIMY_TARROMIN", "amount": 1 } ],
+          [ { "id": "ItemId.GRIMY_HARRALANDER", "amount": 1 } ]
         ]
       },
       {
         "chance": 99,
         "items": [
-          [ { "id": "ItemID.RAW_LOBSTER", "amount": 1 } ],
-          [ { "id": "ItemID.RAW_BASS", "amount": 1 } ],
-          [ { "id": "ItemID.TINDERBOX", "amount": 1 } ]
+          [ { "id": "ItemId.RAW_LOBSTER", "amount": 1 } ],
+          [ { "id": "ItemId.RAW_BASS", "amount": 1 } ],
+          [ { "id": "ItemId.TINDERBOX", "amount": 1 } ]
         ]
       },
       {
         "chance": 100,
         "items": [
-          [ { "id": "ItemID.BONES", "amount": 1 } ]
+          [ { "id": "ItemId.BONES", "amount": 1 } ]
         ]
       }
     ]
   },
   {
-    "id": "NpcID.CURSED_JEWELLED_CRAB_BLUE_180_16004",
+    "id": "NpcId.CURSED_JEWELLED_CRAB_BLUE_180_16004",
     "combatScript": "cursedjewelledcrab",
     "hitpoints": 255,
-    "hitpointsBarID": 5,
+    "hitpointsBarId": 5,
     "attackLevel": 127,
     "defenceLevel": 127,
     "meleeDefenceBonus": 127,
@@ -479,105 +479,105 @@
         "chance": 0.12,
         "logLoot": true,
         "items": [
-          [ { "id": "ItemID.IMBUED_HEART", "amount": 1, "weight": 1 } ],
-          [ { "id": "ItemID.ETERNAL_GEM", "amount": 1, "weight": 1 } ],
-          [ { "id": "ItemID.DUST_BATTLESTAFF", "amount": 1, "weight": 3 } ],
-          [ { "id": "ItemID.MIST_BATTLESTAFF", "amount": 1, "weight": 3 } ]
+          [ { "id": "ItemId.IMBUED_HEART", "amount": 1, "weight": 1 } ],
+          [ { "id": "ItemId.ETERNAL_GEM", "amount": 1, "weight": 1 } ],
+          [ { "id": "ItemId.DUST_BATTLESTAFF", "amount": 1, "weight": 3 } ],
+          [ { "id": "ItemId.MIST_BATTLESTAFF", "amount": 1, "weight": 3 } ]
         ]
       },
       {
         "chance": 0.78,
         "logLoot": true,
         "items": [
-          [ { "id": "ItemID.BERSERKER_RING", "amount": 1 } ],
-          [ { "id": "ItemID.WARRIOR_RING", "amount": 1 } ],
-          [ { "id": "ItemID.ARCHERS_RING", "amount": 1 } ],
-          [ { "id": "ItemID.SEERS_RING", "amount": 1 } ]
+          [ { "id": "ItemId.BERSERKER_RING", "amount": 1 } ],
+          [ { "id": "ItemId.WARRIOR_RING", "amount": 1 } ],
+          [ { "id": "ItemId.ARCHERS_RING", "amount": 1 } ],
+          [ { "id": "ItemId.SEERS_RING", "amount": 1 } ]
         ]
       },
       {
         "chance": 0.8,
         "items": [
-          [ { "id": "ItemID.CLUE_SCROLL_MEDIUM", "amount": 1 } ]
+          [ { "id": "ItemId.CLUE_SCROLL_MEDIUM", "amount": 1 } ]
         ]
       },
       {
         "chance": 5,
         "items": [
-          [ { "id": "ItemID.WATER_RUNE", "amount": 1, "maxAmount": 40 } ],
-          [ { "id": "ItemID.EARTH_RUNE", "amount": 1, "maxAmount": 40 } ],
-          [ { "id": "ItemID.AIR_TALISMAN", "amount": 1 } ],
-          [ { "id": "ItemID.MIND_TALISMAN", "amount": 1 } ],
-          [ { "id": "ItemID.FIRE_TALISMAN", "amount": 1 } ],
-          [ { "id": "ItemID.COSMIC_TALISMAN", "amount": 1 } ],
-          [ { "id": "ItemID.BODY_TALISMAN", "amount": 1 } ],
-          [ { "id": "ItemID.WATER_TALISMAN", "amount": 1 } ],
-          [ { "id": "ItemID.EARTH_TALISMAN", "amount": 1 } ],
-          [ { "id": "ItemID.BLACK_WARHAMMER", "amount": 1 } ],
-          [ { "id": "ItemID.ADAMANT_LONGSWORD", "amount": 1 } ],
-          [ { "id": "ItemID.TOADFLAX_SEED", "amount": 1 } ],
-          [ { "id": "ItemID.RANARR_SEED", "amount": 1 } ],
-          [ { "id": "ItemID.IRIT_SEED", "amount": 1 } ],
-          [ { "id": "ItemID.AVANTOE_SEED", "amount": 1 } ],
-          [ { "id": "ItemID.SNAPDRAGON_SEED", "amount": 1 } ],
-          [ { "id": "ItemID.CADANTINE_SEED", "amount": 1 } ],
-          [ { "id": "ItemID.LANTADYME_SEED", "amount": 1 } ],
-          [ { "id": "ItemID.DWARF_WEED_SEED", "amount": 1 } ],
-          [ { "id": "ItemID.TORSTOL_SEED", "amount": 1 } ],
-          [ { "id": "ItemID.GRIMY_RANARR_WEED", "amount": 1 } ],
-          [ { "id": "ItemID.GRIMY_IRIT_LEAF", "amount": 1 } ],
-          [ { "id": "ItemID.GRIMY_AVANTOE", "amount": 1 } ],
-          [ { "id": "ItemID.GRIMY_KWUARM", "amount": 1 } ],
-          [ { "id": "ItemID.GRIMY_CADANTINE", "amount": 1 } ],
-          [ { "id": "ItemID.GRIMY_LANTADYME", "amount": 1 } ],
-          [ { "id": "ItemID.GRIMY_DWARF_WEED", "amount": 1 } ]
+          [ { "id": "ItemId.WATER_RUNE", "amount": 1, "maxAmount": 40 } ],
+          [ { "id": "ItemId.EARTH_RUNE", "amount": 1, "maxAmount": 40 } ],
+          [ { "id": "ItemId.AIR_TALISMAN", "amount": 1 } ],
+          [ { "id": "ItemId.MIND_TALISMAN", "amount": 1 } ],
+          [ { "id": "ItemId.FIRE_TALISMAN", "amount": 1 } ],
+          [ { "id": "ItemId.COSMIC_TALISMAN", "amount": 1 } ],
+          [ { "id": "ItemId.BODY_TALISMAN", "amount": 1 } ],
+          [ { "id": "ItemId.WATER_TALISMAN", "amount": 1 } ],
+          [ { "id": "ItemId.EARTH_TALISMAN", "amount": 1 } ],
+          [ { "id": "ItemId.BLACK_WARHAMMER", "amount": 1 } ],
+          [ { "id": "ItemId.ADAMANT_LONGSWORD", "amount": 1 } ],
+          [ { "id": "ItemId.TOADFLAX_SEED", "amount": 1 } ],
+          [ { "id": "ItemId.RANARR_SEED", "amount": 1 } ],
+          [ { "id": "ItemId.IRIT_SEED", "amount": 1 } ],
+          [ { "id": "ItemId.AVANTOE_SEED", "amount": 1 } ],
+          [ { "id": "ItemId.SNAPDRAGON_SEED", "amount": 1 } ],
+          [ { "id": "ItemId.CADANTINE_SEED", "amount": 1 } ],
+          [ { "id": "ItemId.LANTADYME_SEED", "amount": 1 } ],
+          [ { "id": "ItemId.DWARF_WEED_SEED", "amount": 1 } ],
+          [ { "id": "ItemId.TORSTOL_SEED", "amount": 1 } ],
+          [ { "id": "ItemId.GRIMY_RANARR_WEED", "amount": 1 } ],
+          [ { "id": "ItemId.GRIMY_IRIT_LEAF", "amount": 1 } ],
+          [ { "id": "ItemId.GRIMY_AVANTOE", "amount": 1 } ],
+          [ { "id": "ItemId.GRIMY_KWUARM", "amount": 1 } ],
+          [ { "id": "ItemId.GRIMY_CADANTINE", "amount": 1 } ],
+          [ { "id": "ItemId.GRIMY_LANTADYME", "amount": 1 } ],
+          [ { "id": "ItemId.GRIMY_DWARF_WEED", "amount": 1 } ]
         ]
       },
       {
         "chance": 20,
         "items": [
-          [ { "id": "ItemID.ROCK_SHELL_SPLINTER", "amount": 1 } ],
-          [ { "id": "ItemID.ROCK_SHELL_CHUNK", "amount": 1 } ],
-          [ { "id": "ItemID.ROCK_SHELL_SHARD", "amount": 1 } ],
-          [ { "id": "ItemID.STEEL_PLATEBODY", "amount": 1 } ],
-          [ { "id": "ItemID.BLACK_CLAWS", "amount": 1 } ],
-          [ { "id": "ItemID.BLACK_PLATEBODY", "amount": 1 } ],
-          [ { "id": "ItemID.MITHRIL_AXE", "amount": 1 } ],
-          [ { "id": "ItemID.ROCK_SHELL_GLOVES", "amount": 1 } ],
-          [ { "id": "ItemID.ROCK_SHELL_BOOTS", "amount": 1 } ],
-          [ { "id": "ItemID.POISON_IVY_SEED", "amount": 1 } ],
-          [ { "id": "ItemID.BELLADONNA_SEED", "amount": 1 } ],
-          [ { "id": "ItemID.GUAM_SEED", "amount": 1 } ],
-          [ { "id": "ItemID.MARRENTILL_SEED", "amount": 1 } ],
-          [ { "id": "ItemID.TARROMIN_SEED", "amount": 1 } ],
-          [ { "id": "ItemID.HARRALANDER_SEED", "amount": 1 } ],
-          [ { "id": "ItemID.GRIMY_GUAM_LEAF", "amount": 1 } ],
-          [ { "id": "ItemID.GRIMY_MARRENTILL", "amount": 1 } ],
-          [ { "id": "ItemID.GRIMY_TARROMIN", "amount": 1 } ],
-          [ { "id": "ItemID.GRIMY_HARRALANDER", "amount": 1 } ]
+          [ { "id": "ItemId.ROCK_SHELL_SPLINTER", "amount": 1 } ],
+          [ { "id": "ItemId.ROCK_SHELL_CHUNK", "amount": 1 } ],
+          [ { "id": "ItemId.ROCK_SHELL_SHARD", "amount": 1 } ],
+          [ { "id": "ItemId.STEEL_PLATEBODY", "amount": 1 } ],
+          [ { "id": "ItemId.BLACK_CLAWS", "amount": 1 } ],
+          [ { "id": "ItemId.BLACK_PLATEBODY", "amount": 1 } ],
+          [ { "id": "ItemId.MITHRIL_AXE", "amount": 1 } ],
+          [ { "id": "ItemId.ROCK_SHELL_GLOVES", "amount": 1 } ],
+          [ { "id": "ItemId.ROCK_SHELL_BOOTS", "amount": 1 } ],
+          [ { "id": "ItemId.POISON_IVY_SEED", "amount": 1 } ],
+          [ { "id": "ItemId.BELLADONNA_SEED", "amount": 1 } ],
+          [ { "id": "ItemId.GUAM_SEED", "amount": 1 } ],
+          [ { "id": "ItemId.MARRENTILL_SEED", "amount": 1 } ],
+          [ { "id": "ItemId.TARROMIN_SEED", "amount": 1 } ],
+          [ { "id": "ItemId.HARRALANDER_SEED", "amount": 1 } ],
+          [ { "id": "ItemId.GRIMY_GUAM_LEAF", "amount": 1 } ],
+          [ { "id": "ItemId.GRIMY_MARRENTILL", "amount": 1 } ],
+          [ { "id": "ItemId.GRIMY_TARROMIN", "amount": 1 } ],
+          [ { "id": "ItemId.GRIMY_HARRALANDER", "amount": 1 } ]
         ]
       },
       {
         "chance": 99,
         "items": [
-          [ { "id": "ItemID.RAW_LOBSTER", "amount": 1 } ],
-          [ { "id": "ItemID.RAW_BASS", "amount": 1 } ],
-          [ { "id": "ItemID.TINDERBOX", "amount": 1 } ]
+          [ { "id": "ItemId.RAW_LOBSTER", "amount": 1 } ],
+          [ { "id": "ItemId.RAW_BASS", "amount": 1 } ],
+          [ { "id": "ItemId.TINDERBOX", "amount": 1 } ]
         ]
       },
       {
         "chance": 100,
         "items": [
-          [ { "id": "ItemID.BONES", "amount": 1 } ]
+          [ { "id": "ItemId.BONES", "amount": 1 } ]
         ]
       }
     ]
   },
   {
-    "id": "NpcID.CURSED_CAVE_HORROR_206_16005",
+    "id": "NpcId.CURSED_CAVE_HORROR_206_16005",
     "combatScript": "cursedmonster",
     "hitpoints": 130,
-    "hitpointsBarID": 5,
+    "hitpointsBarId": 5,
     "slayerLevel": 58,
     "attackLevel": 230,
     "magicLevel": 230,
@@ -600,99 +600,99 @@
         "chance": 0.12,
         "logLoot": true,
         "items": [
-          [ { "id": "ItemID.IMBUED_HEART", "amount": 1, "weight": 1 } ],
-          [ { "id": "ItemID.ETERNAL_GEM", "amount": 1, "weight": 1 } ],
-          [ { "id": "ItemID.DUST_BATTLESTAFF", "amount": 1, "weight": 3 } ],
-          [ { "id": "ItemID.MIST_BATTLESTAFF", "amount": 1, "weight": 3 } ]
+          [ { "id": "ItemId.IMBUED_HEART", "amount": 1, "weight": 1 } ],
+          [ { "id": "ItemId.ETERNAL_GEM", "amount": 1, "weight": 1 } ],
+          [ { "id": "ItemId.DUST_BATTLESTAFF", "amount": 1, "weight": 3 } ],
+          [ { "id": "ItemId.MIST_BATTLESTAFF", "amount": 1, "weight": 3 } ]
         ]
       },
       {
         "chance": 0.78,
         "logLoot": true,
         "items": [
-          [ { "id": "ItemID.CLUE_SCROLL_HARD", "amount": 1 } ]
+          [ { "id": "ItemId.CLUE_SCROLL_HARD", "amount": 1 } ]
         ]
       },
       {
         "chance": 0.79,
         "logLoot": true,
         "items": [
-          [ { "id": "ItemID.BLACK_MASK_10", "amount": 1 } ]
+          [ { "id": "ItemId.BLACK_MASK_10", "amount": 1 } ]
         ]
       },
       {
         "chance": 3.3,
         "items": [
-          [ { "id": "ItemID.ENSOULED_HORROR_HEAD_13487", "amount": 1 } ]
+          [ { "id": "ItemId.ENSOULED_HORROR_HEAD_13487", "amount": 1 } ]
         ]
       },
       {
         "chance": 5,
         "items": [
-          [ { "id": "ItemID.WATERMELON_SEED", "amount": 1 } ],
-          [ { "id": "ItemID.SNAPDRAGON_SEED", "amount": 1 } ],
-          [ { "id": "ItemID.DWARF_WEED_SEED", "amount": 1 } ],
-          [ { "id": "ItemID.LANTADYME_SEED", "amount": 1 } ],
-          [ { "id": "ItemID.TORSTOL_SEED", "amount": 1 } ],
-          [ { "id": "ItemID.GRIMY_CADANTINE", "amount": 1 } ],
-          [ { "id": "ItemID.GRIMY_LANTADYME", "amount": 1 } ],
-          [ { "id": "ItemID.GRIMY_DWARF_WEED", "amount": 1, "maxAmount": 2 } ]
+          [ { "id": "ItemId.WATERMELON_SEED", "amount": 1 } ],
+          [ { "id": "ItemId.SNAPDRAGON_SEED", "amount": 1 } ],
+          [ { "id": "ItemId.DWARF_WEED_SEED", "amount": 1 } ],
+          [ { "id": "ItemId.LANTADYME_SEED", "amount": 1 } ],
+          [ { "id": "ItemId.TORSTOL_SEED", "amount": 1 } ],
+          [ { "id": "ItemId.GRIMY_CADANTINE", "amount": 1 } ],
+          [ { "id": "ItemId.GRIMY_LANTADYME", "amount": 1 } ],
+          [ { "id": "ItemId.GRIMY_DWARF_WEED", "amount": 1, "maxAmount": 2 } ]
         ]
       },
       {
         "chance": 20,
         "items": [
-          [ { "id": "ItemID.MITHRIL_KITESHIELD", "amount": 1 } ],
-          [ { "id": "ItemID.RUNE_DAGGER", "amount": 1 } ],
-          [ { "id": "ItemID.ADAMANT_FULL_HELM", "amount": 1 } ],
-          [ { "id": "ItemID.KWUARM_SEED", "amount": 1 } ],
-          [ { "id": "ItemID.POISON_IVY_SEED", "amount": 1 } ],
-          [ { "id": "ItemID.CACTUS_SEED", "amount": 1 } ],
-          [ { "id": "ItemID.CADANTINE_SEED", "amount": 1 } ],
-          [ { "id": "ItemID.STRAWBERRY_SEED", "amount": 1 } ],
-          [ { "id": "ItemID.SWEETCORN_SEED", "amount": 1, "maxAmount": 2 } ],
-          [ { "id": "ItemID.AVANTOE_SEED", "amount": 1 } ],
-          [ { "id": "ItemID.TOMATO_SEED", "amount": 1, "maxAmount": 2 } ],
-          [ { "id": "ItemID.GRIMY_HARRALANDER", "amount": 1, "maxAmount": 2 } ],
-          [ { "id": "ItemID.GRIMY_RANARR_WEED", "amount": 1, "maxAmount": 2 } ],
-          [ { "id": "ItemID.GRIMY_IRIT_LEAF", "amount": 1 } ],
-          [ { "id": "ItemID.GRIMY_AVANTOE", "amount": 1 } ],
-          [ { "id": "ItemID.GRIMY_KWUARM", "amount": 1 } ],
-          [ { "id": "ItemID.MAHOGANY_LOGS_NOTED", "amount": 2, "maxAmount": 4 } ]
+          [ { "id": "ItemId.MITHRIL_KITESHIELD", "amount": 1 } ],
+          [ { "id": "ItemId.RUNE_DAGGER", "amount": 1 } ],
+          [ { "id": "ItemId.ADAMANT_FULL_HELM", "amount": 1 } ],
+          [ { "id": "ItemId.KWUARM_SEED", "amount": 1 } ],
+          [ { "id": "ItemId.POISON_IVY_SEED", "amount": 1 } ],
+          [ { "id": "ItemId.CACTUS_SEED", "amount": 1 } ],
+          [ { "id": "ItemId.CADANTINE_SEED", "amount": 1 } ],
+          [ { "id": "ItemId.STRAWBERRY_SEED", "amount": 1 } ],
+          [ { "id": "ItemId.SWEETCORN_SEED", "amount": 1, "maxAmount": 2 } ],
+          [ { "id": "ItemId.AVANTOE_SEED", "amount": 1 } ],
+          [ { "id": "ItemId.TOMATO_SEED", "amount": 1, "maxAmount": 2 } ],
+          [ { "id": "ItemId.GRIMY_HARRALANDER", "amount": 1, "maxAmount": 2 } ],
+          [ { "id": "ItemId.GRIMY_RANARR_WEED", "amount": 1, "maxAmount": 2 } ],
+          [ { "id": "ItemId.GRIMY_IRIT_LEAF", "amount": 1 } ],
+          [ { "id": "ItemId.GRIMY_AVANTOE", "amount": 1 } ],
+          [ { "id": "ItemId.GRIMY_KWUARM", "amount": 1 } ],
+          [ { "id": "ItemId.MAHOGANY_LOGS_NOTED", "amount": 2, "maxAmount": 4 } ]
         ]
       },
       {
         "chance": 99,
         "items": [
-          [ { "id": "ItemID.MITHRIL_AXE", "amount": 1 } ],
-          [ { "id": "ItemID.BELLADONNA_SEED", "amount": 1 } ],
-          [ { "id": "ItemID.CABBAGE_SEED", "amount": 1, "maxAmount": 3 } ],
-          [ { "id": "ItemID.TOADFLAX_SEED", "amount": 1 } ],
-          [ { "id": "ItemID.POTATO_SEED", "amount": 1, "maxAmount": 4 } ],
-          [ { "id": "ItemID.IRIT_SEED", "amount": 1 } ],
-          [ { "id": "ItemID.ONION_SEED", "amount": 1, "maxAmount": 3 } ],
-          [ { "id": "ItemID.GRIMY_GUAM_LEAF", "amount": 1 } ],
-          [ { "id": "ItemID.GRIMY_MARRENTILL", "amount": 1 } ],
-          [ { "id": "ItemID.GRIMY_TARROMIN", "amount": 1 } ],
-          [ { "id": "ItemID.NATURE_RUNE", "amount": 3, "maxAmount": 6 } ],
-          [ { "id": "ItemID.COINS", "amount": 44, "maxAmount": 495 } ],
-          [ { "id": "ItemID.LIMPWURT_ROOT", "amount": 1 } ],
-          [ { "id": "ItemID.TEAK_LOGS_NOTED", "amount": 4 } ]
+          [ { "id": "ItemId.MITHRIL_AXE", "amount": 1 } ],
+          [ { "id": "ItemId.BELLADONNA_SEED", "amount": 1 } ],
+          [ { "id": "ItemId.CABBAGE_SEED", "amount": 1, "maxAmount": 3 } ],
+          [ { "id": "ItemId.TOADFLAX_SEED", "amount": 1 } ],
+          [ { "id": "ItemId.POTATO_SEED", "amount": 1, "maxAmount": 4 } ],
+          [ { "id": "ItemId.IRIT_SEED", "amount": 1 } ],
+          [ { "id": "ItemId.ONION_SEED", "amount": 1, "maxAmount": 3 } ],
+          [ { "id": "ItemId.GRIMY_GUAM_LEAF", "amount": 1 } ],
+          [ { "id": "ItemId.GRIMY_MARRENTILL", "amount": 1 } ],
+          [ { "id": "ItemId.GRIMY_TARROMIN", "amount": 1 } ],
+          [ { "id": "ItemId.NATURE_RUNE", "amount": 3, "maxAmount": 6 } ],
+          [ { "id": "ItemId.COINS", "amount": 44, "maxAmount": 495 } ],
+          [ { "id": "ItemId.LIMPWURT_ROOT", "amount": 1 } ],
+          [ { "id": "ItemId.TEAK_LOGS_NOTED", "amount": 4 } ]
         ]
       },
       {
         "chance": 100,
         "items": [
-          [ { "id": "ItemID.BIG_BONES", "amount": 1 } ]
+          [ { "id": "ItemId.BIG_BONES", "amount": 1 } ]
         ]
       }
     ]
   },
   {
-    "id": "NpcID.CURSED_SMOKE_DEVIL_280_16006",
+    "id": "NpcId.CURSED_SMOKE_DEVIL_280_16006",
     "combatScript": "cursedmonster",
     "hitpoints": 400,
-    "hitpointsBarID": 5,
+    "hitpointsBarId": 5,
     "slayerLevel": 93,
     "attackLevel": 240,
     "rangedLevel": 295,
@@ -710,7 +710,7 @@
         "animation": 3847,
         "maxHit": 30,
         "attackSpeed": 4,
-        "projectileID": 386
+        "projectileId": 386
       }
     ],
     "saveKillCount": true,
@@ -719,118 +719,118 @@
         "chance": 0.012,
         "logLoot": true,
         "items": [
-          [ { "id": "ItemID.DRAGON_CHAINBODY", "amount": 1 } ]
+          [ { "id": "ItemId.DRAGON_CHAINBODY", "amount": 1 } ]
         ]
       },
       {
         "chance": 0.097,
         "logLoot": true,
         "items": [
-          [ { "id": "ItemID.SMOKE_BATTLESTAFF", "amount": 1 } ]
+          [ { "id": "ItemId.SMOKE_BATTLESTAFF", "amount": 1 } ]
         ]
       },
       {
         "chance": 0.1,
         "logLoot": true,
         "items": [
-          [ { "id": "ItemID.TOME_OF_FIRE_EMPTY", "amount": 1 } ]
+          [ { "id": "ItemId.TOME_OF_FIRE_EMPTY", "amount": 1 } ]
         ]
       },
       {
         "chance": 0.12,
         "logLoot": true,
         "items": [
-          [ { "id": "ItemID.IMBUED_HEART", "amount": 1, "weight": 1 } ],
-          [ { "id": "ItemID.ETERNAL_GEM", "amount": 1, "weight": 1 } ],
-          [ { "id": "ItemID.DUST_BATTLESTAFF", "amount": 1, "weight": 3 } ],
-          [ { "id": "ItemID.MIST_BATTLESTAFF", "amount": 1, "weight": 3 } ]
+          [ { "id": "ItemId.IMBUED_HEART", "amount": 1, "weight": 1 } ],
+          [ { "id": "ItemId.ETERNAL_GEM", "amount": 1, "weight": 1 } ],
+          [ { "id": "ItemId.DUST_BATTLESTAFF", "amount": 1, "weight": 3 } ],
+          [ { "id": "ItemId.MIST_BATTLESTAFF", "amount": 1, "weight": 3 } ]
         ]
       },
       {
         "chance": 0.14,
         "logLoot": true,
         "items": [
-          [ { "id": "ItemID.CLUE_SCROLL_ELITE", "amount": 1 } ]
+          [ { "id": "ItemId.CLUE_SCROLL_ELITE", "amount": 1 } ]
         ]
       },
       {
         "chance": 0.78,
         "logLoot": true,
         "items": [
-          [ { "id": "ItemID.CLUE_SCROLL_HARD", "amount": 1 } ]
+          [ { "id": "ItemId.CLUE_SCROLL_HARD", "amount": 1 } ]
         ]
       },
       {
         "chance": 0.79,
         "logLoot": true,
         "items": [
-          [ { "id": "ItemID.OCCULT_NECKLACE", "amount": 1 } ]
+          [ { "id": "ItemId.OCCULT_NECKLACE", "amount": 1 } ]
         ]
       },
       {
         "chance": 5,
         "items": [
-          [ { "id": "ItemID.RUNE_2H_SWORD", "amount": 1 } ],
-          [ { "id": "ItemID.GRIMY_RANARR_WEED", "amount": 1 } ],
-          [ { "id": "ItemID.GRIMY_LANTADYME", "amount": 1 } ],
-          [ { "id": "ItemID.RUNITE_BAR", "amount": 1 } ]
+          [ { "id": "ItemId.RUNE_2H_SWORD", "amount": 1 } ],
+          [ { "id": "ItemId.GRIMY_RANARR_WEED", "amount": 1 } ],
+          [ { "id": "ItemId.GRIMY_LANTADYME", "amount": 1 } ],
+          [ { "id": "ItemId.RUNITE_BAR", "amount": 1 } ]
         ]
       },
       {
         "chance": 20,
         "items": [
-          [ { "id": "ItemID.AIR_RUNE", "amount": 37 } ],
-          [ { "id": "ItemID.SOUL_RUNE", "amount": 10 } ],
-          [ { "id": "ItemID.RUNE_ARROW", "amount": 24 } ],
-          [ { "id": "ItemID.RUNITE_BOLTS", "amount": 15 } ],
-          [ { "id": "ItemID.FIRE_BATTLESTAFF", "amount": 1 } ],
-          [ { "id": "ItemID.RUNE_DAGGER", "amount": 1 } ],
-          [ { "id": "ItemID.AIR_BATTLESTAFF", "amount": 1 } ],
-          [ { "id": "ItemID.BLACK_DHIDE_VAMB", "amount": 1 } ],
-          [ { "id": "ItemID.RED_DHIDE_BODY", "amount": 1 } ],
-          [ { "id": "ItemID.RUNE_FULL_HELM", "amount": 1 } ],
-          [ { "id": "ItemID.RUNE_CHAINBODY", "amount": 1 } ],
-          [ { "id": "ItemID.GRIMY_IRIT_LEAF", "amount": 1 } ],
-          [ { "id": "ItemID.GRIMY_AVANTOE", "amount": 1 } ],
-          [ { "id": "ItemID.GRIMY_KWUARM", "amount": 1 } ],
-          [ { "id": "ItemID.GRIMY_CADANTINE", "amount": 1 } ],
-          [ { "id": "ItemID.GRIMY_DWARF_WEED", "amount": 1 } ],
-          [ { "id": "ItemID.BURNT_PAGE", "amount": 20 } ]
+          [ { "id": "ItemId.AIR_RUNE", "amount": 37 } ],
+          [ { "id": "ItemId.SOUL_RUNE", "amount": 10 } ],
+          [ { "id": "ItemId.RUNE_ARROW", "amount": 24 } ],
+          [ { "id": "ItemId.RUNITE_BOLTS", "amount": 15 } ],
+          [ { "id": "ItemId.FIRE_BATTLESTAFF", "amount": 1 } ],
+          [ { "id": "ItemId.RUNE_DAGGER", "amount": 1 } ],
+          [ { "id": "ItemId.AIR_BATTLESTAFF", "amount": 1 } ],
+          [ { "id": "ItemId.BLACK_DHIDE_VAMB", "amount": 1 } ],
+          [ { "id": "ItemId.RED_DHIDE_BODY", "amount": 1 } ],
+          [ { "id": "ItemId.RUNE_FULL_HELM", "amount": 1 } ],
+          [ { "id": "ItemId.RUNE_CHAINBODY", "amount": 1 } ],
+          [ { "id": "ItemId.GRIMY_IRIT_LEAF", "amount": 1 } ],
+          [ { "id": "ItemId.GRIMY_AVANTOE", "amount": 1 } ],
+          [ { "id": "ItemId.GRIMY_KWUARM", "amount": 1 } ],
+          [ { "id": "ItemId.GRIMY_CADANTINE", "amount": 1 } ],
+          [ { "id": "ItemId.GRIMY_DWARF_WEED", "amount": 1 } ],
+          [ { "id": "ItemId.BURNT_PAGE", "amount": 20 } ]
         ]
       },
       {
         "chance": 99,
         "items": [
-          [ { "id": "ItemID.SMOKE_RUNE", "amount": 10, "maxAmount": 40 } ],
-          [ { "id": "ItemID.ADAMANT_BATTLEAXE", "amount": 1 } ],
-          [ { "id": "ItemID.MITHRIL_PLATESKIRT", "amount": 1 } ],
-          [ { "id": "ItemID.GRIMY_GUAM_LEAF", "amount": 1 } ],
-          [ { "id": "ItemID.GRIMY_MARRENTILL", "amount": 1 } ],
-          [ { "id": "ItemID.GRIMY_TARROMIN", "amount": 1 } ],
-          [ { "id": "ItemID.GRIMY_HARRALANDER", "amount": 1 } ],
-          [ { "id": "ItemID.COINS", "amount": 80, "maxAmount": 800 } ],
-          [ { "id": "ItemID.UGTHANKI_KEBAB", "amount": 1, "maxAmount": 3 } ],
-          [ { "id": "ItemID.SHARK", "amount": 1 } ],
-          [ { "id": "ItemID.ADAMANTITE_BAR", "amount": 1 } ],
-          [ { "id": "ItemID.CROSSBOW_STRING", "amount": 1 } ],
-          [ { "id": "ItemID.STEEL_BAR", "amount": 2 } ],
-          [ { "id": "ItemID.MAGIC_LOGS_NOTED", "amount": 5 } ],
-          [ { "id": "ItemID.COAL_NOTED", "amount": 15 } ]
+          [ { "id": "ItemId.SMOKE_RUNE", "amount": 10, "maxAmount": 40 } ],
+          [ { "id": "ItemId.ADAMANT_BATTLEAXE", "amount": 1 } ],
+          [ { "id": "ItemId.MITHRIL_PLATESKIRT", "amount": 1 } ],
+          [ { "id": "ItemId.GRIMY_GUAM_LEAF", "amount": 1 } ],
+          [ { "id": "ItemId.GRIMY_MARRENTILL", "amount": 1 } ],
+          [ { "id": "ItemId.GRIMY_TARROMIN", "amount": 1 } ],
+          [ { "id": "ItemId.GRIMY_HARRALANDER", "amount": 1 } ],
+          [ { "id": "ItemId.COINS", "amount": 80, "maxAmount": 800 } ],
+          [ { "id": "ItemId.UGTHANKI_KEBAB", "amount": 1, "maxAmount": 3 } ],
+          [ { "id": "ItemId.SHARK", "amount": 1 } ],
+          [ { "id": "ItemId.ADAMANTITE_BAR", "amount": 1 } ],
+          [ { "id": "ItemId.CROSSBOW_STRING", "amount": 1 } ],
+          [ { "id": "ItemId.STEEL_BAR", "amount": 2 } ],
+          [ { "id": "ItemId.MAGIC_LOGS_NOTED", "amount": 5 } ],
+          [ { "id": "ItemId.COAL_NOTED", "amount": 15 } ]
         ]
       },
       {
         "chance": 100,
         "items": [
-          [ { "id": "ItemID.ASHES", "amount": 1 } ]
+          [ { "id": "ItemId.ASHES", "amount": 1 } ]
         ]
       }
     ]
   },
   {
-    "id": "NpcID.CURSED_GARGOYLE_349_16007",
+    "id": "NpcId.CURSED_GARGOYLE_349_16007",
     "combatScript": "cursedgargoyle",
     "hitpoints": 270,
-    "hitpointsBarID": 5,
+    "hitpointsBarId": 5,
     "slayerLevel": 75,
     "attackLevel": 230,
     "defenceLevel": 190,
@@ -852,7 +852,7 @@
         "animation": 7811,
         "maxHit": 30,
         "attackSpeed": 4,
-        "projectileID": 294
+        "projectileId": 294
       }
     ],
     "saveKillCount": true,
@@ -862,46 +862,46 @@
         "chance": 0.1,
         "logLoot": true,
         "items": [
-          [ { "id": "ItemID.BLACK_TOURMALINE_CORE", "amount": 1 } ]
+          [ { "id": "ItemId.BLACK_TOURMALINE_CORE", "amount": 1 } ]
         ]
       },
       {
         "chance": 0.12,
         "logLoot": true,
         "items": [
-          [ { "id": "ItemID.IMBUED_HEART", "amount": 1, "weight": 1 } ],
-          [ { "id": "ItemID.ETERNAL_GEM", "amount": 1, "weight": 1 } ],
-          [ { "id": "ItemID.DUST_BATTLESTAFF", "amount": 1, "weight": 3 } ],
-          [ { "id": "ItemID.MIST_BATTLESTAFF", "amount": 1, "weight": 3 } ]
+          [ { "id": "ItemId.IMBUED_HEART", "amount": 1, "weight": 1 } ],
+          [ { "id": "ItemId.ETERNAL_GEM", "amount": 1, "weight": 1 } ],
+          [ { "id": "ItemId.DUST_BATTLESTAFF", "amount": 1, "weight": 3 } ],
+          [ { "id": "ItemId.MIST_BATTLESTAFF", "amount": 1, "weight": 3 } ]
         ]
       },
       {
         "chance": 0.13,
         "logLoot": true,
         "items": [
-          [ { "id": "ItemID.GRANITE_HAMMER", "amount": 1 } ]
+          [ { "id": "ItemId.GRANITE_HAMMER", "amount": 1 } ]
         ]
       },
       {
         "chance": 0.39,
         "logLoot": true,
         "items": [
-          [ { "id": "ItemID.MYSTIC_ROBE_TOP_DARK", "amount": 1 } ]
+          [ { "id": "ItemId.MYSTIC_ROBE_TOP_DARK", "amount": 1 } ]
         ]
       },
       {
         "chance": 0.4,
         "logLoot": true,
         "items": [
-          [ { "id": "ItemID.GRANITE_GLOVES", "amount": 1 } ],
-          [ { "id": "ItemID.GRANITE_RING", "amount": 1 } ]
+          [ { "id": "ItemId.GRANITE_GLOVES", "amount": 1 } ],
+          [ { "id": "ItemId.GRANITE_RING", "amount": 1 } ]
         ]
       },
       {
         "chance": 0.78,
         "logLoot": true,
         "items": [
-          [ { "id": "ItemID.CLUE_SCROLL_HARD", "amount": 1 } ]
+          [ { "id": "ItemId.CLUE_SCROLL_HARD", "amount": 1 } ]
         ]
       },
       {
@@ -909,61 +909,61 @@
         "slayerTask": true,
         "logLoot": true,
         "items": [
-          [ { "id": "ItemID.BRITTLE_KEY", "amount": 1 } ]
+          [ { "id": "ItemId.BRITTLE_KEY", "amount": 1 } ]
         ]
       },
       {
         "chance": 1.56,
         "logLoot": true,
         "items": [
-          [ { "id": "ItemID.GRANITE_MAUL", "amount": 1 } ]
+          [ { "id": "ItemId.GRANITE_MAUL", "amount": 1 } ]
         ]
       },
       {
         "chance": 3,
         "logLoot": true,
         "items": [
-          [ { "id": "ItemID.ADAMANT_BOOTS", "amount": 1 } ]
+          [ { "id": "ItemId.ADAMANT_BOOTS", "amount": 1 } ]
         ]
       },
       {
         "chance": 5,
         "items": [
-          [ { "id": "ItemID.RUNE_2H_SWORD", "amount": 1 } ],
-          [ { "id": "ItemID.RUNE_BATTLEAXE", "amount": 1 } ],
-          [ { "id": "ItemID.RUNE_PLATELEGS", "amount": 1 } ]
+          [ { "id": "ItemId.RUNE_2H_SWORD", "amount": 1 } ],
+          [ { "id": "ItemId.RUNE_BATTLEAXE", "amount": 1 } ],
+          [ { "id": "ItemId.RUNE_PLATELEGS", "amount": 1 } ]
         ]
       },
       {
         "chance": 20,
         "items": [
-          [ { "id": "ItemID.RUNE_FULL_HELM", "amount": 1 } ],
-          [ { "id": "ItemID.CHAOS_RUNE", "amount": 30 } ],
-          [ { "id": "ItemID.DEATH_RUNE", "amount": 15 } ],
-          [ { "id": "ItemID.MITHRIL_BAR_NOTED", "amount": 15 } ],
-          [ { "id": "ItemID.RUNITE_ORE", "amount": 1 } ]
+          [ { "id": "ItemId.RUNE_FULL_HELM", "amount": 1 } ],
+          [ { "id": "ItemId.CHAOS_RUNE", "amount": 30 } ],
+          [ { "id": "ItemId.DEATH_RUNE", "amount": 15 } ],
+          [ { "id": "ItemId.MITHRIL_BAR_NOTED", "amount": 15 } ],
+          [ { "id": "ItemId.RUNITE_ORE", "amount": 1 } ]
         ]
       },
       {
         "chance": 99,
         "items": [
-          [ { "id": "ItemID.ADAMANT_PLATELEGS", "amount": 1 } ],
-          [ { "id": "ItemID.FIRE_RUNE", "amount": 75, "maxAmount": 150 } ],
-          [ { "id": "ItemID.COINS", "amount": 400, "maxAmount": 1000 } ],
-          [ { "id": "ItemID.COINS", "amount": 10000 } ],
-          [ { "id": "ItemID.PURE_ESSENCE_NOTED", "amount": 150 } ],
-          [ { "id": "ItemID.GOLD_ORE_NOTED", "amount": 10, "maxAmount": 20 } ],
-          [ { "id": "ItemID.STEEL_BAR_NOTED", "amount": 15 } ],
-          [ { "id": "ItemID.GOLD_BAR_NOTED", "amount": 10, "maxAmount": 15 } ]
+          [ { "id": "ItemId.ADAMANT_PLATELEGS", "amount": 1 } ],
+          [ { "id": "ItemId.FIRE_RUNE", "amount": 75, "maxAmount": 150 } ],
+          [ { "id": "ItemId.COINS", "amount": 400, "maxAmount": 1000 } ],
+          [ { "id": "ItemId.COINS", "amount": 10000 } ],
+          [ { "id": "ItemId.PURE_ESSENCE_NOTED", "amount": 150 } ],
+          [ { "id": "ItemId.GOLD_ORE_NOTED", "amount": 10, "maxAmount": 20 } ],
+          [ { "id": "ItemId.STEEL_BAR_NOTED", "amount": 15 } ],
+          [ { "id": "ItemId.GOLD_BAR_NOTED", "amount": 10, "maxAmount": 15 } ]
         ]
       }
     ]
   },
   {
-    "id": "NpcID.CURSED_DARK_BEAST_374_16009",
+    "id": "NpcId.CURSED_DARK_BEAST_374_16009",
     "combatScript": "curseddarkbeast",
     "hitpoints": 550,
-    "hitpointsBarID": 5,
+    "hitpointsBarId": 5,
     "slayerLevel": 90,
     "attackLevel": 270,
     "magicLevel": 300,
@@ -990,7 +990,7 @@
         "maxHit": 25,
         "attackSpeed": 4,
         "targetGraphic": { "id": 131, "height": 124 },
-        "projectileID": 130
+        "projectileId": 130
       }
     ],
     "saveKillCount": true,
@@ -1000,107 +1000,107 @@
         "chance": 0.083,
         "logLoot": true,
         "items": [
-          [ { "id": "ItemID.CLUE_SCROLL_ELITE", "amount": 1 } ]
+          [ { "id": "ItemId.CLUE_SCROLL_ELITE", "amount": 1 } ]
         ]
       },
       {
         "chance": 0.12,
         "logLoot": true,
         "items": [
-          [ { "id": "ItemID.IMBUED_HEART", "amount": 1, "weight": 1 } ],
-          [ { "id": "ItemID.ETERNAL_GEM", "amount": 1, "weight": 1 } ],
-          [ { "id": "ItemID.DUST_BATTLESTAFF", "amount": 1, "weight": 3 } ],
-          [ { "id": "ItemID.MIST_BATTLESTAFF", "amount": 1, "weight": 3 } ]
+          [ { "id": "ItemId.IMBUED_HEART", "amount": 1, "weight": 1 } ],
+          [ { "id": "ItemId.ETERNAL_GEM", "amount": 1, "weight": 1 } ],
+          [ { "id": "ItemId.DUST_BATTLESTAFF", "amount": 1, "weight": 3 } ],
+          [ { "id": "ItemId.MIST_BATTLESTAFF", "amount": 1, "weight": 3 } ]
         ]
       },
       {
         "chance": 0.78,
         "logLoot": true,
         "items": [
-          [ { "id": "ItemID.CLUE_SCROLL_HARD", "amount": 1 } ]
+          [ { "id": "ItemId.CLUE_SCROLL_HARD", "amount": 1 } ]
         ]
       },
       {
         "chance": 0.79,
         "logLoot": true,
         "items": [
-          [ { "id": "ItemID.DARK_BOW", "amount": 1 } ]
+          [ { "id": "ItemId.DARK_BOW", "amount": 1 } ]
         ]
       },
       {
         "chance": 1.17,
         "logLoot": true,
         "items": [
-          [ { "id": "ItemID.DEATH_TALISMAN", "amount": 1 } ]
+          [ { "id": "ItemId.DEATH_TALISMAN", "amount": 1 } ]
         ]
       },
       {
         "chance": 5,
         "items": [
-          [ { "id": "ItemID.GRIMY_CADANTINE", "amount": 1 } ],
-          [ { "id": "ItemID.GRIMY_LANTADYME", "amount": 1 } ],
-          [ { "id": "ItemID.GRIMY_DWARF_WEED", "amount": 1 } ],
-          [ { "id": "ItemID.TORSTOL_SEED", "amount": 1 } ]
+          [ { "id": "ItemId.GRIMY_CADANTINE", "amount": 1 } ],
+          [ { "id": "ItemId.GRIMY_LANTADYME", "amount": 1 } ],
+          [ { "id": "ItemId.GRIMY_DWARF_WEED", "amount": 1 } ],
+          [ { "id": "ItemId.TORSTOL_SEED", "amount": 1 } ]
         ]
       },
       {
         "chance": 20,
         "items": [
-          [ { "id": "ItemID.DRAGON_ARROWTIPS", "amount": 1, "maxAmount": 100 } ],
-          [ { "id": "ItemID.DRAGON_DART_TIP", "amount": 1, "maxAmount": 100 } ],
-          [ { "id": "ItemID.DRAGON_JAVELIN_HEADS", "amount": 1, "maxAmount": 25 } ],
-          [ { "id": "ItemID.BLACK_AXE", "amount": 1 } ],
-          [ { "id": "ItemID.RUNE_2H_SWORD", "amount": 1 } ],
-          [ { "id": "ItemID.RUNE_BATTLEAXE", "amount": 1 } ],
-          [ { "id": "ItemID.RUNE_CHAINBODY", "amount": 1 } ],
-          [ { "id": "ItemID.RUNE_MED_HELM", "amount": 1 } ],
-          [ { "id": "ItemID.RUNE_FULL_HELM", "amount": 1 } ],
-          [ { "id": "ItemID.CHAOS_RUNE", "amount": 30 } ],
-          [ { "id": "ItemID.AIR_RUNE", "amount": 47 } ],
-          [ { "id": "ItemID.BLOOD_RUNE", "amount": 15 } ],
-          [ { "id": "ItemID.GRIMY_HARRALANDER", "amount": 1 } ],
-          [ { "id": "ItemID.GRIMY_RANARR_WEED", "amount": 1 } ],
-          [ { "id": "ItemID.GRIMY_IRIT_LEAF", "amount": 1 } ],
-          [ { "id": "ItemID.GRIMY_AVANTOE", "amount": 1 } ],
-          [ { "id": "ItemID.GRIMY_KWUARM", "amount": 1 } ],
-          [ { "id": "ItemID.AVANTOE_SEED", "amount": 1 } ],
-          [ { "id": "ItemID.KWUARM_SEED", "amount": 1 } ],
-          [ { "id": "ItemID.CADANTINE_SEED", "amount": 1 } ],
-          [ { "id": "ItemID.SNAPDRAGON_SEED", "amount": 1 } ],
-          [ { "id": "ItemID.ADAMANTITE_ORE_NOTED", "amount": 5 } ],
-          [ { "id": "ItemID.ADAMANTITE_BAR_NOTED", "amount": 3 } ],
-          [ { "id": "ItemID.RUNITE_ORE_NOTED", "amount": 1 } ],
-          [ { "id": "ItemID.RUNITE_BAR", "amount": 1 } ],
-          [ { "id": "ItemID.ATTACK_POTION_3", "amount": 1 } ],
-          [ { "id": "ItemID.SHARK", "amount": 1, "maxAmount": 2 } ]
+          [ { "id": "ItemId.DRAGON_ARROWTIPS", "amount": 1, "maxAmount": 100 } ],
+          [ { "id": "ItemId.DRAGON_DART_TIP", "amount": 1, "maxAmount": 100 } ],
+          [ { "id": "ItemId.DRAGON_JAVELIN_HEADS", "amount": 1, "maxAmount": 25 } ],
+          [ { "id": "ItemId.BLACK_AXE", "amount": 1 } ],
+          [ { "id": "ItemId.RUNE_2H_SWORD", "amount": 1 } ],
+          [ { "id": "ItemId.RUNE_BATTLEAXE", "amount": 1 } ],
+          [ { "id": "ItemId.RUNE_CHAINBODY", "amount": 1 } ],
+          [ { "id": "ItemId.RUNE_MED_HELM", "amount": 1 } ],
+          [ { "id": "ItemId.RUNE_FULL_HELM", "amount": 1 } ],
+          [ { "id": "ItemId.CHAOS_RUNE", "amount": 30 } ],
+          [ { "id": "ItemId.AIR_RUNE", "amount": 47 } ],
+          [ { "id": "ItemId.BLOOD_RUNE", "amount": 15 } ],
+          [ { "id": "ItemId.GRIMY_HARRALANDER", "amount": 1 } ],
+          [ { "id": "ItemId.GRIMY_RANARR_WEED", "amount": 1 } ],
+          [ { "id": "ItemId.GRIMY_IRIT_LEAF", "amount": 1 } ],
+          [ { "id": "ItemId.GRIMY_AVANTOE", "amount": 1 } ],
+          [ { "id": "ItemId.GRIMY_KWUARM", "amount": 1 } ],
+          [ { "id": "ItemId.AVANTOE_SEED", "amount": 1 } ],
+          [ { "id": "ItemId.KWUARM_SEED", "amount": 1 } ],
+          [ { "id": "ItemId.CADANTINE_SEED", "amount": 1 } ],
+          [ { "id": "ItemId.SNAPDRAGON_SEED", "amount": 1 } ],
+          [ { "id": "ItemId.ADAMANTITE_ORE_NOTED", "amount": 5 } ],
+          [ { "id": "ItemId.ADAMANTITE_BAR_NOTED", "amount": 3 } ],
+          [ { "id": "ItemId.RUNITE_ORE_NOTED", "amount": 1 } ],
+          [ { "id": "ItemId.RUNITE_BAR", "amount": 1 } ],
+          [ { "id": "ItemId.ATTACK_POTION_3", "amount": 1 } ],
+          [ { "id": "ItemId.SHARK", "amount": 1, "maxAmount": 2 } ]
         ]
       },
       {
         "chance": 99,
         "items": [
-          [ { "id": "ItemID.BLACK_2H_SWORD", "amount": 1 } ],
-          [ { "id": "ItemID.BLACK_BATTLEAXE", "amount": 1 } ],
-          [ { "id": "ItemID.ADAMANT_SQ_SHIELD", "amount": 1 } ],
-          [ { "id": "ItemID.DEATH_RUNE", "amount": 20 } ],
-          [ { "id": "ItemID.GRIMY_GUAM_LEAF", "amount": 1 } ],
-          [ { "id": "ItemID.GRIMY_MARRENTILL", "amount": 1 } ],
-          [ { "id": "ItemID.GRIMY_TARROMIN", "amount": 1 } ],
-          [ { "id": "ItemID.COINS", "amount": 64, "maxAmount": 220 } ]
+          [ { "id": "ItemId.BLACK_2H_SWORD", "amount": 1 } ],
+          [ { "id": "ItemId.BLACK_BATTLEAXE", "amount": 1 } ],
+          [ { "id": "ItemId.ADAMANT_SQ_SHIELD", "amount": 1 } ],
+          [ { "id": "ItemId.DEATH_RUNE", "amount": 20 } ],
+          [ { "id": "ItemId.GRIMY_GUAM_LEAF", "amount": 1 } ],
+          [ { "id": "ItemId.GRIMY_MARRENTILL", "amount": 1 } ],
+          [ { "id": "ItemId.GRIMY_TARROMIN", "amount": 1 } ],
+          [ { "id": "ItemId.COINS", "amount": 64, "maxAmount": 220 } ]
         ]
       },
       {
         "chance": 100,
         "items": [
-          [ { "id": "ItemID.BIG_BONES", "amount": 1 } ]
+          [ { "id": "ItemId.BIG_BONES", "amount": 1 } ]
         ]
       }
     ]
   },
   {
-    "id": "NpcID.CURSED_ABYSSAL_DEMON_342_16010",
+    "id": "NpcId.CURSED_ABYSSAL_DEMON_342_16010",
     "combatScript": "cursedabyssaldemon",
     "hitpoints": 400,
-    "hitpointsBarID": 5,
+    "hitpointsBarId": 5,
     "slayerLevel": 85,
     "attackLevel": 300,
     "defenceLevel": 240,
@@ -1124,117 +1124,117 @@
         "chance": 0.032,
         "logLoot": true,
         "items": [
-          [ { "id": "ItemID.ABYSSAL_HEAD", "amount": 1 } ]
+          [ { "id": "ItemId.ABYSSAL_HEAD", "amount": 1 } ]
         ]
       },
       {
         "chance": 0.083,
         "logLoot": true,
         "items": [
-          [ { "id": "ItemID.CLUE_SCROLL_ELITE", "amount": 1 } ]
+          [ { "id": "ItemId.CLUE_SCROLL_ELITE", "amount": 1 } ]
         ]
       },
       {
         "chance": 0.1,
         "logLoot": true,
         "items": [
-          [ { "id": "ItemID.ABYSSAL_DAGGER_P_PLUS_PLUS", "amount": 1 } ]
+          [ { "id": "ItemId.ABYSSAL_DAGGER_P_PLUS_PLUS", "amount": 1 } ]
         ]
       },
       {
         "chance": 0.12,
         "logLoot": true,
         "items": [
-          [ { "id": "ItemID.IMBUED_HEART", "amount": 1, "weight": 1 } ],
-          [ { "id": "ItemID.ETERNAL_GEM", "amount": 1, "weight": 1 } ],
-          [ { "id": "ItemID.DUST_BATTLESTAFF", "amount": 1, "weight": 3 } ],
-          [ { "id": "ItemID.MIST_BATTLESTAFF", "amount": 1, "weight": 3 } ]
+          [ { "id": "ItemId.IMBUED_HEART", "amount": 1, "weight": 1 } ],
+          [ { "id": "ItemId.ETERNAL_GEM", "amount": 1, "weight": 1 } ],
+          [ { "id": "ItemId.DUST_BATTLESTAFF", "amount": 1, "weight": 3 } ],
+          [ { "id": "ItemId.MIST_BATTLESTAFF", "amount": 1, "weight": 3 } ]
         ]
       },
       {
         "chance": 0.24,
         "logLoot": true,
         "items": [
-          [ { "id": "ItemID.BLUDGEON_SPINE", "amount": 1 } ],
-          [ { "id": "ItemID.BLUDGEON_CLAW", "amount": 1 } ],
-          [ { "id": "ItemID.BLUDGEON_AXON", "amount": 1 } ]
+          [ { "id": "ItemId.BLUDGEON_SPINE", "amount": 1 } ],
+          [ { "id": "ItemId.BLUDGEON_CLAW", "amount": 1 } ],
+          [ { "id": "ItemId.BLUDGEON_AXON", "amount": 1 } ]
         ]
       },
       {
         "chance": 0.78,
         "logLoot": true,
         "items": [
-          [ { "id": "ItemID.CLUE_SCROLL_HARD", "amount": 1 } ]
+          [ { "id": "ItemId.CLUE_SCROLL_HARD", "amount": 1 } ]
         ]
       },
       {
         "chance": 0.79,
         "logLoot": true,
         "items": [
-          [ { "id": "ItemID.ABYSSAL_WHIP", "amount": 1 } ]
+          [ { "id": "ItemId.ABYSSAL_WHIP", "amount": 1 } ]
         ]
       },
       {
         "chance": 4,
         "items": [
-          [ { "id": "ItemID.ENSOULED_ABYSSAL_HEAD_13508", "amount": 1 } ]
+          [ { "id": "ItemId.ENSOULED_ABYSSAL_HEAD_13508", "amount": 1 } ]
         ]
       },
       {
         "chance": 5,
         "items": [
-          [ { "id": "ItemID.GRIMY_CADANTINE", "amount": 1 } ],
-          [ { "id": "ItemID.GRIMY_LANTADYME", "amount": 1 } ],
-          [ { "id": "ItemID.GRIMY_DWARF_WEED", "amount": 1 } ]
+          [ { "id": "ItemId.GRIMY_CADANTINE", "amount": 1 } ],
+          [ { "id": "ItemId.GRIMY_LANTADYME", "amount": 1 } ],
+          [ { "id": "ItemId.GRIMY_DWARF_WEED", "amount": 1 } ]
         ]
       },
       {
         "chance": 20,
         "items": [
-          [ { "id": "ItemID.MITHRIL_KITESHIELD", "amount": 1 } ],
-          [ { "id": "ItemID.RUNE_CHAINBODY", "amount": 1 } ],
-          [ { "id": "ItemID.RUNE_MED_HELM", "amount": 1 } ],
-          [ { "id": "ItemID.GRIMY_HARRALANDER", "amount": 1 } ],
-          [ { "id": "ItemID.GRIMY_RANARR_WEED", "amount": 1 } ],
-          [ { "id": "ItemID.GRIMY_IRIT_LEAF", "amount": 1 } ],
-          [ { "id": "ItemID.GRIMY_AVANTOE", "amount": 1 } ],
-          [ { "id": "ItemID.GRIMY_KWUARM", "amount": 1 } ],
-          [ { "id": "ItemID.LAW_RUNE", "amount": 3 } ],
-          [ { "id": "ItemID.COSMIC_TALISMAN", "amount": 1 } ],
-          [ { "id": "ItemID.CHAOS_TALISMAN", "amount": 1 } ],
-          [ { "id": "ItemID.ADAMANTITE_BAR", "amount": 1 } ],
-          [ { "id": "ItemID.DEFENCE_POTION_3", "amount": 1 } ]
+          [ { "id": "ItemId.MITHRIL_KITESHIELD", "amount": 1 } ],
+          [ { "id": "ItemId.RUNE_CHAINBODY", "amount": 1 } ],
+          [ { "id": "ItemId.RUNE_MED_HELM", "amount": 1 } ],
+          [ { "id": "ItemId.GRIMY_HARRALANDER", "amount": 1 } ],
+          [ { "id": "ItemId.GRIMY_RANARR_WEED", "amount": 1 } ],
+          [ { "id": "ItemId.GRIMY_IRIT_LEAF", "amount": 1 } ],
+          [ { "id": "ItemId.GRIMY_AVANTOE", "amount": 1 } ],
+          [ { "id": "ItemId.GRIMY_KWUARM", "amount": 1 } ],
+          [ { "id": "ItemId.LAW_RUNE", "amount": 3 } ],
+          [ { "id": "ItemId.COSMIC_TALISMAN", "amount": 1 } ],
+          [ { "id": "ItemId.CHAOS_TALISMAN", "amount": 1 } ],
+          [ { "id": "ItemId.ADAMANTITE_BAR", "amount": 1 } ],
+          [ { "id": "ItemId.DEFENCE_POTION_3", "amount": 1 } ]
         ]
       },
       {
         "chance": 99,
         "items": [
-          [ { "id": "ItemID.BLACK_SWORD", "amount": 1 } ],
-          [ { "id": "ItemID.BLACK_AXE", "amount": 1 } ],
-          [ { "id": "ItemID.STEEL_BATTLEAXE", "amount": 1 } ],
-          [ { "id": "ItemID.GRIMY_GUAM_LEAF", "amount": 1 } ],
-          [ { "id": "ItemID.GRIMY_MARRENTILL", "amount": 1 } ],
-          [ { "id": "ItemID.GRIMY_TARROMIN", "amount": 1 } ],
-          [ { "id": "ItemID.AIR_RUNE", "amount": 50 } ],
-          [ { "id": "ItemID.BLOOD_RUNE", "amount": 7 } ],
-          [ { "id": "ItemID.CHAOS_RUNE", "amount": 10 } ],
-          [ { "id": "ItemID.LOBSTER", "amount": 1 } ],
-          [ { "id": "ItemID.PURE_ESSENCE_NOTED", "amount": 60 } ]
+          [ { "id": "ItemId.BLACK_SWORD", "amount": 1 } ],
+          [ { "id": "ItemId.BLACK_AXE", "amount": 1 } ],
+          [ { "id": "ItemId.STEEL_BATTLEAXE", "amount": 1 } ],
+          [ { "id": "ItemId.GRIMY_GUAM_LEAF", "amount": 1 } ],
+          [ { "id": "ItemId.GRIMY_MARRENTILL", "amount": 1 } ],
+          [ { "id": "ItemId.GRIMY_TARROMIN", "amount": 1 } ],
+          [ { "id": "ItemId.AIR_RUNE", "amount": 50 } ],
+          [ { "id": "ItemId.BLOOD_RUNE", "amount": 7 } ],
+          [ { "id": "ItemId.CHAOS_RUNE", "amount": 10 } ],
+          [ { "id": "ItemId.LOBSTER", "amount": 1 } ],
+          [ { "id": "ItemId.PURE_ESSENCE_NOTED", "amount": 60 } ]
         ]
       },
       {
         "chance": 100,
         "items": [
-          [ { "id": "ItemID.ASHES", "amount": 1 } ]
+          [ { "id": "ItemId.ASHES", "amount": 1 } ]
         ]
       }
     ]
   },
   {
-    "id": "NpcID.CURSED_WYVERN_210_16011",
+    "id": "NpcId.CURSED_WYVERN_210_16011",
     "combatScript": "WyvernCS",
     "hitpoints": 300,
-    "hitpointsBarID": 5,
+    "hitpointsBarId": 5,
     "slayerLevel": 66,
     "attackLevel": 150,
     "rangedLevel": 90,
@@ -1262,7 +1262,7 @@
         "targetGraphic": {
           "id": 502
         },
-        "projectileID": 500
+        "projectileId": 500
       }
     ],
     "saveKillCount": true,
@@ -1272,105 +1272,105 @@
         "chance": 0.08,
         "logLoot": true,
         "items": [
-          [ { "id": "ItemID.DRACONIC_VISAGE", "amount": 1 } ],
-          [ { "id": "ItemID.WYVERN_VISAGE", "amount": 1 } ],
-          [ { "id": "ItemID.SKELETAL_VISAGE", "amount": 1 } ]
+          [ { "id": "ItemId.DRACONIC_VISAGE", "amount": 1 } ],
+          [ { "id": "ItemId.WYVERN_VISAGE", "amount": 1 } ],
+          [ { "id": "ItemId.SKELETAL_VISAGE", "amount": 1 } ]
         ]
       },
       {
         "chance": 0.12,
         "logLoot": true,
         "items": [
-          [ { "id": "ItemID.IMBUED_HEART", "amount": 1, "weight": 1 } ],
-          [ { "id": "ItemID.ETERNAL_GEM", "amount": 1, "weight": 1 } ],
-          [ { "id": "ItemID.DUST_BATTLESTAFF", "amount": 1, "weight": 3 } ],
-          [ { "id": "ItemID.MIST_BATTLESTAFF", "amount": 1, "weight": 3 } ]
+          [ { "id": "ItemId.IMBUED_HEART", "amount": 1, "weight": 1 } ],
+          [ { "id": "ItemId.ETERNAL_GEM", "amount": 1, "weight": 1 } ],
+          [ { "id": "ItemId.DUST_BATTLESTAFF", "amount": 1, "weight": 3 } ],
+          [ { "id": "ItemId.MIST_BATTLESTAFF", "amount": 1, "weight": 3 } ]
         ]
       },
       {
         "chance": 0.66,
         "logLoot": true,
         "items": [
-          [ { "id": "ItemID.GRANITE_LONGSWORD", "amount": 1 } ],
-          [ { "id": "ItemID.GRANITE_BOOTS", "amount": 1 } ]
+          [ { "id": "ItemId.GRANITE_LONGSWORD", "amount": 1 } ],
+          [ { "id": "ItemId.GRANITE_BOOTS", "amount": 1 } ]
         ]
       },
       {
         "chance": 0.78,
         "logLoot": true,
         "items": [
-          [ { "id": "ItemID.CLUE_SCROLL_ELITE", "amount": 1 } ]
+          [ { "id": "ItemId.CLUE_SCROLL_ELITE", "amount": 1 } ]
         ]
       },
       {
         "chance": 5,
         "items": [
-          [ { "id": "ItemID.BATTLESTAFF_NOTED", "amount": 6 } ],
-          [ { "id": "ItemID.SNAPDRAGON_SEED", "amount": 1 } ],
-          [ { "id": "ItemID.TORSTOL_SEED", "amount": 1 } ],
-          [ { "id": "ItemID.MAHOGANY_SEED", "amount": 1 } ],
-          [ { "id": "ItemID.YEW_SEED", "amount": 1 } ],
-          [ { "id": "ItemID.MAGIC_SEED", "amount": 1 } ],
-          [ { "id": "ItemID.UNIDENTIFIED_SMALL_FOSSIL", "amount": 1 } ],
-          [ { "id": "ItemID.UNIDENTIFIED_MEDIUM_FOSSIL", "amount": 1 } ],
-          [ { "id": "ItemID.UNIDENTIFIED_LARGE_FOSSIL", "amount": 1 } ],
-          [ { "id": "ItemID.UNIDENTIFIED_RARE_FOSSIL", "amount": 1 } ]
+          [ { "id": "ItemId.BATTLESTAFF_NOTED", "amount": 6 } ],
+          [ { "id": "ItemId.SNAPDRAGON_SEED", "amount": 1 } ],
+          [ { "id": "ItemId.TORSTOL_SEED", "amount": 1 } ],
+          [ { "id": "ItemId.MAHOGANY_SEED", "amount": 1 } ],
+          [ { "id": "ItemId.YEW_SEED", "amount": 1 } ],
+          [ { "id": "ItemId.MAGIC_SEED", "amount": 1 } ],
+          [ { "id": "ItemId.UNIDENTIFIED_SMALL_FOSSIL", "amount": 1 } ],
+          [ { "id": "ItemId.UNIDENTIFIED_MEDIUM_FOSSIL", "amount": 1 } ],
+          [ { "id": "ItemId.UNIDENTIFIED_LARGE_FOSSIL", "amount": 1 } ],
+          [ { "id": "ItemId.UNIDENTIFIED_RARE_FOSSIL", "amount": 1 } ]
         ]
       },
       {
         "chance": 20,
         "items": [
-          [ { "id": "ItemID.AIR_BATTLESTAFF", "amount": 2 } ],
-          [ { "id": "ItemID.MYSTIC_AIR_STAFF", "amount": 1 } ],
-          [ { "id": "ItemID.RUNE_PICKAXE", "amount": 1 } ],
-          [ { "id": "ItemID.RUNE_BATTLEAXE", "amount": 1 } ],
-          [ { "id": "ItemID.RUNE_FULL_HELM", "amount": 1 } ],
-          [ { "id": "ItemID.CHAOS_RUNE", "amount": 20 } ],
-          [ { "id": "ItemID.DEATH_RUNE", "amount": 47, "maxAmount": 52 } ],
-          [ { "id": "ItemID.BLOOD_RUNE", "amount": 33 } ],
-          [ { "id": "ItemID.ADAMANT_ARROW", "amount": 68 } ],
-          [ { "id": "ItemID.ADAMANTITE_BAR_NOTED", "amount": 3 } ],
-          [ { "id": "ItemID.ADAMANTITE_ORE_NOTED", "amount": 20 } ],
-          [ { "id": "ItemID.RUNITE_ORE_NOTED", "amount": 3 } ],
-          [ { "id": "ItemID.DIAMOND_NOTED", "amount": 3, "maxAmount": 5 } ],
-          [ { "id": "ItemID.GRIMY_TORSTOL", "amount": 1 } ],
-          [ { "id": "ItemID.GRIMY_RANARR_WEED", "amount": 3, "maxAmount": 4 } ],
-          [ { "id": "ItemID.TEAK_LOGS", "amount": 1 } ],
-          [ { "id": "ItemID.WATERMELON_SEED", "amount": 15 } ],
-          [ { "id": "ItemID.SEAWEED_SPORE", "amount": 3, "maxAmount": 12 } ],
-          [ { "id": "ItemID.RANARR_SEED", "amount": 2, "maxAmount": 3 } ],
-          [ { "id": "ItemID.TEAK_SEED", "amount": 1 } ],
-          [ { "id": "ItemID.SUPER_RESTORE_4", "amount": 2 } ],
-          [ { "id": "ItemID.RUNITE_CROSSBOW_U", "amount": 1 } ],
-          [ { "id": "ItemID.SUPERCOMPOST_NOTED", "amount": 8 } ],
-          [ { "id": "ItemID.ONYX_BOLT_TIPS", "amount": 10, "maxAmount": 15 } ],
-          [ { "id": "ItemID.CALCITE", "amount": 2 } ],
-          [ { "id": "ItemID.PYROPHOSPHITE", "amount": 2 } ]
+          [ { "id": "ItemId.AIR_BATTLESTAFF", "amount": 2 } ],
+          [ { "id": "ItemId.MYSTIC_AIR_STAFF", "amount": 1 } ],
+          [ { "id": "ItemId.RUNE_PICKAXE", "amount": 1 } ],
+          [ { "id": "ItemId.RUNE_BATTLEAXE", "amount": 1 } ],
+          [ { "id": "ItemId.RUNE_FULL_HELM", "amount": 1 } ],
+          [ { "id": "ItemId.CHAOS_RUNE", "amount": 20 } ],
+          [ { "id": "ItemId.DEATH_RUNE", "amount": 47, "maxAmount": 52 } ],
+          [ { "id": "ItemId.BLOOD_RUNE", "amount": 33 } ],
+          [ { "id": "ItemId.ADAMANT_ARROW", "amount": 68 } ],
+          [ { "id": "ItemId.ADAMANTITE_BAR_NOTED", "amount": 3 } ],
+          [ { "id": "ItemId.ADAMANTITE_ORE_NOTED", "amount": 20 } ],
+          [ { "id": "ItemId.RUNITE_ORE_NOTED", "amount": 3 } ],
+          [ { "id": "ItemId.DIAMOND_NOTED", "amount": 3, "maxAmount": 5 } ],
+          [ { "id": "ItemId.GRIMY_TORSTOL", "amount": 1 } ],
+          [ { "id": "ItemId.GRIMY_RANARR_WEED", "amount": 3, "maxAmount": 4 } ],
+          [ { "id": "ItemId.TEAK_LOGS", "amount": 1 } ],
+          [ { "id": "ItemId.WATERMELON_SEED", "amount": 15 } ],
+          [ { "id": "ItemId.SEAWEED_SPORE", "amount": 3, "maxAmount": 12 } ],
+          [ { "id": "ItemId.RANARR_SEED", "amount": 2, "maxAmount": 3 } ],
+          [ { "id": "ItemId.TEAK_SEED", "amount": 1 } ],
+          [ { "id": "ItemId.SUPER_RESTORE_4", "amount": 2 } ],
+          [ { "id": "ItemId.RUNITE_CROSSBOW_U", "amount": 1 } ],
+          [ { "id": "ItemId.SUPERCOMPOST_NOTED", "amount": 8 } ],
+          [ { "id": "ItemId.ONYX_BOLT_TIPS", "amount": 10, "maxAmount": 15 } ],
+          [ { "id": "ItemId.CALCITE", "amount": 2 } ],
+          [ { "id": "ItemId.PYROPHOSPHITE", "amount": 2 } ]
         ]
       },
       {
         "chance": 99,
         "items": [
-          [ { "id": "ItemID.AIR_RUNE", "amount": 25 } ],
-          [ { "id": "ItemID.NUMULITE", "amount": 5, "maxAmount": 30 } ],
-          [ { "id": "ItemID.SHARK", "amount": 5 } ],
-          [ { "id": "ItemID.PRAYER_POTION_4", "amount": 1 } ],
-          [ { "id": "ItemID.SUPER_COMBAT_POTION_2", "amount": 1 } ]
+          [ { "id": "ItemId.AIR_RUNE", "amount": 25 } ],
+          [ { "id": "ItemId.NUMULITE", "amount": 5, "maxAmount": 30 } ],
+          [ { "id": "ItemId.SHARK", "amount": 5 } ],
+          [ { "id": "ItemId.PRAYER_POTION_4", "amount": 1 } ],
+          [ { "id": "ItemId.SUPER_COMBAT_POTION_2", "amount": 1 } ]
         ]
       },
       {
         "chance": 100,
         "items": [
-          [ { "id": "ItemID.WYVERN_BONES", "amount": 1 } ]
+          [ { "id": "ItemId.WYVERN_BONES", "amount": 1 } ]
         ]
       }
     ]
   },
   {
-    "id": "NpcID.CURSED_HYDRA_400_16012",
+    "id": "NpcId.CURSED_HYDRA_400_16012",
     "combatScript": "cursedhydra",
     "hitpoints": 400,
-    "hitpointsBarID": 5,
+    "hitpointsBarId": 5,
     "slayerLevel": 95,
     "attackLevel": 80,
     "magicLevel": 210,
@@ -1389,14 +1389,14 @@
         "animation": 8255,
         "maxHit": 22,
         "attackSpeed": 6,
-        "projectileID": 1663
+        "projectileId": 1663
       },
       {
         "type": "MAGIC",
         "animation": 8256,
         "maxHit": 22,
         "attackSpeed": 6,
-        "projectileID": 1662
+        "projectileId": 1662
       }
     ],
     "saveKillCount": true,
@@ -1405,53 +1405,53 @@
         "chance": 0.049,
         "logLoot": true,
         "items": [
-          [ { "id": "ItemID.HYDRAS_CLAW", "amount": 1 } ]
+          [ { "id": "ItemId.HYDRAS_CLAW", "amount": 1 } ]
         ]
       },
       {
         "chance": 0.09,
         "logLoot": true,
         "items": [
-          [ { "id": "ItemID.HYDRA_LEATHER", "amount": 1 } ]
+          [ { "id": "ItemId.HYDRA_LEATHER", "amount": 1 } ]
         ]
       },
       {
         "chance": 0.12,
         "logLoot": true,
         "items": [
-          [ { "id": "ItemID.IMBUED_HEART", "amount": 1, "weight": 1 } ],
-          [ { "id": "ItemID.ETERNAL_GEM", "amount": 1, "weight": 1 } ],
-          [ { "id": "ItemID.DUST_BATTLESTAFF", "amount": 1, "weight": 3 } ],
-          [ { "id": "ItemID.MIST_BATTLESTAFF", "amount": 1, "weight": 3 } ]
+          [ { "id": "ItemId.IMBUED_HEART", "amount": 1, "weight": 1 } ],
+          [ { "id": "ItemId.ETERNAL_GEM", "amount": 1, "weight": 1 } ],
+          [ { "id": "ItemId.DUST_BATTLESTAFF", "amount": 1, "weight": 3 } ],
+          [ { "id": "ItemId.MIST_BATTLESTAFF", "amount": 1, "weight": 3 } ]
         ]
       },
       {
         "chance": 0.39,
         "logLoot": true,
         "items": [
-          [ { "id": "ItemID.CLUE_SCROLL_ELITE", "amount": 1 } ]
+          [ { "id": "ItemId.CLUE_SCROLL_ELITE", "amount": 1 } ]
         ]
       },
       {
         "chance": 0.4,
         "logLoot": true,
         "items": [
-          [ { "id": "ItemID.DRAGON_KNIFE", "amount": 200, "maxAmount": 400 } ],
-          [ { "id": "ItemID.DRAGON_THROWNAXE", "amount": 200, "maxAmount": 400 } ]
+          [ { "id": "ItemId.DRAGON_KNIFE", "amount": 200, "maxAmount": 400 } ],
+          [ { "id": "ItemId.DRAGON_THROWNAXE", "amount": 200, "maxAmount": 400 } ]
         ]
       },
       {
         "chance": 0.42,
         "logLoot": true,
         "items": [
-          [ { "id": "ItemID.HYDRA_TAIL", "amount": 1 } ]
+          [ { "id": "ItemId.HYDRA_TAIL", "amount": 1 } ]
         ]
       },
       {
         "chance": 0.78,
         "logLoot": true,
         "items": [
-          [ { "id": "ItemID.CLUE_SCROLL_HARD", "amount": 1 } ]
+          [ { "id": "ItemId.CLUE_SCROLL_HARD", "amount": 1 } ]
         ]
       },
       {
@@ -1459,73 +1459,73 @@
         "logLoot": true,
         "dropInRandomOrder": true,
         "items": [
-          [ { "id": "ItemID.HYDRAS_EYE", "amount": 1 } ],
-          [ { "id": "ItemID.HYDRAS_HEART", "amount": 1 } ],
-          [ { "id": "ItemID.HYDRAS_FANG", "amount": 1 } ]
+          [ { "id": "ItemId.HYDRAS_EYE", "amount": 1 } ],
+          [ { "id": "ItemId.HYDRAS_HEART", "amount": 1 } ],
+          [ { "id": "ItemId.HYDRAS_FANG", "amount": 1 } ]
         ]
       },
       {
         "chance": 5,
         "items": [
-          [ { "id": "ItemID.ONYX_BOLT_TIPS", "amount": 8, "maxAmount": 30 } ]
+          [ { "id": "ItemId.ONYX_BOLT_TIPS", "amount": 8, "maxAmount": 30 } ]
         ]
       },
       {
         "chance": 20,
         "items": [
-          [ { "id": "ItemID.BATTLESTAFF", "amount": 2, "maxAmount": 3 } ],
-          [ { "id": "ItemID.FIRE_BATTLESTAFF", "amount": 1 } ],
-          [ { "id": "ItemID.WATER_BATTLESTAFF", "amount": 1 } ],
-          [ { "id": "ItemID.RUNE_KITESHIELD", "amount": 1 } ],
-          [ { "id": "ItemID.RUNE_PLATEBODY", "amount": 1 } ],
-          [ { "id": "ItemID.MYSTIC_ROBE_BOTTOM", "amount": 1 } ],
-          [ { "id": "ItemID.DRAGON_LONGSWORD", "amount": 1 } ],
-          [ { "id": "ItemID.BLOOD_RUNE", "amount": 15, "maxAmount": 44 } ],
-          [ { "id": "ItemID.CHAOS_RUNE", "amount": 22, "maxAmount": 50 } ],
-          [ { "id": "ItemID.IRIT_SEED", "amount": 1 } ],
-          [ { "id": "ItemID.TOADFLAX_SEED", "amount": 1 } ],
-          [ { "id": "ItemID.AVANTOE_SEED", "amount": 1 } ],
-          [ { "id": "ItemID.POTATO_CACTUS_SEED", "amount": 1 } ],
-          [ { "id": "ItemID.BELLADONNA_SEED", "amount": 1 } ],
-          [ { "id": "ItemID.GRIMY_GUAM_LEAF", "amount": 1 } ],
-          [ { "id": "ItemID.GRIMY_MARRENTILL", "amount": 1 } ],
-          [ { "id": "ItemID.GRIMY_HARRALANDER", "amount": 1 } ],
-          [ { "id": "ItemID.GRIMY_TARROMIN", "amount": 1 } ],
-          [ { "id": "ItemID.GRIMY_RANARR_WEED", "amount": 1 } ],
-          [ { "id": "ItemID.GRIMY_IRIT_LEAF", "amount": 1 } ],
-          [ { "id": "ItemID.GRIMY_CADANTINE", "amount": 1 } ],
-          [ { "id": "ItemID.GRIMY_RANARR_WEED_NOTED", "amount": 3 } ],
-          [ { "id": "ItemID.GRIMY_TORSTOL_NOTED", "amount": 3 } ],
-          [ { "id": "ItemID.SUPER_COMBAT_POTION_1", "amount": 1 } ],
-          [ { "id": "ItemID.DRAGON_BONES_NOTED", "amount": 3, "maxAmount": 5 } ],
-          [ { "id": "ItemID.SUPER_RESTORE_1", "amount": 1, "maxAmount": 2 } ],
-          [ { "id": "ItemID.EMERALD_BOLT_TIPS", "amount": 20 } ],
-          [ { "id": "ItemID.RUBY_BOLT_TIPS", "amount": 20 } ],
-          [ { "id": "ItemID.DIAMOND_BOLT_TIPS", "amount": 20 } ]
+          [ { "id": "ItemId.BATTLESTAFF", "amount": 2, "maxAmount": 3 } ],
+          [ { "id": "ItemId.FIRE_BATTLESTAFF", "amount": 1 } ],
+          [ { "id": "ItemId.WATER_BATTLESTAFF", "amount": 1 } ],
+          [ { "id": "ItemId.RUNE_KITESHIELD", "amount": 1 } ],
+          [ { "id": "ItemId.RUNE_PLATEBODY", "amount": 1 } ],
+          [ { "id": "ItemId.MYSTIC_ROBE_BOTTOM", "amount": 1 } ],
+          [ { "id": "ItemId.DRAGON_LONGSWORD", "amount": 1 } ],
+          [ { "id": "ItemId.BLOOD_RUNE", "amount": 15, "maxAmount": 44 } ],
+          [ { "id": "ItemId.CHAOS_RUNE", "amount": 22, "maxAmount": 50 } ],
+          [ { "id": "ItemId.IRIT_SEED", "amount": 1 } ],
+          [ { "id": "ItemId.TOADFLAX_SEED", "amount": 1 } ],
+          [ { "id": "ItemId.AVANTOE_SEED", "amount": 1 } ],
+          [ { "id": "ItemId.POTATO_CACTUS_SEED", "amount": 1 } ],
+          [ { "id": "ItemId.BELLADONNA_SEED", "amount": 1 } ],
+          [ { "id": "ItemId.GRIMY_GUAM_LEAF", "amount": 1 } ],
+          [ { "id": "ItemId.GRIMY_MARRENTILL", "amount": 1 } ],
+          [ { "id": "ItemId.GRIMY_HARRALANDER", "amount": 1 } ],
+          [ { "id": "ItemId.GRIMY_TARROMIN", "amount": 1 } ],
+          [ { "id": "ItemId.GRIMY_RANARR_WEED", "amount": 1 } ],
+          [ { "id": "ItemId.GRIMY_IRIT_LEAF", "amount": 1 } ],
+          [ { "id": "ItemId.GRIMY_CADANTINE", "amount": 1 } ],
+          [ { "id": "ItemId.GRIMY_RANARR_WEED_NOTED", "amount": 3 } ],
+          [ { "id": "ItemId.GRIMY_TORSTOL_NOTED", "amount": 3 } ],
+          [ { "id": "ItemId.SUPER_COMBAT_POTION_1", "amount": 1 } ],
+          [ { "id": "ItemId.DRAGON_BONES_NOTED", "amount": 3, "maxAmount": 5 } ],
+          [ { "id": "ItemId.SUPER_RESTORE_1", "amount": 1, "maxAmount": 2 } ],
+          [ { "id": "ItemId.EMERALD_BOLT_TIPS", "amount": 20 } ],
+          [ { "id": "ItemId.RUBY_BOLT_TIPS", "amount": 20 } ],
+          [ { "id": "ItemId.DIAMOND_BOLT_TIPS", "amount": 20 } ]
         ]
       },
       {
         "chance": 99,
         "items": [
-          [ { "id": "ItemID.BLACK_DHIDE_CHAPS", "amount": 1 } ],
-          [ { "id": "ItemID.WATER_RUNE", "amount": 71, "maxAmount": 89 } ],
-          [ { "id": "ItemID.FIRE_RUNE", "amount": 56, "maxAmount": 86 } ],
-          [ { "id": "ItemID.DEATH_RUNE", "amount": 30, "maxAmount": 60 } ],
-          [ { "id": "ItemID.LAW_RUNE", "amount": 32, "maxAmount": 59 } ],
-          [ { "id": "ItemID.COINS", "amount": 510, "maxAmount": 4338 } ],
-          [ { "id": "ItemID.MONKFISH", "amount": 1 } ]
+          [ { "id": "ItemId.BLACK_DHIDE_CHAPS", "amount": 1 } ],
+          [ { "id": "ItemId.WATER_RUNE", "amount": 71, "maxAmount": 89 } ],
+          [ { "id": "ItemId.FIRE_RUNE", "amount": 56, "maxAmount": 86 } ],
+          [ { "id": "ItemId.DEATH_RUNE", "amount": 30, "maxAmount": 60 } ],
+          [ { "id": "ItemId.LAW_RUNE", "amount": 32, "maxAmount": 59 } ],
+          [ { "id": "ItemId.COINS", "amount": 510, "maxAmount": 4338 } ],
+          [ { "id": "ItemId.MONKFISH", "amount": 1 } ]
         ]
       },
       {
         "chance": 100,
         "items": [
-          [ { "id": "ItemID.HYDRA_BONES", "amount": 1 } ]
+          [ { "id": "ItemId.HYDRA_BONES", "amount": 1 } ]
         ]
       }
     ]
   },
   {
-    "id": "NpcID.CURSED_KRAKEN_127_16013",
+    "id": "NpcId.CURSED_KRAKEN_127_16013",
     "noclip": true,
     "combatScript": "cursedkraken",
     "hitpoints": 200,
@@ -1544,7 +1544,7 @@
         "maxHit": 15,
         "attackSpeed": 6,
         "targetGraphic": { "id": 163, "height": 124 },
-        "projectileID": 162,
+        "projectileId": 162,
         "useSplash": true
       }
     ],
@@ -1556,104 +1556,104 @@
         "chance": 0.083,
         "logLoot": true,
         "items": [
-          [ { "id": "ItemID.CLUE_SCROLL_ELITE", "amount": 1 } ]
+          [ { "id": "ItemId.CLUE_SCROLL_ELITE", "amount": 1 } ]
         ]
       },
       {
         "chance": 0.12,
         "logLoot": true,
         "items": [
-          [ { "id": "ItemID.IMBUED_HEART", "amount": 1, "weight": 1 } ],
-          [ { "id": "ItemID.ETERNAL_GEM", "amount": 1, "weight": 1 } ],
-          [ { "id": "ItemID.DUST_BATTLESTAFF", "amount": 1, "weight": 3 } ],
-          [ { "id": "ItemID.MIST_BATTLESTAFF", "amount": 1, "weight": 3 } ]
+          [ { "id": "ItemId.IMBUED_HEART", "amount": 1, "weight": 1 } ],
+          [ { "id": "ItemId.ETERNAL_GEM", "amount": 1, "weight": 1 } ],
+          [ { "id": "ItemId.DUST_BATTLESTAFF", "amount": 1, "weight": 3 } ],
+          [ { "id": "ItemId.MIST_BATTLESTAFF", "amount": 1, "weight": 3 } ]
         ]
       },
       {
         "chance": 0.15,
         "logLoot": true,
         "items": [
-          [ { "id": "ItemID.TRIDENT_OF_THE_SEAS_FULL", "amount": 1 } ]
+          [ { "id": "ItemId.TRIDENT_OF_THE_SEAS_FULL", "amount": 1 } ]
         ]
       },
       {
         "chance": 0.3,
         "logLoot": true,
         "items": [
-          [ { "id": "ItemID.KRAKEN_TENTACLE", "amount": 1 } ]
+          [ { "id": "ItemId.KRAKEN_TENTACLE", "amount": 1 } ]
         ]
       },
       {
         "chance": 0.78,
         "logLoot": true,
         "items": [
-          [ { "id": "ItemID.CLUE_SCROLL_HARD", "amount": 1 } ]
+          [ { "id": "ItemId.CLUE_SCROLL_HARD", "amount": 1 } ]
         ]
       },
       {
         "chance": 5,
         "items": [
-          [ { "id": "ItemID.SNAPDRAGON_SEED", "amount": 1 } ],
-          [ { "id": "ItemID.TORSTOL_SEED", "amount": 1 } ],
-          [ { "id": "ItemID.GRIMY_RANARR_WEED", "amount": 1 } ],
-          [ { "id": "ItemID.GRIMY_LANTADYME", "amount": 1 } ]
+          [ { "id": "ItemId.SNAPDRAGON_SEED", "amount": 1 } ],
+          [ { "id": "ItemId.TORSTOL_SEED", "amount": 1 } ],
+          [ { "id": "ItemId.GRIMY_RANARR_WEED", "amount": 1 } ],
+          [ { "id": "ItemId.GRIMY_LANTADYME", "amount": 1 } ]
         ]
       },
       {
         "chance": 20,
         "items": [
-          [ { "id": "ItemID.ADAMANT_SPEAR", "amount": 1 } ],
-          [ { "id": "ItemID.RUNE_WARHAMMER", "amount": 1 } ],
-          [ { "id": "ItemID.BATTLESTAFF", "amount": 1 } ],
-          [ { "id": "ItemID.WATER_BATTLESTAFF", "amount": 1 } ],
-          [ { "id": "ItemID.MYSTIC_WATER_STAFF", "amount": 1 } ],
-          [ { "id": "ItemID.BELLADONNA_SEED", "amount": 1 } ],
-          [ { "id": "ItemID.TOADFLAX_SEED", "amount": 1 } ],
-          [ { "id": "ItemID.IRIT_SEED", "amount": 1 } ],
-          [ { "id": "ItemID.AVANTOE_SEED", "amount": 1 } ],
-          [ { "id": "ItemID.KWUARM_SEED", "amount": 1 } ],
-          [ { "id": "ItemID.LANTADYME_SEED", "amount": 1 } ],
-          [ { "id": "ItemID.CADANTINE_SEED", "amount": 1 } ],
-          [ { "id": "ItemID.POISON_IVY_SEED", "amount": 1 } ],
-          [ { "id": "ItemID.CACTUS_SEED", "amount": 1 } ],
-          [ { "id": "ItemID.GRIMY_IRIT_LEAF", "amount": 1 } ],
-          [ { "id": "ItemID.GRIMY_AVANTOE", "amount": 1 } ],
-          [ { "id": "ItemID.GRIMY_KWUARM", "amount": 1 } ],
-          [ { "id": "ItemID.GRIMY_CADANTINE", "amount": 1 } ],
-          [ { "id": "ItemID.GRIMY_DWARF_WEED", "amount": 1 } ],
-          [ { "id": "ItemID.COINS", "amount": 123, "maxAmount": 19770 } ],
-          [ { "id": "ItemID.BUCKET", "amount": 1 } ],
-          [ { "id": "ItemID.RAW_LOBSTER_NOTED", "amount": 3 } ],
-          [ { "id": "ItemID.WATER_ORB_NOTED", "amount": 2 } ],
-          [ { "id": "ItemID.WATER_TALISMAN", "amount": 1 } ],
-          [ { "id": "ItemID.CHAOS_TALISMAN", "amount": 1 } ],
-          [ { "id": "ItemID.OYSTER", "amount": 1 } ],
-          [ { "id": "ItemID.SWORDFISH", "amount": 2 } ],
-          [ { "id": "ItemID.SHARK", "amount": 1 } ],
-          [ { "id": "ItemID.ANTIDOTE_PLUS_PLUS_4_NOTED", "amount": 1 } ],
-          [ { "id": "ItemID.VIAL_OF_WATER_NOTED", "amount": 50 } ]
+          [ { "id": "ItemId.ADAMANT_SPEAR", "amount": 1 } ],
+          [ { "id": "ItemId.RUNE_WARHAMMER", "amount": 1 } ],
+          [ { "id": "ItemId.BATTLESTAFF", "amount": 1 } ],
+          [ { "id": "ItemId.WATER_BATTLESTAFF", "amount": 1 } ],
+          [ { "id": "ItemId.MYSTIC_WATER_STAFF", "amount": 1 } ],
+          [ { "id": "ItemId.BELLADONNA_SEED", "amount": 1 } ],
+          [ { "id": "ItemId.TOADFLAX_SEED", "amount": 1 } ],
+          [ { "id": "ItemId.IRIT_SEED", "amount": 1 } ],
+          [ { "id": "ItemId.AVANTOE_SEED", "amount": 1 } ],
+          [ { "id": "ItemId.KWUARM_SEED", "amount": 1 } ],
+          [ { "id": "ItemId.LANTADYME_SEED", "amount": 1 } ],
+          [ { "id": "ItemId.CADANTINE_SEED", "amount": 1 } ],
+          [ { "id": "ItemId.POISON_IVY_SEED", "amount": 1 } ],
+          [ { "id": "ItemId.CACTUS_SEED", "amount": 1 } ],
+          [ { "id": "ItemId.GRIMY_IRIT_LEAF", "amount": 1 } ],
+          [ { "id": "ItemId.GRIMY_AVANTOE", "amount": 1 } ],
+          [ { "id": "ItemId.GRIMY_KWUARM", "amount": 1 } ],
+          [ { "id": "ItemId.GRIMY_CADANTINE", "amount": 1 } ],
+          [ { "id": "ItemId.GRIMY_DWARF_WEED", "amount": 1 } ],
+          [ { "id": "ItemId.COINS", "amount": 123, "maxAmount": 19770 } ],
+          [ { "id": "ItemId.BUCKET", "amount": 1 } ],
+          [ { "id": "ItemId.RAW_LOBSTER_NOTED", "amount": 3 } ],
+          [ { "id": "ItemId.WATER_ORB_NOTED", "amount": 2 } ],
+          [ { "id": "ItemId.WATER_TALISMAN", "amount": 1 } ],
+          [ { "id": "ItemId.CHAOS_TALISMAN", "amount": 1 } ],
+          [ { "id": "ItemId.OYSTER", "amount": 1 } ],
+          [ { "id": "ItemId.SWORDFISH", "amount": 2 } ],
+          [ { "id": "ItemId.SHARK", "amount": 1 } ],
+          [ { "id": "ItemId.ANTIDOTE_PLUS_PLUS_4_NOTED", "amount": 1 } ],
+          [ { "id": "ItemId.VIAL_OF_WATER_NOTED", "amount": 50 } ]
         ]
       },
       {
         "chance": 99,
         "items": [
-          [ { "id": "ItemID.STAFF_OF_WATER", "amount": 1 } ],
-          [ { "id": "ItemID.RUNE_MED_HELM", "amount": 1 } ],
-          [ { "id": "ItemID.STEAM_RUNE", "amount": 7 } ],
-          [ { "id": "ItemID.FIRE_RUNE", "amount": 30 } ],
-          [ { "id": "ItemID.DEATH_RUNE", "amount": 30 } ],
-          [ { "id": "ItemID.GRIMY_GUAM_LEAF", "amount": 1 } ],
-          [ { "id": "ItemID.GRIMY_MARRENTILL", "amount": 1 } ],
-          [ { "id": "ItemID.GRIMY_TARROMIN", "amount": 1 } ],
-          [ { "id": "ItemID.GRIMY_HARRALANDER", "amount": 1 } ],
-          [ { "id": "ItemID.OLD_BOOT", "amount": 1 } ],
-          [ { "id": "ItemID.SEAWEED_NOTED", "amount": 30 } ]
+          [ { "id": "ItemId.STAFF_OF_WATER", "amount": 1 } ],
+          [ { "id": "ItemId.RUNE_MED_HELM", "amount": 1 } ],
+          [ { "id": "ItemId.STEAM_RUNE", "amount": 7 } ],
+          [ { "id": "ItemId.FIRE_RUNE", "amount": 30 } ],
+          [ { "id": "ItemId.DEATH_RUNE", "amount": 30 } ],
+          [ { "id": "ItemId.GRIMY_GUAM_LEAF", "amount": 1 } ],
+          [ { "id": "ItemId.GRIMY_MARRENTILL", "amount": 1 } ],
+          [ { "id": "ItemId.GRIMY_TARROMIN", "amount": 1 } ],
+          [ { "id": "ItemId.GRIMY_HARRALANDER", "amount": 1 } ],
+          [ { "id": "ItemId.OLD_BOOT", "amount": 1 } ],
+          [ { "id": "ItemId.SEAWEED_NOTED", "amount": 30 } ]
         ]
       }
     ]
   },
   {
-    "id": "NpcID.CURSED_WHIRLPOOL_127_16014",
+    "id": "NpcId.CURSED_WHIRLPOOL_127_16014",
     "noclip": true,
     "combatScript": "cursedkraken",
     "hitpoints": 200,
@@ -1672,7 +1672,7 @@
         "maxHit": 15,
         "attackSpeed": 6,
         "targetGraphic": { "id": 163, "height": 124 },
-        "projectileID": 162,
+        "projectileId": 162,
         "useSplash": true
       }
     ],
@@ -1684,104 +1684,104 @@
         "chance": 0.083,
         "logLoot": true,
         "items": [
-          [ { "id": "ItemID.CLUE_SCROLL_ELITE", "amount": 1 } ]
+          [ { "id": "ItemId.CLUE_SCROLL_ELITE", "amount": 1 } ]
         ]
       },
       {
         "chance": 0.12,
         "logLoot": true,
         "items": [
-          [ { "id": "ItemID.IMBUED_HEART", "amount": 1, "weight": 1 } ],
-          [ { "id": "ItemID.ETERNAL_GEM", "amount": 1, "weight": 1 } ],
-          [ { "id": "ItemID.DUST_BATTLESTAFF", "amount": 1, "weight": 3 } ],
-          [ { "id": "ItemID.MIST_BATTLESTAFF", "amount": 1, "weight": 3 } ]
+          [ { "id": "ItemId.IMBUED_HEART", "amount": 1, "weight": 1 } ],
+          [ { "id": "ItemId.ETERNAL_GEM", "amount": 1, "weight": 1 } ],
+          [ { "id": "ItemId.DUST_BATTLESTAFF", "amount": 1, "weight": 3 } ],
+          [ { "id": "ItemId.MIST_BATTLESTAFF", "amount": 1, "weight": 3 } ]
         ]
       },
       {
         "chance": 0.15,
         "logLoot": true,
         "items": [
-          [ { "id": "ItemID.TRIDENT_OF_THE_SEAS_FULL", "amount": 1 } ]
+          [ { "id": "ItemId.TRIDENT_OF_THE_SEAS_FULL", "amount": 1 } ]
         ]
       },
       {
         "chance": 0.3,
         "logLoot": true,
         "items": [
-          [ { "id": "ItemID.KRAKEN_TENTACLE", "amount": 1 } ]
+          [ { "id": "ItemId.KRAKEN_TENTACLE", "amount": 1 } ]
         ]
       },
       {
         "chance": 0.78,
         "logLoot": true,
         "items": [
-          [ { "id": "ItemID.CLUE_SCROLL_HARD", "amount": 1 } ]
+          [ { "id": "ItemId.CLUE_SCROLL_HARD", "amount": 1 } ]
         ]
       },
       {
         "chance": 5,
         "items": [
-          [ { "id": "ItemID.SNAPDRAGON_SEED", "amount": 1 } ],
-          [ { "id": "ItemID.TORSTOL_SEED", "amount": 1 } ],
-          [ { "id": "ItemID.GRIMY_RANARR_WEED", "amount": 1 } ],
-          [ { "id": "ItemID.GRIMY_LANTADYME", "amount": 1 } ]
+          [ { "id": "ItemId.SNAPDRAGON_SEED", "amount": 1 } ],
+          [ { "id": "ItemId.TORSTOL_SEED", "amount": 1 } ],
+          [ { "id": "ItemId.GRIMY_RANARR_WEED", "amount": 1 } ],
+          [ { "id": "ItemId.GRIMY_LANTADYME", "amount": 1 } ]
         ]
       },
       {
         "chance": 20,
         "items": [
-          [ { "id": "ItemID.ADAMANT_SPEAR", "amount": 1 } ],
-          [ { "id": "ItemID.RUNE_WARHAMMER", "amount": 1 } ],
-          [ { "id": "ItemID.BATTLESTAFF", "amount": 1 } ],
-          [ { "id": "ItemID.WATER_BATTLESTAFF", "amount": 1 } ],
-          [ { "id": "ItemID.MYSTIC_WATER_STAFF", "amount": 1 } ],
-          [ { "id": "ItemID.BELLADONNA_SEED", "amount": 1 } ],
-          [ { "id": "ItemID.TOADFLAX_SEED", "amount": 1 } ],
-          [ { "id": "ItemID.IRIT_SEED", "amount": 1 } ],
-          [ { "id": "ItemID.AVANTOE_SEED", "amount": 1 } ],
-          [ { "id": "ItemID.KWUARM_SEED", "amount": 1 } ],
-          [ { "id": "ItemID.LANTADYME_SEED", "amount": 1 } ],
-          [ { "id": "ItemID.CADANTINE_SEED", "amount": 1 } ],
-          [ { "id": "ItemID.POISON_IVY_SEED", "amount": 1 } ],
-          [ { "id": "ItemID.CACTUS_SEED", "amount": 1 } ],
-          [ { "id": "ItemID.GRIMY_IRIT_LEAF", "amount": 1 } ],
-          [ { "id": "ItemID.GRIMY_AVANTOE", "amount": 1 } ],
-          [ { "id": "ItemID.GRIMY_KWUARM", "amount": 1 } ],
-          [ { "id": "ItemID.GRIMY_CADANTINE", "amount": 1 } ],
-          [ { "id": "ItemID.GRIMY_DWARF_WEED", "amount": 1 } ],
-          [ { "id": "ItemID.COINS", "amount": 123, "maxAmount": 19770 } ],
-          [ { "id": "ItemID.BUCKET", "amount": 1 } ],
-          [ { "id": "ItemID.RAW_LOBSTER_NOTED", "amount": 3 } ],
-          [ { "id": "ItemID.WATER_ORB_NOTED", "amount": 2 } ],
-          [ { "id": "ItemID.WATER_TALISMAN", "amount": 1 } ],
-          [ { "id": "ItemID.CHAOS_TALISMAN", "amount": 1 } ],
-          [ { "id": "ItemID.OYSTER", "amount": 1 } ],
-          [ { "id": "ItemID.SWORDFISH", "amount": 2 } ],
-          [ { "id": "ItemID.SHARK", "amount": 1 } ],
-          [ { "id": "ItemID.ANTIDOTE_PLUS_PLUS_4_NOTED", "amount": 1 } ],
-          [ { "id": "ItemID.VIAL_OF_WATER_NOTED", "amount": 50 } ]
+          [ { "id": "ItemId.ADAMANT_SPEAR", "amount": 1 } ],
+          [ { "id": "ItemId.RUNE_WARHAMMER", "amount": 1 } ],
+          [ { "id": "ItemId.BATTLESTAFF", "amount": 1 } ],
+          [ { "id": "ItemId.WATER_BATTLESTAFF", "amount": 1 } ],
+          [ { "id": "ItemId.MYSTIC_WATER_STAFF", "amount": 1 } ],
+          [ { "id": "ItemId.BELLADONNA_SEED", "amount": 1 } ],
+          [ { "id": "ItemId.TOADFLAX_SEED", "amount": 1 } ],
+          [ { "id": "ItemId.IRIT_SEED", "amount": 1 } ],
+          [ { "id": "ItemId.AVANTOE_SEED", "amount": 1 } ],
+          [ { "id": "ItemId.KWUARM_SEED", "amount": 1 } ],
+          [ { "id": "ItemId.LANTADYME_SEED", "amount": 1 } ],
+          [ { "id": "ItemId.CADANTINE_SEED", "amount": 1 } ],
+          [ { "id": "ItemId.POISON_IVY_SEED", "amount": 1 } ],
+          [ { "id": "ItemId.CACTUS_SEED", "amount": 1 } ],
+          [ { "id": "ItemId.GRIMY_IRIT_LEAF", "amount": 1 } ],
+          [ { "id": "ItemId.GRIMY_AVANTOE", "amount": 1 } ],
+          [ { "id": "ItemId.GRIMY_KWUARM", "amount": 1 } ],
+          [ { "id": "ItemId.GRIMY_CADANTINE", "amount": 1 } ],
+          [ { "id": "ItemId.GRIMY_DWARF_WEED", "amount": 1 } ],
+          [ { "id": "ItemId.COINS", "amount": 123, "maxAmount": 19770 } ],
+          [ { "id": "ItemId.BUCKET", "amount": 1 } ],
+          [ { "id": "ItemId.RAW_LOBSTER_NOTED", "amount": 3 } ],
+          [ { "id": "ItemId.WATER_ORB_NOTED", "amount": 2 } ],
+          [ { "id": "ItemId.WATER_TALISMAN", "amount": 1 } ],
+          [ { "id": "ItemId.CHAOS_TALISMAN", "amount": 1 } ],
+          [ { "id": "ItemId.OYSTER", "amount": 1 } ],
+          [ { "id": "ItemId.SWORDFISH", "amount": 2 } ],
+          [ { "id": "ItemId.SHARK", "amount": 1 } ],
+          [ { "id": "ItemId.ANTIDOTE_PLUS_PLUS_4_NOTED", "amount": 1 } ],
+          [ { "id": "ItemId.VIAL_OF_WATER_NOTED", "amount": 50 } ]
         ]
       },
       {
         "chance": 99,
         "items": [
-          [ { "id": "ItemID.STAFF_OF_WATER", "amount": 1 } ],
-          [ { "id": "ItemID.RUNE_MED_HELM", "amount": 1 } ],
-          [ { "id": "ItemID.STEAM_RUNE", "amount": 7 } ],
-          [ { "id": "ItemID.FIRE_RUNE", "amount": 30 } ],
-          [ { "id": "ItemID.DEATH_RUNE", "amount": 30 } ],
-          [ { "id": "ItemID.GRIMY_GUAM_LEAF", "amount": 1 } ],
-          [ { "id": "ItemID.GRIMY_MARRENTILL", "amount": 1 } ],
-          [ { "id": "ItemID.GRIMY_TARROMIN", "amount": 1 } ],
-          [ { "id": "ItemID.GRIMY_HARRALANDER", "amount": 1 } ],
-          [ { "id": "ItemID.OLD_BOOT", "amount": 1 } ],
-          [ { "id": "ItemID.SEAWEED_NOTED", "amount": 30 } ]
+          [ { "id": "ItemId.STAFF_OF_WATER", "amount": 1 } ],
+          [ { "id": "ItemId.RUNE_MED_HELM", "amount": 1 } ],
+          [ { "id": "ItemId.STEAM_RUNE", "amount": 7 } ],
+          [ { "id": "ItemId.FIRE_RUNE", "amount": 30 } ],
+          [ { "id": "ItemId.DEATH_RUNE", "amount": 30 } ],
+          [ { "id": "ItemId.GRIMY_GUAM_LEAF", "amount": 1 } ],
+          [ { "id": "ItemId.GRIMY_MARRENTILL", "amount": 1 } ],
+          [ { "id": "ItemId.GRIMY_TARROMIN", "amount": 1 } ],
+          [ { "id": "ItemId.GRIMY_HARRALANDER", "amount": 1 } ],
+          [ { "id": "ItemId.OLD_BOOT", "amount": 1 } ],
+          [ { "id": "ItemId.SEAWEED_NOTED", "amount": 30 } ]
         ]
       }
     ]
   },
   {
-    "id": "NpcID.CURSED_LIZARDMAN_SHAMAN_150_16015",
+    "id": "NpcId.CURSED_LIZARDMAN_SHAMAN_150_16015",
     "combatScript": "LizardmanShamanCS",
     "hitpoints": 200,
     "attackLevel": 120,
@@ -1811,7 +1811,7 @@
         "maxHit": 31,
         "attackSpeed": 4,
         "attackRange": 5,
-        "projectileID": 1291
+        "projectileId": 1291
       }
     ],
     "saveKillCount": true,
@@ -1821,102 +1821,102 @@
         "chance": 0.08,
         "logLoot": true,
         "items": [
-          [ { "id": "ItemID.DRAGON_WARHAMMER", "amount": 1 } ]
+          [ { "id": "ItemId.DRAGON_WARHAMMER", "amount": 1 } ]
         ]
       },
       {
         "chance": 0.083,
         "logLoot": true,
         "items": [
-          [ { "id": "ItemID.CLUE_SCROLL_ELITE", "amount": 1 } ]
+          [ { "id": "ItemId.CLUE_SCROLL_ELITE", "amount": 1 } ]
         ]
       },
       {
         "chance": 0.12,
         "logLoot": true,
         "items": [
-          [ { "id": "ItemID.IMBUED_HEART", "amount": 1, "weight": 1 } ],
-          [ { "id": "ItemID.ETERNAL_GEM", "amount": 1, "weight": 1 } ],
-          [ { "id": "ItemID.DUST_BATTLESTAFF", "amount": 1, "weight": 3 } ],
-          [ { "id": "ItemID.MIST_BATTLESTAFF", "amount": 1, "weight": 3 } ]
+          [ { "id": "ItemId.IMBUED_HEART", "amount": 1, "weight": 1 } ],
+          [ { "id": "ItemId.ETERNAL_GEM", "amount": 1, "weight": 1 } ],
+          [ { "id": "ItemId.DUST_BATTLESTAFF", "amount": 1, "weight": 3 } ],
+          [ { "id": "ItemId.MIST_BATTLESTAFF", "amount": 1, "weight": 3 } ]
         ]
       },
       {
         "chance": 0.4,
         "logLoot": true,
         "items": [
-          [ { "id": "ItemID.XERICS_TALISMAN_INERT", "amount": 1 } ]
+          [ { "id": "ItemId.XERICS_TALISMAN_INERT", "amount": 1 } ]
         ]
       },
       {
         "chance": 0.5,
         "logLoot": true,
         "items": [
-          [ { "id": "ItemID.CLUE_SCROLL_HARD", "amount": 1 } ]
+          [ { "id": "ItemId.CLUE_SCROLL_HARD", "amount": 1 } ]
         ]
       },
       {
         "chance": 5,
         "items": [
-          [ { "id": "ItemID.RUNE_BATTLEAXE", "amount": 1 } ],
-          [ { "id": "ItemID.WATERMELON_SEED", "amount": 15 } ],
-          [ { "id": "ItemID.TORSTOL_SEED", "amount": 1 } ],
-          [ { "id": "ItemID.MAPLE_SEED", "amount": 1 } ],
-          [ { "id": "ItemID.PAPAYA_TREE_SEED", "amount": 1 } ],
-          [ { "id": "ItemID.PALM_TREE_SEED", "amount": 1 } ],
-          [ { "id": "ItemID.YEW_SEED", "amount": 1 } ],
-          [ { "id": "ItemID.MAGIC_SEED", "amount": 1 } ],
-          [ { "id": "ItemID.SPIRIT_SEED", "amount": 1 } ]
+          [ { "id": "ItemId.RUNE_BATTLEAXE", "amount": 1 } ],
+          [ { "id": "ItemId.WATERMELON_SEED", "amount": 15 } ],
+          [ { "id": "ItemId.TORSTOL_SEED", "amount": 1 } ],
+          [ { "id": "ItemId.MAPLE_SEED", "amount": 1 } ],
+          [ { "id": "ItemId.PAPAYA_TREE_SEED", "amount": 1 } ],
+          [ { "id": "ItemId.PALM_TREE_SEED", "amount": 1 } ],
+          [ { "id": "ItemId.YEW_SEED", "amount": 1 } ],
+          [ { "id": "ItemId.MAGIC_SEED", "amount": 1 } ],
+          [ { "id": "ItemId.SPIRIT_SEED", "amount": 1 } ]
         ]
       },
       {
         "chance": 20,
         "items": [
-          [ { "id": "ItemID.RED_DHIDE_VAMB", "amount": 1 } ],
-          [ { "id": "ItemID.MYSTIC_EARTH_STAFF", "amount": 1 } ],
-          [ { "id": "ItemID.EARTH_BATTLESTAFF", "amount": 1 } ],
-          [ { "id": "ItemID.RUNE_MED_HELM", "amount": 1 } ],
-          [ { "id": "ItemID.RUNE_CHAINBODY", "amount": 1 } ],
-          [ { "id": "ItemID.RUNE_WARHAMMER", "amount": 1 } ],
-          [ { "id": "ItemID.RUNITE_ORE_NOTED", "amount": 3, "maxAmount": 5 } ],
-          [ { "id": "ItemID.GRIMY_KWUARM_NOTED", "amount": 1, "maxAmount": 3 } ],
-          [ { "id": "ItemID.GRIMY_DWARF_WEED_NOTED", "amount": 1, "maxAmount": 3 } ],
-          [ { "id": "ItemID.GRIMY_LANTADYME_NOTED", "amount": 1, "maxAmount": 3 } ],
-          [ { "id": "ItemID.GRIMY_CADANTINE_NOTED", "amount": 1, "maxAmount": 3 } ],
-          [ { "id": "ItemID.WILLOW_SEED", "amount": 1 } ],
-          [ { "id": "ItemID.RANARR_SEED", "amount": 1 } ],
-          [ { "id": "ItemID.SNAPDRAGON_SEED", "amount": 1 } ],
-          [ { "id": "ItemID.CHAOS_RUNE", "amount": 45, "maxAmount": 57 } ],
-          [ { "id": "ItemID.FIRE_RUNE", "amount": 66, "maxAmount": 74 } ],
-          [ { "id": "ItemID.DEATH_RUNE", "amount": 22, "maxAmount": 30 } ]
+          [ { "id": "ItemId.RED_DHIDE_VAMB", "amount": 1 } ],
+          [ { "id": "ItemId.MYSTIC_EARTH_STAFF", "amount": 1 } ],
+          [ { "id": "ItemId.EARTH_BATTLESTAFF", "amount": 1 } ],
+          [ { "id": "ItemId.RUNE_MED_HELM", "amount": 1 } ],
+          [ { "id": "ItemId.RUNE_CHAINBODY", "amount": 1 } ],
+          [ { "id": "ItemId.RUNE_WARHAMMER", "amount": 1 } ],
+          [ { "id": "ItemId.RUNITE_ORE_NOTED", "amount": 3, "maxAmount": 5 } ],
+          [ { "id": "ItemId.GRIMY_KWUARM_NOTED", "amount": 1, "maxAmount": 3 } ],
+          [ { "id": "ItemId.GRIMY_DWARF_WEED_NOTED", "amount": 1, "maxAmount": 3 } ],
+          [ { "id": "ItemId.GRIMY_LANTADYME_NOTED", "amount": 1, "maxAmount": 3 } ],
+          [ { "id": "ItemId.GRIMY_CADANTINE_NOTED", "amount": 1, "maxAmount": 3 } ],
+          [ { "id": "ItemId.WILLOW_SEED", "amount": 1 } ],
+          [ { "id": "ItemId.RANARR_SEED", "amount": 1 } ],
+          [ { "id": "ItemId.SNAPDRAGON_SEED", "amount": 1 } ],
+          [ { "id": "ItemId.CHAOS_RUNE", "amount": 45, "maxAmount": 57 } ],
+          [ { "id": "ItemId.FIRE_RUNE", "amount": 66, "maxAmount": 74 } ],
+          [ { "id": "ItemId.DEATH_RUNE", "amount": 22, "maxAmount": 30 } ]
         ]
       },
       {
         "chance": 99,
         "items": [
-          [ { "id": "ItemID.IRON_ORE_NOTED", "amount": 24, "maxAmount": 35 } ],
-          [ { "id": "ItemID.COAL_NOTED", "amount": 20, "maxAmount": 23 } ],
-          [ { "id": "ItemID.AIR_RUNE", "amount": 71, "maxAmount": 80 } ],
-          [ { "id": "ItemID.COINS", "amount": 100, "maxAmount": 6000 } ],
-          [ { "id": "ItemID.XERICIAN_FABRIC", "amount": 2 } ],
-          [ { "id": "ItemID.LIZARDMAN_FANG", "amount": 10, "maxAmount": 14 } ],
-          [ { "id": "ItemID.CHILLI_POTATO", "amount": 2 } ]
+          [ { "id": "ItemId.IRON_ORE_NOTED", "amount": 24, "maxAmount": 35 } ],
+          [ { "id": "ItemId.COAL_NOTED", "amount": 20, "maxAmount": 23 } ],
+          [ { "id": "ItemId.AIR_RUNE", "amount": 71, "maxAmount": 80 } ],
+          [ { "id": "ItemId.COINS", "amount": 100, "maxAmount": 6000 } ],
+          [ { "id": "ItemId.XERICIAN_FABRIC", "amount": 2 } ],
+          [ { "id": "ItemId.LIZARDMAN_FANG", "amount": 10, "maxAmount": 14 } ],
+          [ { "id": "ItemId.CHILLI_POTATO", "amount": 2 } ]
         ]
       },
       {
         "chance": 100,
         "items": [
-          [ { "id": "ItemID.BIG_BONES", "amount": 1 } ]
+          [ { "id": "ItemId.BIG_BONES", "amount": 1 } ]
         ]
       }
     ]
   },
   {
-    "id": "NpcID.CHAOS_ELEMENTAL_610_16016",
+    "id": "NpcId.CHAOS_ELEMENTAL_610_16016",
     "combatScript": "ChaosElementalCS",
     "respawnDelay": 36000,
     "hitpoints": 2500,
-    "hitpointsBarID": 2,
+    "hitpointsBarId": 2,
     "aggressive": true,
     "aggressiveRange": 8,
     "attackLevel": 270,
@@ -1962,7 +1962,7 @@
         "attackSpeed": 5,
         "castGraphic": { "id": 556, "height": 100 },
         "targetGraphic": { "id": 558, "height": 100 },
-        "projectileID": 557,
+        "projectileId": 557,
         "multiTarget": true
       },
       {
@@ -1973,7 +1973,7 @@
         "attackSpeed": 5,
         "castGraphic": { "id": 556, "height": 100 },
         "targetGraphic": { "id": 558, "height": 100 },
-        "projectileID": 557,
+        "projectileId": 557,
         "multiTarget": true
       },
       {
@@ -1993,7 +1993,7 @@
         "attackSpeed": 5,
         "castGraphic": { "id": 556, "height": 100 },
         "targetGraphic": { "id": 558, "height": 100 },
-        "projectileID": 557,
+        "projectileId": 557,
         "multiTarget": true,
         "speedMinDistance": 8,
         "targetTile": true,
@@ -2011,13 +2011,13 @@
         "chance": 0.33,
         "lootBroadcast": true,
         "items": [
-          [ { "id": "ItemID.PET_CHAOS_ELEMENTAL", "amount": 1 } ]
+          [ { "id": "ItemId.PET_CHAOS_ELEMENTAL", "amount": 1 } ]
         ]
       },
       {
         "chance": 100,
         "items": [
-          [ { "id": "ItemID.BLOODY_KEY", "amount": 1 } ]
+          [ { "id": "ItemId.BLOODY_KEY", "amount": 1 } ]
         ]
       }
     ]

@@ -1,9 +1,9 @@
 package script.packetdecoder.widget;
 
 import com.palidino.osrs.io.ValueEnteredEvent;
-import com.palidino.osrs.io.cache.ItemID;
+import com.palidino.osrs.io.cache.ItemId;
 import com.palidino.osrs.io.cache.WidgetChild;
-import com.palidino.osrs.io.cache.WidgetID;
+import com.palidino.osrs.io.cache.WidgetId;
 import com.palidino.osrs.model.Tile;
 import com.palidino.osrs.model.item.Item;
 import com.palidino.osrs.model.player.AchievementDiary;
@@ -14,10 +14,10 @@ import com.palidino.osrs.model.player.combat.CombatSpellDef;
 import com.palidino.util.Time;
 
 public class SpellbookWidget {
-    public static void widget218(Player player, int index, int childID, int slot, int itemID) {
+    public static void widget218(Player player, int index, int childId, int slot, int itemId) {
         // Tab
         int height = 0;
-        WidgetChild.SpellBook spellBookChild = WidgetChild.SpellBook.get(childID);
+        WidgetChild.SpellBook spellBookChild = WidgetChild.SpellBook.get(childId);
         if (spellBookChild == null) {
             return;
         }
@@ -72,15 +72,15 @@ public class SpellbookWidget {
             } else if (player.getSkills().getLevel(Skills.MAGIC) < 25) {
                 player.getGameEncoder().sendMessage("You need a Magic level of 25 to cast this spell.");
                 break;
-            } else if (!player.getMagic().hasRunes(ItemID.FIRE_RUNE, 1)
-                    || !player.getMagic().hasRunes(ItemID.AIR_RUNE, 3)
-                    || !player.getMagic().hasRunes(ItemID.LAW_RUNE, 1)) {
+            } else if (!player.getMagic().hasRunes(ItemId.FIRE_RUNE, 1)
+                    || !player.getMagic().hasRunes(ItemId.AIR_RUNE, 3)
+                    || !player.getMagic().hasRunes(ItemId.LAW_RUNE, 1)) {
                 player.getGameEncoder().sendMessage("You do not have enough runes to cast this spell.");
                 break;
             }
-            player.getMagic().deleteRunes(ItemID.FIRE_RUNE, 1);
-            player.getMagic().deleteRunes(ItemID.AIR_RUNE, 3);
-            player.getMagic().deleteRunes(ItemID.LAW_RUNE, 1);
+            player.getMagic().deleteRunes(ItemId.FIRE_RUNE, 1);
+            player.getMagic().deleteRunes(ItemId.AIR_RUNE, 3);
+            player.getMagic().deleteRunes(ItemId.LAW_RUNE, 1);
             player.getSkills().addXP(Skills.MAGIC, 35);
             player.getMovement().animatedTeleport(new Tile(3212, 3428), Magic.NORMAL_MAGIC_ANIMATION_START,
                     Magic.NORMAL_MAGIC_ANIMATION_END, Magic.NORMAL_MAGIC_GRAPHIC, null, 2);
@@ -96,15 +96,15 @@ public class SpellbookWidget {
             } else if (player.getSkills().getLevel(Skills.MAGIC) < 31) {
                 player.getGameEncoder().sendMessage("You need a Magic level of 31 to cast this spell.");
                 break;
-            } else if (!player.getMagic().hasRunes(ItemID.EARTH_RUNE, 1)
-                    || !player.getMagic().hasRunes(ItemID.AIR_RUNE, 3)
-                    || !player.getMagic().hasRunes(ItemID.LAW_RUNE, 1)) {
+            } else if (!player.getMagic().hasRunes(ItemId.EARTH_RUNE, 1)
+                    || !player.getMagic().hasRunes(ItemId.AIR_RUNE, 3)
+                    || !player.getMagic().hasRunes(ItemId.LAW_RUNE, 1)) {
                 player.getGameEncoder().sendMessage("You do not have enough runes to cast this spell.");
                 break;
             }
-            player.getMagic().deleteRunes(ItemID.EARTH_RUNE, 1);
-            player.getMagic().deleteRunes(ItemID.AIR_RUNE, 3);
-            player.getMagic().deleteRunes(ItemID.LAW_RUNE, 1);
+            player.getMagic().deleteRunes(ItemId.EARTH_RUNE, 1);
+            player.getMagic().deleteRunes(ItemId.AIR_RUNE, 3);
+            player.getMagic().deleteRunes(ItemId.LAW_RUNE, 1);
             player.getSkills().addXP(Skills.MAGIC, 41);
             player.getMovement().animatedTeleport(new Tile(3221, 3218), Magic.NORMAL_MAGIC_ANIMATION_START,
                     Magic.NORMAL_MAGIC_ANIMATION_END, Magic.NORMAL_MAGIC_GRAPHIC, null, 2);
@@ -120,15 +120,15 @@ public class SpellbookWidget {
             } else if (player.getSkills().getLevel(Skills.MAGIC) < 37) {
                 player.getGameEncoder().sendMessage("You need a Magic level of 37 to cast this spell.");
                 break;
-            } else if (!player.getMagic().hasRunes(ItemID.WATER_RUNE, 1)
-                    || !player.getMagic().hasRunes(ItemID.AIR_RUNE, 3)
-                    || !player.getMagic().hasRunes(ItemID.LAW_RUNE, 1)) {
+            } else if (!player.getMagic().hasRunes(ItemId.WATER_RUNE, 1)
+                    || !player.getMagic().hasRunes(ItemId.AIR_RUNE, 3)
+                    || !player.getMagic().hasRunes(ItemId.LAW_RUNE, 1)) {
                 player.getGameEncoder().sendMessage("You do not have enough runes to cast this spell.");
                 break;
             }
-            player.getMagic().deleteRunes(ItemID.WATER_RUNE, 1);
-            player.getMagic().deleteRunes(ItemID.AIR_RUNE, 3);
-            player.getMagic().deleteRunes(ItemID.LAW_RUNE, 1);
+            player.getMagic().deleteRunes(ItemId.WATER_RUNE, 1);
+            player.getMagic().deleteRunes(ItemId.AIR_RUNE, 3);
+            player.getMagic().deleteRunes(ItemId.LAW_RUNE, 1);
             player.getSkills().addXP(Skills.MAGIC, 48);
             player.getMovement().animatedTeleport(new Tile(2965, 3379), Magic.NORMAL_MAGIC_ANIMATION_START,
                     Magic.NORMAL_MAGIC_ANIMATION_END, Magic.NORMAL_MAGIC_GRAPHIC, null, 2);
@@ -144,15 +144,15 @@ public class SpellbookWidget {
             } else if (player.getSkills().getLevel(Skills.MAGIC) < 40) {
                 player.getGameEncoder().sendMessage("You need a Magic level of 40 to cast this spell.");
                 break;
-            } else if (!player.getMagic().hasRunes(ItemID.LAW_RUNE, 1)
-                    || !player.getMagic().hasRunes(ItemID.AIR_RUNE, 1)
-                    || !player.getMagic().hasRunes(ItemID.EARTH_RUNE, 1)) {
+            } else if (!player.getMagic().hasRunes(ItemId.LAW_RUNE, 1)
+                    || !player.getMagic().hasRunes(ItemId.AIR_RUNE, 1)
+                    || !player.getMagic().hasRunes(ItemId.EARTH_RUNE, 1)) {
                 player.getGameEncoder().sendMessage("You do not have enough runes to cast this spell.");
                 break;
             }
-            player.getMagic().deleteRunes(ItemID.LAW_RUNE, 1);
-            player.getMagic().deleteRunes(ItemID.AIR_RUNE, 1);
-            player.getMagic().deleteRunes(ItemID.EARTH_RUNE, 1);
+            player.getMagic().deleteRunes(ItemId.LAW_RUNE, 1);
+            player.getMagic().deleteRunes(ItemId.AIR_RUNE, 1);
+            player.getMagic().deleteRunes(ItemId.EARTH_RUNE, 1);
             player.getSkills().addXP(Skills.MAGIC, 30);
             player.getMovement().animatedTeleport(player.getWidgetManager().getHomeTile(),
                     Magic.NORMAL_MAGIC_ANIMATION_START, Magic.NORMAL_MAGIC_ANIMATION_END, Magic.NORMAL_MAGIC_GRAPHIC,
@@ -169,13 +169,13 @@ public class SpellbookWidget {
             } else if (player.getSkills().getLevel(Skills.MAGIC) < 45) {
                 player.getGameEncoder().sendMessage("You need a Magic level of 45 to cast this spell.");
                 break;
-            } else if (!player.getMagic().hasRunes(ItemID.AIR_RUNE, 5)
-                    || !player.getMagic().hasRunes(ItemID.LAW_RUNE, 1)) {
+            } else if (!player.getMagic().hasRunes(ItemId.AIR_RUNE, 5)
+                    || !player.getMagic().hasRunes(ItemId.LAW_RUNE, 1)) {
                 player.getGameEncoder().sendMessage("You do not have enough runes to cast this spell.");
                 break;
             }
-            player.getMagic().deleteRunes(ItemID.AIR_RUNE, 5);
-            player.getMagic().deleteRunes(ItemID.LAW_RUNE, 1);
+            player.getMagic().deleteRunes(ItemId.AIR_RUNE, 5);
+            player.getMagic().deleteRunes(ItemId.LAW_RUNE, 1);
             player.getSkills().addXP(Skills.MAGIC, 56);
             player.getMovement().animatedTeleport(new Tile(2757, 3478), Magic.NORMAL_MAGIC_ANIMATION_START,
                     Magic.NORMAL_MAGIC_ANIMATION_END, Magic.NORMAL_MAGIC_GRAPHIC, null, 2);
@@ -191,13 +191,13 @@ public class SpellbookWidget {
             } else if (player.getSkills().getLevel(Skills.MAGIC) < 51) {
                 player.getGameEncoder().sendMessage("You need a Magic level of 51 to cast this spell.");
                 break;
-            } else if (!player.getMagic().hasRunes(ItemID.WATER_RUNE, 2)
-                    || !player.getMagic().hasRunes(ItemID.LAW_RUNE, 2)) {
+            } else if (!player.getMagic().hasRunes(ItemId.WATER_RUNE, 2)
+                    || !player.getMagic().hasRunes(ItemId.LAW_RUNE, 2)) {
                 player.getGameEncoder().sendMessage("You do not have enough runes to cast this spell.");
                 break;
             }
-            player.getMagic().deleteRunes(ItemID.WATER_RUNE, 2);
-            player.getMagic().deleteRunes(ItemID.LAW_RUNE, 2);
+            player.getMagic().deleteRunes(ItemId.WATER_RUNE, 2);
+            player.getMagic().deleteRunes(ItemId.LAW_RUNE, 2);
             player.getSkills().addXP(Skills.MAGIC, 61);
             player.getMovement().animatedTeleport(new Tile(2661, 3305), Magic.NORMAL_MAGIC_ANIMATION_START,
                     Magic.NORMAL_MAGIC_ANIMATION_END, Magic.NORMAL_MAGIC_GRAPHIC, null, 2);
@@ -211,18 +211,18 @@ public class SpellbookWidget {
             } else if (player.getSkills().getLevel(Skills.MAGIC) < 80) {
                 player.getGameEncoder().sendMessage("Your Magic level is not high enough for this spell.");
                 break;
-            } else if (!player.getMagic().hasRunes(ItemID.FIRE_RUNE, 3)
-                    || !player.getMagic().hasRunes(ItemID.BLOOD_RUNE, 3)
-                    || !player.getMagic().hasRunes(ItemID.AIR_RUNE, 3)) {
+            } else if (!player.getMagic().hasRunes(ItemId.FIRE_RUNE, 3)
+                    || !player.getMagic().hasRunes(ItemId.BLOOD_RUNE, 3)
+                    || !player.getMagic().hasRunes(ItemId.AIR_RUNE, 3)) {
                 player.getGameEncoder().sendMessage("You do not have enough runes to cast this spell.");
                 break;
             } else if (player.getMagic().getChargeDelay() > 500) {
                 player.getGameEncoder().sendMessage("You can't recast that yet, your current Charge is too strong.");
                 break;
             }
-            player.getMagic().deleteRunes(ItemID.FIRE_RUNE, 3);
-            player.getMagic().deleteRunes(ItemID.BLOOD_RUNE, 3);
-            player.getMagic().deleteRunes(ItemID.AIR_RUNE, 3);
+            player.getMagic().deleteRunes(ItemId.FIRE_RUNE, 3);
+            player.getMagic().deleteRunes(ItemId.BLOOD_RUNE, 3);
+            player.getMagic().deleteRunes(ItemId.AIR_RUNE, 3);
             player.setAnimation(811);
             player.setGraphic(308, 124, 45);
             player.getMagic().setChargeDelay(600);
@@ -237,15 +237,15 @@ public class SpellbookWidget {
             } else if (player.getSkills().getLevel(Skills.MAGIC) < 54) {
                 player.getGameEncoder().sendMessage("You need a Magic level of 54 to cast this spell.");
                 break;
-            } else if (!player.getMagic().hasRunes(ItemID.LAW_RUNE, 2)
-                    || !player.getMagic().hasRunes(ItemID.FIRE_RUNE, 1)
-                    || !player.getMagic().hasRunes(ItemID.AIR_RUNE, 1)) {
+            } else if (!player.getMagic().hasRunes(ItemId.LAW_RUNE, 2)
+                    || !player.getMagic().hasRunes(ItemId.FIRE_RUNE, 1)
+                    || !player.getMagic().hasRunes(ItemId.AIR_RUNE, 1)) {
                 player.getGameEncoder().sendMessage("You do not have enough runes to cast this spell.");
                 break;
             }
-            player.getMagic().deleteRunes(ItemID.LAW_RUNE, 2);
-            player.getMagic().deleteRunes(ItemID.FIRE_RUNE, 1);
-            player.getMagic().deleteRunes(ItemID.AIR_RUNE, 1);
+            player.getMagic().deleteRunes(ItemId.LAW_RUNE, 2);
+            player.getMagic().deleteRunes(ItemId.FIRE_RUNE, 1);
+            player.getMagic().deleteRunes(ItemId.AIR_RUNE, 1);
             player.getSkills().addXP(Skills.MAGIC, 64);
             player.getMovement().animatedTeleport(new Tile(3094, 3470), Magic.ANCIENT_MAGIC_ANIMATION,
                     Magic.ANCIENT_MAGIC_GRAPHIC, 2);
@@ -261,13 +261,13 @@ public class SpellbookWidget {
             } else if (player.getSkills().getLevel(Skills.MAGIC) < 66) {
                 player.getGameEncoder().sendMessage("You need a Magic level of 66 to cast this spell.");
                 break;
-            } else if (!player.getMagic().hasRunes(ItemID.LAW_RUNE, 2)
-                    || !player.getMagic().hasRunes(ItemID.BLOOD_RUNE, 1)) {
+            } else if (!player.getMagic().hasRunes(ItemId.LAW_RUNE, 2)
+                    || !player.getMagic().hasRunes(ItemId.BLOOD_RUNE, 1)) {
                 player.getGameEncoder().sendMessage("You do not have enough runes to cast this spell.");
                 break;
             }
-            player.getMagic().deleteRunes(ItemID.LAW_RUNE, 2);
-            player.getMagic().deleteRunes(ItemID.BLOOD_RUNE, 1);
+            player.getMagic().deleteRunes(ItemId.LAW_RUNE, 2);
+            player.getMagic().deleteRunes(ItemId.BLOOD_RUNE, 1);
             player.getSkills().addXP(Skills.MAGIC, 76);
             player.getMovement().animatedTeleport(new Tile(3499, 3485), Magic.ANCIENT_MAGIC_ANIMATION,
                     Magic.ANCIENT_MAGIC_GRAPHIC, 2);
@@ -283,15 +283,15 @@ public class SpellbookWidget {
             } else if (player.getSkills().getLevel(Skills.MAGIC) < 78) {
                 player.getGameEncoder().sendMessage("You need a Magic level of 78 to cast this spell.");
                 break;
-            } else if (!player.getMagic().hasRunes(ItemID.LAW_RUNE, 2)
-                    || !player.getMagic().hasRunes(ItemID.FIRE_RUNE, 3)
-                    || !player.getMagic().hasRunes(ItemID.AIR_RUNE, 2)) {
+            } else if (!player.getMagic().hasRunes(ItemId.LAW_RUNE, 2)
+                    || !player.getMagic().hasRunes(ItemId.FIRE_RUNE, 3)
+                    || !player.getMagic().hasRunes(ItemId.AIR_RUNE, 2)) {
                 player.getGameEncoder().sendMessage("You do not have enough runes to cast this spell.");
                 break;
             }
-            player.getMagic().deleteRunes(ItemID.LAW_RUNE, 2);
-            player.getMagic().deleteRunes(ItemID.FIRE_RUNE, 3);
-            player.getMagic().deleteRunes(ItemID.AIR_RUNE, 2);
+            player.getMagic().deleteRunes(ItemId.LAW_RUNE, 2);
+            player.getMagic().deleteRunes(ItemId.FIRE_RUNE, 3);
+            player.getMagic().deleteRunes(ItemId.AIR_RUNE, 2);
             player.getSkills().addXP(Skills.MAGIC, 88);
             if ((player.inEdgeville() || player.getController().inWilderness()) && player.getClientHeight() == 0) {
                 height = player.getHeight();
@@ -310,13 +310,13 @@ public class SpellbookWidget {
             } else if (player.getSkills().getLevel(Skills.MAGIC) < 84) {
                 player.getGameEncoder().sendMessage("You need a Magic level of 84 to cast this spell.");
                 break;
-            } else if (!player.getMagic().hasRunes(ItemID.LAW_RUNE, 2)
-                    || !player.getMagic().hasRunes(ItemID.SOUL_RUNE, 2)) {
+            } else if (!player.getMagic().hasRunes(ItemId.LAW_RUNE, 2)
+                    || !player.getMagic().hasRunes(ItemId.SOUL_RUNE, 2)) {
                 player.getGameEncoder().sendMessage("You do not have enough runes to cast this spell.");
                 break;
             }
-            player.getMagic().deleteRunes(ItemID.LAW_RUNE, 2);
-            player.getMagic().deleteRunes(ItemID.SOUL_RUNE, 2);
+            player.getMagic().deleteRunes(ItemId.LAW_RUNE, 2);
+            player.getMagic().deleteRunes(ItemId.SOUL_RUNE, 2);
             player.getSkills().addXP(Skills.MAGIC, 94);
             if ((player.inEdgeville() || player.getController().inWilderness()) && player.getClientHeight() == 0) {
                 height = player.getHeight();
@@ -335,13 +335,13 @@ public class SpellbookWidget {
             } else if (player.getSkills().getLevel(Skills.MAGIC) < 90) {
                 player.getGameEncoder().sendMessage("You need a Magic level of 90 to cast this spell.");
                 break;
-            } else if (!player.getMagic().hasRunes(ItemID.LAW_RUNE, 2)
-                    || !player.getMagic().hasRunes(ItemID.BLOOD_RUNE, 2)) {
+            } else if (!player.getMagic().hasRunes(ItemId.LAW_RUNE, 2)
+                    || !player.getMagic().hasRunes(ItemId.BLOOD_RUNE, 2)) {
                 player.getGameEncoder().sendMessage("You do not have enough runes to cast this spell.");
                 break;
             }
-            player.getMagic().deleteRunes(ItemID.LAW_RUNE, 2);
-            player.getMagic().deleteRunes(ItemID.BLOOD_RUNE, 2);
+            player.getMagic().deleteRunes(ItemId.LAW_RUNE, 2);
+            player.getMagic().deleteRunes(ItemId.BLOOD_RUNE, 2);
             player.getSkills().addXP(Skills.MAGIC, 100);
             if ((player.inEdgeville() || player.getController().inWilderness()) && player.getClientHeight() == 0) {
                 height = player.getHeight();
@@ -360,13 +360,13 @@ public class SpellbookWidget {
             } else if (player.getSkills().getLevel(Skills.MAGIC) < 96) {
                 player.getGameEncoder().sendMessage("You need a Magic level of 96 to cast this spell.");
                 break;
-            } else if (!player.getMagic().hasRunes(ItemID.LAW_RUNE, 2)
-                    || !player.getMagic().hasRunes(ItemID.WATER_RUNE, 8)) {
+            } else if (!player.getMagic().hasRunes(ItemId.LAW_RUNE, 2)
+                    || !player.getMagic().hasRunes(ItemId.WATER_RUNE, 8)) {
                 player.getGameEncoder().sendMessage("You do not have enough runes to cast this spell.");
                 break;
             }
-            player.getMagic().deleteRunes(ItemID.LAW_RUNE, 2);
-            player.getMagic().deleteRunes(ItemID.WATER_RUNE, 8);
+            player.getMagic().deleteRunes(ItemId.LAW_RUNE, 2);
+            player.getMagic().deleteRunes(ItemId.WATER_RUNE, 8);
             player.getSkills().addXP(Skills.MAGIC, 106);
             if ((player.inEdgeville() || player.getController().inWilderness()) && player.getClientHeight() == 0) {
                 height = player.getHeight();
@@ -414,9 +414,9 @@ public class SpellbookWidget {
             } else if (player.getSkills().getLevel(Skills.MAGIC) < 82) {
                 player.getGameEncoder().sendMessage("You need a Magic level of 82 to cast Magic Imbue.");
                 break;
-            } else if (!player.getMagic().hasRunes(ItemID.FIRE_RUNE, 7)
-                    || !player.getMagic().hasRunes(ItemID.WATER_RUNE, 7)
-                    || !player.getMagic().hasRunes(ItemID.ASTRAL_RUNE, 2)) {
+            } else if (!player.getMagic().hasRunes(ItemId.FIRE_RUNE, 7)
+                    || !player.getMagic().hasRunes(ItemId.WATER_RUNE, 7)
+                    || !player.getMagic().hasRunes(ItemId.ASTRAL_RUNE, 2)) {
                 player.getGameEncoder().sendMessage("You do not have enough runes to cast Magic Imbue.");
                 break;
             } else if (player.getMagic().getMagicImbueTime() > 0) {
@@ -425,9 +425,9 @@ public class SpellbookWidget {
                 break;
             }
             player.getGameEncoder().sendMessage("You are charged to combine runes!");
-            player.getMagic().deleteRunes(ItemID.FIRE_RUNE, 7);
-            player.getMagic().deleteRunes(ItemID.WATER_RUNE, 7);
-            player.getMagic().deleteRunes(ItemID.ASTRAL_RUNE, 2);
+            player.getMagic().deleteRunes(ItemId.FIRE_RUNE, 7);
+            player.getMagic().deleteRunes(ItemId.WATER_RUNE, 7);
+            player.getMagic().deleteRunes(ItemId.ASTRAL_RUNE, 2);
             player.getSkills().addXP(Skills.MAGIC, 86);
             player.getMagic().setMagicImbueTime(20);
             player.setGraphic(141, 100);
@@ -442,9 +442,9 @@ public class SpellbookWidget {
                 player.getGameEncoder()
                         .sendMessage("You need a Magic level of 94 and Defence level of 40 to cast Vengeance.");
                 break;
-            } else if (!player.getMagic().hasRunes(ItemID.EARTH_RUNE, 10)
-                    || !player.getMagic().hasRunes(ItemID.DEATH_RUNE, 2)
-                    || !player.getMagic().hasRunes(ItemID.ASTRAL_RUNE, 4)) {
+            } else if (!player.getMagic().hasRunes(ItemId.EARTH_RUNE, 10)
+                    || !player.getMagic().hasRunes(ItemId.DEATH_RUNE, 2)
+                    || !player.getMagic().hasRunes(ItemId.ASTRAL_RUNE, 4)) {
                 player.getGameEncoder().sendMessage("You do not have enough runes to cast Vengeance.");
                 break;
             } else if (player.getMagic().getVengeanceDelay() > 0) {
@@ -455,9 +455,9 @@ public class SpellbookWidget {
                 player.getGameEncoder().sendMessage("You already have Vengeance cast.");
                 break;
             }
-            player.getMagic().deleteRunes(ItemID.EARTH_RUNE, 10);
-            player.getMagic().deleteRunes(ItemID.DEATH_RUNE, 2);
-            player.getMagic().deleteRunes(ItemID.ASTRAL_RUNE, 4);
+            player.getMagic().deleteRunes(ItemId.EARTH_RUNE, 10);
+            player.getMagic().deleteRunes(ItemId.DEATH_RUNE, 2);
+            player.getMagic().deleteRunes(ItemId.ASTRAL_RUNE, 4);
             player.getSkills().addXP(Skills.MAGIC, 112);
             player.getMagic().setVengeanceCast(true);
             player.getMagic().setVengeanceDelay(Magic.VENGEANCE_DELAY);
@@ -471,15 +471,15 @@ public class SpellbookWidget {
             } else if (player.getSkills().getLevel(Skills.MAGIC) < 65) {
                 player.getGameEncoder().sendMessage("You need a Magic level of 65 to cast this spell.");
                 break;
-            } else if (!player.getMagic().hasRunes(ItemID.ASTRAL_RUNE, 3)
-                    || !player.getMagic().hasRunes(ItemID.NATURE_RUNE, 3)
-                    || !player.getMagic().hasRunes(ItemID.EARTH_RUNE, 8)) {
+            } else if (!player.getMagic().hasRunes(ItemId.ASTRAL_RUNE, 3)
+                    || !player.getMagic().hasRunes(ItemId.NATURE_RUNE, 3)
+                    || !player.getMagic().hasRunes(ItemId.EARTH_RUNE, 8)) {
                 player.getGameEncoder().sendMessage("You do not have enough runes to cast this spell.");
                 break;
             }
-            player.getMagic().deleteRunes(ItemID.ASTRAL_RUNE, 3);
-            player.getMagic().deleteRunes(ItemID.NATURE_RUNE, 3);
-            player.getMagic().deleteRunes(ItemID.EARTH_RUNE, 8);
+            player.getMagic().deleteRunes(ItemId.ASTRAL_RUNE, 3);
+            player.getMagic().deleteRunes(ItemId.NATURE_RUNE, 3);
+            player.getMagic().deleteRunes(ItemId.EARTH_RUNE, 8);
             player.getSkills().addXP(Skills.MAGIC, 60);
             player.getFarming().openGeomancy();
             AchievementDiary.castSpellHooks(player, spellBookChild, null, null, null);
@@ -492,15 +492,15 @@ public class SpellbookWidget {
             } else if (player.getSkills().getLevel(Skills.MAGIC) < 71) {
                 player.getGameEncoder().sendMessage("You need a Magic level of 71 to cast this spell.");
                 break;
-            } else if (!player.getMagic().hasRunes(ItemID.ASTRAL_RUNE, 2)
-                    || !player.getMagic().hasRunes(ItemID.LAW_RUNE, 1)
-                    || !player.getMagic().hasRunes(ItemID.EARTH_RUNE, 6)) {
+            } else if (!player.getMagic().hasRunes(ItemId.ASTRAL_RUNE, 2)
+                    || !player.getMagic().hasRunes(ItemId.LAW_RUNE, 1)
+                    || !player.getMagic().hasRunes(ItemId.EARTH_RUNE, 6)) {
                 player.getGameEncoder().sendMessage("You do not have enough runes to cast this spell.");
                 break;
             }
-            player.getMagic().deleteRunes(ItemID.ASTRAL_RUNE, 2);
-            player.getMagic().deleteRunes(ItemID.LAW_RUNE, 1);
-            player.getMagic().deleteRunes(ItemID.EARTH_RUNE, 6);
+            player.getMagic().deleteRunes(ItemId.ASTRAL_RUNE, 2);
+            player.getMagic().deleteRunes(ItemId.LAW_RUNE, 1);
+            player.getMagic().deleteRunes(ItemId.EARTH_RUNE, 6);
             player.getSkills().addXP(Skills.MAGIC, 69);
             player.getMovement().animatedTeleport(new Tile(3015, 5628), Magic.NORMAL_MAGIC_ANIMATION_START,
                     Magic.NORMAL_MAGIC_ANIMATION_END, Magic.NORMAL_MAGIC_GRAPHIC, null, 2);
@@ -513,19 +513,19 @@ public class SpellbookWidget {
         }
     }
 
-    public static void widget201(Player player, int index, int childID, int slot, int itemID) {
+    public static void widget201(Player player, int index, int childId, int slot, int itemId) {
         // Autocast
-        if (player.getEquipment().getWeaponID() == ItemID.TRIDENT_OF_THE_SEAS_FULL
-                || player.getEquipment().getWeaponID() == ItemID.TRIDENT_OF_THE_SEAS
-                || player.getEquipment().getWeaponID() == ItemID.UNCHARGED_TRIDENT
-                || player.getEquipment().getWeaponID() == ItemID.TRIDENT_OF_THE_SEAS_E
-                || player.getEquipment().getWeaponID() == ItemID.UNCHARGED_TRIDENT_E
-                || player.getEquipment().getWeaponID() == ItemID.TRIDENT_OF_THE_SWAMP
-                || player.getEquipment().getWeaponID() == ItemID.UNCHARGED_TOXIC_TRIDENT
-                || player.getEquipment().getWeaponID() == ItemID.TRIDENT_OF_THE_SWAMP_E
-                || player.getEquipment().getWeaponID() == ItemID.UNCHARGED_TOXIC_TRIDENT_E
-                || player.getEquipment().getWeaponID() == ItemID.SANGUINESTI_STAFF
-                || player.getEquipment().getWeaponID() == ItemID.SANGUINESTI_STAFF_UNCHARGED) {
+        if (player.getEquipment().getWeaponId() == ItemId.TRIDENT_OF_THE_SEAS_FULL
+                || player.getEquipment().getWeaponId() == ItemId.TRIDENT_OF_THE_SEAS
+                || player.getEquipment().getWeaponId() == ItemId.UNCHARGED_TRIDENT
+                || player.getEquipment().getWeaponId() == ItemId.TRIDENT_OF_THE_SEAS_E
+                || player.getEquipment().getWeaponId() == ItemId.UNCHARGED_TRIDENT_E
+                || player.getEquipment().getWeaponId() == ItemId.TRIDENT_OF_THE_SWAMP
+                || player.getEquipment().getWeaponId() == ItemId.UNCHARGED_TOXIC_TRIDENT
+                || player.getEquipment().getWeaponId() == ItemId.TRIDENT_OF_THE_SWAMP_E
+                || player.getEquipment().getWeaponId() == ItemId.UNCHARGED_TOXIC_TRIDENT_E
+                || player.getEquipment().getWeaponId() == ItemId.SANGUINESTI_STAFF
+                || player.getEquipment().getWeaponId() == ItemId.SANGUINESTI_STAFF_UNCHARGED) {
             return;
         }
         CombatSpellDef spell = null;
@@ -571,28 +571,28 @@ public class SpellbookWidget {
             } else if (slot == 51) {
                 spell = CombatSpellDef.getDef(WidgetChild.SpellBook.FIRE_SURGE);
             }
-            if (player.getEquipment().getWeaponID() == ItemID.IBANS_STAFF) {
+            if (player.getEquipment().getWeaponId() == ItemId.IBANS_STAFF) {
                 if (slot == 47) {
                     spell = CombatSpellDef.getDef(WidgetChild.SpellBook.IBAN_BLAST);
                 }
             }
-            if (player.getEquipment().getWeaponID() == ItemID.SLAYERS_STAFF
-                    || player.getEquipment().getWeaponID() == ItemID.STAFF_OF_THE_DEAD
-                    || player.getEquipment().getWeaponID() == ItemID.TOXIC_STAFF_UNCHARGED
-                    || player.getEquipment().getWeaponID() == ItemID.TOXIC_STAFF_OF_THE_DEAD
-                    || player.getEquipment().getWeaponID() == ItemID.SLAYERS_STAFF_E) {
+            if (player.getEquipment().getWeaponId() == ItemId.SLAYERS_STAFF
+                    || player.getEquipment().getWeaponId() == ItemId.STAFF_OF_THE_DEAD
+                    || player.getEquipment().getWeaponId() == ItemId.TOXIC_STAFF_UNCHARGED
+                    || player.getEquipment().getWeaponId() == ItemId.TOXIC_STAFF_OF_THE_DEAD
+                    || player.getEquipment().getWeaponId() == ItemId.SLAYERS_STAFF_E) {
                 if (slot == 18) {
                     spell = CombatSpellDef.getDef(WidgetChild.SpellBook.MAGIC_DART);
                 }
             }
-            if (player.getEquipment().getWeaponID() == ItemID.STAFF_OF_THE_DEAD
-                    || player.getEquipment().getWeaponID() == ItemID.TOXIC_STAFF_UNCHARGED
-                    || player.getEquipment().getWeaponID() == ItemID.TOXIC_STAFF_OF_THE_DEAD) {
+            if (player.getEquipment().getWeaponId() == ItemId.STAFF_OF_THE_DEAD
+                    || player.getEquipment().getWeaponId() == ItemId.TOXIC_STAFF_UNCHARGED
+                    || player.getEquipment().getWeaponId() == ItemId.TOXIC_STAFF_OF_THE_DEAD) {
                 if (slot == 20) {
                     spell = CombatSpellDef.getDef(WidgetChild.SpellBook.FLAMES_OF_ZAMORAK);
                 }
             }
-            if (player.getEquipment().getWeaponID() == ItemID.STAFF_OF_LIGHT) {
+            if (player.getEquipment().getWeaponId() == ItemId.STAFF_OF_LIGHT) {
                 if (slot == 52) {
                     spell = CombatSpellDef.getDef(WidgetChild.SpellBook.SARADOMIN_STRIKE);
                 }
@@ -636,18 +636,18 @@ public class SpellbookWidget {
             player.getGameEncoder().sendMessage("Unable to find the spell you selected.");
             return;
         }
-        player.getMagic().setAutoSpellID(spell != null ? spell.getChildID() : 0);
+        player.getMagic().setAutoSpellId(spell != null ? spell.getChildId() : 0);
         player.getMagic().setDefensive(player.getAttributeBool("magic_defensive"));
-        player.getWidgetManager().sendWidget(WidgetChild.ViewportContainer.COMBAT, WidgetID.COMBAT);
+        player.getWidgetManager().sendWidget(WidgetChild.ViewportContainer.COMBAT, WidgetId.COMBAT);
         player.getEquipment().sendCombatTabText();
     }
 
-    public static void widget190(Player player, int index, int childID, int slot, int itemID) {
+    public static void widget190(Player player, int index, int childId, int slot, int itemId) {
         // Rune pouch
         if (player.isLocked()) {
             return;
         }
-        switch (childID) {
+        switch (childId) {
         case 4:
             if (index == 0) {
                 player.getMagic().removeRunesFromPouch(slot, 1);

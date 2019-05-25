@@ -3,12 +3,12 @@ package script.packetdecoder.widget;
 import com.palidino.osrs.model.player.Player;
 
 public class UnmorphWidget {
-    public static void widget375(Player player, int index, int childID, int slot, int itemID) {
-        switch (childID) {
+    public static void widget375(Player player, int index, int childId, int slot, int itemId) {
+        switch (childId) {
         case 5:
             player.getMovement().stopViewing();
             player.getWidgetManager().removeInteractiveWidgets();
-            player.getAppearance().setNpcID(-1);
+            player.getAppearance().setNpcId(-1);
             break;
         }
     }

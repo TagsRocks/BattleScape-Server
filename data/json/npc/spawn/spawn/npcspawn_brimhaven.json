@@ -1,13 +1,13 @@
 [
   {
-    "id": "NpcID.IMIAGO",
+    "id": "NpcId.IMIAGO",
     "direction": 1,
     "moveDistance": 2,
     "x": 2799,
     "y": 3097
   },
   {
-    "id": "NpcID.GARTH",
+    "id": "NpcId.GARTH",
     "direction": 1,
     "moveDistance": 2,
     "x": 2766,

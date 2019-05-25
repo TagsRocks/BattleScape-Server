@@ -67,7 +67,7 @@ public class PlayerOptionDecoder extends PacketDecoder {
             player.setEngagingEntity(player2);
             player.getCombat().setFollowing(player2);
             player.getMovement().follow();
-            if (player.getMagic().getAutoSpellID() != 0 && player.getHitDelay() <= 0) {
+            if (player.getMagic().getAutoSpellId() != 0 && player.getHitDelay() <= 0) {
                 player.setHitDelay(2);
             }
             return;
@@ -200,7 +200,7 @@ public class PlayerOptionDecoder extends PacketDecoder {
                         Messaging.CHAT_TYPE_TRADE, player.getUsername());
             }
         } else if (index == 4) {
-            if (Equipment.isWhackID(player.getEquipment().getWeaponID())) {
+            if (Equipment.isWhackId(player.getEquipment().getWeaponId())) {
                 player.setAnimation(1833);
             }
         }

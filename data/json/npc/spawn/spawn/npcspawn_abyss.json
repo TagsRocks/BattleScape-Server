@@ -1,6 +1,6 @@
 [
   {
-    "id": "NpcID.MAGE_OF_ZAMORAK_7425",
+    "id": "NpcId.MAGE_OF_ZAMORAK_7425",
     "direction": 1,
     "moveDistance": 4,
     "x": 3039,

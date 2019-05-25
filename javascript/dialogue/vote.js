@@ -35,7 +35,7 @@ entries.add(obj2);
 obj2.setSelection(title, Utils.toStringArray(lines, true), Utils.toStringArray(actions, true));
 
 instance = new DialogueScript() {
-    execute: function(player, index, childID, slot) {
+    execute: function(player, index, childId, slot) {
         if (player.isLocked()) {
             return;
         }
@@ -57,7 +57,7 @@ instance = new DialogueScript() {
             }
         } else if (index == 1) {
             if (slot == 0) {
-                if (player.getInventory().getCount(ItemID.VOTE_TICKET) < 2) {
+                if (player.getInventory().getCount(ItemId.VOTE_TICKET) < 2) {
                     player.getGameEncoder().sendMessage("You need 2 Vote tickets to do this.");
                     return;
                 } else if (player.getSlayer().getBossTaskAmount() == 0) {
@@ -68,7 +68,7 @@ instance = new DialogueScript() {
                     return;
                 }
                 player.getSlayer().setBossTaskAmount(0);
-                player.getInventory().deleteItem(ItemID.VOTE_TICKET, 2);
+                player.getInventory().deleteItem(ItemId.VOTE_TICKET, 2);
                 player.getSlayer().setBossPoints(player.getSlayer().getBossPoints() - 25);
                 player.getGameEncoder().sendMessage("Your Boss Slayer task has been cancelled.");
             }

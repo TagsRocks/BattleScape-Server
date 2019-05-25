@@ -6,12 +6,12 @@ import com.palidino.rs.GrandExchangeItem;
 import com.palidino.rs.GrandExchangeUser;
 
 public class ExchangeWidget {
-    public static void widget465(Player player, int index, int childID, int slot, int itemID) {
+    public static void widget465(Player player, int index, int childId, int slot, int itemId) {
         // Grand Exchange
         if (player.isLocked()) {
             return;
         }
-        switch (childID) {
+        switch (childId) {
         case 3:
             player.getGrandExchange().openHistory(GrandExchangeUser.HISTORY);
             break;
@@ -33,14 +33,14 @@ public class ExchangeWidget {
         case 14:
             if (slot == 2) {
                 if (index == 0) {
-                    player.getGrandExchange().viewOffer(childID - 7);
+                    player.getGrandExchange().viewOffer(childId - 7);
                 } else if (index == 1) {
-                    player.getGrandExchange().abortOffer(childID - 7);
+                    player.getGrandExchange().abortOffer(childId - 7);
                 }
             } else if (slot == 3) {
-                player.getGrandExchange().configureBuyOffer(childID - 7);
+                player.getGrandExchange().configureBuyOffer(childId - 7);
             } else if (slot == 4) {
-                player.getGrandExchange().configureSellOffer(childID - 7, -1);
+                player.getGrandExchange().configureSellOffer(childId - 7, -1);
             }
             break;
         case 22:
@@ -48,7 +48,7 @@ public class ExchangeWidget {
             break;
         case 23:
             if (slot == 2 || slot == 3) {
-                player.getGrandExchange().collectOffer(player.getAttributeInt("ge_slot"), itemID, index);
+                player.getGrandExchange().collectOffer(player.getAttributeInt("ge_slot"), itemId, index);
             }
             break;
         case 24:
@@ -101,12 +101,12 @@ public class ExchangeWidget {
         }
     }
 
-    public static void widget467(Player player, int index, int childID, int slot, int itemID) {
+    public static void widget467(Player player, int index, int childId, int slot, int itemId) {
         // Inventory
         if (player.isLocked()) {
             return;
         }
-        switch (childID) {
+        switch (childId) {
         case 0:
             if (index == 0) {
                 player.getGrandExchange().configureSellOffer(-1, slot);
@@ -115,12 +115,12 @@ public class ExchangeWidget {
         }
     }
 
-    public static void widget383(Player player, int index, int childID, int slot, int itemID) {
+    public static void widget383(Player player, int index, int childId, int slot, int itemId) {
         // History
         if (player.isLocked()) {
             return;
         }
-        switch (childID) {
+        switch (childId) {
         case 2:
             player.getGrandExchange().open();
             break;

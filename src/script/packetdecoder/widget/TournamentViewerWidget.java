@@ -3,7 +3,7 @@ package script.packetdecoder.widget;
 import com.palidino.osrs.model.player.Player;
 
 public class TournamentViewerWidget {
-    public static void widget130(Player player, int index, int childID, int slot, int itemID) {
+    public static void widget130(Player player, int index, int childId, int slot, int itemId) {
         if (player.isLocked()) {
             return;
         }
@@ -11,7 +11,7 @@ public class TournamentViewerWidget {
                 || player.getMovement().isViewing()) {
             return;
         }
-        switch (childID) {
+        switch (childId) {
         case 8:
             player.getClanWars().teleportViewing(-1);
             break;

@@ -4,12 +4,12 @@ import com.palidino.osrs.model.dialogue.Dialogue;
 import com.palidino.osrs.model.player.Player;
 
 public class LootingBagWidget {
-    public static void widget81(Player player, int index, int childID, int slot, int itemID) {
+    public static void widget81(Player player, int index, int childId, int slot, int itemId) {
         if (player.isLocked()) {
             return;
         }
         player.getWidgetManager().initLootingBag();
-        switch (childID) {
+        switch (childId) {
         case 5:
             player.putAttribute("looting_bag_item_slot", slot);
             if (index == 0) {

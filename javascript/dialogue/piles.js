@@ -13,25 +13,25 @@ entries.add(obj0);
 obj0.setSelection(title, Utils.toStringArray(lines, true), Utils.toStringArray(actions, true));
 
 instance = new DialogueScript() {
-    execute: function(player, index, childID, slot) {
+    execute: function(player, index, childId, slot) {
         if (player.isLocked()) {
             return;
         }
         if (index == 0) {
-            var itemID = player.getAttributeInt("use_item_id");
+            var itemId = player.getAttributeInt("use_item_id");
             if (slot == 0) {
-                var amount = player.getInventory().getCount(itemID);
-                if (amount == 0 || ItemDef.getNotedID(itemID) == -1) {
+                var amount = player.getInventory().getCount(itemId);
+                if (amount == 0 || ItemDef.getNotedId(itemId) == -1) {
                     return;
                 }
                 var cost = amount * 50;
-                if (player.getInventory().getCount(ItemID.COINS) < cost) {
+                if (player.getInventory().getCount(ItemId.COINS) < cost) {
                     player.getGameEncoder().sendMessage("You need " + Utils.formatNumber(cost) + " coins to do this.");
                     return;
                 }
-                player.getInventory().deleteItem(itemID, amount);
-                player.getInventory().deleteItem(ItemID.COINS, cost);
-                player.getInventory().addItem(ItemDef.getNotedID(itemID), amount);
+                player.getInventory().deleteItem(itemId, amount);
+                player.getInventory().deleteItem(ItemId.COINS, cost);
+                player.getInventory().addItem(ItemDef.getNotedId(itemId), amount);
             }
         }
     },

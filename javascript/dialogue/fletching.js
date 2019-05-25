@@ -11,16 +11,16 @@ entries.add(obj0);
 obj0.setSelection(title, Utils.toStringArray(lines, true), Utils.toStringArray(actions, true));
 
 instance = new DialogueScript() {
-    execute: function(player, index, childID, slot) {
+    execute: function(player, index, childId, slot) {
         if (player.isLocked()) {
             return;
         }
         if (index == 0) {
-            var itemID = player.getAttributeInt("item_id_" + childID);
-            if (itemID == 0) {
+            var itemId = player.getAttributeInt("item_id_" + childId);
+            if (itemId == 0) {
                 return;
             }
-            Fletching.start(player, itemID, slot);
+            Fletching.start(player, itemId, slot);
         }
     },
 

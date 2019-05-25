@@ -5,11 +5,11 @@ import com.palidino.osrs.model.player.Magic;
 import com.palidino.osrs.model.player.Player;
 
 public class JewelryBoxWidget {
-    public static void widget590(Player player, int index, int childID, int slot, int itemID) {
+    public static void widget590(Player player, int index, int childId, int slot, int itemId) {
         if (player.isLocked()) {
             return;
         }
-        switch (childID) {
+        switch (childId) {
         case 0:
             if (!player.getController().canTeleport(30, true)) {
                 break;

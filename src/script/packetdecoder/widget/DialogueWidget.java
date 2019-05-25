@@ -4,24 +4,24 @@ import com.palidino.osrs.model.dialogue.Dialogue;
 import com.palidino.osrs.model.player.Player;
 
 public class DialogueWidget {
-    public static void widget219(Player player, int index, int childID, int slot, int itemID) {
+    public static void widget219(Player player, int index, int childId, int slot, int itemId) {
         // Chatbox selection
-        Dialogue.handleWidget(player, childID, slot - 1);
+        Dialogue.handleWidget(player, childId, slot - 1);
     }
 
-    public static void widget187(Player player, int index, int childID, int slot, int itemID) {
+    public static void widget187(Player player, int index, int childId, int slot, int itemId) {
         // Screen selection
-        Dialogue.handleWidget(player, childID, slot);
+        Dialogue.handleWidget(player, childId, slot);
     }
 
-    public static void widget229(Player player, int index, int childID, int slot, int itemID) {
+    public static void widget229(Player player, int index, int childId, int slot, int itemId) {
         // Screen selection
-        Dialogue.handleWidget(player, childID, 0);
+        Dialogue.handleWidget(player, childId, 0);
     }
 
-    public static void widget270(Player player, int index, int childID, int slot, int itemID) {
+    public static void widget270(Player player, int index, int childId, int slot, int itemId) {
         // Make-x
-        Dialogue.handleWidget(player, childID - 14, slot);
+        Dialogue.handleWidget(player, childId - 14, slot);
     }
 }
 

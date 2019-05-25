@@ -20,7 +20,7 @@ cs = new NCombatScript() {
             player.getCombat().setLegendsQuest(player.getCombat().getLegendsQuest() + 1);
             if (player.getCombat().isLegendsQuestComplete()) {
                 player.getGameEncoder().sendMessage("<col=ff0000>You have completed Legends Quest!");
-                player.getInventory().addOrDropItem(ItemID.COINS, 100000);
+                player.getInventory().addOrDropItem(ItemId.COINS, 100000);
             }
         }
     }

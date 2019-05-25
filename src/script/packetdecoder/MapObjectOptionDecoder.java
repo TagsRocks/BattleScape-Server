@@ -100,7 +100,6 @@ public class MapObjectOptionDecoder extends PacketDecoder {
     public boolean complete(Player player) {
         var index = player.getAttributeInt("packet_decoder_index");
         var mapObject = (MapObject) player.getAttribute("packet_decoder_map_object");
-        Logger.println(index + ": " + mapObject);
         if (mapObject == null) {
             return true;
         }
@@ -111,9 +110,9 @@ public class MapObjectOptionDecoder extends PacketDecoder {
         if (mapObject.getType() >= 4 && mapObject.getType() <= 8) {
             range = 0;
         }
-        if (mapObject.getID() == 30352) { // The Inferno Entrance
+        if (mapObject.getId() == 30352) { // The Inferno Entrance
             range = 5;
-        } else if (mapObject.getID() == 31561) { // Revenant Pillar
+        } else if (mapObject.getId() == 31561) { // Revenant Pillar
             range = 2;
         }
         if (player.isLocked()) {
@@ -143,21 +142,21 @@ public class MapObjectOptionDecoder extends PacketDecoder {
         if (player.getFarming().mapObjectOptionHook(index, mapObject)) {
             return true;
         }
-        if (!actionMethods.containsKey(mapObject.getID())) {
+        if (!actionMethods.containsKey(mapObject.getId())) {
             try {
-                var className = "script.packetdecoder.misc.MapObject" + mapObject.getID() / 16384;
+                var className = "script.packetdecoder.misc.MapObject" + mapObject.getId() / 16384;
                 var classReference = Class.forName(className);
-                var methodName = "mapObject" + mapObject.getID();
+                var methodName = "mapObject" + mapObject.getId();
                 var actionMethod = classReference.getMethod(methodName, Player.class, Integer.TYPE, MapObject.class);
                 if ((actionMethod.getModifiers() & Modifier.STATIC) == 0) {
                     actionMethod = null;
                 }
-                actionMethods.put(mapObject.getID(), actionMethod);
+                actionMethods.put(mapObject.getId(), actionMethod);
             } catch (Exception e) {
-                actionMethods.put(mapObject.getID(), null);
+                actionMethods.put(mapObject.getId(), null);
             }
         }
-        var actionMethod = actionMethods.get(mapObject.getID());
+        var actionMethod = actionMethods.get(mapObject.getId());
         if (actionMethod == null && !basicAction(player, index, mapObject)) {
             player.getGameEncoder().sendMessage("Nothing interesting happens.");
         } else {

@@ -1,54 +1,54 @@
 [
   {
-    "id": "NpcID.THIEF_16",
+    "id": "NpcId.THIEF_16",
     "direction": 1,
     "moveDistance": 2,
     "x": 3014,
     "y": 3195
   },
   {
-    "id": "NpcID.CAPN_HAND",
+    "id": "NpcId.CAPN_HAND",
     "direction": 1,
     "moveDistance": 1,
     "x": 3013,
     "y": 3193
   },
   {
-    "id": "NpcID.PIRATE_23",
+    "id": "NpcId.PIRATE_23",
     "direction": 1,
     "moveDistance": 1,
     "x": 3014,
     "y": 3191
   },
   {
-    "id": "NpcID.WORMBRAIN_2",
+    "id": "NpcId.WORMBRAIN_2",
     "direction": 1,
     "moveDistance": 2,
     "x": 3014,
     "y": 3189
   },
   {
-    "id": "NpcID.MUGGER_6",
+    "id": "NpcId.MUGGER_6",
     "direction": 1,
     "moveDistance": 2,
     "x": 3018,
     "y": 3189
   },
   {
-    "id": "NpcID.GUARD_1551",
+    "id": "NpcId.GUARD_1551",
     "direction": 1,
     "x": 3019,
     "y": 3185
   },
   {
-    "id": "NpcID.BLACK_KNIGHT_33",
+    "id": "NpcId.BLACK_KNIGHT_33",
     "direction": 1,
     "moveDistance": 1,
     "x": 3018,
     "y": 3180
   },
   {
-    "id": "NpcID.GUARD_21",
+    "id": "NpcId.GUARD_21",
     "direction": 1,
     "moveDistance": 4,
     "x": 3012,
@@ -56,7 +56,7 @@
     "height": 1
   },
   {
-    "id": "NpcID.GUARD_21_1547",
+    "id": "NpcId.GUARD_21_1547",
     "direction": 1,
     "moveDistance": 4,
     "x": 3016,
@@ -64,7 +64,7 @@
     "height": 1
   },
   {
-    "id": "NpcID.GUARD_21_1548",
+    "id": "NpcId.GUARD_21_1548",
     "direction": 1,
     "moveDistance": 4,
     "x": 3012,
@@ -72,7 +72,7 @@
     "height": 1
   },
   {
-    "id": "NpcID.GUARD_21_1549",
+    "id": "NpcId.GUARD_21_1549",
     "direction": 1,
     "moveDistance": 4,
     "x": 3018,
@@ -80,7 +80,7 @@
     "height": 1
   },
   {
-    "id": "NpcID.GUARD_21_1550",
+    "id": "NpcId.GUARD_21_1550",
     "direction": 1,
     "moveDistance": 4,
     "x": 3019,
@@ -88,7 +88,7 @@
     "height": 1
   },
   {
-    "id": "NpcID.SECURITY_GUARD",
+    "id": "NpcId.SECURITY_GUARD",
     "direction": 1,
     "moveDistance": 4,
     "x": 3013,
@@ -96,236 +96,236 @@
     "height": 1
   },
   {
-    "id": "NpcID.GIANT_RAT_26",
+    "id": "NpcId.GIANT_RAT_26",
     "direction": 1,
     "moveDistance": 2,
     "x": 2999,
     "y": 3190
   },
   {
-    "id": "NpcID.GIANT_RAT_26",
+    "id": "NpcId.GIANT_RAT_26",
     "direction": 1,
     "moveDistance": 2,
     "x": 2998,
     "y": 3194
   },
   {
-    "id": "NpcID.TOOL_LEPRECHAUN",
+    "id": "NpcId.TOOL_LEPRECHAUN",
     "direction": 1,
     "x": 3060,
     "y": 3263
   },
   {
-    "id": "NpcID.FRIZZY_SKERNIP",
+    "id": "NpcId.FRIZZY_SKERNIP",
     "direction": 1,
     "moveDistance": 2,
     "x": 3063,
     "y": 3259
   },
   {
-    "id": "NpcID.LONGBOW_BEN",
+    "id": "NpcId.LONGBOW_BEN",
     "direction": 1,
     "moveDistance": 4,
     "x": 3047,
     "y": 3258
   },
   {
-    "id": "NpcID.JACK_SEAGULL",
+    "id": "NpcId.JACK_SEAGULL",
     "direction": 1,
     "moveDistance": 4,
     "x": 3051,
     "y": 3256
   },
   {
-    "id": "NpcID.AHAB",
+    "id": "NpcId.AHAB",
     "direction": 1,
     "x": 3049,
     "y": 3256
   },
   {
-    "id": "NpcID.BARTENDER_1313",
+    "id": "NpcId.BARTENDER_1313",
     "direction": 1,
     "moveDistance": 2,
     "x": 3045,
     "y": 3257
   },
   {
-    "id": "NpcID.REDBEARD_FRANK",
+    "id": "NpcId.REDBEARD_FRANK",
     "direction": 1,
     "moveDistance": 4,
     "x": 3052,
     "y": 3247
   },
   {
-    "id": "NpcID.MONK_OF_ENTRANA_1166",
+    "id": "NpcId.MONK_OF_ENTRANA_1166",
     "direction": 1,
     "moveDistance": 4,
     "x": 3049,
     "y": 3235
   },
   {
-    "id": "NpcID.MONK_OF_ENTRANA_1166",
+    "id": "NpcId.MONK_OF_ENTRANA_1166",
     "direction": 1,
     "moveDistance": 4,
     "x": 3047,
     "y": 3236
   },
   {
-    "id": "NpcID.MONK_OF_ENTRANA_1167",
+    "id": "NpcId.MONK_OF_ENTRANA_1167",
     "direction": 1,
     "moveDistance": 4,
     "x": 3044,
     "y": 3235
   },
   {
-    "id": "NpcID.SEAGULL_2",
+    "id": "NpcId.SEAGULL_2",
     "direction": 1,
     "moveDistance": 4,
     "x": 3028,
     "y": 3235
   },
   {
-    "id": "NpcID.SEAGULL_2",
+    "id": "NpcId.SEAGULL_2",
     "direction": 1,
     "moveDistance": 4,
     "x": 3026,
     "y": 3233
   },
   {
-    "id": "NpcID.SEAGULL_2",
+    "id": "NpcId.SEAGULL_2",
     "direction": 1,
     "moveDistance": 4,
     "x": 3028,
     "y": 3231
   },
   {
-    "id": "NpcID.SEAMAN_LORRIS",
+    "id": "NpcId.SEAMAN_LORRIS",
     "direction": 1,
     "moveDistance": 4,
     "x": 3027,
     "y": 3219
   },
   {
-    "id": "NpcID.CAPTAIN_TOBIAS",
+    "id": "NpcId.CAPTAIN_TOBIAS",
     "direction": 1,
     "moveDistance": 4,
     "x": 3026,
     "y": 3216
   },
   {
-    "id": "NpcID.SEAMAN_THRESNOR",
+    "id": "NpcId.SEAMAN_THRESNOR",
     "direction": 1,
     "moveDistance": 4,
     "x": 3028,
     "y": 3215
   },
   {
-    "id": "NpcID.SEAGULL_2",
+    "id": "NpcId.SEAGULL_2",
     "direction": 1,
     "moveDistance": 4,
     "x": 3025,
     "y": 3207
   },
   {
-    "id": "NpcID.SEAGULL_2",
+    "id": "NpcId.SEAGULL_2",
     "direction": 1,
     "moveDistance": 4,
     "x": 3028,
     "y": 3205
   },
   {
-    "id": "NpcID.SEAGULL_2",
+    "id": "NpcId.SEAGULL_2",
     "direction": 1,
     "moveDistance": 4,
     "x": 3026,
     "y": 3202
   },
   {
-    "id": "NpcID.SEAGULL_2",
+    "id": "NpcId.SEAGULL_2",
     "direction": 1,
     "moveDistance": 4,
     "x": 3029,
     "y": 3202
   },
   {
-    "id": "NpcID.WYDIN_1791",
+    "id": "NpcId.WYDIN_1791",
     "direction": 1,
     "moveDistance": 2,
     "x": 3014,
     "y": 3206
   },
   {
-    "id": "NpcID.GERRANT_1790",
+    "id": "NpcId.GERRANT_1790",
     "direction": 1,
     "moveDistance": 2,
     "x": 3014,
     "y": 3224
   },
   {
-    "id": "NpcID.THE_FACE",
+    "id": "NpcId.THE_FACE",
     "direction": 1,
     "moveDistance": 2,
     "x": 3020,
     "y": 3229
   },
   {
-    "id": "NpcID.ZAHUR",
+    "id": "NpcId.ZAHUR",
     "direction": 1,
     "moveDistance": 2,
     "x": 3017,
     "y": 3231
   },
   {
-    "id": "NpcID.WOMAN_2_3083",
+    "id": "NpcId.WOMAN_2_3083",
     "direction": 1,
     "moveDistance": 4,
     "x": 3012,
     "y": 3232
   },
   {
-    "id": "NpcID.MAN_2_3078",
+    "id": "NpcId.MAN_2_3078",
     "direction": 1,
     "moveDistance": 4,
     "x": 3022,
     "y": 3237
   },
   {
-    "id": "NpcID.THIEF_16_3093",
+    "id": "NpcId.THIEF_16_3093",
     "direction": 1,
     "moveDistance": 4,
     "x": 3017,
     "y": 3238
   },
   {
-    "id": "NpcID.THIEF_16_3093",
+    "id": "NpcId.THIEF_16_3093",
     "direction": 1,
     "moveDistance": 4,
     "x": 3014,
     "y": 3231
   },
   {
-    "id": "NpcID.GRUM",
+    "id": "NpcId.GRUM",
     "direction": 1,
     "moveDistance": 2,
     "x": 3013,
     "y": 3246
   },
   {
-    "id": "NpcID.BRIAN",
+    "id": "NpcId.BRIAN",
     "direction": 1,
     "moveDistance": 2,
     "x": 3028,
     "y": 3248
   },
   {
-    "id": "NpcID.BETTY",
+    "id": "NpcId.BETTY",
     "direction": 1,
     "moveDistance": 2,
     "x": 3014,
     "y": 3258
   },
   {
-    "id": "NpcID.CAPTAIN_TOCK",
+    "id": "NpcId.CAPTAIN_TOCK",
     "direction": 1,
     "x": 3030,
     "y": 3273

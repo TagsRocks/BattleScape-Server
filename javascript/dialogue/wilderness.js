@@ -64,9 +64,9 @@ entries.add(obj4);
 obj4.setLargeSelection(title, Utils.toStringArray(lines, true), Utils.toStringArray(actions, true));
 
 instance = new DialogueScript() {
-    execute: function(player, index, childID, slot) {
+    execute: function(player, index, childId, slot) {
         if (index == 0) {
-            if (player.getInventory().getCount(ItemID.COINS) < 7500) {
+            if (player.getInventory().getCount(ItemId.COINS) < 7500) {
                 player.getGameEncoder().sendMessage("You don't have enough coins.");
                 return;
             }
@@ -81,7 +81,7 @@ instance = new DialogueScript() {
                 player.getMovement().addMovement(object.getX(), object.getY());
             }
             Region.openDoor(player, object, 1, false, false);
-            player.getInventory().deleteItem(ItemID.COINS, 7500);
+            player.getInventory().deleteItem(ItemId.COINS, 7500);
         } else if (index == 1) {
             if (slot == 1) {
                 player.getCombat().getBountyHunter().setShow(!player.getCombat().getBountyHunter().getShow());

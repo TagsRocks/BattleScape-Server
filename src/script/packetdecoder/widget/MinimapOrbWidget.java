@@ -3,8 +3,8 @@ package script.packetdecoder.widget;
 import com.palidino.osrs.model.player.Player;
 
 public class MinimapOrbWidget {
-    public static void widget160(Player player, int index, int childID, int slot, int itemID) {
-        switch (childID) {
+    public static void widget160(Player player, int index, int childId, int slot, int itemId) {
+        switch (childId) {
         case 1:
             if (index == 0) {
                 player.getXPDrops().switchShow();

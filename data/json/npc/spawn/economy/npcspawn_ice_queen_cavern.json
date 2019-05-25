@@ -1,202 +1,202 @@
 [
   {
-    "id": "NpcID.ICE_WARRIOR_57",
+    "id": "NpcId.ICE_WARRIOR_57",
     "direction": 1,
     "moveDistance": 4,
     "x": 2841,
     "y": 9913
   },
   {
-    "id": "NpcID.ICE_WARRIOR_57",
+    "id": "NpcId.ICE_WARRIOR_57",
     "direction": 1,
     "moveDistance": 4,
     "x": 2836,
     "y": 9905
   },
   {
-    "id": "NpcID.ICE_WARRIOR_57",
+    "id": "NpcId.ICE_WARRIOR_57",
     "direction": 1,
     "moveDistance": 4,
     "x": 2834,
     "y": 9920
   },
   {
-    "id": "NpcID.ICE_WARRIOR_57",
+    "id": "NpcId.ICE_WARRIOR_57",
     "direction": 1,
     "moveDistance": 4,
     "x": 2833,
     "y": 9934
   },
   {
-    "id": "NpcID.ICE_WARRIOR_57",
+    "id": "NpcId.ICE_WARRIOR_57",
     "direction": 1,
     "moveDistance": 4,
     "x": 2834,
     "y": 9946
   },
   {
-    "id": "NpcID.ICE_WARRIOR_57",
+    "id": "NpcId.ICE_WARRIOR_57",
     "direction": 1,
     "moveDistance": 4,
     "x": 2839,
     "y": 9961
   },
   {
-    "id": "NpcID.ICE_WARRIOR_57",
+    "id": "NpcId.ICE_WARRIOR_57",
     "direction": 1,
     "moveDistance": 4,
     "x": 2825,
     "y": 9900
   },
   {
-    "id": "NpcID.ICE_WARRIOR_57",
+    "id": "NpcId.ICE_WARRIOR_57",
     "direction": 1,
     "moveDistance": 4,
     "x": 2820,
     "y": 9916
   },
   {
-    "id": "NpcID.ICE_WARRIOR_57",
+    "id": "NpcId.ICE_WARRIOR_57",
     "direction": 1,
     "moveDistance": 4,
     "x": 2819,
     "y": 9926
   },
   {
-    "id": "NpcID.ICE_WARRIOR_57",
+    "id": "NpcId.ICE_WARRIOR_57",
     "direction": 1,
     "moveDistance": 4,
     "x": 2819,
     "y": 9937
   },
   {
-    "id": "NpcID.ICE_SPIDER_61",
+    "id": "NpcId.ICE_SPIDER_61",
     "direction": 1,
     "moveDistance": 4,
     "x": 2827,
     "y": 9933
   },
   {
-    "id": "NpcID.ICE_SPIDER_61",
+    "id": "NpcId.ICE_SPIDER_61",
     "direction": 1,
     "moveDistance": 4,
     "x": 2826,
     "y": 9951
   },
   {
-    "id": "NpcID.ICE_SPIDER_61",
+    "id": "NpcId.ICE_SPIDER_61",
     "direction": 1,
     "moveDistance": 4,
     "x": 2858,
     "y": 9971
   },
   {
-    "id": "NpcID.ICE_SPIDER_61",
+    "id": "NpcId.ICE_SPIDER_61",
     "direction": 1,
     "moveDistance": 4,
     "x": 2873,
     "y": 9971
   },
   {
-    "id": "NpcID.ICE_GIANT_53",
+    "id": "NpcId.ICE_GIANT_53",
     "direction": 1,
     "moveDistance": 4,
     "x": 2883,
     "y": 9964
   },
   {
-    "id": "NpcID.ICE_GIANT_53",
+    "id": "NpcId.ICE_GIANT_53",
     "direction": 1,
     "moveDistance": 4,
     "x": 2884,
     "y": 9959
   },
   {
-    "id": "NpcID.ICE_GIANT_53",
+    "id": "NpcId.ICE_GIANT_53",
     "direction": 1,
     "moveDistance": 4,
     "x": 2887,
     "y": 9954
   },
   {
-    "id": "NpcID.ICE_GIANT_53",
+    "id": "NpcId.ICE_GIANT_53",
     "direction": 1,
     "moveDistance": 4,
     "x": 2891,
     "y": 9949
   },
   {
-    "id": "NpcID.ICE_GIANT_53",
+    "id": "NpcId.ICE_GIANT_53",
     "direction": 1,
     "moveDistance": 4,
     "x": 2891,
     "y": 9943
   },
   {
-    "id": "NpcID.ICE_GIANT_53",
+    "id": "NpcId.ICE_GIANT_53",
     "direction": 1,
     "moveDistance": 4,
     "x": 2885,
     "y": 9935
   },
   {
-    "id": "NpcID.ICE_GIANT_53",
+    "id": "NpcId.ICE_GIANT_53",
     "direction": 1,
     "moveDistance": 4,
     "x": 2880,
     "y": 9927
   },
   {
-    "id": "NpcID.ICE_SPIDER_61",
+    "id": "NpcId.ICE_SPIDER_61",
     "direction": 1,
     "moveDistance": 4,
     "x": 2860,
     "y": 9916
   },
   {
-    "id": "NpcID.ICE_QUEEN_111",
+    "id": "NpcId.ICE_QUEEN_111",
     "direction": 1,
     "moveDistance": 4,
     "x": 2866,
     "y": 9955
   },
   {
-    "id": "NpcID.ICE_WARRIOR_57_2851",
+    "id": "NpcId.ICE_WARRIOR_57_2851",
     "direction": 1,
     "moveDistance": 4,
     "x": 2863,
     "y": 9952
   },
   {
-    "id": "NpcID.ICE_WARRIOR_57_2851",
+    "id": "NpcId.ICE_WARRIOR_57_2851",
     "direction": 1,
     "moveDistance": 4,
     "x": 2868,
     "y": 9952
   },
   {
-    "id": "NpcID.ICE_WARRIOR_57_2851",
+    "id": "NpcId.ICE_WARRIOR_57_2851",
     "direction": 1,
     "moveDistance": 4,
     "x": 2866,
     "y": 9949
   },
   {
-    "id": "NpcID.ICE_WARRIOR_57_2851",
+    "id": "NpcId.ICE_WARRIOR_57_2851",
     "direction": 1,
     "moveDistance": 4,
     "x": 2863,
     "y": 9957
   },
   {
-    "id": "NpcID.ICE_WARRIOR_57_2851",
+    "id": "NpcId.ICE_WARRIOR_57_2851",
     "direction": 1,
     "moveDistance": 4,
     "x": 2868,
     "y": 9957
   },
   {
-    "id": "NpcID.ICE_WARRIOR_57_2851",
+    "id": "NpcId.ICE_WARRIOR_57_2851",
     "direction": 1,
     "moveDistance": 4,
     "x": 2865,

@@ -24,60 +24,60 @@ public class WidgetDecoder extends PacketDecoder {
     public void execute(Player player, int index, int size, Stream stream) {
         var widgetHash = -1;
         var slot = -1;
-        var itemID = -1;
+        var itemId = -1;
         if (index == 11) {
             widgetHash = stream.getIntV3();
             slot = stream.getUShort128();
         } else {
             widgetHash = stream.getInt();
             slot = -1;
-            itemID = -1;
+            itemId = -1;
             if (size == 8) {
                 slot = stream.getUShort();
-                itemID = stream.getUShort();
+                itemId = stream.getUShort();
             }
         }
-        var widgetID = widgetHash >> 16;
-        var childID = widgetHash & 65535;
+        var widgetId = widgetHash >> 16;
+        var childId = widgetHash & 65535;
         if (slot == 65535) {
             slot = -1;
         }
-        if (itemID == 65535) {
-            itemID = -1;
+        if (itemId == 65535) {
+            itemId = -1;
         }
-        var message = "[Widget(" + index + ")] widgetID=" + widgetID + "; childID=" + childID + "; slot=" + slot
-                + "; itemID=" + itemID;
+        var message = "[Widget(" + index + ")] widgetId=" + widgetId + "; childId=" + childId + "; slot=" + slot
+                + "; itemId=" + itemId;
         if (player.getRights() == Player.RIGHTS_ADMIN) {
             Logger.println(message);
         }
         if (player.getOptions().getPrintPackets()) {
             player.getGameEncoder().sendMessage(message);
         }
-        if (!player.getWidgetManager().hasWidget(widgetID)) {
+        if (!player.getWidgetManager().hasWidget(widgetId)) {
             return;
         }
         if (index >= 10) {
             index = 0;
         }
         player.clearIdleTime();
-        AchievementDiary.widgetHooks(player, index, widgetID, childID, slot, itemID);
-        if (player.getController().widgetHook(index, widgetID, childID, slot, itemID)) {
+        AchievementDiary.widgetHooks(player, index, widgetId, childId, slot, itemId);
+        if (player.getController().widgetHook(index, widgetId, childId, slot, itemId)) {
             return;
         }
-        if (player.getRandomEvent().widgetHook(index, widgetID, childID, slot, itemID)) {
+        if (player.getRandomEvent().widgetHook(index, widgetId, childId, slot, itemId)) {
             return;
         }
-        if (SkillContainer.widgetHooks(player, index, widgetID, childID, slot, itemID)) {
+        if (SkillContainer.widgetHooks(player, index, widgetId, childId, slot, itemId)) {
             return;
         }
-        executeAction(player, index, widgetID, childID, slot, itemID);
+        executeAction(player, index, widgetId, childId, slot, itemId);
     }
 
-    public static void executeAction(Player player, int index, int widgetID, int childID, int slot, int itemID) {
-        var actionMethod = actionMethods.get(widgetID);
+    public static void executeAction(Player player, int index, int widgetId, int childId, int slot, int itemId) {
+        var actionMethod = actionMethods.get(widgetId);
         if (actionMethod != null) {
             try {
-                actionMethod.invoke(null, player, index, childID, slot, itemID);
+                actionMethod.invoke(null, player, index, childId, slot, itemId);
             } catch (Exception e) {
                 Logger.error(e);
             }

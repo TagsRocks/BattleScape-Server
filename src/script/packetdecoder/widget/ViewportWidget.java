@@ -4,9 +4,9 @@ import com.palidino.osrs.io.cache.WidgetChild;
 import com.palidino.osrs.model.player.Player;
 
 public class ViewportWidget {
-    public static void widget548(Player player, int index, int childID, int slot, int itemID) {
+    public static void widget548(Player player, int index, int childId, int slot, int itemId) {
         // Fixed screen
-        WidgetChild.FixedViewport child = WidgetChild.FixedViewport.getByChild(childID);
+        WidgetChild.FixedViewport child = WidgetChild.FixedViewport.getByChild(childId);
         if (child.getIcon() != null) {
             player.getOptions().setViewingIcon(child.getIcon());
             if (child.getIcon() == WidgetChild.ViewportIcon.QUESTS) {
@@ -17,9 +17,9 @@ public class ViewportWidget {
         }
     }
 
-    public static void widget161(Player player, int index, int childID, int slot, int itemID) {
+    public static void widget161(Player player, int index, int childId, int slot, int itemId) {
         // Resizable box
-        WidgetChild.ResizeableBoxViewport child = WidgetChild.ResizeableBoxViewport.getByChild(childID);
+        WidgetChild.ResizeableBoxViewport child = WidgetChild.ResizeableBoxViewport.getByChild(childId);
         if (child.getIcon() != null) {
             player.getOptions().setViewingIcon(child.getIcon());
             if (child.getIcon() == WidgetChild.ViewportIcon.QUESTS) {
@@ -30,9 +30,9 @@ public class ViewportWidget {
         }
     }
 
-    public static void widget164(Player player, int index, int childID, int slot, int itemID) {
+    public static void widget164(Player player, int index, int childId, int slot, int itemId) {
         // Resizable line
-        WidgetChild.ResizeableLineViewport child = WidgetChild.ResizeableLineViewport.getByChild(childID);
+        WidgetChild.ResizeableLineViewport child = WidgetChild.ResizeableLineViewport.getByChild(childId);
         if (child.getIcon() != null) {
             player.getOptions().setViewingIcon(child.getIcon());
             if (child.getIcon() == WidgetChild.ViewportIcon.QUESTS) {

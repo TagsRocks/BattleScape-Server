@@ -3,9 +3,9 @@ package script.packetdecoder.widget;
 import java.util.ArrayList;
 import java.util.List;
 import com.palidino.osrs.Main;
-import com.palidino.osrs.io.cache.ItemID;
-import com.palidino.osrs.io.cache.NpcID;
-import com.palidino.osrs.io.cache.WidgetID;
+import com.palidino.osrs.io.cache.ItemId;
+import com.palidino.osrs.io.cache.NpcId;
+import com.palidino.osrs.io.cache.WidgetId;
 import com.palidino.osrs.model.Graphic;
 import com.palidino.osrs.model.Tile;
 import com.palidino.osrs.model.dialogue.Dialogue;
@@ -38,18 +38,18 @@ import com.palidino.util.event.Event;
 // Option #1: group ids by relevance and then split those into sub classes. 
 
 public class InventoryWidget {
-    public static void widget149(Player player, int index, int childID, int slot, int itemID) {
+    public static void widget149(Player player, int index, int childId, int slot, int itemId) {
         player.clearAllActions(false, false);
-        if (itemID != player.getInventory().getID(slot)) {
+        if (itemId != player.getInventory().getId(slot)) {
             return;
         }
         Item item = player.getInventory().getItem(slot);
-        if (index == 0 && player.getController().isFood(itemID)) {
+        if (index == 0 && player.getController().isFood(itemId)) {
             player.getWidgetManager().removeInteractiveWidgets();
             player.getSkills().eatFood(slot);
             return;
         }
-        if (index == 0 && player.getController().isDrink(itemID)) {
+        if (index == 0 && player.getController().isDrink(itemId)) {
             player.getWidgetManager().removeInteractiveWidgets();
             player.getSkills().drink(slot);
             return;
@@ -58,41 +58,41 @@ public class InventoryWidget {
             player.getWidgetManager().removeInteractiveWidgets();
             return;
         }
-        if (index == 0 && Herblore.cleanHerb(player, itemID, slot)) {
+        if (index == 0 && Herblore.cleanHerb(player, itemId, slot)) {
             return;
         }
         if (item.getDef().getEquipSlot() != null && (item.getDef().isOption(index, "wear")
                 || item.getDef().isOption(index, "wield") || item.getDef().isOption(index, "equip"))) {
-            player.getEquipment().equip(itemID, slot);
+            player.getEquipment().equip(itemId, slot);
             return;
         }
         if (index == 4 && (item.getDef().getOption(index) == null || item.getDef().isOption(index, "drop")
                 || item.getDef().isOption(index, "destroy") || item.getDef().isOption(index, "release"))) {
             player.getWidgetManager().removeInteractiveWidgets();
-            if (Familiar.isPetItem(itemID)) {
-                player.getFamiliar().summonPet(itemID);
+            if (Familiar.isPetItem(itemId)) {
+                player.getFamiliar().summonPet(itemId);
                 return;
             }
             if (player.inNoDroppingItemsArea()) {
                 player.getGameEncoder().sendMessage("Items can't be dropped here.");
                 return;
             }
-            if ((itemID == ItemID.BLOOD_MONEY || BountyHunter.MysteriousEmblem.isEmblem(itemID))
+            if ((itemId == ItemId.BLOOD_MONEY || BountyHunter.MysteriousEmblem.isEmblem(itemId))
                     && player.getController().inWilderness()) {
                 player.getGameEncoder().sendMessage("You can't drop this here.");
                 return;
             }
-            if (ItemDef.getUntradable(itemID) && player.getController().inWilderness()) {
+            if (ItemDef.getUntradable(itemId) && player.getController().inWilderness()) {
                 player.getGameEncoder().sendMessage("You can't drop this right now.");
                 return;
             }
-            if (itemID == ItemID.BLOODY_KEY || itemID == ItemID.BLOODIER_KEY) {
+            if (itemId == ItemId.BLOODY_KEY || itemId == ItemId.BLOODIER_KEY) {
                 WildernessEvent.bloodyKeyToMap(item, player, MapItem.NORMAL_TIME, MapItem.ALWAYS_APPEAR);
             } else if (player.isUsergroup(Player.GROUP_YOUTUBER)) {
                 player.getController().addMapItem(item, player, MapItem.NORMAL_TIME, MapItem.NEVER_APPEAR);
             } else if (player.getController().inWilderness() && !player.getController().isInstanced()
-                    && !ItemDef.getUntradable(itemID)) {
-                if (player.getController().isFood(itemID) || player.getController().isDrink(itemID)) {
+                    && !ItemDef.getUntradable(itemId)) {
+                if (player.getController().isFood(itemId) || player.getController().isDrink(itemId)) {
                     player.getController().addMapItem(item, player, MapItem.NORMAL_TIME, MapItem.NEVER_APPEAR);
                 } else {
                     player.getController().addMapItem(item, player, MapItem.NORMAL_TIME, MapItem.ALWAYS_APPEAR);
@@ -102,7 +102,7 @@ public class InventoryWidget {
             } else if (!item.getDef().isOption(index, "release")) {
                 player.getController().addMapItem(item, player, player);
             }
-            player.getInventory().deleteItem(itemID, item.getAmount(), slot);
+            player.getInventory().deleteItem(itemId, item.getAmount(), slot);
             RequestManager.addPlayerLog(player, "mapitem",
                     player.getLogName() + " dropped " + item.getLogName() + " located at " + player + ".");
             return;
@@ -115,229 +115,229 @@ public class InventoryWidget {
         Event event = null;
         Item anItem = null;
         int[] ttLoot = null;
-        switch (itemID) {
-        case ItemID.VOID_KNIGHT_SET_32289:
+        switch (itemId) {
+        case ItemId.VOID_KNIGHT_SET_32289:
             if (player.getInventory().getRemainingSlots() < 9 - 1) {
                 player.getInventory().notEnoughSpace();
                 break;
             }
-            player.getInventory().deleteItem(itemID, 1, slot);
-            player.getInventory().addItem(ItemID.VOID_KNIGHT_TOP);
-            player.getInventory().addItem(ItemID.VOID_KNIGHT_ROBE);
-            player.getInventory().addItem(ItemID.VOID_KNIGHT_MACE);
-            player.getInventory().addItem(ItemID.VOID_KNIGHT_GLOVES);
-            player.getInventory().addItem(ItemID.VOID_MAGE_HELM);
-            player.getInventory().addItem(ItemID.VOID_RANGER_HELM);
-            player.getInventory().addItem(ItemID.VOID_MELEE_HELM);
-            player.getInventory().addItem(ItemID.ELITE_VOID_TOP);
-            player.getInventory().addItem(ItemID.ELITE_VOID_ROBE);
+            player.getInventory().deleteItem(itemId, 1, slot);
+            player.getInventory().addItem(ItemId.VOID_KNIGHT_TOP);
+            player.getInventory().addItem(ItemId.VOID_KNIGHT_ROBE);
+            player.getInventory().addItem(ItemId.VOID_KNIGHT_MACE);
+            player.getInventory().addItem(ItemId.VOID_KNIGHT_GLOVES);
+            player.getInventory().addItem(ItemId.VOID_MAGE_HELM);
+            player.getInventory().addItem(ItemId.VOID_RANGER_HELM);
+            player.getInventory().addItem(ItemId.VOID_MELEE_HELM);
+            player.getInventory().addItem(ItemId.ELITE_VOID_TOP);
+            player.getInventory().addItem(ItemId.ELITE_VOID_ROBE);
             break;
-        case ItemID.LUMBERJACK_OUTFIT_WOODCUTTING_32291:
+        case ItemId.LUMBERJACK_OUTFIT_WOODCUTTING_32291:
             if (player.getInventory().getRemainingSlots() < 4 - 1) {
                 player.getInventory().notEnoughSpace();
                 break;
             }
-            player.getInventory().deleteItem(itemID, 1, slot);
-            player.getInventory().addItem(ItemID.LUMBERJACK_HAT);
-            player.getInventory().addItem(ItemID.LUMBERJACK_TOP);
-            player.getInventory().addItem(ItemID.LUMBERJACK_LEGS);
-            player.getInventory().addItem(ItemID.LUMBERJACK_BOOTS);
+            player.getInventory().deleteItem(itemId, 1, slot);
+            player.getInventory().addItem(ItemId.LUMBERJACK_HAT);
+            player.getInventory().addItem(ItemId.LUMBERJACK_TOP);
+            player.getInventory().addItem(ItemId.LUMBERJACK_LEGS);
+            player.getInventory().addItem(ItemId.LUMBERJACK_BOOTS);
             break;
-        case ItemID.PROSPECTOR_OUTFIT_MINING_32292:
+        case ItemId.PROSPECTOR_OUTFIT_MINING_32292:
             if (player.getInventory().getRemainingSlots() < 4 - 1) {
                 player.getInventory().notEnoughSpace();
                 break;
             }
-            player.getInventory().deleteItem(itemID, 1, slot);
-            player.getInventory().addItem(ItemID.PROSPECTOR_HELMET);
-            player.getInventory().addItem(ItemID.PROSPECTOR_JACKET);
-            player.getInventory().addItem(ItemID.PROSPECTOR_LEGS);
-            player.getInventory().addItem(ItemID.PROSPECTOR_BOOTS);
+            player.getInventory().deleteItem(itemId, 1, slot);
+            player.getInventory().addItem(ItemId.PROSPECTOR_HELMET);
+            player.getInventory().addItem(ItemId.PROSPECTOR_JACKET);
+            player.getInventory().addItem(ItemId.PROSPECTOR_LEGS);
+            player.getInventory().addItem(ItemId.PROSPECTOR_BOOTS);
             break;
-        case ItemID.ANGLER_OUTFIT_FISHING_32293:
+        case ItemId.ANGLER_OUTFIT_FISHING_32293:
             if (player.getInventory().getRemainingSlots() < 4 - 1) {
                 player.getInventory().notEnoughSpace();
                 break;
             }
-            player.getInventory().deleteItem(itemID, 1, slot);
-            player.getInventory().addItem(ItemID.ANGLER_HAT);
-            player.getInventory().addItem(ItemID.ANGLER_TOP);
-            player.getInventory().addItem(ItemID.ANGLER_WADERS);
-            player.getInventory().addItem(ItemID.ANGLER_BOOTS);
+            player.getInventory().deleteItem(itemId, 1, slot);
+            player.getInventory().addItem(ItemId.ANGLER_HAT);
+            player.getInventory().addItem(ItemId.ANGLER_TOP);
+            player.getInventory().addItem(ItemId.ANGLER_WADERS);
+            player.getInventory().addItem(ItemId.ANGLER_BOOTS);
             break;
-        case ItemID.PYROMANCER_OUTFIT_FIREMAKING_32294:
+        case ItemId.PYROMANCER_OUTFIT_FIREMAKING_32294:
             if (player.getInventory().getRemainingSlots() < 5 - 1) {
                 player.getInventory().notEnoughSpace();
                 break;
             }
-            player.getInventory().deleteItem(itemID, 1, slot);
-            player.getInventory().addItem(ItemID.PYROMANCER_HOOD);
-            player.getInventory().addItem(ItemID.PYROMANCER_GARB);
-            player.getInventory().addItem(ItemID.PYROMANCER_ROBE);
-            player.getInventory().addItem(ItemID.PYROMANCER_BOOTS);
-            player.getInventory().addItem(ItemID.WARM_GLOVES);
+            player.getInventory().deleteItem(itemId, 1, slot);
+            player.getInventory().addItem(ItemId.PYROMANCER_HOOD);
+            player.getInventory().addItem(ItemId.PYROMANCER_GARB);
+            player.getInventory().addItem(ItemId.PYROMANCER_ROBE);
+            player.getInventory().addItem(ItemId.PYROMANCER_BOOTS);
+            player.getInventory().addItem(ItemId.WARM_GLOVES);
             break;
-        case ItemID.ROGUE_OUTFIT_THIEVING_32295:
+        case ItemId.ROGUE_OUTFIT_THIEVING_32295:
             if (player.getInventory().getRemainingSlots() < 5 - 1) {
                 player.getInventory().notEnoughSpace();
                 break;
             }
-            player.getInventory().deleteItem(itemID, 1, slot);
-            player.getInventory().addItem(ItemID.ROGUE_MASK);
-            player.getInventory().addItem(ItemID.ROGUE_TOP);
-            player.getInventory().addItem(ItemID.ROGUE_TROUSERS);
-            player.getInventory().addItem(ItemID.ROGUE_BOOTS);
-            player.getInventory().addItem(ItemID.ROGUE_GLOVES);
+            player.getInventory().deleteItem(itemId, 1, slot);
+            player.getInventory().addItem(ItemId.ROGUE_MASK);
+            player.getInventory().addItem(ItemId.ROGUE_TOP);
+            player.getInventory().addItem(ItemId.ROGUE_TROUSERS);
+            player.getInventory().addItem(ItemId.ROGUE_BOOTS);
+            player.getInventory().addItem(ItemId.ROGUE_GLOVES);
             break;
-        case ItemID.LARUPIA_OUTFIT_HUNTER_32296:
+        case ItemId.LARUPIA_OUTFIT_HUNTER_32296:
             if (player.getInventory().getRemainingSlots() < 3 - 1) {
                 player.getInventory().notEnoughSpace();
                 break;
             }
-            player.getInventory().deleteItem(itemID, 1, slot);
-            player.getInventory().addItem(ItemID.LARUPIA_HAT);
-            player.getInventory().addItem(ItemID.LARUPIA_TOP);
-            player.getInventory().addItem(ItemID.LARUPIA_LEGS);
+            player.getInventory().deleteItem(itemId, 1, slot);
+            player.getInventory().addItem(ItemId.LARUPIA_HAT);
+            player.getInventory().addItem(ItemId.LARUPIA_TOP);
+            player.getInventory().addItem(ItemId.LARUPIA_LEGS);
             break;
-        case ItemID.FARMERS_OUTFIT_FARMING_32297:
+        case ItemId.FARMERS_OUTFIT_FARMING_32297:
             if (player.getInventory().getRemainingSlots() < 4 - 1) {
                 player.getInventory().notEnoughSpace();
                 break;
             }
-            player.getInventory().deleteItem(itemID, 1, slot);
-            player.getInventory().addItem(ItemID.FARMERS_STRAWHAT);
-            player.getInventory().addItem(ItemID.FARMERS_JACKET);
-            player.getInventory().addItem(ItemID.FARMERS_BORO_TROUSERS);
-            player.getInventory().addItem(ItemID.FARMERS_BOOTS);
+            player.getInventory().deleteItem(itemId, 1, slot);
+            player.getInventory().addItem(ItemId.FARMERS_STRAWHAT);
+            player.getInventory().addItem(ItemId.FARMERS_JACKET);
+            player.getInventory().addItem(ItemId.FARMERS_BORO_TROUSERS);
+            player.getInventory().addItem(ItemId.FARMERS_BOOTS);
             break;
-        case ItemID.GRACEFUL_OUTFIT_AGILITY_32298:
+        case ItemId.GRACEFUL_OUTFIT_AGILITY_32298:
             if (player.getInventory().getRemainingSlots() < 6 - 1) {
                 player.getInventory().notEnoughSpace();
                 break;
             }
-            player.getInventory().deleteItem(itemID, 1, slot);
-            player.getInventory().addItem(ItemID.GRACEFUL_HOOD);
-            player.getInventory().addItem(ItemID.GRACEFUL_TOP);
-            player.getInventory().addItem(ItemID.GRACEFUL_LEGS);
-            player.getInventory().addItem(ItemID.GRACEFUL_GLOVES);
-            player.getInventory().addItem(ItemID.GRACEFUL_BOOTS);
-            player.getInventory().addItem(ItemID.GRACEFUL_CAPE);
+            player.getInventory().deleteItem(itemId, 1, slot);
+            player.getInventory().addItem(ItemId.GRACEFUL_HOOD);
+            player.getInventory().addItem(ItemId.GRACEFUL_TOP);
+            player.getInventory().addItem(ItemId.GRACEFUL_LEGS);
+            player.getInventory().addItem(ItemId.GRACEFUL_GLOVES);
+            player.getInventory().addItem(ItemId.GRACEFUL_BOOTS);
+            player.getInventory().addItem(ItemId.GRACEFUL_CAPE);
             break;
-        case ItemID.ELIDINIS_OUTFIT_RUNECRAFTING_32299:
+        case ItemId.ELIDINIS_OUTFIT_RUNECRAFTING_32299:
             if (player.getInventory().getRemainingSlots() < 2 - 1) {
                 player.getInventory().notEnoughSpace();
                 break;
             }
-            player.getInventory().deleteItem(itemID, 1, slot);
-            player.getInventory().addItem(ItemID.ROBE_OF_ELIDINIS);
-            player.getInventory().addItem(ItemID.ROBE_OF_ELIDINIS_6787);
+            player.getInventory().deleteItem(itemId, 1, slot);
+            player.getInventory().addItem(ItemId.ROBE_OF_ELIDINIS);
+            player.getInventory().addItem(ItemId.ROBE_OF_ELIDINIS_6787);
             break;
-        case ItemID.STARTER_PACK_32288:
+        case ItemId.STARTER_PACK_32288:
             if (!player.hasVoted()) {
                 player.getGameEncoder().sendMessage("To open this, you first need to vote on the main websites.");
                 break;
             }
-            player.getInventory().deleteItem(itemID, 1, slot);
+            player.getInventory().deleteItem(itemId, 1, slot);
             if (player.isGameModeNormal()) {
-                player.getInventory().addOrDropItem(ItemID.DRAGON_SCIMITAR, 1);
-                player.getInventory().addOrDropItem(ItemID.RUNE_FULL_HELM, 1);
-                player.getInventory().addOrDropItem(ItemID.RUNE_PLATEBODY, 1);
-                player.getInventory().addOrDropItem(ItemID.RUNE_PLATELEGS, 1);
-                player.getInventory().addOrDropItem(ItemID.RUNE_KITESHIELD, 1);
-                player.getInventory().addOrDropItem(ItemID.RUNE_BOOTS, 1);
-                player.getInventory().addOrDropItem(ItemID.RUNE_CROSSBOW, 1);
-                player.getInventory().addOrDropItem(ItemID.DIAMOND_BOLTS_E, 100);
-                player.getInventory().addOrDropItem(ItemID.BLACK_DHIDE_BODY, 1);
-                player.getInventory().addOrDropItem(ItemID.BLACK_DHIDE_CHAPS, 1);
-                player.getInventory().addOrDropItem(ItemID.BLACK_DHIDE_VAMB, 1);
-                player.getInventory().addOrDropItem(ItemID.BLACK_DHIDE_SHIELD, 1);
-                player.getInventory().addOrDropItem(ItemID.MYSTIC_AIR_STAFF, 1);
-                player.getInventory().addOrDropItem(ItemID.DEATH_RUNE, 100);
-                player.getInventory().addOrDropItem(ItemID.BLOOD_RUNE, 100);
-                player.getInventory().addOrDropItem(ItemID.MYSTIC_HAT, 1);
-                player.getInventory().addOrDropItem(ItemID.MYSTIC_ROBE_TOP, 1);
-                player.getInventory().addOrDropItem(ItemID.MYSTIC_ROBE_BOTTOM, 1);
-                player.getInventory().addOrDropItem(ItemID.MYSTIC_GLOVES, 1);
-                player.getInventory().addOrDropItem(ItemID.MYSTIC_BOOTS, 1);
+                player.getInventory().addOrDropItem(ItemId.DRAGON_SCIMITAR, 1);
+                player.getInventory().addOrDropItem(ItemId.RUNE_FULL_HELM, 1);
+                player.getInventory().addOrDropItem(ItemId.RUNE_PLATEBODY, 1);
+                player.getInventory().addOrDropItem(ItemId.RUNE_PLATELEGS, 1);
+                player.getInventory().addOrDropItem(ItemId.RUNE_KITESHIELD, 1);
+                player.getInventory().addOrDropItem(ItemId.RUNE_BOOTS, 1);
+                player.getInventory().addOrDropItem(ItemId.RUNE_CROSSBOW, 1);
+                player.getInventory().addOrDropItem(ItemId.DIAMOND_BOLTS_E, 100);
+                player.getInventory().addOrDropItem(ItemId.BLACK_DHIDE_BODY, 1);
+                player.getInventory().addOrDropItem(ItemId.BLACK_DHIDE_CHAPS, 1);
+                player.getInventory().addOrDropItem(ItemId.BLACK_DHIDE_VAMB, 1);
+                player.getInventory().addOrDropItem(ItemId.BLACK_DHIDE_SHIELD, 1);
+                player.getInventory().addOrDropItem(ItemId.MYSTIC_AIR_STAFF, 1);
+                player.getInventory().addOrDropItem(ItemId.DEATH_RUNE, 100);
+                player.getInventory().addOrDropItem(ItemId.BLOOD_RUNE, 100);
+                player.getInventory().addOrDropItem(ItemId.MYSTIC_HAT, 1);
+                player.getInventory().addOrDropItem(ItemId.MYSTIC_ROBE_TOP, 1);
+                player.getInventory().addOrDropItem(ItemId.MYSTIC_ROBE_BOTTOM, 1);
+                player.getInventory().addOrDropItem(ItemId.MYSTIC_GLOVES, 1);
+                player.getInventory().addOrDropItem(ItemId.MYSTIC_BOOTS, 1);
             }
-            player.getInventory().addOrDropItem(ItemID.COINS, 400000);
-            player.getInventory().addOrDropItem(ItemID.MONKFISH_NOTED, 150);
-            player.getInventory().addOrDropItem(ItemID.SUPER_ATTACK_4_NOTED, 15);
-            player.getInventory().addOrDropItem(ItemID.SUPER_STRENGTH_4_NOTED, 15);
-            player.getInventory().addOrDropItem(ItemID.SUPER_DEFENCE_4_NOTED, 15);
-            player.getInventory().addOrDropItem(ItemID.PRAYER_POTION_4_NOTED, 60);
+            player.getInventory().addOrDropItem(ItemId.COINS, 400000);
+            player.getInventory().addOrDropItem(ItemId.MONKFISH_NOTED, 150);
+            player.getInventory().addOrDropItem(ItemId.SUPER_ATTACK_4_NOTED, 15);
+            player.getInventory().addOrDropItem(ItemId.SUPER_STRENGTH_4_NOTED, 15);
+            player.getInventory().addOrDropItem(ItemId.SUPER_DEFENCE_4_NOTED, 15);
+            player.getInventory().addOrDropItem(ItemId.PRAYER_POTION_4_NOTED, 60);
             break;
-        case ItemID.PERMANENT_TZHAAR_WAVE_BOOST_32300:
-            player.getInventory().deleteItem(itemID, 1, slot);
+        case ItemId.PERMANENT_TZHAAR_WAVE_BOOST_32300:
+            player.getInventory().deleteItem(itemId, 1, slot);
             player.getCombat().getTzHaar().setPermanentWaveBoost(true);
             player.getGameEncoder().sendMessage("The effects of the scroll have been activated.");
             break;
-        case ItemID.BIRD_NEST:
-            player.getInventory().deleteItem(itemID, 1, slot);
-            player.getInventory().addItem(ItemID.BIRD_NEST_5075, 1, slot);
-            player.getInventory().addOrDropItem(ItemID.BIRDS_EGG, 1);
+        case ItemId.BIRD_NEST:
+            player.getInventory().deleteItem(itemId, 1, slot);
+            player.getInventory().addItem(ItemId.BIRD_NEST_5075, 1, slot);
+            player.getInventory().addOrDropItem(ItemId.BIRDS_EGG, 1);
             break;
-        case ItemID.BIRD_NEST_5071:
-            player.getInventory().deleteItem(itemID, 1, slot);
-            player.getInventory().addItem(ItemID.BIRD_NEST_5075, 1, slot);
-            player.getInventory().addOrDropItem(ItemID.BIRDS_EGG_5078, 1);
+        case ItemId.BIRD_NEST_5071:
+            player.getInventory().deleteItem(itemId, 1, slot);
+            player.getInventory().addItem(ItemId.BIRD_NEST_5075, 1, slot);
+            player.getInventory().addOrDropItem(ItemId.BIRDS_EGG_5078, 1);
             break;
-        case ItemID.BIRD_NEST_5072:
-            player.getInventory().deleteItem(itemID, 1, slot);
-            player.getInventory().addItem(ItemID.BIRD_NEST_5075, 1, slot);
-            player.getInventory().addOrDropItem(ItemID.BIRDS_EGG_5077, 1);
+        case ItemId.BIRD_NEST_5072:
+            player.getInventory().deleteItem(itemId, 1, slot);
+            player.getInventory().addItem(ItemId.BIRD_NEST_5075, 1, slot);
+            player.getInventory().addOrDropItem(ItemId.BIRDS_EGG_5077, 1);
             break;
-        case ItemID.MAGIC_CAPE:
-        case ItemID.MAGIC_CAPE_T:
+        case ItemId.MAGIC_CAPE:
+        case ItemId.MAGIC_CAPE_T:
             player.openDialogue("spellbooks", 1);
             break;
-        case ItemID.HYDRA_LEATHER:
+        case ItemId.HYDRA_LEATHER:
             if (Main.isSpawn()) {
-                player.getInventory().deleteItem(itemID, 1, slot);
-                player.getInventory().addItem(ItemID.FEROCIOUS_GLOVES, 1, slot);
+                player.getInventory().deleteItem(itemId, 1, slot);
+                player.getInventory().addItem(ItemId.FEROCIOUS_GLOVES, 1, slot);
             } else {
                 player.getGameEncoder()
                         .sendMessage("This leather looks pretty tough to work with... Maybe the dragonkin had a way.");
             }
             break;
-        case ItemID.RANDOM_PVP_WEAPON_32290:
+        case ItemId.RANDOM_PVP_WEAPON_32290:
             items = new int[] {
-                ItemID.VESTAS_LONGSWORD_32254, ItemID.STATIUSS_WARHAMMER_32256, ItemID.VESTAS_SPEAR_32258,
-                ItemID.MORRIGANS_JAVELIN_32260, ItemID.MORRIGANS_THROWING_AXE_32261, ItemID.ZURIELS_STAFF_32262
+                ItemId.VESTAS_LONGSWORD_32254, ItemId.STATIUSS_WARHAMMER_32256, ItemId.VESTAS_SPEAR_32258,
+                ItemId.MORRIGANS_JAVELIN_32260, ItemId.MORRIGANS_THROWING_AXE_32261, ItemId.ZURIELS_STAFF_32262
             };
-            player.getInventory().deleteItem(itemID, 1, slot);
+            player.getInventory().deleteItem(itemId, 1, slot);
             anItem = new Item(items[Utils.randomE(items.length)], 1);
-            if (anItem.getID() == ItemID.MORRIGANS_JAVELIN_32260
-                    || anItem.getID() == ItemID.MORRIGANS_THROWING_AXE_32261) {
+            if (anItem.getId() == ItemId.MORRIGANS_JAVELIN_32260
+                    || anItem.getId() == ItemId.MORRIGANS_THROWING_AXE_32261) {
                 anItem.setAmount(50);
             }
             player.getInventory().addOrDropItem(randomItem);
             RequestManager.addPlayerLog(player, "lootbox",
                     player.getLogName() + " received " + anItem.getLogName() + " from a random pvp weapon box.");
             break;
-        case ItemID.DARK_RELIC:
+        case ItemId.DARK_RELIC:
             int[] raidsSkills = new int[] {
                 Skills.ATTACK, Skills.DEFENCE, Skills.STRENGTH, Skills.HITPOINTS, Skills.RANGED, Skills.PRAYER,
                 Skills.MAGIC, Skills.MINING, Skills.WOODCUTTING, Skills.HERBLORE, Skills.FARMING, Skills.HUNTER,
                 Skills.COOKING, Skills.FISHING, Skills.THIEVING, Skills.FIREMAKING, Skills.AGILITY
             };
-            player.getWidgetManager().sendChooseAdvanceSkill(itemID, 0, 0.5, 0);
+            player.getWidgetManager().sendChooseAdvanceSkill(itemId, 0, 0.5, 0);
             player.getWidgetManager().setChooseAdvanceSkillLevelMultiplier(50);
             for (int raidsSkill : raidsSkills) {
                 player.getWidgetManager().setChooseAdvanceSkillLevelMultiplier(raidsSkill, 150);
             }
             break;
-        case ItemID.ANTIQUE_LAMP_13145:
-            player.getWidgetManager().sendChooseAdvanceSkill(itemID, 2500, 0.5, 30);
+        case ItemId.ANTIQUE_LAMP_13145:
+            player.getWidgetManager().sendChooseAdvanceSkill(itemId, 2500, 0.5, 30);
             break;
-        case ItemID.ANTIQUE_LAMP_13146:
-            player.getWidgetManager().sendChooseAdvanceSkill(itemID, 7500, 0.5, 40);
+        case ItemId.ANTIQUE_LAMP_13146:
+            player.getWidgetManager().sendChooseAdvanceSkill(itemId, 7500, 0.5, 40);
             break;
-        case ItemID.ANTIQUE_LAMP_13147:
-            player.getWidgetManager().sendChooseAdvanceSkill(itemID, 15000, 0.5, 50);
+        case ItemId.ANTIQUE_LAMP_13147:
+            player.getWidgetManager().sendChooseAdvanceSkill(itemId, 15000, 0.5, 50);
             break;
-        case ItemID.ANTIQUE_LAMP_13148:
-            player.getWidgetManager().sendChooseAdvanceSkill(itemID, 50000, 0.5, 70);
+        case ItemId.ANTIQUE_LAMP_13148:
+            player.getWidgetManager().sendChooseAdvanceSkill(itemId, 50000, 0.5, 70);
             break;
         case 5073: // Bird nest
             randomItems = new RandomItem[] {
@@ -356,7 +356,7 @@ public class InventoryWidget {
                 new RandomItem(5316, 1).setWeight(10), // Magic seed
                 new RandomItem(5317, 1).setWeight(5) // Spirit seed
             };
-            player.getInventory().deleteItem(itemID, 1, slot);
+            player.getInventory().deleteItem(itemId, 1, slot);
             player.getInventory().addItem(5075, 1, slot);
             player.getInventory().addOrDropItem(RandomItem.getItem(randomItems));
             break;
@@ -383,29 +383,29 @@ public class InventoryWidget {
                 new RandomItem(5289, 1).setWeight(2), // Palm
                 new RandomItem(5316, 1).setWeight(2) // Magic
             };
-            player.getInventory().deleteItem(itemID, 1, slot);
+            player.getInventory().deleteItem(itemId, 1, slot);
             player.getInventory().addItem(5075, 1, slot);
             player.getInventory().addOrDropItem(RandomItem.getItem(randomItems));
             break;
         case 13226: // Herb sack
             if (index == 0) {
                 for (int i = player.getInventory().size(); i >= 0; i--) {
-                    int addingID = player.getInventory().getID(i);
-                    if (!Herblore.isHerb(addingID)) {
+                    int addingId = player.getInventory().getId(i);
+                    if (!Herblore.isHerb(addingId)) {
                         continue;
                     }
                     int addingAmount = player.getInventory().getAmount(i);
-                    addingAmount = player.getWidgetManager().getHerbSack().canAddAmount(addingID, addingAmount);
-                    player.getWidgetManager().getHerbSack().addItem(addingID, addingAmount);
-                    player.getInventory().deleteItem(addingID, addingAmount, i);
+                    addingAmount = player.getWidgetManager().getHerbSack().canAddAmount(addingId, addingAmount);
+                    player.getWidgetManager().getHerbSack().addItem(addingId, addingAmount);
+                    player.getInventory().deleteItem(addingId, addingAmount, i);
                 }
             } else if (index == 2) {
                 for (int i = player.getWidgetManager().getHerbSack().size(); i >= 0; i--) {
-                    int addingID = player.getWidgetManager().getHerbSack().getID(i);
+                    int addingId = player.getWidgetManager().getHerbSack().getId(i);
                     int addingAmount = player.getWidgetManager().getHerbSack().getAmount(i);
-                    addingAmount = player.getInventory().canAddAmount(addingID, addingAmount);
-                    player.getInventory().addItem(addingID, addingAmount);
-                    player.getWidgetManager().getHerbSack().deleteItem(addingID, addingAmount);
+                    addingAmount = player.getInventory().canAddAmount(addingId, addingAmount);
+                    player.getInventory().addItem(addingId, addingAmount);
+                    player.getWidgetManager().getHerbSack().deleteItem(addingId, addingAmount);
                 }
             } else if (index == 3) {
                 player.getWidgetManager().getHerbSack().displayItemList();
@@ -414,22 +414,22 @@ public class InventoryWidget {
         case 13639: // Seed box
             if (index == 0) {
                 for (int i = player.getInventory().size(); i >= 0; i--) {
-                    int addingID = player.getInventory().getID(i);
-                    if (!Farming.isSeed(addingID)) {
+                    int addingId = player.getInventory().getId(i);
+                    if (!Farming.isSeed(addingId)) {
                         continue;
                     }
                     int addingAmount = player.getInventory().getAmount(i);
-                    addingAmount = player.getWidgetManager().getSeedBox().canAddAmount(addingID, addingAmount);
-                    player.getWidgetManager().getSeedBox().addItem(addingID, addingAmount);
-                    player.getInventory().deleteItem(addingID, addingAmount, i);
+                    addingAmount = player.getWidgetManager().getSeedBox().canAddAmount(addingId, addingAmount);
+                    player.getWidgetManager().getSeedBox().addItem(addingId, addingAmount);
+                    player.getInventory().deleteItem(addingId, addingAmount, i);
                 }
             } else if (index == 1) {
                 for (int i = player.getWidgetManager().getSeedBox().size(); i >= 0; i--) {
-                    int addingID = player.getWidgetManager().getSeedBox().getID(i);
+                    int addingId = player.getWidgetManager().getSeedBox().getId(i);
                     int addingAmount = player.getWidgetManager().getSeedBox().getAmount(i);
-                    addingAmount = player.getInventory().canAddAmount(addingID, addingAmount);
-                    player.getInventory().addItem(addingID, addingAmount);
-                    player.getWidgetManager().getSeedBox().deleteItem(addingID, addingAmount);
+                    addingAmount = player.getInventory().canAddAmount(addingId, addingAmount);
+                    player.getInventory().addItem(addingId, addingAmount);
+                    player.getWidgetManager().getSeedBox().deleteItem(addingId, addingAmount);
                 }
             } else if (index == 2) {
                 player.getWidgetManager().getSeedBox().displayItemList();
@@ -457,11 +457,11 @@ public class InventoryWidget {
                 new RandomItem(5304, 1, 3), new RandomItem(5315, 1, 3), new RandomItem(5316, 1, 3),
                 new RandomItem(5317, 1), new RandomItem(322, 5, 12), new RandomItem(336, 5, 12),
                 new RandomItem(332, 5, 12), new RandomItem(378, 5, 11), new RandomItem(360, 5, 12),
-                new RandomItem(372, 5, 21), new RandomItem(384, 5, 21), new RandomItem(ItemID.COINS, 2030, 9048),
+                new RandomItem(372, 5, 21), new RandomItem(384, 5, 21), new RandomItem(ItemId.COINS, 2030, 9048),
                 new RandomItem(13422, 3, 24), new RandomItem(3212, 4, 7), new RandomItem(7937, 29, 391),
                 new RandomItem(13574, 3, 19)
             };
-            player.getInventory().deleteItem(itemID, 1, slot);
+            player.getInventory().deleteItem(itemId, 1, slot);
             int supplyCount = 2 + Utils.randomI(2);
             for (int i = 0; i < supplyCount; i++) {
                 if (Utils.inRange(player.getCombat().getDropRate(6739, 0.01))) {
@@ -481,7 +481,7 @@ public class InventoryWidget {
             }
             break;
         case 20791: // Extra supply crate
-            player.getInventory().deleteItem(itemID, 1, slot);
+            player.getInventory().deleteItem(itemId, 1, slot);
             if (Utils.inRange(player.getCombat().getDropRate(6739, 0.01))) {
                 player.getInventory().addItem(6739, 1, slot);
             } else if (Utils.inRange(player.getCombat().getDropRate(20693, 0.02))) {
@@ -512,16 +512,16 @@ public class InventoryWidget {
                     new RandomItem(5316, 1, 3), new RandomItem(5317, 1), new RandomItem(322, 5, 12),
                     new RandomItem(336, 5, 12), new RandomItem(332, 5, 12), new RandomItem(378, 5, 11),
                     new RandomItem(360, 5, 12), new RandomItem(372, 5, 21), new RandomItem(384, 5, 21),
-                    new RandomItem(ItemID.COINS, 2030, 9048), new RandomItem(13422, 3, 24), new RandomItem(3212, 4, 7),
+                    new RandomItem(ItemId.COINS, 2030, 9048), new RandomItem(13422, 3, 24), new RandomItem(3212, 4, 7),
                     new RandomItem(7937, 29, 391), new RandomItem(13574, 3, 19)
                 };
                 player.getInventory().addItem(RandomItem.getItem(randomItems), slot);
             }
             break;
-        case ItemID.MYSTERY_BOX:
-            player.getInventory().deleteItem(itemID, 1, slot);
-            player.getWidgetManager().sendInteractiveOverlay(WidgetID.MYSTERY);
-            player.getGameEncoder().sendClearItems(WidgetID.MYSTERY, 48, 1);
+        case ItemId.MYSTERY_BOX:
+            player.getInventory().deleteItem(itemId, 1, slot);
+            player.getWidgetManager().sendInteractiveOverlay(WidgetId.MYSTERY);
+            player.getGameEncoder().sendClearItems(WidgetId.MYSTERY, 48, 1);
             final List<Item> mysteryBoxItems = new ArrayList<>();
             for (int i = 0; i < 5; i++) {
                 mysteryBoxItems.add(null);
@@ -540,11 +540,11 @@ public class InventoryWidget {
                         boxItem = MysteryBox.getBoxItem();
                         mysteryBoxItems.add(boxItem);
                     }
-                    player.getGameEncoder().sendItems(WidgetID.MYSTERY, 48, 1, mysteryBoxItems);
+                    player.getGameEncoder().sendItems(WidgetId.MYSTERY, 48, 1, mysteryBoxItems);
                     player.getSession().write();
                     if (getExecutions() == 8) {
                         stop();
-                        player.getInventory().addOrDropItem(new Item(boxItem.getID(), boxItem.getAmount()));
+                        player.getInventory().addOrDropItem(new Item(boxItem.getId(), boxItem.getAmount()));
                         RequestManager.addPlayerLog(player, "mysterybox",
                                 player.getLogName() + " received " + boxItem.getLogName() + " from a mystery box.");
                     }
@@ -552,10 +552,10 @@ public class InventoryWidget {
             };
             player.getWorld().addEvent(event);
             break;
-        case ItemID.SUPER_MYSTERY_BOX_32286:
-            player.getInventory().deleteItem(itemID, 1, slot);
-            player.getWidgetManager().sendInteractiveOverlay(WidgetID.MYSTERY);
-            player.getGameEncoder().sendClearItems(WidgetID.MYSTERY, 48, 1);
+        case ItemId.SUPER_MYSTERY_BOX_32286:
+            player.getInventory().deleteItem(itemId, 1, slot);
+            player.getWidgetManager().sendInteractiveOverlay(WidgetId.MYSTERY);
+            player.getGameEncoder().sendClearItems(WidgetId.MYSTERY, 48, 1);
             final List<Item> superMysteryBoxItems = new ArrayList<>();
             for (int i = 0; i < 5; i++) {
                 superMysteryBoxItems.add(null);
@@ -574,11 +574,11 @@ public class InventoryWidget {
                         boxItem = MysteryBox.getSuperBoxItem();
                         superMysteryBoxItems.add(boxItem);
                     }
-                    player.getGameEncoder().sendItems(WidgetID.MYSTERY, 48, 1, superMysteryBoxItems);
+                    player.getGameEncoder().sendItems(WidgetId.MYSTERY, 48, 1, superMysteryBoxItems);
                     player.getSession().write();
                     if (getExecutions() == 8) {
                         stop();
-                        player.getInventory().addOrDropItem(new Item(boxItem.getID(), boxItem.getAmount()));
+                        player.getInventory().addOrDropItem(new Item(boxItem.getId(), boxItem.getAmount()));
                         RequestManager.addPlayerLog(player, "mysterybox", player.getLogName() + " received "
                                 + boxItem.getLogName() + " from a super mystery box.");
                     }
@@ -604,37 +604,37 @@ public class InventoryWidget {
         case 5515: // Giant pouch
             if (index == 0) {
                 int pureEssenceCount = player.getInventory().getCount(7936);
-                int addingAmount = player.getWidgetManager().getRCPouch(itemID).canAddAmount(7936, pureEssenceCount);
+                int addingAmount = player.getWidgetManager().getRCPouch(itemId).canAddAmount(7936, pureEssenceCount);
                 if (pureEssenceCount == 0) {
                     player.getGameEncoder().sendMessage("You have no pure essence.");
                     break;
                 } else if (addingAmount == 0) {
                     player.getGameEncoder().sendMessage(
-                            "Your " + player.getWidgetManager().getRCPouch(itemID).getName() + " is full.");
+                            "Your " + player.getWidgetManager().getRCPouch(itemId).getName() + " is full.");
                     break;
                 }
                 player.getInventory().deleteItem(7936, addingAmount);
-                player.getWidgetManager().getRCPouch(itemID).addItem(7936, addingAmount);
+                player.getWidgetManager().getRCPouch(itemId).addItem(7936, addingAmount);
             } else if (index == 1) {
-                int pureEssenceCount = player.getWidgetManager().getRCPouch(itemID).getCount(7936);
+                int pureEssenceCount = player.getWidgetManager().getRCPouch(itemId).getCount(7936);
                 int addingAmount = player.getInventory().canAddAmount(7936, pureEssenceCount);
-                player.getWidgetManager().getRCPouch(itemID).deleteItem(7936, addingAmount);
+                player.getWidgetManager().getRCPouch(itemId).deleteItem(7936, addingAmount);
                 player.getInventory().addItem(7936, addingAmount);
             } else if (index == 2) {
-                int pureEssenceCount = player.getWidgetManager().getRCPouch(itemID).getCount(7936);
-                player.getGameEncoder().sendMessage("Your " + player.getWidgetManager().getRCPouch(itemID).getName()
+                int pureEssenceCount = player.getWidgetManager().getRCPouch(itemId).getCount(7936);
+                player.getGameEncoder().sendMessage("Your " + player.getWidgetManager().getRCPouch(itemId).getName()
                         + " contains " + Utils.formatNumber(pureEssenceCount) + " pure essence.");
             }
             break;
-        case ItemID.PURPLE_SWEETS_4561:
-            player.getInventory().deleteItem(itemID, 1, slot);
-            player.getInventory().addItem(ItemID.PURPLE_SWEETS, 1, slot);
+        case ItemId.PURPLE_SWEETS_4561:
+            player.getInventory().deleteItem(itemId, 1, slot);
+            player.getInventory().addItem(ItemId.PURPLE_SWEETS, 1, slot);
             break;
-        case ItemID.CLUE_SCROLL_EASY_2713:
-            player.getInventory().deleteItem(itemID, 1, slot);
-            player.getInventory().addItem(ItemID.CORPOREAL_BEAST_TASKS_32301, 1, slot);
+        case ItemId.CLUE_SCROLL_EASY_2713:
+            player.getInventory().deleteItem(itemId, 1, slot);
+            player.getInventory().addItem(ItemId.CORPOREAL_BEAST_TASKS_32301, 1, slot);
             break;
-        case ItemID.CORPOREAL_BEAST_TASKS_32301:
+        case ItemId.CORPOREAL_BEAST_TASKS_32301:
             if (player.getSlayer().isUnlocked(Slayer.CORPOREAL_BEAST)) {
                 player.getSlayer().lock(Slayer.CORPOREAL_BEAST);
                 player.getGameEncoder().sendMessage("You can no longer be assigned Corporeal Beast boss tasks.");
@@ -643,14 +643,14 @@ public class InventoryWidget {
                 player.getGameEncoder().sendMessage("You can now be assigned Corporeal Beast boss tasks.");
             }
             break;
-        case ItemID.LOOTING_BAG:
-        case ItemID.LOOTING_BAG_22586:
+        case ItemId.LOOTING_BAG:
+        case ItemId.LOOTING_BAG_22586:
             if (index == 0) {
-                player.getInventory().deleteItem(itemID, 1, slot);
-                if (itemID == ItemID.LOOTING_BAG) {
-                    player.getInventory().addItem(ItemID.LOOTING_BAG_22586, 1, slot);
+                player.getInventory().deleteItem(itemId, 1, slot);
+                if (itemId == ItemId.LOOTING_BAG) {
+                    player.getInventory().addItem(ItemId.LOOTING_BAG_22586, 1, slot);
                 } else {
-                    player.getInventory().addItem(ItemID.LOOTING_BAG, 1, slot);
+                    player.getInventory().addItem(ItemId.LOOTING_BAG, 1, slot);
                 }
             } else if (index == 1) {
                 player.getWidgetManager().initLootingBag();
@@ -662,9 +662,9 @@ public class InventoryWidget {
                             .sendMessage("You can't put items in the bag unless you're in the Wilderness.");
                     break;
                 }
-                player.getWidgetManager().sendInventoryOverlay(WidgetID.LOOTING_BAG_DEPOSIT);
+                player.getWidgetManager().sendInventoryOverlay(WidgetId.LOOTING_BAG_DEPOSIT);
                 player.getGameEncoder().sendScript(495, 1, "Looting bag");
-                player.getGameEncoder().sendWidgetSettings(WidgetID.LOOTING_BAG_DEPOSIT, 5, 0,
+                player.getGameEncoder().sendWidgetSettings(WidgetId.LOOTING_BAG_DEPOSIT, 5, 0,
                         player.getInventory().capacity() - 1, 1086);
                 player.getInventory().setUpdate(true);
             } else if (index == 3) {
@@ -672,7 +672,7 @@ public class InventoryWidget {
             }
             break;
         case 12789: // Clue box
-            player.getInventory().deleteItem(itemID, 1, slot);
+            player.getInventory().deleteItem(itemId, 1, slot);
             randomItems = new RandomItem[] {
                 new RandomItem(2677, 1).setWeight(8) /* Clue scroll (easy) */,
                 new RandomItem(2801, 1).setWeight(6) /* Clue scroll (medium) */,
@@ -694,7 +694,7 @@ public class InventoryWidget {
                 player.getGameEncoder().sendMessage("There is no reason to consume this.");
                 break;
             }
-            player.getInventory().deleteItem(itemID, 1, slot);
+            player.getInventory().deleteItem(itemId, 1, slot);
             player.getCombat().setSaradominsLight(true);
             player.getGameEncoder().sendMessage("You consume Saradomin's light.");
             player.getController().getVariable("saradomins_light");
@@ -706,7 +706,7 @@ public class InventoryWidget {
                 player.getInventory().notEnoughSpace();
                 break;
             }
-            player.getInventory().deleteItem(itemID, 1, slot);
+            player.getInventory().deleteItem(itemId, 1, slot);
             player.getInventory().deleteItem(526, bonesCount);
             player.getInventory().deleteItem(532, bigBonesCount);
             player.getInventory().addItem(6883, bonesCount + bigBonesCount);
@@ -716,19 +716,19 @@ public class InventoryWidget {
                 player.getGameEncoder().sendMessage("You already have this spell unlocked.");
                 break;
             }
-            player.getInventory().deleteItem(itemID, 1, slot);
+            player.getInventory().deleteItem(itemId, 1, slot);
             player.getCombat().getBountyHunter().setTeleportUnlocked(true);
             player.getGameEncoder().sendMessage("You have unlocked the Teleport to Bounty Target spell.");
             break;
         case Hunter.BIRD_SNARE_ITEM:
         case Hunter.BOX_TRAP_ITEM:
-            player.getHunter().layTrap(itemID, null);
+            player.getHunter().layTrap(itemId, null);
             break;
         case 748: // Legends Quest Holy force
             if (player.getCombat().getLegendsQuest() == 2 && player.getX() >= 2387 && player.getX() <= 2397
                     && player.getY() >= 4673 && player.getY() <= 4689
                     && player.getWorld().getTargetNPC(3962, player) == null) {
-                player.getInventory().deleteItem(itemID, 1, slot);
+                player.getInventory().deleteItem(itemId, 1, slot);
                 player.getGameEncoder().sendMessage("You cast the spell, clensing the water.");
                 player.getPrayer().adjustPoints(-99);
                 Npc nezikchened = new Npc(player.getController(), 3962, new Tile(2396, 4678, player.getHeight()));
@@ -739,11 +739,11 @@ public class InventoryWidget {
             }
             break;
         case 12641: // Amylase pack
-            player.getInventory().deleteItem(itemID, 1, slot);
+            player.getInventory().deleteItem(itemId, 1, slot);
             player.getInventory().addItem(12640, 100, slot);
             break;
         case 11738: // Herb box
-            player.getInventory().deleteItem(itemID, 1, slot);
+            player.getInventory().deleteItem(itemId, 1, slot);
             randomItems = new RandomItem[] {
                 new RandomItem(199, 1) /* Guam */, new RandomItem(201, 1) /* Marrentill */,
                 new RandomItem(203, 1) /* Tarromin */, new RandomItem(205, 1) /* Harralander */,
@@ -755,11 +755,11 @@ public class InventoryWidget {
             };
             for (int i = 0; i < 30; i++) {
                 Item herbItem = RandomItem.getItem(randomItems);
-                player.getInventory().addOrDropItem(herbItem.getNotedID(), herbItem.getAmount());
+                player.getInventory().addOrDropItem(herbItem.getNotedId(), herbItem.getAmount());
             }
             break;
-        case ItemID.BAR_BOX_32302:
-            player.getInventory().deleteItem(itemID, 1, slot);
+        case ItemId.BAR_BOX_32302:
+            player.getInventory().deleteItem(itemId, 1, slot);
             randomItems = new RandomItem[] {
                 new RandomItem(2364, 1) /* Runite bar */, new RandomItem(2362, 1) /* Adamantite bar */,
                 new RandomItem(2360, 1) /* Mithril bar */, new RandomItem(2354, 1) /* Steel bar */,
@@ -767,25 +767,25 @@ public class InventoryWidget {
             };
             for (int i = 0; i < 15; i++) {
                 Item barItem = RandomItem.getItem(randomItems);
-                player.getInventory().addOrDropItem(barItem.getNotedID(), barItem.getAmount());
+                player.getInventory().addOrDropItem(barItem.getNotedId(), barItem.getAmount());
             }
             break;
-        case ItemID.BAG_FULL_OF_GEMS:
-            player.getInventory().deleteItem(itemID, 1, slot);
+        case ItemId.BAG_FULL_OF_GEMS:
+            player.getInventory().deleteItem(itemId, 1, slot);
             randomItems = new RandomItem[] {
-                new RandomItem(ItemID.UNCUT_OPAL, 1, 4).setWeight(1024),
-                new RandomItem(ItemID.UNCUT_JADE, 1, 4).setWeight(1024),
-                new RandomItem(ItemID.UNCUT_RED_TOPAZ, 1, 4).setWeight(1024),
-                new RandomItem(ItemID.UNCUT_SAPPHIRE, 1, 4).setWeight(1024),
-                new RandomItem(ItemID.UNCUT_EMERALD, 1, 4).setWeight(1024),
-                new RandomItem(ItemID.UNCUT_RUBY, 1, 4).setWeight(1024),
-                new RandomItem(ItemID.UNCUT_DIAMOND, 1, 4).setWeight(1024),
-                new RandomItem(ItemID.UNCUT_DRAGONSTONE, 1).setWeight(32),
-                new RandomItem(ItemID.UNCUT_ONYX, 1).setWeight(8), new RandomItem(ItemID.UNCUT_ZENYTE, 1).setWeight(1)
+                new RandomItem(ItemId.UNCUT_OPAL, 1, 4).setWeight(1024),
+                new RandomItem(ItemId.UNCUT_JADE, 1, 4).setWeight(1024),
+                new RandomItem(ItemId.UNCUT_RED_TOPAZ, 1, 4).setWeight(1024),
+                new RandomItem(ItemId.UNCUT_SAPPHIRE, 1, 4).setWeight(1024),
+                new RandomItem(ItemId.UNCUT_EMERALD, 1, 4).setWeight(1024),
+                new RandomItem(ItemId.UNCUT_RUBY, 1, 4).setWeight(1024),
+                new RandomItem(ItemId.UNCUT_DIAMOND, 1, 4).setWeight(1024),
+                new RandomItem(ItemId.UNCUT_DRAGONSTONE, 1).setWeight(32),
+                new RandomItem(ItemId.UNCUT_ONYX, 1).setWeight(8), new RandomItem(ItemId.UNCUT_ZENYTE, 1).setWeight(1)
             };
             for (int i = 0; i < 20; i++) {
                 Item gemItem = RandomItem.getItem(randomItems);
-                player.getInventory().addOrDropItem(gemItem.getNotedID(), gemItem.getAmount());
+                player.getInventory().addOrDropItem(gemItem.getNotedId(), gemItem.getAmount());
             }
             break;
         case 21047: // Torn prayer scroll
@@ -794,7 +794,7 @@ public class InventoryWidget {
                 break;
             }
             player.getPrayer().setPreserveUnlocked(true);
-            player.getInventory().deleteItem(itemID, 1, slot);
+            player.getInventory().deleteItem(itemId, 1, slot);
             break;
         case 21034: // Dexterous prayer scroll
             if (player.getPrayer().getRigourUnlocked()) {
@@ -802,7 +802,7 @@ public class InventoryWidget {
                 break;
             }
             player.getPrayer().setRigourUnlocked(true);
-            player.getInventory().deleteItem(itemID, 1, slot);
+            player.getInventory().deleteItem(itemId, 1, slot);
             break;
         case 21079: // Arcane prayer scroll
             if (player.getPrayer().getAuguryUnlocked()) {
@@ -810,7 +810,7 @@ public class InventoryWidget {
                 break;
             }
             player.getPrayer().setAuguryUnlocked(true);
-            player.getInventory().deleteItem(itemID, 1, slot);
+            player.getInventory().deleteItem(itemId, 1, slot);
             break;
         case 21043: // Kodai insignia
             player.getGameEncoder().sendMessage("Insert buttplug meme.");
@@ -822,7 +822,7 @@ public class InventoryWidget {
             if (!player.getController().canTeleport(true)) {
                 break;
             }
-            player.getInventory().deleteItem(itemID, 1, slot);
+            player.getInventory().deleteItem(itemId, 1, slot);
             player.getMovement().animatedTeleport(new Tile(1310, 1250), Magic.TABLET_ANIMATION_START,
                     Magic.TABLET_ANIMATION_END, -1, null, Magic.TABLET_GRAPHIC, null, 0, 2);
             player.getController().stopWithTeleport();
@@ -832,7 +832,7 @@ public class InventoryWidget {
             if (!player.getController().canTeleport(true)) {
                 break;
             }
-            player.getInventory().deleteItem(itemID, 1, slot);
+            player.getInventory().deleteItem(itemId, 1, slot);
             player.getMovement().animatedTeleport(new Tile(3213, 3423), Magic.TABLET_ANIMATION_START,
                     Magic.TABLET_ANIMATION_END, -1, null, Magic.TABLET_GRAPHIC, null, 0, 2);
             player.getController().stopWithTeleport();
@@ -842,7 +842,7 @@ public class InventoryWidget {
             if (!player.getController().canTeleport(true)) {
                 break;
             }
-            player.getInventory().deleteItem(itemID, 1, slot);
+            player.getInventory().deleteItem(itemId, 1, slot);
             player.getMovement().animatedTeleport(new Tile(3221, 3218), Magic.TABLET_ANIMATION_START,
                     Magic.TABLET_ANIMATION_END, -1, null, Magic.TABLET_GRAPHIC, null, 0, 2);
             player.getController().stopWithTeleport();
@@ -852,7 +852,7 @@ public class InventoryWidget {
             if (!player.getController().canTeleport(true)) {
                 break;
             }
-            player.getInventory().deleteItem(itemID, 1, slot);
+            player.getInventory().deleteItem(itemId, 1, slot);
             player.getMovement().animatedTeleport(new Tile(2965, 3379), Magic.TABLET_ANIMATION_START,
                     Magic.TABLET_ANIMATION_END, -1, null, Magic.TABLET_GRAPHIC, null, 0, 2);
             player.getController().stopWithTeleport();
@@ -862,7 +862,7 @@ public class InventoryWidget {
             if (!player.getController().canTeleport(true)) {
                 break;
             }
-            player.getInventory().deleteItem(itemID, 1, slot);
+            player.getInventory().deleteItem(itemId, 1, slot);
             player.getMovement().animatedTeleport(new Tile(2725, 3485), Magic.TABLET_ANIMATION_START,
                     Magic.TABLET_ANIMATION_END, -1, null, Magic.TABLET_GRAPHIC, null, 0, 2);
             player.getController().stopWithTeleport();
@@ -872,7 +872,7 @@ public class InventoryWidget {
             if (!player.getController().canTeleport(true)) {
                 break;
             }
-            player.getInventory().deleteItem(itemID, 1, slot);
+            player.getInventory().deleteItem(itemId, 1, slot);
             player.getMovement().animatedTeleport(new Tile(2664, 3306), Magic.TABLET_ANIMATION_START,
                     Magic.TABLET_ANIMATION_END, -1, null, Magic.TABLET_GRAPHIC, null, 0, 2);
             player.getController().stopWithTeleport();
@@ -882,7 +882,7 @@ public class InventoryWidget {
             if (!player.getController().canTeleport(true)) {
                 break;
             }
-            player.getInventory().deleteItem(itemID, 1, slot);
+            player.getInventory().deleteItem(itemId, 1, slot);
             player.getMovement().animatedTeleport(new Tile(2894, 3465), Magic.TABLET_ANIMATION_START,
                     Magic.TABLET_ANIMATION_END, -1, null, Magic.TABLET_GRAPHIC, null, 0, 2);
             player.getController().stopWithTeleport();
@@ -892,7 +892,7 @@ public class InventoryWidget {
             if (!player.getController().canTeleport(true)) {
                 break;
             }
-            player.getInventory().deleteItem(itemID, 1, slot);
+            player.getInventory().deleteItem(itemId, 1, slot);
             player.getMovement().animatedTeleport(new Tile(3797, 2866), Magic.TABLET_ANIMATION_START,
                     Magic.TABLET_ANIMATION_END, -1, null, Magic.TABLET_GRAPHIC, null, 0, 2);
             player.getController().stopWithTeleport();
@@ -902,7 +902,7 @@ public class InventoryWidget {
             if (!player.getController().canTeleport(true)) {
                 break;
             }
-            player.getInventory().deleteItem(itemID, 1, slot);
+            player.getInventory().deleteItem(itemId, 1, slot);
             player.getMovement().animatedTeleport(new Tile(2670, 3632), Magic.TABLET_ANIMATION_START,
                     Magic.TABLET_ANIMATION_END, -1, null, Magic.TABLET_GRAPHIC, null, 0, 2);
             player.getController().stopWithTeleport();
@@ -912,7 +912,7 @@ public class InventoryWidget {
             if (!player.getController().canTeleport(true)) {
                 break;
             }
-            player.getInventory().deleteItem(itemID, 1, slot);
+            player.getInventory().deleteItem(itemId, 1, slot);
             player.getMovement().animatedTeleport(new Tile(2829, 3685), Magic.TABLET_ANIMATION_START,
                     Magic.TABLET_ANIMATION_END, -1, null, Magic.TABLET_GRAPHIC, null, 0, 2);
             player.getController().stopWithTeleport();
@@ -922,7 +922,7 @@ public class InventoryWidget {
             if (!player.getController().canTeleport(true)) {
                 break;
             }
-            player.getInventory().deleteItem(itemID, 1, slot);
+            player.getInventory().deleteItem(itemId, 1, slot);
             player.getInventory().addItem(6100, 1, slot);
             player.getMovement().animatedTeleport(new Tile(2352, 3162), Magic.TABLET_ANIMATION_START,
                     Magic.TABLET_ANIMATION_END, -1, null, Magic.TABLET_GRAPHIC, null, 0, 2);
@@ -933,7 +933,7 @@ public class InventoryWidget {
             if (!player.getController().canTeleport(true)) {
                 break;
             }
-            player.getInventory().deleteItem(itemID, 1, slot);
+            player.getInventory().deleteItem(itemId, 1, slot);
             player.getInventory().addItem(6101, 1, slot);
             player.getMovement().animatedTeleport(new Tile(2352, 3162), Magic.TABLET_ANIMATION_START,
                     Magic.TABLET_ANIMATION_END, -1, null, Magic.TABLET_GRAPHIC, null, 0, 2);
@@ -944,7 +944,7 @@ public class InventoryWidget {
             if (!player.getController().canTeleport(true)) {
                 break;
             }
-            player.getInventory().deleteItem(itemID, 1, slot);
+            player.getInventory().deleteItem(itemId, 1, slot);
             player.getInventory().addItem(6102, 1, slot);
             player.getMovement().animatedTeleport(new Tile(2352, 3162), Magic.TABLET_ANIMATION_START,
                     Magic.TABLET_ANIMATION_END, -1, null, Magic.TABLET_GRAPHIC, null, 0, 2);
@@ -955,7 +955,7 @@ public class InventoryWidget {
             if (!player.getController().canTeleport(true)) {
                 break;
             }
-            player.getInventory().deleteItem(itemID, 1, slot);
+            player.getInventory().deleteItem(itemId, 1, slot);
             player.getInventory().addItem(6103, 1, slot);
             player.getMovement().animatedTeleport(new Tile(2352, 3162), Magic.TABLET_ANIMATION_START,
                     Magic.TABLET_ANIMATION_END, -1, null, Magic.TABLET_GRAPHIC, null, 0, 2);
@@ -966,7 +966,7 @@ public class InventoryWidget {
             if (!player.getController().canTeleport(true)) {
                 break;
             }
-            player.getInventory().deleteItem(itemID, 1, slot);
+            player.getInventory().deleteItem(itemId, 1, slot);
             if ((player.inEdgeville() || player.getController().inWilderness()) && player.getClientHeight() == 0) {
                 height = player.getHeight();
             }
@@ -987,7 +987,7 @@ public class InventoryWidget {
             if (!player.getController().canTeleport(true)) {
                 break;
             }
-            player.getInventory().deleteItem(itemID, 1, slot);
+            player.getInventory().deleteItem(itemId, 1, slot);
             if ((player.inEdgeville() || player.getController().inWilderness()) && player.getClientHeight() == 0) {
                 height = player.getHeight();
             }
@@ -1000,7 +1000,7 @@ public class InventoryWidget {
             if (!player.getController().canTeleport(true)) {
                 break;
             }
-            player.getInventory().deleteItem(itemID, 1, slot);
+            player.getInventory().deleteItem(itemId, 1, slot);
             if ((player.inEdgeville() || player.getController().inWilderness()) && player.getClientHeight() == 0) {
                 height = player.getHeight();
             }
@@ -1013,24 +1013,24 @@ public class InventoryWidget {
             if (!player.getController().canTeleport(true)) {
                 break;
             }
-            player.getInventory().deleteItem(itemID, 1, slot);
+            player.getInventory().deleteItem(itemId, 1, slot);
             player.getMovement().animatedTeleport(new Tile(2212, 3056, 0), 3864, new Graphic(1039), 2);
             player.getController().stopWithTeleport();
             player.clearHits();
             break;
         case 952: // Spade
             if (player.getCombat().getBarrows().ahrimMound()) {
-                player.getCombat().getBarrows().enterCrypt(NpcID.AHRIM_THE_BLIGHTED_98);
+                player.getCombat().getBarrows().enterCrypt(NpcId.AHRIM_THE_BLIGHTED_98);
             } else if (player.getCombat().getBarrows().dharokMound()) {
-                player.getCombat().getBarrows().enterCrypt(NpcID.DHAROK_THE_WRETCHED_115);
+                player.getCombat().getBarrows().enterCrypt(NpcId.DHAROK_THE_WRETCHED_115);
             } else if (player.getCombat().getBarrows().guthanMound()) {
-                player.getCombat().getBarrows().enterCrypt(NpcID.GUTHAN_THE_INFESTED_115);
+                player.getCombat().getBarrows().enterCrypt(NpcId.GUTHAN_THE_INFESTED_115);
             } else if (player.getCombat().getBarrows().karilMound()) {
-                player.getCombat().getBarrows().enterCrypt(NpcID.KARIL_THE_TAINTED_98);
+                player.getCombat().getBarrows().enterCrypt(NpcId.KARIL_THE_TAINTED_98);
             } else if (player.getCombat().getBarrows().toragMound()) {
-                player.getCombat().getBarrows().enterCrypt(NpcID.TORAG_THE_CORRUPTED_115);
+                player.getCombat().getBarrows().enterCrypt(NpcId.TORAG_THE_CORRUPTED_115);
             } else if (player.getCombat().getBarrows().veracMound()) {
-                player.getCombat().getBarrows().enterCrypt(NpcID.VERAC_THE_DEFILED_115);
+                player.getCombat().getBarrows().enterCrypt(NpcId.VERAC_THE_DEFILED_115);
             }
             break;
         case 6543: // Antique lamp
@@ -1081,21 +1081,21 @@ public class InventoryWidget {
             }
             player.openDialogue("combatlamp", 1);
             break;
-        case ItemID.OLD_SCHOOL_BOND:
+        case ItemId.OLD_SCHOOL_BOND:
             if (index == 0) {
                 Guide.openEntry(player, "main", "bonds");
                 player.getGameEncoder().sendMessage("Deposit this bond in your pouch to use it.");
             } else if (index == 2) {
-                player.getInventory().deleteItem(itemID, 1, slot);
+                player.getInventory().deleteItem(itemId, 1, slot);
                 player.setBondPouch(Utils.addInt(player.getBondPouch(), 1, Item.MAX_AMOUNT));
                 player.getGameEncoder().sendMessage("1 bond has been added to your pouch.");
             }
             break;
-        case ItemID.OLD_SCHOOL_BOND_UNTRADEABLE:
-            player.getInventory().deleteItem(itemID, 1, slot);
-            player.getInventory().addItem(ItemID._14_DAYS_GOLD_MEMBERSHIP_32303, 1, slot);
+        case ItemId.OLD_SCHOOL_BOND_UNTRADEABLE:
+            player.getInventory().deleteItem(itemId, 1, slot);
+            player.getInventory().addItem(ItemId._14_DAYS_GOLD_MEMBERSHIP_32303, 1, slot);
             break;
-        case ItemID._14_DAYS_GOLD_MEMBERSHIP_32303:
+        case ItemId._14_DAYS_GOLD_MEMBERSHIP_32303:
             player.openDialogue("bond", 0);
             break;
         case 12791: // Rune pouch
@@ -1109,17 +1109,17 @@ public class InventoryWidget {
             break;
         case 20164: // Large spade
             if (player.getCombat().getBarrows().ahrimMound()) {
-                player.getCombat().getBarrows().enterCrypt(NpcID.AHRIM_THE_BLIGHTED_98);
+                player.getCombat().getBarrows().enterCrypt(NpcId.AHRIM_THE_BLIGHTED_98);
             } else if (player.getCombat().getBarrows().dharokMound()) {
-                player.getCombat().getBarrows().enterCrypt(NpcID.DHAROK_THE_WRETCHED_115);
+                player.getCombat().getBarrows().enterCrypt(NpcId.DHAROK_THE_WRETCHED_115);
             } else if (player.getCombat().getBarrows().guthanMound()) {
-                player.getCombat().getBarrows().enterCrypt(NpcID.GUTHAN_THE_INFESTED_115);
+                player.getCombat().getBarrows().enterCrypt(NpcId.GUTHAN_THE_INFESTED_115);
             } else if (player.getCombat().getBarrows().karilMound()) {
-                player.getCombat().getBarrows().enterCrypt(NpcID.KARIL_THE_TAINTED_98);
+                player.getCombat().getBarrows().enterCrypt(NpcId.KARIL_THE_TAINTED_98);
             } else if (player.getCombat().getBarrows().toragMound()) {
-                player.getCombat().getBarrows().enterCrypt(NpcID.TORAG_THE_CORRUPTED_115);
+                player.getCombat().getBarrows().enterCrypt(NpcId.TORAG_THE_CORRUPTED_115);
             } else if (player.getCombat().getBarrows().veracMound()) {
-                player.getCombat().getBarrows().enterCrypt(NpcID.VERAC_THE_DEFILED_115);
+                player.getCombat().getBarrows().enterCrypt(NpcId.VERAC_THE_DEFILED_115);
             }
             break;
         case 4566: // Rubber chicken
@@ -1140,7 +1140,7 @@ public class InventoryWidget {
                     player.getInventory().notEnoughSpace();
                     break;
                 }
-                player.getInventory().deleteItem(itemID, 1, slot);
+                player.getInventory().deleteItem(itemId, 1, slot);
                 player.getInventory().addItem(11908, 1);
                 player.getInventory().addItem(12932, 1);
             }
@@ -1154,7 +1154,7 @@ public class InventoryWidget {
                     player.getInventory().notEnoughSpace();
                     break;
                 }
-                player.getInventory().deleteItem(itemID, 1, slot);
+                player.getInventory().deleteItem(itemId, 1, slot);
                 player.getInventory().addItem(22290, 1);
                 player.getInventory().addItem(12932, 1);
             }
@@ -1171,8 +1171,8 @@ public class InventoryWidget {
         case 21266: // Purple slayer helmet (i)
         case 21888: // Turquoise slayer helmet
         case 21890: // Turquoise slayer helmet (i)
-        case ItemID.HYDRA_SLAYER_HELMET:
-        case ItemID.HYDRA_SLAYER_HELMET_I:
+        case ItemId.HYDRA_SLAYER_HELMET:
+        case ItemId.HYDRA_SLAYER_HELMET_I:
             player.getSlayer().sendTask();
             break;
         case 9753: // Defence cape
@@ -1201,7 +1201,7 @@ public class InventoryWidget {
             }
             break;
         case 11238: // Baby impling jar
-            player.getInventory().deleteItem(itemID, 1, slot);
+            player.getInventory().deleteItem(itemId, 1, slot);
             randomItems = new RandomItem[] {
                 new RandomItem(1755, 1) /* Chisel */, new RandomItem(1734, 1) /* Thread */,
                 new RandomItem(946, 1) /* Knife */, new RandomItem(1985, 1) /* Cheese */,
@@ -1217,7 +1217,7 @@ public class InventoryWidget {
             player.getInventory().addOrDropItem(RandomItem.getItem(randomItems));
             break;
         case 11240: // Young impling jar
-            player.getInventory().deleteItem(itemID, 1, slot);
+            player.getInventory().deleteItem(itemId, 1, slot);
             randomItems = new RandomItem[] {
                 new RandomItem(1539, 5) /* Steel nails */, new RandomItem(1901, 1) /* Chocolate slice */,
                 new RandomItem(7936, 1) /* Pure essence */, new RandomItem(1523, 1) /* Lockpick */,
@@ -1232,7 +1232,7 @@ public class InventoryWidget {
             player.getInventory().addOrDropItem(RandomItem.getItem(randomItems));
             break;
         case 11242: // Gourmet impling jar
-            player.getInventory().deleteItem(itemID, 1, slot);
+            player.getInventory().deleteItem(itemId, 1, slot);
             randomItems = new RandomItem[] {
                 new RandomItem(365, 1) /* Bass */, new RandomItem(361, 1) /* Tuna */,
                 new RandomItem(2011, 1) /* Curry */, new RandomItem(2327, 1) /* Meat pie */,
@@ -1248,7 +1248,7 @@ public class InventoryWidget {
             player.getInventory().addOrDropItem(RandomItem.getItem(randomItems));
             break;
         case 11244: // Earth impling jar
-            player.getInventory().deleteItem(itemID, 1, slot);
+            player.getInventory().deleteItem(itemId, 1, slot);
             randomItems = new RandomItem[] {
                 new RandomItem(1442, 1) /* Fire talisman */, new RandomItem(1440, 1) /* Earth talisman */,
                 new RandomItem(5535, 1) /* Earth tiara */, new RandomItem(557, 32) /* Earth rune */,
@@ -1264,7 +1264,7 @@ public class InventoryWidget {
             player.getInventory().addOrDropItem(RandomItem.getItem(randomItems));
             break;
         case 11246: // Essence impling jar
-            player.getInventory().deleteItem(itemID, 1, slot);
+            player.getInventory().deleteItem(itemId, 1, slot);
             randomItems = new RandomItem[] {
                 new RandomItem(7937, 20, 35) /* Pure essence (noted) */, new RandomItem(555, 30) /* Water rune */,
                 new RandomItem(556, 30) /* Air rune */, new RandomItem(554, 50) /* Fire rune */,
@@ -1280,7 +1280,7 @@ public class InventoryWidget {
             player.getInventory().addOrDropItem(RandomItem.getItem(randomItems));
             break;
         case 11248: // Eclectic impling jar
-            player.getInventory().deleteItem(itemID, 1, slot);
+            player.getInventory().deleteItem(itemId, 1, slot);
             randomItems = new RandomItem[] {
                 new RandomItem(1273, 1) /* Mithril pickaxe */, new RandomItem(1199, 1) /* Adamant kiteshield */,
                 new RandomItem(2493, 1) /* Blue d'hide chaps */, new RandomItem(10083, 1) /* Red spiky vambs */,
@@ -1298,7 +1298,7 @@ public class InventoryWidget {
             player.getInventory().addOrDropItem(RandomItem.getItem(randomItems));
             break;
         case 11250: // Nature impling jar
-            player.getInventory().deleteItem(itemID, 1, slot);
+            player.getInventory().deleteItem(itemId, 1, slot);
             randomItems = new RandomItem[] {
                 new RandomItem(5100, 1) /* Limpwurt seed */, new RandomItem(5104, 1) /* Jangerberry seed */,
                 new RandomItem(5281, 1) /* Belladonna seed */, new RandomItem(5294, 1) /* Harralander seed */,
@@ -1315,7 +1315,7 @@ public class InventoryWidget {
             player.getInventory().addOrDropItem(RandomItem.getItem(randomItems));
             break;
         case 11252: // Magpie impling jar
-            player.getInventory().deleteItem(itemID, 1, slot);
+            player.getInventory().deleteItem(itemId, 1, slot);
             randomItems = new RandomItem[] {
                 new RandomItem(1701, 3) /* Diamond amulet (noted) */,
                 new RandomItem(1732, 3) /* Amulet of power (noted) */,
@@ -1334,7 +1334,7 @@ public class InventoryWidget {
             player.getInventory().addOrDropItem(RandomItem.getItem(randomItems));
             break;
         case 11254: // Ninja impling jar
-            player.getInventory().deleteItem(itemID, 1, slot);
+            player.getInventory().deleteItem(itemId, 1, slot);
             randomItems = new RandomItem[] {
                 new RandomItem(6328, 1) /* Snakeskin boots */, new RandomItem(3391, 1) /* Splitbark gauntlets */,
                 new RandomItem(4097, 1) /* Mystic boots */, new RandomItem(3385, 1) /* Splitbark helm */,
@@ -1354,7 +1354,7 @@ public class InventoryWidget {
             player.getInventory().addOrDropItem(RandomItem.getItem(randomItems));
             break;
         case 11256: // Dragon impling jar
-            player.getInventory().deleteItem(itemID, 1, slot);
+            player.getInventory().deleteItem(itemId, 1, slot);
             randomItems = new RandomItem[] {
                 new RandomItem(11232, 100, 350) /* Dragon dart tip */,
                 new RandomItem(11237, 100, 500) /* Dragon arrowtips */,
@@ -1379,7 +1379,7 @@ public class InventoryWidget {
             player.getInventory().addOrDropItem(RandomItem.getItem(randomItems));
             break;
         case 19732: // Lucky impling jar
-            player.getInventory().deleteItem(itemID, 1, slot);
+            player.getInventory().deleteItem(itemId, 1, slot);
             randomItems = new RandomItem[] {
                 new RandomItem(2677, 1, 1).setWeight(8) /* Clue scroll (easy) */,
                 new RandomItem(2801, 1, 1).setWeight(6) /* Clue scroll (medium) */,
@@ -1421,7 +1421,7 @@ public class InventoryWidget {
                     break;
                 }
                 player.getInventory().addItem(21820, item.getCharges());
-                player.getInventory().deleteItem(itemID, 1, slot);
+                player.getInventory().deleteItem(itemId, 1, slot);
                 player.getInventory().addItem(22542, 1, slot);
             }
             break;
@@ -1434,7 +1434,7 @@ public class InventoryWidget {
                     break;
                 }
                 player.getInventory().addItem(21820, item.getCharges());
-                player.getInventory().deleteItem(itemID, 1, slot);
+                player.getInventory().deleteItem(itemId, 1, slot);
                 player.getInventory().addItem(22547, 1, slot);
             }
             break;
@@ -1447,7 +1447,7 @@ public class InventoryWidget {
                     break;
                 }
                 player.getInventory().addItem(21820, item.getCharges());
-                player.getInventory().deleteItem(itemID, 1, slot);
+                player.getInventory().deleteItem(itemId, 1, slot);
                 player.getInventory().addItem(22552, 1, slot);
             }
             break;
@@ -1465,7 +1465,7 @@ public class InventoryWidget {
             } else if (index == 3) {
                 player.getGameEncoder().sendMessage("This is charged with blood runes.");
             } else if (index == 4) {
-                player.getInventory().deleteItem(itemID, 1, slot);
+                player.getInventory().deleteItem(itemId, 1, slot);
                 player.getInventory().addItem(22481, 1, slot);
             }
             break;
@@ -1473,7 +1473,7 @@ public class InventoryWidget {
             if (index == 2) {
                 player.getCharges().checkCharges(slot);
             } else if (index == 3) {
-                player.getInventory().deleteItem(itemID, 1, slot);
+                player.getInventory().deleteItem(itemId, 1, slot);
                 player.getInventory().addItem(11908, 1, slot);
             }
             break;
@@ -1481,7 +1481,7 @@ public class InventoryWidget {
             if (index == 2) {
                 player.getCharges().checkCharges(slot);
             } else if (index == 3) {
-                player.getInventory().deleteItem(itemID, 1, slot);
+                player.getInventory().deleteItem(itemId, 1, slot);
                 player.getInventory().addItem(22290, 1, slot);
             }
             break;
@@ -1489,7 +1489,7 @@ public class InventoryWidget {
             if (index == 2) {
                 player.getCharges().checkCharges(slot);
             } else if (index == 3) {
-                player.getInventory().deleteItem(itemID, 1, slot);
+                player.getInventory().deleteItem(itemId, 1, slot);
                 player.getInventory().addItem(22486, 1, slot);
             }
             break;
@@ -1506,7 +1506,7 @@ public class InventoryWidget {
                     break;
                 }
                 player.getInventory().addItem(21820, item.getCharges());
-                player.getInventory().deleteItem(itemID, 1, slot);
+                player.getInventory().deleteItem(itemId, 1, slot);
                 player.getInventory().addItem(21817, 1, slot);
             }
             break;
@@ -1516,7 +1516,7 @@ public class InventoryWidget {
                 player.getGameEncoder()
                         .sendMessage("Ether automatic absorption: " + player.getCharges().getEthereumAutoAbsorb());
             } else if (index == 3) {
-                player.getInventory().deleteItem(itemID, 1, slot);
+                player.getInventory().deleteItem(itemId, 1, slot);
                 player.getInventory().addItem(21820, 250, slot);
             }
             break;
@@ -1528,7 +1528,7 @@ public class InventoryWidget {
                     player.getInventory().notEnoughSpace();
                     break;
                 }
-                player.getInventory().deleteItem(itemID, 1, slot);
+                player.getInventory().deleteItem(itemId, 1, slot);
                 player.getInventory().addItem(20716, 1, slot);
                 player.getInventory().addItem(20718, 10);
             }
@@ -1576,80 +1576,80 @@ public class InventoryWidget {
         case 22486: // Scythe of vitur (uncharged)
             player.getGameEncoder().sendMessage("This is charged with vials of blood and blood runes.");
             break;
-        case ItemID.TOXIC_STAFF_UNCHARGED:
+        case ItemId.TOXIC_STAFF_UNCHARGED:
             if (player.getInventory().getRemainingSlots() < 1) {
                 player.getInventory().notEnoughSpace();
                 break;
             }
-            player.getInventory().deleteItem(itemID, 1, slot);
-            player.getInventory().addItem(ItemID.STAFF_OF_THE_DEAD, 1, slot);
-            player.getInventory().addItem(ItemID.MAGIC_FANG, 1);
+            player.getInventory().deleteItem(itemId, 1, slot);
+            player.getInventory().addItem(ItemId.STAFF_OF_THE_DEAD, 1, slot);
+            player.getInventory().addItem(ItemId.MAGIC_FANG, 1);
             break;
-        case ItemID.RING_OF_SUFFERING_I:
-        case ItemID.SEERS_RING_I:
-        case ItemID.ARCHERS_RING_I:
-        case ItemID.WARRIOR_RING_I:
-        case ItemID.BERSERKER_RING_I:
-        case ItemID.TYRANNICAL_RING_I:
-        case ItemID.TREASONOUS_RING_I:
-        case ItemID.RING_OF_THE_GODS_I:
-        case ItemID.BLACK_MASK_10_I:
-        case ItemID.DRAGON_CHAINBODY_G:
-        case ItemID.DRAGON_PLATELEGS_G:
-        case ItemID.DRAGON_PLATESKIRT_G:
-        case ItemID.DRAGON_SQ_SHIELD_G:
-        case ItemID.DRAGON_SCIMITAR_OR:
-        case ItemID.DRAGON_DEFENDER_T:
-        case ItemID.DARK_INFINITY_HAT:
-        case ItemID.DARK_INFINITY_TOP:
-        case ItemID.DARK_INFINITY_BOTTOMS:
-        case ItemID.LIGHT_INFINITY_HAT:
-        case ItemID.LIGHT_INFINITY_TOP:
-        case ItemID.LIGHT_INFINITY_BOTTOMS:
-        case ItemID.AMULET_OF_FURY_OR:
-        case ItemID.AMULET_OF_TORTURE_OR:
-        case ItemID.OCCULT_NECKLACE_OR:
-        case ItemID.DRAGON_FULL_HELM_G:
-        case ItemID.ARMADYL_GODSWORD_OR:
-        case ItemID.BANDOS_GODSWORD_OR:
-        case ItemID.SARADOMIN_GODSWORD_OR:
-        case ItemID.ZAMORAK_GODSWORD_OR:
-        case ItemID.DRAGON_BOOTS_G:
-        case ItemID.DRAGON_PLATEBODY_G:
-        case ItemID.DRAGON_KITESHIELD_G:
-        case ItemID.NECKLACE_OF_ANGUISH_OR:
-        case ItemID.ODIUM_WARD_12807:
-        case ItemID.MALEDICTION_WARD_12806:
-        case ItemID.RUNE_DEFENDER_T:
-        case ItemID.TZHAAR_KET_OM_T:
-        case ItemID.BERSERKER_NECKLACE_OR:
-        case ItemID.RUNE_SCIMITAR_23330:
-        case ItemID.RUNE_SCIMITAR_23332:
-        case ItemID.RUNE_SCIMITAR_23334:
-        case ItemID.TORMENTED_BRACELET_OR:
-            if (item.getDef().getExchangeIDs() == null) {
+        case ItemId.RING_OF_SUFFERING_I:
+        case ItemId.SEERS_RING_I:
+        case ItemId.ARCHERS_RING_I:
+        case ItemId.WARRIOR_RING_I:
+        case ItemId.BERSERKER_RING_I:
+        case ItemId.TYRANNICAL_RING_I:
+        case ItemId.TREASONOUS_RING_I:
+        case ItemId.RING_OF_THE_GODS_I:
+        case ItemId.BLACK_MASK_10_I:
+        case ItemId.DRAGON_CHAINBODY_G:
+        case ItemId.DRAGON_PLATELEGS_G:
+        case ItemId.DRAGON_PLATESKIRT_G:
+        case ItemId.DRAGON_SQ_SHIELD_G:
+        case ItemId.DRAGON_SCIMITAR_OR:
+        case ItemId.DRAGON_DEFENDER_T:
+        case ItemId.DARK_INFINITY_HAT:
+        case ItemId.DARK_INFINITY_TOP:
+        case ItemId.DARK_INFINITY_BOTTOMS:
+        case ItemId.LIGHT_INFINITY_HAT:
+        case ItemId.LIGHT_INFINITY_TOP:
+        case ItemId.LIGHT_INFINITY_BOTTOMS:
+        case ItemId.AMULET_OF_FURY_OR:
+        case ItemId.AMULET_OF_TORTURE_OR:
+        case ItemId.OCCULT_NECKLACE_OR:
+        case ItemId.DRAGON_FULL_HELM_G:
+        case ItemId.ARMADYL_GODSWORD_OR:
+        case ItemId.BANDOS_GODSWORD_OR:
+        case ItemId.SARADOMIN_GODSWORD_OR:
+        case ItemId.ZAMORAK_GODSWORD_OR:
+        case ItemId.DRAGON_BOOTS_G:
+        case ItemId.DRAGON_PLATEBODY_G:
+        case ItemId.DRAGON_KITESHIELD_G:
+        case ItemId.NECKLACE_OF_ANGUISH_OR:
+        case ItemId.ODIUM_WARD_12807:
+        case ItemId.MALEDICTION_WARD_12806:
+        case ItemId.RUNE_DEFENDER_T:
+        case ItemId.TZHAAR_KET_OM_T:
+        case ItemId.BERSERKER_NECKLACE_OR:
+        case ItemId.RUNE_SCIMITAR_23330:
+        case ItemId.RUNE_SCIMITAR_23332:
+        case ItemId.RUNE_SCIMITAR_23334:
+        case ItemId.TORMENTED_BRACELET_OR:
+            if (item.getDef().getExchangeIds() == null) {
                 break;
-            } else if (player.getInventory().getRemainingSlots() < item.getDef().getExchangeIDs().length - 1) {
+            } else if (player.getInventory().getRemainingSlots() < item.getDef().getExchangeIds().length - 1) {
                 player.getInventory().notEnoughSpace();
                 break;
             }
-            player.getInventory().deleteItem(itemID, 1, slot);
-            for (int exchangeID : item.getDef().getExchangeIDs()) {
-                player.getInventory().addItem(exchangeID, 1, slot);
+            player.getInventory().deleteItem(itemId, 1, slot);
+            for (int exchangeId : item.getDef().getExchangeIds()) {
+                player.getInventory().addItem(exchangeId, 1, slot);
             }
             break;
-        case ItemID.AIR_TALISMAN:
-        case ItemID.EARTH_TALISMAN:
-        case ItemID.FIRE_TALISMAN:
-        case ItemID.WATER_TALISMAN:
-        case ItemID.BODY_TALISMAN:
-        case ItemID.MIND_TALISMAN:
-        case ItemID.CHAOS_TALISMAN:
-        case ItemID.COSMIC_TALISMAN:
-        case ItemID.DEATH_TALISMAN:
-        case ItemID.NATURE_TALISMAN:
-        case ItemID.WRATH_TALISMAN:
-            Runecrafting.talismanTeleport(player, Runecrafting.Altar.getByTalisman(itemID));
+        case ItemId.AIR_TALISMAN:
+        case ItemId.EARTH_TALISMAN:
+        case ItemId.FIRE_TALISMAN:
+        case ItemId.WATER_TALISMAN:
+        case ItemId.BODY_TALISMAN:
+        case ItemId.MIND_TALISMAN:
+        case ItemId.CHAOS_TALISMAN:
+        case ItemId.COSMIC_TALISMAN:
+        case ItemId.DEATH_TALISMAN:
+        case ItemId.NATURE_TALISMAN:
+        case ItemId.WRATH_TALISMAN:
+            Runecrafting.talismanTeleport(player, Runecrafting.Altar.getByTalisman(itemId));
             break;
         case 5516: // Elemental talisman
             player.openDialogue("runecrafting", 0);
@@ -1658,7 +1658,7 @@ public class InventoryWidget {
             if (!player.getController().canTeleport(true)) {
                 break;
             }
-            player.getInventory().deleteItem(itemID, 1, slot);
+            player.getInventory().deleteItem(itemId, 1, slot);
             player.getMovement().animatedTeleport(new Tile(3128, 3832, 0), 3864, new Graphic(1039), 2);
             player.getController().stopWithTeleport();
             player.clearHits();
@@ -1667,12 +1667,12 @@ public class InventoryWidget {
         case 10016: // Snowy knight
         case 10018: // Sapphire glacialis
         case 10020: // Ruby harvest
-            player.getInventory().deleteItem(itemID, 1, slot);
+            player.getInventory().deleteItem(itemId, 1, slot);
             player.getInventory().addItem(10012, 1, slot);
             break;
         case 2550: // Ring of recoil
             player.getCharges().setRingOfRecoil(ItemCharges.RING_OF_RECOIL);
-            player.getInventory().deleteItem(itemID, 1, slot);
+            player.getInventory().deleteItem(itemId, 1, slot);
             player.getGameEncoder().sendMessage("Your Ring of Recoil has shattered.");
             break;
         case 13119: // Falador shield 3
@@ -1707,7 +1707,7 @@ public class InventoryWidget {
             if (!player.getController().canTeleport(tile, true)) {
                 break;
             }
-            player.getInventory().deleteItem(itemID, 1, slot);
+            player.getInventory().deleteItem(itemId, 1, slot);
             player.getMovement().animatedTeleport(tile, Magic.TABLET_ANIMATION_START, Magic.TABLET_ANIMATION_END, -1,
                     null, Magic.TABLET_GRAPHIC, null, 0, 2);
             player.getController().stopWithTeleport();
@@ -1721,7 +1721,7 @@ public class InventoryWidget {
             if (!player.getController().canTeleport(tile, true)) {
                 break;
             }
-            player.getInventory().deleteItem(itemID, 1, slot);
+            player.getInventory().deleteItem(itemId, 1, slot);
             player.getMovement().animatedTeleport(tile, Magic.TABLET_ANIMATION_START, Magic.TABLET_ANIMATION_END, -1,
                     null, Magic.TABLET_GRAPHIC, null, 0, 2);
             player.getController().stopWithTeleport();
@@ -1735,7 +1735,7 @@ public class InventoryWidget {
             if (!player.getController().canTeleport(tile, true)) {
                 break;
             }
-            player.getInventory().deleteItem(itemID, 1, slot);
+            player.getInventory().deleteItem(itemId, 1, slot);
             player.getMovement().animatedTeleport(tile, Magic.TABLET_ANIMATION_START, Magic.TABLET_ANIMATION_END, -1,
                     null, Magic.TABLET_GRAPHIC, null, 0, 2);
             player.getController().stopWithTeleport();
@@ -1749,7 +1749,7 @@ public class InventoryWidget {
             if (!player.getController().canTeleport(tile, true)) {
                 break;
             }
-            player.getInventory().deleteItem(itemID, 1, slot);
+            player.getInventory().deleteItem(itemId, 1, slot);
             player.getMovement().animatedTeleport(tile, Magic.TABLET_ANIMATION_START, Magic.TABLET_ANIMATION_END, -1,
                     null, Magic.TABLET_GRAPHIC, null, 0, 2);
             player.getController().stopWithTeleport();
@@ -1776,27 +1776,27 @@ public class InventoryWidget {
                 player.getGameEncoder().sendMessage("You need 10 burnt pages to do this.");
                 break;
             }
-            player.getInventory().deleteItem(itemID, 1, slot);
+            player.getInventory().deleteItem(itemId, 1, slot);
             player.getInventory().deleteItem(20718, 10);
             player.getInventory().addItem(20714, 1, slot);
             break;
-        case ItemID.ABYSSAL_TENTACLE:
+        case ItemId.ABYSSAL_TENTACLE:
             if (index == 3) {
                 player.getCharges().checkCharges(slot);
             } else if (index == 4) {
-                player.getInventory().deleteItem(itemID, 1, slot);
-                player.getInventory().addItem(ItemID.KRAKEN_TENTACLE, 1, slot);
+                player.getInventory().deleteItem(itemId, 1, slot);
+                player.getInventory().addItem(ItemId.KRAKEN_TENTACLE, 1, slot);
             }
             break;
-        case ItemID.SARAS_BLESSED_SWORD_FULL:
-        case ItemID.SARADOMINS_BLESSED_SWORD:
+        case ItemId.SARAS_BLESSED_SWORD_FULL:
+        case ItemId.SARADOMINS_BLESSED_SWORD:
             if (index == 2) {
                 player.getCharges().checkCharges(slot);
             } else if (index == 4) {
-                player.getInventory().deleteItem(itemID, 1, slot);
-                player.getInventory().addItem(ItemID.SARADOMINS_TEAR, 1, slot);
-                if (itemID == ItemID.SARAS_BLESSED_SWORD_FULL) {
-                    player.getInventory().addOrDropItem(ItemID.SARADOMIN_SWORD, 1);
+                player.getInventory().deleteItem(itemId, 1, slot);
+                player.getInventory().addItem(ItemId.SARADOMINS_TEAR, 1, slot);
+                if (itemId == ItemId.SARAS_BLESSED_SWORD_FULL) {
+                    player.getInventory().addOrDropItem(ItemId.SARADOMIN_SWORD, 1);
                 }
             }
             break;
@@ -1805,351 +1805,351 @@ public class InventoryWidget {
         case 12927: // Serpentine visage
         case 12929: // Serpentine helm (uncharged)
         case 12924: // Toxic blowpipe (empty)
-            player.getInventory().deleteItem(itemID, 1, slot);
+            player.getInventory().deleteItem(itemId, 1, slot);
             player.getInventory().addItem(12934, 20000);
             break;
         case 10146: // Orange salamander
         case 10147: // Red salamander
         case 10148: // Black salamander
         case 10149: // Swamp lizard
-            player.getInventory().deleteItem(itemID, 1, slot);
+            player.getInventory().deleteItem(itemId, 1, slot);
             break;
-        case ItemID.CLUE_SCROLL_EASY:
-        case ItemID.CLUE_BOTTLE_EASY:
-        case ItemID.CLUE_GEODE_EASY:
-        case ItemID.CLUE_NEST_EASY:
+        case ItemId.CLUE_SCROLL_EASY:
+        case ItemId.CLUE_BOTTLE_EASY:
+        case ItemId.CLUE_GEODE_EASY:
+        case ItemId.CLUE_NEST_EASY:
             ttLoot = new int[] {
-                ItemID.HOLY_BLESSING, ItemID.UNHOLY_BLESSING, ItemID.PEACEFUL_BLESSING, ItemID.HONOURABLE_BLESSING,
-                ItemID.WAR_BLESSING, ItemID.ANCIENT_BLESSING, ItemID.WILLOW_COMP_BOW, ItemID.YEW_COMP_BOW,
-                ItemID.MAGIC_COMP_BOW, ItemID.BEAR_FEET, ItemID.MOLE_SLIPPERS, ItemID.FROG_SLIPPERS, ItemID.DEMON_FEET,
-                ItemID.SANDWICH_LADY_HAT, ItemID.SANDWICH_LADY_TOP, ItemID.SANDWICH_LADY_BOTTOM,
-                ItemID.RUNE_SCIMITAR_ORNAMENT_KIT_GUTHIX, ItemID.RUNE_SCIMITAR_ORNAMENT_KIT_SARADOMIN,
-                ItemID.RUNE_SCIMITAR_ORNAMENT_KIT_ZAMORAK, ItemID.MONKS_ROBE_TOP_T, ItemID.MONKS_ROBE_T,
-                ItemID.AMULET_OF_DEFENCE_T, ItemID.JESTER_CAPE, ItemID.SHOULDER_PARROT, ItemID.PURPLE_SWEETS
+                ItemId.HOLY_BLESSING, ItemId.UNHOLY_BLESSING, ItemId.PEACEFUL_BLESSING, ItemId.HONOURABLE_BLESSING,
+                ItemId.WAR_BLESSING, ItemId.ANCIENT_BLESSING, ItemId.WILLOW_COMP_BOW, ItemId.YEW_COMP_BOW,
+                ItemId.MAGIC_COMP_BOW, ItemId.BEAR_FEET, ItemId.MOLE_SLIPPERS, ItemId.FROG_SLIPPERS, ItemId.DEMON_FEET,
+                ItemId.SANDWICH_LADY_HAT, ItemId.SANDWICH_LADY_TOP, ItemId.SANDWICH_LADY_BOTTOM,
+                ItemId.RUNE_SCIMITAR_ORNAMENT_KIT_GUTHIX, ItemId.RUNE_SCIMITAR_ORNAMENT_KIT_SARADOMIN,
+                ItemId.RUNE_SCIMITAR_ORNAMENT_KIT_ZAMORAK, ItemId.MONKS_ROBE_TOP_T, ItemId.MONKS_ROBE_T,
+                ItemId.AMULET_OF_DEFENCE_T, ItemId.JESTER_CAPE, ItemId.SHOULDER_PARROT, ItemId.PURPLE_SWEETS
             };
             int[] ttEasy = new int[] {
-                ItemID.BRONZE_FULL_HELM_T, ItemID.BRONZE_PLATEBODY_T, ItemID.BRONZE_PLATELEGS_T,
-                ItemID.BRONZE_PLATESKIRT_T, ItemID.BRONZE_KITESHIELD_T, ItemID.BRONZE_FULL_HELM_G,
-                ItemID.BRONZE_PLATEBODY_G, ItemID.BRONZE_PLATELEGS_G, ItemID.BRONZE_PLATESKIRT_G,
-                ItemID.BRONZE_KITESHIELD_G, ItemID.IRON_FULL_HELM_T, ItemID.IRON_PLATEBODY_T, ItemID.IRON_PLATELEGS_T,
-                ItemID.IRON_PLATESKIRT_T, ItemID.IRON_KITESHIELD_T, ItemID.IRON_FULL_HELM_G, ItemID.IRON_PLATEBODY_G,
-                ItemID.IRON_PLATELEGS_G, ItemID.IRON_PLATESKIRT_G, ItemID.IRON_KITESHIELD_G, ItemID.STEEL_FULL_HELM_T,
-                ItemID.STEEL_PLATEBODY_T, ItemID.STEEL_PLATELEGS_T, ItemID.STEEL_PLATESKIRT_T,
-                ItemID.STEEL_KITESHIELD_T, ItemID.STEEL_FULL_HELM_G, ItemID.STEEL_PLATEBODY_G, ItemID.STEEL_PLATELEGS_G,
-                ItemID.STEEL_PLATESKIRT_G, ItemID.STEEL_KITESHIELD_G, ItemID.BLACK_FULL_HELM_T,
-                ItemID.BLACK_PLATEBODY_T, ItemID.BLACK_PLATELEGS_T, ItemID.BLACK_PLATESKIRT_T,
-                ItemID.BLACK_KITESHIELD_T, ItemID.BLACK_FULL_HELM_G, ItemID.BLACK_PLATEBODY_G, ItemID.BLACK_PLATELEGS_G,
-                ItemID.BLACK_PLATESKIRT_G, ItemID.BLACK_KITESHIELD_G, ItemID.BLACK_BERET, ItemID.BLUE_BERET,
-                ItemID.WHITE_BERET, ItemID.RED_BERET, ItemID.HIGHWAYMAN_MASK, ItemID.BEANIE, ItemID.BLUE_WIZARD_HAT_T,
-                ItemID.BLUE_WIZARD_ROBE_T, ItemID.BLUE_SKIRT_T, ItemID.BLUE_WIZARD_HAT_G, ItemID.BLUE_WIZARD_ROBE_G,
-                ItemID.BLUE_SKIRT_G, ItemID.BLACK_WIZARD_HAT_T, ItemID.BLACK_WIZARD_ROBE_T, ItemID.BLACK_SKIRT_T,
-                ItemID.BLACK_WIZARD_HAT_G, ItemID.BLACK_WIZARD_ROBE_G, ItemID.BLACK_SKIRT_G, ItemID.STUDDED_BODY_T,
-                ItemID.STUDDED_CHAPS_T, ItemID.STUDDED_BODY_G, ItemID.STUDDED_CHAPS_G, ItemID.BLACK_HELM_H1,
-                ItemID.BLACK_HELM_H2, ItemID.BLACK_HELM_H3, ItemID.BLACK_HELM_H4, ItemID.BLACK_HELM_H5,
-                ItemID.BLACK_PLATEBODY_H1, ItemID.BLACK_PLATEBODY_H2, ItemID.BLACK_PLATEBODY_H3,
-                ItemID.BLACK_PLATEBODY_H4, ItemID.BLACK_PLATEBODY_H5, ItemID.BLACK_SHIELD_H1, ItemID.BLACK_SHIELD_H2,
-                ItemID.BLACK_SHIELD_H3, ItemID.BLACK_SHIELD_H4, ItemID.BLACK_SHIELD_H5, ItemID.BLUE_ELEGANT_SHIRT,
-                ItemID.BLUE_ELEGANT_LEGS, ItemID.BLUE_ELEGANT_BLOUSE, ItemID.BLUE_ELEGANT_SKIRT,
-                ItemID.GREEN_ELEGANT_SHIRT, ItemID.GREEN_ELEGANT_LEGS, ItemID.GREEN_ELEGANT_BLOUSE,
-                ItemID.GREEN_ELEGANT_SKIRT, ItemID.RED_ELEGANT_SHIRT, ItemID.RED_ELEGANT_LEGS,
-                ItemID.RED_ELEGANT_BLOUSE, ItemID.RED_ELEGANT_SKIRT, ItemID.BOBS_RED_SHIRT, ItemID.BOBS_BLUE_SHIRT,
-                ItemID.BOBS_GREEN_SHIRT, ItemID.BOBS_BLACK_SHIRT, ItemID.BOBS_PURPLE_SHIRT, ItemID.STAFF_OF_BOB_THE_CAT,
-                ItemID.A_POWDERED_WIG, ItemID.FLARED_TROUSERS, ItemID.PANTALOONS, ItemID.SLEEPING_CAP,
-                ItemID.AMULET_OF_MAGIC_T, ItemID.AMULET_OF_POWER_T, ItemID.RAIN_BOW, ItemID.HAM_JOINT,
-                ItemID.BLACK_CANE, ItemID.BLACK_PICKAXE, ItemID.GUTHIX_ROBE_TOP, ItemID.GUTHIX_ROBE_LEGS,
-                ItemID.SARADOMIN_ROBE_TOP, ItemID.SARADOMIN_ROBE_LEGS, ItemID.ZAMORAK_ROBE_TOP,
-                ItemID.ZAMORAK_ROBE_LEGS, ItemID.ANCIENT_ROBE_TOP, ItemID.BANDOS_ROBE_LEGS, ItemID.ARMADYL_ROBE_TOP,
-                ItemID.ARMADYL_ROBE_LEGS, ItemID.IMP_MASK, ItemID.GOBLIN_MASK, ItemID.TEAM_CAPE_I, ItemID.TEAM_CAPE_X,
-                ItemID.TEAM_CAPE_ZERO, ItemID.CAPE_OF_SKULLS, ItemID.WOODEN_SHIELD_G, ItemID.GOLDEN_CHEFS_HAT,
-                ItemID.GOLDEN_APRON, ItemID.MONKS_ROBE_TOP_G, ItemID.MONKS_ROBE_G, ItemID.LARGE_SPADE
+                ItemId.BRONZE_FULL_HELM_T, ItemId.BRONZE_PLATEBODY_T, ItemId.BRONZE_PLATELEGS_T,
+                ItemId.BRONZE_PLATESKIRT_T, ItemId.BRONZE_KITESHIELD_T, ItemId.BRONZE_FULL_HELM_G,
+                ItemId.BRONZE_PLATEBODY_G, ItemId.BRONZE_PLATELEGS_G, ItemId.BRONZE_PLATESKIRT_G,
+                ItemId.BRONZE_KITESHIELD_G, ItemId.IRON_FULL_HELM_T, ItemId.IRON_PLATEBODY_T, ItemId.IRON_PLATELEGS_T,
+                ItemId.IRON_PLATESKIRT_T, ItemId.IRON_KITESHIELD_T, ItemId.IRON_FULL_HELM_G, ItemId.IRON_PLATEBODY_G,
+                ItemId.IRON_PLATELEGS_G, ItemId.IRON_PLATESKIRT_G, ItemId.IRON_KITESHIELD_G, ItemId.STEEL_FULL_HELM_T,
+                ItemId.STEEL_PLATEBODY_T, ItemId.STEEL_PLATELEGS_T, ItemId.STEEL_PLATESKIRT_T,
+                ItemId.STEEL_KITESHIELD_T, ItemId.STEEL_FULL_HELM_G, ItemId.STEEL_PLATEBODY_G, ItemId.STEEL_PLATELEGS_G,
+                ItemId.STEEL_PLATESKIRT_G, ItemId.STEEL_KITESHIELD_G, ItemId.BLACK_FULL_HELM_T,
+                ItemId.BLACK_PLATEBODY_T, ItemId.BLACK_PLATELEGS_T, ItemId.BLACK_PLATESKIRT_T,
+                ItemId.BLACK_KITESHIELD_T, ItemId.BLACK_FULL_HELM_G, ItemId.BLACK_PLATEBODY_G, ItemId.BLACK_PLATELEGS_G,
+                ItemId.BLACK_PLATESKIRT_G, ItemId.BLACK_KITESHIELD_G, ItemId.BLACK_BERET, ItemId.BLUE_BERET,
+                ItemId.WHITE_BERET, ItemId.RED_BERET, ItemId.HIGHWAYMAN_MASK, ItemId.BEANIE, ItemId.BLUE_WIZARD_HAT_T,
+                ItemId.BLUE_WIZARD_ROBE_T, ItemId.BLUE_SKIRT_T, ItemId.BLUE_WIZARD_HAT_G, ItemId.BLUE_WIZARD_ROBE_G,
+                ItemId.BLUE_SKIRT_G, ItemId.BLACK_WIZARD_HAT_T, ItemId.BLACK_WIZARD_ROBE_T, ItemId.BLACK_SKIRT_T,
+                ItemId.BLACK_WIZARD_HAT_G, ItemId.BLACK_WIZARD_ROBE_G, ItemId.BLACK_SKIRT_G, ItemId.STUDDED_BODY_T,
+                ItemId.STUDDED_CHAPS_T, ItemId.STUDDED_BODY_G, ItemId.STUDDED_CHAPS_G, ItemId.BLACK_HELM_H1,
+                ItemId.BLACK_HELM_H2, ItemId.BLACK_HELM_H3, ItemId.BLACK_HELM_H4, ItemId.BLACK_HELM_H5,
+                ItemId.BLACK_PLATEBODY_H1, ItemId.BLACK_PLATEBODY_H2, ItemId.BLACK_PLATEBODY_H3,
+                ItemId.BLACK_PLATEBODY_H4, ItemId.BLACK_PLATEBODY_H5, ItemId.BLACK_SHIELD_H1, ItemId.BLACK_SHIELD_H2,
+                ItemId.BLACK_SHIELD_H3, ItemId.BLACK_SHIELD_H4, ItemId.BLACK_SHIELD_H5, ItemId.BLUE_ELEGANT_SHIRT,
+                ItemId.BLUE_ELEGANT_LEGS, ItemId.BLUE_ELEGANT_BLOUSE, ItemId.BLUE_ELEGANT_SKIRT,
+                ItemId.GREEN_ELEGANT_SHIRT, ItemId.GREEN_ELEGANT_LEGS, ItemId.GREEN_ELEGANT_BLOUSE,
+                ItemId.GREEN_ELEGANT_SKIRT, ItemId.RED_ELEGANT_SHIRT, ItemId.RED_ELEGANT_LEGS,
+                ItemId.RED_ELEGANT_BLOUSE, ItemId.RED_ELEGANT_SKIRT, ItemId.BOBS_RED_SHIRT, ItemId.BOBS_BLUE_SHIRT,
+                ItemId.BOBS_GREEN_SHIRT, ItemId.BOBS_BLACK_SHIRT, ItemId.BOBS_PURPLE_SHIRT, ItemId.STAFF_OF_BOB_THE_CAT,
+                ItemId.A_POWDERED_WIG, ItemId.FLARED_TROUSERS, ItemId.PANTALOONS, ItemId.SLEEPING_CAP,
+                ItemId.AMULET_OF_MAGIC_T, ItemId.AMULET_OF_POWER_T, ItemId.RAIN_BOW, ItemId.HAM_JOINT,
+                ItemId.BLACK_CANE, ItemId.BLACK_PICKAXE, ItemId.GUTHIX_ROBE_TOP, ItemId.GUTHIX_ROBE_LEGS,
+                ItemId.SARADOMIN_ROBE_TOP, ItemId.SARADOMIN_ROBE_LEGS, ItemId.ZAMORAK_ROBE_TOP,
+                ItemId.ZAMORAK_ROBE_LEGS, ItemId.ANCIENT_ROBE_TOP, ItemId.BANDOS_ROBE_LEGS, ItemId.ARMADYL_ROBE_TOP,
+                ItemId.ARMADYL_ROBE_LEGS, ItemId.IMP_MASK, ItemId.GOBLIN_MASK, ItemId.TEAM_CAPE_I, ItemId.TEAM_CAPE_X,
+                ItemId.TEAM_CAPE_ZERO, ItemId.CAPE_OF_SKULLS, ItemId.WOODEN_SHIELD_G, ItemId.GOLDEN_CHEFS_HAT,
+                ItemId.GOLDEN_APRON, ItemId.MONKS_ROBE_TOP_G, ItemId.MONKS_ROBE_G, ItemId.LARGE_SPADE
             };
-            player.getInventory().deleteItem(itemID, 1, slot);
-            int easyItemID = ttEasy[Utils.randomE(ttEasy.length)];
-            player.getInventory().addItem(easyItemID, 1, slot);
+            player.getInventory().deleteItem(itemId, 1, slot);
+            int easyItemId = ttEasy[Utils.randomE(ttEasy.length)];
+            player.getInventory().addItem(easyItemId, 1, slot);
             if (Utils.randomE(5) == 0) {
-                int extraItemID = ttLoot[Utils.randomE(ttLoot.length)];
-                if (extraItemID == ItemID.PURPLE_SWEETS) {
-                    player.getInventory().addOrDropItem(extraItemID, 8 + Utils.randomI(24));
+                int extraItemId = ttLoot[Utils.randomE(ttLoot.length)];
+                if (extraItemId == ItemId.PURPLE_SWEETS) {
+                    player.getInventory().addOrDropItem(extraItemId, 8 + Utils.randomI(24));
                 } else {
-                    player.getInventory().addOrDropItem(extraItemID, 1);
+                    player.getInventory().addOrDropItem(extraItemId, 1);
                 }
             }
             player.getSkills().increaseClueScrollCount(Skills.CLUE_SCROLL_EASY);
             break;
-        case ItemID.CLUE_SCROLL_MEDIUM:
-        case ItemID.CLUE_BOTTLE_MEDIUM:
-        case ItemID.CLUE_GEODE_MEDIUM:
-        case ItemID.CLUE_NEST_MEDIUM:
+        case ItemId.CLUE_SCROLL_MEDIUM:
+        case ItemId.CLUE_BOTTLE_MEDIUM:
+        case ItemId.CLUE_GEODE_MEDIUM:
+        case ItemId.CLUE_NEST_MEDIUM:
             ttLoot = new int[] {
-                ItemID.HOLY_BLESSING, ItemID.UNHOLY_BLESSING, ItemID.PEACEFUL_BLESSING, ItemID.HONOURABLE_BLESSING,
-                ItemID.WAR_BLESSING, ItemID.ANCIENT_BLESSING, ItemID.WILLOW_COMP_BOW, ItemID.YEW_COMP_BOW,
-                ItemID.MAGIC_COMP_BOW, ItemID.BEAR_FEET, ItemID.MOLE_SLIPPERS, ItemID.FROG_SLIPPERS, ItemID.DEMON_FEET,
-                ItemID.SANDWICH_LADY_HAT, ItemID.SANDWICH_LADY_TOP, ItemID.SANDWICH_LADY_BOTTOM,
-                ItemID.RUNE_SCIMITAR_ORNAMENT_KIT_GUTHIX, ItemID.RUNE_SCIMITAR_ORNAMENT_KIT_SARADOMIN,
-                ItemID.RUNE_SCIMITAR_ORNAMENT_KIT_ZAMORAK, ItemID.MONKS_ROBE_TOP_T, ItemID.MONKS_ROBE_T,
-                ItemID.AMULET_OF_DEFENCE_T, ItemID.JESTER_CAPE, ItemID.SHOULDER_PARROT, ItemID.PURPLE_SWEETS
+                ItemId.HOLY_BLESSING, ItemId.UNHOLY_BLESSING, ItemId.PEACEFUL_BLESSING, ItemId.HONOURABLE_BLESSING,
+                ItemId.WAR_BLESSING, ItemId.ANCIENT_BLESSING, ItemId.WILLOW_COMP_BOW, ItemId.YEW_COMP_BOW,
+                ItemId.MAGIC_COMP_BOW, ItemId.BEAR_FEET, ItemId.MOLE_SLIPPERS, ItemId.FROG_SLIPPERS, ItemId.DEMON_FEET,
+                ItemId.SANDWICH_LADY_HAT, ItemId.SANDWICH_LADY_TOP, ItemId.SANDWICH_LADY_BOTTOM,
+                ItemId.RUNE_SCIMITAR_ORNAMENT_KIT_GUTHIX, ItemId.RUNE_SCIMITAR_ORNAMENT_KIT_SARADOMIN,
+                ItemId.RUNE_SCIMITAR_ORNAMENT_KIT_ZAMORAK, ItemId.MONKS_ROBE_TOP_T, ItemId.MONKS_ROBE_T,
+                ItemId.AMULET_OF_DEFENCE_T, ItemId.JESTER_CAPE, ItemId.SHOULDER_PARROT, ItemId.PURPLE_SWEETS
             };
             int[] ttMedium = new int[] {
-                ItemID.MITHRIL_FULL_HELM_T, ItemID.MITHRIL_PLATEBODY_T, ItemID.MITHRIL_PLATELEGS_T,
-                ItemID.MITHRIL_PLATESKIRT_T, ItemID.MITHRIL_KITESHIELD_T, ItemID.MITHRIL_FULL_HELM_G,
-                ItemID.MITHRIL_PLATEBODY_G, ItemID.MITHRIL_PLATELEGS_G, ItemID.MITHRIL_PLATESKIRT_G,
-                ItemID.MITHRIL_KITESHIELD_G, ItemID.ADAMANT_FULL_HELM_T, ItemID.ADAMANT_PLATEBODY_T,
-                ItemID.ADAMANT_PLATELEGS_T, ItemID.ADAMANT_PLATESKIRT_T, ItemID.ADAMANT_KITESHIELD_T,
-                ItemID.ADAMANT_FULL_HELM_G, ItemID.ADAMANT_PLATEBODY_G, ItemID.ADAMANT_PLATELEGS_G,
-                ItemID.ADAMANT_PLATESKIRT_G, ItemID.ADAMANT_KITESHIELD_G, ItemID.CLIMBING_BOOTS_G,
-                ItemID.SPIKED_MANACLES, ItemID.RANGER_BOOTS, ItemID.HOLY_SANDALS, ItemID.WIZARD_BOOTS,
-                ItemID.BLACK_HEADBAND, ItemID.RED_HEADBAND, ItemID.BROWN_HEADBAND, ItemID.PINK_HEADBAND,
-                ItemID.GREEN_HEADBAND, ItemID.BLUE_HEADBAND, ItemID.WHITE_HEADBAND, ItemID.GOLD_HEADBAND,
-                ItemID.RED_BOATER, ItemID.ORANGE_BOATER, ItemID.GREEN_BOATER, ItemID.BLUE_BOATER, ItemID.BLACK_BOATER,
-                ItemID.PINK_BOATER, ItemID.PURPLE_BOATER, ItemID.WHITE_BOATER, ItemID.GREEN_DHIDE_BODY_T,
-                ItemID.GREEN_DHIDE_CHAPS_T, ItemID.GREEN_DHIDE_BODY_G, ItemID.GREEN_DHIDE_CHAPS_G,
-                ItemID.ADAMANT_HELM_H1, ItemID.ADAMANT_HELM_H2, ItemID.ADAMANT_HELM_H3, ItemID.ADAMANT_HELM_H4,
-                ItemID.ADAMANT_HELM_H5, ItemID.ADAMANT_PLATEBODY_H1, ItemID.ADAMANT_PLATEBODY_H2,
-                ItemID.ADAMANT_PLATEBODY_H3, ItemID.ADAMANT_PLATEBODY_H4, ItemID.ADAMANT_PLATEBODY_H5,
-                ItemID.ADAMANT_SHIELD_H1, ItemID.ADAMANT_SHIELD_H2, ItemID.ADAMANT_SHIELD_H3, ItemID.ADAMANT_SHIELD_H4,
-                ItemID.ADAMANT_SHIELD_H5, ItemID.BLACK_ELEGANT_SHIRT, ItemID.BLACK_ELEGANT_LEGS,
-                ItemID.WHITE_ELEGANT_BLOUSE, ItemID.WHITE_ELEGANT_SKIRT, ItemID.PURPLE_ELEGANT_SHIRT,
-                ItemID.PURPLE_ELEGANT_LEGS, ItemID.PURPLE_ELEGANT_BLOUSE, ItemID.PURPLE_ELEGANT_SKIRT,
-                ItemID.PINK_ELEGANT_SHIRT, ItemID.PINK_ELEGANT_LEGS, ItemID.PINK_ELEGANT_BLOUSE,
-                ItemID.PINK_ELEGANT_SKIRT, ItemID.GOLD_ELEGANT_SHIRT, ItemID.GOLD_ELEGANT_LEGS,
-                ItemID.GOLD_ELEGANT_BLOUSE, ItemID.GOLD_ELEGANT_SKIRT, ItemID.WOLF_MASK, ItemID.WOLF_CLOAK,
-                ItemID.STRENGTH_AMULET_T, ItemID.ADAMANT_CANE, ItemID.GUTHIX_MITRE, ItemID.SARADOMIN_MITRE,
-                ItemID.ZAMORAK_MITRE, ItemID.ANCIENT_MITRE, ItemID.BANDOS_MITRE, ItemID.ARMADYL_MITRE,
-                ItemID.GUTHIX_CLOAK, ItemID.SARADOMIN_CLOAK, ItemID.ZAMORAK_CLOAK, ItemID.ANCIENT_CLOAK,
-                ItemID.BANDOS_CLOAK, ItemID.ARMADYL_CLOAK, ItemID.ANCIENT_STOLE, ItemID.ARMADYL_STOLE,
-                ItemID.BANDOS_STOLE, ItemID.ANCIENT_CROZIER, ItemID.ARMADYL_CROZIER, ItemID.BANDOS_CROZIER,
-                ItemID.CAT_MASK, ItemID.PENGUIN_MASK, ItemID.GNOMISH_FIRELIGHTER, ItemID.CRIER_HAT, ItemID.CRIER_BELL,
-                ItemID.CRIER_COAT, ItemID.LEPRECHAUN_HAT, ItemID.BLACK_LEPRECHAUN_HAT, ItemID.BLACK_UNICORN_MASK,
-                ItemID.WHITE_UNICORN_MASK, ItemID.ARCEUUS_BANNER, ItemID.HOSIDIUS_BANNER, ItemID.LOVAKENGJ_BANNER,
-                ItemID.PISCARILIUS_BANNER, ItemID.SHAYZIEN_BANNER, ItemID.CABBAGE_ROUND_SHIELD, ItemID.CLUELESS_SCROLL
+                ItemId.MITHRIL_FULL_HELM_T, ItemId.MITHRIL_PLATEBODY_T, ItemId.MITHRIL_PLATELEGS_T,
+                ItemId.MITHRIL_PLATESKIRT_T, ItemId.MITHRIL_KITESHIELD_T, ItemId.MITHRIL_FULL_HELM_G,
+                ItemId.MITHRIL_PLATEBODY_G, ItemId.MITHRIL_PLATELEGS_G, ItemId.MITHRIL_PLATESKIRT_G,
+                ItemId.MITHRIL_KITESHIELD_G, ItemId.ADAMANT_FULL_HELM_T, ItemId.ADAMANT_PLATEBODY_T,
+                ItemId.ADAMANT_PLATELEGS_T, ItemId.ADAMANT_PLATESKIRT_T, ItemId.ADAMANT_KITESHIELD_T,
+                ItemId.ADAMANT_FULL_HELM_G, ItemId.ADAMANT_PLATEBODY_G, ItemId.ADAMANT_PLATELEGS_G,
+                ItemId.ADAMANT_PLATESKIRT_G, ItemId.ADAMANT_KITESHIELD_G, ItemId.CLIMBING_BOOTS_G,
+                ItemId.SPIKED_MANACLES, ItemId.RANGER_BOOTS, ItemId.HOLY_SANDALS, ItemId.WIZARD_BOOTS,
+                ItemId.BLACK_HEADBAND, ItemId.RED_HEADBAND, ItemId.BROWN_HEADBAND, ItemId.PINK_HEADBAND,
+                ItemId.GREEN_HEADBAND, ItemId.BLUE_HEADBAND, ItemId.WHITE_HEADBAND, ItemId.GOLD_HEADBAND,
+                ItemId.RED_BOATER, ItemId.ORANGE_BOATER, ItemId.GREEN_BOATER, ItemId.BLUE_BOATER, ItemId.BLACK_BOATER,
+                ItemId.PINK_BOATER, ItemId.PURPLE_BOATER, ItemId.WHITE_BOATER, ItemId.GREEN_DHIDE_BODY_T,
+                ItemId.GREEN_DHIDE_CHAPS_T, ItemId.GREEN_DHIDE_BODY_G, ItemId.GREEN_DHIDE_CHAPS_G,
+                ItemId.ADAMANT_HELM_H1, ItemId.ADAMANT_HELM_H2, ItemId.ADAMANT_HELM_H3, ItemId.ADAMANT_HELM_H4,
+                ItemId.ADAMANT_HELM_H5, ItemId.ADAMANT_PLATEBODY_H1, ItemId.ADAMANT_PLATEBODY_H2,
+                ItemId.ADAMANT_PLATEBODY_H3, ItemId.ADAMANT_PLATEBODY_H4, ItemId.ADAMANT_PLATEBODY_H5,
+                ItemId.ADAMANT_SHIELD_H1, ItemId.ADAMANT_SHIELD_H2, ItemId.ADAMANT_SHIELD_H3, ItemId.ADAMANT_SHIELD_H4,
+                ItemId.ADAMANT_SHIELD_H5, ItemId.BLACK_ELEGANT_SHIRT, ItemId.BLACK_ELEGANT_LEGS,
+                ItemId.WHITE_ELEGANT_BLOUSE, ItemId.WHITE_ELEGANT_SKIRT, ItemId.PURPLE_ELEGANT_SHIRT,
+                ItemId.PURPLE_ELEGANT_LEGS, ItemId.PURPLE_ELEGANT_BLOUSE, ItemId.PURPLE_ELEGANT_SKIRT,
+                ItemId.PINK_ELEGANT_SHIRT, ItemId.PINK_ELEGANT_LEGS, ItemId.PINK_ELEGANT_BLOUSE,
+                ItemId.PINK_ELEGANT_SKIRT, ItemId.GOLD_ELEGANT_SHIRT, ItemId.GOLD_ELEGANT_LEGS,
+                ItemId.GOLD_ELEGANT_BLOUSE, ItemId.GOLD_ELEGANT_SKIRT, ItemId.WOLF_MASK, ItemId.WOLF_CLOAK,
+                ItemId.STRENGTH_AMULET_T, ItemId.ADAMANT_CANE, ItemId.GUTHIX_MITRE, ItemId.SARADOMIN_MITRE,
+                ItemId.ZAMORAK_MITRE, ItemId.ANCIENT_MITRE, ItemId.BANDOS_MITRE, ItemId.ARMADYL_MITRE,
+                ItemId.GUTHIX_CLOAK, ItemId.SARADOMIN_CLOAK, ItemId.ZAMORAK_CLOAK, ItemId.ANCIENT_CLOAK,
+                ItemId.BANDOS_CLOAK, ItemId.ARMADYL_CLOAK, ItemId.ANCIENT_STOLE, ItemId.ARMADYL_STOLE,
+                ItemId.BANDOS_STOLE, ItemId.ANCIENT_CROZIER, ItemId.ARMADYL_CROZIER, ItemId.BANDOS_CROZIER,
+                ItemId.CAT_MASK, ItemId.PENGUIN_MASK, ItemId.GNOMISH_FIRELIGHTER, ItemId.CRIER_HAT, ItemId.CRIER_BELL,
+                ItemId.CRIER_COAT, ItemId.LEPRECHAUN_HAT, ItemId.BLACK_LEPRECHAUN_HAT, ItemId.BLACK_UNICORN_MASK,
+                ItemId.WHITE_UNICORN_MASK, ItemId.ARCEUUS_BANNER, ItemId.HOSIDIUS_BANNER, ItemId.LOVAKENGJ_BANNER,
+                ItemId.PISCARILIUS_BANNER, ItemId.SHAYZIEN_BANNER, ItemId.CABBAGE_ROUND_SHIELD, ItemId.CLUELESS_SCROLL
             };
-            player.getInventory().deleteItem(itemID, 1, slot);
+            player.getInventory().deleteItem(itemId, 1, slot);
             int mediumClueSlot = Utils.randomE(ttMedium.length);
-            int mediumItemID = ttMedium[mediumClueSlot];
-            player.getInventory().addItem(mediumItemID, 1, slot);
+            int mediumItemId = ttMedium[mediumClueSlot];
+            player.getInventory().addItem(mediumItemId, 1, slot);
             if (Utils.randomE(5) == 0) {
-                int extraItemID = ttLoot[Utils.randomE(ttLoot.length)];
-                if (extraItemID == ItemID.PURPLE_SWEETS) {
-                    player.getInventory().addOrDropItem(extraItemID, 8 + Utils.randomI(24));
+                int extraItemId = ttLoot[Utils.randomE(ttLoot.length)];
+                if (extraItemId == ItemId.PURPLE_SWEETS) {
+                    player.getInventory().addOrDropItem(extraItemId, 8 + Utils.randomI(24));
                 } else {
-                    player.getInventory().addOrDropItem(extraItemID, 1);
+                    player.getInventory().addOrDropItem(extraItemId, 1);
                 }
             }
             player.getSkills().increaseClueScrollCount(Skills.CLUE_SCROLL_MEDIUM);
             break;
-        case ItemID.CLUE_SCROLL_HARD:
-        case ItemID.CLUE_BOTTLE_HARD:
-        case ItemID.CLUE_GEODE_HARD:
-        case ItemID.CLUE_NEST_HARD:
+        case ItemId.CLUE_SCROLL_HARD:
+        case ItemId.CLUE_BOTTLE_HARD:
+        case ItemId.CLUE_GEODE_HARD:
+        case ItemId.CLUE_NEST_HARD:
             ttLoot = new int[] {
-                ItemID.HOLY_BLESSING, ItemID.UNHOLY_BLESSING, ItemID.PEACEFUL_BLESSING, ItemID.HONOURABLE_BLESSING,
-                ItemID.WAR_BLESSING, ItemID.ANCIENT_BLESSING, ItemID.WILLOW_COMP_BOW, ItemID.YEW_COMP_BOW,
-                ItemID.MAGIC_COMP_BOW, ItemID.BEAR_FEET, ItemID.MOLE_SLIPPERS, ItemID.FROG_SLIPPERS, ItemID.DEMON_FEET,
-                ItemID.SANDWICH_LADY_HAT, ItemID.SANDWICH_LADY_TOP, ItemID.SANDWICH_LADY_BOTTOM,
-                ItemID.RUNE_SCIMITAR_ORNAMENT_KIT_GUTHIX, ItemID.RUNE_SCIMITAR_ORNAMENT_KIT_SARADOMIN,
-                ItemID.RUNE_SCIMITAR_ORNAMENT_KIT_ZAMORAK, ItemID.MONKS_ROBE_TOP_T, ItemID.MONKS_ROBE_T,
-                ItemID.AMULET_OF_DEFENCE_T, ItemID.JESTER_CAPE, ItemID.SHOULDER_PARROT, ItemID.PURPLE_SWEETS
+                ItemId.HOLY_BLESSING, ItemId.UNHOLY_BLESSING, ItemId.PEACEFUL_BLESSING, ItemId.HONOURABLE_BLESSING,
+                ItemId.WAR_BLESSING, ItemId.ANCIENT_BLESSING, ItemId.WILLOW_COMP_BOW, ItemId.YEW_COMP_BOW,
+                ItemId.MAGIC_COMP_BOW, ItemId.BEAR_FEET, ItemId.MOLE_SLIPPERS, ItemId.FROG_SLIPPERS, ItemId.DEMON_FEET,
+                ItemId.SANDWICH_LADY_HAT, ItemId.SANDWICH_LADY_TOP, ItemId.SANDWICH_LADY_BOTTOM,
+                ItemId.RUNE_SCIMITAR_ORNAMENT_KIT_GUTHIX, ItemId.RUNE_SCIMITAR_ORNAMENT_KIT_SARADOMIN,
+                ItemId.RUNE_SCIMITAR_ORNAMENT_KIT_ZAMORAK, ItemId.MONKS_ROBE_TOP_T, ItemId.MONKS_ROBE_T,
+                ItemId.AMULET_OF_DEFENCE_T, ItemId.JESTER_CAPE, ItemId.SHOULDER_PARROT, ItemId.PURPLE_SWEETS
             };
             int[] ttHard = new int[] {
-                ItemID.RUNE_FULL_HELM_T, ItemID.RUNE_PLATEBODY_T, ItemID.RUNE_PLATELEGS_T, ItemID.RUNE_PLATESKIRT_T,
-                ItemID.RUNE_KITESHIELD_T, ItemID.RUNE_FULL_HELM_G, ItemID.RUNE_PLATEBODY_G, ItemID.RUNE_PLATELEGS_G,
-                ItemID.RUNE_PLATESKIRT_G, ItemID.RUNE_KITESHIELD_G, ItemID.GUTHIX_FULL_HELM, ItemID.GUTHIX_PLATEBODY,
-                ItemID.GUTHIX_PLATELEGS, ItemID.GUTHIX_PLATESKIRT, ItemID.GUTHIX_KITESHIELD, ItemID.SARADOMIN_FULL_HELM,
-                ItemID.SARADOMIN_PLATEBODY, ItemID.SARADOMIN_PLATELEGS, ItemID.SARADOMIN_PLATESKIRT,
-                ItemID.SARADOMIN_KITESHIELD, ItemID.ZAMORAK_FULL_HELM, ItemID.ZAMORAK_PLATEBODY,
-                ItemID.ZAMORAK_PLATELEGS, ItemID.ZAMORAK_PLATESKIRT, ItemID.ZAMORAK_KITESHIELD,
-                ItemID.ANCIENT_FULL_HELM, ItemID.ANCIENT_PLATEBODY, ItemID.ANCIENT_PLATELEGS, ItemID.ANCIENT_PLATESKIRT,
-                ItemID.ANCIENT_KITESHIELD, ItemID.BANDOS_FULL_HELM, ItemID.BANDOS_PLATEBODY, ItemID.BANDOS_PLATELEGS,
-                ItemID.BANDOS_PLATESKIRT, ItemID.BANDOS_KITESHIELD, ItemID.ARMADYL_FULL_HELM, ItemID.ARMADYL_PLATEBODY,
-                ItemID.ARMADYL_PLATELEGS, ItemID.ARMADYL_PLATESKIRT, ItemID.ARMADYL_KITESHIELD, ItemID.RUNE_HELM_H1,
-                ItemID.RUNE_HELM_H2, ItemID.RUNE_HELM_H3, ItemID.RUNE_HELM_H4, ItemID.RUNE_HELM_H5,
-                ItemID.RUNE_PLATEBODY_H1, ItemID.RUNE_PLATEBODY_H2, ItemID.RUNE_PLATEBODY_H3, ItemID.RUNE_PLATEBODY_H4,
-                ItemID.RUNE_PLATEBODY_H5, ItemID.BLUE_DHIDE_BODY_T, ItemID.BLUE_DHIDE_CHAPS_T, ItemID.BLUE_DHIDE_BODY_G,
-                ItemID.BLUE_DHIDE_CHAPS_G, ItemID.RED_DHIDE_BODY_T, ItemID.RED_DHIDE_CHAPS_T, ItemID.RED_DHIDE_BODY_G,
-                ItemID.RED_DHIDE_CHAPS_G, ItemID.ENCHANTED_HAT, ItemID.ENCHANTED_TOP, ItemID.ENCHANTED_ROBE,
-                ItemID.ROBIN_HOOD_HAT, ItemID.TAN_CAVALIER, ItemID.DARK_CAVALIER, ItemID.BLACK_CAVALIER,
-                ItemID.WHITE_CAVALIER, ItemID.RED_CAVALIER, ItemID.NAVY_CAVALIER, ItemID.PIRATES_HAT,
-                ItemID.AMULET_OF_GLORY_T4, ItemID.GUTHIX_COIF, ItemID.GUTHIX_DHIDE, ItemID.GUTHIX_CHAPS,
-                ItemID.GUTHIX_BRACERS, ItemID.GUTHIX_DHIDE_BOOTS, ItemID.GUTHIX_DHIDE_SHIELD, ItemID.SARADOMIN_COIF,
-                ItemID.SARADOMIN_DHIDE, ItemID.SARADOMIN_CHAPS, ItemID.SARADOMIN_BRACERS, ItemID.SARADOMIN_DHIDE_BOOTS,
-                ItemID.SARADOMIN_DHIDE_SHIELD, ItemID.ZAMORAK_COIF, ItemID.ZAMORAK_DHIDE, ItemID.ZAMORAK_CHAPS,
-                ItemID.ZAMORAK_BRACERS, ItemID.ZAMORAK_DHIDE_BOOTS, ItemID.ZAMORAK_DHIDE_SHIELD, ItemID.ARMADYL_COIF,
-                ItemID.ARMADYL_DHIDE, ItemID.ARMADYL_CHAPS, ItemID.ARMADYL_BRACERS, ItemID.ARMADYL_DHIDE_BOOTS,
-                ItemID.ARMADYL_DHIDE_SHIELD, ItemID.ANCIENT_COIF, ItemID.ANCIENT_DHIDE, ItemID.ANCIENT_CHAPS,
-                ItemID.ANCIENT_BRACERS, ItemID.ANCIENT_DHIDE_BOOTS, ItemID.ANCIENT_DHIDE_SHIELD, ItemID.BANDOS_COIF,
-                ItemID.BANDOS_DHIDE, ItemID.BANDOS_CHAPS, ItemID.BANDOS_BRACERS, ItemID.BANDOS_DHIDE_BOOTS,
-                ItemID.BANDOS_DHIDE_SHIELD, ItemID.GUTHIX_STOLE, ItemID.SARADOMIN_STOLE, ItemID.ZAMORAK_STOLE,
-                ItemID.GUTHIX_CROZIER, ItemID.SARADOMIN_CROZIER, ItemID.ZAMORAK_CROZIER, ItemID.GREEN_DRAGON_MASK,
-                ItemID.BLUE_DRAGON_MASK, ItemID.RED_DRAGON_MASK, ItemID.BLACK_DRAGON_MASK, ItemID.PITH_HELMET,
-                ItemID.EXPLORER_BACKPACK, ItemID.RUNE_CANE, ItemID.ZOMBIE_HEAD_19912, ItemID.CYCLOPS_HEAD,
-                ItemID.NUNCHAKU, ItemID.DUAL_SAI, ItemID.THIEVING_BAG, ItemID.DRAGON_BOOTS_ORNAMENT_KIT,
-                ItemID.RUNE_DEFENDER_ORNAMENT_KIT, ItemID.TZHAAR_KET_OM_ORNAMENT_KIT,
-                ItemID.BERSERKER_NECKLACE_ORNAMENT_KIT
+                ItemId.RUNE_FULL_HELM_T, ItemId.RUNE_PLATEBODY_T, ItemId.RUNE_PLATELEGS_T, ItemId.RUNE_PLATESKIRT_T,
+                ItemId.RUNE_KITESHIELD_T, ItemId.RUNE_FULL_HELM_G, ItemId.RUNE_PLATEBODY_G, ItemId.RUNE_PLATELEGS_G,
+                ItemId.RUNE_PLATESKIRT_G, ItemId.RUNE_KITESHIELD_G, ItemId.GUTHIX_FULL_HELM, ItemId.GUTHIX_PLATEBODY,
+                ItemId.GUTHIX_PLATELEGS, ItemId.GUTHIX_PLATESKIRT, ItemId.GUTHIX_KITESHIELD, ItemId.SARADOMIN_FULL_HELM,
+                ItemId.SARADOMIN_PLATEBODY, ItemId.SARADOMIN_PLATELEGS, ItemId.SARADOMIN_PLATESKIRT,
+                ItemId.SARADOMIN_KITESHIELD, ItemId.ZAMORAK_FULL_HELM, ItemId.ZAMORAK_PLATEBODY,
+                ItemId.ZAMORAK_PLATELEGS, ItemId.ZAMORAK_PLATESKIRT, ItemId.ZAMORAK_KITESHIELD,
+                ItemId.ANCIENT_FULL_HELM, ItemId.ANCIENT_PLATEBODY, ItemId.ANCIENT_PLATELEGS, ItemId.ANCIENT_PLATESKIRT,
+                ItemId.ANCIENT_KITESHIELD, ItemId.BANDOS_FULL_HELM, ItemId.BANDOS_PLATEBODY, ItemId.BANDOS_PLATELEGS,
+                ItemId.BANDOS_PLATESKIRT, ItemId.BANDOS_KITESHIELD, ItemId.ARMADYL_FULL_HELM, ItemId.ARMADYL_PLATEBODY,
+                ItemId.ARMADYL_PLATELEGS, ItemId.ARMADYL_PLATESKIRT, ItemId.ARMADYL_KITESHIELD, ItemId.RUNE_HELM_H1,
+                ItemId.RUNE_HELM_H2, ItemId.RUNE_HELM_H3, ItemId.RUNE_HELM_H4, ItemId.RUNE_HELM_H5,
+                ItemId.RUNE_PLATEBODY_H1, ItemId.RUNE_PLATEBODY_H2, ItemId.RUNE_PLATEBODY_H3, ItemId.RUNE_PLATEBODY_H4,
+                ItemId.RUNE_PLATEBODY_H5, ItemId.BLUE_DHIDE_BODY_T, ItemId.BLUE_DHIDE_CHAPS_T, ItemId.BLUE_DHIDE_BODY_G,
+                ItemId.BLUE_DHIDE_CHAPS_G, ItemId.RED_DHIDE_BODY_T, ItemId.RED_DHIDE_CHAPS_T, ItemId.RED_DHIDE_BODY_G,
+                ItemId.RED_DHIDE_CHAPS_G, ItemId.ENCHANTED_HAT, ItemId.ENCHANTED_TOP, ItemId.ENCHANTED_ROBE,
+                ItemId.ROBIN_HOOD_HAT, ItemId.TAN_CAVALIER, ItemId.DARK_CAVALIER, ItemId.BLACK_CAVALIER,
+                ItemId.WHITE_CAVALIER, ItemId.RED_CAVALIER, ItemId.NAVY_CAVALIER, ItemId.PIRATES_HAT,
+                ItemId.AMULET_OF_GLORY_T4, ItemId.GUTHIX_COIF, ItemId.GUTHIX_DHIDE, ItemId.GUTHIX_CHAPS,
+                ItemId.GUTHIX_BRACERS, ItemId.GUTHIX_DHIDE_BOOTS, ItemId.GUTHIX_DHIDE_SHIELD, ItemId.SARADOMIN_COIF,
+                ItemId.SARADOMIN_DHIDE, ItemId.SARADOMIN_CHAPS, ItemId.SARADOMIN_BRACERS, ItemId.SARADOMIN_DHIDE_BOOTS,
+                ItemId.SARADOMIN_DHIDE_SHIELD, ItemId.ZAMORAK_COIF, ItemId.ZAMORAK_DHIDE, ItemId.ZAMORAK_CHAPS,
+                ItemId.ZAMORAK_BRACERS, ItemId.ZAMORAK_DHIDE_BOOTS, ItemId.ZAMORAK_DHIDE_SHIELD, ItemId.ARMADYL_COIF,
+                ItemId.ARMADYL_DHIDE, ItemId.ARMADYL_CHAPS, ItemId.ARMADYL_BRACERS, ItemId.ARMADYL_DHIDE_BOOTS,
+                ItemId.ARMADYL_DHIDE_SHIELD, ItemId.ANCIENT_COIF, ItemId.ANCIENT_DHIDE, ItemId.ANCIENT_CHAPS,
+                ItemId.ANCIENT_BRACERS, ItemId.ANCIENT_DHIDE_BOOTS, ItemId.ANCIENT_DHIDE_SHIELD, ItemId.BANDOS_COIF,
+                ItemId.BANDOS_DHIDE, ItemId.BANDOS_CHAPS, ItemId.BANDOS_BRACERS, ItemId.BANDOS_DHIDE_BOOTS,
+                ItemId.BANDOS_DHIDE_SHIELD, ItemId.GUTHIX_STOLE, ItemId.SARADOMIN_STOLE, ItemId.ZAMORAK_STOLE,
+                ItemId.GUTHIX_CROZIER, ItemId.SARADOMIN_CROZIER, ItemId.ZAMORAK_CROZIER, ItemId.GREEN_DRAGON_MASK,
+                ItemId.BLUE_DRAGON_MASK, ItemId.RED_DRAGON_MASK, ItemId.BLACK_DRAGON_MASK, ItemId.PITH_HELMET,
+                ItemId.EXPLORER_BACKPACK, ItemId.RUNE_CANE, ItemId.ZOMBIE_HEAD_19912, ItemId.CYCLOPS_HEAD,
+                ItemId.NUNCHAKU, ItemId.DUAL_SAI, ItemId.THIEVING_BAG, ItemId.DRAGON_BOOTS_ORNAMENT_KIT,
+                ItemId.RUNE_DEFENDER_ORNAMENT_KIT, ItemId.TZHAAR_KET_OM_ORNAMENT_KIT,
+                ItemId.BERSERKER_NECKLACE_ORNAMENT_KIT
             };
             int[] gildedHard = new int[] {
-                ItemID.GILDED_FULL_HELM, ItemID.GILDED_PLATEBODY, ItemID.GILDED_PLATELEGS, ItemID.GILDED_PLATESKIRT,
-                ItemID.GILDED_KITESHIELD, ItemID.GILDED_MED_HELM, ItemID.GILDED_CHAINBODY, ItemID.GILDED_SQ_SHIELD,
-                ItemID.GILDED_2H_SWORD, ItemID.GILDED_SPEAR, ItemID.GILDED_HASTA
+                ItemId.GILDED_FULL_HELM, ItemId.GILDED_PLATEBODY, ItemId.GILDED_PLATELEGS, ItemId.GILDED_PLATESKIRT,
+                ItemId.GILDED_KITESHIELD, ItemId.GILDED_MED_HELM, ItemId.GILDED_CHAINBODY, ItemId.GILDED_SQ_SHIELD,
+                ItemId.GILDED_2H_SWORD, ItemId.GILDED_SPEAR, ItemId.GILDED_HASTA
             };
             int[] thirdageHard = new int[] {
-                ItemID._3RD_AGE_FULL_HELMET, ItemID._3RD_AGE_PLATEBODY, ItemID._3RD_AGE_PLATELEGS,
-                ItemID._3RD_AGE_KITESHIELD, ItemID._3RD_AGE_RANGE_COIF, ItemID._3RD_AGE_RANGE_TOP,
-                ItemID._3RD_AGE_RANGE_LEGS, ItemID._3RD_AGE_VAMBRACES, ItemID._3RD_AGE_MAGE_HAT,
-                ItemID._3RD_AGE_ROBE_TOP, ItemID._3RD_AGE_ROBE, ItemID._3RD_AGE_AMULET
+                ItemId._3RD_AGE_FULL_HELMET, ItemId._3RD_AGE_PLATEBODY, ItemId._3RD_AGE_PLATELEGS,
+                ItemId._3RD_AGE_KITESHIELD, ItemId._3RD_AGE_RANGE_COIF, ItemId._3RD_AGE_RANGE_TOP,
+                ItemId._3RD_AGE_RANGE_LEGS, ItemId._3RD_AGE_VAMBRACES, ItemId._3RD_AGE_MAGE_HAT,
+                ItemId._3RD_AGE_ROBE_TOP, ItemId._3RD_AGE_ROBE, ItemId._3RD_AGE_AMULET
             };
-            player.getInventory().deleteItem(itemID, 1, slot);
+            player.getInventory().deleteItem(itemId, 1, slot);
             if (Utils.inRange(0.1)) {
-                int thirdAgeID = thirdageHard[Utils.randomE(thirdageHard.length)];
-                player.getInventory().addItem(thirdAgeID, 1, slot);
-                player.getWorld().sendItemDropNews(player, thirdAgeID);
+                int thirdAgeId = thirdageHard[Utils.randomE(thirdageHard.length)];
+                player.getInventory().addItem(thirdAgeId, 1, slot);
+                player.getWorld().sendItemDropNews(player, thirdAgeId);
             } else if (Utils.inRange(0.5)) {
-                int gildedID = gildedHard[Utils.randomE(gildedHard.length)];
-                player.getInventory().addItem(gildedID, 1, slot);
-                player.getWorld().sendItemDropNews(player, gildedID);
+                int gildedId = gildedHard[Utils.randomE(gildedHard.length)];
+                player.getInventory().addItem(gildedId, 1, slot);
+                player.getWorld().sendItemDropNews(player, gildedId);
             } else {
-                int hardItemID = ttHard[Utils.randomE(ttHard.length)];
-                player.getInventory().addItem(hardItemID, 1, slot);
+                int hardItemId = ttHard[Utils.randomE(ttHard.length)];
+                player.getInventory().addItem(hardItemId, 1, slot);
             }
             if (Utils.randomE(5) == 0) {
-                int extraItemID = ttLoot[Utils.randomE(ttLoot.length)];
-                if (extraItemID == ItemID.PURPLE_SWEETS) {
-                    player.getInventory().addOrDropItem(extraItemID, 8 + Utils.randomI(24));
+                int extraItemId = ttLoot[Utils.randomE(ttLoot.length)];
+                if (extraItemId == ItemId.PURPLE_SWEETS) {
+                    player.getInventory().addOrDropItem(extraItemId, 8 + Utils.randomI(24));
                 } else {
-                    player.getInventory().addOrDropItem(extraItemID, 1);
+                    player.getInventory().addOrDropItem(extraItemId, 1);
                 }
             }
             player.getSkills().increaseClueScrollCount(Skills.CLUE_SCROLL_HARD);
             break;
-        case ItemID.CLUE_SCROLL_ELITE:
-        case ItemID.CLUE_BOTTLE_ELITE:
-        case ItemID.CLUE_GEODE_ELITE:
-        case ItemID.CLUE_NEST_ELITE:
+        case ItemId.CLUE_SCROLL_ELITE:
+        case ItemId.CLUE_BOTTLE_ELITE:
+        case ItemId.CLUE_GEODE_ELITE:
+        case ItemId.CLUE_NEST_ELITE:
             ttLoot = new int[] {
-                ItemID.HOLY_BLESSING, ItemID.UNHOLY_BLESSING, ItemID.PEACEFUL_BLESSING, ItemID.HONOURABLE_BLESSING,
-                ItemID.WAR_BLESSING, ItemID.ANCIENT_BLESSING, ItemID.WILLOW_COMP_BOW, ItemID.YEW_COMP_BOW,
-                ItemID.MAGIC_COMP_BOW, ItemID.BEAR_FEET, ItemID.MOLE_SLIPPERS, ItemID.FROG_SLIPPERS, ItemID.DEMON_FEET,
-                ItemID.SANDWICH_LADY_HAT, ItemID.SANDWICH_LADY_TOP, ItemID.SANDWICH_LADY_BOTTOM,
-                ItemID.RUNE_SCIMITAR_ORNAMENT_KIT_GUTHIX, ItemID.RUNE_SCIMITAR_ORNAMENT_KIT_SARADOMIN,
-                ItemID.RUNE_SCIMITAR_ORNAMENT_KIT_ZAMORAK, ItemID.MONKS_ROBE_TOP_T, ItemID.MONKS_ROBE_T,
-                ItemID.AMULET_OF_DEFENCE_T, ItemID.JESTER_CAPE, ItemID.SHOULDER_PARROT, ItemID.PURPLE_SWEETS
+                ItemId.HOLY_BLESSING, ItemId.UNHOLY_BLESSING, ItemId.PEACEFUL_BLESSING, ItemId.HONOURABLE_BLESSING,
+                ItemId.WAR_BLESSING, ItemId.ANCIENT_BLESSING, ItemId.WILLOW_COMP_BOW, ItemId.YEW_COMP_BOW,
+                ItemId.MAGIC_COMP_BOW, ItemId.BEAR_FEET, ItemId.MOLE_SLIPPERS, ItemId.FROG_SLIPPERS, ItemId.DEMON_FEET,
+                ItemId.SANDWICH_LADY_HAT, ItemId.SANDWICH_LADY_TOP, ItemId.SANDWICH_LADY_BOTTOM,
+                ItemId.RUNE_SCIMITAR_ORNAMENT_KIT_GUTHIX, ItemId.RUNE_SCIMITAR_ORNAMENT_KIT_SARADOMIN,
+                ItemId.RUNE_SCIMITAR_ORNAMENT_KIT_ZAMORAK, ItemId.MONKS_ROBE_TOP_T, ItemId.MONKS_ROBE_T,
+                ItemId.AMULET_OF_DEFENCE_T, ItemId.JESTER_CAPE, ItemId.SHOULDER_PARROT, ItemId.PURPLE_SWEETS
             };
             int[] ttElite = new int[] {
-                ItemID.DRAGON_FULL_HELM_ORNAMENT_KIT, ItemID.DRAGON_CHAINBODY_ORNAMENT_KIT,
-                ItemID.DRAGON_LEGS_SKIRT_ORNAMENT_KIT, ItemID.DRAGON_SQ_SHIELD_ORNAMENT_KIT,
-                ItemID.DRAGON_SCIMITAR_ORNAMENT_KIT, ItemID.LIGHT_INFINITY_COLOUR_KIT, ItemID.DARK_INFINITY_COLOUR_KIT,
-                ItemID.FURY_ORNAMENT_KIT, ItemID.MUSKETEER_HAT, ItemID.MUSKETEER_TABARD, ItemID.MUSKETEER_PANTS,
-                ItemID.DRAGON_CANE, ItemID.BRIEFCASE, ItemID.SAGACIOUS_SPECTACLES, ItemID.TOP_HAT, ItemID.MONOCLE,
-                ItemID.BIG_PIRATE_HAT, ItemID.DEERSTALKER, ItemID.BRONZE_DRAGON_MASK, ItemID.IRON_DRAGON_MASK,
-                ItemID.STEEL_DRAGON_MASK, ItemID.MITHRIL_DRAGON_MASK, ItemID.ADAMANT_DRAGON_MASK,
-                ItemID.RUNE_DRAGON_MASK, ItemID.LAVA_DRAGON_MASK, ItemID.BLACK_DHIDE_BODY_T, ItemID.BLACK_DHIDE_CHAPS_T,
-                ItemID.BLACK_DHIDE_BODY_G, ItemID.BLACK_DHIDE_CHAPS_G, ItemID.RANGERS_TUNIC, ItemID.AFRO, ItemID.KATANA,
-                ItemID.ROYAL_CROWN, ItemID.ROYAL_GOWN_TOP, ItemID.ROYAL_GOWN_BOTTOM, ItemID.ROYAL_SCEPTRE,
-                ItemID.ARCEUUS_SCARF, ItemID.HOSIDIUS_SCARF, ItemID.LOVAKENGJ_SCARF, ItemID.PISCARILIUS_SCARF,
-                ItemID.SHAYZIEN_SCARF, ItemID.BLACKSMITHS_HELM, ItemID.BUCKET_HELM, ItemID.RANGER_GLOVES,
-                ItemID.HOLY_WRAPS, ItemID.RING_OF_NATURE, ItemID.DARK_BOW_TIE, ItemID.DARK_TUXEDO_JACKET,
-                ItemID.DARK_TROUSERS, ItemID.DARK_TUXEDO_CUFFS, ItemID.DARK_TUXEDO_SHOES, ItemID.LIGHT_BOW_TIE,
-                ItemID.LIGHT_TUXEDO_JACKET, ItemID.LIGHT_TROUSERS, ItemID.LIGHT_TUXEDO_CUFFS, ItemID.LIGHT_TUXEDO_SHOES,
-                ItemID.RANGERS_TIGHTS, ItemID.URIS_HAT, ItemID.FREMENNIK_KILT, ItemID.HEAVY_CASKET, ItemID.GIANT_BOOT
+                ItemId.DRAGON_FULL_HELM_ORNAMENT_KIT, ItemId.DRAGON_CHAINBODY_ORNAMENT_KIT,
+                ItemId.DRAGON_LEGS_SKIRT_ORNAMENT_KIT, ItemId.DRAGON_SQ_SHIELD_ORNAMENT_KIT,
+                ItemId.DRAGON_SCIMITAR_ORNAMENT_KIT, ItemId.LIGHT_INFINITY_COLOUR_KIT, ItemId.DARK_INFINITY_COLOUR_KIT,
+                ItemId.FURY_ORNAMENT_KIT, ItemId.MUSKETEER_HAT, ItemId.MUSKETEER_TABARD, ItemId.MUSKETEER_PANTS,
+                ItemId.DRAGON_CANE, ItemId.BRIEFCASE, ItemId.SAGACIOUS_SPECTACLES, ItemId.TOP_HAT, ItemId.MONOCLE,
+                ItemId.BIG_PIRATE_HAT, ItemId.DEERSTALKER, ItemId.BRONZE_DRAGON_MASK, ItemId.IRON_DRAGON_MASK,
+                ItemId.STEEL_DRAGON_MASK, ItemId.MITHRIL_DRAGON_MASK, ItemId.ADAMANT_DRAGON_MASK,
+                ItemId.RUNE_DRAGON_MASK, ItemId.LAVA_DRAGON_MASK, ItemId.BLACK_DHIDE_BODY_T, ItemId.BLACK_DHIDE_CHAPS_T,
+                ItemId.BLACK_DHIDE_BODY_G, ItemId.BLACK_DHIDE_CHAPS_G, ItemId.RANGERS_TUNIC, ItemId.AFRO, ItemId.KATANA,
+                ItemId.ROYAL_CROWN, ItemId.ROYAL_GOWN_TOP, ItemId.ROYAL_GOWN_BOTTOM, ItemId.ROYAL_SCEPTRE,
+                ItemId.ARCEUUS_SCARF, ItemId.HOSIDIUS_SCARF, ItemId.LOVAKENGJ_SCARF, ItemId.PISCARILIUS_SCARF,
+                ItemId.SHAYZIEN_SCARF, ItemId.BLACKSMITHS_HELM, ItemId.BUCKET_HELM, ItemId.RANGER_GLOVES,
+                ItemId.HOLY_WRAPS, ItemId.RING_OF_NATURE, ItemId.DARK_BOW_TIE, ItemId.DARK_TUXEDO_JACKET,
+                ItemId.DARK_TROUSERS, ItemId.DARK_TUXEDO_CUFFS, ItemId.DARK_TUXEDO_SHOES, ItemId.LIGHT_BOW_TIE,
+                ItemId.LIGHT_TUXEDO_JACKET, ItemId.LIGHT_TROUSERS, ItemId.LIGHT_TUXEDO_CUFFS, ItemId.LIGHT_TUXEDO_SHOES,
+                ItemId.RANGERS_TIGHTS, ItemId.URIS_HAT, ItemId.FREMENNIK_KILT, ItemId.HEAVY_CASKET, ItemId.GIANT_BOOT
             };
             int[] gildedElite = new int[] {
-                ItemID.GILDED_BOOTS, ItemID.GILDED_SCIMITAR, ItemID.GILDED_DHIDE_VAMBS, ItemID.GILDED_DHIDE_BODY,
-                ItemID.GILDED_DHIDE_CHAPS, ItemID.GILDED_COIF, ItemID.GILDED_AXE, ItemID.GILDED_PICKAXE,
-                ItemID.GILDED_SPADE
+                ItemId.GILDED_BOOTS, ItemId.GILDED_SCIMITAR, ItemId.GILDED_DHIDE_VAMBS, ItemId.GILDED_DHIDE_BODY,
+                ItemId.GILDED_DHIDE_CHAPS, ItemId.GILDED_COIF, ItemId.GILDED_AXE, ItemId.GILDED_PICKAXE,
+                ItemId.GILDED_SPADE
             };
             int[] thirdageElite = new int[] {
-                ItemID._3RD_AGE_FULL_HELMET, ItemID._3RD_AGE_PLATEBODY, ItemID._3RD_AGE_PLATELEGS,
-                ItemID._3RD_AGE_KITESHIELD, ItemID._3RD_AGE_RANGE_COIF, ItemID._3RD_AGE_RANGE_TOP,
-                ItemID._3RD_AGE_RANGE_LEGS, ItemID._3RD_AGE_VAMBRACES, ItemID._3RD_AGE_MAGE_HAT,
-                ItemID._3RD_AGE_ROBE_TOP, ItemID._3RD_AGE_ROBE, ItemID._3RD_AGE_AMULET, ItemID._3RD_AGE_CLOAK,
-                ItemID._3RD_AGE_WAND, ItemID._3RD_AGE_BOW, ItemID._3RD_AGE_LONGSWORD, ItemID.RING_OF_3RD_AGE
+                ItemId._3RD_AGE_FULL_HELMET, ItemId._3RD_AGE_PLATEBODY, ItemId._3RD_AGE_PLATELEGS,
+                ItemId._3RD_AGE_KITESHIELD, ItemId._3RD_AGE_RANGE_COIF, ItemId._3RD_AGE_RANGE_TOP,
+                ItemId._3RD_AGE_RANGE_LEGS, ItemId._3RD_AGE_VAMBRACES, ItemId._3RD_AGE_MAGE_HAT,
+                ItemId._3RD_AGE_ROBE_TOP, ItemId._3RD_AGE_ROBE, ItemId._3RD_AGE_AMULET, ItemId._3RD_AGE_CLOAK,
+                ItemId._3RD_AGE_WAND, ItemId._3RD_AGE_BOW, ItemId._3RD_AGE_LONGSWORD, ItemId.RING_OF_3RD_AGE
             };
-            player.getInventory().deleteItem(itemID, 1, slot);
+            player.getInventory().deleteItem(itemId, 1, slot);
             if (Utils.inRange(0.1)) {
-                int thirdAgeID = thirdageElite[Utils.randomE(thirdageElite.length)];
-                player.getInventory().addItem(thirdAgeID, 1, slot);
-                player.getWorld().sendItemDropNews(player, thirdAgeID);
+                int thirdAgeId = thirdageElite[Utils.randomE(thirdageElite.length)];
+                player.getInventory().addItem(thirdAgeId, 1, slot);
+                player.getWorld().sendItemDropNews(player, thirdAgeId);
             } else if (Utils.inRange(0.5)) {
-                int gildedID = gildedElite[Utils.randomE(gildedElite.length)];
-                player.getInventory().addItem(gildedID, 1, slot);
-                player.getWorld().sendItemDropNews(player, gildedID);
+                int gildedId = gildedElite[Utils.randomE(gildedElite.length)];
+                player.getInventory().addItem(gildedId, 1, slot);
+                player.getWorld().sendItemDropNews(player, gildedId);
             } else {
-                int eliteItemID = ttElite[Utils.randomE(ttElite.length)];
-                player.getInventory().addItem(eliteItemID, 1, slot);
+                int eliteItemId = ttElite[Utils.randomE(ttElite.length)];
+                player.getInventory().addItem(eliteItemId, 1, slot);
             }
             if (Utils.randomE(5) == 0) {
-                int extraItemID = ttLoot[Utils.randomE(ttLoot.length)];
-                if (extraItemID == ItemID.PURPLE_SWEETS) {
-                    player.getInventory().addOrDropItem(extraItemID, 8 + Utils.randomI(24));
+                int extraItemId = ttLoot[Utils.randomE(ttLoot.length)];
+                if (extraItemId == ItemId.PURPLE_SWEETS) {
+                    player.getInventory().addOrDropItem(extraItemId, 8 + Utils.randomI(24));
                 } else {
-                    player.getInventory().addOrDropItem(extraItemID, 1);
+                    player.getInventory().addOrDropItem(extraItemId, 1);
                 }
             }
             player.getSkills().increaseClueScrollCount(Skills.CLUE_SCROLL_ELITE);
             break;
-        case ItemID.CLUE_SCROLL_MASTER:
+        case ItemId.CLUE_SCROLL_MASTER:
             ttLoot = new int[] {
-                ItemID.HOLY_BLESSING, ItemID.UNHOLY_BLESSING, ItemID.PEACEFUL_BLESSING, ItemID.HONOURABLE_BLESSING,
-                ItemID.WAR_BLESSING, ItemID.ANCIENT_BLESSING, ItemID.WILLOW_COMP_BOW, ItemID.YEW_COMP_BOW,
-                ItemID.MAGIC_COMP_BOW, ItemID.BEAR_FEET, ItemID.MOLE_SLIPPERS, ItemID.FROG_SLIPPERS, ItemID.DEMON_FEET,
-                ItemID.SANDWICH_LADY_HAT, ItemID.SANDWICH_LADY_TOP, ItemID.SANDWICH_LADY_BOTTOM,
-                ItemID.RUNE_SCIMITAR_ORNAMENT_KIT_GUTHIX, ItemID.RUNE_SCIMITAR_ORNAMENT_KIT_SARADOMIN,
-                ItemID.RUNE_SCIMITAR_ORNAMENT_KIT_ZAMORAK, ItemID.MONKS_ROBE_TOP_T, ItemID.MONKS_ROBE_T,
-                ItemID.AMULET_OF_DEFENCE_T, ItemID.JESTER_CAPE, ItemID.SHOULDER_PARROT, ItemID.PURPLE_SWEETS
+                ItemId.HOLY_BLESSING, ItemId.UNHOLY_BLESSING, ItemId.PEACEFUL_BLESSING, ItemId.HONOURABLE_BLESSING,
+                ItemId.WAR_BLESSING, ItemId.ANCIENT_BLESSING, ItemId.WILLOW_COMP_BOW, ItemId.YEW_COMP_BOW,
+                ItemId.MAGIC_COMP_BOW, ItemId.BEAR_FEET, ItemId.MOLE_SLIPPERS, ItemId.FROG_SLIPPERS, ItemId.DEMON_FEET,
+                ItemId.SANDWICH_LADY_HAT, ItemId.SANDWICH_LADY_TOP, ItemId.SANDWICH_LADY_BOTTOM,
+                ItemId.RUNE_SCIMITAR_ORNAMENT_KIT_GUTHIX, ItemId.RUNE_SCIMITAR_ORNAMENT_KIT_SARADOMIN,
+                ItemId.RUNE_SCIMITAR_ORNAMENT_KIT_ZAMORAK, ItemId.MONKS_ROBE_TOP_T, ItemId.MONKS_ROBE_T,
+                ItemId.AMULET_OF_DEFENCE_T, ItemId.JESTER_CAPE, ItemId.SHOULDER_PARROT, ItemId.PURPLE_SWEETS
             };
             int[] ttMaster = new int[] {
-                ItemID.DRAGON_PLATEBODY_ORNAMENT_KIT, ItemID.DRAGON_KITESHIELD_ORNAMENT_KIT,
-                ItemID.DRAGON_DEFENDER_ORNAMENT_KIT, ItemID.ANGUISH_ORNAMENT_KIT, ItemID.TORTURE_ORNAMENT_KIT,
-                ItemID.OCCULT_ORNAMENT_KIT, ItemID.ARMADYL_GODSWORD_ORNAMENT_KIT, ItemID.BANDOS_GODSWORD_ORNAMENT_KIT,
-                ItemID.SARADOMIN_GODSWORD_ORNAMENT_KIT, ItemID.ZAMORAK_GODSWORD_ORNAMENT_KIT,
-                ItemID.TORMENTED_ORNAMENT_KIT, ItemID.LESSER_DEMON_MASK, ItemID.GREATER_DEMON_MASK,
-                ItemID.BLACK_DEMON_MASK, ItemID.JUNGLE_DEMON_MASK, ItemID.OLD_DEMON_MASK, ItemID.ARCEUUS_HOOD,
-                ItemID.HOSIDIUS_HOOD, ItemID.LOVAKENGJ_HOOD, ItemID.PISCARILIUS_HOOD, ItemID.SHAYZIEN_HOOD,
-                ItemID.SAMURAI_KASA, ItemID.SAMURAI_SHIRT, ItemID.SAMURAI_GLOVES, ItemID.SAMURAI_GREAVES,
-                ItemID.SAMURAI_BOOTS, ItemID.MUMMYS_HEAD, ItemID.MUMMYS_BODY, ItemID.MUMMYS_HANDS, ItemID.MUMMYS_LEGS,
-                ItemID.MUMMYS_FEET, ItemID.ANKOU_MASK, ItemID.ANKOU_TOP, ItemID.ANKOU_GLOVES, ItemID.ANKOUS_LEGGINGS,
-                ItemID.ANKOU_SOCKS, ItemID.HOOD_OF_DARKNESS, ItemID.ROBE_TOP_OF_DARKNESS, ItemID.GLOVES_OF_DARKNESS,
-                ItemID.ROBE_BOTTOM_OF_DARKNESS, ItemID.BOOTS_OF_DARKNESS, ItemID.RING_OF_COINS, ItemID.LEFT_EYE_PATCH,
-                ItemID.OBSIDIAN_CAPE_R, ItemID.FANCY_TIARA, ItemID.HALF_MOON_SPECTACLES, ItemID.ALE_OF_THE_GODS,
-                ItemID.BUCKET_HELM_G, ItemID.BOWL_WIG, ItemID.SCROLL_SACK
+                ItemId.DRAGON_PLATEBODY_ORNAMENT_KIT, ItemId.DRAGON_KITESHIELD_ORNAMENT_KIT,
+                ItemId.DRAGON_DEFENDER_ORNAMENT_KIT, ItemId.ANGUISH_ORNAMENT_KIT, ItemId.TORTURE_ORNAMENT_KIT,
+                ItemId.OCCULT_ORNAMENT_KIT, ItemId.ARMADYL_GODSWORD_ORNAMENT_KIT, ItemId.BANDOS_GODSWORD_ORNAMENT_KIT,
+                ItemId.SARADOMIN_GODSWORD_ORNAMENT_KIT, ItemId.ZAMORAK_GODSWORD_ORNAMENT_KIT,
+                ItemId.TORMENTED_ORNAMENT_KIT, ItemId.LESSER_DEMON_MASK, ItemId.GREATER_DEMON_MASK,
+                ItemId.BLACK_DEMON_MASK, ItemId.JUNGLE_DEMON_MASK, ItemId.OLD_DEMON_MASK, ItemId.ARCEUUS_HOOD,
+                ItemId.HOSIDIUS_HOOD, ItemId.LOVAKENGJ_HOOD, ItemId.PISCARILIUS_HOOD, ItemId.SHAYZIEN_HOOD,
+                ItemId.SAMURAI_KASA, ItemId.SAMURAI_SHIRT, ItemId.SAMURAI_GLOVES, ItemId.SAMURAI_GREAVES,
+                ItemId.SAMURAI_BOOTS, ItemId.MUMMYS_HEAD, ItemId.MUMMYS_BODY, ItemId.MUMMYS_HANDS, ItemId.MUMMYS_LEGS,
+                ItemId.MUMMYS_FEET, ItemId.ANKOU_MASK, ItemId.ANKOU_TOP, ItemId.ANKOU_GLOVES, ItemId.ANKOUS_LEGGINGS,
+                ItemId.ANKOU_SOCKS, ItemId.HOOD_OF_DARKNESS, ItemId.ROBE_TOP_OF_DARKNESS, ItemId.GLOVES_OF_DARKNESS,
+                ItemId.ROBE_BOTTOM_OF_DARKNESS, ItemId.BOOTS_OF_DARKNESS, ItemId.RING_OF_COINS, ItemId.LEFT_EYE_PATCH,
+                ItemId.OBSIDIAN_CAPE_R, ItemId.FANCY_TIARA, ItemId.HALF_MOON_SPECTACLES, ItemId.ALE_OF_THE_GODS,
+                ItemId.BUCKET_HELM_G, ItemId.BOWL_WIG, ItemId.SCROLL_SACK
             };
             int[] gildedMaster = new int[] {
-                ItemID.GILDED_FULL_HELM, ItemID.GILDED_PLATEBODY, ItemID.GILDED_PLATELEGS, ItemID.GILDED_PLATESKIRT,
-                ItemID.GILDED_KITESHIELD, ItemID.GILDED_MED_HELM, ItemID.GILDED_CHAINBODY, ItemID.GILDED_SQ_SHIELD,
-                ItemID.GILDED_2H_SWORD, ItemID.GILDED_SPEAR, ItemID.GILDED_HASTA, ItemID.GILDED_BOOTS,
-                ItemID.GILDED_SCIMITAR, ItemID.GILDED_DHIDE_VAMBS, ItemID.GILDED_DHIDE_BODY, ItemID.GILDED_DHIDE_CHAPS,
-                ItemID.GILDED_COIF, ItemID.GILDED_AXE, ItemID.GILDED_PICKAXE, ItemID.GILDED_SPADE
+                ItemId.GILDED_FULL_HELM, ItemId.GILDED_PLATEBODY, ItemId.GILDED_PLATELEGS, ItemId.GILDED_PLATESKIRT,
+                ItemId.GILDED_KITESHIELD, ItemId.GILDED_MED_HELM, ItemId.GILDED_CHAINBODY, ItemId.GILDED_SQ_SHIELD,
+                ItemId.GILDED_2H_SWORD, ItemId.GILDED_SPEAR, ItemId.GILDED_HASTA, ItemId.GILDED_BOOTS,
+                ItemId.GILDED_SCIMITAR, ItemId.GILDED_DHIDE_VAMBS, ItemId.GILDED_DHIDE_BODY, ItemId.GILDED_DHIDE_CHAPS,
+                ItemId.GILDED_COIF, ItemId.GILDED_AXE, ItemId.GILDED_PICKAXE, ItemId.GILDED_SPADE
             };
             int[] thirdageMaster = new int[] {
-                ItemID._3RD_AGE_FULL_HELMET, ItemID._3RD_AGE_PLATEBODY, ItemID._3RD_AGE_PLATELEGS,
-                ItemID._3RD_AGE_KITESHIELD, ItemID._3RD_AGE_RANGE_COIF, ItemID._3RD_AGE_RANGE_TOP,
-                ItemID._3RD_AGE_RANGE_LEGS, ItemID._3RD_AGE_VAMBRACES, ItemID._3RD_AGE_MAGE_HAT,
-                ItemID._3RD_AGE_ROBE_TOP, ItemID._3RD_AGE_ROBE, ItemID._3RD_AGE_AMULET, ItemID._3RD_AGE_CLOAK,
-                ItemID._3RD_AGE_WAND, ItemID._3RD_AGE_BOW, ItemID._3RD_AGE_LONGSWORD, ItemID._3RD_AGE_AXE,
-                ItemID._3RD_AGE_PICKAXE, ItemID._3RD_AGE_DRUIDIC_ROBE_TOP, ItemID._3RD_AGE_DRUIDIC_ROBE_BOTTOMS,
-                ItemID._3RD_AGE_DRUIDIC_CLOAK, ItemID._3RD_AGE_DRUIDIC_STAFF, ItemID.RING_OF_3RD_AGE
+                ItemId._3RD_AGE_FULL_HELMET, ItemId._3RD_AGE_PLATEBODY, ItemId._3RD_AGE_PLATELEGS,
+                ItemId._3RD_AGE_KITESHIELD, ItemId._3RD_AGE_RANGE_COIF, ItemId._3RD_AGE_RANGE_TOP,
+                ItemId._3RD_AGE_RANGE_LEGS, ItemId._3RD_AGE_VAMBRACES, ItemId._3RD_AGE_MAGE_HAT,
+                ItemId._3RD_AGE_ROBE_TOP, ItemId._3RD_AGE_ROBE, ItemId._3RD_AGE_AMULET, ItemId._3RD_AGE_CLOAK,
+                ItemId._3RD_AGE_WAND, ItemId._3RD_AGE_BOW, ItemId._3RD_AGE_LONGSWORD, ItemId._3RD_AGE_AXE,
+                ItemId._3RD_AGE_PICKAXE, ItemId._3RD_AGE_DRUIDIC_ROBE_TOP, ItemId._3RD_AGE_DRUIDIC_ROBE_BOTTOMS,
+                ItemId._3RD_AGE_DRUIDIC_CLOAK, ItemId._3RD_AGE_DRUIDIC_STAFF, ItemId.RING_OF_3RD_AGE
             };
-            player.getInventory().deleteItem(itemID, 1, slot);
+            player.getInventory().deleteItem(itemId, 1, slot);
             if (Utils.inRange(0.1)) {
-                int thirdAgeID = thirdageMaster[Utils.randomE(thirdageMaster.length)];
-                player.getInventory().addItem(thirdAgeID, 1, slot);
-                player.getWorld().sendItemDropNews(player, thirdAgeID);
+                int thirdAgeId = thirdageMaster[Utils.randomE(thirdageMaster.length)];
+                player.getInventory().addItem(thirdAgeId, 1, slot);
+                player.getWorld().sendItemDropNews(player, thirdAgeId);
             } else if (Utils.inRange(0.5)) {
-                int gildedID = gildedMaster[Utils.randomE(gildedMaster.length)];
-                player.getInventory().addItem(gildedID, 1, slot);
-                player.getWorld().sendItemDropNews(player, gildedID);
+                int gildedId = gildedMaster[Utils.randomE(gildedMaster.length)];
+                player.getInventory().addItem(gildedId, 1, slot);
+                player.getWorld().sendItemDropNews(player, gildedId);
             } else {
-                int masterItemID = ttMaster[Utils.randomE(ttMaster.length)];
-                player.getInventory().addItem(masterItemID, 1, slot);
+                int masterItemId = ttMaster[Utils.randomE(ttMaster.length)];
+                player.getInventory().addItem(masterItemId, 1, slot);
             }
             if (Utils.randomE(5) == 0) {
-                int extraItemID = ttLoot[Utils.randomE(ttLoot.length)];
-                if (extraItemID == ItemID.PURPLE_SWEETS) {
-                    player.getInventory().addOrDropItem(extraItemID, 8 + Utils.randomI(24));
+                int extraItemId = ttLoot[Utils.randomE(ttLoot.length)];
+                if (extraItemId == ItemId.PURPLE_SWEETS) {
+                    player.getInventory().addOrDropItem(extraItemId, 8 + Utils.randomI(24));
                 } else {
-                    player.getInventory().addOrDropItem(extraItemID, 1);
+                    player.getInventory().addOrDropItem(extraItemId, 1);
                 }
             }
-            player.getFamiliar().rollPet(ItemID.BLOODHOUND, 0.1);
+            player.getFamiliar().rollPet(ItemId.BLOODHOUND, 0.1);
             player.getSkills().increaseClueScrollCount(Skills.CLUE_SCROLL_MASTER);
             break;
         }

@@ -19,7 +19,7 @@ public class MovementDecoder extends PacketDecoder {
         if (player.getGameMode() == 0 || player.isDead()) {
             return;
         }
-        if (player.getMovement().isViewing() || player.getAppearance().getNpcID() == Movement.VIEWING_NPC_ID) {
+        if (player.getMovement().isViewing() || player.getAppearance().getNpcId() == Movement.VIEWING_NPC_ID) {
             if (!player.getMovement().getTeleporting() && !player.getMovement().getTeleported()) {
                 player.getMovement().stopViewing();
                 player.getWidgetManager().removeInteractiveWidgets();

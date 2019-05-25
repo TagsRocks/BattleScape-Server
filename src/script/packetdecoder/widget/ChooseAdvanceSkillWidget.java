@@ -1,13 +1,13 @@
 package script.packetdecoder.widget;
 
-import com.palidino.osrs.io.cache.VarpID;
-import com.palidino.osrs.io.cache.WidgetID;
+import com.palidino.osrs.io.cache.varpId;
+import com.palidino.osrs.io.cache.WidgetId;
 import com.palidino.osrs.model.player.Player;
 import com.palidino.osrs.model.player.Skills;
 import com.palidino.util.Utils;
 
 public class ChooseAdvanceSkillWidget {
-    public static void widget134(Player player, int index, int childID, int slot, int itemID) {
+    public static void widget134(Player player, int index, int childId, int slot, int itemId) {
         if (player.isLocked()) {
             return;
         }
@@ -17,52 +17,52 @@ public class ChooseAdvanceSkillWidget {
             Skills.MINING, Skills.SMITHING, Skills.FISHING, Skills.COOKING, Skills.FIREMAKING, Skills.WOODCUTTING,
             Skills.FLETCHING, Skills.SLAYER, Skills.FARMING, Skills.CONSTRUCTION, Skills.HUNTER
         };
-        if (childID - 3 >= 0 && childID - 3 < skillOrder.length) {
-            int skillID = skillOrder[childID - 3];
-            if (skillID == Skills.CONSTRUCTION) {
+        if (childId - 3 >= 0 && childId - 3 < skillOrder.length) {
+            int skillId = skillOrder[childId - 3];
+            if (skillId == Skills.CONSTRUCTION) {
                 return;
             }
-            player.putAttribute("choose_skill_id", skillID);
-            player.getGameEncoder().setVarp(VarpID.CHOOSE_ADVANCE_SKILL, childID - 2);
+            player.putAttribute("choose_skill_id", skillId);
+            player.getGameEncoder().setVarp(varpId.CHOOSE_ADVANCE_SKILL, childId - 2);
             int xpMultipler =
-                    player.getSkills().getXPMultipler(skillID) * player.getAttributeInt("choose_xp_multiplier");
+                    player.getSkills().getXPMultipler(skillId) * player.getAttributeInt("choose_xp_multiplier");
             if (xpMultipler == 0) {
                 xpMultipler = 1;
             }
             int xp = player.getAttributeInt("choose_fixed_xp");
-            if (player.getAttributeInt("choose_skill_level_multiplier_" + skillID) > 0) {
-                xp = player.getController().getLevelForXP(skillID)
-                        * player.getAttributeInt("choose_skill_level_multiplier_" + skillID);
+            if (player.getAttributeInt("choose_skill_level_multiplier_" + skillId) > 0) {
+                xp = player.getController().getLevelForXP(skillId)
+                        * player.getAttributeInt("choose_skill_level_multiplier_" + skillId);
             } else if (player.getAttributeInt("choose_skill_level_multiplier") > 0) {
-                xp = player.getController().getLevelForXP(skillID)
+                xp = player.getController().getLevelForXP(skillId)
                         * player.getAttributeInt("choose_skill_level_multiplier");
             }
             xp *= xpMultipler;
-            player.getGameEncoder().sendWidgetText(WidgetID.CHOOSE_ADVANCE_SKILL, 2,
+            player.getGameEncoder().sendWidgetText(WidgetId.CHOOSE_ADVANCE_SKILL, 2,
                     "Choose the stat you wish to be advanced!<br>Experience that will be given: "
                             + Utils.formatNumber(xp));
-        } else if (childID == 26) {
-            int skillID = player.getAttributeInt("choose_skill_id");
+        } else if (childId == 26) {
+            int skillId = player.getAttributeInt("choose_skill_id");
             int minLevel = player.getAttributeInt("choose_min_level");
-            if (minLevel > 1 && player.getController().getLevelForXP(skillID) < minLevel) {
+            if (minLevel > 1 && player.getController().getLevelForXP(skillId) < minLevel) {
                 player.getGameEncoder().sendMessage("You need a minimum level of " + minLevel + " to do this.");
                 return;
             }
             int xpMultipler =
-                    player.getSkills().getXPMultipler(skillID) * player.getAttributeInt("choose_xp_multiplier");
+                    player.getSkills().getXPMultipler(skillId) * player.getAttributeInt("choose_xp_multiplier");
             if (xpMultipler == 0) {
                 xpMultipler = 1;
             }
             int xp = player.getAttributeInt("choose_fixed_xp");
-            if (player.getAttributeInt("choose_skill_level_multiplier_" + skillID) > 0) {
-                xp = player.getController().getLevelForXP(skillID)
-                        * player.getAttributeInt("choose_skill_level_multiplier_" + skillID);
+            if (player.getAttributeInt("choose_skill_level_multiplier_" + skillId) > 0) {
+                xp = player.getController().getLevelForXP(skillId)
+                        * player.getAttributeInt("choose_skill_level_multiplier_" + skillId);
             } else if (player.getAttributeInt("choose_skill_level_multiplier") > 0) {
-                xp = player.getController().getLevelForXP(skillID)
+                xp = player.getController().getLevelForXP(skillId)
                         * player.getAttributeInt("choose_skill_level_multiplier");
             }
             xp *= xpMultipler;
-            player.getSkills().addXP(skillID, xp, false);
+            player.getSkills().addXP(skillId, xp, false);
             player.getInventory().deleteItem(player.getAttributeInt("choose_item_id"), 1);
             player.getWidgetManager().removeInteractiveWidgets();
         }

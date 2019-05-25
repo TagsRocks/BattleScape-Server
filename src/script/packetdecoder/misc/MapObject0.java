@@ -1,6 +1,6 @@
 package script.packetdecoder.misc;
 
-import com.palidino.osrs.io.cache.ItemID;
+import com.palidino.osrs.io.cache.ItemId;
 import com.palidino.osrs.model.ForceMovement;
 import com.palidino.osrs.model.Movement;
 import com.palidino.osrs.model.Tile;
@@ -168,7 +168,7 @@ public class MapObject0 {
         };
         for (int i = 0; i < 2; i++) {
             Item item = RandomItem.getItem(items);
-            player.getInventory().addOrDropItem(item.getNotedID(), item.getAmount());
+            player.getInventory().addOrDropItem(item.getNotedId(), item.getAmount());
         }
         player.getGameEncoder().sendMessage("You find some treasure in the chest!");
     }
@@ -254,7 +254,7 @@ public class MapObject0 {
 
     // Cave
     public static void mapObject678(Player player, int index, MapObject mapObject) {
-        if (player.getInventory().hasItem(ItemID.BLOODY_KEY) || player.getInventory().hasItem(ItemID.BLOODIER_KEY)) {
+        if (player.getInventory().hasItem(ItemId.BLOODY_KEY) || player.getInventory().hasItem(ItemId.BLOODIER_KEY)) {
             player.getGameEncoder().sendMessage("You can't use this right now.");
             return;
         }
@@ -292,7 +292,7 @@ public class MapObject0 {
             return;
         }
         player.getGameEncoder().sendMessage("You slash the web apart.");
-        MapObject newWeb = new MapObject(mapObject.getID() + 1, mapObject);
+        MapObject newWeb = new MapObject(mapObject.getId() + 1, mapObject);
         player.getWorld().addEvent(new TempMapObject(100, player.getController(), newWeb));
     }
 
@@ -357,7 +357,7 @@ public class MapObject0 {
 
     // Lever
     public static void mapObject1815(Player player, int index, MapObject mapObject) {
-        if (player.getInventory().hasItem(ItemID.BLOODY_KEY) || player.getInventory().hasItem(ItemID.BLOODIER_KEY)) {
+        if (player.getInventory().hasItem(ItemId.BLOODY_KEY) || player.getInventory().hasItem(ItemId.BLOODIER_KEY)) {
             player.getGameEncoder().sendMessage("You can't use this right now.");
             return;
         }
@@ -380,7 +380,7 @@ public class MapObject0 {
 
     // Lever
     public static void mapObject1816(Player player, int index, MapObject mapObject) {
-        if (player.getInventory().hasItem(ItemID.BLOODY_KEY) || player.getInventory().hasItem(ItemID.BLOODIER_KEY)) {
+        if (player.getInventory().hasItem(ItemId.BLOODY_KEY) || player.getInventory().hasItem(ItemId.BLOODIER_KEY)) {
             player.getGameEncoder().sendMessage("You can't use this right now.");
             return;
         }
@@ -404,7 +404,7 @@ public class MapObject0 {
 
     // Lever
     public static void mapObject1817(Player player, int index, MapObject mapObject) {
-        if (player.getInventory().hasItem(ItemID.BLOODY_KEY) || player.getInventory().hasItem(ItemID.BLOODIER_KEY)) {
+        if (player.getInventory().hasItem(ItemId.BLOODY_KEY) || player.getInventory().hasItem(ItemId.BLOODIER_KEY)) {
             player.getGameEncoder().sendMessage("You can't use this right now.");
             return;
         }
@@ -797,8 +797,8 @@ public class MapObject0 {
     public static void mapObject2927(Player player, int index, MapObject mapObject) {
         if (mapObject.getX() == 2779 && mapObject.getY() == 9305) {
             if (player.getCombat().getLegendsQuest() == 0) {
-                if (player.getInventory().getID(0) != 566 || player.getInventory().getID(1) != 558
-                        || player.getInventory().getID(2) != 557 || player.getInventory().getID(3) != 563
+                if (player.getInventory().getId(0) != 566 || player.getInventory().getId(1) != 558
+                        || player.getInventory().getId(2) != 557 || player.getInventory().getId(3) != 563
                         || player.getInventory().getAmount(3) < 2) {
                     player.getGameEncoder().sendMessage("You need to carry the SMELL runes to pass.");
                     return;
@@ -1148,7 +1148,7 @@ public class MapObject0 {
         if (player.getCombat().getHauntedMine() == 3) {
             player.getCombat().setHauntedMine(4);
             player.getGameEncoder().sendMessage("<col=ff0000>You have completed Haunted Mine!");
-            player.getInventory().addOrDropItem(ItemID.COINS, 50000);
+            player.getInventory().addOrDropItem(ItemId.COINS, 50000);
         }
     }
 
@@ -1166,7 +1166,7 @@ public class MapObject0 {
         if (player.getCombat().getHauntedMine() == 3) {
             player.getCombat().setHauntedMine(4);
             player.getGameEncoder().sendMessage("<col=ff0000>You have completed Haunted Mine!");
-            player.getInventory().addOrDropItem(ItemID.COINS, 50000);
+            player.getInventory().addOrDropItem(ItemId.COINS, 50000);
         }
     }
 
@@ -1431,7 +1431,7 @@ public class MapObject0 {
 
     // Lever
     public static void mapObject5959(Player player, int index, MapObject mapObject) {
-        if (player.getInventory().hasItem(ItemID.BLOODY_KEY) || player.getInventory().hasItem(ItemID.BLOODIER_KEY)) {
+        if (player.getInventory().hasItem(ItemId.BLOODY_KEY) || player.getInventory().hasItem(ItemId.BLOODIER_KEY)) {
             player.getGameEncoder().sendMessage("You can't use this right now.");
             return;
         }
@@ -1451,7 +1451,7 @@ public class MapObject0 {
 
     // Lever
     public static void mapObject5960(Player player, int index, MapObject mapObject) {
-        if (player.getInventory().hasItem(ItemID.BLOODY_KEY) || player.getInventory().hasItem(ItemID.BLOODIER_KEY)) {
+        if (player.getInventory().hasItem(ItemId.BLOODY_KEY) || player.getInventory().hasItem(ItemId.BLOODIER_KEY)) {
             player.getGameEncoder().sendMessage("You can't use this right now.");
             return;
         }
@@ -1722,7 +1722,7 @@ public class MapObject0 {
 
     // Lever
     public static void mapObject9706(Player player, int index, MapObject mapObject) {
-        if (player.getInventory().hasItem(ItemID.BLOODY_KEY) || player.getInventory().hasItem(ItemID.BLOODIER_KEY)) {
+        if (player.getInventory().hasItem(ItemId.BLOODY_KEY) || player.getInventory().hasItem(ItemId.BLOODIER_KEY)) {
             player.getGameEncoder().sendMessage("You can't use this right now.");
             return;
         }
@@ -1739,7 +1739,7 @@ public class MapObject0 {
 
     // Lever
     public static void mapObject9707(Player player, int index, MapObject mapObject) {
-        if (player.getInventory().hasItem(ItemID.BLOODY_KEY) || player.getInventory().hasItem(ItemID.BLOODIER_KEY)) {
+        if (player.getInventory().hasItem(ItemId.BLOODY_KEY) || player.getInventory().hasItem(ItemId.BLOODIER_KEY)) {
             player.getGameEncoder().sendMessage("You can't use this right now.");
             return;
         }
@@ -2841,7 +2841,7 @@ public class MapObject0 {
 
     // Obelisk
     public static void mapObject14826(Player player, int index, MapObject mapObject) {
-        if (player.getInventory().hasItem(ItemID.BLOODY_KEY) || player.getInventory().hasItem(ItemID.BLOODIER_KEY)) {
+        if (player.getInventory().hasItem(ItemId.BLOODY_KEY) || player.getInventory().hasItem(ItemId.BLOODIER_KEY)) {
             player.getGameEncoder().sendMessage("You can't use this right now.");
             return;
         }
@@ -2852,7 +2852,7 @@ public class MapObject0 {
 
     // Obelisk
     public static void mapObject14827(Player player, int index, MapObject mapObject) {
-        if (player.getInventory().hasItem(ItemID.BLOODY_KEY) || player.getInventory().hasItem(ItemID.BLOODIER_KEY)) {
+        if (player.getInventory().hasItem(ItemId.BLOODY_KEY) || player.getInventory().hasItem(ItemId.BLOODIER_KEY)) {
             player.getGameEncoder().sendMessage("You can't use this right now.");
             return;
         }
@@ -2863,7 +2863,7 @@ public class MapObject0 {
 
     // Obelisk
     public static void mapObject14828(Player player, int index, MapObject mapObject) {
-        if (player.getInventory().hasItem(ItemID.BLOODY_KEY) || player.getInventory().hasItem(ItemID.BLOODIER_KEY)) {
+        if (player.getInventory().hasItem(ItemId.BLOODY_KEY) || player.getInventory().hasItem(ItemId.BLOODIER_KEY)) {
             player.getGameEncoder().sendMessage("You can't use this right now.");
             return;
         }
@@ -2874,7 +2874,7 @@ public class MapObject0 {
 
     // Obelisk
     public static void mapObject14829(Player player, int index, MapObject mapObject) {
-        if (player.getInventory().hasItem(ItemID.BLOODY_KEY) || player.getInventory().hasItem(ItemID.BLOODIER_KEY)) {
+        if (player.getInventory().hasItem(ItemId.BLOODY_KEY) || player.getInventory().hasItem(ItemId.BLOODIER_KEY)) {
             player.getGameEncoder().sendMessage("You can't use this right now.");
             return;
         }
@@ -2885,7 +2885,7 @@ public class MapObject0 {
 
     // Obelisk
     public static void mapObject14830(Player player, int index, MapObject mapObject) {
-        if (player.getInventory().hasItem(ItemID.BLOODY_KEY) || player.getInventory().hasItem(ItemID.BLOODIER_KEY)) {
+        if (player.getInventory().hasItem(ItemId.BLOODY_KEY) || player.getInventory().hasItem(ItemId.BLOODIER_KEY)) {
             player.getGameEncoder().sendMessage("You can't use this right now.");
             return;
         }
@@ -2896,7 +2896,7 @@ public class MapObject0 {
 
     // Obelisk
     public static void mapObject14831(Player player, int index, MapObject mapObject) {
-        if (player.getInventory().hasItem(ItemID.BLOODY_KEY) || player.getInventory().hasItem(ItemID.BLOODIER_KEY)) {
+        if (player.getInventory().hasItem(ItemId.BLOODY_KEY) || player.getInventory().hasItem(ItemId.BLOODIER_KEY)) {
             player.getGameEncoder().sendMessage("You can't use this right now.");
             return;
         }

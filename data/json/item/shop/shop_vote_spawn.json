@@ -1,115 +1,115 @@
 {
   "name": "Vote Shop",
-  "currency": "ItemID.VOTE_TICKET",
+  "currency": "ItemId.VOTE_TICKET",
   "items": [
     {
-      "id": "ItemID.WARRIOR_RING_I",
+      "id": "ItemId.WARRIOR_RING_I",
       "price": 4,
-      "costItems": [ [ { "id": "ItemID.WARRIOR_RING",  "amount": 1 } ] ]
+      "costItems": [ [ { "id": "ItemId.WARRIOR_RING",  "amount": 1 } ] ]
     },
     {
-      "id": "ItemID.BERSERKER_RING_I",
+      "id": "ItemId.BERSERKER_RING_I",
       "price": 4,
-      "costItems": [ [ { "id": "ItemID.BERSERKER_RING",  "amount": 1 } ] ]
+      "costItems": [ [ { "id": "ItemId.BERSERKER_RING",  "amount": 1 } ] ]
     },
     {
-      "id": "ItemID.ARCHERS_RING_I",
+      "id": "ItemId.ARCHERS_RING_I",
       "price": 4,
-      "costItems": [ [ { "id": "ItemID.ARCHERS_RING",  "amount": 1 } ] ]
+      "costItems": [ [ { "id": "ItemId.ARCHERS_RING",  "amount": 1 } ] ]
     },
     {
-      "id": "ItemID.SEERS_RING_I",
+      "id": "ItemId.SEERS_RING_I",
       "price": 4,
-      "costItems": [ [ { "id": "ItemID.SEERS_RING",  "amount": 1 } ] ]
+      "costItems": [ [ { "id": "ItemId.SEERS_RING",  "amount": 1 } ] ]
     },
     {
-      "id": "ItemID.TYRANNICAL_RING_I",
+      "id": "ItemId.TYRANNICAL_RING_I",
       "price": 4,
-      "costItems": [ [ { "id": "ItemID.TYRANNICAL_RING",  "amount": 1 } ] ]
+      "costItems": [ [ { "id": "ItemId.TYRANNICAL_RING",  "amount": 1 } ] ]
     },
     {
-      "id": "ItemID.TREASONOUS_RING_I",
+      "id": "ItemId.TREASONOUS_RING_I",
       "price": 4,
-      "costItems": [ [ { "id": "ItemID.TREASONOUS_RING",  "amount": 1 } ] ]
+      "costItems": [ [ { "id": "ItemId.TREASONOUS_RING",  "amount": 1 } ] ]
     },
     {
-      "id": "ItemID.RING_OF_THE_GODS_I",
+      "id": "ItemId.RING_OF_THE_GODS_I",
       "price": 4,
-      "costItems": [ [ { "id": "ItemID.RING_OF_THE_GODS",  "amount": 1 } ] ]
+      "costItems": [ [ { "id": "ItemId.RING_OF_THE_GODS",  "amount": 1 } ] ]
     },
     {
-      "id": "ItemID.RING_OF_SUFFERING_I",
+      "id": "ItemId.RING_OF_SUFFERING_I",
       "price": 4,
-      "costItems": [ [ { "id": "ItemID.RING_OF_SUFFERING",  "amount": 1 } ] ]
+      "costItems": [ [ { "id": "ItemId.RING_OF_SUFFERING",  "amount": 1 } ] ]
     },
     {
-      "id": "ItemID.ELITE_VOID_TOP",
+      "id": "ItemId.ELITE_VOID_TOP",
       "price": 4,
-      "costItems": [ [ { "id": "ItemID.VOID_KNIGHT_TOP",  "amount": 1 } ] ]
+      "costItems": [ [ { "id": "ItemId.VOID_KNIGHT_TOP",  "amount": 1 } ] ]
     },
     {
-      "id": "ItemID.ELITE_VOID_ROBE",
+      "id": "ItemId.ELITE_VOID_ROBE",
       "price": 4,
-      "costItems": [ [ { "id": "ItemID.VOID_KNIGHT_ROBE",  "amount": 1 } ] ]
+      "costItems": [ [ { "id": "ItemId.VOID_KNIGHT_ROBE",  "amount": 1 } ] ]
     },
     {
-      "id": "ItemID.BLACK_MASK_10_I",
+      "id": "ItemId.BLACK_MASK_10_I",
       "price": 4,
       "costItems": [
         [
-          { "id": "ItemID.BLACK_MASK_10",  "amount": 1 },
-          { "id": "ItemID.BLACK_MASK_9",  "amount": 1 },
-          { "id": "ItemID.BLACK_MASK_8",  "amount": 1 },
-          { "id": "ItemID.BLACK_MASK_7",  "amount": 1 },
-          { "id": "ItemID.BLACK_MASK_6",  "amount": 1 },
-          { "id": "ItemID.BLACK_MASK_5",  "amount": 1 },
-          { "id": "ItemID.BLACK_MASK_4",  "amount": 1 },
-          { "id": "ItemID.BLACK_MASK_3",  "amount": 1 },
-          { "id": "ItemID.BLACK_MASK_2",  "amount": 1 },
-          { "id": "ItemID.BLACK_MASK_1",  "amount": 1 },
-          { "id": "ItemID.BLACK_MASK",  "amount": 1 }
+          { "id": "ItemId.BLACK_MASK_10",  "amount": 1 },
+          { "id": "ItemId.BLACK_MASK_9",  "amount": 1 },
+          { "id": "ItemId.BLACK_MASK_8",  "amount": 1 },
+          { "id": "ItemId.BLACK_MASK_7",  "amount": 1 },
+          { "id": "ItemId.BLACK_MASK_6",  "amount": 1 },
+          { "id": "ItemId.BLACK_MASK_5",  "amount": 1 },
+          { "id": "ItemId.BLACK_MASK_4",  "amount": 1 },
+          { "id": "ItemId.BLACK_MASK_3",  "amount": 1 },
+          { "id": "ItemId.BLACK_MASK_2",  "amount": 1 },
+          { "id": "ItemId.BLACK_MASK_1",  "amount": 1 },
+          { "id": "ItemId.BLACK_MASK",  "amount": 1 }
         ]
       ]
     },
     {
-      "id": "ItemID.SLAYER_HELMET_I",
+      "id": "ItemId.SLAYER_HELMET_I",
       "price": 4,
-      "costItems": [ [ { "id": "ItemID.SLAYER_HELMET",  "amount": 1 } ] ]
+      "costItems": [ [ { "id": "ItemId.SLAYER_HELMET",  "amount": 1 } ] ]
     },
     {
-      "id": "ItemID.BLACK_SLAYER_HELMET_I",
+      "id": "ItemId.BLACK_SLAYER_HELMET_I",
       "price": 4,
-      "costItems": [ [ { "id": "ItemID.BLACK_SLAYER_HELMET",  "amount": 1 } ] ]
+      "costItems": [ [ { "id": "ItemId.BLACK_SLAYER_HELMET",  "amount": 1 } ] ]
     },
     {
-      "id": "ItemID.RED_SLAYER_HELMET_I",
+      "id": "ItemId.RED_SLAYER_HELMET_I",
       "price": 4,
-      "costItems": [ [ { "id": "ItemID.RED_SLAYER_HELMET",  "amount": 1 } ] ]
+      "costItems": [ [ { "id": "ItemId.RED_SLAYER_HELMET",  "amount": 1 } ] ]
     },
     {
-      "id": "ItemID.GREEN_SLAYER_HELMET_I",
+      "id": "ItemId.GREEN_SLAYER_HELMET_I",
       "price": 4,
-      "costItems": [ [ { "id": "ItemID.GREEN_SLAYER_HELMET",  "amount": 1 } ] ]
+      "costItems": [ [ { "id": "ItemId.GREEN_SLAYER_HELMET",  "amount": 1 } ] ]
     },
     {
-      "id": "ItemID.PURPLE_SLAYER_HELMET_I",
+      "id": "ItemId.PURPLE_SLAYER_HELMET_I",
       "price": 4,
-      "costItems": [ [ { "id": "ItemID.PURPLE_SLAYER_HELMET",  "amount": 1 } ] ]
+      "costItems": [ [ { "id": "ItemId.PURPLE_SLAYER_HELMET",  "amount": 1 } ] ]
     },
     {
-      "id": "ItemID.TURQUOISE_SLAYER_HELMET_I",
+      "id": "ItemId.TURQUOISE_SLAYER_HELMET_I",
       "price": 4,
-      "costItems": [ [ { "id": "ItemID.TURQUOISE_SLAYER_HELMET",  "amount": 1 } ] ]
+      "costItems": [ [ { "id": "ItemId.TURQUOISE_SLAYER_HELMET",  "amount": 1 } ] ]
     },
     {
-      "id": "ItemID.HYDRA_SLAYER_HELMET_I",
+      "id": "ItemId.HYDRA_SLAYER_HELMET_I",
       "price": 4,
-      "costItems": [ [ { "id": "ItemID.HYDRA_SLAYER_HELMET",  "amount": 1 } ] ]
+      "costItems": [ [ { "id": "ItemId.HYDRA_SLAYER_HELMET",  "amount": 1 } ] ]
     },
     {
-      "id": "ItemID.SALVE_AMULET_EI",
+      "id": "ItemId.SALVE_AMULET_EI",
       "price": 4,
-      "costItems": [ [ { "id": "ItemID.SALVE_AMULET_E",  "amount": 1 } ] ]
+      "costItems": [ [ { "id": "ItemId.SALVE_AMULET_E",  "amount": 1 } ] ]
     }
   ]
 }

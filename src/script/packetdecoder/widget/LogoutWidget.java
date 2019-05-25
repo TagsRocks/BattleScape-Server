@@ -1,20 +1,20 @@
 package script.packetdecoder.widget;
 
-import com.palidino.osrs.io.cache.ItemID;
+import com.palidino.osrs.io.cache.ItemId;
 import com.palidino.osrs.io.cache.WidgetChild;
-import com.palidino.osrs.io.cache.WidgetID;
+import com.palidino.osrs.io.cache.WidgetId;
 import com.palidino.osrs.model.player.Player;
 
 public class LogoutWidget {
-    public static void widget182(Player player, int index, int childID, int slot, int itemID) {
+    public static void widget182(Player player, int index, int childId, int slot, int itemId) {
         // Tab
         if (player.isLocked()) {
             return;
         }
-        switch (childID) {
+        switch (childId) {
         case 3:
-            player.getWidgetManager().sendWidget(WidgetChild.ViewportContainer.LOGOUT, WidgetID.WORLD_SELECT);
-            player.getGameEncoder().sendWidgetSettings(WidgetID.WORLD_SELECT, 18, 0, 20, 2);
+            player.getWidgetManager().sendWidget(WidgetChild.ViewportContainer.LOGOUT, WidgetId.WORLD_SELECT);
+            player.getGameEncoder().sendWidgetSettings(WidgetId.WORLD_SELECT, 18, 0, 20, 2);
             /*
              * player.getGameEncoder().sendEnterString("Quick feedback:", new ValueEnteredEvent.StringEvent() {
              *
@@ -24,8 +24,8 @@ public class LogoutWidget {
             break;
         case 8:
             player.getController().logoutWidgetHook();
-            if (!player.canLogout() || player.carryingItem(ItemID.BLOODY_KEY)
-                    || player.carryingItem(ItemID.BLOODIER_KEY)) {
+            if (!player.canLogout() || player.carryingItem(ItemId.BLOODY_KEY)
+                    || player.carryingItem(ItemId.BLOODIER_KEY)) {
                 player.getGameEncoder().sendMessage("You can't logout right now.");
                 player.getCombat().getTzHaar().pause();
                 return;
@@ -36,20 +36,20 @@ public class LogoutWidget {
         }
     }
 
-    public static void widget69(Player player, int index, int childID, int slot, int itemID) {
+    public static void widget69(Player player, int index, int childId, int slot, int itemId) {
         // World lists
         if (player.isLocked()) {
             return;
         }
-        switch (childID) {
+        switch (childId) {
         case 3:
-            player.getWidgetManager().sendWidget(WidgetChild.ViewportContainer.LOGOUT, WidgetID.LOGOUT);
+            player.getWidgetManager().sendWidget(WidgetChild.ViewportContainer.LOGOUT, WidgetId.LOGOUT);
             player.getWidgetManager().sendLogoutText();
             break;
         case 18:
             player.getController().logoutWidgetHook();
-            if (!player.canLogout() || player.carryingItem(ItemID.BLOODY_KEY)
-                    || player.carryingItem(ItemID.BLOODIER_KEY)) {
+            if (!player.canLogout() || player.carryingItem(ItemId.BLOODY_KEY)
+                    || player.carryingItem(ItemId.BLOODIER_KEY)) {
                 player.getGameEncoder().sendMessage("You can't logout right now.");
                 player.getCombat().getTzHaar().pause();
                 return;
@@ -71,8 +71,8 @@ public class LogoutWidget {
             break;
         case 23:
             player.getController().logoutWidgetHook();
-            if (!player.canLogout() || player.carryingItem(ItemID.BLOODY_KEY)
-                    || player.carryingItem(ItemID.BLOODIER_KEY)) {
+            if (!player.canLogout() || player.carryingItem(ItemId.BLOODY_KEY)
+                    || player.carryingItem(ItemId.BLOODIER_KEY)) {
                 player.getGameEncoder().sendMessage("You can't logout right now.");
                 player.getCombat().getTzHaar().pause();
                 return;

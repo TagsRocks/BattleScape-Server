@@ -2,7 +2,7 @@ package script.packetdecoder;
 
 import com.palidino.io.Stream;
 import com.palidino.osrs.io.PacketDecoder;
-import com.palidino.osrs.io.cache.WidgetID;
+import com.palidino.osrs.io.cache.WidgetId;
 import com.palidino.osrs.model.map.route.Route;
 import com.palidino.osrs.model.npc.Npc;
 import com.palidino.osrs.model.player.Player;
@@ -65,7 +65,7 @@ public class UseWidgetDecoder extends PacketDecoder {
     private void executeWidgetOnEntity(Player player, int index, int size, Stream stream) {
         var widgetHash = -1;
         var slot = -1;
-        var itemID = -1;
+        var itemId = -1;
         var id = -1;
         var moveType = 0;
         if (index == 0) {
@@ -79,7 +79,7 @@ public class UseWidgetDecoder extends PacketDecoder {
             slot = stream.getUShort128();
             id = stream.getUShort();
         } else if (index == 2) {
-            itemID = stream.getUShortLE128();
+            itemId = stream.getUShortLE128();
             slot = stream.getUShort();
             id = stream.getUShortLE128();
             moveType = stream.getUReversedByte();
@@ -89,10 +89,10 @@ public class UseWidgetDecoder extends PacketDecoder {
             moveType = stream.getU128Byte();
             widgetHash = stream.getIntV2();
             id = stream.getUShort();
-            itemID = stream.getUShort();
+            itemId = stream.getUShort();
         }
-        var widgetID = widgetHash >> 16;
-        var childID = widgetHash & 65535;
+        var widgetId = widgetHash >> 16;
+        var childId = widgetHash & 65535;
         if (slot == 65535) {
             slot = -1;
         }
@@ -101,9 +101,9 @@ public class UseWidgetDecoder extends PacketDecoder {
         if (entity == null) {
             return;
         }
-        var message = "[WidgetOnEntity(" + index + ")] widgetID=" + widgetID + "; childID=" + childID + "; itemID="
-                + itemID + "; slot=" + slot + "; id=" + id + "; moveType=" + moveType + "; entity="
-                + (entity instanceof Player ? ((Player) entity).getUsername() : entity.getID());
+        var message = "[WidgetOnEntity(" + index + ")] widgetId=" + widgetId + "; childId=" + childId + "; itemId="
+                + itemId + "; slot=" + slot + "; id=" + id + "; moveType=" + moveType + "; entity="
+                + (entity instanceof Player ? ((Player) entity).getUsername() : entity.getId());
         if (player.getRights() == Player.RIGHTS_ADMIN) {
             Logger.println(message);
         }
@@ -117,8 +117,8 @@ public class UseWidgetDecoder extends PacketDecoder {
         player.clearAllActions(false, true);
         player.setFaceEntity(entity);
         player.getMovement().setFollowing(entity);
-        if (widgetID == WidgetID.SPELLBOOK) {
-            player.getMagic().setSingleSpellID(childID);
+        if (widgetId == WidgetId.SPELLBOOK) {
+            player.getMagic().setSingleSpellId(childId);
             player.setAttacking(true);
             player.setEngagingEntity(entity);
             player.getCombat().setFollowing(entity);
@@ -128,8 +128,8 @@ public class UseWidgetDecoder extends PacketDecoder {
         }
         player.getMovement().fullRoute(entity, moveType);
         player.putAttribute("packet_decoder_index", index);
-        player.putAttribute("packet_decoder_widget_id", widgetID);
-        player.putAttribute("packet_decoder_child_id", childID);
+        player.putAttribute("packet_decoder_widget_id", widgetId);
+        player.putAttribute("packet_decoder_child_id", childId);
         player.putAttribute("packet_decoder_slot", slot);
         player.putAttribute(entity instanceof Npc ? "packet_decoder_npc_index" : "packet_decoder_player_index", id);
         if (complete(player)) {
@@ -141,8 +141,8 @@ public class UseWidgetDecoder extends PacketDecoder {
 
     private boolean completeWidgetOnEntity(Player player) {
         var index = player.getAttributeInt("packet_decoder_index");
-        var widgetID = player.getAttributeInt("packet_decoder_widget_id");
-        var childID = player.getAttributeInt("packet_decoder_child_id");
+        var widgetId = player.getAttributeInt("packet_decoder_widget_id");
+        var childId = player.getAttributeInt("packet_decoder_child_id");
         var slot = player.getAttributeInt("packet_decoder_slot");
         var id = player
                 .getAttributeInt(index == 0 || index == 2 ? "packet_decoder_npc_index" : "packet_decoder_player_index");
@@ -151,7 +151,7 @@ public class UseWidgetDecoder extends PacketDecoder {
         if (entity == null) {
             return true;
         }
-        if (!player.getWidgetManager().hasWidget(widgetID)) {
+        if (!player.getWidgetManager().hasWidget(widgetId)) {
             return true;
         }
         if (player.isLocked()) {
@@ -165,13 +165,13 @@ public class UseWidgetDecoder extends PacketDecoder {
         }
         player.getMovement().clear();
         player.setFaceTile(entity);
-        if (player.getController().widgetOnEntityHook(widgetID, childID, slot, entity)) {
+        if (player.getController().widgetOnEntityHook(widgetId, childId, slot, entity)) {
             return true;
         }
         if (entity instanceof Npc) {
-            UseWidgetAction.doActionNpc(player, index, widgetID, childID, slot, (Npc) entity);
+            UseWidgetAction.doActionNpc(player, index, widgetId, childId, slot, (Npc) entity);
         } else if (entity instanceof Player) {
-            UseWidgetAction.doActionPlayer(player, index, widgetID, childID, slot, (Player) entity);
+            UseWidgetAction.doActionPlayer(player, index, widgetId, childId, slot, (Player) entity);
         }
         return true;
     }
@@ -180,18 +180,18 @@ public class UseWidgetDecoder extends PacketDecoder {
         var useWidgetHash = stream.getIntV2();
         var onWidgetHash = stream.getInt();
         var onSlot = stream.getUShort();
-        var onItemID = stream.getUShortLE();
-        var useItemID = stream.getUShortLE();
-        var useWidgetID = useWidgetHash >> 16;
-        var onWidgetID = onWidgetHash >> 16;
-        var useChildID = useWidgetHash & 65535;
-        var onChildID = onWidgetHash & 65535;
+        var onItemId = stream.getUShortLE();
+        var useItemId = stream.getUShortLE();
+        var useWidgetId = useWidgetHash >> 16;
+        var onWidgetId = onWidgetHash >> 16;
+        var useChildId = useWidgetHash & 65535;
+        var onChildId = onWidgetHash & 65535;
         var useSlot = -1;
-        if (useItemID == 65535) {
-            useItemID = -1;
+        if (useItemId == 65535) {
+            useItemId = -1;
         }
-        if (onItemID == 65535) {
-            onItemID = -1;
+        if (onItemId == 65535) {
+            onItemId = -1;
         }
         if (useSlot == 65535) {
             useSlot = -1;
@@ -199,8 +199,8 @@ public class UseWidgetDecoder extends PacketDecoder {
         if (onSlot == 65535) {
             onSlot = -1;
         }
-        var message = "[WidgetOnWidget] useWidgetID=" + useWidgetID + "; useChildID=" + useChildID + "; onWidgetID="
-                + onWidgetID + "; onChildID=" + onChildID + "; useItemID=" + useItemID + "; onItemID=" + onItemID
+        var message = "[WidgetOnWidget] useWidgetId=" + useWidgetId + "; useChildId=" + useChildId + "; onWidgetId="
+                + onWidgetId + "; onChildId=" + onChildId + "; useItemId=" + useItemId + "; onItemId=" + onItemId
                 + "; onSlot=" + onSlot;
         if (player.getRights() == Player.RIGHTS_ADMIN) {
             Logger.println(message);
@@ -212,14 +212,14 @@ public class UseWidgetDecoder extends PacketDecoder {
             return;
         }
         player.clearAllActions(false, true);
-        player.putAttribute("packet_decoder_use_widget_id", useWidgetID);
-        player.putAttribute("packet_decoder_use_child_id", useChildID);
-        player.putAttribute("packet_decoder_on_widget_id", onWidgetID);
-        player.putAttribute("packet_decoder_on_child_id", onChildID);
-        player.putAttribute("packet_decoder_use_item_id", useItemID);
+        player.putAttribute("packet_decoder_use_widget_id", useWidgetId);
+        player.putAttribute("packet_decoder_use_child_id", useChildId);
+        player.putAttribute("packet_decoder_on_widget_id", onWidgetId);
+        player.putAttribute("packet_decoder_on_child_id", onChildId);
+        player.putAttribute("packet_decoder_use_item_id", useItemId);
         player.putAttribute("packet_decoder_use_slot", useSlot);
         player.putAttribute("packet_decoder_on_slot", onSlot);
-        player.putAttribute("packet_decoder_on_item_id", onItemID);
+        player.putAttribute("packet_decoder_on_item_id", onItemId);
         if (complete(player)) {
             stop(player);
             return;
@@ -228,18 +228,18 @@ public class UseWidgetDecoder extends PacketDecoder {
     }
 
     private boolean completeWidgetOnWidget(Player player) {
-        var useWidgetID = player.getAttributeInt("packet_decoder_use_widget_id");
-        var useChildID = player.getAttributeInt("packet_decoder_use_child_id");
-        var onWidgetID = player.getAttributeInt("packet_decoder_on_widget_id");
-        var onChildID = player.getAttributeInt("packet_decoder_on_child_id");
+        var useWidgetId = player.getAttributeInt("packet_decoder_use_widget_id");
+        var useChildId = player.getAttributeInt("packet_decoder_use_child_id");
+        var onWidgetId = player.getAttributeInt("packet_decoder_on_widget_id");
+        var onChildId = player.getAttributeInt("packet_decoder_on_child_id");
         var useSlot = player.getAttributeInt("packet_decoder_use_slot");
-        var useItemID = player.getAttributeInt("packet_decoder_use_item_id");
+        var useItemId = player.getAttributeInt("packet_decoder_use_item_id");
         var onSlot = player.getAttributeInt("packet_decoder_on_slot");
-        var onItemID = player.getAttributeInt("packet_decoder_on_item_id");
-        if (!player.getWidgetManager().hasWidget(useWidgetID)) {
+        var onItemId = player.getAttributeInt("packet_decoder_on_item_id");
+        if (!player.getWidgetManager().hasWidget(useWidgetId)) {
             return true;
         }
-        if (!player.getWidgetManager().hasWidget(onWidgetID)) {
+        if (!player.getWidgetManager().hasWidget(onWidgetId)) {
             return true;
         }
         if (player.isLocked()) {
@@ -249,16 +249,16 @@ public class UseWidgetDecoder extends PacketDecoder {
             return false;
         }
         player.setUseWidgetOnWidgetDelay(5);
-        if (player.getController().widgetOnWidgetHook(useWidgetID, useChildID, onWidgetID, onChildID, useSlot,
-                useItemID, onSlot, onItemID)) {
+        if (player.getController().widgetOnWidgetHook(useWidgetId, useChildId, onWidgetId, onChildId, useSlot,
+                useItemId, onSlot, onItemId)) {
             return true;
         }
-        if (SkillContainer.widgetOnWidgetHooks(player, useWidgetID, useChildID, onWidgetID, onChildID, useSlot,
-                useItemID, onSlot, onItemID)) {
+        if (SkillContainer.widgetOnWidgetHooks(player, useWidgetId, useChildId, onWidgetId, onChildId, useSlot,
+                useItemId, onSlot, onItemId)) {
             return true;
         }
-        UseWidgetAction.doActionWidgetOnWidget(player, useWidgetID, useChildID, onWidgetID, onChildID, useSlot,
-                useItemID, onSlot, onItemID);
+        UseWidgetAction.doActionWidgetOnWidget(player, useWidgetId, useChildId, onWidgetId, onChildId, useSlot,
+                useItemId, onSlot, onItemId);
         return true;
     }
 
@@ -267,7 +267,7 @@ public class UseWidgetDecoder extends PacketDecoder {
         var y = 0;
         var id = -1;
         var slot = -1;
-        var itemID = -1;
+        var itemId = -1;
         var widgetHash = -1;
         var moveType = 0;
         if (index == 0) {
@@ -277,17 +277,17 @@ public class UseWidgetDecoder extends PacketDecoder {
             widgetHash = stream.getIntLE();
             x = stream.getUShortLE128();
             id = stream.getUShort();
-            itemID = stream.getUShortLE();
+            itemId = stream.getUShortLE();
         } else if (index == 1) {
             moveType = stream.getUByte();
             x = stream.getUShort();
             id = stream.getUShort128();
             widgetHash = stream.getIntV3();
-            itemID = stream.getUShort();
+            itemId = stream.getUShort();
             y = stream.getUShortLE();
         }
-        var widgetID = widgetHash >> 16;
-        var childID = widgetHash & 65535;
+        var widgetId = widgetHash >> 16;
+        var childId = widgetHash & 65535;
         if (slot == 65535) {
             slot = -1;
         }
@@ -300,8 +300,8 @@ public class UseWidgetDecoder extends PacketDecoder {
                 return;
             }
         }
-        var message = "[WidgetOnMapObject] widgetID=" + widgetID + "; childID=" + childID + "; slot=" + slot
-                + "; itemID=" + itemID + "; id=" + id + "; x=" + x + "; y=" + y + "; moveType=" + moveType;
+        var message = "[WidgetOnMapObject] widgetId=" + widgetId + "; childId=" + childId + "; slot=" + slot
+                + "; itemId=" + itemId + "; id=" + id + "; x=" + x + "; y=" + y + "; moveType=" + moveType;
         if (player.getRights() == Player.RIGHTS_ADMIN) {
             Logger.println(message);
         }
@@ -314,8 +314,8 @@ public class UseWidgetDecoder extends PacketDecoder {
         player.clearAllActions(false, true);
         player.getMovement().fullRoute(mapObject, moveType);
         player.putAttribute("packet_decoder_index", index);
-        player.putAttribute("packet_decoder_widget_id", widgetID);
-        player.putAttribute("packet_decoder_child_id", childID);
+        player.putAttribute("packet_decoder_widget_id", widgetId);
+        player.putAttribute("packet_decoder_child_id", childId);
         player.putAttribute("packet_decoder_slot", slot);
         player.putAttribute("packet_decoder_object_id", id);
         player.putAttribute("packet_decoder_object_x", x);
@@ -328,8 +328,8 @@ public class UseWidgetDecoder extends PacketDecoder {
     }
 
     private boolean completeWidgetOnMapObject(Player player) {
-        var widgetID = player.getAttributeInt("packet_decoder_widget_id");
-        var childID = player.getAttributeInt("packet_decoder_child_id");
+        var widgetId = player.getAttributeInt("packet_decoder_widget_id");
+        var childId = player.getAttributeInt("packet_decoder_child_id");
         var slot = player.getAttributeInt("packet_decoder_slot");
         var id = player.getAttributeInt("packet_decoder_object_id");
         var x = player.getAttributeInt("packet_decoder_object_x");
@@ -338,7 +338,7 @@ public class UseWidgetDecoder extends PacketDecoder {
         if (mapObject == null) {
             return true;
         }
-        if (!player.getWidgetManager().hasWidget(widgetID)) {
+        if (!player.getWidgetManager().hasWidget(widgetId)) {
             return true;
         }
         var range = 1;
@@ -346,7 +346,7 @@ public class UseWidgetDecoder extends PacketDecoder {
             range = 0;
         }
         var canReach = !player.getMovement().isRouting() && player.withinDistanceC(mapObject, range);
-        if (mapObject.getID() == 5249) {
+        if (mapObject.getId() == 5249) {
             canReach = player.withinDistanceC(mapObject, range);
         }
         if (player.isLocked()) {
@@ -357,19 +357,19 @@ public class UseWidgetDecoder extends PacketDecoder {
         }
         player.getMovement().clear();
         player.setFaceTile(mapObject);
-        if (player.getController().widgetOnMapObjectHook(widgetID, childID, slot, mapObject)) {
+        if (player.getController().widgetOnMapObjectHook(widgetId, childId, slot, mapObject)) {
             return true;
         }
-        if (SkillContainer.widgetOnMapObjectHooks(player, widgetID, childID, slot, mapObject)) {
+        if (SkillContainer.widgetOnMapObjectHooks(player, widgetId, childId, slot, mapObject)) {
             return true;
         }
-        if (player.getFarming().widgetOnMapObjectHook(widgetID, childID, slot, mapObject)) {
+        if (player.getFarming().widgetOnMapObjectHook(widgetId, childId, slot, mapObject)) {
             return true;
         }
-        if (Runecrafting.widgetOnMapObjectHook(player, widgetID, childID, slot, mapObject)) {
+        if (Runecrafting.widgetOnMapObjectHook(player, widgetId, childId, slot, mapObject)) {
             return true;
         }
-        UseWidgetAction.doActionMapObject(player, widgetID, childID, slot, mapObject);
+        UseWidgetAction.doActionMapObject(player, widgetId, childId, slot, mapObject);
         return true;
     }
 }

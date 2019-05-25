@@ -1,40 +1,40 @@
 [
   {
-    "id": "NpcID.TOOL_LEPRECHAUN",
+    "id": "NpcId.TOOL_LEPRECHAUN",
     "direction": 1,
     "x": 2438,
     "y": 3419
   },
   {
-    "id": "NpcID.GADRIN",
+    "id": "NpcId.GADRIN",
     "direction": 3,
     "x": 2446,
     "y": 3426,
     "height": 1
   },
   {
-    "id": "NpcID.PRISSY_SCILLA",
+    "id": "NpcId.PRISSY_SCILLA",
     "direction": 1,
     "moveDistance": 2,
     "x": 2435,
     "y": 3411
   },
   {
-    "id": "NpcID.BOLONGO",
+    "id": "NpcId.BOLONGO",
     "direction": 1,
     "moveDistance": 2,
     "x": 2473,
     "y": 3446
   },
   {
-    "id": "NpcID.NIEVE",
+    "id": "NpcId.NIEVE",
     "direction": 1,
     "moveDistance": 2,
     "x": 2433,
     "y": 3421
   },
   {
-    "id": "NpcID.WIZARD_4399",
+    "id": "NpcId.WIZARD_4399",
     "direction": 1,
     "moveDistance": 2,
     "x": 2446,
@@ -42,62 +42,62 @@
     "height": 1
   },
   {
-    "id": "NpcID.GNOME_BANKER",
+    "id": "NpcId.GNOME_BANKER",
     "direction": 4,
     "x": 2443,
     "y": 3425,
     "height": 1
   },
   {
-    "id": "NpcID.GNOME_BANKER",
+    "id": "NpcId.GNOME_BANKER",
     "direction": 4,
     "x": 2443,
     "y": 3424,
     "height": 1
   },
   {
-    "id": "NpcID.GNOME_BANKER",
+    "id": "NpcId.GNOME_BANKER",
     "direction": 3,
     "x": 2448,
     "y": 3427,
     "height": 1
   },
   {
-    "id": "NpcID.GNOME_BANKER",
+    "id": "NpcId.GNOME_BANKER",
     "direction": 3,
     "x": 2448,
     "y": 3424,
     "height": 1
   },
   {
-    "id": "NpcID.GNOME",
+    "id": "NpcId.GNOME",
     "direction": 1,
     "moveDistance": 4,
     "x": 2480,
     "y": 3431
   },
   {
-    "id": "NpcID.GNOME",
+    "id": "NpcId.GNOME",
     "direction": 1,
     "moveDistance": 4,
     "x": 2479,
     "y": 3422
   },
   {
-    "id": "NpcID.GNOME",
+    "id": "NpcId.GNOME",
     "direction": 1,
     "moveDistance": 4,
     "x": 2470,
     "y": 3436
   },
   {
-    "id": "NpcID.BANKER",
+    "id": "NpcId.BANKER",
     "direction": 4,
     "x": 2447,
     "y": 9909
   },
   {
-    "id": "NpcID.BANKER_395",
+    "id": "NpcId.BANKER_395",
     "direction": 1,
     "x": 2479,
     "y": 9918

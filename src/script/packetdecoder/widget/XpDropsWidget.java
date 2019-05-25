@@ -6,11 +6,11 @@ import com.palidino.osrs.model.player.Skills;
 import com.palidino.osrs.model.player.XPDrops;
 
 public class XpDropsWidget {
-    public static void widget137(Player player, int index, int childID, int slot, int itemID) {
+    public static void widget137(Player player, int index, int childId, int slot, int itemId) {
         if (player.isLocked()) {
             return;
         }
-        switch (childID) {
+        switch (childId) {
         case 16:
             if (slot >= XPDrops.START_POINTS.length) {
                 break;
@@ -29,7 +29,7 @@ public class XpDropsWidget {
         case 32:
             player.getWidgetManager().closeKeyboardScript();
             player.getXPDrops().setStartPointToCurrentXP();
-            if (childID == 32) {
+            if (childId == 32) {
                 player.getXPDrops().setEndPointToNextLevel();
             } else {
                 player.getXPDrops().setEndPoint(-1);
@@ -38,7 +38,7 @@ public class XpDropsWidget {
         case 29:
         case 37:
             String typeName = "tracker";
-            if (childID == 37) {
+            if (childId == 37) {
                 typeName = "goal";
             }
             if (index == 5) {

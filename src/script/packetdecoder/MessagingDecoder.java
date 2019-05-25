@@ -54,9 +54,9 @@ public class MessagingDecoder extends PacketDecoder {
             }
         } else if (index == 8) {
             var username = stream.getString();
-            var rankID = stream.getUByte();
+            var rankId = stream.getUByte();
             var rank = 0;
-            switch (rankID) {
+            switch (rankId) {
             case 0:
                 rank = Clan.NOT_IN_CLAN;
                 break;

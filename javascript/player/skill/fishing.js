@@ -1,100 +1,100 @@
 var TOTAL_RESOURCES = 30;
-var DRAGON_HARPOON = new Item(ItemID.DRAGON_HARPOON, 1)
-var INFERNAL_HARPOON = new Item(ItemID.INFERNAL_HARPOON, 1);
-var UNCHARGED_INFERNAL_HARPOON = new Item(ItemID.INFERNAL_HARPOON_UNCHARGED, 1);
+var DRAGON_HARPOON = new Item(ItemId.DRAGON_HARPOON, 1)
+var INFERNAL_HARPOON = new Item(ItemId.INFERNAL_HARPOON, 1);
+var UNCHARGED_INFERNAL_HARPOON = new Item(ItemId.INFERNAL_HARPOON_UNCHARGED, 1);
 var FLYING_FISH_GRAPHIC = new Graphic(1387);
 
 var FLYING_FISH_ATTACHMENT = 0;
 
 var ENTRIES = Utils.toList(
     new SkillContainer.Entry().setLevel(1).setXP(10).setAnimation(621)
-        .setNpc(new SkillContainer.Model(0, NpcID.FISHING_SPOT_1514))
-        .setTool(new Item(ItemID.SMALL_FISHING_NET, 1))
-        .setCreate(new RandomItem(ItemID.RAW_SHRIMPS, 1))
-        .setPet(435165, ItemID.HERON)
+        .setNpc(new SkillContainer.Model(0, NpcId.FISHING_SPOT_1514))
+        .setTool(new Item(ItemId.SMALL_FISHING_NET, 1))
+        .setCreate(new RandomItem(ItemId.RAW_SHRIMPS, 1))
+        .setPet(435165, ItemId.HERON)
         .setClueChance(870330),
     new SkillContainer.Entry().setLevel(5).setXP(20).setAnimation(623)
-        .setNpc(new SkillContainer.Model(2, NpcID.FISHING_SPOT_1514))
-        .setTool(new Item(ItemID.FISHING_ROD, 1))
-        .setConsume(new RandomItem(ItemID.FISHING_BAIT, 1))
-        .setCreate(new RandomItem(ItemID.RAW_SARDINE, 1))
-        .setPet(528000, ItemID.HERON)
+        .setNpc(new SkillContainer.Model(2, NpcId.FISHING_SPOT_1514))
+        .setTool(new Item(ItemId.FISHING_ROD, 1))
+        .setConsume(new RandomItem(ItemId.FISHING_BAIT, 1))
+        .setCreate(new RandomItem(ItemId.RAW_SARDINE, 1))
+        .setPet(528000, ItemId.HERON)
         .setClueChance(1056000),
     new SkillContainer.Entry().setLevel(30).setXP(70).setAnimation(622)
-        .setNpc(new SkillContainer.Model(0, NpcID.FISHING_SPOT_1506))
-        .setTool(new Item(ItemID.FLY_FISHING_ROD, 1))
-        .setConsume(new RandomItem(ItemID.FEATHER, 1))
-        .setCreate(new RandomItem(ItemID.RAW_SALMON, 1))
-        .setPet(461808, ItemID.HERON)
+        .setNpc(new SkillContainer.Model(0, NpcId.FISHING_SPOT_1506))
+        .setTool(new Item(ItemId.FLY_FISHING_ROD, 1))
+        .setConsume(new RandomItem(ItemId.FEATHER, 1))
+        .setCreate(new RandomItem(ItemId.RAW_SALMON, 1))
+        .setPet(461808, ItemId.HERON)
         .setClueChance(923616),
     new SkillContainer.Entry().setLevel(25).setXP(60).setAnimation(623)
-        .setNpc(new SkillContainer.Model(2, NpcID.FISHING_SPOT_1506))
-        .setTool(new Item(ItemID.FISHING_ROD, 1))
-        .setConsume(new RandomItem(ItemID.FISHING_BAIT, 1))
-        .setCreate(new RandomItem(ItemID.RAW_PIKE, 1))
-        .setPet(305792, ItemID.HERON)
+        .setNpc(new SkillContainer.Model(2, NpcId.FISHING_SPOT_1506))
+        .setTool(new Item(ItemId.FISHING_ROD, 1))
+        .setConsume(new RandomItem(ItemId.FISHING_BAIT, 1))
+        .setCreate(new RandomItem(ItemId.RAW_PIKE, 1))
+        .setPet(305792, ItemId.HERON)
         .setClueChance(305792),
     new SkillContainer.Entry().setLevel(40).setXP(90).setAnimation(619)
-        .setNpc(new SkillContainer.Model(0, NpcID.FISHING_SPOT_1510))
-        .setTool(new Item(ItemID.LOBSTER_POT, 1))
-        .setCreate(new RandomItem(ItemID.RAW_LOBSTER, 1))
-        .setPet(116129, ItemID.HERON)
+        .setNpc(new SkillContainer.Model(0, NpcId.FISHING_SPOT_1510))
+        .setTool(new Item(ItemId.LOBSTER_POT, 1))
+        .setCreate(new RandomItem(ItemId.RAW_LOBSTER, 1))
+        .setPet(116129, ItemId.HERON)
         .setClueChance(116129),
     new SkillContainer.Entry().setLevel(50).setXP(100).setAnimation(618)
-        .setNpc(new SkillContainer.Model(2, NpcID.FISHING_SPOT_1510))
-        .setTool(new Item(ItemID.HARPOON, 1))
-        .setCreate(new RandomItem(ItemID.RAW_SWORDFISH, 1))
-        .setPet(128885, ItemID.HERON)
+        .setNpc(new SkillContainer.Model(2, NpcId.FISHING_SPOT_1510))
+        .setTool(new Item(ItemId.HARPOON, 1))
+        .setCreate(new RandomItem(ItemId.RAW_SWORDFISH, 1))
+        .setPet(128885, ItemId.HERON)
         .setClueChance(257770),
     new SkillContainer.Entry().setLevel(46).setXP(100).setAnimation(620)
-        .setNpc(new SkillContainer.Model(0, NpcID.FISHING_SPOT_1511))
-        .setTool(new Item(ItemID.BIG_FISHING_NET, 1))
-        .setCreate(new RandomItem(ItemID.RAW_BASS, 1))
-        .setPet(128885, ItemID.HERON)
+        .setNpc(new SkillContainer.Model(0, NpcId.FISHING_SPOT_1511))
+        .setTool(new Item(ItemId.BIG_FISHING_NET, 1))
+        .setCreate(new RandomItem(ItemId.RAW_BASS, 1))
+        .setPet(128885, ItemId.HERON)
         .setClueChance(1147827),
     new SkillContainer.Entry().setLevel(76).setXP(110).setAnimation(618)
-        .setNpc(new SkillContainer.Model(2, NpcID.FISHING_SPOT_1511),
-            new SkillContainer.Model(2, NpcID.FISHING_SPOT_1520))
-        .setTool(new Item(ItemID.HARPOON, 1))
-        .setCreate(new RandomItem(ItemID.RAW_SHARK, 1))
-        .setPet(82243, ItemID.HERON)
+        .setNpc(new SkillContainer.Model(2, NpcId.FISHING_SPOT_1511),
+            new SkillContainer.Model(2, NpcId.FISHING_SPOT_1520))
+        .setTool(new Item(ItemId.HARPOON, 1))
+        .setCreate(new RandomItem(ItemId.RAW_SHARK, 1))
+        .setPet(82243, ItemId.HERON)
         .setClueChance(82243),
     new SkillContainer.Entry().setLevel(62).setXP(120).setAnimation(621)
-        .setNpc(new SkillContainer.Model(0, NpcID.FISHING_SPOT_4316))
-        .setTool(new Item(ItemID.SMALL_FISHING_NET, 1))
-        .setCreate(new RandomItem(ItemID.RAW_MONKFISH, 1))
-        .setPet(138583, ItemID.HERON)
+        .setNpc(new SkillContainer.Model(0, NpcId.FISHING_SPOT_4316))
+        .setTool(new Item(ItemId.SMALL_FISHING_NET, 1))
+        .setCreate(new RandomItem(ItemId.RAW_MONKFISH, 1))
+        .setPet(138583, ItemId.HERON)
         .setClueChance(138583),
     new SkillContainer.Entry().setLevel(65).setXP(105).setAnimation(620)
-        .setNpc(new SkillContainer.Model(0, NpcID.FISHING_SPOT_4712))
-        .setTool(new Item(ItemID.BIG_FISHING_NET, 1))
-        .setCreate(new RandomItem(ItemID.RAW_KARAMBWAN, 1))
-        .setPet(170874, ItemID.HERON)
+        .setNpc(new SkillContainer.Model(0, NpcId.FISHING_SPOT_4712))
+        .setTool(new Item(ItemId.BIG_FISHING_NET, 1))
+        .setCreate(new RandomItem(ItemId.RAW_KARAMBWAN, 1))
+        .setPet(170874, ItemId.HERON)
         .setClueChance(170874),
     new SkillContainer.Entry().setLevel(85).setXP(130).setAnimation(619)
-        .setNpc(new SkillContainer.Model(0, NpcID.FISHING_SPOT_1536))
-        .setTool(new Item(ItemID.LOBSTER_POT, 1))
-        .setConsume(new RandomItem(ItemID.DARK_FISHING_BAIT, 1))
-        .setCreate(new RandomItem(ItemID.RAW_DARK_CRAB, 1))
-        .setPet(149434, ItemID.HERON)
+        .setNpc(new SkillContainer.Model(0, NpcId.FISHING_SPOT_1536))
+        .setTool(new Item(ItemId.LOBSTER_POT, 1))
+        .setConsume(new RandomItem(ItemId.DARK_FISHING_BAIT, 1))
+        .setCreate(new RandomItem(ItemId.RAW_DARK_CRAB, 1))
+        .setPet(149434, ItemId.HERON)
         .setClueChance(149434),
     new SkillContainer.Entry().setLevel(82).setXP(120).setAnimation(623)
-        .setNpc(new SkillContainer.Model(0, NpcID.FISHING_SPOT_6825))
-        .setTool(new Item(ItemID.FISHING_ROD, 1))
-        .setConsume(new RandomItem(ItemID.SANDWORMS, 1))
-        .setCreate(new RandomItem(ItemID.RAW_ANGLERFISH, 1))
-        .setPet(78649, ItemID.HERON)
+        .setNpc(new SkillContainer.Model(0, NpcId.FISHING_SPOT_6825))
+        .setTool(new Item(ItemId.FISHING_ROD, 1))
+        .setConsume(new RandomItem(ItemId.SANDWORMS, 1))
+        .setCreate(new RandomItem(ItemId.RAW_ANGLERFISH, 1))
+        .setPet(78649, ItemId.HERON)
         .setClueChance(78649),
     new SkillContainer.Entry().setLevel(82).setXP(26).setAnimation(621)
-        .setNpc(new SkillContainer.Model(0, NpcID.FISHING_SPOT_7730),
-            new SkillContainer.Model(0, NpcID.FISHING_SPOT_7731))
-        .setTool(new Item(ItemID.SMALL_FISHING_NET, 1))
-        .setCreate(new RandomItem(ItemID.MINNOW, 10, 14))
-        .setPet(977778, ItemID.HERON)
+        .setNpc(new SkillContainer.Model(0, NpcId.FISHING_SPOT_7730),
+            new SkillContainer.Model(0, NpcId.FISHING_SPOT_7731))
+        .setTool(new Item(ItemId.SMALL_FISHING_NET, 1))
+        .setCreate(new RandomItem(ItemId.MINNOW, 10, 14))
+        .setPet(977778, ItemId.HERON)
 );
 
 skill = new SkillContainer() {
-    getSkillID: function() {
+    getSkillId: function() {
         return Skills.FISHING;
     },
 
@@ -103,7 +103,7 @@ skill = new SkillContainer() {
     },
 
     getEventTick: function(player, event, npc, mapObject, entry) {
-        return entry.getCreate().getID() == ItemID.MINNOW ? 1 : 5;
+        return entry.getCreate().getId() == ItemId.MINNOW ? 1 : 5;
     },
 
     eventStartedHook: function(player, event, npc, mapObject, entry) {
@@ -117,20 +117,20 @@ skill = new SkillContainer() {
 
     createHook: function(player, item, npc, mapObject, entry) {
         var unusualChance = 256;
-        if (entry.getCreate().getID() == ItemID.MINNOW) {
+        if (entry.getCreate().getId() == ItemId.MINNOW) {
             unusualChance *= 5;
         }
-        if (player.getEquipment().wearingAccomplishmentCape(skill.getSkillID())) {
+        if (player.getEquipment().wearingAccomplishmentCape(skill.getSkillId())) {
             unusualChance /= 1.1;
         }
         if (Utils.randomE(unusualChance - entry.level) == 0) {
             player.getGameEncoder().sendMessage("<col=ff0000>You catch an unusual fish.</col>");
-            return new Item(ItemID.UNUSUAL_FISH, 1);
-        } else if (this.usingInfernalHarpoon(player, entry) && Cooking.getCook(entry.getCreate().getID()) != null
+            return new Item(ItemId.UNUSUAL_FISH, 1);
+        } else if (this.usingInfernalHarpoon(player, entry) && Cooking.getCook(entry.getCreate().getId()) != null
                 && Utils.randomE(3) == 0) {
             player.setGraphic(86, 100);
-            player.getSkills().addXP(Skills.COOKING, Cooking.getCook(entry.getCreate().getID()).getXP() / 2);
-            player.getCharges().degradeItem(ItemID.INFERNAL_HARPOON);
+            player.getSkills().addXP(Skills.COOKING, Cooking.getCook(entry.getCreate().getId()).getXP() / 2);
+            player.getCharges().degradeItem(ItemId.INFERNAL_HARPOON);
             return null;
         } else {
             amount = item.getAmount();
@@ -157,7 +157,7 @@ skill = new SkillContainer() {
     },
 
     animationHook: function(player, animation, npc, mapObject, entry) {
-        if (entry.getTool().getID() == ItemID.HARPOON) {
+        if (entry.getTool().getId() == ItemId.HARPOON) {
             if (this.usingInfernalHarpoon(player, entry) || this.usingUnchargedInfernalHarpoon(player, entry)) {
                 return 7402;
             } else if (this.usingDragonHarpoon(player, entry)) {
@@ -168,7 +168,7 @@ skill = new SkillContainer() {
     },
 
     toolHook: function(player, tool, npc, mapObject, entry) {
-        if (tool.getID() == ItemID.HARPOON) {
+        if (tool.getId() == ItemId.HARPOON) {
             if (this.usingInfernalHarpoon(player, entry)) {
                 return INFERNAL_HARPOON;
             } else if (this.usingUnchargedInfernalHarpoon(player, entry)) {
@@ -183,10 +183,10 @@ skill = new SkillContainer() {
     failedActionHook: function(player, event, npc, mapObject, entry) {
         if (event != null && event.getAttachment(FLYING_FISH_ATTACHMENT) == true) {
             npc.setGraphic(FLYING_FISH_GRAPHIC);
-            player.getInventory().deleteItem(entry.getCreate().getID(), 16 + Utils.randomI(10));
+            player.getInventory().deleteItem(entry.getCreate().getId(), 16 + Utils.randomI(10));
             return true;
         }
-        var power = player.getSkills().getLevel(skill.getSkillID()) + 8;
+        var power = player.getSkills().getLevel(skill.getSkillId()) + 8;
         var failure = entry.getLevel() + 2;
         if (player.inWildernessResourceArea()) {
             failure /= 2;
@@ -220,12 +220,12 @@ skill = new SkillContainer() {
     },
 
     actionSuccessHook: function(player, event, npc, mapObject, entry) {
-        if (entry.getCreate().getID() == ItemID.MINNOW && Utils.randomE(64) == 0) {
+        if (entry.getCreate().getId() == ItemId.MINNOW && Utils.randomE(64) == 0) {
             npc.setGraphic(FLYING_FISH_GRAPHIC);
             event.setAttachment(FLYING_FISH_ATTACHMENT, true);
         }
-        if (npc.getID() == NpcID.FISHING_SPOT_7730 || npc.getID() == NpcID.FISHING_SPOT_7731
-                || npc.getID() == NpcID.FISHING_SPOT_7732 || npc.getID() == NpcID.FISHING_SPOT_7733) {
+        if (npc.getId() == NpcId.FISHING_SPOT_7730 || npc.getId() == NpcId.FISHING_SPOT_7731
+                || npc.getId() == NpcId.FISHING_SPOT_7732 || npc.getId() == NpcId.FISHING_SPOT_7733) {
             return;
         }
         if (npc.getMaxHitpoints() == 0) {
@@ -243,30 +243,30 @@ skill = new SkillContainer() {
     },
 
     clueRolledHook: function(player, npc, mapObject, entry) {
-        var clueID = ItemID.CLUE_BOTTLE_EASY;
+        var clueId = ItemId.CLUE_BOTTLE_EASY;
         if (Utils.randomE(100) < 10) {
-            clueID = ItemID.CLUE_BOTTLE_ELITE;
+            clueId = ItemId.CLUE_BOTTLE_ELITE;
         } else if (Utils.randomE(100) < 20) {
-            clueID = ItemID.CLUE_BOTTLE_HARD;
+            clueId = ItemId.CLUE_BOTTLE_HARD;
         } else if (Utils.randomE(100) < 30) {
-            clueID = ItemID.CLUE_BOTTLE_MEDIUM;
+            clueId = ItemId.CLUE_BOTTLE_MEDIUM;
         }
-        player.getInventory().addOrDropItem(clueID, 1);
+        player.getInventory().addOrDropItem(clueId, 1);
     },
 
     npcOptionHook: function(player, index, npc) {
-        switch (npc.getID()) {
-        case NpcID.ROACHEY:
+        switch (npc.getId()) {
+        case NpcId.ROACHEY:
             if (index == 0) {
-                var unusualFishCount = player.getInventory().getCount(ItemID.UNUSUAL_FISH);
+                var unusualFishCount = player.getInventory().getCount(ItemId.UNUSUAL_FISH);
                 if (unusualFishCount == 0) {
                     player.getGameEncoder().sendMessage("You have no unusual fish to exchange.")
                     return true;
                 }
-                player.getInventory().deleteItem(ItemID.UNUSUAL_FISH, Item.MAX_AMOUNT);
-                player.getInventory().addOrDropItem(ItemID.COINS, 250000 * unusualFishCount);
+                player.getInventory().deleteItem(ItemId.UNUSUAL_FISH, Item.MAX_AMOUNT);
+                player.getInventory().addOrDropItem(ItemId.COINS, 250000 * unusualFishCount);
                 if (Utils.randomE(600 / unusualFishCount) == 0) {
-                    player.getInventory().addOrDropItem(ItemID.GOLDEN_TENCH, 1);
+                    player.getInventory().addOrDropItem(ItemId.GOLDEN_TENCH, 1);
                 }
             } else if (index == 2) {
                 player.openShop("skilling");
@@ -277,18 +277,18 @@ skill = new SkillContainer() {
     },
 
     usingDragonHarpoon: function(player, entry) {
-        return player.getSkills().getLevel(skill.getSkillID()) >= 61 && entry.usesTool(ItemID.HARPOON)
-                && player.carryingItem(ItemID.DRAGON_HARPOON);
+        return player.getSkills().getLevel(skill.getSkillId()) >= 61 && entry.usesTool(ItemId.HARPOON)
+                && player.carryingItem(ItemId.DRAGON_HARPOON);
     },
 
     usingInfernalHarpoon: function(player, entry) {
-        return player.getSkills().getLevel(skill.getSkillID()) >= 75 && entry.usesTool(ItemID.HARPOON)
-                && player.carryingItem(ItemID.INFERNAL_HARPOON);
+        return player.getSkills().getLevel(skill.getSkillId()) >= 75 && entry.usesTool(ItemId.HARPOON)
+                && player.carryingItem(ItemId.INFERNAL_HARPOON);
     },
 
     usingUnchargedInfernalHarpoon: function(player, entry) {
-        return player.getSkills().getLevel(skill.getSkillID()) >= 75 && entry.usesTool(ItemID.HARPOON)
-                && player.carryingItem(ItemID.INFERNAL_HARPOON);
+        return player.getSkills().getLevel(skill.getSkillId()) >= 75 && entry.usesTool(ItemId.HARPOON)
+                && player.carryingItem(ItemId.INFERNAL_HARPOON);
     },
 
     inFishingGuild: function(tile) {

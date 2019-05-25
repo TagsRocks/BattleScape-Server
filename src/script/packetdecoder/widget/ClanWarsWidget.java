@@ -4,13 +4,13 @@ import com.palidino.osrs.model.player.ClanWars;
 import com.palidino.osrs.model.player.Player;
 
 public class ClanWarsWidget {
-    public static void widget91(Player player, int index, int childID, int slot, int itemID) {
+    public static void widget91(Player player, int index, int childId, int slot, int itemId) {
         // Clan Wars 1
         if (player.isLocked()) {
             return;
         }
         ClanWars.Rule ruleBySlot = null;
-        switch (childID) {
+        switch (childId) {
         case 27:
             player.getClanWars().acceptRuleSelection();
             break;
@@ -23,8 +23,8 @@ public class ClanWarsWidget {
             player.getClanWars().changeRule(ClanWars.Rule.GAME_END, slot / 3);
             break;
         case 10:
-            int mapID = slot / 3;
-            if (ClanWars.Arena.get(mapID) == null || ClanWars.Arena.get(mapID).arenaTop.getX() == 0) {
+            int mapId = slot / 3;
+            if (ClanWars.Arena.get(mapId) == null || ClanWars.Arena.get(mapId).arenaTop.getX() == 0) {
                 player.getClanWars().setVarp92();
                 player.getGameEncoder().sendMessage("This option is currently disabled.");
                 break;
@@ -80,12 +80,12 @@ public class ClanWarsWidget {
         }
     }
 
-    public static void widget92(Player player, int index, int childID, int slot, int itemID) {
+    public static void widget92(Player player, int index, int childId, int slot, int itemId) {
         // Clan Wars 2
         if (player.isLocked()) {
             return;
         }
-        switch (childID) {
+        switch (childId) {
         case 6:
             player.getClanWars().acceptRuleConfirmation();
             break;

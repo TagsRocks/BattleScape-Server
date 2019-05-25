@@ -3,14 +3,14 @@
   "exchangePriceMultiplier": 1.5,
   "ceilPrice": true,
   "items": [
-    { "id": "ItemID.ROYAL_SEED_POD", "price": 250000 },
-    { "id": "ItemID.DRAGON_SCIMITAR" },
-    { "id": "ItemID.ANCIENT_MACE", "price": 20000 },
-    { "id": "ItemID.BARRELCHEST_ANCHOR", "price": 290000 },
-    { "id": "ItemID.MAGIC_SHORTBOW" },
-    { "id": "ItemID.RUNE_ARROW" },
-    { "id": "ItemID.RUNITE_BOLTS" },
-    { "id": "ItemID.ANCIENT_STAFF" },
-    { "id": "ItemID.BLOOD_RUNE" }
+    { "id": "ItemId.ROYAL_SEED_POD", "price": 250000 },
+    { "id": "ItemId.DRAGON_SCIMITAR" },
+    { "id": "ItemId.ANCIENT_MACE", "price": 20000 },
+    { "id": "ItemId.BARRELCHEST_ANCHOR", "price": 290000 },
+    { "id": "ItemId.MAGIC_SHORTBOW" },
+    { "id": "ItemId.RUNE_ARROW" },
+    { "id": "ItemId.RUNITE_BOLTS" },
+    { "id": "ItemId.ANCIENT_STAFF" },
+    { "id": "ItemId.BLOOD_RUNE" }
   ]
 }

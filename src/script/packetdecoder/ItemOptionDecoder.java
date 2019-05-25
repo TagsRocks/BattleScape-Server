@@ -17,42 +17,42 @@ public class ItemOptionDecoder extends PacketDecoder {
     public void execute(Player player, int index, int size, Stream stream) {
         var widgetHash = -1;
         var slot = -1;
-        var itemID = -1;
+        var itemId = -1;
         if (index == 0) {
-            itemID = stream.getUShortLE();
+            itemId = stream.getUShortLE();
             widgetHash = stream.getIntV2();
             slot = stream.getUShort();
         } else if (index == 1) {
-            itemID = stream.getUShort128();
+            itemId = stream.getUShort128();
             widgetHash = stream.getIntV3();
             slot = stream.getUShortLE128();
         } else if (index == 2) {
             widgetHash = stream.getIntLE();
             slot = stream.getUShortLE128();
-            itemID = stream.getUShortLE128();
+            itemId = stream.getUShortLE128();
         } else if (index == 3) {
-            itemID = stream.getUShortLE128();
+            itemId = stream.getUShortLE128();
             widgetHash = stream.getInt();
             slot = stream.getUShortLE128();
         } else if (index == 4) {
             widgetHash = stream.getInt();
             slot = stream.getUShort();
-            itemID = stream.getUShort();
+            itemId = stream.getUShort();
         } else if (index == 10) {
-            itemID = stream.getUShortLE128();
+            itemId = stream.getUShortLE128();
             widgetHash = stream.getIntV3();
             slot = stream.getUShortLE();
         }
-        var widgetID = widgetHash >> 16;
-        var childID = widgetHash & 65535;
+        var widgetId = widgetHash >> 16;
+        var childId = widgetHash & 65535;
         if (slot == 65535) {
             slot = -1;
         }
-        if (itemID == 65535) {
-            itemID = -1;
+        if (itemId == 65535) {
+            itemId = -1;
         }
-        var message = "[ItemOption(" + index + ")] widgetID=" + widgetID + "; childID=" + childID + "; slot=" + slot
-                + "; itemID=" + itemID;
+        var message = "[ItemOption(" + index + ")] widgetId=" + widgetId + "; childId=" + childId + "; slot=" + slot
+                + "; itemId=" + itemId;
         if (player.getRights() == Player.RIGHTS_ADMIN) {
             Logger.println(message);
         }
@@ -65,18 +65,18 @@ public class ItemOptionDecoder extends PacketDecoder {
         if (player.getMovement().isViewing()) {
             return;
         }
-        if (!player.getWidgetManager().hasWidget(widgetID)) {
+        if (!player.getWidgetManager().hasWidget(widgetId)) {
             return;
         }
         index = index >= 5 ? index - 5 : index;
         player.clearIdleTime();
-        AchievementDiary.widgetHooks(player, index, widgetID, childID, slot, itemID);
-        if (player.getController().widgetHook(index, widgetID, childID, slot, itemID)) {
+        AchievementDiary.widgetHooks(player, index, widgetId, childId, slot, itemId);
+        if (player.getController().widgetHook(index, widgetId, childId, slot, itemId)) {
             return;
         }
-        if (SkillContainer.widgetHooks(player, index, widgetID, childID, slot, itemID)) {
+        if (SkillContainer.widgetHooks(player, index, widgetId, childId, slot, itemId)) {
             return;
         }
-        WidgetDecoder.executeAction(player, index, widgetID, childID, slot, itemID);
+        WidgetDecoder.executeAction(player, index, widgetId, childId, slot, itemId);
     }
 }

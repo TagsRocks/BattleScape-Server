@@ -1,20 +1,20 @@
 package script.packetdecoder.widget;
 
-import com.palidino.osrs.io.cache.ItemID;
-import com.palidino.osrs.io.cache.VarpID;
+import com.palidino.osrs.io.cache.ItemId;
+import com.palidino.osrs.io.cache.varpId;
 import com.palidino.osrs.io.cache.WidgetChild;
-import com.palidino.osrs.io.cache.WidgetID;
+import com.palidino.osrs.io.cache.WidgetId;
 import com.palidino.osrs.model.player.Magic;
 import com.palidino.osrs.model.player.Player;
 
 public class CombatOptionsWidget {
-    public static void widget593(Player player, int index, int childID, int slot, int itemID) {
-        switch (childID) {
+    public static void widget593(Player player, int index, int childId, int slot, int itemId) {
+        switch (childId) {
         case 3:
         case 7:
         case 11:
         case 15:
-            player.getCombat().setAttackStyle((childID - 3) / 4);
+            player.getCombat().setAttackStyle((childId - 3) / 4);
             break;
         case 20:
         case 25:
@@ -23,55 +23,55 @@ public class CombatOptionsWidget {
                     || player.getMagic().getSpellBook() == Magic.ARCEUUS_MAGIC) {
                 player.getGameEncoder().sendMessage("You can't autocast this spellbook.");
                 return;
-            } else if (player.getEquipment().getWeaponID() == ItemID.TRIDENT_OF_THE_SEAS_FULL
-                    || player.getEquipment().getWeaponID() == ItemID.TRIDENT_OF_THE_SEAS
-                    || player.getEquipment().getWeaponID() == ItemID.UNCHARGED_TRIDENT
-                    || player.getEquipment().getWeaponID() == ItemID.TRIDENT_OF_THE_SEAS_E
-                    || player.getEquipment().getWeaponID() == ItemID.UNCHARGED_TRIDENT_E
-                    || player.getEquipment().getWeaponID() == ItemID.TRIDENT_OF_THE_SWAMP
-                    || player.getEquipment().getWeaponID() == ItemID.UNCHARGED_TOXIC_TRIDENT
-                    || player.getEquipment().getWeaponID() == ItemID.TRIDENT_OF_THE_SWAMP_E
-                    || player.getEquipment().getWeaponID() == ItemID.UNCHARGED_TOXIC_TRIDENT_E
-                    || player.getEquipment().getWeaponID() == ItemID.SANGUINESTI_STAFF
-                    || player.getEquipment().getWeaponID() == ItemID.SANGUINESTI_STAFF_UNCHARGED) {
+            } else if (player.getEquipment().getWeaponId() == ItemId.TRIDENT_OF_THE_SEAS_FULL
+                    || player.getEquipment().getWeaponId() == ItemId.TRIDENT_OF_THE_SEAS
+                    || player.getEquipment().getWeaponId() == ItemId.UNCHARGED_TRIDENT
+                    || player.getEquipment().getWeaponId() == ItemId.TRIDENT_OF_THE_SEAS_E
+                    || player.getEquipment().getWeaponId() == ItemId.UNCHARGED_TRIDENT_E
+                    || player.getEquipment().getWeaponId() == ItemId.TRIDENT_OF_THE_SWAMP
+                    || player.getEquipment().getWeaponId() == ItemId.UNCHARGED_TOXIC_TRIDENT
+                    || player.getEquipment().getWeaponId() == ItemId.TRIDENT_OF_THE_SWAMP_E
+                    || player.getEquipment().getWeaponId() == ItemId.UNCHARGED_TOXIC_TRIDENT_E
+                    || player.getEquipment().getWeaponId() == ItemId.SANGUINESTI_STAFF
+                    || player.getEquipment().getWeaponId() == ItemId.SANGUINESTI_STAFF_UNCHARGED) {
                 player.getGameEncoder().sendMessage("This staff can't autocast spells.");
                 return;
             }
             if (player.getMagic().getSpellBook() == Magic.ANCIENT_MAGIC) {
-                if (player.getEquipment().getWeaponID() == ItemID.ANCIENT_STAFF
-                        || player.getEquipment().getWeaponID() == ItemID.ANCIENT_STAFF_20431
-                        || player.getEquipment().getWeaponID() == ItemID.MASTER_WAND
-                        || player.getEquipment().getWeaponID() == ItemID.MASTER_WAND_20560
-                        || player.getEquipment().getWeaponID() == ItemID.KODAI_WAND
+                if (player.getEquipment().getWeaponId() == ItemId.ANCIENT_STAFF
+                        || player.getEquipment().getWeaponId() == ItemId.ANCIENT_STAFF_20431
+                        || player.getEquipment().getWeaponId() == ItemId.MASTER_WAND
+                        || player.getEquipment().getWeaponId() == ItemId.MASTER_WAND_20560
+                        || player.getEquipment().getWeaponId() == ItemId.KODAI_WAND
                         || player.getEquipment().wearingFullAhrims()
-                                && player.getEquipment().getNeckID() == ItemID.AMULET_OF_THE_DAMNED_FULL
-                        || player.getEquipment().getWeaponID() == ItemID.ZURIELS_STAFF_32262
-                        || player.getEquipment().getWeaponID() == ItemID.ZURIELS_STAFF_DEG_32269
-                        || player.getEquipment().getWeaponID() == ItemID.CORRUPT_ZURIELS_STAFF_32278
-                        || player.getEquipment().getWeaponID() == ItemID.C_ZURIELS_STAFF_DEG_32285) {
-                    varpValue = ItemID.ANCIENT_STAFF;
+                                && player.getEquipment().getNeckId() == ItemId.AMULET_OF_THE_DAMNED_FULL
+                        || player.getEquipment().getWeaponId() == ItemId.ZURIELS_STAFF_32262
+                        || player.getEquipment().getWeaponId() == ItemId.ZURIELS_STAFF_DEG_32269
+                        || player.getEquipment().getWeaponId() == ItemId.CORRUPT_ZURIELS_STAFF_32278
+                        || player.getEquipment().getWeaponId() == ItemId.C_ZURIELS_STAFF_DEG_32285) {
+                    varpValue = ItemId.ANCIENT_STAFF;
                 } else {
                     player.getGameEncoder().sendMessage("This staff can't autocast Ancient Magicks.");
                     return;
                 }
             } else if (player.getMagic().getSpellBook() == Magic.NORMAL_MAGIC) {
-                if (player.getEquipment().getWeaponID() == ItemID.IBANS_STAFF) {
-                    varpValue = ItemID.IBANS_STAFF;
-                } else if (player.getEquipment().getWeaponID() == ItemID.SLAYERS_STAFF
-                        || player.getEquipment().getWeaponID() == ItemID.SLAYERS_STAFF_E) {
-                    varpValue = ItemID.SLAYERS_STAFF;
-                } else if (player.getEquipment().getWeaponID() == ItemID.STAFF_OF_THE_DEAD
-                        || player.getEquipment().getWeaponID() == ItemID.TOXIC_STAFF_UNCHARGED
-                        || player.getEquipment().getWeaponID() == ItemID.TOXIC_STAFF_OF_THE_DEAD) {
-                    varpValue = ItemID.STAFF_OF_THE_DEAD;
-                } else if (player.getEquipment().getWeaponID() == ItemID.STAFF_OF_LIGHT) {
-                    varpValue = ItemID.STAFF_OF_LIGHT;
+                if (player.getEquipment().getWeaponId() == ItemId.IBANS_STAFF) {
+                    varpValue = ItemId.IBANS_STAFF;
+                } else if (player.getEquipment().getWeaponId() == ItemId.SLAYERS_STAFF
+                        || player.getEquipment().getWeaponId() == ItemId.SLAYERS_STAFF_E) {
+                    varpValue = ItemId.SLAYERS_STAFF;
+                } else if (player.getEquipment().getWeaponId() == ItemId.STAFF_OF_THE_DEAD
+                        || player.getEquipment().getWeaponId() == ItemId.TOXIC_STAFF_UNCHARGED
+                        || player.getEquipment().getWeaponId() == ItemId.TOXIC_STAFF_OF_THE_DEAD) {
+                    varpValue = ItemId.STAFF_OF_THE_DEAD;
+                } else if (player.getEquipment().getWeaponId() == ItemId.STAFF_OF_LIGHT) {
+                    varpValue = ItemId.STAFF_OF_LIGHT;
                 }
             }
-            player.getGameEncoder().setVarp(VarpID.SPELL_SELECT_WEAPON, varpValue);
-            player.getWidgetManager().sendWidget(WidgetChild.ViewportContainer.COMBAT, WidgetID.SPELL_SELECT);
-            player.getGameEncoder().sendWidgetSettings(WidgetID.SPELL_SELECT, 1, 0, 52, 2);
-            player.putAttribute("magic_defensive", childID == 20);
+            player.getGameEncoder().setVarp(varpId.SPELL_SELECT_WEAPON, varpValue);
+            player.getWidgetManager().sendWidget(WidgetChild.ViewportContainer.COMBAT, WidgetId.SPELL_SELECT);
+            player.getGameEncoder().sendWidgetSettings(WidgetId.SPELL_SELECT, 1, 0, 52, 2);
+            player.putAttribute("magic_defensive", childId == 20);
             break;
         case 29:
             player.getCombat().setAutoRetaliate(!player.getCombat().getAutoRetaliate());

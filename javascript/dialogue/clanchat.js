@@ -20,7 +20,7 @@ entries.add(obj1);
 obj1.setTextContinue(continueLine, Utils.toStringArray(lines, true), Utils.toStringArray(actions, true));
 
 instance = new DialogueScript() {
-    execute: function(player, index, childID, slot) {
+    execute: function(player, index, childId, slot) {
         if (player.isLocked()) {
             return;
         }
@@ -31,17 +31,17 @@ instance = new DialogueScript() {
                 if (!player.isGameModeGroupIronman()) {
                     return;
                 }
-                player.getWidgetManager().sendInteractiveOverlay(WidgetID.SLAYER_PARTNER);
+                player.getWidgetManager().sendInteractiveOverlay(WidgetId.SLAYER_PARTNER);
                 player.putAttribute("clan_chat_usernames", player.getMessaging().getClanChatUsermames());
-                player.getGameEncoder().sendWidgetText(WidgetID.SLAYER_PARTNER, 7, "Update Group");
+                player.getGameEncoder().sendWidgetText(WidgetId.SLAYER_PARTNER, 7, "Update Group");
                 if (!player.getMessaging().isClanChatOwner()
                         || player.getMessaging().getClanChatUsers() == null) {
-                    player.getGameEncoder().sendWidgetText(WidgetID.SLAYER_PARTNER, 4, "Current Group Members:<br>"
+                    player.getGameEncoder().sendWidgetText(WidgetId.SLAYER_PARTNER, 4, "Current Group Members:<br>"
                             + player.getGroupIronmanUsernames());
                 } else {
-                    player.getGameEncoder().sendWidgetText(WidgetID.SLAYER_PARTNER, 4, "Update Group Members to:<br>"
+                    player.getGameEncoder().sendWidgetText(WidgetId.SLAYER_PARTNER, 4, "Update Group Members to:<br>"
                             + player.getAttribute("clan_chat_usernames"));
-                    player.getGameEncoder().sendWidgetText(WidgetID.SLAYER_PARTNER, 5, "Current Group Members:<br>"
+                    player.getGameEncoder().sendWidgetText(WidgetId.SLAYER_PARTNER, 5, "Current Group Members:<br>"
                             + player.getGroupIronmanUsernames());
                 }
             }

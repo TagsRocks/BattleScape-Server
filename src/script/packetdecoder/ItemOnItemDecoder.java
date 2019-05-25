@@ -18,22 +18,22 @@ public class ItemOnItemDecoder extends PacketDecoder {
         var useWidgetHash = stream.getIntV2();
         var onWidgetHash = stream.getIntV3();
         var useSlot = stream.getUShortLE128();
-        var useItemID = stream.getUShortLE();
+        var useItemId = stream.getUShortLE();
         var onSlot = stream.getUShortLE();
-        var onItemID = stream.getUShortLE128();
-        var useWidgetID = useWidgetHash >> 16;
-        var useChildID = useWidgetHash & 65535;
-        var onWidgetID = onWidgetHash >> 16;
-        var onChildID = onWidgetHash & 65535;
+        var onItemId = stream.getUShortLE128();
+        var useWidgetId = useWidgetHash >> 16;
+        var useChildId = useWidgetHash & 65535;
+        var onWidgetId = onWidgetHash >> 16;
+        var onChildId = onWidgetHash & 65535;
         if (useSlot == 65535) {
             useSlot = -1;
         }
         if (onSlot == 65535) {
             onSlot = -1;
         }
-        var message = "[ItemOnItem] useWidgetID=" + useWidgetID + "; useChildID=" + useChildID + "; onWidgetID="
-                + onWidgetID + "; onChildID=" + onChildID + "; useSlot=" + useSlot + "; onSlot=" + onSlot
-                + "; useItemID=" + useItemID + "; onItemID=" + onItemID;
+        var message = "[ItemOnItem] useWidgetId=" + useWidgetId + "; useChildId=" + useChildId + "; onWidgetId="
+                + onWidgetId + "; onChildId=" + onChildId + "; useSlot=" + useSlot + "; onSlot=" + onSlot
+                + "; useItemId=" + useItemId + "; onItemId=" + onItemId;
         if (player.getRights() == Player.RIGHTS_ADMIN) {
             Logger.println(message);
         }
@@ -46,22 +46,22 @@ public class ItemOnItemDecoder extends PacketDecoder {
         if (player.getMovement().isViewing()) {
             return;
         }
-        if (!player.getWidgetManager().hasWidget(useWidgetID)) {
+        if (!player.getWidgetManager().hasWidget(useWidgetId)) {
             return;
         }
-        if (!player.getWidgetManager().hasWidget(onWidgetID)) {
+        if (!player.getWidgetManager().hasWidget(onWidgetId)) {
             return;
         }
         player.clearIdleTime();
-        if (player.getController().itemOnItemHook(useWidgetID, useChildID, onWidgetID, onChildID, useSlot, onSlot,
-                useItemID, onItemID)) {
+        if (player.getController().itemOnItemHook(useWidgetId, useChildId, onWidgetId, onChildId, useSlot, onSlot,
+                useItemId, onItemId)) {
             return;
         }
-        if (SkillContainer.widgetOnWidgetHooks(player, useWidgetID, useChildID, onWidgetID, onChildID, useSlot,
-                useItemID, onSlot, onItemID)) {
+        if (SkillContainer.widgetOnWidgetHooks(player, useWidgetId, useChildId, onWidgetId, onChildId, useSlot,
+                useItemId, onSlot, onItemId)) {
             return;
         }
-        ItemOnItemAction.doAction(player, useWidgetID, useChildID, onWidgetID, onChildID, useSlot, onSlot, useItemID,
-                onItemID);
+        ItemOnItemAction.doAction(player, useWidgetId, useChildId, onWidgetId, onChildId, useSlot, onSlot, useItemId,
+                onItemId);
     }
 }

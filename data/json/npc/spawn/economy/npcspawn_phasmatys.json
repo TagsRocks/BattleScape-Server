@@ -1,6 +1,6 @@
 [
   {
-    "id": "NpcID.TOOL_LEPRECHAUN",
+    "id": "NpcId.TOOL_LEPRECHAUN",
     "direction": 4,
     "x": 3597,
     "y": 3522

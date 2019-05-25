@@ -1,21 +1,21 @@
 package script.packetdecoder.widget;
 
-import com.palidino.osrs.io.cache.WidgetID;
+import com.palidino.osrs.io.cache.WidgetId;
 import com.palidino.osrs.model.player.Player;
 
 public class OptionsWidget {
-    public static void widget261(Player player, int index, int childID, int slot, int itemID) {
+    public static void widget261(Player player, int index, int childId, int slot, int itemId) {
         // Tab
-        if (childID >= 18 && childID <= 21) {
-            player.getOptions().setBrightness(childID - 18 + 1);
-        } else if (childID >= 45 && childID <= 49) {
-            player.getOptions().setMusicVolume(49 - childID);
-        } else if (childID >= 51 && childID <= 55) {
-            player.getOptions().setSoundEffectVolume(55 - childID);
-        } else if (childID >= 57 && childID <= 61) {
-            player.getOptions().setAreaSoundVolume(61 - childID);
+        if (childId >= 18 && childId <= 21) {
+            player.getOptions().setBrightness(childId - 18 + 1);
+        } else if (childId >= 45 && childId <= 49) {
+            player.getOptions().setMusicVolume(49 - childId);
+        } else if (childId >= 51 && childId <= 55) {
+            player.getOptions().setSoundEffectVolume(55 - childId);
+        } else if (childId >= 57 && childId <= 61) {
+            player.getOptions().setAreaSoundVolume(61 - childId);
         }
-        switch (childID) {
+        switch (childId) {
         case 5:
             player.getOptions().setMouseWheelZoom(!player.getOptions().getMouseWheelZoom());
             break;
@@ -23,7 +23,7 @@ public class OptionsWidget {
             if (player.isLocked()) {
                 break;
             }
-            player.getWidgetManager().sendInteractiveOverlay(WidgetID.ADVANCED_OPTIONS);
+            player.getWidgetManager().sendInteractiveOverlay(WidgetId.ADVANCED_OPTIONS);
             break;
         case 63:
             player.getOptions().setChatEffects(!player.getOptions().getChatEffects());
@@ -76,12 +76,12 @@ public class OptionsWidget {
         }
     }
 
-    public static void widget60(Player player, int index, int childID, int slot, int itemID) {
+    public static void widget60(Player player, int index, int childId, int slot, int itemId) {
         // Advanced settings
         if (player.isLocked()) {
             return;
         }
-        switch (childID) {
+        switch (childId) {
         case 4:
             player.getOptions().setScrollbarLeft(!player.getOptions().getScrollbarLeft());
             break;

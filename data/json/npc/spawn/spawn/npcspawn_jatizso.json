@@ -1,116 +1,116 @@
 [
   {
-    "id": "NpcID.WIZARD_4399",
+    "id": "NpcId.WIZARD_4399",
     "direction": 1,
     "x": 2418,
     "y": 3803
   },
   {
-    "id": "NpcID.MINER_1993",
+    "id": "NpcId.MINER_1993",
     "direction": 1,
     "moveDistance": 4,
     "x": 2413,
     "y": 3805
   },
   {
-    "id": "NpcID.LENSA",
+    "id": "NpcId.LENSA",
     "direction": 1,
     "moveDistance": 4,
     "x": 2411,
     "y": 3807
   },
   {
-    "id": "NpcID.THORKEL_SILKBEARD",
+    "id": "NpcId.THORKEL_SILKBEARD",
     "direction": 1,
     "moveDistance": 4,
     "x": 2409,
     "y": 3803
   },
   {
-    "id": "NpcID.KING_GJUKI_SORVOTT_IV",
+    "id": "NpcId.KING_GJUKI_SORVOTT_IV",
     "direction": 1,
     "moveDistance": 4,
     "x": 2407,
     "y": 3802
   },
   {
-    "id": "NpcID.HRH_HRAFN",
+    "id": "NpcId.HRH_HRAFN",
     "direction": 1,
     "moveDistance": 4,
     "x": 2406,
     "y": 3802
   },
   {
-    "id": "NpcID.ERIC_1997",
+    "id": "NpcId.ERIC_1997",
     "direction": 1,
     "moveDistance": 4,
     "x": 2405,
     "y": 3808
   },
   {
-    "id": "NpcID.KEEPA_KETTILON",
+    "id": "NpcId.KEEPA_KETTILON",
     "direction": 1,
     "moveDistance": 4,
     "x": 2417,
     "y": 3815
   },
   {
-    "id": "NpcID.FLOSI_DALKSSON",
+    "id": "NpcId.FLOSI_DALKSSON",
     "direction": 1,
     "moveDistance": 4,
     "x": 2417,
     "y": 3813
   },
   {
-    "id": "NpcID.BRENDT",
+    "id": "NpcId.BRENDT",
     "direction": 1,
     "moveDistance": 4,
     "x": 2409,
     "y": 3814
   },
   {
-    "id": "NpcID.GRUNDT",
+    "id": "NpcId.GRUNDT",
     "direction": 1,
     "moveDistance": 4,
     "x": 2406,
     "y": 3815
   },
   {
-    "id": "NpcID.MINER_1993",
+    "id": "NpcId.MINER_1993",
     "direction": 1,
     "moveDistance": 4,
     "x": 2414,
     "y": 3820
   },
   {
-    "id": "NpcID.MAGNUS_GRAM",
+    "id": "NpcId.MAGNUS_GRAM",
     "direction": 6,
     "x": 2416,
     "y": 3799
   },
   {
-    "id": "NpcID.RAUM_URDA_STEIN",
+    "id": "NpcId.RAUM_URDA_STEIN",
     "direction": 1,
     "moveDistance": 4,
     "x": 2396,
     "y": 3797
   },
   {
-    "id": "NpcID.HRING_HRING",
+    "id": "NpcId.HRING_HRING",
     "direction": 1,
     "moveDistance": 4,
     "x": 2398,
     "y": 3804
   },
   {
-    "id": "NpcID.SKULI_MYRKA",
+    "id": "NpcId.SKULI_MYRKA",
     "direction": 1,
     "moveDistance": 4,
     "x": 2398,
     "y": 3797
   },
   {
-    "id": "NpcID.MINER_1993",
+    "id": "NpcId.MINER_1993",
     "direction": 1,
     "moveDistance": 4,
     "x": 2392,

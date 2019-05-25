@@ -1,124 +1,124 @@
 [
   {
-    "id": "NpcID.DANTAERA",
+    "id": "NpcId.DANTAERA",
     "direction": 1,
     "moveDistance": 2,
     "x": 2807,
     "y": 3463
   },
   {
-    "id": "NpcID.ELLENA",
+    "id": "NpcId.ELLENA",
     "direction": 1,
     "moveDistance": 2,
     "x": 2859,
     "y": 3431
   },
   {
-    "id": "NpcID.BANKER",
+    "id": "NpcId.BANKER",
     "direction": 1,
     "x": 2807,
     "y": 3443
   },
   {
-    "id": "NpcID.BANKER",
+    "id": "NpcId.BANKER",
     "direction": 1,
     "x": 2810,
     "y": 3443
   },
   {
-    "id": "NpcID.BANKER_395",
+    "id": "NpcId.BANKER_395",
     "direction": 1,
     "x": 2811,
     "y": 3443
   },
   {
-    "id": "NpcID.BANKER_395",
+    "id": "NpcId.BANKER_395",
     "direction": 1,
     "x": 2809,
     "y": 3443
   },
   {
-    "id": "NpcID.ARHEIN",
+    "id": "NpcId.ARHEIN",
     "direction": 4,
     "x": 2803,
     "y": 3430
   },
   {
-    "id": "NpcID.TRADER_CREWMEMBER_1331",
+    "id": "NpcId.TRADER_CREWMEMBER_1331",
     "direction": 1,
     "x": 2797,
     "y": 3415
   },
   {
-    "id": "NpcID.TRADER_CREWMEMBER_1334",
+    "id": "NpcId.TRADER_CREWMEMBER_1334",
     "direction": 1,
     "moveDistance": 4,
     "x": 2799,
     "y": 3414
   },
   {
-    "id": "NpcID.MAN_2_3078",
+    "id": "NpcId.MAN_2_3078",
     "direction": 1,
     "moveDistance": 4,
     "x": 2804,
     "y": 3425
   },
   {
-    "id": "NpcID.MAN_2_3078",
+    "id": "NpcId.MAN_2_3078",
     "direction": 1,
     "moveDistance": 4,
     "x": 2805,
     "y": 3433
   },
   {
-    "id": "NpcID.CANDLE_MAKER",
+    "id": "NpcId.CANDLE_MAKER",
     "direction": 1,
     "moveDistance": 2,
     "x": 2799,
     "y": 3439
   },
   {
-    "id": "NpcID.PERDU",
+    "id": "NpcId.PERDU",
     "direction": 1,
     "x": 2808,
     "y": 3454
   },
   {
-    "id": "NpcID.VANESSA",
+    "id": "NpcId.VANESSA",
     "direction": 1,
     "moveDistance": 2,
     "x": 2820,
     "y": 3461
   },
   {
-    "id": "NpcID.CALEB",
+    "id": "NpcId.CALEB",
     "direction": 1,
     "moveDistance": 4,
     "x": 2816,
     "y": 3452
   },
   {
-    "id": "NpcID.WOMAN_2_3084",
+    "id": "NpcId.WOMAN_2_3084",
     "direction": 1,
     "moveDistance": 4,
     "x": 2820,
     "y": 3441
   },
   {
-    "id": "NpcID.HARRY",
+    "id": "NpcId.HARRY",
     "direction": 1,
     "moveDistance": 2,
     "x": 2834,
     "y": 3443
   },
   {
-    "id": "NpcID.TOOL_LEPRECHAUN",
+    "id": "NpcId.TOOL_LEPRECHAUN",
     "direction": 1,
     "x": 2856,
     "y": 3435
   },
   {
-    "id": "NpcID.TOOL_LEPRECHAUN",
+    "id": "NpcId.TOOL_LEPRECHAUN",
     "direction": 3,
     "x": 2815,
     "y": 3466

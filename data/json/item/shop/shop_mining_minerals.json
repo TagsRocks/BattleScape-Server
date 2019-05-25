@@ -2,14 +2,14 @@
   "name": "Mining Guild Mineral Exchange",
   "currency": 21341,
   "items": [
-    { "id": "ItemID.MINING_GLOVES", "price": 60 },
-    { "id": "ItemID.SUPERIOR_MINING_GLOVES", "price": 120 },
+    { "id": "ItemId.MINING_GLOVES", "price": 60 },
+    { "id": "ItemId.SUPERIOR_MINING_GLOVES", "price": 120 },
     {
-      "id": "ItemID.EXPERT_MINING_GLOVES",
+      "id": "ItemId.EXPERT_MINING_GLOVES",
       "price": 60,
       "costItems": [
-        [ { "id": "ItemID.MINING_GLOVES", "amount": 1 } ],
-        [ { "id": "ItemID.SUPERIOR_MINING_GLOVES", "amount": 1 } ]
+        [ { "id": "ItemId.MINING_GLOVES", "amount": 1 } ],
+        [ { "id": "ItemId.SUPERIOR_MINING_GLOVES", "amount": 1 } ]
       ]
     }
   ]

@@ -1,18 +1,18 @@
 package script.packetdecoder.widget;
 
-import com.palidino.osrs.io.cache.ItemID;
+import com.palidino.osrs.io.cache.ItemId;
 import com.palidino.osrs.model.Tile;
 import com.palidino.osrs.model.player.Equipment;
 import com.palidino.osrs.model.player.Magic;
 import com.palidino.osrs.model.player.Player;
 
 public class EquipmentWidget {
-    public static void widget387(Player player, int index, int childID, int slot, int itemID) {
+    public static void widget387(Player player, int index, int childId, int slot, int itemId) {
         // Tab
         if (player.isLocked()) {
             return;
         }
-        int equipSlot = childID - 6;
+        int equipSlot = childId - 6;
         if (equipSlot >= Equipment.Slot.LEG.ordinal() - 1) {
             equipSlot += equipSlot >= Equipment.Slot.RING.ordinal() - 3 ? 3
                     : equipSlot >= Equipment.Slot.HAND.ordinal() - 2 ? 2 : 1;
@@ -21,43 +21,43 @@ public class EquipmentWidget {
             if (index == 0) {
                 player.getController().unequip(equipSlot);
             } else {
-                switch (player.getEquipment().getID(equipSlot)) {
-                case ItemID.SERPENTINE_HELM:
-                case ItemID.TANZANITE_HELM:
-                case ItemID.MAGMA_HELM:
+                switch (player.getEquipment().getId(equipSlot)) {
+                case ItemId.SERPENTINE_HELM:
+                case ItemId.TANZANITE_HELM:
+                case ItemId.MAGMA_HELM:
                     player.getCharges().checkSerpentineHelm(equipSlot + 65536);
                     break;
-                case ItemID.SLAYER_HELMET:
-                case ItemID.SLAYER_HELMET_I:
-                case ItemID.BLACK_SLAYER_HELMET:
-                case ItemID.BLACK_SLAYER_HELMET_I:
-                case ItemID.GREEN_SLAYER_HELMET:
-                case ItemID.GREEN_SLAYER_HELMET_I:
-                case ItemID.RED_SLAYER_HELMET:
-                case ItemID.RED_SLAYER_HELMET_I:
-                case ItemID.PURPLE_SLAYER_HELMET:
-                case ItemID.PURPLE_SLAYER_HELMET_I:
-                case ItemID.TURQUOISE_SLAYER_HELMET:
-                case ItemID.TURQUOISE_SLAYER_HELMET_I:
-                case ItemID.HYDRA_SLAYER_HELMET:
-                case ItemID.HYDRA_SLAYER_HELMET_I:
+                case ItemId.SLAYER_HELMET:
+                case ItemId.SLAYER_HELMET_I:
+                case ItemId.BLACK_SLAYER_HELMET:
+                case ItemId.BLACK_SLAYER_HELMET_I:
+                case ItemId.GREEN_SLAYER_HELMET:
+                case ItemId.GREEN_SLAYER_HELMET_I:
+                case ItemId.RED_SLAYER_HELMET:
+                case ItemId.RED_SLAYER_HELMET_I:
+                case ItemId.PURPLE_SLAYER_HELMET:
+                case ItemId.PURPLE_SLAYER_HELMET_I:
+                case ItemId.TURQUOISE_SLAYER_HELMET:
+                case ItemId.TURQUOISE_SLAYER_HELMET_I:
+                case ItemId.HYDRA_SLAYER_HELMET:
+                case ItemId.HYDRA_SLAYER_HELMET_I:
                     if (index == 3) {
                         player.getSlayer().sendTask();
                     }
                     break;
-                case ItemID.AMULET_OF_GLORY:
-                case ItemID.AMULET_OF_GLORY_T:
+                case ItemId.AMULET_OF_GLORY:
+                case ItemId.AMULET_OF_GLORY_T:
                     player.openDialogue("amuletofglory", 0);
                     break;
-                case ItemID.AMULET_OF_GLORY_1:
-                case ItemID.AMULET_OF_GLORY_2:
-                case ItemID.AMULET_OF_GLORY_3:
-                case ItemID.AMULET_OF_GLORY_4:
-                case ItemID.AMULET_OF_GLORY_T1:
-                case ItemID.AMULET_OF_GLORY_T2:
-                case ItemID.AMULET_OF_GLORY_T3:
-                case ItemID.AMULET_OF_GLORY_T4:
-                case ItemID.AMULET_OF_ETERNAL_GLORY:
+                case ItemId.AMULET_OF_GLORY_1:
+                case ItemId.AMULET_OF_GLORY_2:
+                case ItemId.AMULET_OF_GLORY_3:
+                case ItemId.AMULET_OF_GLORY_4:
+                case ItemId.AMULET_OF_GLORY_T1:
+                case ItemId.AMULET_OF_GLORY_T2:
+                case ItemId.AMULET_OF_GLORY_T3:
+                case ItemId.AMULET_OF_GLORY_T4:
+                case ItemId.AMULET_OF_ETERNAL_GLORY:
                     if (!player.getController().canTeleport(30, true)) {
                         break;
                     }
@@ -79,21 +79,21 @@ public class EquipmentWidget {
                     player.getController().stopWithTeleport();
                     player.clearHits();
                     break;
-                case ItemID.BINDING_NECKLACE:
+                case ItemId.BINDING_NECKLACE:
                     player.getGameEncoder().sendMessage("Your Binding Necklace has "
                             + player.getSkills().getBindingNecklace() + " charges remaining.");
                     break;
-                case ItemID.RUBBER_CHICKEN:
+                case ItemId.RUBBER_CHICKEN:
                     player.setAnimation(1835);
                     break;
-                case ItemID.TOXIC_STAFF_OF_THE_DEAD:
+                case ItemId.TOXIC_STAFF_OF_THE_DEAD:
                     player.getCharges().checkToxicStaff(equipSlot + 65536);
                     break;
-                case ItemID.TOXIC_BLOWPIPE:
+                case ItemId.TOXIC_BLOWPIPE:
                     player.getCharges().checkToxicBlowpipe(equipSlot + 65536);
                     break;
-                case ItemID.BRACELET_OF_ETHEREUM:
-                case ItemID.BRACELET_OF_ETHEREUM_UNCHARGED:
+                case ItemId.BRACELET_OF_ETHEREUM:
+                case ItemId.BRACELET_OF_ETHEREUM_UNCHARGED:
                     if (index == 1) {
                         player.getCharges().checkCharges(equipSlot + 65536);
                     } else if (index == 2) {
@@ -102,19 +102,19 @@ public class EquipmentWidget {
                                 "Ether automatic absorption: " + player.getCharges().getEthereumAutoAbsorb());
                     }
                     break;
-                case ItemID.RING_OF_RECOIL:
+                case ItemId.RING_OF_RECOIL:
                     player.getGameEncoder().sendMessage("You can inflict " + player.getCharges().getRingOfRecoil()
                             + " more points of damage before your ring will shatter.");
                     break;
-                case ItemID.SLAYER_RING_8:
-                case ItemID.SLAYER_RING_7:
-                case ItemID.SLAYER_RING_6:
-                case ItemID.SLAYER_RING_5:
-                case ItemID.SLAYER_RING_4:
-                case ItemID.SLAYER_RING_3:
-                case ItemID.SLAYER_RING_2:
-                case ItemID.SLAYER_RING_1:
-                case ItemID.SLAYER_RING_ETERNAL:
+                case ItemId.SLAYER_RING_8:
+                case ItemId.SLAYER_RING_7:
+                case ItemId.SLAYER_RING_6:
+                case ItemId.SLAYER_RING_5:
+                case ItemId.SLAYER_RING_4:
+                case ItemId.SLAYER_RING_3:
+                case ItemId.SLAYER_RING_2:
+                case ItemId.SLAYER_RING_1:
+                case ItemId.SLAYER_RING_ETERNAL:
                     if (index == 1) {
                         player.getCharges().checkCharges(equipSlot + 65536);
                     } else if (index == 2) {
@@ -122,11 +122,11 @@ public class EquipmentWidget {
                         player.openDialogue("slayer", 5);
                     }
                     break;
-                case ItemID.RING_OF_WEALTH_I:
+                case ItemId.RING_OF_WEALTH_I:
                     player.openDialogue("ringwealth", 0);
                     break;
-                case ItemID.MAGIC_CAPE:
-                case ItemID.MAGIC_CAPE_T:
+                case ItemId.MAGIC_CAPE:
+                case ItemId.MAGIC_CAPE_T:
                     player.openDialogue("spellbooks", 1);
                     break;
                 default:
@@ -134,32 +134,32 @@ public class EquipmentWidget {
                     break;
                 }
             }
-        } else if (childID == 17) {
+        } else if (childId == 17) {
             player.getEquipment().openStats();
-        } else if (childID == 21) {
+        } else if (childId == 21) {
             player.getCombat().openItemsKeptOnDeath();
-        } else if (childID == 23) {
+        } else if (childId == 23) {
             player.getFamiliar().callPet(false);
         }
     }
 
-    public static void widget84(Player player, int index, int childID, int slot, int itemID) {
+    public static void widget84(Player player, int index, int childId, int slot, int itemId) {
         // Stats
         if (player.isLocked()) {
             return;
         }
-        widget387(player, index, childID - 5, slot, itemID);
+        widget387(player, index, childId - 5, slot, itemId);
     }
 
-    public static void widget85(Player player, int index, int childID, int slot, int itemID) {
+    public static void widget85(Player player, int index, int childId, int slot, int itemId) {
         // Stats inventory
         if (player.isLocked()) {
             return;
         }
-        switch (childID) {
+        switch (childId) {
         case 0:
             if (index == 0) {
-                player.getEquipment().equip(itemID, slot);
+                player.getEquipment().equip(itemId, slot);
             }
             break;
         }

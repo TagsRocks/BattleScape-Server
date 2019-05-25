@@ -1,18 +1,18 @@
 package script.packetdecoder.widget;
 
 import java.util.Map;
-import com.palidino.osrs.io.cache.ItemID;
+import com.palidino.osrs.io.cache.ItemId;
 import com.palidino.osrs.model.item.Item;
 import com.palidino.osrs.model.player.Player;
 import com.palidino.osrs.model.player.Slayer;
 
 public class SlayerWidget {
-    public static void widget426(Player player, int index, int childID, int slot, int itemID) {
+    public static void widget426(Player player, int index, int childId, int slot, int itemId) {
         // Rewards
         if (player.isLocked()) {
             return;
         }
-        switch (childID) {
+        switch (childId) {
         case 8:
             switch (slot) {
             case 4:
@@ -143,17 +143,17 @@ public class SlayerWidget {
             }
             break;
         case 23:
-            if (itemID == ItemID.BROAD_BOLTS) {
+            if (itemId == ItemId.BROAD_BOLTS) {
                 if (index == 1) {
-                    player.getSlayer().buy(new Item(itemID, 250), 35);
+                    player.getSlayer().buy(new Item(itemId, 250), 35);
                 } else if (index == 2) {
-                    player.getSlayer().buy(new Item(itemID, 1250), 175);
+                    player.getSlayer().buy(new Item(itemId, 1250), 175);
                 } else if (index == 3) {
-                    player.getSlayer().buy(new Item(itemID, 2500), 350);
+                    player.getSlayer().buy(new Item(itemId, 2500), 350);
                 }
-            } else if (itemID == ItemID.RUNE_POUCH) {
+            } else if (itemId == ItemId.RUNE_POUCH) {
                 if (index == 1) {
-                    player.getSlayer().buy(new Item(itemID, 1), 1250);
+                    player.getSlayer().buy(new Item(itemId, 1), 1250);
                 }
             } else {
                 player.getGameEncoder().sendMessage("This item can't be purchased.");
@@ -162,12 +162,12 @@ public class SlayerWidget {
         }
     }
 
-    public static void widget68(Player player, int index, int childID, int slot, int itemID) {
+    public static void widget68(Player player, int index, int childId, int slot, int itemId) {
         // Partner
         if (player.isLocked()) {
             return;
         }
-        if (childID != 7) {
+        if (childId != 7) {
             return;
         }
         if (player.getAttribute("clan_chat_usernames") != null) {

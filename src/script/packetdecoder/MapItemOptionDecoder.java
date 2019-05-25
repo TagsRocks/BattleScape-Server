@@ -2,7 +2,7 @@ package script.packetdecoder;
 
 import com.palidino.io.Stream;
 import com.palidino.osrs.io.PacketDecoder;
-import com.palidino.osrs.io.cache.ItemID;
+import com.palidino.osrs.io.cache.ItemId;
 import com.palidino.osrs.model.Tile;
 import com.palidino.osrs.model.dialogue.Dialogue;
 import com.palidino.osrs.model.item.ItemDef;
@@ -79,17 +79,17 @@ public class MapItemOptionDecoder extends PacketDecoder {
         if (index == 2) {
             var isStackableAndCarrying = ItemDef.getStackable(id) && player.getInventory().hasItem(id);
             var result = player.getWorld().pickupMapItem(player, id, x, y);
-            if (result.partialSuccess() && (id == ItemID.BLOODY_KEY || id == ItemID.BLOODIER_KEY)
+            if (result.partialSuccess() && (id == ItemId.BLOODY_KEY || id == ItemId.BLOODIER_KEY)
                     && (player.getController().inWilderness() || player.getController().inPvPWorld())) {
                 player.getCombat().setPKSkullDelay(PCombat.SKULL_DELAY);
                 player.getMovement().setEnergy(0);
                 player.getGameEncoder().sendMessage("<col=ff0000>Carrying the key prevents you from teleporting.");
-                if (id == ItemID.BLOODIER_KEY) {
+                if (id == ItemId.BLOODIER_KEY) {
                     player.getWorld().sendNews("A " + ItemDef.getName(id) + " has been picked up by "
                             + player.getUsername() + " at level " + player.getWildernessLevel() + " wilderness!");
                 }
             } else if (result.partialSuccess() && result.getSlot() != -1 && !isStackableAndCarrying
-                    && player.getInventory().hasItem(ItemID.LOOTING_BAG_22586)) {
+                    && player.getInventory().hasItem(ItemId.LOOTING_BAG_22586)) {
                 player.putAttribute("looting_bag_item_slot", result.getSlot());
                 Dialogue.executeScript(player, "lootingbag", 0, 4);
                 player.removeAttribute("looting_bag_item_slot");

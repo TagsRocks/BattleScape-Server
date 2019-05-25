@@ -3,14 +3,14 @@ package script.packetdecoder.widget;
 import com.palidino.osrs.model.player.Player;
 
 public class PrayerWidget {
-    public static void widget541(Player player, int index, int childID, int slot, int itemID) {
+    public static void widget541(Player player, int index, int childId, int slot, int itemId) {
         // Tab
-        player.getPrayer().activate(childID);
+        player.getPrayer().activate(childId);
     }
 
-    public static void widget77(Player player, int index, int childID, int slot, int itemID) {
+    public static void widget77(Player player, int index, int childId, int slot, int itemId) {
         // Quick
-        switch (childID) {
+        switch (childId) {
         case 4:
             int prayerOffset = 5;
             if (slot <= 23 || slot >= 27) {

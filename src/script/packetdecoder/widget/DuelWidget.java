@@ -1,30 +1,30 @@
 package script.packetdecoder.widget;
 
 import com.palidino.osrs.io.ValueEnteredEvent;
-import com.palidino.osrs.io.cache.ItemID;
+import com.palidino.osrs.io.cache.ItemId;
 import com.palidino.osrs.model.player.Duel;
 import com.palidino.osrs.model.player.Player;
 
 public class DuelWidget {
-    public static void widget482(Player player, int index, int childID, int slot, int itemID) {
+    public static void widget482(Player player, int index, int childId, int slot, int itemId) {
         // Options
         if (player.isLocked()) {
             return;
         }
-        if (childID >= 37 && childID <= 47) {
-            player.getDuel().changeRule(childID - 37);
+        if (childId >= 37 && childId <= 47) {
+            player.getDuel().changeRule(childId - 37);
             return;
-        } else if (childID >= 48 && childID <= 49) {
-            player.getDuel().changeRule(childID - 36);
+        } else if (childId >= 48 && childId <= 49) {
+            player.getDuel().changeRule(childId - 36);
             return;
-        } else if (childID >= 50 && childID <= 60) {
-            player.getDuel().changeRule(childID - 50);
+        } else if (childId >= 50 && childId <= 60) {
+            player.getDuel().changeRule(childId - 50);
             return;
-        } else if (childID >= 61 && childID <= 62) {
-            player.getDuel().changeRule(childID - 49);
+        } else if (childId >= 61 && childId <= 62) {
+            player.getDuel().changeRule(childId - 49);
             return;
         }
-        switch (childID) {
+        switch (childId) {
         case 103:
             player.getDuel().acceptOptions();
             break;
@@ -79,65 +79,65 @@ public class DuelWidget {
         }
     }
 
-    public static void widget481(Player player, int index, int childID, int slot, int itemID) {
+    public static void widget481(Player player, int index, int childId, int slot, int itemId) {
         // Stake
         if (player.isLocked()) {
             return;
         }
-        switch (childID) {
+        switch (childId) {
         case 19:
-            itemID = ItemID.PLATINUM_TOKEN;
+            itemId = ItemId.PLATINUM_TOKEN;
             if (slot == 0) {
-                player.getDuel().removeOffer(player.getDuel().getSlotByID(itemID), itemID, 1);
+                player.getDuel().removeOffer(player.getDuel().getSlotById(itemId), itemId, 1);
             } else if (slot == 1) {
-                player.getDuel().addOffer(player.getInventory().getSlotByID(itemID), itemID, 1);
+                player.getDuel().addOffer(player.getInventory().getSlotById(itemId), itemId, 1);
             } else if (slot == 2) {
-                player.getDuel().addOffer(player.getInventory().getSlotByID(itemID), itemID, 10);
+                player.getDuel().addOffer(player.getInventory().getSlotById(itemId), itemId, 10);
             } else if (slot == 3) {
-                player.getDuel().addOffer(player.getInventory().getSlotByID(itemID), itemID, 100);
+                player.getDuel().addOffer(player.getInventory().getSlotById(itemId), itemId, 100);
             } else if (slot == 4) {
-                player.getDuel().addOffer(player.getInventory().getSlotByID(itemID), itemID, 1000);
+                player.getDuel().addOffer(player.getInventory().getSlotById(itemId), itemId, 1000);
             } else if (slot == 5) {
-                final int usingItemID = itemID;
+                final int usingItemId = itemId;
                 player.getGameEncoder().sendEnterAmount(new ValueEnteredEvent.IntegerEvent() {
                     @Override
                     public void execute(int value) {
-                        int currentCount = player.getDuel().getCount(usingItemID);
+                        int currentCount = player.getDuel().getCount(usingItemId);
                         if (currentCount > value) {
-                            int coinSlot = player.getDuel().getSlotByID(usingItemID);
-                            player.getDuel().removeOffer(coinSlot, usingItemID, currentCount - value);
+                            int coinSlot = player.getDuel().getSlotById(usingItemId);
+                            player.getDuel().removeOffer(coinSlot, usingItemId, currentCount - value);
                         } else {
-                            int coinSlot = player.getInventory().getSlotByID(usingItemID);
-                            player.getDuel().addOffer(coinSlot, usingItemID, value - currentCount);
+                            int coinSlot = player.getInventory().getSlotById(usingItemId);
+                            player.getDuel().addOffer(coinSlot, usingItemId, value - currentCount);
                         }
                     }
                 });
             }
             break;
         case 20:
-            itemID = ItemID.COINS;
+            itemId = ItemId.COINS;
             if (slot == 0) {
-                player.getDuel().removeOffer(player.getDuel().getSlotByID(itemID), itemID, 1);
+                player.getDuel().removeOffer(player.getDuel().getSlotById(itemId), itemId, 1);
             } else if (slot == 1) {
-                player.getDuel().addOffer(player.getInventory().getSlotByID(itemID), itemID, 1);
+                player.getDuel().addOffer(player.getInventory().getSlotById(itemId), itemId, 1);
             } else if (slot == 2) {
-                player.getDuel().addOffer(player.getInventory().getSlotByID(itemID), itemID, 100000);
+                player.getDuel().addOffer(player.getInventory().getSlotById(itemId), itemId, 100000);
             } else if (slot == 3) {
-                player.getDuel().addOffer(player.getInventory().getSlotByID(itemID), itemID, 1000000);
+                player.getDuel().addOffer(player.getInventory().getSlotById(itemId), itemId, 1000000);
             } else if (slot == 4) {
-                player.getDuel().addOffer(player.getInventory().getSlotByID(itemID), itemID, 10000000);
+                player.getDuel().addOffer(player.getInventory().getSlotById(itemId), itemId, 10000000);
             } else if (slot == 5) {
-                final int usingItemID = itemID;
+                final int usingItemId = itemId;
                 player.getGameEncoder().sendEnterAmount(new ValueEnteredEvent.IntegerEvent() {
                     @Override
                     public void execute(int value) {
-                        int currentCount = player.getDuel().getCount(usingItemID);
+                        int currentCount = player.getDuel().getCount(usingItemId);
                         if (currentCount > value) {
-                            int coinSlot = player.getDuel().getSlotByID(usingItemID);
-                            player.getDuel().removeOffer(coinSlot, usingItemID, currentCount - value);
+                            int coinSlot = player.getDuel().getSlotById(usingItemId);
+                            player.getDuel().removeOffer(coinSlot, usingItemId, currentCount - value);
                         } else {
-                            int coinSlot = player.getInventory().getSlotByID(usingItemID);
-                            player.getDuel().addOffer(coinSlot, usingItemID, value - currentCount);
+                            int coinSlot = player.getInventory().getSlotById(usingItemId);
+                            player.getDuel().addOffer(coinSlot, usingItemId, value - currentCount);
                         }
                     }
                 });
@@ -152,12 +152,12 @@ public class DuelWidget {
         }
     }
 
-    public static void widget476(Player player, int index, int childID, int slot, int itemID) {
+    public static void widget476(Player player, int index, int childId, int slot, int itemId) {
         // Confirm
         if (player.isLocked()) {
             return;
         }
-        switch (childID) {
+        switch (childId) {
         case 72:
             player.getDuel().acceptConfirm();
             break;
@@ -167,7 +167,7 @@ public class DuelWidget {
         }
     }
 
-    public static void widget372(Player player, int index, int childID, int slot, int itemID) {
+    public static void widget372(Player player, int index, int childId, int slot, int itemId) {
         // Complete
         player.getWidgetManager().removeInteractiveWidgets();
     }

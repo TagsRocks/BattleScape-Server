@@ -8,7 +8,7 @@ cs = new NCombatScript() {
 
     /* @Override */
     tileHitEventHook: function(combatStyle, tileHitEvent, speed) {
-        if (npc.getID() == 7859) {
+        if (npc.getId() == 7859) {
             var event = new Event(tileHitEvent.getTick()) {
                 /* @Override */
                 execute: function() {
@@ -32,17 +32,17 @@ cs = new NCombatScript() {
             }
             return false;
         }
-        if (npc.getID() == 7858 && !spell.getName().equals("saradomin strike")) {
+        if (npc.getId() == 7858 && !spell.getName().equals("saradomin strike")) {
             if (sendMessage) {
                 player.getGameEncoder().sendMessage("This demon can only be affected by Saradomin Strike.");
             }
             return false;
-        } else if (npc.getID() == 7859 && !spell.getName().equals("claws of guthix")) {
+        } else if (npc.getId() == 7859 && !spell.getName().equals("claws of guthix")) {
             if (sendMessage) {
                 player.getGameEncoder().sendMessage("This demon can only be affected by Claws of Guthix.");
             }
             return false;
-        } else if (npc.getID() == 7860 && !spell.getName().equals("flames of zamorak")) {
+        } else if (npc.getId() == 7860 && !spell.getName().equals("flames of zamorak")) {
             if (sendMessage) {
                 player.getGameEncoder().sendMessage("This demon can only be affected by Flames of Zamorak.");
             }

@@ -1,19 +1,19 @@
 [
   {
-    "id": "NpcID.BANKER",
+    "id": "NpcId.BANKER",
     "direction": 4,
     "x": 1755,
     "y": 3849
   },
   {
-    "id": "NpcID.MARISI",
+    "id": "NpcId.MARISI",
     "direction": 1,
     "moveDistance": 2,
     "x": 1817,
     "y": 3485
   },
   {
-    "id": "NpcID.TOOL_LEPRECHAUN",
+    "id": "NpcId.TOOL_LEPRECHAUN",
     "direction": 1,
     "x": 1811,
     "y": 3490

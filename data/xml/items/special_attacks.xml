@@ -1,7 +1,7 @@
 <list>
 	<specialattack>
 		<!-- Dragon spear -->
-		<itemIDs>
+		<itemIds>
 			<int>1249</int>
 			<int>1263</int>
 			<int>3176</int>
@@ -9,9 +9,9 @@
 			<int>5730</int>
 			<int>11824</int>
 			<int>11889</int>
-		</itemIDs>
+		</itemIds>
 		<drain>25</drain>
-		<animationID>1064</animationID>
+		<animationId>1064</animationId>
 		<castGraphic>
 			<id>253</id>
 			<height>100</height>
@@ -23,15 +23,15 @@
 	</specialattack>
 	<specialattack>
 		<!-- Dragon dagger -->
-		<itemIDs>
+		<itemIds>
 			<int>1215</int>
 			<int>1231</int>
 			<int>5680</int>
 			<int>5698</int>
 			<int>20407</int>
-		</itemIDs>
+		</itemIds>
 		<drain>25</drain>
-		<animationID>1062</animationID>
+		<animationId>1062</animationId>
 		<castGraphic>
 			<id>252</id>
 			<height>100</height>
@@ -42,11 +42,11 @@
 	</specialattack>
 	<specialattack>
 		<!-- Dragon longsword -->
-		<itemIDs>
+		<itemIds>
 			<int>1305</int>
-		</itemIDs>
+		</itemIds>
 		<drain>25</drain>
-		<animationID>1058</animationID>
+		<animationId>1058</animationId>
 		<castGraphic>
 			<id>248</id>
 			<height>100</height>
@@ -55,11 +55,11 @@
 	</specialattack>
 	<specialattack>
 		<!-- Dragon mace -->
-		<itemIDs>
+		<itemIds>
 			<int>1434</int>
-		</itemIDs>
+		</itemIds>
 		<drain>25</drain>
-		<animationID>1060</animationID>
+		<animationId>1060</animationId>
 		<castGraphic>
 			<id>251</id>
 			<height>100</height>
@@ -69,25 +69,25 @@
 	</specialattack>
 	<specialattack>
 		<!-- Dragon claws -->
-		<itemIDs>
+		<itemIds>
 			<int>13652</int>
 			<int>20784</int>
-		</itemIDs>
+		</itemIds>
 		<drain>50</drain>
-		<animationID>7514</animationID>
+		<animationId>7514</animationId>
 		<castGraphic>
 			<id>1171</id>
 		</castGraphic>
 	</specialattack>
 	<specialattack>
 		<!-- Dragon scimitar -->
-		<itemIDs>
+		<itemIds>
 			<int>4587</int>
 			<int>20000</int>
 			<int>20406</int>
-		</itemIDs>
+		</itemIds>
 		<drain>55</drain>
-		<animationID>1872</animationID>
+		<animationId>1872</animationId>
 		<castGraphic>
 			<id>347</id>
 			<height>100</height>
@@ -97,12 +97,12 @@
 	</specialattack>
 	<specialattack>
 		<!-- Dragon sword -->
-		<itemIDs>
+		<itemIds>
 			<int>21009</int>
 			<int>21206</int>
-		</itemIDs>
+		</itemIds>
 		<drain>40</drain>
-		<animationID>7515</animationID>
+		<animationId>7515</animationId>
 		<castGraphic>
 			<id>1369</id>
 			<height>100</height>
@@ -112,11 +112,11 @@
 	</specialattack>
 	<specialattack>
 		<!-- Dragon halberd -->
-		<itemIDs>
+		<itemIds>
 			<int>3204</int>
-		</itemIDs>
+		</itemIds>
 		<drain>30</drain>
-		<animationID>1203</animationID>
+		<animationId>1203</animationId>
 		<targetGraphic>
 			<id>1172</id>
 			<height>100</height>
@@ -125,7 +125,7 @@
 	</specialattack>
 	<specialattack>
 		<!-- Crystal halberd -->
-		<itemIDs>
+		<itemIds>
 			<int>13080</int>
 			<int>13081</int>
 			<int>13082</int>
@@ -148,9 +148,9 @@
 			<int>13099</int>
 			<int>13100</int>
 			<int>13101</int>
-		</itemIDs>
+		</itemIds>
 		<drain>30</drain>
-		<animationID>1203</animationID>
+		<animationId>1203</animationId>
 		<targetGraphic>
 			<id>1232</id>
 			<height>100</height>
@@ -159,12 +159,12 @@
 	</specialattack>
 	<specialattack>
 		<!-- Dragon warhammer -->
-		<itemIDs>
+		<itemIds>
 			<int>13576</int>
 			<int>20785</int>
-		</itemIDs>
+		</itemIds>
 		<drain>50</drain>
-		<animationID>1378</animationID>
+		<animationId>1378</animationId>
 		<castGraphic>
 			<id>1292</id>
 		</castGraphic>
@@ -172,11 +172,11 @@
 	</specialattack>
 	<specialattack>
 		<!-- Granite hammer -->
-		<itemIDs>
+		<itemIds>
 			<int>21742</int>
-		</itemIDs>
+		</itemIds>
 		<drain>60</drain>
-		<animationID>1378</animationID>
+		<animationId>1378</animationId>
 		<castGraphic>
 			<id>1450</id>
 		</castGraphic>
@@ -184,13 +184,13 @@
 	</specialattack>
 	<specialattack>
 		<!-- Granite maul -->
-		<itemIDs>
+		<itemIds>
 			<int>4153</int>
 			<int>12848</int>
 			<int>20557</int>
-		</itemIDs>
+		</itemIds>
 		<drain>50</drain>
-		<animationID>1667</animationID>
+		<animationId>1667</animationId>
 		<castGraphic>
 			<id>340</id>
 			<height>100</height>
@@ -198,14 +198,14 @@
 	</specialattack>
 	<specialattack>
 		<!-- Abyssal whip -->
-		<itemIDs>
+		<itemIds>
 			<int>4151</int>
 			<int>12773</int>
 			<int>12774</int>
 			<int>20405</int>
-		</itemIDs>
+		</itemIds>
 		<drain>50</drain>
-		<animationID>1658</animationID>
+		<animationId>1658</animationId>
 		<targetGraphic>
 			<id>341</id>
 			<height>100</height>
@@ -214,11 +214,11 @@
 	</specialattack>
 	<specialattack>
 		<!-- Abyssal tentacle -->
-		<itemIDs>
+		<itemIds>
 			<int>12006</int>
-		</itemIDs>
+		</itemIds>
 		<drain>50</drain>
-		<animationID>1658</animationID>
+		<animationId>1658</animationId>
 		<targetGraphic>
 			<id>341</id>
 			<height>100</height>
@@ -226,14 +226,14 @@
 	</specialattack>
 	<specialattack>
 		<!-- Abyssal dagger -->
-		<itemIDs>
+		<itemIds>
 			<int>13265</int>
 			<int>13267</int>
 			<int>13269</int>
 			<int>13271</int>
-		</itemIDs>
+		</itemIds>
 		<drain>50</drain>
-		<animationID>3300</animationID>
+		<animationId>3300</animationId>
 		<castGraphic>
 			<id>1283</id>
 		</castGraphic>
@@ -243,22 +243,22 @@
 	</specialattack>
 	<specialattack>
 		<!-- Abyssal bludgeon -->
-		<itemIDs>
+		<itemIds>
 			<int>13263</int>
-		</itemIDs>
+		</itemIds>
 		<drain>50</drain>
-		<animationID>3299</animationID>
+		<animationId>3299</animationId>
 		<targetGraphic>
 			<id>1284</id>
 		</targetGraphic>
 	</specialattack>
 	<specialattack>
 		<!-- Barrelchest anchor -->
-		<itemIDs>
+		<itemIds>
 			<int>10887</int>
-		</itemIDs>
+		</itemIds>
 		<drain>50</drain>
-		<animationID>5870</animationID>
+		<animationId>5870</animationId>
 		<castGraphic>
 			<id>1027</id>
 		</castGraphic>
@@ -267,22 +267,22 @@
 	</specialattack>
 	<specialattack>
 		<!-- Ancient mace -->
-		<itemIDs>
+		<itemIds>
 			<int>11061</int>
-		</itemIDs>
+		</itemIds>
 		<drain>100</drain>
-		<animationID>6147</animationID>
+		<animationId>6147</animationId>
 		<castGraphic>
 			<id>1052</id>
 		</castGraphic>
 	</specialattack>
 	<specialattack>
 		<!-- Saradomin sword -->
-		<itemIDs>
+		<itemIds>
 			<int>11838</int>
-		</itemIDs>
+		</itemIds>
 		<drain>100</drain>
-		<animationID>1132</animationID>
+		<animationId>1132</animationId>
 		<castGraphic>
 			<id>1213</id>
 		</castGraphic>
@@ -294,12 +294,12 @@
 	</specialattack>
 	<specialattack>
 		<!-- Saradomin's blessed sword -->
-		<itemIDs>
+		<itemIds>
 			<int>12808</int>
 			<int>12809</int>
-		</itemIDs>
+		</itemIds>
 		<drain>65</drain>
-		<animationID>1133</animationID>
+		<animationId>1133</animationId>
 		<castGraphic>
 			<id>1213</id>
 		</castGraphic>
@@ -310,12 +310,12 @@
 	</specialattack>
 	<specialattack>
 		<!-- Armadyl godsword -->
-		<itemIDs>
+		<itemIds>
 			<int>11802</int>
 			<int>20593</int>
-		</itemIDs>
+		</itemIds>
 		<drain>50</drain>
-		<animationID>7644</animationID>
+		<animationId>7644</animationId>
 		<castGraphic>
 			<id>1211</id>
 		</castGraphic>
@@ -324,11 +324,11 @@
 	</specialattack>
 	<specialattack>
 		<!-- Bandos godsword -->
-		<itemIDs>
+		<itemIds>
 			<int>11804</int>
-		</itemIDs>
+		</itemIds>
 		<drain>50</drain>
-		<animationID>7642</animationID>
+		<animationId>7642</animationId>
 		<castGraphic>
 			<id>1212</id>
 		</castGraphic>
@@ -337,11 +337,11 @@
 	</specialattack>
 	<specialattack>
 		<!-- Saradomin godsword -->
-		<itemIDs>
+		<itemIds>
 			<int>11806</int>
-		</itemIDs>
+		</itemIds>
 		<drain>50</drain>
-		<animationID>7640</animationID>
+		<animationId>7640</animationId>
 		<castGraphic>
 			<id>1209</id>
 		</castGraphic>
@@ -350,11 +350,11 @@
 	</specialattack>
 	<specialattack>
 		<!-- Zamorak godsword -->
-		<itemIDs>
+		<itemIds>
 			<int>11808</int>
-		</itemIDs>
+		</itemIds>
 		<drain>50</drain>
-		<animationID>7638</animationID>
+		<animationId>7638</animationId>
 		<castGraphic>
 			<id>1210</id>
 		</castGraphic>
@@ -366,11 +366,11 @@
 	</specialattack>
 	<specialattack>
 		<!-- Armadyl godsword -->
-		<itemIDs>
+		<itemIds>
 			<int>20368</int>
-		</itemIDs>
+		</itemIds>
 		<drain>50</drain>
-		<animationID>7644</animationID>
+		<animationId>7644</animationId>
 		<castGraphic>
 			<id>1211</id>
 		</castGraphic>
@@ -379,11 +379,11 @@
 	</specialattack>
 	<specialattack>
 		<!-- Bandos godsword -->
-		<itemIDs>
+		<itemIds>
 			<int>20370</int>
-		</itemIDs>
+		</itemIds>
 		<drain>50</drain>
-		<animationID>7642</animationID>
+		<animationId>7642</animationId>
 		<castGraphic>
 			<id>1212</id>
 		</castGraphic>
@@ -392,11 +392,11 @@
 	</specialattack>
 	<specialattack>
 		<!-- Saradomin godsword -->
-		<itemIDs>
+		<itemIds>
 			<int>20372</int>
-		</itemIDs>
+		</itemIds>
 		<drain>50</drain>
-		<animationID>7640</animationID>
+		<animationId>7640</animationId>
 		<castGraphic>
 			<id>1209</id>
 		</castGraphic>
@@ -405,11 +405,11 @@
 	</specialattack>
 	<specialattack>
 		<!-- Zamorak godsword -->
-		<itemIDs>
+		<itemIds>
 			<int>20374</int>
-		</itemIDs>
+		</itemIds>
 		<drain>50</drain>
-		<animationID>7638</animationID>
+		<animationId>7638</animationId>
 		<castGraphic>
 			<id>1210</id>
 		</castGraphic>
@@ -421,80 +421,80 @@
 	</specialattack>
 	<specialattack>
 		<!-- Darklight/Arclight -->
-		<itemIDs>
+		<itemIds>
 			<int>6746</int>
 			<int>19675</int>
-		</itemIDs>
+		</itemIds>
 		<drain>50</drain>
-		<animationID>2890</animationID>
+		<animationId>2890</animationId>
 		<targetGraphic>
 			<id>483</id>
 		</targetGraphic>
 	</specialattack>
 	<specialattack>
 		<!-- Vesta's longsword -->
-		<itemIDs>
+		<itemIds>
 			<int>32254</int>
 			<int>32264</int>
-		</itemIDs>
+		</itemIds>
 		<drain>25</drain>
-		<animationID>4198</animationID>
+		<animationId>4198</animationId>
 	</specialattack>
 	<specialattack>
 		<!-- Statius's warhammer -->
-		<itemIDs>
+		<itemIds>
 			<int>32256</int>
 			<int>32265</int>
-		</itemIDs>
+		</itemIds>
 		<drain>35</drain>
-		<animationID>1378</animationID>
+		<animationId>1378</animationId>
 		<castGraphic>
 			<id>844</id>
 		</castGraphic>
 	</specialattack>
 	<specialattack>
 		<!-- Vesta's spear -->
-		<itemIDs>
+		<itemIds>
 			<int>32258</int>
 			<int>32266</int>
-		</itemIDs>
+		</itemIds>
 		<drain>50</drain>
-		<animationID>2927</animationID>
+		<animationId>2927</animationId>
 		<castGraphic>
 			<id>1627</id>
 		</castGraphic>
 	</specialattack>
 	<specialattack>
 		<!-- Magic shortbow -->
-		<itemIDs>
+		<itemIds>
 			<int>861</int>
 			<int>20558</int>
-		</itemIDs>
+		</itemIds>
 		<drain>55</drain>
-		<animationID>1074</animationID>
+		<animationId>1074</animationId>
 		<doubleHit>true</doubleHit>
 	</specialattack>
 	<specialattack>
 		<!-- Magic shortbow (i) -->
-		<itemIDs>
+		<itemIds>
 			<int>12788</int>
-		</itemIDs>
+		</itemIds>
 		<drain>50</drain>
-		<animationID>1074</animationID>
+		<animationId>1074</animationId>
 		<doubleHit>true</doubleHit>
 	</specialattack>
 	<specialattack>
 		<!-- Dark bow -->
-		<itemIDs>
+		<itemIds>
 			<int>11235</int>
 			<int>12765</int>
 			<int>12766</int>
 			<int>12767</int>
 			<int>12768</int>
 			<int>20408</int>
-		</itemIDs>
+		</itemIds>
 		<drain>55</drain>
-		<animationID>426</animationID>
+		<animationId>426</animationId>
 		<targetGraphic>
 			<id>1100</id>
 			<height>96</height>
@@ -502,20 +502,20 @@
 	</specialattack>
 	<specialattack>
 		<!-- Armadyl crossbow -->
-		<itemIDs>
+		<itemIds>
 			<int>11785</int>
-		</itemIDs>
+		</itemIds>
 		<drain>40</drain>
-		<animationID>4230</animationID>
+		<animationId>4230</animationId>
 		<accuracyModifier>2</accuracyModifier>
 	</specialattack>
 	<specialattack>
 		<!-- Dragon crossbow -->
-		<itemIDs>
+		<itemIds>
 			<int>21902</int>
-		</itemIDs>
+		</itemIds>
 		<drain>60</drain>
-		<animationID>4230</animationID>
+		<animationId>4230</animationId>
 		<damageModifier>1.2</damageModifier>
 		<targetGraphic>
 			<id>157</id>
@@ -524,32 +524,32 @@
 	</specialattack>
 	<specialattack>
 		<!-- Toxic blowpipe -->
-		<itemIDs>
+		<itemIds>
 			<int>12926</int>
-		</itemIDs>
+		</itemIds>
 		<drain>50</drain>
-		<animationID>5061</animationID>
+		<animationId>5061</animationId>
 		<damageModifier>1.5</damageModifier>
 	</specialattack>
 	<specialattack>
 		<!-- Ballista -->
-		<itemIDs>
+		<itemIds>
 			<int>19478</int>
 			<int>19481</int>
-		</itemIDs>
+		</itemIds>
 		<drain>65</drain>
-		<animationID>7222</animationID>
+		<animationId>7222</animationId>
 		<accuracyModifier>1.25</accuracyModifier>
 		<damageModifier>1.25</damageModifier>
 	</specialattack>
 	<specialattack>
 		<!-- Dragon thrownaxe -->
-		<itemIDs>
+		<itemIds>
 			<int>20849</int>
 			<int>21207</int>
-		</itemIDs>
+		</itemIds>
 		<drain>25</drain>
-		<animationID>7521</animationID>
+		<animationId>7521</animationId>
 		<castGraphic>
 			<id>1317</id>
 			<height>96</height>
@@ -558,24 +558,24 @@
 	</specialattack>
 	<specialattack>
 		<!-- Dragon knife -->
-		<itemIDs>
+		<itemIds>
 			<int>22804</int>
 			<int>22806</int>
 			<int>22808</int>
 			<int>22810</int>
-		</itemIDs>
+		</itemIds>
 		<drain>25</drain>
-		<animationID>2068</animationID>
+		<animationId>2068</animationId>
 		<doubleHit>true</doubleHit>
 	</specialattack>
 	<specialattack>
 		<!-- Morrigan's javelin -->
-		<itemIDs>
+		<itemIds>
 			<int>32260</int>
 			<int>32267</int>
-		</itemIDs>
+		</itemIds>
 		<drain>50</drain>
-		<animationID>806</animationID>
+		<animationId>806</animationId>
 		<castGraphic>
 			<id>1621</id>
 			<height>96</height>
@@ -583,12 +583,12 @@
 	</specialattack>
 	<specialattack>
 		<!-- Morrigan's throwing axe -->
-		<itemIDs>
+		<itemIds>
 			<int>32261</int>
 			<int>32268</int>
-		</itemIDs>
+		</itemIds>
 		<drain>50</drain>
-		<animationID>806</animationID>
+		<animationId>806</animationId>
 		<castGraphic>
 			<id>1626</id>
 			<height>96</height>

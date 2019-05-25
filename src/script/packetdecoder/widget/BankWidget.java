@@ -1,19 +1,19 @@
 package script.packetdecoder.widget;
 
 import com.palidino.osrs.io.ValueEnteredEvent;
-import com.palidino.osrs.io.cache.ItemID;
+import com.palidino.osrs.io.cache.ItemId;
 import com.palidino.osrs.model.item.Item;
 import com.palidino.osrs.model.player.Bank;
 import com.palidino.osrs.model.player.Magic;
 import com.palidino.osrs.model.player.Player;
 
 public class BankWidget {
-    public static void widget12(Player player, int index, int childID, int slot, int itemID) {
+    public static void widget12(Player player, int index, int childId, int slot, int itemId) {
         // Bank
         if (player.isLocked()) {
             return;
         }
-        switch (childID) {
+        switch (childId) {
         case 11:
             if (index == 0) {
                 player.getBank().setViewingTab(slot - 10);
@@ -26,35 +26,35 @@ public class BankWidget {
             int[] realSlot = player.getBank().getRealSlot(slot);
             if (index == 0) {
                 if (player.getBank().getDefaultQuantity() == Bank.DefaultQuantity.X) {
-                    player.getBank().withdraw(itemID, realSlot, player.getBank().getLastEnteredX());
+                    player.getBank().withdraw(itemId, realSlot, player.getBank().getLastEnteredX());
                 } else {
-                    player.getBank().withdraw(itemID, realSlot, player.getBank().getDefaultQuantity().quantity);
+                    player.getBank().withdraw(itemId, realSlot, player.getBank().getDefaultQuantity().quantity);
                 }
             } else if (index == 1) {
-                player.getBank().withdraw(itemID, realSlot, 1);
+                player.getBank().withdraw(itemId, realSlot, 1);
             } else if (index == 2) {
-                player.getBank().withdraw(itemID, realSlot, 5);
+                player.getBank().withdraw(itemId, realSlot, 5);
             } else if (index == 3) {
-                player.getBank().withdraw(itemID, realSlot, 10);
+                player.getBank().withdraw(itemId, realSlot, 10);
             } else if (index == 4) {
-                player.getBank().withdraw(itemID, realSlot, player.getBank().getLastEnteredX());
+                player.getBank().withdraw(itemId, realSlot, player.getBank().getLastEnteredX());
             } else if (index == 5) {
                 player.getGameEncoder().sendEnterAmount(new ValueEnteredEvent.IntegerEvent() {
                     @Override
                     public void execute(int value) {
                         player.getBank().setLastEnteredX(value);
-                        player.getBank().withdraw(itemID, realSlot, value);
+                        player.getBank().withdraw(itemId, realSlot, value);
                     }
                 });
             } else if (index == 6) {
-                player.getBank().withdraw(itemID, realSlot, Item.MAX_AMOUNT);
+                player.getBank().withdraw(itemId, realSlot, Item.MAX_AMOUNT);
             } else if (index == 7) {
                 Item item = player.getBank().getItem(realSlot);
                 if (item != null) {
-                    player.getBank().withdraw(itemID, realSlot, item.getAmount() - 1);
+                    player.getBank().withdraw(itemId, realSlot, item.getAmount() - 1);
                 }
             } else if (index == 8) {
-                player.getBank().withdraw(itemID, realSlot, -1);
+                player.getBank().withdraw(itemId, realSlot, -1);
             }
             break;
         case 17:
@@ -94,7 +94,7 @@ public class BankWidget {
             player.getBank().storeEquipment();
             break;
         case 47:
-            player.getBank().incinerateItem(itemID, slot - 1);
+            player.getBank().incinerateItem(itemId, slot - 1);
             break;
         case 50:
             if (slot == 0) {
@@ -116,12 +116,12 @@ public class BankWidget {
         }
     }
 
-    public static void widget15(Player player, int index, int childID, int slot, int itemID) {
+    public static void widget15(Player player, int index, int childId, int slot, int itemId) {
         // Inventory
         if (player.isLocked()) {
             return;
         }
-        switch (childID) {
+        switch (childId) {
         case 3:
             if (index == 1) {
                 if (player.getBank().getDefaultQuantity() == Bank.DefaultQuantity.X) {
@@ -129,32 +129,32 @@ public class BankWidget {
                         @Override
                         public void execute(int value) {
                             player.getBank().setLastEnteredX(value);
-                            player.getBank().deposit(itemID, slot, value);
+                            player.getBank().deposit(itemId, slot, value);
                         }
                     });
                 } else {
-                    player.getBank().deposit(itemID, slot, player.getBank().getDefaultQuantity().quantity);
+                    player.getBank().deposit(itemId, slot, player.getBank().getDefaultQuantity().quantity);
                 }
             } else if (index == 2) {
-                player.getBank().deposit(itemID, slot, 1);
+                player.getBank().deposit(itemId, slot, 1);
             } else if (index == 3) {
-                player.getBank().deposit(itemID, slot, 5);
+                player.getBank().deposit(itemId, slot, 5);
             } else if (index == 4) {
-                player.getBank().deposit(itemID, slot, 10);
+                player.getBank().deposit(itemId, slot, 10);
             } else if (index == 5) {
-                player.getBank().deposit(itemID, slot, player.getBank().getLastEnteredX());
+                player.getBank().deposit(itemId, slot, player.getBank().getLastEnteredX());
             } else if (index == 6) {
                 player.getGameEncoder().sendEnterAmount(new ValueEnteredEvent.IntegerEvent() {
                     @Override
                     public void execute(int value) {
                         player.getBank().setLastEnteredX(value);
-                        player.getBank().deposit(itemID, slot, value);
+                        player.getBank().deposit(itemId, slot, value);
                     }
                 });
             } else if (index == 7) {
-                player.getBank().deposit(itemID, slot, Item.MAX_AMOUNT);
+                player.getBank().deposit(itemId, slot, Item.MAX_AMOUNT);
             } else if (index == 8) {
-                if (itemID == player.getInventory().getID(slot) && itemID == ItemID.RUNE_POUCH) {
+                if (itemId == player.getInventory().getId(slot) && itemId == ItemId.RUNE_POUCH) {
                     player.getMagic().removeRunesFromPouch(0, Magic.MAX_RUNE_POUCH_AMOUNT);
                     player.getMagic().removeRunesFromPouch(1, Magic.MAX_RUNE_POUCH_AMOUNT);
                     player.getMagic().removeRunesFromPouch(2, Magic.MAX_RUNE_POUCH_AMOUNT);
@@ -164,26 +164,26 @@ public class BankWidget {
         }
     }
 
-    public static void widget192(Player player, int index, int childID, int slot, int itemID) {
+    public static void widget192(Player player, int index, int childId, int slot, int itemId) {
         // Deposit box
         if (player.isLocked()) {
             return;
         }
-        switch (childID) {
+        switch (childId) {
         case 2:
             if (index == 1) {
-                player.getBank().deposit(itemID, slot, 1);
+                player.getBank().deposit(itemId, slot, 1);
             } else if (index == 2) {
-                player.getBank().deposit(itemID, slot, 5);
+                player.getBank().deposit(itemId, slot, 5);
             } else if (index == 3) {
-                player.getBank().deposit(itemID, slot, 10);
+                player.getBank().deposit(itemId, slot, 10);
             } else if (index == 4) {
-                player.getBank().deposit(itemID, slot, Item.MAX_AMOUNT);
+                player.getBank().deposit(itemId, slot, Item.MAX_AMOUNT);
             } else if (index == 5) {
                 player.getGameEncoder().sendEnterAmount(new ValueEnteredEvent.IntegerEvent() {
                     @Override
                     public void execute(int value) {
-                        player.getBank().deposit(itemID, slot, value);
+                        player.getBank().deposit(itemId, slot, value);
                     }
                 });
             }
@@ -200,12 +200,12 @@ public class BankWidget {
         }
     }
 
-    public static void widget14(Player player, int index, int childID, int slot, int itemID) {
+    public static void widget14(Player player, int index, int childId, int slot, int itemId) {
         // Pin settings
         if (player.isLocked()) {
             return;
         }
-        switch (childID) {
+        switch (childId) {
         case 19:
         case 22:
             player.getBank().openPinSettingsConfirm(false);

@@ -15,37 +15,37 @@ instance = new NScript() {
         if (npc.getMovement().getWalkDir() == -1) {
             return;
         }
-        var asObjectID = -1;
-        if (npc.getID() == 2906) {
-            asObjectID = Hunter.SWAMP_LIZARD_OBJECT;
-        } else if (npc.getID() == 2903) {
-            asObjectID = Hunter.ORANGE_SALAMANDER_OBJECT;
-        } else if (npc.getID() == 2904) {
-            asObjectID = Hunter.RED_SALAMANDER_OBJECT;
-        } else if (npc.getID() == 2905) {
-            asObjectID = Hunter.BLACK_SALAMANDER_OBJECT;
+        var asObjectId = -1;
+        if (npc.getId() == 2906) {
+            asObjectId = Hunter.SWAMP_LIZARD_OBJECT;
+        } else if (npc.getId() == 2903) {
+            asObjectId = Hunter.ORANGE_SALAMANDER_OBJECT;
+        } else if (npc.getId() == 2904) {
+            asObjectId = Hunter.RED_SALAMANDER_OBJECT;
+        } else if (npc.getId() == 2905) {
+            asObjectId = Hunter.BLACK_SALAMANDER_OBJECT;
         }
-        if (npc.isLocked() || asObjectID == -1) {
+        if (npc.isLocked() || asObjectId == -1) {
             return;
         }
         var mapObject = npc.getController().getSolidMapObject(npc);
-        if (mapObject == null || mapObject.getID() != Hunter.NET_TRAP_OBJECT) {
+        if (mapObject == null || mapObject.getId() != Hunter.NET_TRAP_OBJECT) {
             return;
         }
         if (!(mapObject.getAttachment() instanceof TempMapObject)
                 || !(mapObject.getAttachment().getAttachment() instanceof Player)) {
             return;
         }
-        var player = Main.getWorld().getPlayerByID(mapObject.getAttachment().getAttachment());
-        if (player == null || !player.getHunter().canHuntObject(asObjectID)) {
+        var player = Main.getWorld().getPlayerById(mapObject.getAttachment().getAttachment());
+        if (player == null || !player.getHunter().canHuntObject(asObjectId)) {
             return;
         }
         mapObject.getAttachment().resetMapObject(0);
-        if (player.getHunter().success(Hunter.getObjectLevelRequirement(asObjectID), true)) {
-            mapObject.getAttachment().getTempMapObject(1).setID(asObjectID);
+        if (player.getHunter().success(Hunter.getObjectLevelRequirement(asObjectId), true)) {
+            mapObject.getAttachment().getTempMapObject(1).setId(asObjectId);
             npc.getCombat().timedDeath(2);
         } else {
-            mapObject.getAttachment().getTempMapObject(1).setID(Hunter.NET_TRAP_FAIL_OBJECT);
+            mapObject.getAttachment().getTempMapObject(1).setId(Hunter.NET_TRAP_FAIL_OBJECT);
         }
         npc.getController().sendMapObject(mapObject.getAttachment().getTempMapObject(1));
     }

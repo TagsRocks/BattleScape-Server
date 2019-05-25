@@ -41,7 +41,7 @@ entries.add(obj2);
 obj2.setLargeSelection(title, Utils.toStringArray(lines, true), Utils.toStringArray(actions, true));
 
 instance = new DialogueScript() {
-    execute: function(player, index, childID, slot) {
+    execute: function(player, index, childId, slot) {
         if (player.isLocked()) {
             return;
         }
@@ -53,19 +53,19 @@ instance = new DialogueScript() {
                 if (Main.isSpawn()) {
                     return;
                 }
-                if ( player.getInventory().getCount(ItemID._14_DAYS_GOLD_MEMBERSHIP_32303) == 0) {
+                if ( player.getInventory().getCount(ItemId._14_DAYS_GOLD_MEMBERSHIP_32303) == 0) {
                     player.getGameEncoder().sendMessage("You need a bond to do this.");
                     return;
                 }
                 RequestServer.getInstance().addSQLUpdate("INSERT INTO goldmember_update (userid) VALUES("
-                        + player.getID() + ")");
+                        + player.getId() + ")");
                 player.setGoldMember(true);
                 player.getGameEncoder().sendMessage("<col=ff0000>14 days of membership have been added to your account.");
-                player.getInventory().deleteItem(ItemID._14_DAYS_GOLD_MEMBERSHIP_32303, 1);
+                player.getInventory().deleteItem(ItemId._14_DAYS_GOLD_MEMBERSHIP_32303, 1);
                 player.setGoldMemberDays(player.getGoldMemberDays() + 14);
                 RequestManager.addPlayerLog(player, "bond", player.getLogName()
                         + " received gold membership from a bond.");
-                player.getFamiliar().rollPet(ItemID.CHOMPY_CHICK, 1);
+                player.getFamiliar().rollPet(ItemId.CHOMPY_CHICK, 1);
             }
         } else if (index == 1) {
             if (slot == 0) {

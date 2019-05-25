@@ -1,12 +1,12 @@
 [
   {
-    "id": "NpcID.TOOL_LEPRECHAUN",
+    "id": "NpcId.TOOL_LEPRECHAUN",
     "direction": 6,
     "x": 3229,
     "y": 3454
   },
   {
-    "id": "NpcID.TREZNOR",
+    "id": "NpcId.TREZNOR",
     "direction": 1,
     "moveDistance": 2,
     "x": 3226,

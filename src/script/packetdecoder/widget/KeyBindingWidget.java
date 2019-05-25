@@ -4,11 +4,11 @@ import com.palidino.osrs.model.player.Options;
 import com.palidino.osrs.model.player.Player;
 
 public class KeyBindingWidget {
-    public static void widget121(Player player, int index, int childID, int slot, int itemID) {
+    public static void widget121(Player player, int index, int childId, int slot, int itemId) {
         if (player.isLocked()) {
             return;
         }
-        switch (childID) {
+        switch (childId) {
         case 9:
             player.putAttribute("binding_tab", Options.BIND_COMBAT);
             break;

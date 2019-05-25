@@ -33,7 +33,7 @@ entries.add(obj2);
 obj2.setLargeSelection(title, Utils.toStringArray(lines, true), Utils.toStringArray(actions, true));
 
 instance = new DialogueScript() {
-    execute: function(player, index, childID, slot) {
+    execute: function(player, index, childId, slot) {
         if (index == 0) {
             if (slot == 0) {
                 var names = new ArrayList();
@@ -75,7 +75,7 @@ instance = new DialogueScript() {
                     countList += "|";
                     nameList += "|";
                 }
-                player.getWidgetManager().sendInteractiveOverlay(WidgetID.KILL_LOG);
+                player.getWidgetManager().sendInteractiveOverlay(WidgetId.KILL_LOG);
                 player.getGameEncoder().sendScript(1584, "Slayer Kill Log", names.size(), streakList, countList,
                         nameList);
             } else if (slot == 1) {
@@ -117,7 +117,7 @@ instance = new DialogueScript() {
                     countList += "|";
                     nameList += "|";
                 }
-                player.getWidgetManager().sendInteractiveOverlay(WidgetID.KILL_LOG);
+                player.getWidgetManager().sendInteractiveOverlay(WidgetId.KILL_LOG);
                 player.getGameEncoder().sendScript(1584, "Boss Kill Log", names.size(), streakList, countList,
                         nameList);
             } else if (slot == 2) {

@@ -32,23 +32,23 @@ entries.add(obj1);
 obj1.setSelection(title, Utils.toStringArray(lines, true), Utils.toStringArray(actions, true));
 
 instance = new DialogueScript() {
-    execute: function(player, index, childID, slot) {
+    execute: function(player, index, childId, slot) {
         if (player.isLocked()) {
             return;
         }
         if (index == 0) {
             var depositingSlot = player.getAttributeInt("looting_bag_item_slot");
-            var depositingID = player.getInventory().getID(depositingSlot);
+            var depositingId = player.getInventory().getId(depositingSlot);
             if (!player.getController().inWilderness() && !player.getController().inPvPWorld()) {
                 player.getGameEncoder().sendMessage("You can't put items in the bag unless you're in the Wilderness.");
                 return;
-            } else if (ItemDef.getUntradable(depositingID)) {
+            } else if (ItemDef.getUntradable(depositingId)) {
                 player.getGameEncoder().sendMessage("You can only put tradeable items in the bag.");
                 return;
-            } else if (depositingID == ItemID.BLOODY_KEY || depositingID == ItemID.BLOODIER_KEY) {
+            } else if (depositingId == ItemId.BLOODY_KEY || depositingId == ItemId.BLOODIER_KEY) {
                 player.getGameEncoder().sendMessage("This key can't be stored in the bag.");
                 return;
-            } else if (depositingID == -1) {
+            } else if (depositingId == -1) {
                 player.getGameEncoder().sendMessage("Invalid item selected.");
                 return;
             }
@@ -59,21 +59,21 @@ instance = new DialogueScript() {
             } else if (slot == 1) {
                 amount = 5;
             } else if (slot == 2) {
-                amount = ItemDef.getStackOrNote(depositingID) ? player.getInventory().getAmount(depositingSlot)
+                amount = ItemDef.getStackOrNote(depositingId) ? player.getInventory().getAmount(depositingSlot)
                         : Item.MAX_AMOUNT;
             } else if (slot == 4) {
                 amount = player.getInventory().getAmount(depositingSlot);
             }
             var valueEntered = new ValueEnteredEvent.IntegerEvent() {
                 execute: function(value) {
-                    value = Math.min(value, player.getInventory().getCount(depositingID));
-                    value = player.getWidgetManager().getLootingBag().canAddAmount(depositingID, value);
+                    value = Math.min(value, player.getInventory().getCount(depositingId));
+                    value = player.getWidgetManager().getLootingBag().canAddAmount(depositingId, value);
                     if (value == 0) {
                         player.getWidgetManager().getLootingBag().notEnoughSpace();
                         return;
                     }
-                    player.getInventory().deleteItem(depositingID, value, depositingSlot);
-                    player.getWidgetManager().getLootingBag().addItem(depositingID, value);
+                    player.getInventory().deleteItem(depositingId, value, depositingSlot);
+                    player.getWidgetManager().getLootingBag().addItem(depositingId, value);
                 }
             }
             if (slot == 3) {

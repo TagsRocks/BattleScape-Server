@@ -1,122 +1,122 @@
 package script.packetdecoder.widget;
 
 import com.palidino.osrs.Main;
-import com.palidino.osrs.io.cache.WidgetID;
+import com.palidino.osrs.io.cache.WidgetId;
 import com.palidino.osrs.model.player.Player;
 import com.palidino.osrs.model.player.Skills;
 import com.palidino.osrs.model.player.WidgetManager;
 
 public class SkillsWidget {
-    public static void widget320(Player player, int index, int childID, int slot, int itemID) {
+    public static void widget320(Player player, int index, int childId, int slot, int itemId) {
         // Tab
         if (player.isLocked()) {
             return;
         }
-        int guideID = -1;
-        switch (childID) {
+        int guideId = -1;
+        switch (childId) {
         case 1:
-            guideID = Skills.ATTACK;
+            guideId = Skills.ATTACK;
             break;
         case 2:
-            guideID = Skills.STRENGTH;
+            guideId = Skills.STRENGTH;
             break;
         case 3:
-            guideID = Skills.DEFENCE;
+            guideId = Skills.DEFENCE;
             break;
         case 4:
-            guideID = Skills.RANGED;
+            guideId = Skills.RANGED;
             break;
         case 5:
-            guideID = Skills.PRAYER;
+            guideId = Skills.PRAYER;
             break;
         case 6:
-            guideID = Skills.MAGIC;
+            guideId = Skills.MAGIC;
             break;
         case 7:
-            guideID = Skills.RUNECRAFTING;
+            guideId = Skills.RUNECRAFTING;
             break;
         case 8:
-            guideID = Skills.CONSTRUCTION;
+            guideId = Skills.CONSTRUCTION;
             break;
         case 9:
-            guideID = Skills.HITPOINTS;
+            guideId = Skills.HITPOINTS;
             break;
         case 10:
-            guideID = Skills.AGILITY;
+            guideId = Skills.AGILITY;
             break;
         case 11:
-            guideID = Skills.HERBLORE;
+            guideId = Skills.HERBLORE;
             break;
         case 12:
-            guideID = Skills.THIEVING;
+            guideId = Skills.THIEVING;
             break;
         case 13:
-            guideID = Skills.CRAFTING;
+            guideId = Skills.CRAFTING;
             break;
         case 14:
-            guideID = Skills.FLETCHING;
+            guideId = Skills.FLETCHING;
             break;
         case 15:
-            guideID = Skills.SLAYER;
+            guideId = Skills.SLAYER;
             break;
         case 16:
-            guideID = Skills.HUNTER;
+            guideId = Skills.HUNTER;
             break;
         case 17:
-            guideID = Skills.MINING;
+            guideId = Skills.MINING;
             break;
         case 18:
-            guideID = Skills.SMITHING;
+            guideId = Skills.SMITHING;
             break;
         case 19:
-            guideID = Skills.FISHING;
+            guideId = Skills.FISHING;
             break;
         case 20:
-            guideID = Skills.COOKING;
+            guideId = Skills.COOKING;
             break;
         case 21:
-            guideID = Skills.FIREMAKING;
+            guideId = Skills.FIREMAKING;
             break;
         case 22:
-            guideID = Skills.WOODCUTTING;
+            guideId = Skills.WOODCUTTING;
             break;
         case 23:
-            guideID = Skills.FARMING;
+            guideId = Skills.FARMING;
             break;
         }
-        if (guideID != -1) {
+        if (guideId != -1) {
             player.getWidgetManager().removeInteractiveWidgets();
-            player.getWidgetManager().sendInteractiveOverlay(WidgetID.SKILL_GUIDE, new WidgetManager.CloseEvent() {
+            player.getWidgetManager().sendInteractiveOverlay(WidgetId.SKILL_GUIDE, new WidgetManager.CloseEvent() {
                 @Override
                 public void execute() {
                     player.removeAttribute("skill_guide_id");
                 }
             });
-            player.getGameEncoder().sendWidgetSettings(WidgetID.SKILL_GUIDE, 8, 0, 99, 0);
-            player.getGameEncoder().setVarp(965, Skills.GUIDE_CONFIGS[guideID][0]);
-            player.putAttribute("skill_guide_id", guideID);
-            if (guideID < player.getSkills().getXPLocks().length) {
+            player.getGameEncoder().sendWidgetSettings(WidgetId.SKILL_GUIDE, 8, 0, 99, 0);
+            player.getGameEncoder().setVarp(965, Skills.GUIDE_CONFIGS[guideId][0]);
+            player.putAttribute("skill_guide_id", guideId);
+            if (guideId < player.getSkills().getXPLocks().length) {
                 if (Main.isSpawn()) {
-                    player.openDialogue("xplock", guideID + 7);
+                    player.openDialogue("xplock", guideId + 7);
                 } else {
-                    player.openDialogue("xplock", guideID);
+                    player.openDialogue("xplock", guideId);
                 }
             }
         }
     }
 
-    public static void widget214(Player player, int index, int childID, int slot, int itemID) {
+    public static void widget214(Player player, int index, int childId, int slot, int itemId) {
         // Guide
         if (player.isLocked()) {
             return;
         }
-        if (childID >= 11 && childID <= 24) {
-            int guideID = player.getAttributeInt("skill_guide_id");
-            int guideIndex = childID - 11;
-            if (guideIndex >= Skills.GUIDE_CONFIGS[guideID].length) {
+        if (childId >= 11 && childId <= 24) {
+            int guideId = player.getAttributeInt("skill_guide_id");
+            int guideIndex = childId - 11;
+            if (guideIndex >= Skills.GUIDE_CONFIGS[guideId].length) {
                 return;
             }
-            player.getGameEncoder().setVarp(965, Skills.GUIDE_CONFIGS[guideID][guideIndex]);
+            player.getGameEncoder().setVarp(965, Skills.GUIDE_CONFIGS[guideId][guideIndex]);
         }
     }
 }

@@ -116,7 +116,7 @@ entries.add(obj9);
 obj9.setSelection(title, Utils.toStringArray(lines, true), Utils.toStringArray(actions, true));
 
 instance = new DialogueScript() {
-    execute: function(player, index, childID, slot) {
+    execute: function(player, index, childId, slot) {
         if (player.isLocked()) {
             return;
         }
@@ -223,25 +223,25 @@ instance = new DialogueScript() {
             } else {
                 ringItem = player.getInventory().getItem(ringSlot);
             }
-            if (ringItem == null || !(ringItem.getID() >= 11866 && ringItem.getID() <= 11873)
-                    && ringItem.getID() != 21268) {
+            if (ringItem == null || !(ringItem.getId() >= 11866 && ringItem.getId() <= 11873)
+                    && ringItem.getId() != 21268) {
                 player.getGameEncoder().sendMessage("Unable to locate your ring.");
                 return;
             }
-            var ringIDs = [ 11866, 11867, 11868, 11869, 11870, 11871, 11872, 11873, -1 ];
-            var newRingID = -2;
-            for (var i = 0; i < ringIDs.length; i++) {
-                if (ringItem.getID() == ringIDs[i]) {
-                    newRingID = ringIDs[i + 1];
+            var ringIds = [ 11866, 11867, 11868, 11869, 11870, 11871, 11872, 11873, -1 ];
+            var newRingId = -2;
+            for (var i = 0; i < ringIds.length; i++) {
+                if (ringItem.getId() == ringIds[i]) {
+                    newRingId = ringIds[i + 1];
                     break;
                 }
             }
-            if (newRingID != -2) {
+            if (newRingId != -2) {
                 if (ringSlot >= 65536) {
-                    player.getEquipment().setItem(ringSlot - 65536, new Item(newRingID, ringItem));
+                    player.getEquipment().setItem(ringSlot - 65536, new Item(newRingId, ringItem));
                     player.getEquipment().setUpdate(true);
                 } else {
-                    player.getInventory().setItem(ringSlot, new Item(newRingID, ringItem));
+                    player.getInventory().setItem(ringSlot, new Item(newRingId, ringItem));
                     player.getInventory().setUpdate(true);
                 }
             }
@@ -258,8 +258,8 @@ instance = new DialogueScript() {
                 } else {
                     ringItem = player.getInventory().getItem(ringSlot);
                 }
-                if (ringItem == null || !(ringItem.getID() >= 11866 && ringItem.getID() <= 11873)
-                       && ringItem.getID() != 21268) {
+                if (ringItem == null || !(ringItem.getId() >= 11866 && ringItem.getId() <= 11873)
+                       && ringItem.getId() != 21268) {
                     return;
                 }
                 var addingAmount = Math.min(player.getSlayer().getPoints(), ItemDef.getDegradeTime(11866));
@@ -284,10 +284,10 @@ instance = new DialogueScript() {
             }
         } else if (index == 8) {
             if (slot == 0) {
-                if (player.getInventory().getCount(ItemID.COINS) < 500000) {
+                if (player.getInventory().getCount(ItemId.COINS) < 500000) {
                     player.getGameEncoder().sendMessage("You need 500K coins to do this.");
                     return;
-                } else if (player.getInventory().getCount(ItemID.VOTE_TICKET) < 2) {
+                } else if (player.getInventory().getCount(ItemId.VOTE_TICKET) < 2) {
                     player.getGameEncoder().sendMessage("You need 2 vote tickets to do this.");
                     return;
                 } else if (player.getSlayer().getBossTaskAmount() == 0) {
@@ -295,8 +295,8 @@ instance = new DialogueScript() {
                     return;
                 }
                 player.getSlayer().setBossTaskAmount(0);
-                player.getInventory().deleteItem(ItemID.COINS, 500000);
-                player.getInventory().deleteItem(ItemID.VOTE_TICKET, 2);
+                player.getInventory().deleteItem(ItemId.COINS, 500000);
+                player.getInventory().deleteItem(ItemId.VOTE_TICKET, 2);
                 player.getGameEncoder().sendMessage("Your Boss Slayer task has been cancelled.");
             }
         } else if (index == 9) {

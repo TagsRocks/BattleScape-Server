@@ -1,27 +1,27 @@
 [
   {
-    "id": "NpcID.SURGEON_GENERAL_TAFANI",
+    "id": "NpcId.SURGEON_GENERAL_TAFANI",
     "direction": 1,
     "x": 3094,
     "y": 3499,
     "height": 20
   },
   {
-    "id": "NpcID.HEAD_CHEF",
+    "id": "NpcId.HEAD_CHEF",
     "direction": 1,
     "x": 3095,
     "y": 3499,
     "height": 20
   },
   {
-    "id": "NpcID.AJJAT",
+    "id": "NpcId.AJJAT",
     "direction": 1,
     "x": 3096,
     "y": 3499,
     "height": 20
   },
   {
-    "id": "NpcID.WIZARD_4399",
+    "id": "NpcId.WIZARD_4399",
     "direction": 1,
     "x": 3097,
     "y": 3499,

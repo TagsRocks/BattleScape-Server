@@ -4,9 +4,9 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import com.palidino.osrs.Main;
-import com.palidino.osrs.io.cache.ItemID;
-import com.palidino.osrs.io.cache.NpcID;
-import com.palidino.osrs.io.cache.WidgetID;
+import com.palidino.osrs.io.cache.ItemId;
+import com.palidino.osrs.io.cache.NpcId;
+import com.palidino.osrs.io.cache.WidgetId;
 import com.palidino.osrs.model.ForceMovement;
 import com.palidino.osrs.model.Movement;
 import com.palidino.osrs.model.Tile;
@@ -351,62 +351,62 @@ public class MapObject1 {
 
     // Staircase
     public static void mapObject20667(Player player, int index, MapObject mapObject) {
-        player.getCombat().getBarrows().exitCrypt(NpcID.AHRIM_THE_BLIGHTED_98);
+        player.getCombat().getBarrows().exitCrypt(NpcId.AHRIM_THE_BLIGHTED_98);
     }
 
     // Staircase
     public static void mapObject20668(Player player, int index, MapObject mapObject) {
-        player.getCombat().getBarrows().exitCrypt(NpcID.DHAROK_THE_WRETCHED_115);
+        player.getCombat().getBarrows().exitCrypt(NpcId.DHAROK_THE_WRETCHED_115);
     }
 
     // Staircase
     public static void mapObject20669(Player player, int index, MapObject mapObject) {
-        player.getCombat().getBarrows().exitCrypt(NpcID.GUTHAN_THE_INFESTED_115);
+        player.getCombat().getBarrows().exitCrypt(NpcId.GUTHAN_THE_INFESTED_115);
     }
 
     // Staircase
     public static void mapObject20670(Player player, int index, MapObject mapObject) {
-        player.getCombat().getBarrows().exitCrypt(NpcID.KARIL_THE_TAINTED_98);
+        player.getCombat().getBarrows().exitCrypt(NpcId.KARIL_THE_TAINTED_98);
     }
 
     // Staircase
     public static void mapObject20671(Player player, int index, MapObject mapObject) {
-        player.getCombat().getBarrows().exitCrypt(NpcID.TORAG_THE_CORRUPTED_115);
+        player.getCombat().getBarrows().exitCrypt(NpcId.TORAG_THE_CORRUPTED_115);
     }
 
     // Staircase
     public static void mapObject20672(Player player, int index, MapObject mapObject) {
-        player.getCombat().getBarrows().exitCrypt(NpcID.VERAC_THE_DEFILED_115);
+        player.getCombat().getBarrows().exitCrypt(NpcId.VERAC_THE_DEFILED_115);
     }
 
     // Sarcophagus
     public static void mapObject20720(Player player, int index, MapObject mapObject) {
-        player.getCombat().getBarrows().searchSarcophagus(NpcID.DHAROK_THE_WRETCHED_115);
+        player.getCombat().getBarrows().searchSarcophagus(NpcId.DHAROK_THE_WRETCHED_115);
     }
 
     // Sarcophagus
     public static void mapObject20721(Player player, int index, MapObject mapObject) {
-        player.getCombat().getBarrows().searchSarcophagus(NpcID.TORAG_THE_CORRUPTED_115);
+        player.getCombat().getBarrows().searchSarcophagus(NpcId.TORAG_THE_CORRUPTED_115);
     }
 
     // Sarcophagus
     public static void mapObject20722(Player player, int index, MapObject mapObject) {
-        player.getCombat().getBarrows().searchSarcophagus(NpcID.GUTHAN_THE_INFESTED_115);
+        player.getCombat().getBarrows().searchSarcophagus(NpcId.GUTHAN_THE_INFESTED_115);
     }
 
     // Sarcophagus
     public static void mapObject20770(Player player, int index, MapObject mapObject) {
-        player.getCombat().getBarrows().searchSarcophagus(NpcID.AHRIM_THE_BLIGHTED_98);
+        player.getCombat().getBarrows().searchSarcophagus(NpcId.AHRIM_THE_BLIGHTED_98);
     }
 
     // Sarcophagus
     public static void mapObject20771(Player player, int index, MapObject mapObject) {
-        player.getCombat().getBarrows().searchSarcophagus(NpcID.KARIL_THE_TAINTED_98);
+        player.getCombat().getBarrows().searchSarcophagus(NpcId.KARIL_THE_TAINTED_98);
     }
 
     // Sarcophagus
     public static void mapObject20772(Player player, int index, MapObject mapObject) {
-        player.getCombat().getBarrows().searchSarcophagus(NpcID.VERAC_THE_DEFILED_115);
+        player.getCombat().getBarrows().searchSarcophagus(NpcId.VERAC_THE_DEFILED_115);
     }
 
     // Cage
@@ -2225,7 +2225,7 @@ public class MapObject1 {
 
     // Lever
     public static void mapObject26761(Player player, int index, MapObject mapObject) {
-        if (player.getInventory().hasItem(ItemID.BLOODY_KEY) || player.getInventory().hasItem(ItemID.BLOODIER_KEY)) {
+        if (player.getInventory().hasItem(ItemId.BLOODY_KEY) || player.getInventory().hasItem(ItemId.BLOODIER_KEY)) {
             player.getGameEncoder().sendMessage("You can't use this right now.");
             return;
         }
@@ -2350,11 +2350,11 @@ public class MapObject1 {
 
     // Passage
     public static void mapObject27055(Player player, int index, MapObject mapObject) {
-        if (player.getEquipment().getHandID() == 11095 || player.getEquipment().getHandID() == 11097
-                || player.getEquipment().getHandID() == 11099 || player.getEquipment().getHandID() == 11101
-                || player.getEquipment().getHandID() == 11103) {
-            player.getEquipment().setItem(Equipment.Slot.HAND, player.getEquipment().getHandID() == 11103 ? null
-                    : new Item(player.getEquipment().getHandID() + 2, 1));
+        if (player.getEquipment().getHandId() == 11095 || player.getEquipment().getHandId() == 11097
+                || player.getEquipment().getHandId() == 11099 || player.getEquipment().getHandId() == 11101
+                || player.getEquipment().getHandId() == 11103) {
+            player.getEquipment().setItem(Equipment.Slot.HAND, player.getEquipment().getHandId() == 11103 ? null
+                    : new Item(player.getEquipment().getHandId() + 2, 1));
             player.getAppearance().setUpdate(true);
         } else {
             player.getCombat().setPKSkullDelay(PCombat.SKULL_DELAY);
@@ -2369,8 +2369,8 @@ public class MapObject1 {
 
     // Deadman chest
     public static void mapObject27269(Player player, int index, MapObject mapObject) {
-        if (player.getInventory().hasItem(ItemID.BLOODY_KEY_32304)) {
-            player.getInventory().deleteItem(ItemID.BLOODY_KEY_32304, 1);
+        if (player.getInventory().hasItem(ItemId.BLOODY_KEY_32304)) {
+            player.getInventory().deleteItem(ItemId.BLOODY_KEY_32304, 1);
             Item item = null;
             if (player.isGameModeNormal() || player.isGameModeHard()) {
                 item = MysteryBox.getBoxItem();
@@ -2384,8 +2384,8 @@ public class MapObject1 {
             player.getInventory().addOrDropItem(item);
             RequestManager.addPlayerLog(player, "lootbox",
                     player.getLogName() + " received " + item.getLogName() + " from a bloody key.");
-        } else if (player.getInventory().hasItem(ItemID.BLOODIER_KEY_32305)) {
-            player.getInventory().deleteItem(ItemID.BLOODIER_KEY_32305, 1);
+        } else if (player.getInventory().hasItem(ItemId.BLOODIER_KEY_32305)) {
+            player.getInventory().deleteItem(ItemId.BLOODIER_KEY_32305, 1);
             Item item1 = null;
             Item item2 = null;
             if (player.isGameModeNormal() || player.isGameModeHard()) {
@@ -2412,19 +2412,19 @@ public class MapObject1 {
                 RequestManager.addPlayerLog(player, "lootbox",
                         player.getLogName() + " received " + item2.getLogName() + " from a bloodier key.");
             }
-        } else if (player.getInventory().hasItem(ItemID.SINISTER_KEY)) {
+        } else if (player.getInventory().hasItem(ItemId.SINISTER_KEY)) {
             player.getCombat().getBarrows().openChest(mapObject.getX() != 3551 || mapObject.getY() != 9695);
-        } else if (player.getInventory().hasItem(ItemID.DIAMOND_KEY_32309)) {
-            player.getInventory().deleteItem(ItemID.DIAMOND_KEY_32309, 1);
+        } else if (player.getInventory().hasItem(ItemId.DIAMOND_KEY_32309)) {
+            player.getInventory().deleteItem(ItemId.DIAMOND_KEY_32309, 1);
             player.getInventory().addOrDropItem(MysteryBox.getDiamondKeyItem());
-        } else if (player.getInventory().hasItem(ItemID.GOLD_KEY_32308)) {
-            player.getInventory().deleteItem(ItemID.GOLD_KEY_32308, 1);
+        } else if (player.getInventory().hasItem(ItemId.GOLD_KEY_32308)) {
+            player.getInventory().deleteItem(ItemId.GOLD_KEY_32308, 1);
             player.getInventory().addOrDropItem(MysteryBox.getGoldKeyItem());
-        } else if (player.getInventory().hasItem(ItemID.SILVER_KEY_32307)) {
-            player.getInventory().deleteItem(ItemID.SILVER_KEY_32307, 1);
+        } else if (player.getInventory().hasItem(ItemId.SILVER_KEY_32307)) {
+            player.getInventory().deleteItem(ItemId.SILVER_KEY_32307, 1);
             player.getInventory().addOrDropItem(MysteryBox.getSilverKeyItem());
-        } else if (player.getInventory().hasItem(ItemID.BRONZE_KEY_32306)) {
-            player.getInventory().deleteItem(ItemID.BRONZE_KEY_32306, 1);
+        } else if (player.getInventory().hasItem(ItemId.BRONZE_KEY_32306)) {
+            player.getInventory().deleteItem(ItemId.BRONZE_KEY_32306, 1);
             player.getInventory().addOrDropItem(MysteryBox.getBronzeKeyItem());
         } else {
             player.getGameEncoder().sendMessage("You need a key to open this chest.");
@@ -2776,9 +2776,9 @@ public class MapObject1 {
 
     // Ornate Jewellery Box
     public static void mapObject29156(Player player, int index, MapObject mapObject) {
-        player.getWidgetManager().sendInteractiveOverlay(WidgetID.JEWELRY_BOX);
+        player.getWidgetManager().sendInteractiveOverlay(WidgetId.JEWELRY_BOX);
         player.getGameEncoder().sendScript(1685, 15, "Ornate Jewellery Box", 3);
-        player.getGameEncoder().sendWidgetSettings(WidgetID.JEWELRY_BOX, 0, 0, 24, 1);
+        player.getGameEncoder().sendWidgetSettings(WidgetId.JEWELRY_BOX, 0, 0, 24, 1);
     }
 
     // Spiritual Fairy Tree

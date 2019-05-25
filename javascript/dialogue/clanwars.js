@@ -89,7 +89,7 @@ entries.add(obj6);
 obj6.setSelection(title, Utils.toStringArray(lines, true), Utils.toStringArray(actions, true));
 
 instance = new DialogueScript() {
-    execute: function(player, index, childID, slot) {
+    execute: function(player, index, childId, slot) {
         if (player.isLocked()) {
             return;
         }
@@ -113,9 +113,9 @@ instance = new DialogueScript() {
                 player.getGameEncoder().sendMessage("Coming soon.");
             }
         } else if (index == 3) {
-            var itemID = player.getAttributeInt("clan_wars_coffer_item_id");
+            var itemId = player.getAttributeInt("clan_wars_coffer_item_id");
             player.getWidgetManager().removeInteractiveWidgets();
-            if (ClanWarsTournament.donateItem(player, itemID, slot)) {
+            if (ClanWarsTournament.donateItem(player, itemId, slot)) {
                 player.openDialogue("clanwars", 4);
                 Dialogue.setText(player, null, ClanWarsTournament.getWarModeNames());
             }

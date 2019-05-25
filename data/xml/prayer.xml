@@ -1,44 +1,44 @@
 <list>
 	<prayerdef>
 		<identifier>thick skin</identifier>
-		<childID>5</childID>
-		<configID>1</configID>
+		<childId>5</childId>
+		<configId>1</configId>
 		<levelRequired>1</levelRequired>
 		<drainEffect>3</drainEffect>
-		<headiconID>-1</headiconID>
+		<headiconId>-1</headiconId>
 		<types>
 			<int>1</int>
 		</types>
 	</prayerdef>
 	<prayerdef>
 		<identifier>burst of strength</identifier>
-		<childID>6</childID>
-		<configID>2</configID>
+		<childId>6</childId>
+		<configId>2</configId>
 		<levelRequired>4</levelRequired>
 		<drainEffect>3</drainEffect>
-		<headiconID>-1</headiconID>
+		<headiconId>-1</headiconId>
 		<types>
 			<int>2</int>
 		</types>
 	</prayerdef>
 	<prayerdef>
 		<identifier>clarity of thought</identifier>
-		<childID>7</childID>
-		<configID>4</configID>
+		<childId>7</childId>
+		<configId>4</configId>
 		<levelRequired>7</levelRequired>
 		<drainEffect>3</drainEffect>
-		<headiconID>-1</headiconID>
+		<headiconId>-1</headiconId>
 		<types>
 			<int>0</int>
 		</types>
 	</prayerdef>
 	<prayerdef>
 		<identifier>sharp eye</identifier>
-		<childID>23</childID>
-		<configID>262144</configID>
+		<childId>23</childId>
+		<configId>262144</configId>
 		<levelRequired>8</levelRequired>
 		<drainEffect>3</drainEffect>
-		<headiconID>-1</headiconID>
+		<headiconId>-1</headiconId>
 		<types>
 			<int>0</int>
 			<int>2</int>
@@ -46,11 +46,11 @@
 	</prayerdef>
 	<prayerdef>
 		<identifier>mystic will</identifier>
-		<childID>24</childID>
-		<configID>524288</configID>
+		<childId>24</childId>
+		<configId>524288</configId>
 		<levelRequired>9</levelRequired>
 		<drainEffect>3</drainEffect>
-		<headiconID>-1</headiconID>
+		<headiconId>-1</headiconId>
 		<types>
 			<int>0</int>
 			<int>2</int>
@@ -58,77 +58,77 @@
 	</prayerdef>
 	<prayerdef>
 		<identifier>rock skin</identifier>
-		<childID>8</childID>
-		<configID>8</configID>
+		<childId>8</childId>
+		<configId>8</configId>
 		<levelRequired>10</levelRequired>
 		<drainEffect>6</drainEffect>
-		<headiconID>-1</headiconID>
+		<headiconId>-1</headiconId>
 		<types>
 			<int>1</int>
 		</types>
 	</prayerdef>
 	<prayerdef>
 		<identifier>superhuman strength</identifier>
-		<childID>9</childID>
-		<configID>16</configID>
+		<childId>9</childId>
+		<configId>16</configId>
 		<levelRequired>13</levelRequired>
 		<drainEffect>6</drainEffect>
-		<headiconID>-1</headiconID>
+		<headiconId>-1</headiconId>
 		<types>
 			<int>2</int>
 		</types>
 	</prayerdef>
 	<prayerdef>
 		<identifier>improved reflexes</identifier>
-		<childID>10</childID>
-		<configID>32</configID>
+		<childId>10</childId>
+		<configId>32</configId>
 		<levelRequired>16</levelRequired>
 		<drainEffect>6</drainEffect>
-		<headiconID>-1</headiconID>
+		<headiconId>-1</headiconId>
 		<types>
 			<int>0</int>
 		</types>
 	</prayerdef>
 	<prayerdef>
 		<identifier>rapid restore</identifier>
-		<childID>11</childID>
-		<configID>64</configID>
+		<childId>11</childId>
+		<configId>64</configId>
 		<levelRequired>19</levelRequired>
 		<drainEffect>1</drainEffect>
-		<headiconID>-1</headiconID>
+		<headiconId>-1</headiconId>
 		<types>
 			<int>5</int>
 		</types>
 	</prayerdef>
 	<prayerdef>
 		<identifier>rapid heal</identifier>
-		<childID>12</childID>
-		<configID>128</configID>
+		<childId>12</childId>
+		<configId>128</configId>
 		<levelRequired>22</levelRequired>
 		<drainEffect>2</drainEffect>
-		<headiconID>-1</headiconID>
+		<headiconId>-1</headiconId>
 		<types>
 			<int>5</int>
 		</types>
 	</prayerdef>
 	<prayerdef>
 		<identifier>protect item</identifier>
-		<childID>13</childID>
-		<configID>256</configID>
+		<childId>13</childId>
+		<configId>256</configId>
 		<levelRequired>25</levelRequired>
 		<drainEffect>2</drainEffect>
-		<headiconID>-1</headiconID>
+		<headiconId>-1</headiconId>
 		<types>
 			<int>4</int>
 		</types>
 	</prayerdef>
 	<prayerdef>
 		<identifier>hawk eye</identifier>
-		<childID>25</childID>
-		<configID>1048576</configID>
+		<childId>25</childId>
+		<configId>1048576</configId>
 		<levelRequired>26</levelRequired>
 		<drainEffect>6</drainEffect>
-		<headiconID>-1</headiconID>
+		<headiconId>-1</headiconId>
 		<types>
 			<int>0</int>
 			<int>2</int>
@@ -136,11 +136,11 @@
 	</prayerdef>
 	<prayerdef>
 		<identifier>mystic lore</identifier>
-		<childID>26</childID>
-		<configID>2097152</configID>
+		<childId>26</childId>
+		<configId>2097152</configId>
 		<levelRequired>27</levelRequired>
 		<drainEffect>6</drainEffect>
-		<headiconID>-1</headiconID>
+		<headiconId>-1</headiconId>
 		<types>
 			<int>0</int>
 			<int>2</int>
@@ -148,77 +148,77 @@
 	</prayerdef>
 	<prayerdef>
 		<identifier>steel skin</identifier>
-		<childID>14</childID>
-		<configID>512</configID>
+		<childId>14</childId>
+		<configId>512</configId>
 		<levelRequired>28</levelRequired>
 		<drainEffect>12</drainEffect>
-		<headiconID>-1</headiconID>
+		<headiconId>-1</headiconId>
 		<types>
 			<int>1</int>
 		</types>
 	</prayerdef>
 	<prayerdef>
 		<identifier>ultimate strength</identifier>
-		<childID>15</childID>
-		<configID>1024</configID>
+		<childId>15</childId>
+		<configId>1024</configId>
 		<levelRequired>31</levelRequired>
 		<drainEffect>12</drainEffect>
-		<headiconID>-1</headiconID>
+		<headiconId>-1</headiconId>
 		<types>
 			<int>2</int>
 		</types>
 	</prayerdef>
 	<prayerdef>
 		<identifier>incredible reflexes</identifier>
-		<childID>16</childID>
-		<configID>2048</configID>
+		<childId>16</childId>
+		<configId>2048</configId>
 		<levelRequired>34</levelRequired>
 		<drainEffect>12</drainEffect>
-		<headiconID>-1</headiconID>
+		<headiconId>-1</headiconId>
 		<types>
 			<int>0</int>
 		</types>
 	</prayerdef>
 	<prayerdef>
 		<identifier>protect from magic</identifier>
-		<childID>17</childID>
-		<configID>4096</configID>
+		<childId>17</childId>
+		<configId>4096</configId>
 		<levelRequired>37</levelRequired>
 		<drainEffect>12</drainEffect>
-		<headiconID>2</headiconID>
+		<headiconId>2</headiconId>
 		<types>
 			<int>3</int>
 		</types>
 	</prayerdef>
 	<prayerdef>
 		<identifier>protect from missiles</identifier>
-		<childID>18</childID>
-		<configID>8192</configID>
+		<childId>18</childId>
+		<configId>8192</configId>
 		<levelRequired>40</levelRequired>
 		<drainEffect>12</drainEffect>
-		<headiconID>1</headiconID>
+		<headiconId>1</headiconId>
 		<types>
 			<int>3</int>
 		</types>
 	</prayerdef>
 	<prayerdef>
 		<identifier>protect from melee</identifier>
-		<childID>19</childID>
-		<configID>16384</configID>
+		<childId>19</childId>
+		<configId>16384</configId>
 		<levelRequired>43</levelRequired>
 		<drainEffect>12</drainEffect>
-		<headiconID>0</headiconID>
+		<headiconId>0</headiconId>
 		<types>
 			<int>3</int>
 		</types>
 	</prayerdef>
 	<prayerdef>
 		<identifier>eagle eye</identifier>
-		<childID>27</childID>
-		<configID>4194304</configID>
+		<childId>27</childId>
+		<configId>4194304</configId>
 		<levelRequired>44</levelRequired>
 		<drainEffect>12</drainEffect>
-		<headiconID>-1</headiconID>
+		<headiconId>-1</headiconId>
 		<types>
 			<int>0</int>
 			<int>2</int>
@@ -226,11 +226,11 @@
 	</prayerdef>
 	<prayerdef>
 		<identifier>mystic might</identifier>
-		<childID>28</childID>
-		<configID>8388608</configID>
+		<childId>28</childId>
+		<configId>8388608</configId>
 		<levelRequired>45</levelRequired>
 		<drainEffect>12</drainEffect>
-		<headiconID>-1</headiconID>
+		<headiconId>-1</headiconId>
 		<types>
 			<int>0</int>
 			<int>2</int>
@@ -238,45 +238,45 @@
 	</prayerdef>
 	<prayerdef>
 		<identifier>retribution</identifier>
-		<childID>20</childID>
-		<configID>32768</configID>
+		<childId>20</childId>
+		<configId>32768</configId>
 		<levelRequired>46</levelRequired>
 		<drainEffect>3</drainEffect>
-		<headiconID>3</headiconID>
+		<headiconId>3</headiconId>
 		<types>
 			<int>3</int>
 		</types>
 	</prayerdef>
 	<prayerdef>
 		<identifier>redemption</identifier>
-		<childID>21</childID>
-		<configID>65536</configID>
+		<childId>21</childId>
+		<configId>65536</configId>
 		<levelRequired>49</levelRequired>
 		<drainEffect>6</drainEffect>
-		<headiconID>5</headiconID>
+		<headiconId>5</headiconId>
 		<types>
 			<int>3</int>
 		</types>
 	</prayerdef>
 	<prayerdef>
 		<identifier>smite</identifier>
-		<childID>22</childID>
-		<configID>131072</configID>
+		<childId>22</childId>
+		<configId>131072</configId>
 		<levelRequired>52</levelRequired>
 		<drainEffect>18</drainEffect>
-		<headiconID>4</headiconID>
+		<headiconId>4</headiconId>
 		<types>
 			<int>3</int>
 		</types>
 	</prayerdef>
 	<prayerdef>
 		<identifier>chivalry</identifier>
-		<childID>29</childID>
-		<configID>33554432</configID>
+		<childId>29</childId>
+		<configId>33554432</configId>
 		<levelRequired>60</levelRequired>
 		<defenceLevelRequired>60</defenceLevelRequired>
 		<drainEffect>24</drainEffect>
-		<headiconID>-1</headiconID>
+		<headiconId>-1</headiconId>
 		<types>
 			<int>0</int>
 			<int>1</int>
@@ -285,12 +285,12 @@
 	</prayerdef>
 	<prayerdef>
 		<identifier>piety</identifier>
-		<childID>30</childID>
-		<configID>67108864</configID>
+		<childId>30</childId>
+		<configId>67108864</configId>
 		<levelRequired>70</levelRequired>
 		<defenceLevelRequired>70</defenceLevelRequired>
 		<drainEffect>24</drainEffect>
-		<headiconID>-1</headiconID>
+		<headiconId>-1</headiconId>
 		<types>
 			<int>0</int>
 			<int>1</int>
@@ -299,12 +299,12 @@
 	</prayerdef>
 	<prayerdef>
 		<identifier>rigour</identifier>
-		<childID>31</childID>
-		<configID>16777216</configID>
+		<childId>31</childId>
+		<configId>16777216</configId>
 		<levelRequired>74</levelRequired>
 		<defenceLevelRequired>70</defenceLevelRequired>
 		<drainEffect>24</drainEffect>
-		<headiconID>-1</headiconID>
+		<headiconId>-1</headiconId>
 		<types>
 			<int>0</int>
 			<int>1</int>
@@ -313,12 +313,12 @@
 	</prayerdef>
 	<prayerdef>
 		<identifier>augury</identifier>
-		<childID>32</childID>
-		<configID>134217728</configID>
+		<childId>32</childId>
+		<configId>134217728</configId>
 		<levelRequired>77</levelRequired>
 		<defenceLevelRequired>70</defenceLevelRequired>
 		<drainEffect>24</drainEffect>
-		<headiconID>-1</headiconID>
+		<headiconId>-1</headiconId>
 		<types>
 			<int>0</int>
 			<int>1</int>
@@ -327,11 +327,11 @@
 	</prayerdef>
 	<prayerdef>
 		<identifier>preserve</identifier>
-		<childID>33</childID>
-		<configID>268435456</configID>
+		<childId>33</childId>
+		<configId>268435456</configId>
 		<levelRequired>55</levelRequired>
 		<drainEffect>2</drainEffect>
-		<headiconID>-1</headiconID>
+		<headiconId>-1</headiconId>
 		<types>
 			<int>5</int>
 		</types>

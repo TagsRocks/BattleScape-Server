@@ -46,7 +46,7 @@ public class NpcOptionDecoder extends PacketDecoder {
         if (npc == null) {
             return;
         }
-        var message = "[NpcOption(" + index + ")] id=" + id + "; moveType=" + moveType + "; NPC=" + npc.getID();
+        var message = "[NpcOption(" + index + ")] id=" + id + "; moveType=" + moveType + "; NPC=" + npc.getId();
         if (player.getRights() == Player.RIGHTS_ADMIN) {
             Logger.println(message);
         }
@@ -72,7 +72,7 @@ public class NpcOptionDecoder extends PacketDecoder {
             player.setEngagingEntity(npc);
             player.getCombat().setFollowing(npc);
             player.getMovement().follow();
-            if (player.getMagic().getAutoSpellID() != 0 && player.getHitDelay() <= 0) {
+            if (player.getMagic().getAutoSpellId() != 0 && player.getHitDelay() <= 0) {
                 player.setHitDelay(2);
             }
             return;
@@ -112,7 +112,7 @@ public class NpcOptionDecoder extends PacketDecoder {
                 && player.getY() != npc.getY()) {
             return false;
         }
-        if (Hunter.getHuntedNPC(npc.getID()) != null && !player.getHunter().catchNPCStage(npc)) {
+        if (Hunter.getHuntedNPC(npc.getId()) != null && !player.getHunter().catchNPCStage(npc)) {
             return false;
         }
         player.setFaceEntity(null);
@@ -128,24 +128,24 @@ public class NpcOptionDecoder extends PacketDecoder {
         if (SkillContainer.npcOptionHooks(player, index, npc)) {
             return true;
         }
-        if (npc.getDef().isOption(index, "pick-up") && Familiar.isPetNPC(npc.getID())) {
+        if (npc.getDef().isOption(index, "pick-up") && Familiar.isPetNPC(npc.getId())) {
             player.getFamiliar().removeFamiliar();
             return true;
         }
-        if (!actionMethods.containsKey(npc.getID())) {
+        if (!actionMethods.containsKey(npc.getId())) {
             try {
                 var classReference = Class.forName("script.packetdecoder.misc.NpcOptions");
-                var methodName = "mapObject" + npc.getID();
+                var methodName = "mapObject" + npc.getId();
                 var actionMethod = classReference.getMethod(methodName, Player.class, Integer.TYPE, Npc.class);
                 if ((actionMethod.getModifiers() & Modifier.STATIC) == 0) {
                     actionMethod = null;
                 }
-                actionMethods.put(npc.getID(), actionMethod);
+                actionMethods.put(npc.getId(), actionMethod);
             } catch (Exception e) {
-                actionMethods.put(npc.getID(), null);
+                actionMethods.put(npc.getId(), null);
             }
         }
-        var actionMethod = actionMethods.get(npc.getID());
+        var actionMethod = actionMethods.get(npc.getId());
         if (actionMethod == null) {
             player.getGameEncoder().sendMessage("Nothing interesting happens.");
         } else {
