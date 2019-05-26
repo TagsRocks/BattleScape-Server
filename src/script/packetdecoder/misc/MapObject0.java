@@ -5,7 +5,6 @@ import com.palidino.osrs.model.ForceMovement;
 import com.palidino.osrs.model.Movement;
 import com.palidino.osrs.model.Tile;
 import com.palidino.osrs.model.item.Item;
-import com.palidino.osrs.model.item.RandomItem;
 import com.palidino.osrs.model.map.MapObject;
 import com.palidino.osrs.model.map.Region;
 import com.palidino.osrs.model.map.TempMapObject;
@@ -20,6 +19,7 @@ import com.palidino.osrs.model.player.Runecrafting;
 import com.palidino.osrs.model.player.Skills;
 import com.palidino.osrs.model.player.Smithing;
 import com.palidino.osrs.model.player.controller.PestControlPC;
+import com.palidino.setting.SqlRank;
 import com.palidino.util.Time;
 import com.palidino.util.Utils;
 import com.palidino.util.event.Event;
@@ -75,7 +75,7 @@ public class MapObject0 {
     // Crevice
     public static void mapObject535(Player player, int index, MapObject mapObject) {
         // Stronghold Slayer Cave
-        if (!player.getSlayer().isAnyTask(499) && !player.isUsergroup(Player.GROUP_YOUTUBER)) {
+        if (!player.getSlayer().isAnyTask(499) && !player.isUsergroup(SqlRank.YOUTUBER)) {
             player.getGameEncoder().sendMessage("You need an appropriate Slayer task of Smoke Devils to enter.");
             return;
         }

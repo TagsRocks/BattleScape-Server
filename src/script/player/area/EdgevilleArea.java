@@ -1,6 +1,8 @@
 package script.player.area;
 
+import com.palidino.osrs.Main;
 import com.palidino.osrs.io.cache.ItemId;
+import com.palidino.osrs.io.cache.NpcId;
 import com.palidino.osrs.io.cache.WidgetId;
 import com.palidino.osrs.model.Tile;
 import com.palidino.osrs.model.item.Item;
@@ -10,10 +12,13 @@ import com.palidino.osrs.model.map.MapObject;
 import com.palidino.osrs.model.npc.Npc;
 import com.palidino.osrs.model.player.Area;
 import com.palidino.osrs.model.player.Magic;
+import com.palidino.osrs.model.player.PCombat;
 import com.palidino.osrs.model.player.Player;
+import com.palidino.osrs.model.player.SlayerMaster;
 import com.palidino.osrs.model.player.controller.ClanWarsFreeForAllPC;
 import com.palidino.osrs.util.RequestManager;
 import com.palidino.osrs.world.ClanWarsTournament;
+import com.palidino.setting.SqlRank;
 import com.palidino.util.Utils;
 
 public class EdgevilleArea extends Area {
@@ -23,6 +28,164 @@ public class EdgevilleArea extends Area {
 
     @Override
     public boolean npcOptionHook(Player player, int index, Npc npc) {
+        switch (npc.getId()) {
+        case NpcId.WISE_OLD_MAN:
+            player.openShop("platinum_tokens");
+            return true;
+        case NpcId.VOTE_MANAGER:
+            if (Main.isBeta()) {
+                player.getGameEncoder().sendMessage("You can't do this on beta worlds.");
+                return true;
+            }
+            if (index == 0) {
+                player.openDialogue("vote", 0);
+            } else if (index == 3) {
+                if (player.isGameModeNormal()) {
+                    player.openShop("vote");
+                } else {
+                    player.openShop("vote_iron");
+                }
+            }
+            return true;
+        case NpcId.CAPT_BOND_16018:
+            player.getOptions().openBondsMenu();
+            return true;
+        case NpcId.LOYALTY_MANAGER:
+            player.openDialogue("loyalty", 0);
+            return true;
+        case NpcId.GUIDE:
+            player.openDialogue("guidebook", 0);
+            return true;
+        case NpcId.MAKE_OVER_MAGE:
+            player.getWidgetManager().sendInteractiveOverlay(WidgetId.CHARACTER_DESIGN);
+            return true;
+        case NpcId.PERDU:
+            player.openDialogue("perdu", 0);
+            return true;
+        case NpcId.MAGE_OF_ZAMORAK_2582:
+            player.openDialogue("magezamorak", 0);
+            return true;
+        case NpcId.BOB_BARTER_HERBS:
+            if (index == 0) {
+                player.openDialogue("bobbarter", 0);
+            } else if (index == 2) {
+                player.openShop("herb_exchange");
+            } else if (index == 3) {
+                player.getSkills().decantAllPotions();
+            }
+            return true;
+        case NpcId.KRYSTILIA:
+            if (index == 0) {
+                player.openDialogue("slayer", 9);
+            } else if (index == 2) {
+                SlayerMaster.setAssignment(player, SlayerMaster.WILDERNESS_MASTER);
+            } else if (index == 3) {
+                player.openShop("slayer");
+            } else if (index == 4) {
+                player.getSlayer().openRewards();
+            }
+            return true;
+        case NpcId.PROBITA:
+            player.openShop("pets");
+            return true;
+        case NpcId.HEAD_CHEF:
+            if (Main.isSpawn()) {
+                player.openShop("supplies_spawn");
+            } else {
+                player.openShop(player.isGameModeNormal() || player.isGameModeHard() ? "supplies" : "supplies_iron");
+            }
+            return true;
+        case NpcId.AJJAT:
+            if (Main.isSpawn()) {
+                player.openShop("equipment_spawn");
+            } else {
+                player.openShop(player.isGameModeNormal() || player.isGameModeHard() ? "equipment" : "equipment_iron");
+            }
+            return true;
+        case NpcId.TWIGGY_OKORN:
+            player.openShop("diaries");
+            return true;
+        case NpcId.MAC_126:
+            player.openDialogue("mac", 0);
+            return true;
+        case NpcId.SKILLING_SELLER:
+            player.openShop("skilling");
+            return true;
+        case NpcId.CAPN_IZZY_NO_BEARD:
+            player.openShop("agility");
+            return true;
+        case NpcId.EMBLEM_TRADER_316:
+            if (index == 0) {
+                player.openDialogue("emblemtrader", 0);
+            } else if (index == 2) {
+                if (Main.isSpawn()) {
+                    player.openShop("blood_money_spawn");
+                } else if (player.isGameModeNormal() || player.isGameModeHard()) {
+                    player.openShop("blood_money");
+                } else {
+                    player.openShop("blood_money_iron");
+                }
+            } else if (index == 3) {
+                player.getCombat().setShowKDR(!player.getCombat().showKDR());
+                player.getGameEncoder().sendMessage("Streaks: " + player.getCombat().showKDR());
+            } else if (index == 4) {
+                player.getCombat().setPKSkullDelay(PCombat.SKULL_DELAY);
+            }
+            return true;
+        case NpcId.JOSSIK:
+            player.openDialogue("horrorfromthedeep", 0);
+            return true;
+        case NpcId.EVIL_DAVE:
+            player.openDialogue("shadowofthestorm", 0);
+            return true;
+        case NpcId.RADIMUS_ERKLE:
+            if (!player.getCombat().isLegendsQuestComplete()) {
+                if (player.getCombat().getRecipeForDisasterStage() != 6) {
+                    player.getGameEncoder().sendMessage("You need to complete Recipe for Disaster.");
+                    return true;
+                } else if (!player.getCombat().getHorrorFromTheDeep()) {
+                    player.getGameEncoder().sendMessage("You need to complete Horror from the Deep.");
+                    return true;
+                } else if (!player.getCombat().getDreamMentor()) {
+                    player.getGameEncoder().sendMessage("You need to complete Dream Mentor.");
+                    return true;
+                } else if (!player.getCombat().getMageArena()) {
+                    player.getGameEncoder().sendMessage("You need to complete the Mage Arena.");
+                    return true;
+                } else if (!player.getCombat().getLostCity()) {
+                    player.getGameEncoder().sendMessage("You need to complete Lost City.");
+                    return true;
+                } else if (!player.getCombat().getDragonSlayer()) {
+                    player.getGameEncoder().sendMessage("You need to complete Dragon Slayer.");
+                    return true;
+                } else if (!player.getCombat().getMonkeyMadness()) {
+                    player.getGameEncoder().sendMessage("You need to complete Monkey Madness.");
+                    return true;
+                } else if (player.getCombat().getHauntedMine() <= 3) {
+                    player.getGameEncoder().sendMessage("You need to complete Haunted Mine.");
+                    return true;
+                }
+                player.getMovement().teleport(2774, 9338, 0);
+            } else {
+                player.getMovement().teleport(2728, 3351, 0);
+            }
+            return true;
+        case NpcId.GUILDMASTER:
+            player.openDialogue("dragonslayer", 0);
+            return true;
+        case NpcId.MONK_OF_ENTRANA:
+            player.openDialogue("lostcity", 0);
+            return true;
+        case NpcId.KING_NARNODE_SHAREEN:
+            player.openDialogue("monkeymadness", 0);
+            return true;
+        case NpcId.ONEIROMANCER:
+            player.openDialogue("dreammentor", 0);
+            return true;
+        case NpcId.ZEALOT:
+            player.openDialogue("hauntedmine", 0);
+            return true;
+        }
         return false;
     }
 
@@ -136,7 +299,7 @@ public class EdgevilleArea extends Area {
             }
             return true;
         case 29087: // Coffer
-            if (player.getRights() == Player.RIGHTS_ADMIN || player.isUsergroup(Player.GROUP_ADVERTISER)) {
+            if (player.getRights() == Player.RIGHTS_ADMIN || player.isUsergroup(SqlRank.ADVERTISEMENT_MANAGER)) {
                 player.openDialogue("clanwars", 6);
             } else {
                 ClanWarsTournament.viewDonatedItems(player);
@@ -212,7 +375,8 @@ public class EdgevilleArea extends Area {
             player.getInventory().addOrDropItem(RandomItem.getItem(clueItems));
         }
         RandomItem[] items = new RandomItem[] {
-            new RandomItem(ItemId.LOOP_HALF_OF_KEY, 1).setWeight(128), new RandomItem(ItemId.TOOTH_HALF_OF_KEY, 1).setWeight(128),
+            new RandomItem(ItemId.LOOP_HALF_OF_KEY, 1).setWeight(128),
+            new RandomItem(ItemId.TOOTH_HALF_OF_KEY, 1).setWeight(128),
 
             new RandomItem(532, 5, 10).setWeight(128) /* Big bones */,
             new RandomItem(534, 5, 10).setWeight(120) /* Babydragon bones */,

@@ -313,7 +313,7 @@ instance = new DialogueScript() {
         }
         var requiresRoWI = true; //player.getSlayer().isTask(slayerId); // Enable to allow free instances on task
         if ((bossName.equals("boss_instance_kraken") || bossName.equals("boss_instance_hydra"))
-                && player.getSlayer().isAnyTask(slayerId) || player.isUsergroup(Player.GROUP_YOUTUBER)) {
+                && player.getSlayer().isAnyTask(slayerId) || player.isUsergroup(SqlRank.YOUTUBER)) {
             // Kraken/hydra only has one spawn
             requiresRoWI = false;
         }

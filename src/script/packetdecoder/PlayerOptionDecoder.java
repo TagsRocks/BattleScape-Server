@@ -1,7 +1,6 @@
 package script.packetdecoder;
 
 import com.palidino.io.Stream;
-import com.palidino.osrs.Main;
 import com.palidino.osrs.io.PacketDecoder;
 import com.palidino.osrs.model.map.route.Route;
 import com.palidino.osrs.model.player.ClanWars;
@@ -9,7 +8,6 @@ import com.palidino.osrs.model.player.Equipment;
 import com.palidino.osrs.model.player.Messaging;
 import com.palidino.osrs.model.player.Player;
 import com.palidino.util.Logger;
-import com.palidino.util.Utils;
 import lombok.var;
 
 public class PlayerOptionDecoder extends PacketDecoder {
@@ -175,18 +173,6 @@ public class PlayerOptionDecoder extends PacketDecoder {
             } else if (player2.getWidgetManager().hasInteractiveWidgets()) {
                 player.getGameEncoder().sendMessage("This player is currently busy.");
                 return;
-            } else if (player.getIP().equals(player2.getIP())
-                    && !Utils.getBaseIPMatch(player.getMySQL().get("ipaddress"), player2.getMySQL().get("ipaddress"))
-                    && !Main.adminPrivledges(player) && !Main.adminPrivledges(player2)) {
-                if (!Utils.getBaseIPMatch(player.getIP(), player.getMySQL().get("ipaddress"))) {
-                    player.getGameEncoder().sendMessage("Your IP doesn't match your registration IP to do this.");
-                    player.getGameEncoder().sendMessage("For security precautions, you can't trade this player.");
-                    return;
-                } else if (!Utils.getBaseIPMatch(player2.getIP(), player2.getMySQL().get("ipaddress"))) {
-                    player.getGameEncoder().sendMessage("Their IP doesn't match their registration IP to do this.");
-                    player.getGameEncoder().sendMessage("For security precautions, you can't trade this player.");
-                    return;
-                }
             } else if (!player.getController().canTradeHook(player2) || !player2.getController().canTradeHook(player)) {
                 return;
             }

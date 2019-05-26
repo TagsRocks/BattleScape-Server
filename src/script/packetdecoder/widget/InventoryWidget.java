@@ -30,6 +30,7 @@ import com.palidino.osrs.model.player.combat.BountyHunter;
 import com.palidino.osrs.util.RequestManager;
 import com.palidino.osrs.world.WildernessEvent;
 import com.palidino.osrs.world.World;
+import com.palidino.setting.SqlRank;
 import com.palidino.util.Utils;
 import com.palidino.util.event.Event;
 
@@ -88,7 +89,7 @@ public class InventoryWidget {
             }
             if (itemId == ItemId.BLOODY_KEY || itemId == ItemId.BLOODIER_KEY) {
                 WildernessEvent.bloodyKeyToMap(item, player, MapItem.NORMAL_TIME, MapItem.ALWAYS_APPEAR);
-            } else if (player.isUsergroup(Player.GROUP_YOUTUBER)) {
+            } else if (player.isUsergroup(SqlRank.YOUTUBER)) {
                 player.getController().addMapItem(item, player, MapItem.NORMAL_TIME, MapItem.NEVER_APPEAR);
             } else if (player.getController().inWilderness() && !player.getController().isInstanced()
                     && !ItemDef.getUntradable(itemId)) {
