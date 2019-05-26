@@ -4,7 +4,7 @@ POISON_FIREBALL.setSubType(Hit.Type.TYPELESS);
 POISON_FIREBALL.setMaxHit(30);
 POISON_FIREBALL.setAttackSpeed(1);
 POISON_FIREBALL.setTargetGraphic(new Graphic(131));
-POISON_FIREBALL.setProjectileID(1482);
+POISON_FIREBALL.setProjectileId(1482);
 POISON_FIREBALL.setProjectileStartHeight(30);
 POISON_FIREBALL.setIgnorePrayer(true);
 POISON_FIREBALL.setSpeedMinDistance(8);
@@ -16,7 +16,7 @@ FREEZE_FIREBALL.setSubType(Hit.Type.TYPELESS);
 FREEZE_FIREBALL.setMaxHit(0);
 FREEZE_FIREBALL.setAttackSpeed(10);
 FREEZE_FIREBALL.setTargetGraphic(new Graphic(369));
-FREEZE_FIREBALL.setProjectileID(395);
+FREEZE_FIREBALL.setProjectileId(395);
 FREEZE_FIREBALL.setProjectileStartHeight(30);
 FREEZE_FIREBALL.setIgnorePrayer(true);
 FREEZE_FIREBALL.setMagicBind(15);
@@ -44,7 +44,7 @@ cs = new NCombatScript() {
     },
 
     tick: function() {
-        if (lastCombatStyle != null && lastCombatStyle.getProjectileID() == 1481 && npc.getHitDelay() == 1) {
+        if (lastCombatStyle != null && lastCombatStyle.getProjectileId() == 1481 && npc.getHitDelay() == 1) {
             npc.setAnimation(-1);
         }
         if (npc.getEngagingEntity() != null && npc.getController().getMapObject(32000, npc.getEngagingEntity())) {
@@ -96,7 +96,7 @@ cs = new NCombatScript() {
 
     applyAttackEndHook: function(combatStyle, entity, hitEvent) {
         lastCombatStyle = combatStyle;
-        if (combatStyle.getProjectileID() == 1471 && entity instanceof Player) {
+        if (combatStyle.getProjectileId() == 1471 && entity instanceof Player) {
             entity.getPrayer().deactivateAll();
             entity.getGameEncoder().sendMessage("<col=ff0000>Your prayers have been disabled!");
         } else if (combatStyle == FREEZE_FIREBALL) {
@@ -159,7 +159,7 @@ cs = new NCombatScript() {
         if ((player.getCombat().getNPCKillCount(npc.getDef().getKillCountName()) % 50) != 0) {
             return;
         }
-        npc.getController().addMapItem(new Item(ItemID.VORKATHS_HEAD_21907, 1), dropTile, player);
-        player.getCombat().logNPCItem(npc.getDef().getKillCountName(), ItemID.VORKATHS_HEAD_21907, 1);
+        npc.getController().addMapItem(new Item(ItemId.VORKATHS_HEAD_21907, 1), dropTile, player);
+        player.getCombat().logNPCItem(npc.getDef().getKillCountName(), ItemId.VORKATHS_HEAD_21907, 1);
     }
 };

@@ -5,7 +5,7 @@ var moveDelay = 25;
 instance = new NScript() {
     setNPC: function(n) {
         npc = n;
-        if (npc.getID() == 7731) {
+        if (npc.getId() == 7731) {
             moveDelay += 3;
         }
     },

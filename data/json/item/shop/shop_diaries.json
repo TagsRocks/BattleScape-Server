@@ -2,25 +2,25 @@
   "name": "Achievement Diaries",
   "items": [
     {
-      "id": "ItemID.FALADOR_SHIELD_1",
+      "id": "ItemId.FALADOR_SHIELD_1",
       "price": 10000,
       "diaryName": "FALADOR",
       "diaryDifficulty": "EASY"
     },
     {
-      "id": "ItemID.FALADOR_SHIELD_2",
+      "id": "ItemId.FALADOR_SHIELD_2",
       "price": 20000,
       "diaryName": "FALADOR",
       "diaryDifficulty": "MEDIUM"
     },
     {
-      "id": "ItemID.FALADOR_SHIELD_3",
+      "id": "ItemId.FALADOR_SHIELD_3",
       "price": 40000,
       "diaryName": "FALADOR",
       "diaryDifficulty": "HARD"
     },
     {
-      "id": "ItemID.FALADOR_SHIELD_4",
+      "id": "ItemId.FALADOR_SHIELD_4",
       "price": 80000,
       "diaryName": "FALADOR",
       "diaryDifficulty": "ELITE"

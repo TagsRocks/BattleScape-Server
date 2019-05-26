@@ -1,0 +1,12 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Update Script Helper",
+            "type": "shell",
+            "command": "cd bin;rm ../data/lib/scripthelper.jar;zip -r ../data/lib/scripthelper.jar com -i \"*.class\";cd ../data/lib; java -cp emptymethods.jar Main scripthelper.jar scripthelper.jar"
+        }
+    ]
+}

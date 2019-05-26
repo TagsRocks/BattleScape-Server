@@ -40,8 +40,8 @@ cs = new NCombatScript() {
                 }
             }
         }
-        if (npc.isDead() && npc.getID() != PHASE_IDS[phase + 1]) {
-            npc.setTransformationID(PHASE_IDS[phase + 1]);
+        if (npc.isDead() && npc.getId() != PHASE_IDS[phase + 1]) {
+            npc.setTransformationId(PHASE_IDS[phase + 1]);
         }
         if (npc.isLocked()) {
             return;
@@ -70,7 +70,7 @@ cs = new NCombatScript() {
                 || phase == 1 && npc.getHitpoints() <= npc.getMaxHitpoints() * 0.5
                 || phase == 2 && npc.getHitpoints() <= npc.getMaxHitpoints() * 0.3) {
             phase++;
-            npc.setTransformationID(PHASE_IDS[phase]);
+            npc.setTransformationId(PHASE_IDS[phase]);
             this.spawnNylocasMatomenos();
             if (phase == 3) {
                 increasedDamage += 17;

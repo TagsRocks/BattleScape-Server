@@ -4,7 +4,7 @@ SPECIAL_ATTACK.setSubType(Hit.Type.TYPELESS);
 SPECIAL_ATTACK.setAnimation(7815);
 SPECIAL_ATTACK.setMaxHit(38);
 SPECIAL_ATTACK.setAttackSpeed(4);
-SPECIAL_ATTACK.setProjectileID(1453);
+SPECIAL_ATTACK.setProjectileId(1453);
 SPECIAL_ATTACK.setIgnorePrayer(true);
 SPECIAL_ATTACK.setSpeedMinDistance(8);
 SPECIAL_ATTACK.setMagicBind(6);
@@ -27,18 +27,18 @@ cs = new NCombatScript() {
             var totemMiddle = player.hasItem(19681);
             var totemTop = player.hasItem(19683);
             var hasAll = totemBase && totemMiddle && totemTop;
-            var totemIDs = new ArrayList();
+            var totemIds = new ArrayList();
             if (!totemBase || hasAll) {
-                totemIDs.add(19679);
+                totemIds.add(19679);
             }
             if (!totemMiddle || hasAll) {
-                totemIDs.add(19681);
+                totemIds.add(19681);
             }
             if (!totemTop || hasAll) {
-                totemIDs.add(19683);
+                totemIds.add(19683);
             }
-            var itemID = totemIDs.get(Utils.randomE(totemIDs.size()));
-            npc.getController().addMapItem(new Item(itemID, 1), dropTile, player);
+            var itemId = totemIds.get(Utils.randomE(totemIds.size()));
+            npc.getController().addMapItem(new Item(itemId, 1), dropTile, player);
         }
     }
 };

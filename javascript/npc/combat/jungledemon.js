@@ -11,6 +11,6 @@ cs = new NCombatScript() {
         player.getCombat().setMonkeyMadness(true);
         player.getMovement().teleport(3109, 3514, 0);
         player.getGameEncoder().sendMessage("<col=ff0000>You have completed Monkey Madness!");
-        player.getInventory().addOrDropItem(ItemID.COINS, 25000);
+        player.getInventory().addOrDropItem(ItemId.COINS, 25000);
     }
 };

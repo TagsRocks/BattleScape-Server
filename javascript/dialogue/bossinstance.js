@@ -163,7 +163,7 @@ var LADDER_DOWN = 1;
 var LADDER_UP = 2;
 
 instance = new DialogueScript() {
-    execute: function(player, index, childID, slot) {
+    execute: function(player, index, childId, slot) {
         if (player.isLocked()) {
             return;
         }
@@ -192,8 +192,8 @@ instance = new DialogueScript() {
         var tile = null;
         var teleportType = NORMAL;
         var controllerVariable = null;
-        var deleteItemID = -1;
-        var slayerID = -1;
+        var deleteItemId = -1;
+        var slayerId = -1;
         if (index == 1) {
             bossName = "boss_instance_corporeal_beast";
             tile = new Tile(2974, 4384, 2);
@@ -207,12 +207,12 @@ instance = new DialogueScript() {
         } else if (index == 4) {
             bossName = "boss_instance_cerberus";
             tile = new Tile(1304, 1291, 0);
-            slayerID = 5862;
+            slayerId = 5862;
         } else if (index == 5) {
             bossName = "boss_instance_thermonuclear_smoke_devil";
             tile = new Tile(2376, 9452, 0);
             teleportType = LADDER_DOWN;
-            slayerID = 499;
+            slayerId = 499;
         } else if (index == 6) {
             bossName = "boss_instance_giant_mole";
             tile = new Tile(1752, 5236, 0);
@@ -253,7 +253,7 @@ instance = new DialogueScript() {
             bossName = "boss_instance_kree'arra";
             tile = new Tile(2839, 5296, 2);
             controllerVariable = "clear_armadyl_killcount";
-            deleteItemID = 11942;
+            deleteItemId = 11942;
         } else if (index == 8) {
             var killcount = player.getController().getVariable("get_bandos_killcount");
             if (killcount == null) {
@@ -266,7 +266,7 @@ instance = new DialogueScript() {
             bossName = "boss_instance_general_graardor";
             tile = new Tile(2864, 5354, 2);
             controllerVariable = "clear_bandos_killcount";
-            deleteItemID = 11942;
+            deleteItemId = 11942;
         } else if (index == 9) {
             var killcount = player.getController().getVariable("get_zamorak_killcount");
             if (killcount == null) {
@@ -279,7 +279,7 @@ instance = new DialogueScript() {
             bossName = "boss_instance_k'ril_tsutsaroth";
             tile = new Tile(2925, 5331, 2);
             controllerVariable = "clear_zamorak_killcount";
-            deleteItemID = 11942;
+            deleteItemId = 11942;
         } else if (index == 10) {
             var killcount = player.getController().getVariable("get_saradomin_killcount");
             if (killcount == null) {
@@ -292,16 +292,16 @@ instance = new DialogueScript() {
             bossName = "boss_instance_commander_zilyana";
             tile = new Tile(2907, 5265, 0);
             controllerVariable = "clear_saradomin_killcount";
-            deleteItemID = 11942;
+            deleteItemId = 11942;
         } else if (index == 11) {
             bossName = "boss_instance_abyssal_sire";
             tile = new Tile(2983, 4820, 0);
-            slayerID = NpcID.ABYSSAL_SIRE_350;
+            slayerId = NpcId.ABYSSAL_SIRE_350;
         } else if (index == 12) {
             bossName = "boss_instance_kraken";
             tile = new Tile(2280, 10022, 0);
             teleportType = LADDER_DOWN;
-            slayerID = NpcID.KRAKEN_291;
+            slayerId = NpcId.KRAKEN_291;
         } else if (index == 13) {
             bossName = "boss_instance_kalphite_queen";
             tile = new Tile(3506, 9494, 0);
@@ -309,11 +309,11 @@ instance = new DialogueScript() {
         } else if (index == 14) {
             bossName = "boss_instance_hydra";
             tile = new Tile(1356, 10258, 0);
-            slayerID = NpcID.ALCHEMICAL_HYDRA_426;
+            slayerId = NpcId.ALCHEMICAL_HYDRA_426;
         }
-        var requiresRoWI = true; //player.getSlayer().isTask(slayerID); // Enable to allow free instances on task
+        var requiresRoWI = true; //player.getSlayer().isTask(slayerId); // Enable to allow free instances on task
         if ((bossName.equals("boss_instance_kraken") || bossName.equals("boss_instance_hydra"))
-                && player.getSlayer().isAnyTask(slayerID) || player.isUsergroup(Player.GROUP_YOUTUBER)) {
+                && player.getSlayer().isAnyTask(slayerId) || player.isUsergroup(SqlRank.YOUTUBER)) {
             // Kraken/hydra only has one spawn
             requiresRoWI = false;
         }
@@ -321,7 +321,7 @@ instance = new DialogueScript() {
             if (controllerVariable != null) {
                 player.getController().getVariable(controllerVariable);
             }
-            player.getInventory().deleteItem(deleteItemID, 1);
+            player.getInventory().deleteItem(deleteItemId, 1);
             if (teleportType == NORMAL) {
                 player.getMovement().teleport(tile);
             } else if (teleportType == LADDER_UP) {
@@ -343,7 +343,7 @@ instance = new DialogueScript() {
             if (controllerVariable != null) {
                 player.getController().getVariable(controllerVariable);
             }
-            player.getInventory().deleteItem(deleteItemID, 1);
+            player.getInventory().deleteItem(deleteItemId, 1);
             if (requiresRoWI) {
                 player.getCharges().depleteRoWICharge(1);
             }
@@ -371,7 +371,7 @@ instance = new DialogueScript() {
             if (controllerVariable != null) {
                 player.getController().getVariable(controllerVariable);
             }
-            player.getInventory().deleteItem(deleteItemID, 1);
+            player.getInventory().deleteItem(deleteItemId, 1);
             player.getCombat().setDamageInflicted(0);
             player.setController(new BossInstancePC());
             player.getController().setInstance(playerInstance);

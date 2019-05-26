@@ -61,7 +61,7 @@ cs = new NCombatScript() {
 
     /* @Override */
     restore: function() {
-        if (npc.getID() != NPC_IDS[HEAD]) {
+        if (npc.getId() != NPC_IDS[HEAD]) {
             return;
         }
         this.despawn(HEAD, 0, true);
@@ -75,7 +75,7 @@ cs = new NCombatScript() {
 
     /* @Override */
     tick: function() {
-        if (npc.getID() != NPC_IDS[HEAD]) {
+        if (npc.getId() != NPC_IDS[HEAD]) {
             return;
         }
         if (!loaded) {
@@ -153,7 +153,7 @@ cs = new NCombatScript() {
 
     /* @Override */
     damageReceivedHook: function(damage, entity, hitType, defenceType) {
-        if (npc.getID() == NPC_IDS[LEFT_HAND] && phase < 3 && !olm[LEFT_HAND].isLocked() && !olm[RIGHT_HAND].isLocked()
+        if (npc.getId() == NPC_IDS[LEFT_HAND] && phase < 3 && !olm[LEFT_HAND].isLocked() && !olm[RIGHT_HAND].isLocked()
                 && !olm[RIGHT_HAND].isDead() && (npc.getHitpoints() * 0.8) <= olm[RIGHT_HAND].getHitpoints()
                 && damage > 0 && Utils.randomE(16) == 0) {
             npc.setLock(44);
@@ -188,7 +188,7 @@ cs = new NCombatScript() {
 
     /* @Override */
     canBeAttackedHook: function(player, sendMessage, hitType) {
-        return npc.getID() != NPC_IDS[HEAD] || visible && phase == 3 && olm[LEFT_HAND].isLocked()
+        return npc.getId() != NPC_IDS[HEAD] || visible && phase == 3 && olm[LEFT_HAND].isLocked()
                 && olm[RIGHT_HAND].isLocked();
     },
 
@@ -235,9 +235,9 @@ cs = new NCombatScript() {
     },
 
     getIndex: function() {
-        if (npc.getID() == NPC_IDS[LEFT_HAND]) {
+        if (npc.getId() == NPC_IDS[LEFT_HAND]) {
             return LEFT_HAND;
-        } else if (npc.getID() == NPC_IDS[RIGHT_HAND]) {
+        } else if (npc.getId() == NPC_IDS[RIGHT_HAND]) {
             return RIGHT_HAND;
         }
         return HEAD;
@@ -370,7 +370,7 @@ cs = new NCombatScript() {
         olm[RIGHT_HAND].getCombat().getCombatScript().setVariable("objects", objects);
         for each (var player in npc.getController().getPlayers()) {
             for (var i = 0; i < objects.length; i++) {
-                player.getGameEncoder().sendMapObjectAnimation(new MapObject(objects[i].getID() - 1,
+                player.getGameEncoder().sendMapObjectAnimation(new MapObject(objects[i].getId() - 1,
                         objects[i]), SPAWN_ANIMATIONS[i]);
             }
         }
@@ -508,7 +508,7 @@ cs = new NCombatScript() {
                         + player1.getUsername() + "</col>! The magical power will enact soon.");
             }
         }
-        var graphicIDs = [ 1359, 1360, 1361, 1362 ];
+        var graphicIds = [ 1359, 1360, 1361, 1362 ];
         var event = new Event(Event.MILLIS_600) {
             execute: function() {
                 if (event.getExecutions() == Event.MILLIS_5400) {
@@ -516,7 +516,7 @@ cs = new NCombatScript() {
                 }
                 var graphicIndex = -1;
                 for each (var entry in playerMap.entrySet()) {
-                    graphicIndex = (graphicIndex + 1) % graphicIDs.length;
+                    graphicIndex = (graphicIndex + 1) % graphicIds.length;
                     var key = entry.getKey();
                     var value = entry.getValue();
                     if (!key.isVisible() || !value.isVisible() || !npc.withinDistance(key, 32)
@@ -545,7 +545,7 @@ cs = new NCombatScript() {
                             }
                         }
                     } else {
-                        var graphic = new Graphic(graphicIDs[graphicIndex]);
+                        var graphic = new Graphic(graphicIds[graphicIndex]);
                         key.setGraphic(graphic);
                         if (value instanceof Player) {
                             value.setGraphic(graphic);
@@ -570,8 +570,8 @@ cs = new NCombatScript() {
         if (players.isEmpty()) {
             return;
         }
-        var projectileIDs = [ 1345, 1343, 1341 ];
-        var contactIDs = [ 1346, 1344, 1342 ];
+        var projectileIds = [ 1345, 1343, 1341 ];
+        var contactIds = [ 1346, 1344, 1342 ];
         var types = [];
         var projectile = cs.getSpeed(12);
         for each (var player in players) {
@@ -595,9 +595,9 @@ cs = new NCombatScript() {
                 player.getPrayer().adjustPoints(-(player.getPrayer().getPoints() / 2));
             }
             player.getGameEncoder().sendMessage(message);
-            cs.sendMapProjectile(player, npc, player, projectileIDs[index], 43, 31, projectile.clientDelay,
+            cs.sendMapProjectile(player, npc, player, projectileIds[index], 43, 31, projectile.clientDelay,
                     projectile.clientSpeed, 16, 64);
-            player.setGraphic(new Graphic(contactIDs[index], 124, projectile.getContactDelay()));
+            player.setGraphic(new Graphic(contactIds[index], 124, projectile.getContactDelay()));
         }
         var event = new Event(projectile.eventDelay) {
             execute: function() {

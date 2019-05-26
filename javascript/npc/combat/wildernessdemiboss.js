@@ -7,7 +7,7 @@ cs = new NCombatScript() {
 
     dropItemHook: function(player, dropTile, dropForIndex, hasRoWICharge) {
         if (Utils.randomE(5) == 0) {
-            npc.getController().addMapItem(new Item(ItemID.MYSTERIOUS_EMBLEM, 1), dropTile, player);
+            npc.getController().addMapItem(new Item(ItemId.MYSTERIOUS_EMBLEM, 1), dropTile, player);
         }
     }
 };

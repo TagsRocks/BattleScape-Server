@@ -2,218 +2,218 @@
   "currency": 11849,
   "name": "Agility Shop",
   "items": [
-    { "id": "ItemID.AMYLASE_PACK", "price": 10 },
+    { "id": "ItemId.AMYLASE_PACK", "price": 10 },
     {
-      "id": "ItemID.GRACEFUL_HOOD_13579",
+      "id": "ItemId.GRACEFUL_HOOD_13579",
       "price": 15,
-      "costItems": [ [ { "id": "ItemID.GRACEFUL_HOOD",  "amount": 1 } ] ]
+      "costItems": [ [ { "id": "ItemId.GRACEFUL_HOOD",  "amount": 1 } ] ]
     },
     {
-      "id": "ItemID.GRACEFUL_TOP_13583",
+      "id": "ItemId.GRACEFUL_TOP_13583",
       "price": 15,
-      "costItems": [ [ { "id": "ItemID.GRACEFUL_TOP",  "amount": 1 } ] ]
+      "costItems": [ [ { "id": "ItemId.GRACEFUL_TOP",  "amount": 1 } ] ]
     },
     {
-      "id": "ItemID.GRACEFUL_LEGS_13585",
+      "id": "ItemId.GRACEFUL_LEGS_13585",
       "price": 15,
-      "costItems": [ [ { "id": "ItemID.GRACEFUL_LEGS",  "amount": 1 } ] ]
+      "costItems": [ [ { "id": "ItemId.GRACEFUL_LEGS",  "amount": 1 } ] ]
     },
     {
-      "id": "ItemID.GRACEFUL_GLOVES_13587",
+      "id": "ItemId.GRACEFUL_GLOVES_13587",
       "price": 15,
-      "costItems": [ [ { "id": "ItemID.GRACEFUL_GLOVES",  "amount": 1 } ] ]
+      "costItems": [ [ { "id": "ItemId.GRACEFUL_GLOVES",  "amount": 1 } ] ]
     },
     {
-      "id": "ItemID.GRACEFUL_BOOTS_13589",
+      "id": "ItemId.GRACEFUL_BOOTS_13589",
       "price": 15,
-      "costItems": [ [ { "id": "ItemID.GRACEFUL_BOOTS",  "amount": 1 } ] ]
+      "costItems": [ [ { "id": "ItemId.GRACEFUL_BOOTS",  "amount": 1 } ] ]
     },
     {
-      "id": "ItemID.GRACEFUL_CAPE_13581",
+      "id": "ItemId.GRACEFUL_CAPE_13581",
       "price": 15,
-      "costItems": [ [ { "id": "ItemID.GRACEFUL_CAPE",  "amount": 1 } ] ]
+      "costItems": [ [ { "id": "ItemId.GRACEFUL_CAPE",  "amount": 1 } ] ]
     },
     {
-      "id": "ItemID.GRACEFUL_HOOD_13591",
+      "id": "ItemId.GRACEFUL_HOOD_13591",
       "price": 15,
-      "costItems": [ [ { "id": "ItemID.GRACEFUL_HOOD",  "amount": 1 } ] ]
+      "costItems": [ [ { "id": "ItemId.GRACEFUL_HOOD",  "amount": 1 } ] ]
     },
     {
-      "id": "ItemID.GRACEFUL_TOP_13595",
+      "id": "ItemId.GRACEFUL_TOP_13595",
       "price": 15,
-      "costItems": [ [ { "id": "ItemID.GRACEFUL_TOP",  "amount": 1 } ] ]
+      "costItems": [ [ { "id": "ItemId.GRACEFUL_TOP",  "amount": 1 } ] ]
     },
     {
-      "id": "ItemID.GRACEFUL_LEGS_13597",
+      "id": "ItemId.GRACEFUL_LEGS_13597",
       "price": 15,
-      "costItems": [ [ { "id": "ItemID.GRACEFUL_LEGS",  "amount": 1 } ] ]
+      "costItems": [ [ { "id": "ItemId.GRACEFUL_LEGS",  "amount": 1 } ] ]
     },
     {
-      "id": "ItemID.GRACEFUL_GLOVES_13599",
+      "id": "ItemId.GRACEFUL_GLOVES_13599",
       "price": 15,
-      "costItems": [ [ { "id": "ItemID.GRACEFUL_GLOVES",  "amount": 1 } ] ]
+      "costItems": [ [ { "id": "ItemId.GRACEFUL_GLOVES",  "amount": 1 } ] ]
     },
     {
-      "id": "ItemID.GRACEFUL_BOOTS_13601",
+      "id": "ItemId.GRACEFUL_BOOTS_13601",
       "price": 15,
-      "costItems": [ [ { "id": "ItemID.GRACEFUL_BOOTS",  "amount": 1 } ] ]
+      "costItems": [ [ { "id": "ItemId.GRACEFUL_BOOTS",  "amount": 1 } ] ]
     },
     {
-      "id": "ItemID.GRACEFUL_CAPE_13593",
+      "id": "ItemId.GRACEFUL_CAPE_13593",
       "price": 15,
-      "costItems": [ [ { "id": "ItemID.GRACEFUL_CAPE",  "amount": 1 } ] ]
+      "costItems": [ [ { "id": "ItemId.GRACEFUL_CAPE",  "amount": 1 } ] ]
     },
     {
-      "id": "ItemID.GRACEFUL_HOOD_13603",
+      "id": "ItemId.GRACEFUL_HOOD_13603",
       "price": 15,
-      "costItems": [ [ { "id": "ItemID.GRACEFUL_HOOD",  "amount": 1 } ] ]
+      "costItems": [ [ { "id": "ItemId.GRACEFUL_HOOD",  "amount": 1 } ] ]
     },
     {
-      "id": "ItemID.GRACEFUL_TOP_13607",
+      "id": "ItemId.GRACEFUL_TOP_13607",
       "price": 15,
-      "costItems": [ [ { "id": "ItemID.GRACEFUL_TOP",  "amount": 1 } ] ]
+      "costItems": [ [ { "id": "ItemId.GRACEFUL_TOP",  "amount": 1 } ] ]
     },
     {
-      "id": "ItemID.GRACEFUL_LEGS_13609",
+      "id": "ItemId.GRACEFUL_LEGS_13609",
       "price": 15,
-      "costItems": [ [ { "id": "ItemID.GRACEFUL_LEGS",  "amount": 1 } ] ]
+      "costItems": [ [ { "id": "ItemId.GRACEFUL_LEGS",  "amount": 1 } ] ]
     },
     {
-      "id": "ItemID.GRACEFUL_GLOVES_13611",
+      "id": "ItemId.GRACEFUL_GLOVES_13611",
       "price": 15,
-      "costItems": [ [ { "id": "ItemID.GRACEFUL_GLOVES",  "amount": 1 } ] ]
+      "costItems": [ [ { "id": "ItemId.GRACEFUL_GLOVES",  "amount": 1 } ] ]
     },
     {
-      "id": "ItemID.GRACEFUL_BOOTS_13613",
+      "id": "ItemId.GRACEFUL_BOOTS_13613",
       "price": 15,
-      "costItems": [ [ { "id": "ItemID.GRACEFUL_BOOTS",  "amount": 1 } ] ]
+      "costItems": [ [ { "id": "ItemId.GRACEFUL_BOOTS",  "amount": 1 } ] ]
     },
     {
-      "id": "ItemID.GRACEFUL_CAPE_13605",
+      "id": "ItemId.GRACEFUL_CAPE_13605",
       "price": 15,
-      "costItems": [ [ { "id": "ItemID.GRACEFUL_CAPE",  "amount": 1 } ] ]
+      "costItems": [ [ { "id": "ItemId.GRACEFUL_CAPE",  "amount": 1 } ] ]
     },
     {
-      "id": "ItemID.GRACEFUL_HOOD_13615",
+      "id": "ItemId.GRACEFUL_HOOD_13615",
       "price": 15,
-      "costItems": [ [ { "id": "ItemID.GRACEFUL_HOOD",  "amount": 1 } ] ]
+      "costItems": [ [ { "id": "ItemId.GRACEFUL_HOOD",  "amount": 1 } ] ]
     },
     {
-      "id": "ItemID.GRACEFUL_TOP_13619",
+      "id": "ItemId.GRACEFUL_TOP_13619",
       "price": 15,
-      "costItems": [ [ { "id": "ItemID.GRACEFUL_TOP",  "amount": 1 } ] ]
+      "costItems": [ [ { "id": "ItemId.GRACEFUL_TOP",  "amount": 1 } ] ]
     },
     {
-      "id": "ItemID.GRACEFUL_LEGS_13621",
+      "id": "ItemId.GRACEFUL_LEGS_13621",
       "price": 15,
-      "costItems": [ [ { "id": "ItemID.GRACEFUL_LEGS",  "amount": 1 } ] ]
+      "costItems": [ [ { "id": "ItemId.GRACEFUL_LEGS",  "amount": 1 } ] ]
     },
     {
-      "id": "ItemID.GRACEFUL_GLOVES_13623",
+      "id": "ItemId.GRACEFUL_GLOVES_13623",
       "price": 15,
-      "costItems": [ [ { "id": "ItemID.GRACEFUL_GLOVES",  "amount": 1 } ] ]
+      "costItems": [ [ { "id": "ItemId.GRACEFUL_GLOVES",  "amount": 1 } ] ]
     },
     {
-      "id": "ItemID.GRACEFUL_BOOTS_13625",
+      "id": "ItemId.GRACEFUL_BOOTS_13625",
       "price": 15,
-      "costItems": [ [ { "id": "ItemID.GRACEFUL_BOOTS",  "amount": 1 } ] ]
+      "costItems": [ [ { "id": "ItemId.GRACEFUL_BOOTS",  "amount": 1 } ] ]
     },
     {
-      "id": "ItemID.GRACEFUL_CAPE_13617",
+      "id": "ItemId.GRACEFUL_CAPE_13617",
       "price": 15,
-      "costItems": [ [ { "id": "ItemID.GRACEFUL_CAPE",  "amount": 1 } ] ]
+      "costItems": [ [ { "id": "ItemId.GRACEFUL_CAPE",  "amount": 1 } ] ]
     },
     {
-      "id": "ItemID.GRACEFUL_HOOD_13627",
+      "id": "ItemId.GRACEFUL_HOOD_13627",
       "price": 15,
-      "costItems": [ [ { "id": "ItemID.GRACEFUL_HOOD",  "amount": 1 } ] ]
+      "costItems": [ [ { "id": "ItemId.GRACEFUL_HOOD",  "amount": 1 } ] ]
     },
     {
-      "id": "ItemID.GRACEFUL_TOP_13631",
+      "id": "ItemId.GRACEFUL_TOP_13631",
       "price": 15,
-      "costItems": [ [ { "id": "ItemID.GRACEFUL_TOP",  "amount": 1 } ] ]
+      "costItems": [ [ { "id": "ItemId.GRACEFUL_TOP",  "amount": 1 } ] ]
     },
     {
-      "id": "ItemID.GRACEFUL_LEGS_13633",
+      "id": "ItemId.GRACEFUL_LEGS_13633",
       "price": 15,
-      "costItems": [ [ { "id": "ItemID.GRACEFUL_LEGS",  "amount": 1 } ] ]
+      "costItems": [ [ { "id": "ItemId.GRACEFUL_LEGS",  "amount": 1 } ] ]
     },
     {
-      "id": "ItemID.GRACEFUL_GLOVES_13635",
+      "id": "ItemId.GRACEFUL_GLOVES_13635",
       "price": 15,
-      "costItems": [ [ { "id": "ItemID.GRACEFUL_GLOVES",  "amount": 1 } ] ]
+      "costItems": [ [ { "id": "ItemId.GRACEFUL_GLOVES",  "amount": 1 } ] ]
     },
     {
-      "id": "ItemID.GRACEFUL_BOOTS_13637",
+      "id": "ItemId.GRACEFUL_BOOTS_13637",
       "price": 15,
-      "costItems": [ [ { "id": "ItemID.GRACEFUL_BOOTS",  "amount": 1 } ] ]
+      "costItems": [ [ { "id": "ItemId.GRACEFUL_BOOTS",  "amount": 1 } ] ]
     },
     {
-      "id": "ItemID.GRACEFUL_CAPE_13629",
+      "id": "ItemId.GRACEFUL_CAPE_13629",
       "price": 15,
-      "costItems": [ [ { "id": "ItemID.GRACEFUL_CAPE",  "amount": 1 } ] ]
+      "costItems": [ [ { "id": "ItemId.GRACEFUL_CAPE",  "amount": 1 } ] ]
     },
     {
-      "id": "ItemID.GRACEFUL_HOOD_13667",
+      "id": "ItemId.GRACEFUL_HOOD_13667",
       "price": 15,
-      "costItems": [ [ { "id": "ItemID.GRACEFUL_HOOD",  "amount": 1 } ] ]
+      "costItems": [ [ { "id": "ItemId.GRACEFUL_HOOD",  "amount": 1 } ] ]
     },
     {
-      "id": "ItemID.GRACEFUL_TOP_13671",
+      "id": "ItemId.GRACEFUL_TOP_13671",
       "price": 15,
-      "costItems": [ [ { "id": "ItemID.GRACEFUL_TOP",  "amount": 1 } ] ]
+      "costItems": [ [ { "id": "ItemId.GRACEFUL_TOP",  "amount": 1 } ] ]
     },
     {
-      "id": "ItemID.GRACEFUL_LEGS_13673",
+      "id": "ItemId.GRACEFUL_LEGS_13673",
       "price": 15,
-      "costItems": [ [ { "id": "ItemID.GRACEFUL_LEGS",  "amount": 1 } ] ]
+      "costItems": [ [ { "id": "ItemId.GRACEFUL_LEGS",  "amount": 1 } ] ]
     },
     {
-      "id": "ItemID.GRACEFUL_GLOVES_13675",
+      "id": "ItemId.GRACEFUL_GLOVES_13675",
       "price": 15,
-      "costItems": [ [ { "id": "ItemID.GRACEFUL_GLOVES",  "amount": 1 } ] ]
+      "costItems": [ [ { "id": "ItemId.GRACEFUL_GLOVES",  "amount": 1 } ] ]
     },
     {
-      "id": "ItemID.GRACEFUL_BOOTS_13677",
+      "id": "ItemId.GRACEFUL_BOOTS_13677",
       "price": 15,
-      "costItems": [ [ { "id": "ItemID.GRACEFUL_BOOTS",  "amount": 1 } ] ]
+      "costItems": [ [ { "id": "ItemId.GRACEFUL_BOOTS",  "amount": 1 } ] ]
     },
     {
-      "id": "ItemID.GRACEFUL_CAPE_13669",
+      "id": "ItemId.GRACEFUL_CAPE_13669",
       "price": 15,
-      "costItems": [ [ { "id": "ItemID.GRACEFUL_CAPE",  "amount": 1 } ] ]
+      "costItems": [ [ { "id": "ItemId.GRACEFUL_CAPE",  "amount": 1 } ] ]
     },
     {
-      "id": "ItemID.GRACEFUL_HOOD_21061",
+      "id": "ItemId.GRACEFUL_HOOD_21061",
       "price": 15,
-      "costItems": [ [ { "id": "ItemID.GRACEFUL_HOOD",  "amount": 1 } ] ]
+      "costItems": [ [ { "id": "ItemId.GRACEFUL_HOOD",  "amount": 1 } ] ]
     },
     {
-      "id": "ItemID.GRACEFUL_TOP_21067",
+      "id": "ItemId.GRACEFUL_TOP_21067",
       "price": 15,
-      "costItems": [ [ { "id": "ItemID.GRACEFUL_TOP",  "amount": 1 } ] ]
+      "costItems": [ [ { "id": "ItemId.GRACEFUL_TOP",  "amount": 1 } ] ]
     },
     {
-      "id": "ItemID.GRACEFUL_LEGS_21070",
+      "id": "ItemId.GRACEFUL_LEGS_21070",
       "price": 15,
-      "costItems": [ [ { "id": "ItemID.GRACEFUL_LEGS",  "amount": 1 } ] ]
+      "costItems": [ [ { "id": "ItemId.GRACEFUL_LEGS",  "amount": 1 } ] ]
     },
     {
-      "id": "ItemID.GRACEFUL_GLOVES_21073",
+      "id": "ItemId.GRACEFUL_GLOVES_21073",
       "price": 15,
-      "costItems": [ [ { "id": "ItemID.GRACEFUL_GLOVES",  "amount": 1 } ] ]
+      "costItems": [ [ { "id": "ItemId.GRACEFUL_GLOVES",  "amount": 1 } ] ]
     },
     {
-      "id": "ItemID.GRACEFUL_BOOTS_21076",
+      "id": "ItemId.GRACEFUL_BOOTS_21076",
       "price": 15,
-      "costItems": [ [ { "id": "ItemID.GRACEFUL_BOOTS",  "amount": 1 } ] ]
+      "costItems": [ [ { "id": "ItemId.GRACEFUL_BOOTS",  "amount": 1 } ] ]
     },
     {
-      "id": "ItemID.GRACEFUL_CAPE_21064",
+      "id": "ItemId.GRACEFUL_CAPE_21064",
       "price": 15,
-      "costItems": [ [ { "id": "ItemID.GRACEFUL_CAPE",  "amount": 1 } ] ]
+      "costItems": [ [ { "id": "ItemId.GRACEFUL_CAPE",  "amount": 1 } ] ]
     },
-    { "id": "ItemID.CLUE_BOX", "price": 15 },
-    { "id": "ItemID.MONKEY_19556", "price": 100 }
+    { "id": "ItemId.CLUE_BOX", "price": 15 },
+    { "id": "ItemId.MONKEY_19556", "price": 100 }
   ]
 }

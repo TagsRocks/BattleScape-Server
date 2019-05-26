@@ -1,5 +1,5 @@
-var COMBAT_ID = NpcID.CURSED_KRAKEN_127_16013;
-var WHIRLPOOL_ID = NpcID.CURSED_WHIRLPOOL_127_16014;
+var COMBAT_ID = NpcId.CURSED_KRAKEN_127_16013;
+var WHIRLPOOL_ID = NpcId.CURSED_WHIRLPOOL_127_16014;
 
 var npc = null;
 
@@ -12,12 +12,12 @@ cs = new NCombatScript() {
         if (npc.isLocked()) {
             return;
         }
-        if (npc.getCombatDelay() == 0 && !npc.getAttacking() && npc.getID() != WHIRLPOOL_ID) {
-            npc.setTransformationID(WHIRLPOOL_ID);
+        if (npc.getCombatDelay() == 0 && !npc.getAttacking() && npc.getId() != WHIRLPOOL_ID) {
+            npc.setTransformationId(WHIRLPOOL_ID);
         } else if (npc.getCombatDelay() > 0 || npc.getAttacking()) {
             npc.getMovement().clear();
-            if (npc.getID() != COMBAT_ID) {
-                npc.setTransformationID(COMBAT_ID);
+            if (npc.getId() != COMBAT_ID) {
+                npc.setTransformationId(COMBAT_ID);
                 npc.setAnimation(7135);
                 npc.setHitDelay(4);
             }

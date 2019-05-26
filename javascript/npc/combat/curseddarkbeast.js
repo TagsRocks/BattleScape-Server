@@ -4,7 +4,7 @@ SPECIAL_ATTACK.setAnimation(2731);
 SPECIAL_ATTACK.setMaxHit(25);
 SPECIAL_ATTACK.setAttackSpeed(2);
 SPECIAL_ATTACK.setTargetGraphic(new Graphic(101, 124));
-SPECIAL_ATTACK.setProjectileID(130);
+SPECIAL_ATTACK.setProjectileId(130);
 SPECIAL_ATTACK.setSpeedMinDistance(8);
 SPECIAL_ATTACK.setTargetTile(true);
 SPECIAL_ATTACK.setTargetTileRadius(1);
