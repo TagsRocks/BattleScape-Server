@@ -53,7 +53,7 @@ entries.add(obj4);
 obj4.setSelection(title, Utils.toStringArray(lines, true), Utils.toStringArray(actions, true));
 
 instance = new DialogueScript() {
-    execute: function(player, index, childID, slot) {
+    execute: function(player, index, childId, slot) {
         if (player.isLocked()) {
             return;
         }
@@ -86,9 +86,9 @@ instance = new DialogueScript() {
                 PKRaffle.collect(player);
             }
         } else if (index == 4) {
-            var itemID = player.getAttributeInt("wishing_well_item_id");
+            var itemId = player.getAttributeInt("wishing_well_item_id");
             player.getWidgetManager().removeInteractiveWidgets();
-            WishingWell.donateItemForBoost(player, itemID);
+            WishingWell.donateItemForBoost(player, itemId);
         }
     },
 

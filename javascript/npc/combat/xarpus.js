@@ -12,7 +12,7 @@ PHASE_3_ATTACK.setAnimation(8059);
 PHASE_3_ATTACK.setMaxHit(49);
 PHASE_3_ATTACK.setAttackSpeed(6);
 PHASE_3_ATTACK.setTargetGraphic(new Graphic(1556));
-PHASE_3_ATTACK.setProjectileID(1555);
+PHASE_3_ATTACK.setProjectileId(1555);
 PHASE_3_ATTACK.setIgnorePrayer(true);
 
 
@@ -41,18 +41,18 @@ cs = new NCombatScript() {
         if (!npc.getController().isRegionLoaded()) {
             return;
         }
-        if (npc.getID() == IDLE_ID) {
+        if (npc.getId() == IDLE_ID) {
             var players = npc.getController().getPlayers();
             for each (var player in players) {
                 if (!npc.withinDistance(player, 4)) {
                     continue;
                 }
-                npc.setTransformationID(HEAL_ID);
+                npc.setTransformationId(HEAL_ID);
                 break;
             }
-        } else if (npc.getID() == HEAL_ID) {
+        } else if (npc.getId() == HEAL_ID) {
             this.healPhase();
-        } else if (npc.getID() == COMBAT_ID) {
+        } else if (npc.getId() == COMBAT_ID) {
             this.combatPhase();
         }
     },
@@ -120,7 +120,7 @@ cs = new NCombatScript() {
 
     /* @Override */
     canBeAttackedHook: function(player, sendMessage, hitType) {
-        return npc.getID() != IDLE_ID;
+        return npc.getId() != IDLE_ID;
     },
 
     loadProfile: function() {
@@ -176,7 +176,7 @@ cs = new NCombatScript() {
                                     player.getGameEncoder().sendMapObjectAnimation(mapObject, 8065);
                                 }
                             }
-                        } else if (event.getExecutions() == 16 || !npc.isVisible() || npc.getID() != HEAL_ID) {
+                        } else if (event.getExecutions() == 16 || !npc.isVisible() || npc.getId() != HEAL_ID) {
                             event.stop();
                             if (mapObject != null) {
                                 npc.getController().sendMapGraphic(mapObject, new Graphic(1549));
@@ -212,7 +212,7 @@ cs = new NCombatScript() {
                 exhumedList.add(event);
             }
         } else if (healTime <= 0) {
-            npc.setTransformationID(COMBAT_ID);
+            npc.setTransformationId(COMBAT_ID);
             npc.setAnimation(8061);
             for each (var event in exhumedList) {
                 event.stop();

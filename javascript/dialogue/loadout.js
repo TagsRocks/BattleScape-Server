@@ -67,7 +67,7 @@ entries.add(obj4);
 obj4.setLargeSelection(title, Utils.toStringArray(lines, true), Utils.toStringArray(actions, true));
 
 instance = new DialogueScript() {
-    execute: function(player, index, childID, slot) {
+    execute: function(player, index, childId, slot) {
         if (index == 0) {
             if (player.getBank().needsPinInput(false)) {
                 return;
@@ -76,7 +76,7 @@ instance = new DialogueScript() {
             player.putAttribute("loadout_skills", false);
             player.putAttribute("loadout_equipment", true);
             player.putAttribute("loadout_inventory", true);
-            player.putAttribute("loadout_rune_puch", player.getInventory().hasItem(ItemID.RUNE_POUCH));
+            player.putAttribute("loadout_rune_puch", player.getInventory().hasItem(ItemId.RUNE_POUCH));
             player.putAttribute("loadout_spellbook", true);
             if (slot >= player.getCombat().getCustomLoadoutsSize()) {
                 player.openDialogue("loadout", 4);

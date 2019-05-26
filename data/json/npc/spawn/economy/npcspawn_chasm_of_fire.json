@@ -1,6 +1,6 @@
 [
   {
-    "id": "NpcID.LESSER_DEMON_82",
+    "id": "NpcId.LESSER_DEMON_82",
     "direction": 1,
     "moveDistance": 4,
     "x": 1435,
@@ -8,7 +8,7 @@
     "height": 3
   },
   {
-    "id": "NpcID.LESSER_DEMON_82",
+    "id": "NpcId.LESSER_DEMON_82",
     "direction": 1,
     "moveDistance": 4,
     "x": 1438,
@@ -16,7 +16,7 @@
     "height": 3
   },
   {
-    "id": "NpcID.LESSER_DEMON_82",
+    "id": "NpcId.LESSER_DEMON_82",
     "direction": 1,
     "moveDistance": 4,
     "x": 1435,
@@ -24,7 +24,7 @@
     "height": 3
   },
   {
-    "id": "NpcID.LESSER_DEMON_82",
+    "id": "NpcId.LESSER_DEMON_82",
     "direction": 1,
     "moveDistance": 4,
     "x": 1440,
@@ -32,7 +32,7 @@
     "height": 3
   },
   {
-    "id": "NpcID.GREATER_DEMON_92",
+    "id": "NpcId.GREATER_DEMON_92",
     "direction": 1,
     "moveDistance": 4,
     "x": 1433,
@@ -40,7 +40,7 @@
     "height": 2
   },
   {
-    "id": "NpcID.GREATER_DEMON_92",
+    "id": "NpcId.GREATER_DEMON_92",
     "direction": 1,
     "moveDistance": 4,
     "x": 1438,
@@ -48,7 +48,7 @@
     "height": 2
   },
   {
-    "id": "NpcID.GREATER_DEMON_92",
+    "id": "NpcId.GREATER_DEMON_92",
     "direction": 1,
     "moveDistance": 4,
     "x": 1443,
@@ -56,7 +56,7 @@
     "height": 2
   },
   {
-    "id": "NpcID.GREATER_DEMON_92",
+    "id": "NpcId.GREATER_DEMON_92",
     "direction": 1,
     "moveDistance": 4,
     "x": 1431,
@@ -64,7 +64,7 @@
     "height": 2
   },
   {
-    "id": "NpcID.GREATER_DEMON_92",
+    "id": "NpcId.GREATER_DEMON_92",
     "direction": 1,
     "moveDistance": 4,
     "x": 1427,
@@ -72,7 +72,7 @@
     "height": 2
   },
   {
-    "id": "NpcID.GREATER_DEMON_92",
+    "id": "NpcId.GREATER_DEMON_92",
     "direction": 1,
     "moveDistance": 4,
     "x": 1427,
@@ -80,7 +80,7 @@
     "height": 2
   },
   {
-    "id": "NpcID.GREATER_DEMON_92",
+    "id": "NpcId.GREATER_DEMON_92",
     "direction": 1,
     "moveDistance": 4,
     "x": 1428,
@@ -88,7 +88,7 @@
     "height": 2
   },
   {
-    "id": "NpcID.GREATER_DEMON_92",
+    "id": "NpcId.GREATER_DEMON_92",
     "direction": 1,
     "moveDistance": 4,
     "x": 1420,
@@ -96,7 +96,7 @@
     "height": 2
   },
   {
-    "id": "NpcID.GREATER_DEMON_92",
+    "id": "NpcId.GREATER_DEMON_92",
     "direction": 1,
     "moveDistance": 4,
     "x": 1431,
@@ -104,7 +104,7 @@
     "height": 2
   },
   {
-    "id": "NpcID.GREATER_DEMON_92",
+    "id": "NpcId.GREATER_DEMON_92",
     "direction": 1,
     "moveDistance": 4,
     "x": 1438,
@@ -112,7 +112,7 @@
     "height": 2
   },
   {
-    "id": "NpcID.GREATER_DEMON_92",
+    "id": "NpcId.GREATER_DEMON_92",
     "direction": 1,
     "moveDistance": 4,
     "x": 1441,
@@ -120,7 +120,7 @@
     "height": 2
   },
   {
-    "id": "NpcID.GREATER_DEMON_92",
+    "id": "NpcId.GREATER_DEMON_92",
     "direction": 1,
     "moveDistance": 4,
     "x": 1445,
@@ -128,7 +128,7 @@
     "height": 2
   },
   {
-    "id": "NpcID.GREATER_DEMON_92",
+    "id": "NpcId.GREATER_DEMON_92",
     "direction": 1,
     "moveDistance": 4,
     "x": 1449,
@@ -136,7 +136,7 @@
     "height": 2
   },
   {
-    "id": "NpcID.GREATER_DEMON_92",
+    "id": "NpcId.GREATER_DEMON_92",
     "direction": 1,
     "moveDistance": 4,
     "x": 1450,
@@ -144,7 +144,7 @@
     "height": 2
   },
   {
-    "id": "NpcID.GREATER_DEMON_92",
+    "id": "NpcId.GREATER_DEMON_92",
     "direction": 1,
     "moveDistance": 4,
     "x": 1447,
@@ -152,7 +152,7 @@
     "height": 2
   },
   {
-    "id": "NpcID.GREATER_DEMON_92",
+    "id": "NpcId.GREATER_DEMON_92",
     "direction": 1,
     "moveDistance": 4,
     "x": 1453,
@@ -160,7 +160,7 @@
     "height": 2
   },
   {
-    "id": "NpcID.GREATER_DEMON_92",
+    "id": "NpcId.GREATER_DEMON_92",
     "direction": 1,
     "moveDistance": 4,
     "x": 1450,
@@ -168,7 +168,7 @@
     "height": 2
   },
   {
-    "id": "NpcID.LESSER_DEMON_82",
+    "id": "NpcId.LESSER_DEMON_82",
     "direction": 1,
     "moveDistance": 4,
     "x": 1440,
@@ -176,7 +176,7 @@
     "height": 3
   },
   {
-    "id": "NpcID.LESSER_DEMON_82",
+    "id": "NpcId.LESSER_DEMON_82",
     "direction": 1,
     "moveDistance": 4,
     "x": 1442,
@@ -184,7 +184,7 @@
     "height": 3
   },
   {
-    "id": "NpcID.LESSER_DEMON_82",
+    "id": "NpcId.LESSER_DEMON_82",
     "direction": 1,
     "moveDistance": 4,
     "x": 1445,
@@ -192,7 +192,7 @@
     "height": 3
   },
   {
-    "id": "NpcID.LESSER_DEMON_82",
+    "id": "NpcId.LESSER_DEMON_82",
     "direction": 1,
     "moveDistance": 4,
     "x": 1444,
@@ -200,7 +200,7 @@
     "height": 3
   },
   {
-    "id": "NpcID.LESSER_DEMON_82",
+    "id": "NpcId.LESSER_DEMON_82",
     "direction": 1,
     "moveDistance": 4,
     "x": 1446,
@@ -208,7 +208,7 @@
     "height": 3
   },
   {
-    "id": "NpcID.BLACK_DEMON_172",
+    "id": "NpcId.BLACK_DEMON_172",
     "direction": 1,
     "moveDistance": 4,
     "x": 1448,
@@ -216,7 +216,7 @@
     "height": 1
   },
   {
-    "id": "NpcID.BLACK_DEMON_172",
+    "id": "NpcId.BLACK_DEMON_172",
     "direction": 1,
     "moveDistance": 4,
     "x": 1442,
@@ -224,7 +224,7 @@
     "height": 1
   },
   {
-    "id": "NpcID.BLACK_DEMON_172",
+    "id": "NpcId.BLACK_DEMON_172",
     "direction": 1,
     "moveDistance": 4,
     "x": 1447,
@@ -232,7 +232,7 @@
     "height": 1
   },
   {
-    "id": "NpcID.BLACK_DEMON_172",
+    "id": "NpcId.BLACK_DEMON_172",
     "direction": 1,
     "moveDistance": 4,
     "x": 1436,
@@ -240,7 +240,7 @@
     "height": 1
   },
   {
-    "id": "NpcID.BLACK_DEMON_172",
+    "id": "NpcId.BLACK_DEMON_172",
     "direction": 1,
     "moveDistance": 4,
     "x": 1428,
@@ -248,7 +248,7 @@
     "height": 1
   },
   {
-    "id": "NpcID.BLACK_DEMON_172",
+    "id": "NpcId.BLACK_DEMON_172",
     "direction": 1,
     "moveDistance": 4,
     "x": 1422,
@@ -256,7 +256,7 @@
     "height": 1
   },
   {
-    "id": "NpcID.BLACK_DEMON_172",
+    "id": "NpcId.BLACK_DEMON_172",
     "direction": 1,
     "moveDistance": 4,
     "x": 1420,
@@ -264,7 +264,7 @@
     "height": 1
   },
   {
-    "id": "NpcID.BLACK_DEMON_172",
+    "id": "NpcId.BLACK_DEMON_172",
     "direction": 1,
     "moveDistance": 4,
     "x": 1426,
@@ -272,7 +272,7 @@
     "height": 1
   },
   {
-    "id": "NpcID.BLACK_DEMON_172",
+    "id": "NpcId.BLACK_DEMON_172",
     "direction": 1,
     "moveDistance": 4,
     "x": 1427,
@@ -280,7 +280,7 @@
     "height": 1
   },
   {
-    "id": "NpcID.BLACK_DEMON_172",
+    "id": "NpcId.BLACK_DEMON_172",
     "direction": 1,
     "moveDistance": 4,
     "x": 1423,
@@ -288,7 +288,7 @@
     "height": 1
   },
   {
-    "id": "NpcID.BLACK_DEMON_172",
+    "id": "NpcId.BLACK_DEMON_172",
     "direction": 1,
     "moveDistance": 4,
     "x": 1432,
@@ -296,7 +296,7 @@
     "height": 1
   },
   {
-    "id": "NpcID.BLACK_DEMON_172",
+    "id": "NpcId.BLACK_DEMON_172",
     "direction": 1,
     "moveDistance": 4,
     "x": 1429,
@@ -304,7 +304,7 @@
     "height": 1
   },
   {
-    "id": "NpcID.BLACK_DEMON_172",
+    "id": "NpcId.BLACK_DEMON_172",
     "direction": 1,
     "moveDistance": 4,
     "x": 1443,
@@ -312,7 +312,7 @@
     "height": 1
   },
   {
-    "id": "NpcID.BLACK_DEMON_172",
+    "id": "NpcId.BLACK_DEMON_172",
     "direction": 1,
     "moveDistance": 4,
     "x": 1449,
@@ -320,7 +320,7 @@
     "height": 1
   },
   {
-    "id": "NpcID.BLACK_DEMON_172",
+    "id": "NpcId.BLACK_DEMON_172",
     "direction": 1,
     "moveDistance": 4,
     "x": 1452,
@@ -328,7 +328,7 @@
     "height": 1
   },
   {
-    "id": "NpcID.BLACK_DEMON_172",
+    "id": "NpcId.BLACK_DEMON_172",
     "direction": 1,
     "moveDistance": 4,
     "x": 1447,
@@ -336,7 +336,7 @@
     "height": 1
   },
   {
-    "id": "NpcID.BLACK_DEMON_172",
+    "id": "NpcId.BLACK_DEMON_172",
     "direction": 1,
     "moveDistance": 4,
     "x": 1452,

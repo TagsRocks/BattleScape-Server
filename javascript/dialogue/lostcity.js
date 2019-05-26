@@ -13,7 +13,7 @@ entries.add(obj0);
 obj0.setSelection(title, Utils.toStringArray(lines, true), Utils.toStringArray(actions, true));
 
 instance = new DialogueScript() {
-    execute: function(player, index, childID, slot) {
+    execute: function(player, index, childId, slot) {
         if (index == 0) {
             if (slot == 0) {
                 if (!player.getCombat().getLostCity()) {
@@ -27,29 +27,29 @@ instance = new DialogueScript() {
                     return;
                 }
                 for (var i = 0; i < player.getInventory().size(); i++) {
-                    var itemID = player.getInventory().getID(i);
-                    if (itemID == -1 || ItemDef.getEquipSlot(itemID) == null) {
+                    var itemId = player.getInventory().getId(i);
+                    if (itemId == -1 || ItemDef.getEquipSlot(itemId) == null) {
                         continue;
                     }
-                    var isAllowed = ItemDef.getName(itemID).contains("arrow") || itemID == 3840 || itemID == 3842
-                            || itemID == 3844 || itemID == 12608 || itemID == 12610 || itemID == 12612;
+                    var isAllowed = ItemDef.getName(itemId).contains("arrow") || itemId == 3840 || itemId == 3842
+                            || itemId == 3844 || itemId == 12608 || itemId == 12610 || itemId == 12612;
                     if (isAllowed) {
                         continue;
                     }
-                    player.getGameEncoder().sendMessage("You can't take " + ItemDef.getName(itemID) + " to Entrana.");
+                    player.getGameEncoder().sendMessage("You can't take " + ItemDef.getName(itemId) + " to Entrana.");
                     return;
                 }
                 for (var i = 0; i < player.getEquipment().size(); i++) {
-                    var itemID = player.getEquipment().getID(i);
-                    if (itemID == -1 || ItemDef.getEquipSlot(itemID) == null) {
+                    var itemId = player.getEquipment().getId(i);
+                    if (itemId == -1 || ItemDef.getEquipSlot(itemId) == null) {
                         continue;
                     }
-                    var isAllowed = ItemDef.getName(itemID).contains("arrow") || itemID == 3840 || itemID == 3842
-                            || itemID == 3844 || itemID == 12608 || itemID == 12610 || itemID == 12612;
+                    var isAllowed = ItemDef.getName(itemId).contains("arrow") || itemId == 3840 || itemId == 3842
+                            || itemId == 3844 || itemId == 12608 || itemId == 12610 || itemId == 12612;
                     if (isAllowed) {
                         continue;
                     }
-                    player.getGameEncoder().sendMessage("You can't take " + ItemDef.getName(itemID) + " to Entrana.");
+                    player.getGameEncoder().sendMessage("You can't take " + ItemDef.getName(itemId) + " to Entrana.");
                     return;
                 }
                 player.getMovement().teleport(2830, 9772);

@@ -22,7 +22,7 @@ entries.add(obj1);
 obj1.setSelection(title, Utils.toStringArray(lines, true), Utils.toStringArray(actions, true));
 
 instance = new DialogueScript() {
-    execute: function(player, index, childID, slot) {
+    execute: function(player, index, childId, slot) {
         if (player.isLocked()) {
             return;
         }
@@ -30,7 +30,7 @@ instance = new DialogueScript() {
             if (slot == 0) {
                 for (var i = 0; i < player.getInventory().size(); i++) {
                     var item = player.getInventory().getItem(i);
-                    if (item == null || item.getDef().getRepairedID() == -1) {
+                    if (item == null || item.getDef().getRepairedId() == -1) {
                         continue;
                     }
                     if (item.getDef().getRepairCost() == null) {
@@ -40,7 +40,7 @@ instance = new DialogueScript() {
                     var hasRepairCost = true;
                     for (var i2 = 0; i2 < item.getDef().getRepairCost().length; i2++) {
                         var repair = item.getDef().getRepairCost()[i2];
-                        if (player.getInventory().getCount(repair.getID()) < repair.getAmount()) {
+                        if (player.getInventory().getCount(repair.getId()) < repair.getAmount()) {
                             player.getGameEncoder().sendMessage("You need " + repair.getDef().getName()
                                     + " x " + repair.getAmount());
                             hasRepairCost = false;
@@ -51,11 +51,11 @@ instance = new DialogueScript() {
                     }
                     for (var i2 = 0; i2 < item.getDef().getRepairCost().length; i2++) {
                         var repair = item.getDef().getRepairCost()[i2];
-                        player.getInventory().deleteItem(repair.getID(), repair.getAmount());
+                        player.getInventory().deleteItem(repair.getId(), repair.getAmount());
                     }
                     var itemAmount = item.getAmount();
                     player.getInventory().deleteItem(item, i);
-                    player.getInventory().addItem(item.getDef().getRepairedID(), itemAmount, i);
+                    player.getInventory().addItem(item.getDef().getRepairedId(), itemAmount, i);
                 }
             } else if (slot == 1) {
                 if (player.getCombat().getItemCollection() == null
@@ -70,17 +70,17 @@ instance = new DialogueScript() {
             }
         } else if (index == 1) {
             if (slot == 0) {
-                if (player.getInventory().getCount(ItemID.COINS)
+                if (player.getInventory().getCount(ItemId.COINS)
                         < player.getCombat().getItemCollection().getCAttachment()) {
                     player.getGameEncoder().sendMessage("You need "
                             + Utils.abbreviateNumber(player.getCombat().getItemCollection().getCAttachment())
                             + " coins to reclaim your items.");
                     return;
                 }
-                player.getInventory().deleteItem(ItemID.COINS, player.getCombat().getItemCollection().getCAttachment());
+                player.getInventory().deleteItem(ItemId.COINS, player.getCombat().getItemCollection().getCAttachment());
                 for each (var item in player.getCombat().getItemCollection()) {
-                    if (player.getController().isFood(item.getID()) || player.getController().isDrink(item.getID())) {
-                        player.getInventory().addOrDropItem(item.getNotedID(), item.getAmount());
+                    if (player.getController().isFood(item.getId()) || player.getController().isDrink(item.getId())) {
+                        player.getInventory().addOrDropItem(item.getNotedId(), item.getAmount());
                     } else {
                         player.getInventory().addOrDropItem(item);
                     }

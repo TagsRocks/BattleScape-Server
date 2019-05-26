@@ -4,7 +4,7 @@ SPECIAL_ATTACK.setSubType(Hit.Type.TYPELESS);
 SPECIAL_ATTACK.setAnimation(7815);
 SPECIAL_ATTACK.setMaxHit(38);
 SPECIAL_ATTACK.setAttackSpeed(4);
-SPECIAL_ATTACK.setProjectileID(1453);
+SPECIAL_ATTACK.setProjectileId(1453);
 SPECIAL_ATTACK.setIgnorePrayer(true);
 SPECIAL_ATTACK.setSpeedMinDistance(8);
 SPECIAL_ATTACK.setMagicBind(6);

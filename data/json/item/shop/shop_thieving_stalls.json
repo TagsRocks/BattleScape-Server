@@ -4,23 +4,23 @@
   "name": "Thieving Shop",
   "items": [
     {
-      "id": "ItemID.GOLDEN_NEEDLE",
+      "id": "ItemId.GOLDEN_NEEDLE",
       "buyPrice": 150
     },
     {
-      "id": "ItemID.GOLDEN_POT",
+      "id": "ItemId.GOLDEN_POT",
       "buyPrice": 300
     },
     {
-      "id": "ItemID.GOLDEN_TINDERBOX",
+      "id": "ItemId.GOLDEN_TINDERBOX",
       "buyPrice": 500
     },
     {
-      "id": "ItemID.GOLDEN_CANDLE",
+      "id": "ItemId.GOLDEN_CANDLE",
       "buyPrice": 700
     },
     {
-      "id": "ItemID.GOLDEN_HAMMER",
+      "id": "ItemId.GOLDEN_HAMMER",
       "buyPrice": 900
     }
   ]

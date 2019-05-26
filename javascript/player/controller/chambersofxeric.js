@@ -115,38 +115,38 @@ var BOSS_ROOMS = Utils.toList(ROOM_VASA_NISTIRIO, ROOM_TEKTON, ROOM_VANGUARDS, R
 Collections.shuffle(BOSS_ROOMS);
 
 var UNIQUE_REWARDS = [
-    new RandomItem(ItemID.DEXTEROUS_PRAYER_SCROLL, 1).setWeight(20),
-    new RandomItem(ItemID.ARCANE_PRAYER_SCROLL, 1).setWeight(20),
-    new RandomItem(ItemID.TWISTED_BUCKLER, 1).setWeight(4),
-    new RandomItem(ItemID.DRAGON_HUNTER_CROSSBOW, 1).setWeight(4),
-    new RandomItem(ItemID.DINHS_BULWARK, 1).setWeight(3),
-    new RandomItem(ItemID.ANCESTRAL_HAT, 1).setWeight(3),
-    new RandomItem(ItemID.ANCESTRAL_ROBE_TOP, 1).setWeight(3),
-    new RandomItem(ItemID.ANCESTRAL_ROBE_BOTTOM, 1).setWeight(3),
-    new RandomItem(ItemID.DRAGON_CLAWS, 1).setWeight(3),
-    new RandomItem(ItemID.ELDER_MAUL, 1).setWeight(2),
-    new RandomItem(ItemID.KODAI_INSIGNIA, 1).setWeight(2),
-    new RandomItem(ItemID.TWISTED_BOW, 1).setWeight(2)
+    new RandomItem(ItemId.DEXTEROUS_PRAYER_SCROLL, 1).setWeight(20),
+    new RandomItem(ItemId.ARCANE_PRAYER_SCROLL, 1).setWeight(20),
+    new RandomItem(ItemId.TWISTED_BUCKLER, 1).setWeight(4),
+    new RandomItem(ItemId.DRAGON_HUNTER_CROSSBOW, 1).setWeight(4),
+    new RandomItem(ItemId.DINHS_BULWARK, 1).setWeight(3),
+    new RandomItem(ItemId.ANCESTRAL_HAT, 1).setWeight(3),
+    new RandomItem(ItemId.ANCESTRAL_ROBE_TOP, 1).setWeight(3),
+    new RandomItem(ItemId.ANCESTRAL_ROBE_BOTTOM, 1).setWeight(3),
+    new RandomItem(ItemId.DRAGON_CLAWS, 1).setWeight(3),
+    new RandomItem(ItemId.ELDER_MAUL, 1).setWeight(2),
+    new RandomItem(ItemId.KODAI_INSIGNIA, 1).setWeight(2),
+    new RandomItem(ItemId.TWISTED_BOW, 1).setWeight(2)
 ];
 var REWARDS = [
-    new RandomItem(ItemID.DEATH_RUNE, 3100), new RandomItem(ItemID.BLOOD_RUNE, 4095),
-    new RandomItem(ItemID.SOUL_RUNE, 6554), new RandomItem(ItemID.RUNE_ARROW, 9437),
-    new RandomItem(ItemID.DRAGON_ARROW, 926), new RandomItem(ItemID.GRIMY_TOADFLAX_NOTED, 354),
-    new RandomItem(ItemID.GRIMY_RANARR_WEED_NOTED, 164), new RandomItem(ItemID.GRIMY_IRIT_LEAF_NOTED, 668),
-    new RandomItem(ItemID.GRIMY_AVANTOE_NOTED, 354), new RandomItem(ItemID.GRIMY_KWUARM_NOTED, 323),
-    new RandomItem(ItemID.GRIMY_SNAPDRAGON_NOTED, 131), new RandomItem(ItemID.GRIMY_CADANTINE_NOTED, 319),
-    new RandomItem(ItemID.GRIMY_LANTADYME_NOTED, 319), new RandomItem(ItemID.GRIMY_DWARF_WEED_NOTED, 616),
-    new RandomItem(ItemID.GRIMY_TORSTOL_NOTED, 153), new RandomItem(ItemID.SILVER_ORE_NOTED, 6553),
-    new RandomItem(ItemID.COAL_NOTED, 6553), new RandomItem(ItemID.GOLD_ORE_NOTED, 2892),
-    new RandomItem(ItemID.MITHRIL_ORE_NOTED, 2892), new RandomItem(ItemID.ADAMANTITE_ORE_NOTED, 729),
-    new RandomItem(ItemID.RUNITE_ORE_NOTED, 87), new RandomItem(ItemID.UNCUT_SAPPHIRE_NOTED, 642),
-    new RandomItem(ItemID.UNCUT_EMERALD_NOTED, 923), new RandomItem(ItemID.UNCUT_RUBY_NOTED, 524),
-    new RandomItem(ItemID.UNCUT_DIAMOND_NOTED, 253), new RandomItem(ItemID.ANCIENT_TABLET, 1),
-    new RandomItem(ItemID.LIZARDMAN_FANG, 4898), new RandomItem(ItemID.PURE_ESSENCE_NOTED, 65535),
-    new RandomItem(ItemID.SALTPETRE_NOTED, 5461), new RandomItem(ItemID.TEAK_PLANK_NOTED, 1310),
-    new RandomItem(ItemID.MAHOGANY_PLANK_NOTED, 550), new RandomItem(ItemID.DYNAMITE_NOTED, 2390),
-    new RandomItem(ItemID.TORN_PRAYER_SCROLL, 1), new RandomItem(ItemID.DARK_RELIC, 1),
-    new RandomItem(ItemID.CLUE_SCROLL_ELITE, 1)
+    new RandomItem(ItemId.DEATH_RUNE, 3100), new RandomItem(ItemId.BLOOD_RUNE, 4095),
+    new RandomItem(ItemId.SOUL_RUNE, 6554), new RandomItem(ItemId.RUNE_ARROW, 9437),
+    new RandomItem(ItemId.DRAGON_ARROW, 926), new RandomItem(ItemId.GRIMY_TOADFLAX_NOTED, 354),
+    new RandomItem(ItemId.GRIMY_RANARR_WEED_NOTED, 164), new RandomItem(ItemId.GRIMY_IRIT_LEAF_NOTED, 668),
+    new RandomItem(ItemId.GRIMY_AVANTOE_NOTED, 354), new RandomItem(ItemId.GRIMY_KWUARM_NOTED, 323),
+    new RandomItem(ItemId.GRIMY_SNAPDRAGON_NOTED, 131), new RandomItem(ItemId.GRIMY_CADANTINE_NOTED, 319),
+    new RandomItem(ItemId.GRIMY_LANTADYME_NOTED, 319), new RandomItem(ItemId.GRIMY_DWARF_WEED_NOTED, 616),
+    new RandomItem(ItemId.GRIMY_TORSTOL_NOTED, 153), new RandomItem(ItemId.SILVER_ORE_NOTED, 6553),
+    new RandomItem(ItemId.COAL_NOTED, 6553), new RandomItem(ItemId.GOLD_ORE_NOTED, 2892),
+    new RandomItem(ItemId.MITHRIL_ORE_NOTED, 2892), new RandomItem(ItemId.ADAMANTITE_ORE_NOTED, 729),
+    new RandomItem(ItemId.RUNITE_ORE_NOTED, 87), new RandomItem(ItemId.UNCUT_SAPPHIRE_NOTED, 642),
+    new RandomItem(ItemId.UNCUT_EMERALD_NOTED, 923), new RandomItem(ItemId.UNCUT_RUBY_NOTED, 524),
+    new RandomItem(ItemId.UNCUT_DIAMOND_NOTED, 253), new RandomItem(ItemId.ANCIENT_TABLET, 1),
+    new RandomItem(ItemId.LIZARDMAN_FANG, 4898), new RandomItem(ItemId.PURE_ESSENCE_NOTED, 65535),
+    new RandomItem(ItemId.SALTPETRE_NOTED, 5461), new RandomItem(ItemId.TEAK_PLANK_NOTED, 1310),
+    new RandomItem(ItemId.MAHOGANY_PLANK_NOTED, 550), new RandomItem(ItemId.DYNAMITE_NOTED, 2390),
+    new RandomItem(ItemId.TORN_PRAYER_SCROLL, 1), new RandomItem(ItemId.DARK_RELIC, 1),
+    new RandomItem(ItemId.CLUE_SCROLL_ELITE, 1)
 ];
 
 var DRINKS = new ArrayList();
@@ -241,9 +241,9 @@ OVERLOAD_MINUS.action = new Skills.ItemAction() {
                     player.applyHit(new Hit(10));
                 }
                 if (event.getExecutions() == 0 || (event.getExecutions() % 25) == 0) {
-                    var skillIDs = [ Skills.ATTACK, Skills.DEFENCE, Skills.STRENGTH, Skills.RANGED, Skills.MAGIC ];
-                    for each (skillID in skillIDs) {
-                        player.getSkills().changeStat(skillID, (player.getController().getLevelForXP(skillID)
+                    var skillIds = [ Skills.ATTACK, Skills.DEFENCE, Skills.STRENGTH, Skills.RANGED, Skills.MAGIC ];
+                    for each (skillId in skillIds) {
+                        player.getSkills().changeStat(skillId, (player.getController().getLevelForXP(skillId)
                                 * 0.1 + 4)|0, true, 0);
                     }
                 }
@@ -278,9 +278,9 @@ OVERLOAD.action = new Skills.ItemAction() {
                     player.applyHit(new Hit(10));
                 }
                 if (event.getExecutions() == 0 || (event.getExecutions() % 25) == 0) {
-                    var skillIDs = [ Skills.ATTACK, Skills.DEFENCE, Skills.STRENGTH, Skills.RANGED, Skills.MAGIC ];
-                    for each (skillID in skillIDs) {
-                        player.getSkills().changeStat(skillID, (player.getController().getLevelForXP(skillID)
+                    var skillIds = [ Skills.ATTACK, Skills.DEFENCE, Skills.STRENGTH, Skills.RANGED, Skills.MAGIC ];
+                    for each (skillId in skillIds) {
+                        player.getSkills().changeStat(skillId, (player.getController().getLevelForXP(skillId)
                                 * 0.13 + 5)|0, true, 0);
                     }
                 }
@@ -315,9 +315,9 @@ OVERLOAD_PLUS.action = new Skills.ItemAction() {
                     player.applyHit(new Hit(10));
                 }
                 if (event.getExecutions() == 0 || (event.getExecutions() % 25) == 0) {
-                    var skillIDs = [ Skills.ATTACK, Skills.DEFENCE, Skills.STRENGTH, Skills.RANGED, Skills.MAGIC ];
-                    for each (skillID in skillIDs) {
-                        player.getSkills().changeStat(skillID, (player.getController().getLevelForXP(skillID)
+                    var skillIds = [ Skills.ATTACK, Skills.DEFENCE, Skills.STRENGTH, Skills.RANGED, Skills.MAGIC ];
+                    for each (skillId in skillIds) {
+                        player.getSkills().changeStat(skillId, (player.getController().getLevelForXP(skillId)
                                 * 0.16 + 6)|0, true, 0);
                     }
                 }
@@ -427,9 +427,9 @@ FOOD.add(new Skills.Food(20883, 23)); // Psykk
 
 var BOOKS = [ 20886, 20888, 20890, 20893, 20895, 20897, 20899 ];
 var GAME_ITEMS = [];
-GAME_ITEMS.push(ItemID.KINDLING_20799);
-GAME_ITEMS.push(ItemID.EMPTY_GOURD_VIAL);
-GAME_ITEMS.push(ItemID.WATER_FILLED_GOURD_VIAL);
+GAME_ITEMS.push(ItemId.KINDLING_20799);
+GAME_ITEMS.push(ItemId.EMPTY_GOURD_VIAL);
+GAME_ITEMS.push(ItemId.WATER_FILLED_GOURD_VIAL);
 for (var id = 20853; id <= 20996; id++) {
     if (!BOOKS.includes(id)) {
         GAME_ITEMS.push(id);
@@ -466,7 +466,7 @@ pc = new PController() {
         player.getGameEncoder().setVarp(1430, 0);
         player.getGameEncoder().setVarp(1431, -2147483648);
         player.getGameEncoder().setVarp(1432, 0);
-        player.getWidgetManager().sendOverlay(WidgetID.CHAMBERS_OF_XERIC_OVERLAY);
+        player.getWidgetManager().sendOverlay(WidgetId.CHAMBERS_OF_XERIC_OVERLAY);
         pc.setKeepItemsOnDeath(true);
         pc.setMultiCombatFlag(true);
         pc.setBlockTeleport(true);
@@ -479,9 +479,9 @@ pc = new PController() {
     stopHook: function() {
         if (player != null) {
             player.getGameEncoder().setVarp(1431, 0);
-            for each (var itemID in GAME_ITEMS) {
-                player.getInventory().deleteAll(itemID);
-                player.getEquipment().deleteAll(itemID);
+            for each (var itemId in GAME_ITEMS) {
+                player.getInventory().deleteAll(itemId);
+                player.getEquipment().deleteAll(itemId);
             }
             player.getWidgetManager().removeInteractiveWidgets();
             player.getWidgetManager().removeOverlay();
@@ -591,9 +591,9 @@ pc = new PController() {
                 player2.getController().setVariable("timer_started", 1);
                 player2.getOptions().setVarp1429();
                 if (name.equals("load_tob")) {
-                    player.getWidgetManager().sendOverlay(WidgetID.TZKAL_ZUK);
-                    player.getGameEncoder().sendHideWidget(WidgetID.TZKAL_ZUK, 2, true);
-                    player.getGameEncoder().sendHideWidget(WidgetID.TZKAL_ZUK, 5, true);
+                    player.getWidgetManager().sendOverlay(WidgetId.TZKAL_ZUK);
+                    player.getGameEncoder().sendHideWidget(WidgetId.TZKAL_ZUK, 2, true);
+                    player.getGameEncoder().sendHideWidget(WidgetId.TZKAL_ZUK, 5, true);
                     player.getGameEncoder().setVarp(1575, 0 + (1 * 2048));
                 }
             }
@@ -655,7 +655,7 @@ pc = new PController() {
                 }
                 if (room.npcs != null) {
                     for each (var npc in room.npcs) {
-                        if (npc.getID() >= 7546 && npc.getID() <= 7549) {
+                        if (npc.getId() >= 7546 && npc.getId() <= 7549) {
                             npc.setRespawns(true);
                         }
                         npc.getController().setMultiCombatFlag(true);
@@ -716,9 +716,9 @@ pc = new PController() {
     },
 
     /* @Override */
-    getFoodHook: function(itemID, food) {
+    getFoodHook: function(itemId, food) {
         for each (var food2 in FOOD) {
-            if (food2.itemID == itemID) {
+            if (food2.itemId == itemId) {
                 return food2;
             }
         }
@@ -726,8 +726,8 @@ pc = new PController() {
     },
 
     /* @Override */
-    getDrinkHook: function(itemID, drink) {
-        if (itemID >= 20985 && itemID <= 20996) {
+    getDrinkHook: function(itemId, drink) {
+        if (itemId >= 20985 && itemId <= 20996) {
             if (player.getSkills().getOverload() != null) {
                 player.getGameEncoder().sendMessage("You are still suffering the effects of a fresh dose of overload.");
                 return null;
@@ -737,7 +737,7 @@ pc = new PController() {
             }
         }
         for each (var drink2 in DRINKS) {
-            if (drink2.isDose(itemID)) {
+            if (drink2.isDose(itemId)) {
                 return drink2;
             }
         }
@@ -745,34 +745,34 @@ pc = new PController() {
     },
 
     /* @Override */
-    widgetHook: function(index, interfaceID, childID, slot, itemID) {
+    widgetHook: function(index, interfaceId, childId, slot, itemId) {
         sharedStorage.setPlayer(player);
-        switch (interfaceID) {
-        case WidgetID.SHARED_STORAGE:
-            switch (childID) {
+        switch (interfaceId) {
+        case WidgetId.SHARED_STORAGE:
+            switch (childId) {
             case 7:
-                var item = sharedStorage.getItem(sharedStorage.getSlotByID(itemID));
-                if (item == null || item.getID() != itemID) {
+                var item = sharedStorage.getItem(sharedStorage.getSlotById(itemId));
+                if (item == null || item.getId() != itemId) {
                     break;
                 }
                 if (index == 0) {
-                    var resp = player.getInventory().addItem(item.getID(), Math.min(1, item.getAmount()));
-                    sharedStorage.deleteItem(item.getID(), resp.successAmount);
+                    var resp = player.getInventory().addItem(item.getId(), Math.min(1, item.getAmount()));
+                    sharedStorage.deleteItem(item.getId(), resp.successAmount);
                 } else if (index == 1) {
-                    var resp = player.getInventory().addItem(item.getID(), Math.min(5, item.getAmount()));
-                    sharedStorage.deleteItem(item.getID(), resp.successAmount);
+                    var resp = player.getInventory().addItem(item.getId(), Math.min(5, item.getAmount()));
+                    sharedStorage.deleteItem(item.getId(), resp.successAmount);
                 } else if (index == 2) {
-                    var resp = player.getInventory().addItem(item.getID(), Math.min(10, item.getAmount()));
-                    sharedStorage.deleteItem(item.getID(), resp.successAmount);
+                    var resp = player.getInventory().addItem(item.getId(), Math.min(10, item.getAmount()));
+                    sharedStorage.deleteItem(item.getId(), resp.successAmount);
                 } else if (index == 3) {
-                    var resp = player.getInventory().addItem(item.getID(), item.getAmount());
-                    sharedStorage.deleteItem(item.getID(), resp.successAmount);
+                    var resp = player.getInventory().addItem(item.getId(), item.getAmount());
+                    sharedStorage.deleteItem(item.getId(), resp.successAmount);
                 } else if (index == 4) {
                     var js = this;
                     player.getGameEncoder().sendEnterAmount(new ValueEnteredEvent.IntegerEvent() {
                         execute: function(value) {
-                            var resp = player.getInventory().addItem(item.getID(), Math.min(value, item.getAmount()));
-                            sharedStorage.deleteItem(item.getID(), resp.successAmount);
+                            var resp = player.getInventory().addItem(item.getId(), Math.min(value, item.getAmount()));
+                            sharedStorage.deleteItem(item.getId(), resp.successAmount);
                             js.sendSharedStoredItems();
                         }
                     });
@@ -781,40 +781,40 @@ pc = new PController() {
             }
             this.sendSharedStoredItems();
             return true;
-        case WidgetID.SHARED_STORAGE_INVENTORY:
-            switch (childID) {
+        case WidgetId.SHARED_STORAGE_INVENTORY:
+            switch (childId) {
             case 8:
                 player.putAttribute("raids_storage_warning", true);
                 player.getOptions().setVarp115();
                 break;
             case 1:
                 var item = player.getInventory().getItem(slot);
-                if (item == null || item.getID() != itemID) {
+                if (item == null || item.getId() != itemId) {
                     break;
-                } else if (GAME_ITEMS.indexOf(item.getID()) == -1) {
+                } else if (GAME_ITEMS.indexOf(item.getId()) == -1) {
                     player.getGameEncoder().sendMessage("You can't store this item.");
                     break;
                 }
-                var itemAmount = player.getInventory().getCount(item.getID());
+                var itemAmount = player.getInventory().getCount(item.getId());
                 if (index == 0) {
-                    var resp = sharedStorage.addItem(item.getID(), Math.min(1, itemAmount));
-                    player.getInventory().deleteItem(item.getID(), resp.successAmount);
+                    var resp = sharedStorage.addItem(item.getId(), Math.min(1, itemAmount));
+                    player.getInventory().deleteItem(item.getId(), resp.successAmount);
                 } else if (index == 1) {
-                    var resp = sharedStorage.addItem(item.getID(), Math.min(5, itemAmount));
-                    player.getInventory().deleteItem(item.getID(), resp.successAmount);
+                    var resp = sharedStorage.addItem(item.getId(), Math.min(5, itemAmount));
+                    player.getInventory().deleteItem(item.getId(), resp.successAmount);
                 } else if (index == 2) {
-                    var resp = sharedStorage.addItem(item.getID(), Math.min(10, itemAmount));
-                    player.getInventory().deleteItem(item.getID(), resp.successAmount);
+                    var resp = sharedStorage.addItem(item.getId(), Math.min(10, itemAmount));
+                    player.getInventory().deleteItem(item.getId(), resp.successAmount);
                 } else if (index == 3) {
-                    var resp = sharedStorage.addItem(item.getID(), itemAmount);
-                    player.getInventory().deleteItem(item.getID(), resp.successAmount);
+                    var resp = sharedStorage.addItem(item.getId(), itemAmount);
+                    player.getInventory().deleteItem(item.getId(), resp.successAmount);
                 } else if (index == 4) {
                     var js = this;
                     player.getGameEncoder().sendEnterAmount(new ValueEnteredEvent.IntegerEvent() {
                         execute: function(value) {
-                            var itemAmount = player.getInventory().getCount(item.getID());
-                            var resp = sharedStorage.addItem(item.getID(), Math.min(value, itemAmount));
-                            player.getInventory().deleteItem(item.getID(), resp.successAmount);
+                            var itemAmount = player.getInventory().getCount(item.getId());
+                            var resp = sharedStorage.addItem(item.getId(), Math.min(value, itemAmount));
+                            player.getInventory().deleteItem(item.getId(), resp.successAmount);
                             js.sendSharedStoredItems();
                         }
                     });
@@ -823,15 +823,15 @@ pc = new PController() {
             }
             this.sendSharedStoredItems();
             return true;
-        case WidgetID.CHAMBERS_OF_XERIC_REWARDS:
-            switch (childID) {
+        case WidgetId.CHAMBERS_OF_XERIC_REWARDS:
+            switch (childId) {
             case 5:
                 var item = rewards.getItem(slot);
-                if (item == null || item.getID() != itemID) {
+                if (item == null || item.getId() != itemId) {
                     break;
                 }
                 var resp = player.getInventory().addItem(item);
-                rewards.deleteItem(item.getID(), resp.successAmount);
+                rewards.deleteItem(item.getId(), resp.successAmount);
                 break;
             }
             rewards.sendItems();
@@ -842,7 +842,7 @@ pc = new PController() {
 
     /* @Override */
     mapObjectOptionHook: function(index, mapObject) {
-        switch (mapObject.getID()) {
+        switch (mapObject.getId()) {
         case 30066: // Energy well
             player.setGraphic(436);
             player.getGameEncoder().sendMessage("The pool restores you.");
@@ -854,11 +854,11 @@ pc = new PController() {
         case 29779: // Medium storage unit
         case 29780: // Large storage unit
             sharedStorage.setPlayer(player);
-            player.getWidgetManager().sendInteractiveOverlay(WidgetID.SHARED_STORAGE);
-            player.getGameEncoder().sendWidgetText(WidgetID.SHARED_STORAGE, 4, sharedStorage.size() + "");
-            player.getGameEncoder().sendWidgetSettings(WidgetID.SHARED_STORAGE, 7, 0, 250, 1054);
-            player.getWidgetManager().sendInventoryOverlay(WidgetID.SHARED_STORAGE_INVENTORY);
-            player.getGameEncoder().sendWidgetSettings(WidgetID.SHARED_STORAGE_INVENTORY, 1, 0, 27, 1086);
+            player.getWidgetManager().sendInteractiveOverlay(WidgetId.SHARED_STORAGE);
+            player.getGameEncoder().sendWidgetText(WidgetId.SHARED_STORAGE, 4, sharedStorage.size() + "");
+            player.getGameEncoder().sendWidgetSettings(WidgetId.SHARED_STORAGE, 7, 0, 250, 1054);
+            player.getWidgetManager().sendInventoryOverlay(WidgetId.SHARED_STORAGE_INVENTORY);
+            player.getGameEncoder().sendWidgetSettings(WidgetId.SHARED_STORAGE_INVENTORY, 1, 0, 27, 1086);
             player.getInventory().setUpdate(true);
             sharedStorage.sendItems();
             return true;
@@ -964,7 +964,7 @@ pc = new PController() {
         case 32751: // Door
         case 2156: // Magic portal
         case 33113: // Formidable passage
-            if (mapObject.getID() == 29778 && (mapObject.getX() == 3298 && mapObject.getY() == 5185
+            if (mapObject.getId() == 29778 && (mapObject.getX() == 3298 && mapObject.getY() == 5185
                     || mapObject.getX() == 3231 && mapObject.getY() == 5755)) {
                 // Exit spawn room
                 pc.stop();
@@ -974,9 +974,9 @@ pc = new PController() {
                 player.openDialogue("raids", 1);
                 return true;
             }
-            var forceForward = mapObject.getID() == 33113;
-            var forceBackward = mapObject.getID() == 29996 && mapObject.getDirection() == 2
-                    || mapObject.getID() == 2156;
+            var forceForward = mapObject.getId() == 33113;
+            var forceBackward = mapObject.getId() == 29996 && mapObject.getDirection() == 2
+                    || mapObject.getId() == 2156;
             for (var i = 0; i < rooms.size(); i++) {
                 var room = rooms.get(i);
                 if (i - 1 >= 0 && (player.getY() > mapObject.getY() || forceBackward) && !forceForward
@@ -1025,9 +1025,9 @@ pc = new PController() {
                 player.getGameEncoder().sendMessage("You can't cross this while in combat.");
                 return true;
             }
-            if (mapObject.getID() == 32755) {
-                player.getGameEncoder().sendHideWidget(WidgetID.TZKAL_ZUK, 2, myRoom.isComplete());
-                player.getGameEncoder().sendHideWidget(WidgetID.TZKAL_ZUK, 5, myRoom.isComplete());
+            if (mapObject.getId() == 32755) {
+                player.getGameEncoder().sendHideWidget(WidgetId.TZKAL_ZUK, 2, myRoom.isComplete());
+                player.getGameEncoder().sendHideWidget(WidgetId.TZKAL_ZUK, 5, myRoom.isComplete());
             }
             var distance = mapObject.getSizeX() + 1;
             player.getMovement().clear();
@@ -1045,8 +1045,8 @@ pc = new PController() {
             if (rewards == null || rewards.isEmpty()) {
                 return true;
             }
-            player.getWidgetManager().sendInteractiveOverlay(WidgetID.CHAMBERS_OF_XERIC_REWARDS);
-            player.getGameEncoder().sendWidgetSettings(WidgetID.CHAMBERS_OF_XERIC_REWARDS, 5, 0, 4, 1054);
+            player.getWidgetManager().sendInteractiveOverlay(WidgetId.CHAMBERS_OF_XERIC_REWARDS);
+            player.getGameEncoder().sendWidgetSettings(WidgetId.CHAMBERS_OF_XERIC_REWARDS, 5, 0, 4, 1054);
             rewards.sendItems();
             return true;
         }
@@ -1054,22 +1054,22 @@ pc = new PController() {
     },
 
     /* @Override */
-    widgetOnMapObjectHook: function(interfaceID, childID, slot, mapObject) {
-        if (interfaceID != WidgetID.INVENTORY) {
+    widgetOnMapObjectHook: function(interfaceId, childId, slot, mapObject) {
+        if (interfaceId != WidgetId.INVENTORY) {
             return false;
         }
-        var itemID = player.getInventory().getID(slot);
-        switch (mapObject.getID()) {
+        var itemId = player.getInventory().getId(slot);
+        switch (mapObject.getId()) {
         case 29878: // Geyser
-            if (itemID == 20800) { // Empty gourd vial
+            if (itemId == 20800) { // Empty gourd vial
                 var event = new Event(0) {
                     execute: function() {
-                        if (!player.isVisible() || !player.getInventory().hasItem(itemID)) {
+                        if (!player.isVisible() || !player.getInventory().hasItem(itemId)) {
                             event.stop();
                             return;
                         }
                         player.setAnimation(832);
-                        player.getInventory().deleteItem(itemID, 1);
+                        player.getInventory().deleteItem(itemId, 1);
                         player.getInventory().addItem(20801, 1);
                     }
                 };
@@ -1077,12 +1077,12 @@ pc = new PController() {
             }
             return true;
         case 29765: // Herb patch
-            if (itemID == 20903 || itemID == 20906 || itemID == 20909) { // Golpar/Buchu/Noxifer
+            if (itemId == 20903 || itemId == 20906 || itemId == 20909) { // Golpar/Buchu/Noxifer
                 if (!player.getInventory().hasItem(5343)) {
                     player.getGameEncoder().sendMessage("You need a seed dibber to do this.");
                     return;
                 }
-                player.getInventory().deleteItem(itemID, 1);
+                player.getInventory().deleteItem(itemId, 1);
                 var event = new Event(0) {
                     execute: function() {
                         if (!player.isVisible()) {
@@ -1090,7 +1090,7 @@ pc = new PController() {
                             return;
                         }
                         player.setAnimation(2291);
-                        player.getInventory().addOrDropItem(itemID - 2, 1);
+                        player.getInventory().addOrDropItem(itemId - 2, 1);
                         if (Utils.randomE(6) == 0) {
                             event.stop();
                         }
@@ -1105,7 +1105,7 @@ pc = new PController() {
 
     /* @Override */
     addMapItemHook: function(mapItem) {
-        if (GAME_ITEMS.includes(mapItem.getID())) {
+        if (GAME_ITEMS.includes(mapItem.getId())) {
             mapItem.setAlwaysAppear();
             mapItem.setGameMode(-1);
         }
@@ -1136,12 +1136,12 @@ pc = new PController() {
                     NPCDef.getNPCDef(7554));
             selectedPlayer.getCharges().depleteRoWICharge(0);
             if (Utils.inRange(percent)) {
-                playersRewarded.push(selectedPlayer.getID());
+                playersRewarded.push(selectedPlayer.getId());
                 playerEntries.remove(selectedPlayer);
                 totalUniques++;
                 var item = RandomItem.getItem(UNIQUE_REWARDS);
                 selectedPlayer.getController().getVariable("rewards").addItem(item);
-                selectedPlayer.getCombat().logNPCItem("Chambers of Xeric", item.getID(), item.getAmount());
+                selectedPlayer.getCombat().logNPCItem("Chambers of Xeric", item.getId(), item.getAmount());
                 for each (var player2 in players) {
                     if (!sentSpecialLootMessage) {
                         player2.getGameEncoder().sendMessage("<col=ef20ff>Special loot:</col>",
@@ -1151,20 +1151,20 @@ pc = new PController() {
                             + "</col> - <col=ff0000>" + item.getName() + "</col>", Messaging.CHAT_TYPE_CLAN_CHAT_INFO);
                 }
                 sentSpecialLootMessage = true;
-                player.getWorld().sendItemDropNews(selectedPlayer, item.getID());
+                player.getWorld().sendItemDropNews(selectedPlayer, item.getId());
                 RequestManager.addPlayerLog(selectedPlayer, "raids",selectedPlayer.getLogName() + " received "
                         + item.getLogName() + " from the Chambers of Xeric.");
                 var petItem = new Item(20851, 1);
-                if (Utils.inRange(selectedPlayer.getCombat().getDropRate(petItem.getID(), 0.5))) {
+                if (Utils.inRange(selectedPlayer.getCombat().getDropRate(petItem.getId(), 0.5))) {
                     selectedPlayer.getInventory().addOrDropItem(petItem);
-                    selectedPlayer.getCombat().logNPCItem("Chambers of Xeric", petItem.getID(), petItem.getAmount());
-                    player.getWorld().sendItemDropNews(selectedPlayer, petItem.getID());
+                    selectedPlayer.getCombat().logNPCItem("Chambers of Xeric", petItem.getId(), petItem.getAmount());
+                    player.getWorld().sendItemDropNews(selectedPlayer, petItem.getId());
                 }
                 selectedPlayer.getGameEncoder().setVarp(1432, 256 + points * 1024);
             }
         }
         for each (var player2 in players) {
-            if (playersRewarded.indexOf(player2.getID()) != -1) {
+            if (playersRewarded.indexOf(player2.getId()) != -1) {
                 continue;
             }
             var amountDivider = 131071 / points;
@@ -1174,7 +1174,7 @@ pc = new PController() {
                 if (amount == 0) {
                     amount = 1;
                 }
-                item = new Item(item.getID(), amount);
+                item = new Item(item.getId(), amount);
                 player2.getController().getVariable("rewards").addItem(item);
             }
         }

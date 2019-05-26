@@ -13,7 +13,7 @@ POISON_ATTACK.setFullDamage(true);
 POISON_ATTACK.setAttackSpeed(6);
 POISON_ATTACK.setTargetGraphic(new Graphic(1645));
 POISON_ATTACK.setTargetTileGraphic(new Graphic(1654));
-POISON_ATTACK.setProjectileID(1644);
+POISON_ATTACK.setProjectileId(1644);
 POISON_ATTACK.setPoison(4);
 POISON_ATTACK.setIgnorePrayer(true);
 POISON_ATTACK.setSpeedMinDistance(8);
@@ -52,7 +52,7 @@ cs = new NCombatScript() {
     },
 
     targetTileGraphicHook: function(combatStyle) {
-        if (combatStyle.getTargetTileGraphic() != null && combatStyle.getTargetTileGraphic().getID() == 1654) {
+        if (combatStyle.getTargetTileGraphic() != null && combatStyle.getTargetTileGraphic().getId() == 1654) {
             return TILE_GRAPHICS[Utils.randomE(TILE_GRAPHICS.length)];
         }
         return combatStyle.getTargetTileGraphic();

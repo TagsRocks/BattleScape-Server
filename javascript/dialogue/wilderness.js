@@ -64,9 +64,9 @@ entries.add(obj4);
 obj4.setLargeSelection(title, Utils.toStringArray(lines, true), Utils.toStringArray(actions, true));
 
 instance = new DialogueScript() {
-    execute: function(player, index, childID, slot) {
+    execute: function(player, index, childId, slot) {
         if (index == 0) {
-            if (player.getInventory().getCount(ItemID.COINS) < 7500) {
+            if (player.getInventory().getCount(ItemId.COINS) < 7500) {
                 player.getGameEncoder().sendMessage("You don't have enough coins.");
                 return;
             }
@@ -81,18 +81,20 @@ instance = new DialogueScript() {
                 player.getMovement().addMovement(object.getX(), object.getY());
             }
             Region.openDoor(player, object, 1, false, false);
-            player.getInventory().deleteItem(ItemID.COINS, 7500);
+            player.getInventory().deleteItem(ItemId.COINS, 7500);
         } else if (index == 1) {
             if (slot == 1) {
-                player.getBountyHunter().setShow(!player.getBountyHunter().getShow());
-                player.getGameEncoder().sendMessage("Bounty overlay: " + player.getBountyHunter().getShow());
+                player.getCombat().getBountyHunter().setShow(!player.getCombat().getBountyHunter().getShow());
+                player.getGameEncoder().sendMessage("Bounty overlay: "
+                        + player.getCombat().getBountyHunter().getShow());
             } else if (slot == 2) {
                 player.getCombat().setShowKDR(!player.getCombat().showKDR());
                 player.getGameEncoder().sendMessage("Streaks: " + player.getCombat().showKDR());
             } else if (slot == 3) {
-                player.getBountyHunter().setTargetIndicator(!player.getBountyHunter().getTargetIndicator());
+                player.getCombat().getBountyHunter().setTargetIndicator(!player.getCombat().getBountyHunter()
+                        .getTargetIndicator());
                 player.getGameEncoder().sendMessage("Target Indicator (Arrow): "
-                        + player.getBountyHunter().getTargetIndicator());
+                        + player.getCombat().getBountyHunter().getTargetIndicator());
             } else if (slot == 4) {
                 player.openDialogue("wilderness", 2);
                 Dialogue.setText(player, null, "Your current KDR is " + player.getCombat().getKills()

@@ -71,7 +71,7 @@ entries.add(obj6);
 obj6.setSelection(title, Utils.toStringArray(lines, true), Utils.toStringArray(actions, true));
 
 instance = new DialogueScript() {
-    execute: function(player, index, childID, slot) {
+    execute: function(player, index, childId, slot) {
         if (index == 0) {
             if (slot == 0) {
                 if (!player.isGameModeNormal() && !player.isGameModeHard() && !player.getTzHaar().getFightCave()) {
@@ -84,21 +84,21 @@ instance = new DialogueScript() {
             }
         } else if (index == 2) {
             if (slot == 0) {
-                if (player.getInventory().getCount(ItemID.FIRE_CAPE) == 0) {
+                if (player.getInventory().getCount(ItemId.FIRE_CAPE) == 0) {
                     player.getGameEncoder().sendMessage("You need a Fire cape to do this.");
                     return;
                 }
-                player.getInventory().deleteItem(ItemID.FIRE_CAPE, 1);
-                player.getInventory().addItem(ItemID.TOKKUL, 8000);
+                player.getInventory().deleteItem(ItemId.FIRE_CAPE, 1);
+                player.getInventory().addItem(ItemId.TOKKUL, 8000);
             }
         } else if (index == 3) {
             if (slot == 0) {
-                if (!player.getInventory().hasItem(ItemID.FIRE_CAPE)) {
+                if (!player.getInventory().hasItem(ItemId.FIRE_CAPE)) {
                     player.getGameEncoder().sendMessage("You need an Fire cape to do this.");
                     return;
                 }
-                player.getInventory().deleteItem(ItemID.FIRE_CAPE, 1);
-                if (!player.getFamiliar().rollPet(ItemID.TZREK_JAD, 0.5)) {
+                player.getInventory().deleteItem(ItemId.FIRE_CAPE, 1);
+                if (!player.getFamiliar().rollPet(ItemId.TZREK_JAD, 0.5)) {
                     player.getGameEncoder().sendMessage("It seems luck is not on your side!");
                 }
             }
@@ -118,22 +118,22 @@ instance = new DialogueScript() {
             }
         } else if (index == 5) {
             if (slot == 0) {
-                if (!player.getInventory().hasItem(ItemID.FIRE_CAPE)) {
+                if (!player.getInventory().hasItem(ItemId.FIRE_CAPE)) {
                     player.getGameEncoder().sendMessage("You need a Fire Cape to do this.");
                     return;
                 }
                 player.getGameEncoder().sendMessage("You sacrifice your Fire Cape, allowing you access to The Inferno...");
-                player.getInventory().deleteItem(ItemID.FIRE_CAPE, 1);
+                player.getInventory().deleteItem(ItemId.FIRE_CAPE, 1);
                 player.getTzHaar().setInfernoSacrificedCape(true);
             }
         } else if (index == 6) {
             if (slot == 0) {
-                if (!player.getInventory().hasItem(ItemID.INFERNAL_CAPE)) {
+                if (!player.getInventory().hasItem(ItemId.INFERNAL_CAPE)) {
                     player.getGameEncoder().sendMessage("You need an Infernal cape to do this.");
                     return;
                 }
-                player.getInventory().deleteItem(ItemID.INFERNAL_CAPE, 1);
-                if (!player.getFamiliar().rollPet(ItemID.JAL_NIB_REK, 0.5)) {
+                player.getInventory().deleteItem(ItemId.INFERNAL_CAPE, 1);
+                if (!player.getFamiliar().rollPet(ItemId.JAL_NIB_REK, 0.5)) {
                     player.getGameEncoder().sendMessage("It seems luck is not on your side!");
                 }
             }

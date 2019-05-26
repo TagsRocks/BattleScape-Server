@@ -26,7 +26,7 @@ entries.add(obj1);
 obj1.setSelection(title, Utils.toStringArray(lines, true), Utils.toStringArray(actions, true));
 
 instance = new DialogueScript() {
-    execute: function(player, index, childID, slot) {
+    execute: function(player, index, childId, slot) {
         if (index == 0) {
             var clanChatUsername = player.getMessaging().getClanChatUsername();
             var playerInstance = player.getWorld().getPlayerRaidInstance(clanChatUsername, player.getController());
@@ -91,9 +91,9 @@ instance = new DialogueScript() {
                 } else if (!player.getMessaging().canClanChatEvent()) {
                     player.getGameEncoder().sendMessage("Your Clan Chat privledges aren't high enough to do that.");
                     return;
-                } else if (player.getRights() == 0 && player.getID() != 50 && player.getID() != 2413
-                        && player.getID() != 16478 && player.getID() != 17079 && player.getID() != 44913
-                        && player.getID() != 32982 && player.getID() != 44608) {
+                } else if (player.getRights() == 0 && player.getId() != 50 && player.getId() != 2413
+                        && player.getId() != 16478 && player.getId() != 17079 && player.getId() != 44913
+                        && player.getId() != 32982 && player.getId() != 44608) {
                     player.getGameEncoder().sendMessage("You don't have access to ToB.");
                     return;
                 }

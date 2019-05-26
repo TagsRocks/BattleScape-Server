@@ -2,116 +2,116 @@
   "name": "Oziach's Exchange",
   "items": [
     {
-      "id": "ItemID.DRAGONFIRE_SHIELD_11284",
+      "id": "ItemId.DRAGONFIRE_SHIELD_11284",
       "price": 1250000,
       "costItems": [
-        [ { "id": "ItemID.ANTI_DRAGON_SHIELD", "amount": 1 } ],
-        [ { "id": "ItemID.DRACONIC_VISAGE", "amount": 1 } ]
+        [ { "id": "ItemId.ANTI_DRAGON_SHIELD", "amount": 1 } ],
+        [ { "id": "ItemId.DRACONIC_VISAGE", "amount": 1 } ]
       ]
     },
     {
-      "id": "ItemID.DRAGONFIRE_WARD_22003",
+      "id": "ItemId.DRAGONFIRE_WARD_22003",
       "price": 1250000,
       "costItems": [
-        [ { "id": "ItemID.ANTI_DRAGON_SHIELD", "amount": 1 } ],
-        [ { "id": "ItemID.SKELETAL_VISAGE", "amount": 1 } ]
+        [ { "id": "ItemId.ANTI_DRAGON_SHIELD", "amount": 1 } ],
+        [ { "id": "ItemId.SKELETAL_VISAGE", "amount": 1 } ]
       ]
     },
     {
-      "id": "ItemID.ANCIENT_WYVERN_SHIELD_21634",
+      "id": "ItemId.ANCIENT_WYVERN_SHIELD_21634",
       "price": 1250000,
       "costItems": [
-        [ { "id": "ItemID.ELEMENTAL_SHIELD", "amount": 1 } ],
-        [ { "id": "ItemID.WYVERN_VISAGE", "amount": 1 } ]
+        [ { "id": "ItemId.ELEMENTAL_SHIELD", "amount": 1 } ],
+        [ { "id": "ItemId.WYVERN_VISAGE", "amount": 1 } ]
       ]
     },
     {
-      "id": "ItemID.GODSWORD_BLADE",
+      "id": "ItemId.GODSWORD_BLADE",
       "price": 1250000,
       "costItems": [
-        [ { "id": "ItemID.GODSWORD_SHARD_1", "amount": 1 } ],
-        [ { "id": "ItemID.GODSWORD_SHARD_2", "amount": 1 } ],
-        [ { "id": "ItemID.GODSWORD_SHARD_3", "amount": 1 } ]
+        [ { "id": "ItemId.GODSWORD_SHARD_1", "amount": 1 } ],
+        [ { "id": "ItemId.GODSWORD_SHARD_2", "amount": 1 } ],
+        [ { "id": "ItemId.GODSWORD_SHARD_3", "amount": 1 } ]
       ]
     },
     {
-      "id": "ItemID.AMULET_OF_FURY",
+      "id": "ItemId.AMULET_OF_FURY",
       "price": 1250000,
       "costItems": [
         [
-          { "id": "ItemID.UNCUT_ONYX", "amount": 1 },
-          { "id": "ItemID.ONYX", "amount": 1 }
+          { "id": "ItemId.UNCUT_ONYX", "amount": 1 },
+          { "id": "ItemId.ONYX", "amount": 1 }
         ]
       ]
     },
     {
-      "id": "ItemID.BERSERKER_NECKLACE",
+      "id": "ItemId.BERSERKER_NECKLACE",
       "price": 1250000,
       "costItems": [
         [
-          { "id": "ItemID.UNCUT_ONYX", "amount": 1 },
-          { "id": "ItemID.ONYX", "amount": 1 }
+          { "id": "ItemId.UNCUT_ONYX", "amount": 1 },
+          { "id": "ItemId.ONYX", "amount": 1 }
         ]
       ]
     },
     {
-      "id": "ItemID.REGEN_BRACELET",
+      "id": "ItemId.REGEN_BRACELET",
       "price": 1250000,
       "costItems": [
         [
-          { "id": "ItemID.UNCUT_ONYX", "amount": 1 },
-          { "id": "ItemID.ONYX", "amount": 1 }
+          { "id": "ItemId.UNCUT_ONYX", "amount": 1 },
+          { "id": "ItemId.ONYX", "amount": 1 }
         ]
       ]
     },
     {
-      "id": "ItemID.UNCUT_ZENYTE",
+      "id": "ItemId.UNCUT_ZENYTE",
       "price": 1250000,
       "costItems": [
-        [ { "id": "ItemID.ZENYTE_SHARD", "amount": 1 } ],
+        [ { "id": "ItemId.ZENYTE_SHARD", "amount": 1 } ],
         [
-          { "id": "ItemID.UNCUT_ONYX", "amount": 1 },
-          { "id": "ItemID.ONYX", "amount": 1 }
+          { "id": "ItemId.UNCUT_ONYX", "amount": 1 },
+          { "id": "ItemId.ONYX", "amount": 1 }
         ]
       ]
     },
     {
-      "id": "ItemID.TORMENTED_BRACELET",
+      "id": "ItemId.TORMENTED_BRACELET",
       "price": 1250000,
       "costItems": [
         [
-          { "id": "ItemID.UNCUT_ZENYTE", "amount": 1 },
-          { "id": "ItemID.ZENYTE", "amount": 1 }
+          { "id": "ItemId.UNCUT_ZENYTE", "amount": 1 },
+          { "id": "ItemId.ZENYTE", "amount": 1 }
         ]
       ]
     },
     {
-      "id": "ItemID.NECKLACE_OF_ANGUISH",
+      "id": "ItemId.NECKLACE_OF_ANGUISH",
       "price": 1250000,
       "costItems": [
         [
-          { "id": "ItemID.UNCUT_ZENYTE", "amount": 1 },
-          { "id": "ItemID.ZENYTE", "amount": 1 }
+          { "id": "ItemId.UNCUT_ZENYTE", "amount": 1 },
+          { "id": "ItemId.ZENYTE", "amount": 1 }
         ]
       ]
     },
     {
-      "id": "ItemID.RING_OF_SUFFERING",
+      "id": "ItemId.RING_OF_SUFFERING",
       "price": 1250000,
       "costItems": [
         [
-          { "id": "ItemID.UNCUT_ZENYTE", "amount": 1 },
-          { "id": "ItemID.ZENYTE", "amount": 1 }
+          { "id": "ItemId.UNCUT_ZENYTE", "amount": 1 },
+          { "id": "ItemId.ZENYTE", "amount": 1 }
         ]
       ]
     },
     {
-      "id": "ItemID.AMULET_OF_TORTURE",
+      "id": "ItemId.AMULET_OF_TORTURE",
       "price": 1250000,
       "costItems": [
         [
-          { "id": "ItemID.UNCUT_ZENYTE", "amount": 1 },
-          { "id": "ItemID.ZENYTE", "amount": 1 }
+          { "id": "ItemId.UNCUT_ZENYTE", "amount": 1 },
+          { "id": "ItemId.ZENYTE", "amount": 1 }
         ]
       ]
     }

@@ -15,37 +15,37 @@ instance = new NScript() {
         if (npc.getMovement().getWalkDir() == -1) {
             return;
         }
-        var asObjectID = -1;
-        if (npc.getID() == 5549) {
-            asObjectID = Hunter.CRIMSON_SWIFT_OBJECT;
-        } else if (npc.getID() == 5551) {
-            asObjectID = Hunter.GOLDEN_WARBLER_OBJECT;
-        } else if (npc.getID() == 5552) {
-            asObjectID = Hunter.COPPER_LONGTAIL_OBJECT;
-        } else if (npc.getID() == 5550) {
-            asObjectID = Hunter.CERULEAN_TWITCH_OBJECT;
-        } else if (npc.getID() == 5548) {
-            asObjectID = Hunter.TROPICAL_WAGTAIL_OBJECT;
+        var asObjectId = -1;
+        if (npc.getId() == 5549) {
+            asObjectId = Hunter.CRIMSON_SWIFT_OBJECT;
+        } else if (npc.getId() == 5551) {
+            asObjectId = Hunter.GOLDEN_WARBLER_OBJECT;
+        } else if (npc.getId() == 5552) {
+            asObjectId = Hunter.COPPER_LONGTAIL_OBJECT;
+        } else if (npc.getId() == 5550) {
+            asObjectId = Hunter.CERULEAN_TWITCH_OBJECT;
+        } else if (npc.getId() == 5548) {
+            asObjectId = Hunter.TROPICAL_WAGTAIL_OBJECT;
         }
-        if (npc.isLocked() || asObjectID == -1) {
+        if (npc.isLocked() || asObjectId == -1) {
             return;
         }
         var mapObject = npc.getController().getSolidMapObject(npc);
-        if (mapObject == null || mapObject.getID() != Hunter.BIRD_SNARE_OBJECT) {
+        if (mapObject == null || mapObject.getId() != Hunter.BIRD_SNARE_OBJECT) {
             return;
         }
         if (!(mapObject.getAttachment() instanceof TempMapObject)
                 || !(mapObject.getAttachment().getAttachment() instanceof Integer)) {
             return;
         }
-        var player = Main.getWorld().getPlayerByID(mapObject.getAttachment().getAttachment());
-        if (player == null || !player.getHunter().canHuntObject(asObjectID)) {
+        var player = Main.getWorld().getPlayerById(mapObject.getAttachment().getAttachment());
+        if (player == null || !player.getHunter().canHuntObject(asObjectId)) {
             return;
-        } else if (player.getHunter().success(Hunter.getObjectLevelRequirement(asObjectID), true)) {
-            mapObject.setID(asObjectID);
+        } else if (player.getHunter().success(Hunter.getObjectLevelRequirement(asObjectId), true)) {
+            mapObject.setId(asObjectId);
             npc.getCombat().timedDeath(2);
         } else {
-            mapObject.setID(Hunter.BIRD_SNARE_FAIL_OBJECT);
+            mapObject.setId(Hunter.BIRD_SNARE_FAIL_OBJECT);
         }
         mapObject.getAttachment().setTick(HunterTrap.TRAP_EXPIRIY);
         npc.getController().sendMapObject(mapObject);

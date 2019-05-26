@@ -15,7 +15,7 @@ entries.add(obj0);
 obj0.setSelection(title, Utils.toStringArray(lines, true), Utils.toStringArray(actions, true));
 
 instance = new DialogueScript() {
-    execute: function(player, index, childID, slot) {
+    execute: function(player, index, childId, slot) {
         if (player.isLocked()) {
             return;
         }
@@ -27,8 +27,8 @@ instance = new DialogueScript() {
                     return;
                 }
                 player.setLoyaltyHours(0);
-                player.getInventory().addOrDropItem(ItemID.COINS, 100000 * hours);
-                player.getInventory().addOrDropItem(ItemID.LOYALTY_TICKET_32287, 10 * hours);
+                player.getInventory().addOrDropItem(ItemId.COINS, 100000 * hours);
+                player.getInventory().addOrDropItem(ItemId.LOYALTY_TICKET_32287, 10 * hours);
             } else if (slot == 1) {
                 player.openShop("loyalty");
             } else if (slot == 2) {

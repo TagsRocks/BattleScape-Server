@@ -21,23 +21,23 @@ cs = new NCombatScript() {
             changeDelay--;
             if (changeDelay == 0) {
                 this.setChangeDelay();
-                if (npc.getID() == 983) {
-                    npc.setTransformationID(984);
+                if (npc.getId() == 983) {
+                    npc.setTransformationId(984);
                     npc.setForceMessage("Krrrrrrk");
-                } else if (npc.getID() == 984) {
-                    npc.setTransformationID(988);
+                } else if (npc.getId() == 984) {
+                    npc.setTransformationId(988);
                     npc.setForceMessage("Chkhkhkhkhk");
-                } else if (npc.getID() == 988) {
-                    npc.setTransformationID(986);
+                } else if (npc.getId() == 988) {
+                    npc.setTransformationId(986);
                     npc.setForceMessage("Krrrrrrssssssss");
-                } else if (npc.getID() == 986) {
-                    npc.setTransformationID(985);
+                } else if (npc.getId() == 986) {
+                    npc.setTransformationId(985);
                     npc.setForceMessage("Sssssrrrkkkkkk");
-                } else if (npc.getID() == 985) {
-                    npc.setTransformationID(987);
+                } else if (npc.getId() == 985) {
+                    npc.setTransformationId(987);
                     npc.setForceMessage("Krkrkrkrkrkrkrkr");
-                } else if (npc.getID() == 987) {
-                    npc.setTransformationID(983);
+                } else if (npc.getId() == 987) {
+                    npc.setTransformationId(983);
                     npc.setForceMessage("Tktktktktktkt");
                 }
             }
@@ -50,20 +50,20 @@ cs = new NCombatScript() {
             return damage;
         }
         var spell = entity.getMagic().getActiveSpell();
-        if (npc.getID() == 983 && (hitType != Hit.Type.MAGIC || spell == null
+        if (npc.getId() == 983 && (hitType != Hit.Type.MAGIC || spell == null
                 || !spell.getName().startsWith("wind"))) {
             return 0;
-        } else if (npc.getID() == 988 && hitType != Hit.Type.MELEE) {
+        } else if (npc.getId() == 988 && hitType != Hit.Type.MELEE) {
             return 0;
-        } else if (npc.getID() == 984 && (hitType != Hit.Type.MAGIC || spell == null
+        } else if (npc.getId() == 984 && (hitType != Hit.Type.MAGIC || spell == null
                 || !spell.getName().startsWith("water"))) {
             return 0;
-        } else if (npc.getID() == 985 && (hitType != Hit.Type.MAGIC || spell == null
+        } else if (npc.getId() == 985 && (hitType != Hit.Type.MAGIC || spell == null
                 || !spell.getName().startsWith("fire"))) {
             return 0;
-        } else if (npc.getID() == 987 && hitType != Hit.Type.RANGED) {
+        } else if (npc.getId() == 987 && hitType != Hit.Type.RANGED) {
             return 0;
-        } else if (npc.getID() == 986 && (hitType != Hit.Type.MAGIC || spell == null
+        } else if (npc.getId() == 986 && (hitType != Hit.Type.MAGIC || spell == null
                 || !spell.getName().startsWith("earth"))) {
             return 0;
         }
@@ -75,7 +75,7 @@ cs = new NCombatScript() {
         player.getGameEncoder().sendMessage("You have defeated the Dagannoth Mother!");
         player.getCombat().setHorrorFromTheDeep(true);
         player.getGameEncoder().sendMessage("<col=ff0000>You have completed Horror from the Deep!");
-        player.getInventory().addOrDropItem(ItemID.COINS, 25000);
+        player.getInventory().addOrDropItem(ItemId.COINS, 25000);
     },
 
     setChangeDelay: function() {

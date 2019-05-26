@@ -33,7 +33,7 @@ for (var i = 0; i < 7; i++) { // 7-13
 }
 
 instance = new DialogueScript() {
-    execute: function(player, index, childID, slot) {
+    execute: function(player, index, childId, slot) {
         if (player.isLocked()) {
             return;
         }
@@ -52,14 +52,14 @@ instance = new DialogueScript() {
                         || player.getController().getLevelForXP(index) == 1) {
                     player.getGameEncoder().sendMessage("You can't reset this stat.");
                     return;
-                } else if (player.getInventory().getCount(ItemID.COINS) < 500000) {
+                } else if (player.getInventory().getCount(ItemId.COINS) < 500000) {
                     player.getGameEncoder().sendMessage("You need 500K coins to do this.");
                     return;
                 } else if (player.getBank().needsPinInput(false)) {
                     return;
                 }
                 if (player.getSkills().changeCombatXP(index, 1)) {
-                    player.getInventory().deleteItem(ItemID.COINS, 500000);
+                    player.getInventory().deleteItem(ItemId.COINS, 500000);
                 }
             }
         } else if (index >= 7 && index <= 13) {

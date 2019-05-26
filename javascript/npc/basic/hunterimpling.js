@@ -12,7 +12,7 @@ instance = new NScript() {
     },
 
     restore: function() {
-        npc.setTransformationID(this.getNpcID());
+        npc.setTransformationId(this.getNpcId());
         changeTime = 250 + Utils.randomI(250);
     },
 
@@ -25,7 +25,7 @@ instance = new NScript() {
         }
     },
 
-    getNpcID: function() {
+    getNpcId: function() {
         if (Utils.randomE(34) == 0) {
             return 7233; // Lucky
         } else if (Utils.randomE(30) == 0) {

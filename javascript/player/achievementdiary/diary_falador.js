@@ -63,107 +63,107 @@ diary = new AchievementDiary(AchievementDiary.Name.FALADOR) {
     },
 
     teleportedHook: function(player, fromTile) {
-        if (player.getRegionID() == 11316 && fromTile.getRegionID() == 12082) {
+        if (player.getRegionId() == 11316 && fromTile.getRegionId() == 12082) {
             diary.addCompletedTask(player, Task.ENTRANA);
         }
     },
 
     equipItemHook: function(player, item, slot) {
-        if (item.getID() == ItemID.DWARVEN_HELMET && player.within(2962, 9699, 3061, 9852)) {
+        if (item.getId() == ItemId.DWARVEN_HELMET && player.within(2962, 9699, 3061, 9852)) {
             diary.addCompletedTask(player, Task.DWARVEN_HELMET);
         }
     },
 
     buyShopItemHook: function(player, shopItem, item, price) {
-        if (item.getID() == ItemID.WHITE_2H_SWORD && item.getAmount() > 0 && shopItem.getMonsterKillCount() > 0) {
+        if (item.getId() == ItemId.WHITE_2H_SWORD && item.getAmount() > 0 && shopItem.getMonsterKillCount() > 0) {
             diary.addCompletedTask(player, Task.WHITE_2H);
         }
     },
 
-    makeItemHook: function(player, skillID, item, npc, mapObject) {
-        if (item.getID() == ItemID.BUCKET_OF_WATER && player.getRegionID() == 11828) {
+    makeItemHook: function(player, skillId, item, npc, mapObject) {
+        if (item.getId() == ItemId.BUCKET_OF_WATER && player.getRegionId() == 11828) {
             diary.addCompletedTask(player, Task.FILL_BUCKET);
-        } else if (item.getID() == ItemID.MIND_TIARA) {
+        } else if (item.getId() == ItemId.MIND_TIARA) {
             diary.addCompletedTask(player, Task.MIND_TIARA);
-        } else if (item.getID() == ItemID.BLURITE_LIMBS) {
+        } else if (item.getId() == ItemId.BLURITE_LIMBS) {
             diary.addCompletedTask(player, Task.BLURITE_LIMBS);
-        } else if (item.getID() == ItemID.BULLSEYE_LANTERN_4550 && player.within(2925, 3205, 2941, 3215)) {
+        } else if (item.getId() == ItemId.BULLSEYE_LANTERN_4550 && player.within(2925, 3205, 2941, 3215)) {
             diary.addCompletedTask(player, Task.BULLSEYE_LANTERN);
-        } else if (npc != null && (npc.getID() == NpcID.GUARD_21_3269 || npc.getID() == NpcID.GUARD_22_3270
-                || npc.getID() == NpcID.GUARD_19 || npc.getID() == NpcID.GUARD_22_3272)
-                && (player.getRegionID() == 11828 || player.getRegionID() == 12084)) {
+        } else if (npc != null && (npc.getId() == NpcId.GUARD_21_3269 || npc.getId() == NpcId.GUARD_22_3270
+                || npc.getId() == NpcId.GUARD_19 || npc.getId() == NpcId.GUARD_22_3272)
+                && (player.getRegionId() == 11828 || player.getRegionId() == 12084)) {
             diary.addCompletedTask(player, Task.PICKPOCKET_GUARD);
-        } else if (item.getID() == ItemID.GOLD_ORE && player.getRegionID() == 11571) {
+        } else if (item.getId() == ItemId.GOLD_ORE && player.getRegionId() == 11571) {
             diary.addCompletedTask(player, Task.MINE_GOLD);
-        } else if (item.getID() == ItemID.MIND_RUNE && item.getAmount() >= 140) {
+        } else if (item.getId() == ItemId.MIND_RUNE && item.getAmount() >= 140) {
             diary.addCompletedTask(player, Task.CRAFT_MINDS);
-        } else if (item.getID() == ItemID.AIR_RUNE && item.getAmount() >= 252) {
+        } else if (item.getId() == ItemId.AIR_RUNE && item.getAmount() >= 252) {
             diary.addCompletedTask(player, Task.CRAFT_AIRS);
-        } else if (item.getID() == ItemID.MAGIC_ROOTS && item.getAmount() >= 3) {
+        } else if (item.getId() == ItemId.MAGIC_ROOTS && item.getAmount() >= 3) {
             diary.addCompletedTask(player, Task.MAGIC_ROOTS);
-        } else if (item.getID() == ItemID.SARADOMIN_BREW_3 && player.within(3009, 3355, 3019, 3358)) {
+        } else if (item.getId() == ItemId.SARADOMIN_BREW_3 && player.within(3009, 3355, 3019, 3358)) {
             diary.addCompletedTask(player, Task.SARADOMIN_BREW);
         }
     },
 
     makeFireHook: function(player, item) {
-        if (item.getID() == ItemID.WILLOW_LOGS && player.getRegionID() == 11573) {
+        if (item.getId() == ItemId.WILLOW_LOGS && player.getRegionId() == 11573) {
             diary.addCompletedTask(player, Task.BURN_WILLOW);
         }
     },
 
-    castSpellHook: function(player, spellBookChild, item, entity, mapObject) {
-        if (spellBookChild == WidgetChild.SpellBook.FALADOR_TELEPORT) {
+    castSpellHook: function(player, spellbookChild, item, entity, mapObject) {
+        if (spellbookChild == WidgetChild.SpellBook.FALADOR_TELEPORT) {
             diary.addCompletedTask(player, Task.FALADOR_TELEPORT);
         }
     },
 
     agilityObstacleHook: function(player, mapObject) {
-        if (mapObject.getID() == 24222 && player.getRegionID() == 11572) {
+        if (mapObject.getId() == 24222 && player.getRegionId() == 11572) {
             diary.addCompletedTask(player, Task.CLIMB_WALL);
-        } else if (mapObject.getID() == 16543 && player.getRegionID() == 12185) {
+        } else if (mapObject.getId() == 16543 && player.getRegionId() == 12185) {
             diary.addCompletedTask(player, Task.DWARVERN_CREVICE);
-        } else if (mapObject.getID() == 16510 && (player.getRegionID() == 11673 || player.getRegionID() == 11417)) {
+        } else if (mapObject.getId() == 16510 && (player.getRegionId() == 11673 || player.getRegionId() == 11417)) {
             diary.addCompletedTask(player, Task.TAVERLEY_FLOOR);
         }
     },
 
     npcKilledHook: function(player, npc) {
-        if ((npc.getID() == NpcID.DUCK_1 || npc.getID() == NpcID.DUCK_1_1839) && player.getRegionID() == 12084) {
+        if ((npc.getId() == NpcId.DUCK_1 || npc.getId() == NpcId.DUCK_1_1839) && player.getRegionId() == 12084) {
             diary.addCompletedTask(player, Task.KILL_DUCK);
-        } else if (npc.getID() == NpcID.MOGRE_60) {
+        } else if (npc.getId() == NpcId.MOGRE_60) {
             diary.addCompletedTask(player, Task.KILL_MOGRE);
-        } else if (npc.getID() == NpcID.GIANT_MOLE_230 && (player.getRegionID() == 6992
-                || player.getRegionID() == 6993)) {
+        } else if (npc.getId() == NpcId.GIANT_MOLE_230 && (player.getRegionId() == 6992
+                || player.getRegionId() == 6993)) {
             diary.addCompletedTask(player, Task.KILL_GIANT_MOLE);
-        } else if ((npc.getID() == NpcID.SKELETAL_WYVERN_140 || npc.getID() == NpcID.SKELETAL_WYVERN_140_466
-                || npc.getID() == NpcID.SKELETAL_WYVERN_140_467 || npc.getID() == NpcID.SKELETAL_WYVERN_140_468)
-                && (player.getRegionID() == 12181 || player.getRegionID() == 12437)) {
+        } else if ((npc.getId() == NpcId.SKELETAL_WYVERN_140 || npc.getId() == NpcId.SKELETAL_WYVERN_140_466
+                || npc.getId() == NpcId.SKELETAL_WYVERN_140_467 || npc.getId() == NpcId.SKELETAL_WYVERN_140_468)
+                && (player.getRegionId() == 12181 || player.getRegionId() == 12437)) {
             diary.addCompletedTask(player, Task.KILL_SKELETAL_WYVERN);
-        } else if (npc.getID() == NpcID.BLUE_DRAGON_111 && player.getRegionID() == 11674) {
+        } else if (npc.getId() == NpcId.BLUE_DRAGON_111 && player.getRegionId() == 11674) {
             diary.addCompletedTask(player, Task.KILL_BLUE_DRAGON);
         }
     },
 
     openShopHook: function(player, referenceName) {
-        if (referenceName != null && referenceName.equals("skilling") && player.getRegionID() == 12083) {
+        if (referenceName != null && referenceName.equals("skilling") && player.getRegionId() == 12083) {
             diary.addCompletedTask(player, Task.SARAHS_SHOP);
         }
     },
 
     mapObjectOptionHook: function(player, index, mapObject) {
-        if (mapObject.getID() == 172 && mapObject.getX() == 2914 && mapObject.getY() == 3452
-                && player.getInventory().hasItem(ItemID.CRYSTAL_KEY)) {
+        if (mapObject.getId() == 172 && mapObject.getX() == 2914 && mapObject.getY() == 3452
+                && player.getInventory().hasItem(ItemId.CRYSTAL_KEY)) {
             diary.addCompletedTask(player, Task.CRYSTAL_CHEST);
-        } else if (mapObject.getID() == 410 && player.getEquipment().getHeadID() == ItemID.INITIATE_SALLET
-                && player.getEquipment().getChestID() == ItemID.INITIATE_HAUBERK
-                && player.getEquipment().getLegID() == ItemID.INITIATE_CUISSE) {
+        } else if (mapObject.getId() == 410 && player.getEquipment().getHeadId() == ItemId.INITIATE_SALLET
+                && player.getEquipment().getChestId() == ItemId.INITIATE_HAUBERK
+                && player.getEquipment().getLegId() == ItemId.INITIATE_CUISSE) {
             diary.addCompletedTask(player, Task.GUTHIX_ALTAR);
-        } else if (mapObject.getID() == 409 && player.getEquipment().getHeadID() == ItemID.PROSELYTE_SALLET
-                && player.getEquipment().getChestID() == ItemID.PROSELYTE_HAUBERK
-                && player.getEquipment().getLegID() == ItemID.PROSELYTE_CUISSE) {
+        } else if (mapObject.getId() == 409 && player.getEquipment().getHeadId() == ItemId.PROSELYTE_SALLET
+                && player.getEquipment().getChestId() == ItemId.PROSELYTE_HAUBERK
+                && player.getEquipment().getLegId() == ItemId.PROSELYTE_CUISSE) {
             diary.addCompletedTask(player, Task.SARIM_ALTAR);
-        } else if (mapObject.getID() == 24318) {
+        } else if (mapObject.getId() == 24318) {
             if (player.getController().getLevelForXP(Skills.ATTACK) == 99
                     || player.getController().getLevelForXP(Skills.STRENGTH) == 99
                     || player.getController().getLevelForXP(Skills.ATTACK)
@@ -174,7 +174,7 @@ diary = new AchievementDiary(AchievementDiary.Name.FALADOR) {
     },
 
     npcOptionHook: function(player, index, npc) {
-        if (npc.getID() == NpcID.SECURITY_GUARD) {
+        if (npc.getId() == NpcId.SECURITY_GUARD) {
             diary.addCompletedTask(player, Task.SECURITY_BOOK);
         }
     },

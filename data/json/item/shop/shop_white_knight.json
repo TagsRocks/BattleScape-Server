@@ -4,107 +4,107 @@
   "ceilPrice": true,
   "items": [
     {
-      "id": "ItemID.WHITE_CHAINBODY",
+      "id": "ItemId.WHITE_CHAINBODY",
       "monsterName": "Black Knight",
       "monsterKillCount": 100
     },
     {
-      "id": "ItemID.WHITE_PLATELEGS",
+      "id": "ItemId.WHITE_PLATELEGS",
       "monsterName": "Black Knight",
       "monsterKillCount": 100
     },
     {
-      "id": "ItemID.WHITE_DAGGER",
+      "id": "ItemId.WHITE_DAGGER",
       "monsterName": "Black Knight",
       "monsterKillCount": 200
     },
     {
-      "id": "ItemID.WHITE_SWORD",
+      "id": "ItemId.WHITE_SWORD",
       "monsterName": "Black Knight",
       "monsterKillCount": 200
     },
     {
-      "id": "ItemID.WHITE_MED_HELM",
+      "id": "ItemId.WHITE_MED_HELM",
       "monsterName": "Black Knight",
       "monsterKillCount": 300
     },
     {
-      "id": "ItemID.WHITE_PLATESKIRT",
+      "id": "ItemId.WHITE_PLATESKIRT",
       "monsterName": "Black Knight",
       "monsterKillCount": 300
     },
     {
-      "id": "ItemID.WHITE_SQ_SHIELD",
+      "id": "ItemId.WHITE_SQ_SHIELD",
       "monsterName": "Black Knight",
       "monsterKillCount": 300
     },
     {
-      "id": "ItemID.WHITE_MACE",
+      "id": "ItemId.WHITE_MACE",
       "monsterName": "Black Knight",
       "monsterKillCount": 500
     },
     {
-      "id": "ItemID.WHITE_MAGIC_STAFF",
+      "id": "ItemId.WHITE_MAGIC_STAFF",
       "monsterName": "Black Knight",
       "monsterKillCount": 500
     },
     {
-      "id": "ItemID.WHITE_LONGSWORD",
+      "id": "ItemId.WHITE_LONGSWORD",
       "monsterName": "Black Knight",
       "monsterKillCount": 500
     },
     {
-      "id": "ItemID.WHITE_FULL_HELM",
+      "id": "ItemId.WHITE_FULL_HELM",
       "monsterName": "Black Knight",
       "monsterKillCount": 800
     },
     {
-      "id": "ItemID.WHITE_PLATEBODY",
+      "id": "ItemId.WHITE_PLATEBODY",
       "monsterName": "Black Knight",
       "monsterKillCount": 800
     },
     {
-      "id": "ItemID.WHITE_KITESHIELD",
+      "id": "ItemId.WHITE_KITESHIELD",
       "monsterName": "Black Knight",
       "monsterKillCount": 800
     },
     {
-      "id": "ItemID.WHITE_BOOTS",
+      "id": "ItemId.WHITE_BOOTS",
       "monsterName": "Black Knight",
       "monsterKillCount": 800
     },
     {
-      "id": "ItemID.WHITE_GLOVES",
+      "id": "ItemId.WHITE_GLOVES",
       "monsterName": "Black Knight",
       "monsterKillCount": 800
     },
     {
-      "id": "ItemID.WHITE_2H_SWORD",
+      "id": "ItemId.WHITE_2H_SWORD",
       "monsterName": "Black Knight",
       "monsterKillCount": 1300
     },
     {
-      "id": "ItemID.WHITE_HALBERD",
+      "id": "ItemId.WHITE_HALBERD",
       "monsterName": "Black Knight",
       "monsterKillCount": 1300
     },
     {
-      "id": "ItemID.WHITE_SCIMITAR",
+      "id": "ItemId.WHITE_SCIMITAR",
       "monsterName": "Black Knight",
       "monsterKillCount": 1300
     },
     {
-      "id": "ItemID.WHITE_WARHAMMER",
+      "id": "ItemId.WHITE_WARHAMMER",
       "monsterName": "Black Knight",
       "monsterKillCount": 1300
     },
     {
-      "id": "ItemID.WHITE_BATTLEAXE",
+      "id": "ItemId.WHITE_BATTLEAXE",
       "monsterName": "Black Knight",
       "monsterKillCount": 1300
     },
     {
-      "id": "ItemID.WHITE_CLAWS",
+      "id": "ItemId.WHITE_CLAWS",
       "monsterName": "Black Knight",
       "monsterKillCount": 1300
     }

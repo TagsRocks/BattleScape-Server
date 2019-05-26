@@ -16,8 +16,7 @@
         "**/*.zip": true
     },
     "search.exclude": {
-        "Client/": true,
-        "**/data/json/map/xtea.json": true,
+        "**/data/json/map/xtea.json": true
     },
     "editor.wordWrap": "wordWrapColumn",
     "editor.wordWrapColumn": 120,

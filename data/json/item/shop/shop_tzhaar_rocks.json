@@ -3,12 +3,12 @@
   "name": "TzHaar-Hur-Lek's Ore and Gem Store",
   "items": [
     {
-      "id": "ItemID.UNCUT_ONYX",
+      "id": "ItemId.UNCUT_ONYX",
       "price": 300000,
       "buyPrice": 30000
     },
     {
-      "id": "ItemID.ONYX_BOLTS_E",
+      "id": "ItemId.ONYX_BOLTS_E",
       "price": 1500,
       "buyPrice": 150
     }

@@ -25,9 +25,9 @@ cs = new NCombatScript() {
         if (!npc.getController().isRegionLoaded()) {
             return;
         }
-        if (baby != null && npc.getID() == IDLE_ID && (!baby.isVisible() || baby.isDead())) {
+        if (baby != null && npc.getId() == IDLE_ID && (!baby.isVisible() || baby.isDead())) {
             npc.getCombat().clear();
-            npc.setTransformationID(COMBAT_ID);
+            npc.setTransformationId(COMBAT_ID);
             npc.setAnimation(7423);
             npc.setLock(7);
             npc.getMovement().clear();
@@ -45,7 +45,7 @@ cs = new NCombatScript() {
 
     /* @Override */
     canBeAttackedHook: function(player, sendMessage, hitType) {
-        return npc.getID() != IDLE_ID;
+        return npc.getId() != IDLE_ID;
     },
 
     loadProfile: function() {
@@ -53,7 +53,7 @@ cs = new NCombatScript() {
             return;
         }
         loaded = true;
-        npc.getSpawnTile().setTile((npc.getID() == BABY_ID) ? BABY_SPAWN_TILE : SPAWN_TILE);
+        npc.getSpawnTile().setTile((npc.getId() == BABY_ID) ? BABY_SPAWN_TILE : SPAWN_TILE);
         npc.setTile(npc.getSpawnTile());
         var averageHP = 0;
         var playerMultiplier = 1;
@@ -64,11 +64,11 @@ cs = new NCombatScript() {
         }
         averageHP /= players.size();
         var hitpoints = ((50 + (players.size() * 25) + (averageHP * 2)) * playerMultiplier)|0;
-        if (npc.getID() == BABY_ID) {
+        if (npc.getId() == BABY_ID) {
             npc.setMaxHitpoints(hitpoints / 2);
         } else {
             npc.setMaxHitpoints(hitpoints);
-            npc.setTransformationID(IDLE_ID);
+            npc.setTransformationId(IDLE_ID);
             baby = new Npc(npc.getController(), BABY_ID, BABY_SPAWN_TILE);
             baby.getController().setMultiCombatFlag(true);
             baby.setMoveDistance(4);

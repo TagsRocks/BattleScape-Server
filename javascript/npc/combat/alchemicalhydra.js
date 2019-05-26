@@ -25,7 +25,7 @@ POISON_ATTACK.setFullDamage(true);
 POISON_ATTACK.setAttackSpeed(6);
 POISON_ATTACK.setTargetGraphic(new Graphic(1645));
 POISON_ATTACK.setTargetTileGraphic(new Graphic(1654));
-POISON_ATTACK.setProjectileID(1644);
+POISON_ATTACK.setProjectileId(1644);
 POISON_ATTACK.setPoison(4);
 POISON_ATTACK.setIgnorePrayer(true);
 POISON_ATTACK.setSpeedMinDistance(8);
@@ -125,43 +125,43 @@ cs = new NCombatScript() {
         if (npc.isLocked()) {
             return;
         }
-        if (npc.getID() == NpcID.ALCHEMICAL_HYDRA_426
+        if (npc.getId() == NpcId.ALCHEMICAL_HYDRA_426
                 && Utils.getPercent(npc.getHitpoints(), npc.getMaxHitpoints()) <= 75) {
             npc.setLock(2);
-            npc.setTransformationID(NpcID.ALCHEMICAL_HYDRA_426_8616);
+            npc.setTransformationId(NpcId.ALCHEMICAL_HYDRA_426_8616);
             npc.setAnimation(8237);
             return;
-        } else if (npc.getID() == NpcID.ALCHEMICAL_HYDRA_426_8616) {
+        } else if (npc.getId() == NpcId.ALCHEMICAL_HYDRA_426_8616) {
             npc.setLock(2);
-            npc.setTransformationID(NpcID.ALCHEMICAL_HYDRA_426_8619);
+            npc.setTransformationId(NpcId.ALCHEMICAL_HYDRA_426_8619);
             npc.setAnimation(8238);
             specialDelay = 3;
             damageReduction = true;
             return;
-        } else if (npc.getID() == NpcID.ALCHEMICAL_HYDRA_426_8619
+        } else if (npc.getId() == NpcId.ALCHEMICAL_HYDRA_426_8619
                 && Utils.getPercent(npc.getHitpoints(), npc.getMaxHitpoints()) <= 50) {
             npc.setLock(2);
-            npc.setTransformationID(NpcID.ALCHEMICAL_HYDRA_426_8617);
+            npc.setTransformationId(NpcId.ALCHEMICAL_HYDRA_426_8617);
             npc.setAnimation(8244);
             this.cancelLightningAttack();
             return;
-        } else if (npc.getID() == NpcID.ALCHEMICAL_HYDRA_426_8617) {
+        } else if (npc.getId() == NpcId.ALCHEMICAL_HYDRA_426_8617) {
             npc.setLock(2);
-            npc.setTransformationID(NpcID.ALCHEMICAL_HYDRA_426_8620);
+            npc.setTransformationId(NpcId.ALCHEMICAL_HYDRA_426_8620);
             npc.setAnimation(8245);
             specialDelay = 3;
             damageReduction = true;
             return;
-        } else if (npc.getID() == NpcID.ALCHEMICAL_HYDRA_426_8620
+        } else if (npc.getId() == NpcId.ALCHEMICAL_HYDRA_426_8620
                 && Utils.getPercent(npc.getHitpoints(), npc.getMaxHitpoints()) <= 25) {
             npc.setLock(2);
-            npc.setTransformationID(NpcID.ALCHEMICAL_HYDRA_426_8618);
+            npc.setTransformationId(NpcId.ALCHEMICAL_HYDRA_426_8618);
             npc.setAnimation(8251);
             this.cancelLightningAttack();
             return;
-        } else if (npc.getID() == NpcID.ALCHEMICAL_HYDRA_426_8618) {
+        } else if (npc.getId() == NpcId.ALCHEMICAL_HYDRA_426_8618) {
             npc.setLock(2);
-            npc.setTransformationID(NpcID.ALCHEMICAL_HYDRA_426_8621);
+            npc.setTransformationId(NpcId.ALCHEMICAL_HYDRA_426_8621);
             npc.setAnimation(8252);
             specialDelay = 3;
             hitStyle = hitStyle == Hit.Type.RANGED ? Hit.Type.MAGIC : Hit.Type.RANGED;
@@ -176,9 +176,9 @@ cs = new NCombatScript() {
                 this.activateVents();
             }
         }
-        if (npc.getID() == NpcID.ALCHEMICAL_HYDRA_426_8619 && npc.getHitDelay() == 0 && specialDelay == 0) {
+        if (npc.getId() == NpcId.ALCHEMICAL_HYDRA_426_8619 && npc.getHitDelay() == 0 && specialDelay == 0) {
             this.lightningAttackStart();
-        } else if (npc.getID() == NpcID.ALCHEMICAL_HYDRA_426_8620 && npc.getHitDelay() == 0 && specialDelay == 0) {
+        } else if (npc.getId() == NpcId.ALCHEMICAL_HYDRA_426_8620 && npc.getHitDelay() == 0 && specialDelay == 0) {
             this.fireAttackStart();
         }
     },
@@ -189,7 +189,7 @@ cs = new NCombatScript() {
 
     combatStyleHook: function(combatStyle) {
         if (specialDelay == 0) {
-            if (npc.getID() == NpcID.ALCHEMICAL_HYDRA_426 || npc.getID() == NpcID.ALCHEMICAL_HYDRA_426_8621) {
+            if (npc.getId() == NpcId.ALCHEMICAL_HYDRA_426 || npc.getId() == NpcId.ALCHEMICAL_HYDRA_426_8621) {
                 currentCombatStyle = POISON_ATTACK;
                 return POISON_ATTACK;
             }
@@ -209,7 +209,7 @@ cs = new NCombatScript() {
     },
 
     targetTileGraphicHook: function(combatStyle) {
-        if (combatStyle.getTargetTileGraphic() != null && combatStyle.getTargetTileGraphic().getID() == 1654) {
+        if (combatStyle.getTargetTileGraphic() != null && combatStyle.getTargetTileGraphic().getId() == 1654) {
             return POISON_TILE_GRAPHICS[Utils.randomE(POISON_TILE_GRAPHICS.length)];
         }
         return combatStyle.getTargetTileGraphic();
@@ -217,7 +217,7 @@ cs = new NCombatScript() {
 
     attackEndHook: function() {
         if (currentCombatStyle != POISON_ATTACK
-                && (npc.getID() == NpcID.ALCHEMICAL_HYDRA_426_8621 || ++hitCount == 3)) {
+                && (npc.getId() == NpcId.ALCHEMICAL_HYDRA_426_8621 || ++hitCount == 3)) {
             hitStyle = hitStyle == Hit.Type.RANGED ? Hit.Type.MAGIC : Hit.Type.RANGED;
             hitCount = 0;
         }
@@ -228,7 +228,7 @@ cs = new NCombatScript() {
 
     canBeAttackedHook: function(player, sendMessage, hitType) {
         if (!player.getSlayer().isAnyTask(npc) && !Main.ownerPrivledges(player)
-                && !player.isUsergroup(Player.GROUP_YOUTUBER)) {
+                && !player.isUsergroup(SqlRank.YOUTUBER)) {
             if (sendMessage) {
                 player.getGameEncoder().sendMessage("This can only be attacked on an appropriate Slayer task.");
             }
@@ -387,7 +387,7 @@ cs = new NCombatScript() {
         var eventFollow = new Event(1) {
             execute: function() {
                 if (player.isLocked() || followTiles.isEmpty() || npc.isLocked()
-                        || npc.getID() != NpcID.ALCHEMICAL_HYDRA_426_8620) {
+                        || npc.getId() != NpcId.ALCHEMICAL_HYDRA_426_8620) {
                     eventFollow.stop();
                     npc.attackUnlock();
                     return;
@@ -585,9 +585,9 @@ cs = new NCombatScript() {
         player.getGameEncoder().sendMapObjectAnimation(GREEN_VENT, 8279);
         player.getGameEncoder().sendMapObjectAnimation(RED_VENT, 8279);
         var weakness = RED_VENT;
-        if (npc.getID() == NpcID.ALCHEMICAL_HYDRA_426_8619) {
+        if (npc.getId() == NpcId.ALCHEMICAL_HYDRA_426_8619) {
             weakness = GREEN_VENT;
-        } else if (npc.getID() == NpcID.ALCHEMICAL_HYDRA_426_8620) {
+        } else if (npc.getId() == NpcId.ALCHEMICAL_HYDRA_426_8620) {
             weakness = BLUE_VENT;
         }
         var event = new Event() {
@@ -610,7 +610,7 @@ cs = new NCombatScript() {
                     player.applyHit(new Hit(Utils.randomI(20)));
                     break;
                 }
-                if (npc.getID() == NpcID.ALCHEMICAL_HYDRA_426_8621) {
+                if (npc.getId() == NpcId.ALCHEMICAL_HYDRA_426_8621) {
                     return;
                 }
                 for each (var vent in VENTS) {

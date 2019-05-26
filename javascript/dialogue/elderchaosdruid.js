@@ -19,12 +19,12 @@ entries.add(obj0);
 obj0.setSelection(title, Utils.toStringArray(lines, true), Utils.toStringArray(actions, true));
 
 instance = new DialogueScript() {
-    execute: function(player, index, childID, slot) {
+    execute: function(player, index, childId, slot) {
         if (player.isLocked()) {
             return;
         }
         if (index == 0) {
-            var itemID = player.getAttributeInt("use_item_id");
+            var itemId = player.getAttributeInt("use_item_id");
             var amount = 0;
             if (slot == 0) {
                 amount = 1;
@@ -35,16 +35,16 @@ instance = new DialogueScript() {
             }
             var valueEntered = new ValueEnteredEvent.IntegerEvent() {
                 execute: function(value) {
-                    value = Math.min(value, player.getInventory().getCount(itemID));
+                    value = Math.min(value, player.getInventory().getCount(itemId));
                     value = Math.min(value, player.getInventory().getRemainingSlots());
                     value = Math.min(value, Item.MAX_AMOUNT / 50);
-                    if (player.getInventory().getCount(ItemID.COINS) < value * 50) {
+                    if (player.getInventory().getCount(ItemId.COINS) < value * 50) {
                         player.getGameEncoder().sendMessage("You don't have enough coins to do this.");
                         return;
                     }
-                    player.getInventory().deleteItem(ItemID.COINS, value * 50);
-                    player.getInventory().deleteItem(itemID, value);
-                    player.getInventory().addItem(ItemDef.getUnnotedID(itemID), value);
+                    player.getInventory().deleteItem(ItemId.COINS, value * 50);
+                    player.getInventory().deleteItem(itemId, value);
+                    player.getInventory().addItem(ItemDef.getUnnotedId(itemId), value);
                 }
             }
             if (slot == 3) {

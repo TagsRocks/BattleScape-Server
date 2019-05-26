@@ -1,11 +1,11 @@
 {
   "name": "Culinaromancer Shop",
   "items": [
-    { "id": "ItemID.HARDLEATHER_GLOVES", "price": 65 },
-    { "id": "ItemID.BRONZE_GLOVES", "price": 130 },
-    { "id": "ItemID.IRON_GLOVES", "price": 325 },
-    { "id": "ItemID.STEEL_GLOVES", "price": 650 },
-    { "id": "ItemID.BLACK_GLOVES", "price": 1300 },
-    { "id": "ItemID.MITHRIL_GLOVES", "price": 1950 }
+    { "id": "ItemId.HARDLEATHER_GLOVES", "price": 65 },
+    { "id": "ItemId.BRONZE_GLOVES", "price": 130 },
+    { "id": "ItemId.IRON_GLOVES", "price": 325 },
+    { "id": "ItemId.STEEL_GLOVES", "price": 650 },
+    { "id": "ItemId.BLACK_GLOVES", "price": 1300 },
+    { "id": "ItemId.MITHRIL_GLOVES", "price": 1950 }
   ]
 }

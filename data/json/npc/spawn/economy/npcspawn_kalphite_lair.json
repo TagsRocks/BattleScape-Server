@@ -1,6 +1,6 @@
 [
   {
-    "id": "NpcID.KALPHITE_WORKER_28",
+    "id": "NpcId.KALPHITE_WORKER_28",
     "direction": 1,
     "moveDistance": 4,
     "x": 3498,
@@ -8,7 +8,7 @@
     "height": 2
   },
   {
-    "id": "NpcID.KALPHITE_WORKER_28",
+    "id": "NpcId.KALPHITE_WORKER_28",
     "direction": 1,
     "moveDistance": 4,
     "x": 3502,
@@ -16,7 +16,7 @@
     "height": 2
   },
   {
-    "id": "NpcID.KALPHITE_WORKER_28",
+    "id": "NpcId.KALPHITE_WORKER_28",
     "direction": 1,
     "moveDistance": 4,
     "x": 3507,
@@ -24,7 +24,7 @@
     "height": 2
   },
   {
-    "id": "NpcID.KALPHITE_WORKER_28",
+    "id": "NpcId.KALPHITE_WORKER_28",
     "direction": 1,
     "moveDistance": 4,
     "x": 3510,
@@ -32,7 +32,7 @@
     "height": 2
   },
   {
-    "id": "NpcID.KALPHITE_WORKER_28",
+    "id": "NpcId.KALPHITE_WORKER_28",
     "direction": 1,
     "moveDistance": 4,
     "x": 3503,
@@ -40,7 +40,7 @@
     "height": 2
   },
   {
-    "id": "NpcID.KALPHITE_WORKER_28",
+    "id": "NpcId.KALPHITE_WORKER_28",
     "direction": 1,
     "moveDistance": 4,
     "x": 3498,
@@ -48,7 +48,7 @@
     "height": 2
   },
   {
-    "id": "NpcID.KALPHITE_WORKER_28",
+    "id": "NpcId.KALPHITE_WORKER_28",
     "direction": 1,
     "moveDistance": 4,
     "x": 3492,
@@ -56,7 +56,7 @@
     "height": 2
   },
   {
-    "id": "NpcID.KALPHITE_WORKER_28",
+    "id": "NpcId.KALPHITE_WORKER_28",
     "direction": 1,
     "moveDistance": 4,
     "x": 3479,
@@ -64,7 +64,7 @@
     "height": 2
   },
   {
-    "id": "NpcID.KALPHITE_WORKER_28",
+    "id": "NpcId.KALPHITE_WORKER_28",
     "direction": 1,
     "moveDistance": 4,
     "x": 3473,
@@ -72,7 +72,7 @@
     "height": 2
   },
   {
-    "id": "NpcID.KALPHITE_WORKER_28",
+    "id": "NpcId.KALPHITE_WORKER_28",
     "direction": 1,
     "moveDistance": 4,
     "x": 3464,
@@ -80,7 +80,7 @@
     "height": 2
   },
   {
-    "id": "NpcID.KALPHITE_WORKER_28",
+    "id": "NpcId.KALPHITE_WORKER_28",
     "direction": 1,
     "moveDistance": 4,
     "x": 3467,
@@ -88,7 +88,7 @@
     "height": 2
   },
   {
-    "id": "NpcID.KALPHITE_WORKER_28",
+    "id": "NpcId.KALPHITE_WORKER_28",
     "direction": 1,
     "moveDistance": 4,
     "x": 3482,
@@ -96,7 +96,7 @@
     "height": 2
   },
   {
-    "id": "NpcID.KALPHITE_WORKER_28",
+    "id": "NpcId.KALPHITE_WORKER_28",
     "direction": 1,
     "moveDistance": 4,
     "x": 3494,
@@ -104,7 +104,7 @@
     "height": 2
   },
   {
-    "id": "NpcID.KALPHITE_WORKER_28",
+    "id": "NpcId.KALPHITE_WORKER_28",
     "direction": 1,
     "moveDistance": 4,
     "x": 3494,
@@ -112,7 +112,7 @@
     "height": 2
   },
   {
-    "id": "NpcID.KALPHITE_WORKER_28",
+    "id": "NpcId.KALPHITE_WORKER_28",
     "direction": 1,
     "moveDistance": 4,
     "x": 3479,
@@ -120,7 +120,7 @@
     "height": 2
   },
   {
-    "id": "NpcID.KALPHITE_SOLDIER_85_957",
+    "id": "NpcId.KALPHITE_SOLDIER_85_957",
     "direction": 1,
     "moveDistance": 4,
     "x": 3464,
@@ -128,7 +128,7 @@
     "height": 2
   },
   {
-    "id": "NpcID.KALPHITE_SOLDIER_85_957",
+    "id": "NpcId.KALPHITE_SOLDIER_85_957",
     "direction": 1,
     "moveDistance": 4,
     "x": 3469,
@@ -136,7 +136,7 @@
     "height": 2
   },
   {
-    "id": "NpcID.KALPHITE_SOLDIER_85_957",
+    "id": "NpcId.KALPHITE_SOLDIER_85_957",
     "direction": 1,
     "moveDistance": 4,
     "x": 3465,
@@ -144,7 +144,7 @@
     "height": 2
   },
   {
-    "id": "NpcID.KALPHITE_SOLDIER_85_957",
+    "id": "NpcId.KALPHITE_SOLDIER_85_957",
     "direction": 1,
     "moveDistance": 4,
     "x": 3470,
@@ -152,7 +152,7 @@
     "height": 2
   },
   {
-    "id": "NpcID.KALPHITE_SOLDIER_85_957",
+    "id": "NpcId.KALPHITE_SOLDIER_85_957",
     "direction": 1,
     "moveDistance": 4,
     "x": 3467,
@@ -160,7 +160,7 @@
     "height": 2
   },
   {
-    "id": "NpcID.KALPHITE_SOLDIER_85_957",
+    "id": "NpcId.KALPHITE_SOLDIER_85_957",
     "direction": 1,
     "moveDistance": 4,
     "x": 3461,
@@ -168,7 +168,7 @@
     "height": 2
   },
   {
-    "id": "NpcID.KALPHITE_SOLDIER_85_957",
+    "id": "NpcId.KALPHITE_SOLDIER_85_957",
     "direction": 1,
     "moveDistance": 4,
     "x": 3479,
@@ -176,7 +176,7 @@
     "height": 2
   },
   {
-    "id": "NpcID.KALPHITE_WORKER_28",
+    "id": "NpcId.KALPHITE_WORKER_28",
     "direction": 1,
     "moveDistance": 4,
     "x": 3499,
@@ -184,7 +184,7 @@
     "height": 2
   },
   {
-    "id": "NpcID.KALPHITE_GUARDIAN_141",
+    "id": "NpcId.KALPHITE_GUARDIAN_141",
     "direction": 1,
     "moveDistance": 4,
     "x": 3509,
@@ -192,7 +192,7 @@
     "height": 2
   },
   {
-    "id": "NpcID.KALPHITE_GUARDIAN_141",
+    "id": "NpcId.KALPHITE_GUARDIAN_141",
     "direction": 1,
     "moveDistance": 4,
     "x": 3507,
@@ -200,77 +200,77 @@
     "height": 2
   },
   {
-    "id": "NpcID.KALPHITE_QUEEN_333",
+    "id": "NpcId.KALPHITE_QUEEN_333",
     "direction": 1,
     "moveDistance": 16,
     "x": 3476,
     "y": 9492
   },
   {
-    "id": "NpcID.KALPHITE_GUARDIAN_141_960",
+    "id": "NpcId.KALPHITE_GUARDIAN_141_960",
     "direction": 1,
     "moveDistance": 8,
     "x": 3496,
     "y": 9500
   },
   {
-    "id": "NpcID.KALPHITE_GUARDIAN_141_960",
+    "id": "NpcId.KALPHITE_GUARDIAN_141_960",
     "direction": 1,
     "moveDistance": 8,
     "x": 3494,
     "y": 9489
   },
   {
-    "id": "NpcID.KALPHITE_WORKER_28_956",
+    "id": "NpcId.KALPHITE_WORKER_28_956",
     "direction": 1,
     "moveDistance": 8,
     "x": 3475,
     "y": 9488
   },
   {
-    "id": "NpcID.KALPHITE_WORKER_28_956",
+    "id": "NpcId.KALPHITE_WORKER_28_956",
     "direction": 1,
     "moveDistance": 8,
     "x": 3483,
     "y": 9486
   },
   {
-    "id": "NpcID.KALPHITE_WORKER_28_956",
+    "id": "NpcId.KALPHITE_WORKER_28_956",
     "direction": 1,
     "moveDistance": 8,
     "x": 3488,
     "y": 9492
   },
   {
-    "id": "NpcID.KALPHITE_WORKER_28_956",
+    "id": "NpcId.KALPHITE_WORKER_28_956",
     "direction": 1,
     "moveDistance": 8,
     "x": 3495,
     "y": 9496
   },
   {
-    "id": "NpcID.KALPHITE_WORKER_28_956",
+    "id": "NpcId.KALPHITE_WORKER_28_956",
     "direction": 1,
     "moveDistance": 8,
     "x": 3494,
     "y": 9508
   },
   {
-    "id": "NpcID.KALPHITE_WORKER_28_956",
+    "id": "NpcId.KALPHITE_WORKER_28_956",
     "direction": 1,
     "moveDistance": 8,
     "x": 3485,
     "y": 9513
   },
   {
-    "id": "NpcID.KALPHITE_WORKER_28_956",
+    "id": "NpcId.KALPHITE_WORKER_28_956",
     "direction": 1,
     "moveDistance": 8,
     "x": 3477,
     "y": 9506
   },
   {
-    "id": "NpcID.KALPHITE_WORKER_28_956",
+    "id": "NpcId.KALPHITE_WORKER_28_956",
     "direction": 1,
     "moveDistance": 8,
     "x": 3471,
