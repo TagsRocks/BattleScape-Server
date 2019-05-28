@@ -8,10 +8,17 @@ import lombok.var;
 
 public class ItemCommand implements Command {
     @Override
+    public String getExample() {
+        return "id_or_name (quantity)";
+    }
+
+    @Override
+    public boolean canUse(Player player) {
+        return Main.ownerPrivledges(player) || Main.isBeta() || Main.isSpawn();
+    }
+
+    @Override
     public void execute(Player player, String message) {
-        if (!Main.ownerPrivledges(player) && !Main.isBeta() && !Main.isSpawn()) {
-            return;
-        }
         var values = message.split(" ");
         var id = -1;
         if (values.length == 0) {

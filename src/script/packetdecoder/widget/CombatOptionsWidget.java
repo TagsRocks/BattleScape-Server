@@ -45,6 +45,7 @@ public class CombatOptionsWidget {
                         || player.getEquipment().getWeaponId() == ItemId.KODAI_WAND
                         || player.getEquipment().wearingFullAhrims()
                                 && player.getEquipment().getNeckId() == ItemId.AMULET_OF_THE_DAMNED_FULL
+                        || player.getEquipment().getWeaponId() == ItemId.ZURIELS_STAFF
                         || player.getEquipment().getWeaponId() == ItemId.ZURIELS_STAFF_32262
                         || player.getEquipment().getWeaponId() == ItemId.ZURIELS_STAFF_DEG_32269
                         || player.getEquipment().getWeaponId() == ItemId.CORRUPT_ZURIELS_STAFF_32278

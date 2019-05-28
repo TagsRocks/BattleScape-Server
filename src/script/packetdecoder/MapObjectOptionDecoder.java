@@ -160,7 +160,10 @@ public class MapObjectOptionDecoder extends PacketDecoder {
             }
         }
         var actionMethod = actionMethods.get(mapObject.getId());
-        if (actionMethod == null && !basicAction(player, index, mapObject)) {
+        if (actionMethod == null) {
+            if (basicAction(player, index, mapObject)) {
+                return true;
+            }
             player.getGameEncoder().sendMessage("Nothing interesting happens.");
         } else {
             try {

@@ -39,10 +39,6 @@ instance = new DialogueScript() {
         if (player.isLocked()) {
             return;
         }
-        if (Main.isBeta()) {
-            player.getGameEncoder().sendMessage("You can't do this on beta worlds.");
-            return;
-        }
         if (index == 0) {
             if (slot == 0) {
                 player.getGameEncoder().sendOpenURL("https://www.battle-scape.com/vote");

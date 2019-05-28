@@ -8,10 +8,17 @@ import lombok.var;
 
 public class ObjectCommand implements Command {
     @Override
+    public String getExample() {
+        return "id type direction";
+    }
+
+    @Override
+    public boolean canUse(Player player) {
+        return Main.ownerPrivledges(player);
+    }
+
+    @Override
     public void execute(Player player, String message) {
-        if (!Main.ownerPrivledges(player)) {
-            return;
-        }
         var values = message.split(" ");
         var id = Integer.parseInt(values[0]);
         var type = Integer.parseInt(values[1]);

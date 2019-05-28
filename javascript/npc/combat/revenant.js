@@ -6,6 +6,14 @@ var ANCIENT_WARRIOR_DROP_TABLE = [
     new RandomItem(ItemId.MORRIGANS_THROWING_AXE_32261, 50),
     new RandomItem(ItemId.ZURIELS_STAFF_32262, 1)
 ];
+var ANCIENT_WARRIOR_DROP_TABLE_SPAWN = [
+    new RandomItem(ItemId.VESTAS_LONGSWORD, 1),
+    new RandomItem(ItemId.STATIUSS_WARHAMMER, 1),
+    new RandomItem(ItemId.VESTAS_SPEAR, 1),
+    new RandomItem(ItemId.MORRIGANS_JAVELIN, 50),
+    new RandomItem(ItemId.MORRIGANS_THROWING_AXE, 50),
+    new RandomItem(ItemId.ZURIELS_STAFF, 1)
+];
 var UNIQUE_DROP_TABLE = [
     new RandomItem(ItemId.VIGGORAS_CHAINMACE_U, 1).setWeight(1),
     new RandomItem(ItemId.CRAWS_BOW_U, 1).setWeight(1),
@@ -118,13 +126,12 @@ cs = new NCombatScript() {
                         + item.getName());
             }
         }
-        if (Utils.randomE(8000 / Math.sqrt(clampedLevel)) == 0) {
-            var pvpItem = RandomItem.getItem(ANCIENT_WARRIOR_DROP_TABLE);
+        if (Utils.randomE(32768 / Math.sqrt(clampedLevel)) == 0) {
+            var pvpItem = RandomItem.getItem(Main.isSpawn() ? ANCIENT_WARRIOR_DROP_TABLE_SPAWN
+                    : ANCIENT_WARRIOR_DROP_TABLE);
             npc.getController().addMapItem(pvpItem, dropTile, player);
             player.getCombat().logNPCItem(npc.getDef().getKillCountName(), pvpItem.getId(), pvpItem.getAmount());
-            npc.getWorld().sendRevenantCavesMessage("<col=005500>" + player.getUsername()
-                    + " received a drop: " + (pvpItem.getAmount() > 1 ? pvpItem.getAmount() + " x " : "")
-                    + pvpItem.getName());
+            npc.getWorld().sendItemDropNews(player, pvpItem.getId(), " a revenant");
         }
         var etherCount = 1 + Utils.randomE(Math.sqrt(clampedLevel));
         if (player.getCharges().getEthereumAutoAbsorb()

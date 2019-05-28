@@ -753,7 +753,7 @@ public class UseWidgetAction {
                     player.getCombat().logNPCItem("Abyssal Sire", droppedId, 1);
                 }
                 if (droppedId == 13262 || droppedId == 13265 || droppedId >= 13274 && droppedId <= 13276) {
-                    player.getWorld().sendItemDropNews(player, droppedId);
+                    player.getWorld().sendItemDropNews(player, droppedId, "the Abyssal Sire");
                 }
                 player.getInventory().deleteItem(itemId, 1, itemSlot);
                 player.getInventory().addItem(droppedId, 1, itemSlot);
