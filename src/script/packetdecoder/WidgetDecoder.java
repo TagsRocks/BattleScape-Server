@@ -16,8 +16,11 @@ import lombok.var;
 public class WidgetDecoder extends PacketDecoder {
     private static Map<Integer, Method> actionMethods = new HashMap<>();
 
+    /*
+     * 0-9: normal widget option; 10: old widget option; 11: dialogue option
+     */
     public WidgetDecoder() {
-        super(68, 21, 48, 19, 40, 66, 85, 14, 84, 0, 69, 39);
+        super(68, 21, 48, 19, 40, 66, 85, 14, 84, 0, 69, 70);
     }
 
     @Override

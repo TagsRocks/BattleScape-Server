@@ -1,7 +1,5 @@
 package script.packetdecoder.widget;
 
-import java.util.ArrayList;
-import java.util.List;
 import com.palidino.osrs.Main;
 import com.palidino.osrs.io.cache.ItemId;
 import com.palidino.osrs.io.cache.NpcId;
@@ -36,7 +34,7 @@ import com.palidino.util.event.Event;
 
 // No longer JS woohoo! Need a better solution than a 2K line file and growing.
 // One file per item id sucks, that's a hard no.
-// Option #1: group ids by relevance and then split those into sub classes. 
+// Option #1: group ids by relevance and then split those into sub classes.
 
 public class InventoryWidget {
     public static void widget149(Player player, int index, int childId, int slot, int itemId) {
@@ -467,9 +465,9 @@ public class InventoryWidget {
             for (int i = 0; i < supplyCount; i++) {
                 if (Utils.inRange(player.getCombat().getDropRate(6739, 0.01))) {
                     player.getInventory().addItem(6739, 1, slot);
-                } else if (Utils.inRange(player.getCombat().getDropRate(20693, 0.02))) {
-                    player.getInventory().addItem(20693, 1, slot);
-                    player.getWorld().sendItemDropNews(player, 20693);
+                } else if (Utils.inRange(player.getCombat().getDropRate(ItemId.PHOENIX, 0.02))) {
+                    player.getInventory().addItem(ItemId.PHOENIX, 1, slot);
+                    player.getWorld().sendItemDropNews(player, ItemId.PHOENIX, "a supply crate");
                 } else if (Utils.inRange(player.getCombat().getDropRate(20716, 0.1))) {
                     player.getInventory().addItem(20716, 1, slot);
                 } else if (Utils.inRange(player.getCombat().getDropRate(20720, 0.66))) {
@@ -485,9 +483,9 @@ public class InventoryWidget {
             player.getInventory().deleteItem(itemId, 1, slot);
             if (Utils.inRange(player.getCombat().getDropRate(6739, 0.01))) {
                 player.getInventory().addItem(6739, 1, slot);
-            } else if (Utils.inRange(player.getCombat().getDropRate(20693, 0.02))) {
-                player.getInventory().addItem(20693, 1, slot);
-                player.getWorld().sendItemDropNews(player, 20693);
+            } else if (Utils.inRange(player.getCombat().getDropRate(ItemId.PHOENIX, 0.02))) {
+                player.getInventory().addItem(ItemId.PHOENIX, 1, slot);
+                player.getWorld().sendItemDropNews(player, ItemId.PHOENIX, "an extra supply crate");
             } else if (Utils.inRange(player.getCombat().getDropRate(20716, 0.1))) {
                 player.getInventory().addItem(20716, 1, slot);
             } else if (Utils.inRange(player.getCombat().getDropRate(20720, 0.66))) {
@@ -520,72 +518,16 @@ public class InventoryWidget {
             }
             break;
         case ItemId.MYSTERY_BOX:
-            player.getInventory().deleteItem(itemId, 1, slot);
-            player.getWidgetManager().sendInteractiveOverlay(WidgetId.MYSTERY);
-            player.getGameEncoder().sendClearItems(WidgetId.MYSTERY, 48, 1);
-            final List<Item> mysteryBoxItems = new ArrayList<>();
-            for (int i = 0; i < 5; i++) {
-                mysteryBoxItems.add(null);
-            }
-            event = new Event(0) {
-                private Item boxItem;
-
-                @Override
-                public void execute() {
-                    if (!player.isVisible()) {
-                        stop();
-                        return;
-                    }
-                    mysteryBoxItems.remove(0);
-                    if (getExecutions() < 5) {
-                        boxItem = MysteryBox.getBoxItem();
-                        mysteryBoxItems.add(boxItem);
-                    }
-                    player.getGameEncoder().sendItems(WidgetId.MYSTERY, 48, 1, mysteryBoxItems);
-                    player.getSession().write();
-                    if (getExecutions() == 8) {
-                        stop();
-                        player.getInventory().addOrDropItem(new Item(boxItem.getId(), boxItem.getAmount()));
-                        RequestManager.addPlayerLog(player, "mysterybox",
-                                player.getLogName() + " received " + boxItem.getLogName() + " from a mystery box.");
-                    }
-                }
-            };
-            player.getWorld().addEvent(event);
+            player.getWidgetManager().sendInteractiveOverlay(WidgetId.CUSTOM_MYSTERY_BOX);
+            player.getGameEncoder().sendClearItems(WidgetId.CUSTOM_MYSTERY_BOX, 41, 0);
+            player.putAttribute("mystery_box", itemId);
+            player.getGameEncoder().sendItems(WidgetId.CUSTOM_MYSTERY_BOX, 54, 0, MysteryBox.getAllBoxItems());
             break;
         case ItemId.SUPER_MYSTERY_BOX_32286:
-            player.getInventory().deleteItem(itemId, 1, slot);
-            player.getWidgetManager().sendInteractiveOverlay(WidgetId.MYSTERY);
-            player.getGameEncoder().sendClearItems(WidgetId.MYSTERY, 48, 1);
-            final List<Item> superMysteryBoxItems = new ArrayList<>();
-            for (int i = 0; i < 5; i++) {
-                superMysteryBoxItems.add(null);
-            }
-            event = new Event(0) {
-                private Item boxItem;
-
-                @Override
-                public void execute() {
-                    if (!player.isVisible()) {
-                        stop();
-                        return;
-                    }
-                    superMysteryBoxItems.remove(0);
-                    if (getExecutions() < 5) {
-                        boxItem = MysteryBox.getSuperBoxItem();
-                        superMysteryBoxItems.add(boxItem);
-                    }
-                    player.getGameEncoder().sendItems(WidgetId.MYSTERY, 48, 1, superMysteryBoxItems);
-                    player.getSession().write();
-                    if (getExecutions() == 8) {
-                        stop();
-                        player.getInventory().addOrDropItem(new Item(boxItem.getId(), boxItem.getAmount()));
-                        RequestManager.addPlayerLog(player, "mysterybox", player.getLogName() + " received "
-                                + boxItem.getLogName() + " from a super mystery box.");
-                    }
-                }
-            };
-            player.getWorld().addEvent(event);
+        player.getWidgetManager().sendInteractiveOverlay(WidgetId.CUSTOM_MYSTERY_BOX);
+        player.getGameEncoder().sendClearItems(WidgetId.CUSTOM_MYSTERY_BOX, 41, 0);
+        player.putAttribute("mystery_box", itemId);
+        player.getGameEncoder().sendItems(WidgetId.CUSTOM_MYSTERY_BOX, 54, 0, MysteryBox.getAllSuperBoxItems());
             break;
         case 19564: // Royal seed pod
             if (!player.getController().canTeleport(30, true)) {
@@ -2002,11 +1944,11 @@ public class InventoryWidget {
             if (Utils.inRange(0.1)) {
                 int thirdAgeId = thirdageHard[Utils.randomE(thirdageHard.length)];
                 player.getInventory().addItem(thirdAgeId, 1, slot);
-                player.getWorld().sendItemDropNews(player, thirdAgeId);
+                player.getWorld().sendItemDropNews(player, thirdAgeId, "a hard clue scroll");
             } else if (Utils.inRange(0.5)) {
                 int gildedId = gildedHard[Utils.randomE(gildedHard.length)];
                 player.getInventory().addItem(gildedId, 1, slot);
-                player.getWorld().sendItemDropNews(player, gildedId);
+                player.getWorld().sendItemDropNews(player, gildedId, "a hard clue scroll");
             } else {
                 int hardItemId = ttHard[Utils.randomE(ttHard.length)];
                 player.getInventory().addItem(hardItemId, 1, slot);
@@ -2068,11 +2010,11 @@ public class InventoryWidget {
             if (Utils.inRange(0.1)) {
                 int thirdAgeId = thirdageElite[Utils.randomE(thirdageElite.length)];
                 player.getInventory().addItem(thirdAgeId, 1, slot);
-                player.getWorld().sendItemDropNews(player, thirdAgeId);
+                player.getWorld().sendItemDropNews(player, thirdAgeId, "an elite clue scroll");
             } else if (Utils.inRange(0.5)) {
                 int gildedId = gildedElite[Utils.randomE(gildedElite.length)];
                 player.getInventory().addItem(gildedId, 1, slot);
-                player.getWorld().sendItemDropNews(player, gildedId);
+                player.getWorld().sendItemDropNews(player, gildedId, "an elite clue scroll");
             } else {
                 int eliteItemId = ttElite[Utils.randomE(ttElite.length)];
                 player.getInventory().addItem(eliteItemId, 1, slot);
@@ -2133,11 +2075,11 @@ public class InventoryWidget {
             if (Utils.inRange(0.1)) {
                 int thirdAgeId = thirdageMaster[Utils.randomE(thirdageMaster.length)];
                 player.getInventory().addItem(thirdAgeId, 1, slot);
-                player.getWorld().sendItemDropNews(player, thirdAgeId);
+                player.getWorld().sendItemDropNews(player, thirdAgeId, "a master clue scroll");
             } else if (Utils.inRange(0.5)) {
                 int gildedId = gildedMaster[Utils.randomE(gildedMaster.length)];
                 player.getInventory().addItem(gildedId, 1, slot);
-                player.getWorld().sendItemDropNews(player, gildedId);
+                player.getWorld().sendItemDropNews(player, gildedId, "a master clue scroll");
             } else {
                 int masterItemId = ttMaster[Utils.randomE(ttMaster.length)];
                 player.getInventory().addItem(masterItemId, 1, slot);

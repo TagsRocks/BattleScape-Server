@@ -1151,14 +1151,14 @@ pc = new PController() {
                             + "</col> - <col=ff0000>" + item.getName() + "</col>", Messaging.CHAT_TYPE_CLAN_CHAT_INFO);
                 }
                 sentSpecialLootMessage = true;
-                player.getWorld().sendItemDropNews(selectedPlayer, item.getId());
+                player.getWorld().sendItemDropNews(selectedPlayer, item.getId(), "the Chambers of Xeric");
                 RequestManager.addPlayerLog(selectedPlayer, "raids",selectedPlayer.getLogName() + " received "
                         + item.getLogName() + " from the Chambers of Xeric.");
                 var petItem = new Item(20851, 1);
                 if (Utils.inRange(selectedPlayer.getCombat().getDropRate(petItem.getId(), 0.5))) {
                     selectedPlayer.getInventory().addOrDropItem(petItem);
                     selectedPlayer.getCombat().logNPCItem("Chambers of Xeric", petItem.getId(), petItem.getAmount());
-                    player.getWorld().sendItemDropNews(selectedPlayer, petItem.getId());
+                    player.getWorld().sendItemDropNews(selectedPlayer, petItem.getId(), "the Chambers of Xeric");
                 }
                 selectedPlayer.getGameEncoder().setVarp(1432, 256 + points * 1024);
             }

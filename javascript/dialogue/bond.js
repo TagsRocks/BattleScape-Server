@@ -45,9 +45,6 @@ instance = new DialogueScript() {
         if (player.isLocked()) {
             return;
         }
-        if (Main.isBeta()) {
-            return;
-        }
         if (index == 0) {
             if (slot == 0) {
                 if (Main.isSpawn()) {

@@ -33,10 +33,6 @@ public class EdgevilleArea extends Area {
             player.openShop("platinum_tokens");
             return true;
         case NpcId.VOTE_MANAGER:
-            if (Main.isBeta()) {
-                player.getGameEncoder().sendMessage("You can't do this on beta worlds.");
-                return true;
-            }
             if (index == 0) {
                 player.openDialogue("vote", 0);
             } else if (index == 3) {
@@ -256,9 +252,7 @@ public class EdgevilleArea extends Area {
                 } else {
                     item = RandomItem.getItem(MysteryBox.BARROWS_PIECES);
                 }
-                String itemName = Utils.aOrAnCap(item.getName()) + " " + item.getName();
-                player.getWorld().sendNews(player.getMessaging().getIconImage() + player.getUsername()
-                        + " has received " + itemName + " from a bloody key!");
+                player.getWorld().sendItemDropNews(player, item.getId(), "a bloody key");
                 player.getInventory().addOrDropItem(item);
                 RequestManager.addLootBoxLog(player, ItemId.BLOODY_KEY_32304, item);
             } else if (player.getInventory().hasItem(ItemId.BLOODIER_KEY_32305)) {
@@ -274,11 +268,10 @@ public class EdgevilleArea extends Area {
                             + " has received " + itemNames + " from a bloodier key!");
                 } else {
                     item1 = RandomItem.getItem(MysteryBox.BARROWS_SETS);
-                    String itemName = Utils.aOrAnCap(item1.getName()) + " " + item1.getName();
-                    player.getWorld().sendNews(player.getMessaging().getIconImage() + player.getUsername()
-                            + " has received " + itemName + " from a bloodier key!");
+                    player.getWorld().sendItemDropNews(player, item1.getId(), "a bloodier key");
                 }
                 player.getInventory().addOrDropItem(item1);
+                player.getInventory().addOrDropItem(item2);
                 RequestManager.addLootBoxLog(player, ItemId.BLOODY_KEY_32304, item1, item2);
             } else if (player.getInventory().hasItem(ItemId.SINISTER_KEY)) {
                 player.getCombat().getBarrows().openChest(mapObject.getX() != 3551 || mapObject.getY() != 9695);

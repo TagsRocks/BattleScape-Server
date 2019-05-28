@@ -10,11 +10,6 @@
     "repairCost": [ { "id": "ItemId.COINS", "amount": "50000" } ]
   },
   {
-    "id": "ItemId.RUNE_DEFENDER_BROKEN",
-    "repairedId": "ItemId.RUNE_DEFENDER",
-    "repairCost": [ { "id": "ItemId.COINS", "amount": "35000" } ]
-  },
-  {
     "id": "ItemId.DRAGON_DEFENDER_BROKEN",
     "repairedId": "ItemId.DRAGON_DEFENDER",
     "repairCost": [ { "id": "ItemId.COINS", "amount": "40000" } ]
