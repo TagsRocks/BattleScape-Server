@@ -7,7 +7,7 @@ import lombok.var;
 public class UnjailCommand implements Command {
     @Override
     public String getExample() {
-        return "unjail username";
+        return "username";
     }
 
     @Override
@@ -17,10 +17,6 @@ public class UnjailCommand implements Command {
 
     @Override
     public void execute(Player player, String message) {
-        if (message.length() <= 5) {
-            player.getGameEncoder().sendMessage("Please use as ::unjail username");
-            return;
-        }
 
         var username = message.substring(7);
         var player2 = player.getWorld().getPlayerByUsername(username);

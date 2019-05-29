@@ -7,7 +7,7 @@ import lombok.var;
 public class FkickCommand implements Command {
     @Override
     public String getExample() {
-        return "fkick username";
+        return "username";
     }
 
     @Override
@@ -17,10 +17,6 @@ public class FkickCommand implements Command {
 
     @Override
     public void execute(Player player, String message) {
-        if (message.length() <= 6) {
-            player.getGameEncoder().sendMessage("Please use as ::fkick username");
-            return;
-        }
 
         var username = message.substring(6);
         var player2 = player.getWorld().getPlayerByUsername(username);

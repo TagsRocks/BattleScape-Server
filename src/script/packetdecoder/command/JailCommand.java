@@ -7,7 +7,7 @@ import lombok.var;
 public class JailCommand implements Command {
     @Override
     public String getExample() {
-        return "jail username";
+        return "username";
     }
 
     @Override
@@ -17,11 +17,6 @@ public class JailCommand implements Command {
 
     @Override
     public void execute(Player player, String message) {
-        if (message.length() <= 5) {
-            player.getGameEncoder().sendMessage("Please use as ::jail username");
-            return;
-        }
-
         var username = message.substring(5);
         var player2 = player.getWorld().getPlayerByUsername(username);
         if (player2 == null) {
@@ -33,7 +28,6 @@ public class JailCommand implements Command {
             return;
         }
         player.getMovement().teleport(2772, 2794);
-        player.inJail();
         player.getGameEncoder().sendMessage(username + " has been jailed.");
         player.getWorld().sendStaffMessage(player.getUsername() + " jailed " + player2.getUsername() + ".");
 

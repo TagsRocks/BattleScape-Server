@@ -3,7 +3,7 @@ package script.packetdecoder.command;
 import com.palidino.osrs.io.Command;
 import com.palidino.osrs.model.player.Player;
 
-public class UnlockpinCommand implements Command {
+public class UnlockPinCommand implements Command {
     @Override
     public boolean canUse(Player player) {
         return player.getRights() == Player.RIGHTS_ADMIN;

@@ -6,9 +6,10 @@ import com.palidino.osrs.model.player.Player;
 import lombok.var;
 
 public class RandomCommand implements Command {
+
     @Override
     public String getExample() {
-        return "random username";
+        return "username";
     }
 
     @Override
@@ -18,10 +19,6 @@ public class RandomCommand implements Command {
 
     @Override
     public void execute(Player player, String message) {
-        if (message.length() <= 7) {
-            player.getGameEncoder().sendMessage("Please use as ::random username");
-            return;
-        }
         var username = message.substring(7);
         var player2 = player.getWorld().getPlayerByUsername(username);
         if (player2 == null) {

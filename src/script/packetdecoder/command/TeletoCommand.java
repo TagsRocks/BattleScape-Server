@@ -7,7 +7,7 @@ import lombok.var;
 public class TeletoCommand implements Command {
     @Override
     public String getExample() {
-        return "teleto username";
+        return "username";
     }
 
     @Override
@@ -17,10 +17,7 @@ public class TeletoCommand implements Command {
 
     @Override
     public void execute(Player player, String message) {
-        if (message.length() <= 7) {
-            player.getGameEncoder().sendMessage("Please use as ::teleto username");
-            return;
-        }
+
         var username = message.substring(7);
         var player2 = player.getWorld().getPlayerByUsername(username);
         if (player2 == null) {

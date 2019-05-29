@@ -5,9 +5,10 @@ import com.palidino.osrs.model.player.Player;
 import lombok.var;
 
 public class KickCommand implements Command {
+
     @Override
     public String getExample() {
-        return "kick username";
+        return "username";
     }
 
     @Override
@@ -17,10 +18,6 @@ public class KickCommand implements Command {
 
     @Override
     public void execute(Player player, String message) {
-        if (message.length() <= 5) {
-            player.getGameEncoder().sendMessage("Please use as ::kick username");
-            return;
-        }
         var username = message.substring(5);
         var player2 = player.getWorld().getPlayerByUsername(username);
         if (player2 == null) {

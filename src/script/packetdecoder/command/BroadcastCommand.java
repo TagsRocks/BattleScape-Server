@@ -7,7 +7,7 @@ import lombok.var;
 public class BroadcastCommand implements Command {
     @Override
     public String getExample() {
-        return "broadcast hello";
+        return "message";
     }
 
     @Override

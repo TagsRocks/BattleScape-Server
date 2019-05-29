@@ -6,6 +6,10 @@ import com.palidino.osrs.model.player.Player;
 import lombok.var;
 
 public class PrivateCommand implements Command {
+    @Override
+    public String getExample() {
+        return "username";
+    }
 
     @Override
     public boolean canUse(Player player) {
@@ -14,10 +18,7 @@ public class PrivateCommand implements Command {
 
     @Override
     public void execute(Player player, String message) {
-        if (message.length() <= 8) {
-            player.getGameEncoder().sendMessage("Please use as ::private username");
-            return;
-        }
+
         var username = message.substring(8);
         var player2 = player.getWorld().getPlayerByUsername(username);
         if (player2 == null) {
