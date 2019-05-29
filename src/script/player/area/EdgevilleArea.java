@@ -20,6 +20,7 @@ import com.palidino.osrs.util.RequestManager;
 import com.palidino.osrs.world.ClanWarsTournament;
 import com.palidino.setting.SqlRank;
 import com.palidino.util.Utils;
+import lombok.var;
 
 public class EdgevilleArea extends Area {
     public EdgevilleArea() {
@@ -233,7 +234,7 @@ public class EdgevilleArea extends Area {
                         + player.getMovement().getTeleportBlockRemaining() + ".");
                 return true;
             }
-            Tile tile = new Tile(3153, 3923, 0);
+            var tile = new Tile(3153, 3923, 0);
             if (player.getClientHeight() == tile.getHeight()) {
                 tile.setHeight(player.getHeight());
             }
@@ -357,7 +358,7 @@ public class EdgevilleArea extends Area {
         }
         player.getInventory().deleteItem(ItemId.CRYSTAL_KEY, 1);
         player.getInventory().addItem(ItemId.UNCUT_DRAGONSTONE_NOTED, 1);
-        RandomItem[] clueItems = new RandomItem[] {
+        var clueItems = new RandomItem[] {
             new RandomItem(ItemId.CLUE_SCROLL_EASY, 1).setWeight(8),
             new RandomItem(ItemId.CLUE_SCROLL_MEDIUM, 1).setWeight(6),
             new RandomItem(ItemId.CLUE_SCROLL_HARD, 1).setWeight(4),
@@ -367,7 +368,7 @@ public class EdgevilleArea extends Area {
         if (Utils.randomE(4) == 0) {
             player.getInventory().addOrDropItem(RandomItem.getItem(clueItems));
         }
-        RandomItem[] items = new RandomItem[] {
+        var items = new RandomItem[] {
             new RandomItem(ItemId.LOOP_HALF_OF_KEY, 1).setWeight(128),
             new RandomItem(ItemId.TOOTH_HALF_OF_KEY, 1).setWeight(128),
 
@@ -478,7 +479,7 @@ public class EdgevilleArea extends Area {
             new RandomItem(11232, 10, 50).setWeight(80) /* Dragon dart tip */
         };
         for (int i = 0; i < 2; i++) {
-            Item item = RandomItem.getItem(items);
+            var item = RandomItem.getItem(items);
             player.getInventory().addOrDropItem(item.getNotedId(), item.getAmount());
         }
         player.getGameEncoder().sendMessage("You find some treasure in the chest!");

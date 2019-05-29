@@ -34589,6 +34589,7 @@
   {
     "id": "ItemId.TURQUOISE_SLAYER_HELMET",
     "equipSlot": "HEAD",
+    "levels": "Defence=10",
     "bonuses": {
       "ATTACK_MAGIC": "-6",
       "ATTACK_RANGED": "-2",
@@ -34602,6 +34603,7 @@
   {
     "id": "ItemId.TURQUOISE_SLAYER_HELMET_I",
     "equipSlot": "HEAD",
+    "levels": "Defence=10",
     "bonuses": {
       "ATTACK_MAGIC": "3",
       "ATTACK_RANGED": "3",
