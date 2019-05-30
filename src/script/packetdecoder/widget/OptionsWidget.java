@@ -65,7 +65,7 @@ public class OptionsWidget {
             player.getMovement().setRunning(!player.getMovement().getRunning());
             break;
         case 100:
-            player.getOptions().openBondsMenu();
+            player.getBonds().sendPouch();
             break;
         case 106:
             player.getOptions().setPlayerAttackOption(slot - 1);

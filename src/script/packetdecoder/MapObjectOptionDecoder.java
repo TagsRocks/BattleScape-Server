@@ -142,7 +142,7 @@ public class MapObjectOptionDecoder extends PacketDecoder {
         if (player.getFarming().mapObjectOptionHook(index, mapObject)) {
             return true;
         }
-        if (player.getArea().mapObjectOptionHook(player, index, mapObject)) {
+        if (player.getArea().mapObjectOptionHook(index, mapObject)) {
             return true;
         }
         if (!actionMethods.containsKey(mapObject.getId())) {
@@ -189,7 +189,7 @@ public class MapObjectOptionDecoder extends PacketDecoder {
             if (mapObject.getDef().getOptions() == null) {
                 break;
             }
-            if ("Open".equals(mapObject.getDef().getOptions()[0])) {
+            if (!"Open".equals(mapObject.getDef().getOptions()[0])) {
                 break;
             }
             var hasOtherOptions = false;

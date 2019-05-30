@@ -20,7 +20,7 @@ public class FriendsWidget {
     public static void widget109(Player player, int index, int childId, int slot, int itemId) {
         // Account management
         if (childId == 3 || childId == 8) {
-            player.getOptions().openBondsMenu();
+            player.getBonds().sendPouch();
         } else if (childId == 15) {
             player.getGameEncoder().sendOpenURL("https://www.battle-scape.com/private");
         } else if (childId == 22) {

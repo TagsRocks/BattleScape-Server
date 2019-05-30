@@ -28,7 +28,8 @@ public class EdgevilleArea extends Area {
     }
 
     @Override
-    public boolean npcOptionHook(Player player, int index, Npc npc) {
+    public boolean npcOptionHook(int index, Npc npc) {
+        var player = getPlayer();
         switch (npc.getId()) {
         case NpcId.WISE_OLD_MAN:
             player.openShop("platinum_tokens");
@@ -45,7 +46,7 @@ public class EdgevilleArea extends Area {
             }
             return true;
         case NpcId.CAPT_BOND_16018:
-            player.getOptions().openBondsMenu();
+            player.getBonds().sendPouch();
             return true;
         case NpcId.LOYALTY_MANAGER:
             player.openDialogue("loyalty", 0);
@@ -187,21 +188,22 @@ public class EdgevilleArea extends Area {
     }
 
     @Override
-    public boolean mapObjectOptionHook(Player player, int index, MapObject mapObject) {
+    public boolean mapObjectOptionHook(int index, MapObject mapObject) {
+        var player = getPlayer();
         switch (mapObject.getId()) {
-        case 172: // Closed chest - crystal chest
+        case 172: // Closed chest: crystal chest
             openCrystalChest(player);
             return true;
         case 884: // Wishing well
             player.openDialogue("wishingwell", 0);
             return true;
-        case 1581: // Trapdoor - Edgeville dungeon
+        case 1581: // Trapdoor: Edgeville dungeon
             player.getMovement().ladderUpTeleport(new Tile(3096, 9867));
             return true;
-        case 12309: // Chest - Recipe for Disaster
+        case 12309: // Chest: Recipe for Disaster
             player.openDialogue("recipefordisaster", 0);
             return true;
-        case 18808: // Traeasure chest - clue scroll items
+        case 18808: // Traeasure chest: clue scroll items
             player.openDialogue("treasurechest", 0);
             return true;
         case 23709: // Box of Health

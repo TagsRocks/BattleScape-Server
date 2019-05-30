@@ -18,10 +18,7 @@ public class MysteryBoxWidget {
             return;
         }
         switch (childId) {
-        case 58:
-            player.getWidgetManager().removeInteractiveWidgets();
-            break;
-        case 59:
+        case 60:
             var boxId = player.getAttributeInt("mystery_box");
             if (boxId <= 0) {
                 break;
@@ -40,6 +37,7 @@ public class MysteryBoxWidget {
                 mysteryBoxItems.add(item);
             }
             player.getGameEncoder().sendItems(WidgetId.CUSTOM_MYSTERY_BOX, 41, 0, mysteryBoxItems);
+            player.getGameEncoder().sendHideWidget(WidgetId.CUSTOM_MYSTERY_BOX, 59, true);
             var event = new Event(0) {
                 @Override
                 public void execute() {
@@ -52,9 +50,11 @@ public class MysteryBoxWidget {
                     mysteryBoxItems.add(boxItem);
                     player.getGameEncoder().sendItems(WidgetId.CUSTOM_MYSTERY_BOX, 41, 0, mysteryBoxItems);
                     player.getSession().write();
-                    if (getExecutions() == 8) {
+                    if (getExecutions() == 5) {
                         stop();
+                        player.getGameEncoder().sendHideWidget(WidgetId.CUSTOM_MYSTERY_BOX, 59, false);
                         boxItem = mysteryBoxItems.get(mysteryBoxItems.size() - 3);
+                        System.out.println(boxItem.getName());
                         player.getInventory().addOrDropItem(boxItem);
                         RequestManager.addPlayerLog(player, "mysterybox",
                                 player.getLogName() + " received " + boxItem.getLogName() + " from a mystery box.");

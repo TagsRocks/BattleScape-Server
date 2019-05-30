@@ -191,7 +191,7 @@ instance = new DialogueScript() {
         var bossName = "";
         var tile = null;
         var teleportType = NORMAL;
-        var controllerVariable = null;
+        var areaScript = null;
         var deleteItemId = -1;
         var slayerId = -1;
         if (index == 1) {
@@ -242,7 +242,7 @@ instance = new DialogueScript() {
                 player.getWorld().addEvent(event);
             }
         } else if (index == 7) {
-            var killcount = player.getController().getVariable("get_armadyl_killcount");
+            var killcount = player.getArea().script("get_armadyl_killcount");
             if (killcount == null) {
                 player.getGameEncoder().sendMessage("There was an error establishing your killcount.");
                 return;
@@ -252,10 +252,10 @@ instance = new DialogueScript() {
             }
             bossName = "boss_instance_kree'arra";
             tile = new Tile(2839, 5296, 2);
-            controllerVariable = "clear_armadyl_killcount";
+            areaScript = "clear_armadyl_killcount";
             deleteItemId = 11942;
         } else if (index == 8) {
-            var killcount = player.getController().getVariable("get_bandos_killcount");
+            var killcount = player.getArea().script("get_bandos_killcount");
             if (killcount == null) {
                 player.getGameEncoder().sendMessage("There was an error establishing your killcount.");
                 return;
@@ -265,10 +265,10 @@ instance = new DialogueScript() {
             }
             bossName = "boss_instance_general_graardor";
             tile = new Tile(2864, 5354, 2);
-            controllerVariable = "clear_bandos_killcount";
+            areaScript = "clear_bandos_killcount";
             deleteItemId = 11942;
         } else if (index == 9) {
-            var killcount = player.getController().getVariable("get_zamorak_killcount");
+            var killcount = player.getArea().script("get_zamorak_killcount");
             if (killcount == null) {
                 player.getGameEncoder().sendMessage("There was an error establishing your killcount.");
                 return;
@@ -278,10 +278,10 @@ instance = new DialogueScript() {
             }
             bossName = "boss_instance_k'ril_tsutsaroth";
             tile = new Tile(2925, 5331, 2);
-            controllerVariable = "clear_zamorak_killcount";
+            areaScript = "clear_zamorak_killcount";
             deleteItemId = 11942;
         } else if (index == 10) {
-            var killcount = player.getController().getVariable("get_saradomin_killcount");
+            var killcount = player.getArea().script("get_saradomin_killcount");
             if (killcount == null) {
                 player.getGameEncoder().sendMessage("There was an error establishing your killcount.");
                 return;
@@ -291,7 +291,7 @@ instance = new DialogueScript() {
             }
             bossName = "boss_instance_commander_zilyana";
             tile = new Tile(2907, 5265, 0);
-            controllerVariable = "clear_saradomin_killcount";
+            areaScript = "clear_saradomin_killcount";
             deleteItemId = 11942;
         } else if (index == 11) {
             bossName = "boss_instance_abyssal_sire";
@@ -318,8 +318,8 @@ instance = new DialogueScript() {
             requiresRoWI = false;
         }
         if (slot == enterSlot) {
-            if (controllerVariable != null) {
-                player.getController().getVariable(controllerVariable);
+            if (areaScript != null) {
+                player.getArea().script(areaScript);
             }
             player.getInventory().deleteItem(deleteItemId, 1);
             if (teleportType == NORMAL) {
@@ -340,8 +340,8 @@ instance = new DialogueScript() {
                 player.getGameEncoder().sendMessage("Your Clan Chat privledges aren't high enough to do that.");
                 return;
             }
-            if (controllerVariable != null) {
-                player.getController().getVariable(controllerVariable);
+            if (areaScript != null) {
+                player.getArea().script(areaScript);
             }
             player.getInventory().deleteItem(deleteItemId, 1);
             if (requiresRoWI) {
@@ -368,8 +368,8 @@ instance = new DialogueScript() {
                         + playerInstance.getVariable("boss_name") + ".");
                 return;
             }
-            if (controllerVariable != null) {
-                player.getController().getVariable(controllerVariable);
+            if (areaScript != null) {
+                player.getArea().script(areaScript);
             }
             player.getInventory().deleteItem(deleteItemId, 1);
             player.getCombat().setDamageInflicted(0);

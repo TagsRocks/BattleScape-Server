@@ -17,7 +17,7 @@ public class InformationWidget {
             player.getWidgetManager().setQuestIndex(3);
             player.getWidgetManager().resetQuestText();
         } else if (childId == 14) {
-            player.getOptions().openBondsMenu();
+            player.getBonds().sendPouch();
             // player.getWidgetManager().setQuestIndex(4);
             // player.getWidgetManager().resetQuestText();
         } else {

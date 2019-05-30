@@ -132,7 +132,7 @@ public class NpcOptionDecoder extends PacketDecoder {
             player.getFamiliar().removeFamiliar();
             return true;
         }
-        if (player.getArea().npcOptionHook(player, index, npc)) {
+        if (player.getArea().npcOptionHook(index, npc)) {
             return true;
         }
         if (!actionMethods.containsKey(npc.getId())) {

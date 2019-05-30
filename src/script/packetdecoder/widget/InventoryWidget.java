@@ -524,10 +524,10 @@ public class InventoryWidget {
             player.getGameEncoder().sendItems(WidgetId.CUSTOM_MYSTERY_BOX, 54, 0, MysteryBox.getAllBoxItems());
             break;
         case ItemId.SUPER_MYSTERY_BOX_32286:
-        player.getWidgetManager().sendInteractiveOverlay(WidgetId.CUSTOM_MYSTERY_BOX);
-        player.getGameEncoder().sendClearItems(WidgetId.CUSTOM_MYSTERY_BOX, 41, 0);
-        player.putAttribute("mystery_box", itemId);
-        player.getGameEncoder().sendItems(WidgetId.CUSTOM_MYSTERY_BOX, 54, 0, MysteryBox.getAllSuperBoxItems());
+            player.getWidgetManager().sendInteractiveOverlay(WidgetId.CUSTOM_MYSTERY_BOX);
+            player.getGameEncoder().sendClearItems(WidgetId.CUSTOM_MYSTERY_BOX, 41, 0);
+            player.putAttribute("mystery_box", itemId);
+            player.getGameEncoder().sendItems(WidgetId.CUSTOM_MYSTERY_BOX, 54, 0, MysteryBox.getAllSuperBoxItems());
             break;
         case 19564: // Royal seed pod
             if (!player.getController().canTeleport(30, true)) {
@@ -1030,7 +1030,7 @@ public class InventoryWidget {
                 player.getGameEncoder().sendMessage("Deposit this bond in your pouch to use it.");
             } else if (index == 2) {
                 player.getInventory().deleteItem(itemId, 1, slot);
-                player.setBondPouch(Utils.addInt(player.getBondPouch(), 1, Item.MAX_AMOUNT));
+                player.getBonds().setPouch(player.getBonds().getPouch() + 1);
                 player.getGameEncoder().sendMessage("1 bond has been added to your pouch.");
             }
             break;

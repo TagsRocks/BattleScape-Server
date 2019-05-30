@@ -3,7 +3,7 @@ package script.player.area;
 import com.palidino.osrs.model.Tile;
 import com.palidino.osrs.model.map.MapObject;
 import com.palidino.osrs.model.player.Area;
-import com.palidino.osrs.model.player.Player;
+import lombok.var;
 import script.player.skill.agility.AgilityObstacle;
 import script.player.skill.agility.MoveAgilityEvent;
 import script.player.skill.agility.TeleportAgilityEvent;
@@ -14,7 +14,8 @@ public class EastArdougneArea extends Area {
     }
 
     @Override
-    public boolean mapObjectOptionHook(Player player, int index, MapObject mapObject) {
+    public boolean mapObjectOptionHook(int index, MapObject mapObject) {
+        var player = getPlayer();
         AgilityObstacle obstacle = null;
         switch (mapObject.getId()) {
         case 11405: // Wooden Beams
@@ -24,7 +25,7 @@ public class EastArdougneArea extends Area {
                     .startAnimation(737).build());
             obstacle.add(TeleportAgilityEvent.builder().tile(new Tile(2673, 3298, 2)).startAnimation(737).build());
             obstacle.add(TeleportAgilityEvent.builder().tile(new Tile(2671, 3299, 3)).startAnimation(2588).build());
-            obstacle.start();
+            obstacle.start(mapObject);
             return true;
         case 11406: // Gap
             obstacle = new AgilityObstacle(player, 90, 65);
@@ -34,29 +35,29 @@ public class EastArdougneArea extends Area {
                     .startAnimation(2586).endAnimation(2588).build());
             obstacle.add(TeleportAgilityEvent.builder().tile(new Tile(2665, 3318, 3)).completeDelay(1)
                     .startAnimation(2586).endAnimation(2588).build());
-            obstacle.start();
+            obstacle.start(mapObject);
             return true;
         case 11631: // Plank
             obstacle = new AgilityObstacle(player, 90, 50);
             obstacle.add(MoveAgilityEvent.builder().tile(new Tile(2656, 3318, 3)).noclip(true).animation(762).build());
-            obstacle.start();
+            obstacle.start(mapObject);
             return true;
         case 11429: // Gap
             obstacle = new AgilityObstacle(player, 90, 21);
             obstacle.add(TeleportAgilityEvent.builder().tile(new Tile(2653, 3314, 3)).completeDelay(1)
                     .startAnimation(2586).endAnimation(2588).build());
-            obstacle.start();
+            obstacle.start(mapObject);
             return true;
         case 11430: // Gap
             obstacle = new AgilityObstacle(player, 90, 28);
             obstacle.add(TeleportAgilityEvent.builder().tile(new Tile(2651, 3309, 3)).completeDelay(1)
                     .startAnimation(2586).endAnimation(2588).build());
-            obstacle.start();
+            obstacle.start(mapObject);
             return true;
         case 11633: // Steep roof
             obstacle = new AgilityObstacle(player, 90, 57);
             obstacle.add(MoveAgilityEvent.builder().tile(new Tile(2656, 3297, 3)).noclip(true).animation(756).build());
-            obstacle.start();
+            obstacle.start(mapObject);
             return true;
         case 11630: // Gap
             obstacle = new AgilityObstacle(player, 90, 529);
@@ -68,7 +69,7 @@ public class EastArdougneArea extends Area {
             obstacle.add(MoveAgilityEvent.builder().tile(new Tile(2666, 3297, 1)).noclip(true).build());
             obstacle.add(TeleportAgilityEvent.builder().tile(new Tile(2668, 3297, 0)).completeDelay(1)
                     .startAnimation(2586).endAnimation(2588).build());
-            obstacle.start();
+            obstacle.start(mapObject);
             return true;
         }
         return false;

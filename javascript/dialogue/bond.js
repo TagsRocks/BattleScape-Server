@@ -66,7 +66,7 @@ instance = new DialogueScript() {
             }
         } else if (index == 1) {
             if (slot == 0) {
-                player.getOptions().openBondsMenu();
+                player.getBonds().sendPouch();
             } else if (slot == 1) {
                 Guide.openEntry(player, "main", "bonds");
             }

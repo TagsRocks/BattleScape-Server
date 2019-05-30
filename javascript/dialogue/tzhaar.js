@@ -74,13 +74,13 @@ instance = new DialogueScript() {
     execute: function(player, index, childId, slot) {
         if (index == 0) {
             if (slot == 0) {
-                if (!player.isGameModeNormal() && !player.isGameModeHard() && !player.getTzHaar().getFightCave()) {
+                if (!player.isGameModeNormal() && !player.isGameModeHard() && !player.getCombat().getTzHaar().getFightCave()) {
                     player.getGameEncoder().sendMessage("You can't do that until you've completed the Fight Cave.");
                     return;
                 }
-                player.getTzHaar().startFightCave(0);
+                player.getCombat().getTzHaar().startFightCave(0);
             } else if (slot == 1) {
-                player.getTzHaar().startFightCave(1);
+                player.getCombat().getTzHaar().startFightCave(1);
             }
         } else if (index == 2) {
             if (slot == 0) {
@@ -104,17 +104,18 @@ instance = new DialogueScript() {
             }
         } else if (index == 4) {
             if (slot == 0) {
-                if (!player.isGameModeNormal() && !player.isGameModeHard() && !player.getTzHaar().getInferno()) {
+                if (!player.isGameModeNormal() && !player.isGameModeHard()
+                        && !player.getCombat().getTzHaar().getInferno()) {
                     player.getGameEncoder().sendMessage("You can't do that until you've completed the Inferno.");
                     return;
                 }
-                player.getTzHaar().startInferno(0);
+                player.getCombat().getTzHaar().startInferno(0);
             } else if (slot == 1) {
-                player.getTzHaar().startInferno(1);
+                player.getCombat().getTzHaar().startInferno(1);
             } else if (slot == 2) {
-                player.getTzHaar().startInferno(-1);
+                player.getCombat().getTzHaar().startInferno(-1);
             } else if (slot == 3) {
-                player.getTzHaar().startInferno(-2);
+                player.getCombat().getTzHaar().startInferno(-2);
             }
         } else if (index == 5) {
             if (slot == 0) {
@@ -124,7 +125,7 @@ instance = new DialogueScript() {
                 }
                 player.getGameEncoder().sendMessage("You sacrifice your Fire Cape, allowing you access to The Inferno...");
                 player.getInventory().deleteItem(ItemId.FIRE_CAPE, 1);
-                player.getTzHaar().setInfernoSacrificedCape(true);
+                player.getCombat().getTzHaar().setInfernoSacrificedCape(true);
             }
         } else if (index == 6) {
             if (slot == 0) {
