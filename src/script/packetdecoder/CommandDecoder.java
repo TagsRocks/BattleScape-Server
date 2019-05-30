@@ -10,7 +10,6 @@ import com.palidino.osrs.io.PacketDecoder;
 import com.palidino.osrs.model.dialogue.Dialogue;
 import com.palidino.osrs.model.player.Player;
 import com.palidino.util.Logger;
-import com.palidino.util.Utils;
 import lombok.var;
 
 public class CommandDecoder extends PacketDecoder {
@@ -39,10 +38,9 @@ public class CommandDecoder extends PacketDecoder {
             if (commandName.contains(" ")) {
                 var indexOfSpace = commandName.indexOf(" ");
                 message = commandName.substring(indexOfSpace + 1);
-                commandName = Utils.formatName(commandName.substring(0, indexOfSpace));
-            } else {
-                commandName = Utils.formatName(commandName);
+                commandName = commandName.substring(0, indexOfSpace);
             }
+            commandName = commandName.toLowerCase();
             player.clearIdleTime();
             var command = commands.get(commandName);
             if (command == null) {

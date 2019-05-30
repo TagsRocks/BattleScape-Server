@@ -17,8 +17,7 @@ public class UnMuteCommand implements Command {
     }
 
     @Override
-    public void execute(Player player, String message) {
-        var username = message.substring(7);
+    public void execute(Player player, String username) {
         var player2 = player.getWorld().getPlayerByUsername(username);
         if (player2 == null) {
             player.getGameEncoder().sendMessage("Unable to find user " + username + ".");

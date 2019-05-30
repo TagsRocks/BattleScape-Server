@@ -181,7 +181,7 @@
     { "id": "ItemId.LOOTING_BAG", "price": 100000 },
     { "id": "ItemId.ZULRAHS_SCALES", "price": 400 },
     { "id": "ItemId.BURNT_PAGE", "price": 10000 },
-    { "id": "ItemID.AVERNIC_DEFENDER", "price": 100000000 },
+    { "id": "ItemId.AVERNIC_DEFENDER", "price": 100000000 },
     { "id": "ItemId.ANCIENT_SHARD", "price": 300000 }
   ]
 }

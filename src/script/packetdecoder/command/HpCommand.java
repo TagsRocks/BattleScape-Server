@@ -21,8 +21,8 @@ public class HPCommand implements Command {
         var amount = Integer.parseInt(message);
         player.getMovement().setEnergy(amount);
         player.setHitpoints(amount);
-        player.getSkills().setLevel(6, amount);
-        player.getGameEncoder().sendSkillLevel(6);
+        player.getSkills().setLevel(3, amount);
+        player.getGameEncoder().sendSkillLevel(3);
         player.getGameEncoder().sendMessage("You set your hitpoints to " + amount + ".");
     }
 }

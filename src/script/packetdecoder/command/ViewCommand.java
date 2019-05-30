@@ -9,12 +9,11 @@ import lombok.var;
 public class ViewCommand implements Command {
     @Override
     public boolean canUse(Player player) {
-        return player.getRights() == Player.RIGHTS_ADMIN || player.getRights() == Player.RIGHTS_MOD;
+        return player.getRights() == Player.RIGHTS_MOD || player.getRights() == Player.RIGHTS_ADMIN;
     }
 
     @Override
-    public void execute(Player player, String message) {
-        var username = message.substring(5);
+    public void execute(Player player, String username) {
         var player2 = player.getWorld().getPlayerByUsername(username);
         if (player2 == null) {
             player.getGameEncoder().sendMessage("Unable to find user " + username + ".");
