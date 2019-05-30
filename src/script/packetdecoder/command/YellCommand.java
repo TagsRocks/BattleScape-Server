@@ -1,7 +1,6 @@
 package script.packetdecoder.command;
 
 import com.palidino.osrs.io.Command;
-import com.palidino.osrs.model.player.Messaging;
 import com.palidino.osrs.model.player.Player;
 import com.palidino.setting.SqlRank;
 import com.palidino.util.Time;
