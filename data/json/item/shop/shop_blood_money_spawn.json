@@ -135,7 +135,7 @@
     { "id": "ItemId.SARADOMIN_HALO", "price": 4000000 },
     { "id": "ItemId.GUTHIX_HALO", "price": 4000000 },
     { "id": "ItemId.ZAMORAK_HALO", "price": 4000000 },
-    { "id": "ItemId.DRAGON_FULL_HELM", "price": 90000000 },
+    { "id": "ItemId.DRAGON_FULL_HELM", "price": 20000000 },
     { "id": "ItemId.DRAGON_CHAINBODY", "price": 2000000 },
     { "id": "ItemId.DRAGON_PLATEBODY", "price": 20000000 },
     { "id": "ItemId.DRAGON_PLATELEGS", "price": 400000 },
@@ -182,6 +182,7 @@
     { "id": "ItemId.LOOTING_BAG", "price": 100000 },
     { "id": "ItemId.ZULRAHS_SCALES", "price": 400 },
     { "id": "ItemId.BURNT_PAGE", "price": 10000 },
+    { "id": "ItemId.AVERNIC_DEFENDER", "price": 100000000 },
     { "id": "ItemId.ANCIENT_SHARD", "price": 300000 }
   ]
 }
