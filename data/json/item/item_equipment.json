@@ -36086,6 +36086,7 @@
     "id": "ItemId.VESTAS_CHAINBODY",
     "equipSlot": "CHEST",
     "levels": "Defence=78",
+    "hasSleeves": "true",
     "bonuses": {
       "ATTACK_STAB": "5",
       "ATTACK_SLASH": "7",
@@ -36152,6 +36153,7 @@
     "id": "ItemId.STATIUSS_PLATEBODY",
     "equipSlot": "CHEST",
     "levels": "Defence=78",
+    "hasSleeves": "true",
     "bonuses": {
       "ATTACK_STAB": "5",
       "ATTACK_SLASH": "5",
@@ -36227,6 +36229,7 @@
     "id": "ItemId.MORRIGANS_LEATHER_BODY",
     "equipSlot": "CHEST",
     "levels": "Defence=78",
+    "hasSleeves": "true",
     "bonuses": {
       "ATTACK_MAGIC": "-15",
       "ATTACK_RANGED": "36",
@@ -36289,6 +36292,7 @@
     "id": "ItemId.ZURIELS_ROBE_TOP",
     "equipSlot": "CHEST",
     "levels": "Defence=78",
+    "hasSleeves": "true",
     "bonuses": {
       "ATTACK_MAGIC": "35",
       "ATTACK_RANGED": "-10",

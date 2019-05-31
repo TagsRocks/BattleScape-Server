@@ -69,7 +69,7 @@ public class NpcOptionDecoder extends PacketDecoder {
         }
         if (index == 1 && npc.getMaxHitpoints() > 0) {
             player.setAttacking(true);
-            player.setEngagingEntity(npc);
+            player.setInteractingEntity(npc);
             player.getCombat().setFollowing(npc);
             player.getMovement().follow();
             if (player.getMagic().getAutoSpellId() != 0 && player.getHitDelay() <= 0) {

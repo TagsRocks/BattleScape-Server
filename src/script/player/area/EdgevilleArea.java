@@ -5,6 +5,7 @@ import com.palidino.osrs.io.cache.ItemId;
 import com.palidino.osrs.io.cache.NpcId;
 import com.palidino.osrs.io.cache.WidgetId;
 import com.palidino.osrs.model.Tile;
+import com.palidino.osrs.model.guide.Guide;
 import com.palidino.osrs.model.item.Item;
 import com.palidino.osrs.model.item.MysteryBox;
 import com.palidino.osrs.model.item.RandomItem;
@@ -24,7 +25,7 @@ import lombok.var;
 
 public class EdgevilleArea extends Area {
     public EdgevilleArea() {
-        super(12342);
+        super(12342, 12441, 12442);
     }
 
     @Override
@@ -52,7 +53,7 @@ public class EdgevilleArea extends Area {
             player.openDialogue("loyalty", 0);
             return true;
         case NpcId.GUIDE:
-            player.openDialogue("guidebook", 0);
+            Guide.openDialogue(player, "main");
             return true;
         case NpcId.MAKE_OVER_MAGE:
             player.getWidgetManager().sendInteractiveOverlay(WidgetId.CHARACTER_DESIGN);
@@ -197,11 +198,14 @@ public class EdgevilleArea extends Area {
         case 884: // Wishing well
             player.openDialogue("wishingwell", 0);
             return true;
-        case 1581: // Trapdoor: Edgeville dungeon
+        case 1581: // Trapdoor: Edgeville dungeon entrance
             player.getMovement().ladderUpTeleport(new Tile(3096, 9867));
             return true;
         case 12309: // Chest: Recipe for Disaster
             player.openDialogue("recipefordisaster", 0);
+            return true;
+        case 17385: // Ladder: Edgeville dungeon exit
+            player.getMovement().ladderUpTeleport(new Tile(3097, 3486));
             return true;
         case 18808: // Traeasure chest: clue scroll items
             player.openDialogue("treasurechest", 0);

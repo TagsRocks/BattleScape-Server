@@ -33,6 +33,10 @@ public class MysteryBoxWidget {
                 Item item = null;
                 if (boxId == ItemId.MYSTERY_BOX) {
                     item = MysteryBox.getBoxItem();
+                } else if (boxId == ItemId.SUPER_MYSTERY_BOX_32286) {
+                    item = MysteryBox.getSuperBoxItem();
+                } else if (boxId == ItemId.PET_MYSTERY_BOX_32311) {
+                    item = MysteryBox.getPetBoxItem();
                 }
                 mysteryBoxItems.add(item);
             }
@@ -46,7 +50,14 @@ public class MysteryBoxWidget {
                         return;
                     }
                     mysteryBoxItems.remove(0);
-                    var boxItem = MysteryBox.getBoxItem();
+                    Item boxItem = null;
+                    if (boxId == ItemId.MYSTERY_BOX) {
+                        boxItem = MysteryBox.getBoxItem();
+                    } else if (boxId == ItemId.SUPER_MYSTERY_BOX_32286) {
+                        boxItem = MysteryBox.getSuperBoxItem();
+                    } else if (boxId == ItemId.PET_MYSTERY_BOX_32311) {
+                        boxItem = MysteryBox.getPetBoxItem();
+                    }
                     mysteryBoxItems.add(boxItem);
                     player.getGameEncoder().sendItems(WidgetId.CUSTOM_MYSTERY_BOX, 41, 0, mysteryBoxItems);
                     player.getSession().write();

@@ -125,13 +125,7 @@ public class BankWidget {
         case 3:
             if (index == 1) {
                 if (player.getBank().getDefaultQuantity() == Bank.DefaultQuantity.X) {
-                    player.getGameEncoder().sendEnterAmount(new ValueEnteredEvent.IntegerEvent() {
-                        @Override
-                        public void execute(int value) {
-                            player.getBank().setLastEnteredX(value);
-                            player.getBank().deposit(itemId, slot, value);
-                        }
-                    });
+                    player.getBank().deposit(itemId, slot, player.getBank().getLastEnteredX());
                 } else {
                     player.getBank().deposit(itemId, slot, player.getBank().getDefaultQuantity().quantity);
                 }

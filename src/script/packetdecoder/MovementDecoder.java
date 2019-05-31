@@ -27,6 +27,7 @@ public class MovementDecoder extends PacketDecoder {
             return;
         }
         player.clearIdleTime();
+        player.setInteractingEntity(null);
         player.putAttribute("packet_decoder_index", index);
         player.putAttribute("packet_decoder_move_x", x);
         player.putAttribute("packet_decoder_move_y", y);

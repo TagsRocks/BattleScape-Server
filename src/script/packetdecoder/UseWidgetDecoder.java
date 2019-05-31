@@ -120,7 +120,7 @@ public class UseWidgetDecoder extends PacketDecoder {
         if (widgetId == WidgetId.SPELLBOOK) {
             player.getMagic().setSingleSpellId(childId);
             player.setAttacking(true);
-            player.setEngagingEntity(entity);
+            player.setInteractingEntity(entity);
             player.getCombat().setFollowing(entity);
             player.getMovement().follow();
             player.setFaceTile(entity);
@@ -270,7 +270,7 @@ public class UseWidgetDecoder extends PacketDecoder {
         var itemId = -1;
         var widgetHash = -1;
         var moveType = 0;
-        if (index == 0) {
+        if (index - 5 == 0) {
             y = stream.getUShortLE128();
             slot = stream.getUShortLE();
             moveType = stream.getUByte128();
@@ -278,7 +278,7 @@ public class UseWidgetDecoder extends PacketDecoder {
             x = stream.getUShortLE128();
             id = stream.getUShort();
             itemId = stream.getUShortLE();
-        } else if (index == 1) {
+        } else if (index - 5 == 1) {
             moveType = stream.getUByte();
             x = stream.getUShort();
             id = stream.getUShort128();

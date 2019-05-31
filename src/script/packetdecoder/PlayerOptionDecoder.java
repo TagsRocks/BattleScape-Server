@@ -62,7 +62,7 @@ public class PlayerOptionDecoder extends PacketDecoder {
                 return;
             }
             player.setAttacking(true);
-            player.setEngagingEntity(player2);
+            player.setInteractingEntity(player2);
             player.getCombat().setFollowing(player2);
             player.getMovement().follow();
             if (player.getMagic().getAutoSpellId() != 0 && player.getHitDelay() <= 0) {

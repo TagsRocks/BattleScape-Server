@@ -3334,6 +3334,138 @@
     "moveDistance": 4
   },
   {
+    "id": "NpcId.HOBGOBLIN_28",
+    "direction": 1,
+    "x": 3096,
+    "y": 3747
+  },
+  {
+    "id": "NpcId.HOBGOBLIN_28",
+    "direction": 1,
+    "x": 3101,
+    "y": 3752
+  },
+  {
+    "id": "NpcId.HOBGOBLIN_28",
+    "direction": 1,
+    "x": 3099,
+    "y": 3759
+  },
+  {
+    "id": "NpcId.HOBGOBLIN_28",
+    "direction": 1,
+    "x": 3103,
+    "y": 3773
+  },
+  {
+    "id": "NpcId.HOBGOBLIN_28",
+    "direction": 1,
+    "x": 3097,
+    "y": 3774
+  },
+  {
+    "id": "NpcId.HOBGOBLIN_28",
+    "direction": 1,
+    "x": 3108,
+    "y": 3765
+  },
+  {
+    "id": "NpcId.HOBGOBLIN_28",
+    "direction": 1,
+    "x": 3089,
+    "y": 3757
+  },
+  {
+    "id": "NpcId.HOBGOBLIN_28",
+    "direction": 1,
+    "x": 3092,
+    "y": 3758
+  },
+  {
+    "id": "NpcId.HOBGOBLIN_28",
+    "direction": 1,
+    "x": 3086,
+    "y": 3756
+  },
+  {
+    "id": "NpcId.HOBGOBLIN_28",
+    "direction": 1,
+    "x": 3082,
+    "y": 3752
+  },
+  {
+    "id": "NpcId.HOBGOBLIN_28",
+    "direction": 1,
+    "x": 3080,
+    "y": 3749
+  },
+  {
+    "id": "NpcId.HOBGOBLIN_28",
+    "direction": 1,
+    "x": 3083,
+    "y": 3756
+  },
+  {
+    "id": "NpcId.HOBGOBLIN_28",
+    "direction": 1,
+    "x": 3084,
+    "y": 3760
+  },
+  {
+    "id": "NpcId.HOBGOBLIN_28",
+    "direction": 1,
+    "x": 3083,
+    "y": 3761
+  },
+  {
+    "id": "NpcId.HOBGOBLIN_28",
+    "direction": 1,
+    "x": 3088,
+    "y": 3764
+  },
+  {
+    "id": "NpcId.HOBGOBLIN_28",
+    "direction": 1,
+    "x": 3091,
+    "y": 3767
+  },
+  {
+    "id": "NpcId.HOBGOBLIN_28",
+    "direction": 1,
+    "x": 3082,
+    "y": 3764
+  },
+  {
+    "id": "NpcId.HOBGOBLIN_28",
+    "direction": 1,
+    "x": 3077,
+    "y": 3762
+  },
+  {
+    "id": "NpcId.HOBGOBLIN_28",
+    "direction": 1,
+    "x": 3074,
+    "y": 3761
+  },
+  {
+    "id": "NpcId.HOBGOBLIN_28",
+    "direction": 1,
+    "x": 3076,
+    "y": 3767
+  },
+  {
+    "id": "NpcId.HOBGOBLIN_28",
+    "direction": 1,
+    "x": 3082,
+    "y": 3769
+  },
+  {
+    "id": "NpcId.HOBGOBLIN_28",
+    "direction": 1,
+    "x": 3088,
+    "y": 3772
+  },
+  {
     "id": "NpcId.AHRIM_THE_BLIGHTED_98",
     "direction": 1,
     "moveDistance": 4,
@@ -3744,86 +3876,62 @@
   {
     "id": "NpcId.CURSED_JEWELLED_CRAB_180_16001",
     "direction": 1,
-    "moveDistance": 4,
-    "x": 3078,
-    "y": 3760
+    "x": 3029,
+    "y": 3907
   },
   {
     "id": "NpcId.CURSED_JEWELLED_CRAB_180_16001",
     "direction": 1,
-    "moveDistance": 4,
-    "x": 3083,
-    "y": 3757
+    "x": 3031,
+    "y": 3913
   },
   {
     "id": "NpcId.CURSED_JEWELLED_CRAB_180_16001",
     "direction": 1,
-    "moveDistance": 4,
-    "x": 3088,
-    "y": 3760
+    "x": 3039,
+    "y": 3909
   },
   {
     "id": "NpcId.CURSED_JEWELLED_CRAB_180_16001",
     "direction": 1,
-    "moveDistance": 4,
-    "x": 3093,
-    "y": 3764
+    "x": 3047,
+    "y": 3906
   },
   {
     "id": "NpcId.CURSED_JEWELLED_CRAB_180_16001",
     "direction": 1,
-    "moveDistance": 4,
-    "x": 3087,
-    "y": 3767
+    "x": 3053,
+    "y": 3910
   },
   {
     "id": "NpcId.CURSED_JEWELLED_CRAB_180_16001",
     "direction": 1,
-    "moveDistance": 4,
-    "x": 3091,
-    "y": 3771
+    "x": 3054,
+    "y": 3917
   },
   {
     "id": "NpcId.CURSED_JEWELLED_CRAB_180_16001",
     "direction": 1,
-    "moveDistance": 4,
-    "x": 3096,
-    "y": 3759
+    "x": 3044,
+    "y": 3917
   },
   {
     "id": "NpcId.CURSED_JEWELLED_CRAB_180_16001",
     "direction": 1,
-    "moveDistance": 4,
-    "x": 3089,
-    "y": 3753
+    "x": 3046,
+    "y": 3911
   },
   {
     "id": "NpcId.CURSED_JEWELLED_CRAB_180_16001",
     "direction": 1,
-    "moveDistance": 4,
-    "x": 3080,
-    "y": 3769
+    "x": 3037,
+    "y": 3916
   },
   {
     "id": "NpcId.CURSED_JEWELLED_CRAB_180_16001",
     "direction": 1,
-    "moveDistance": 4,
-    "x": 3081,
-    "y": 3751
-  },
-  {
-    "id": "NpcId.CURSED_JEWELLED_CRAB_180_16001",
-    "direction": 1,
-    "moveDistance": 4,
-    "x": 3085,
-    "y": 3772
-  },
-  {
-    "id": "NpcId.CURSED_JEWELLED_CRAB_180_16001",
-    "direction": 1,
-    "moveDistance": 4,
-    "x": 3075,
-    "y": 3765
+    "x": 3061,
+    "y": 3918
   },
   {
     "id": "NpcId.CURSED_CAVE_HORROR_206_16005",
