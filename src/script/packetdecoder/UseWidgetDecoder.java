@@ -212,6 +212,7 @@ public class UseWidgetDecoder extends PacketDecoder {
             return;
         }
         player.clearAllActions(false, true);
+        player.putAttribute("packet_decoder_index", index);
         player.putAttribute("packet_decoder_use_widget_id", useWidgetId);
         player.putAttribute("packet_decoder_use_child_id", useChildId);
         player.putAttribute("packet_decoder_on_widget_id", onWidgetId);

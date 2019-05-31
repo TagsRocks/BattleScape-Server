@@ -2,7 +2,6 @@ package script.packetdecoder.widget;
 
 import java.util.ArrayList;
 import java.util.List;
-import com.palidino.osrs.io.cache.ItemId;
 import com.palidino.osrs.io.cache.WidgetId;
 import com.palidino.osrs.model.item.Item;
 import com.palidino.osrs.model.item.ItemDef;
@@ -30,45 +29,34 @@ public class MysteryBoxWidget {
             player.getInventory().deleteItem(boxId, 1);
             final List<Item> mysteryBoxItems = new ArrayList<>();
             for (int i = 0; i < 5; i++) {
-                Item item = null;
-                if (boxId == ItemId.MYSTERY_BOX) {
-                    item = MysteryBox.getBoxItem();
-                } else if (boxId == ItemId.SUPER_MYSTERY_BOX_32286) {
-                    item = MysteryBox.getSuperBoxItem();
-                } else if (boxId == ItemId.PET_MYSTERY_BOX_32311) {
-                    item = MysteryBox.getPetBoxItem();
-                }
-                mysteryBoxItems.add(item);
+                mysteryBoxItems.add(MysteryBox.getRandomItem(player, boxId));
             }
             player.getGameEncoder().sendItems(WidgetId.CUSTOM_MYSTERY_BOX, 41, 0, mysteryBoxItems);
             player.getGameEncoder().sendHideWidget(WidgetId.CUSTOM_MYSTERY_BOX, 59, true);
+            int totalRolls = MysteryBox.getRolls(boxId);
             var event = new Event(0) {
+                private int rollsComplete = 0;
+
                 @Override
                 public void execute() {
                     if (!player.isVisible()) {
                         stop();
                         return;
                     }
+                    setTick(0);
                     mysteryBoxItems.remove(0);
-                    Item boxItem = null;
-                    if (boxId == ItemId.MYSTERY_BOX) {
-                        boxItem = MysteryBox.getBoxItem();
-                    } else if (boxId == ItemId.SUPER_MYSTERY_BOX_32286) {
-                        boxItem = MysteryBox.getSuperBoxItem();
-                    } else if (boxId == ItemId.PET_MYSTERY_BOX_32311) {
-                        boxItem = MysteryBox.getPetBoxItem();
-                    }
-                    mysteryBoxItems.add(boxItem);
+                    mysteryBoxItems.add(MysteryBox.getRandomItem(player, boxId));
                     player.getGameEncoder().sendItems(WidgetId.CUSTOM_MYSTERY_BOX, 41, 0, mysteryBoxItems);
                     player.getSession().write();
-                    if (getExecutions() == 5) {
-                        stop();
-                        player.getGameEncoder().sendHideWidget(WidgetId.CUSTOM_MYSTERY_BOX, 59, false);
-                        boxItem = mysteryBoxItems.get(mysteryBoxItems.size() - 3);
-                        System.out.println(boxItem.getName());
+                    if (getExecutions() > 0 && (getExecutions() % 4) == 0) {
+                        if (++rollsComplete >= totalRolls) {
+                            stop();
+                            player.getGameEncoder().sendHideWidget(WidgetId.CUSTOM_MYSTERY_BOX, 59, false);
+                        }
+                        var boxItem = mysteryBoxItems.get(mysteryBoxItems.size() - 3);
                         player.getInventory().addOrDropItem(boxItem);
-                        RequestManager.addPlayerLog(player, "mysterybox",
-                                player.getLogName() + " received " + boxItem.getLogName() + " from a mystery box.");
+                        RequestManager.addLootBoxLog(player, boxId, boxItem);
+                        setTick(2);
                     }
                 }
             };
@@ -77,4 +65,3 @@ public class MysteryBoxWidget {
         }
     }
 }
-

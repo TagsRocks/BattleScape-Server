@@ -251,49 +251,26 @@ public class EdgevilleArea extends Area {
             player.clearHits();
             return true;
         case 27269: // Deadman chest
-            if (player.getInventory().hasItem(ItemId.BLOODY_KEY_32304)) {
-                player.getInventory().deleteItem(ItemId.BLOODY_KEY_32304, 1);
-                Item item = null;
-                if (player.isGameModeNormal() || player.isGameModeHard()) {
-                    item = MysteryBox.getBoxItem();
-                } else {
-                    item = RandomItem.getItem(MysteryBox.BARROWS_PIECES);
-                }
-                player.getWorld().sendItemDropNews(player, item.getId(), "a bloody key");
-                player.getInventory().addOrDropItem(item);
-                RequestManager.addLootBoxLog(player, ItemId.BLOODY_KEY_32304, item);
-            } else if (player.getInventory().hasItem(ItemId.BLOODIER_KEY_32305)) {
-                player.getInventory().deleteItem(ItemId.BLOODIER_KEY_32305, 1);
-                Item item1 = null;
-                Item item2 = null;
-                if (player.isGameModeNormal() || player.isGameModeHard()) {
-                    item1 = MysteryBox.getSuperBoxItem();
-                    item2 = MysteryBox.getSuperBoxItem();
-                    String itemNames = Utils.aOrAnCap(item1.getName()) + " " + item1.getName();
-                    itemNames += " and " + Utils.aOrAn(item2.getName()) + " " + item2.getName();
-                    player.getWorld().sendNews(player.getMessaging().getIconImage() + player.getUsername()
-                            + " has received " + itemNames + " from a bloodier key!");
-                } else {
-                    item1 = RandomItem.getItem(MysteryBox.BARROWS_SETS);
-                    player.getWorld().sendItemDropNews(player, item1.getId(), "a bloodier key");
-                }
-                player.getInventory().addOrDropItem(item1);
-                player.getInventory().addOrDropItem(item2);
-                RequestManager.addLootBoxLog(player, ItemId.BLOODY_KEY_32304, item1, item2);
-            } else if (player.getInventory().hasItem(ItemId.SINISTER_KEY)) {
+            if (player.getInventory().hasItem(ItemId.SINISTER_KEY)) {
                 player.getCombat().getBarrows().openChest(mapObject.getX() != 3551 || mapObject.getY() != 9695);
+                return true;
+            }
+            var mysteryId = -1;
+            if (player.getInventory().hasItem(ItemId.BLOODIER_KEY_32305)) {
+                mysteryId = ItemId.BLOODIER_KEY_32305;
+            } else if (player.getInventory().hasItem(ItemId.BLOODY_KEY_32304)) {
+                mysteryId = ItemId.BLOODY_KEY_32304;
             } else if (player.getInventory().hasItem(ItemId.DIAMOND_KEY_32309)) {
-                player.getInventory().deleteItem(ItemId.DIAMOND_KEY_32309, 1);
-                player.getInventory().addOrDropItem(MysteryBox.getDiamondKeyItem());
+                mysteryId = ItemId.DIAMOND_KEY_32309;
             } else if (player.getInventory().hasItem(ItemId.GOLD_KEY_32308)) {
-                player.getInventory().deleteItem(ItemId.GOLD_KEY_32308, 1);
-                player.getInventory().addOrDropItem(MysteryBox.getGoldKeyItem());
+                mysteryId = ItemId.GOLD_KEY_32308;
             } else if (player.getInventory().hasItem(ItemId.SILVER_KEY_32307)) {
-                player.getInventory().deleteItem(ItemId.SILVER_KEY_32307, 1);
-                player.getInventory().addOrDropItem(MysteryBox.getSilverKeyItem());
+                mysteryId = ItemId.SILVER_KEY_32307;
             } else if (player.getInventory().hasItem(ItemId.BRONZE_KEY_32306)) {
-                player.getInventory().deleteItem(ItemId.BRONZE_KEY_32306, 1);
-                player.getInventory().addOrDropItem(MysteryBox.getBronzeKeyItem());
+                mysteryId = ItemId.BRONZE_KEY_32306;
+            }
+            if (mysteryId != -1) {
+                MysteryBox.open(player, mysteryId);
             } else {
                 player.getGameEncoder().sendMessage("You need a key to open this chest.");
             }

@@ -53,7 +53,6 @@ public class CommandDecoder extends PacketDecoder {
             try {
                 command.execute(player, message);
             } catch (Exception e) {
-                Logger.error(e);
                 player.getGameEncoder().sendMessage(getExample(commandName, command));
             }
         } else if (index == 1) {

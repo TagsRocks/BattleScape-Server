@@ -1,6 +1,7 @@
 {
   "name": "Emblem Trader",
   "currency": "ItemId.COINS",
+  "buybackMultiplier": 0.6,
   "items": [
     { "id": "ItemId.DARK_CRAB", "price": 3000 },
     { "id": "ItemId.ANGLERFISH", "price": 4000 },

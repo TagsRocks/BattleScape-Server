@@ -518,22 +518,9 @@ public class InventoryWidget {
             }
             break;
         case ItemId.MYSTERY_BOX:
-            player.getWidgetManager().sendInteractiveOverlay(WidgetId.CUSTOM_MYSTERY_BOX);
-            player.getGameEncoder().sendClearItems(WidgetId.CUSTOM_MYSTERY_BOX, 41, 0);
-            player.putAttribute("mystery_box", itemId);
-            player.getGameEncoder().sendItems(WidgetId.CUSTOM_MYSTERY_BOX, 54, 0, MysteryBox.getAllBoxItems());
-            break;
         case ItemId.SUPER_MYSTERY_BOX_32286:
-            player.getWidgetManager().sendInteractiveOverlay(WidgetId.CUSTOM_MYSTERY_BOX);
-            player.getGameEncoder().sendClearItems(WidgetId.CUSTOM_MYSTERY_BOX, 41, 0);
-            player.putAttribute("mystery_box", itemId);
-            player.getGameEncoder().sendItems(WidgetId.CUSTOM_MYSTERY_BOX, 54, 0, MysteryBox.getAllSuperBoxItems());
-            break;
         case ItemId.PET_MYSTERY_BOX_32311:
-            player.getWidgetManager().sendInteractiveOverlay(WidgetId.CUSTOM_MYSTERY_BOX);
-            player.getGameEncoder().sendClearItems(WidgetId.CUSTOM_MYSTERY_BOX, 41, 0);
-            player.putAttribute("mystery_box", itemId);
-            player.getGameEncoder().sendItems(WidgetId.CUSTOM_MYSTERY_BOX, 54, 0, MysteryBox.getAllPetBoxItems());
+            MysteryBox.open(player, itemId);
             break;
         case 19564: // Royal seed pod
             if (!player.getController().canTeleport(30, true)) {
