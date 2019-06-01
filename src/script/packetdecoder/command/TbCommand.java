@@ -4,7 +4,7 @@ import com.palidino.osrs.io.Command;
 import com.palidino.osrs.io.cache.ItemId;
 import com.palidino.osrs.model.player.Player;
 
-public class TBCommand implements Command {
+public class TbCommand implements Command {
 
     @Override
     public void execute(Player player, String message) {
