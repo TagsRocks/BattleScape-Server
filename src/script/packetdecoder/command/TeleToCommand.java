@@ -4,7 +4,7 @@ import com.palidino.osrs.io.Command;
 import com.palidino.osrs.model.player.Player;
 import lombok.var;
 
-public class JailCommand implements Command {
+public class TeleToCommand implements Command {
     @Override
     public String getExample() {
         return "username";
@@ -21,15 +21,17 @@ public class JailCommand implements Command {
         if (player2 == null) {
             player.getGameEncoder().sendMessage("Unable to find user " + username + ".");
             return;
+        } else if (player == player2) {
+            player.getGameEncoder().sendMessage("You can't teleport to yourself.");
+            return;
+        } else if (player.getController().isInstanced()) {
+            player.getGameEncoder().sendMessage("You can't teleport while in an instance.");
+            return;
         } else if (player2.getController().isInstanced()) {
-            player.getGameEncoder().sendMessage(username + " is in an instance located at: " + player.getX() + ", "
-                    + player.getY() + ", " + player.getHeight() + ".");
+            player.getGameEncoder().sendMessage(username + " is in an instance located at: " + player2.getX() + ", "
+                    + player2.getY() + ", " + player2.getHeight() + ".");
             return;
         }
-        player2.getMovement().teleport(2094, 4466);
-        player2.getGameEncoder().sendMessage("You have been jailed by " + username);
-        player.getGameEncoder().sendMessage(username + " has been jailed.");
-        player.getWorld().sendStaffMessage(player.getUsername() + " jailed " + player2.getUsername() + ".");
-
+        player.getMovement().teleport(player2);
     }
 }

@@ -2,12 +2,13 @@ package script.packetdecoder.command;
 
 import com.palidino.osrs.io.Command;
 import com.palidino.osrs.model.player.Player;
+import com.palidino.osrs.util.RequestManager;
 import lombok.var;
 
-public class MoveCommand implements Command {
+public class UnmuteCommand implements Command {
     @Override
     public String getExample() {
-        return "username";
+        return "hours username_or_userid";
     }
 
     @Override
@@ -21,14 +22,11 @@ public class MoveCommand implements Command {
         if (player2 == null) {
             player.getGameEncoder().sendMessage("Unable to find user " + username + ".");
             return;
-        } else if (player2.getController().isInstanced()) {
-            player.getGameEncoder().sendMessage(username + " is in an instance located at: " + player.getX() + ", "
-                    + player.getY() + ", " + player.getHeight() + ".");
-            return;
         }
-        player2.getMovement().teleport(3093, 3495);
-        player2.getGameEncoder().sendMessage("You have been moved home.");
-        player.getGameEncoder().sendMessage(username + " has been moved home.");
-
+        player2.getGameEncoder().sendMessage(player.getUsername() + " has unmuted you.");
+        player2.getMessaging().setMuteTime(0, null);
+        player.getGameEncoder().sendMessage(username + " has been unmuted.");
+        player.getWorld().sendStaffMessage(player.getUsername() + " unmuted " + player2.getUsername() + ".");
+        RequestManager.addPlayerLog("mute/0.txt", player.getLogName() + " unmuted " + player2.getLogName() + ".");
     }
 }
