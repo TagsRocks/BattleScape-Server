@@ -8,7 +8,7 @@ public class StoreCommand implements Command {
     @Override
     public void execute(Player player, String message) {
         if (Main.isSpawn()) {
-            player.getGameEncoder().sendOpenURL("https://www.battlewild.com/store");
+            player.getGameEncoder().sendOpenURL("https://www.battlewild.com/store/");
         }
     }
 }
