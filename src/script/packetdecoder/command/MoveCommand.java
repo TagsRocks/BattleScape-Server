@@ -27,7 +27,8 @@ public class MoveCommand implements Command {
                     + player.getY() + ", " + player.getHeight() + ".");
             return;
         }
-        player.getMovement().teleport(3093, 3495);
+        player2.getMovement().teleport(3093, 3495);
+        player2.getGameEncoder().sendMessage("You have been moved home.");
         player.getGameEncoder().sendMessage(username + " has been moved home.");
 
     }

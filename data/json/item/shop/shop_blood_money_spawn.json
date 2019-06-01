@@ -169,7 +169,7 @@
     { "id": "ItemId.SPIKED_MANACLES", "price": 3000000 },
     { "id": "ItemId.ROBIN_HOOD_HAT", "price": 3000000 },
     { "id": "ItemId.RANGERS_TUNIC", "price": 9000000 },
-    { "id": "ItemId.RANGER_BOOTS", "price": 40000000 },
+    { "id": "ItemId.RANGER_BOOTS", "price": 3000000 },
     { "id": "ItemId.WIZARD_BOOTS", "price": 400000 },
     { "id": "ItemId.HOLY_WRAPS", "price": 1000000 },
     { "id": "ItemId.HOLY_SANDALS", "price": 1000000 },

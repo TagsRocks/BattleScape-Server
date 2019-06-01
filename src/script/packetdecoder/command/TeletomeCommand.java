@@ -12,7 +12,7 @@ public class TeletomeCommand implements Command {
 
     @Override
     public boolean canUse(Player player) {
-        return player.getRights() == Player.RIGHTS_ADMIN;
+        return player.getRights() == Player.RIGHTS_MOD || player.getRights() == Player.RIGHTS_ADMIN;
     }
 
     @Override
