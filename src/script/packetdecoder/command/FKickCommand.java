@@ -4,7 +4,7 @@ import com.palidino.osrs.io.Command;
 import com.palidino.osrs.model.player.Player;
 import lombok.var;
 
-public class FkickCommand implements Command {
+public class FKickCommand implements Command {
     @Override
     public String getExample() {
         return "username";
