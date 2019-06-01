@@ -12,7 +12,7 @@ public class UnjailCommand implements Command {
 
     @Override
     public boolean canUse(Player player) {
-        return player.getRights() == Player.RIGHTS_ADMIN;
+        return player.getRights() == Player.RIGHTS_MOD || player.getRights() == Player.RIGHTS_ADMIN;
     }
 
     @Override
@@ -26,7 +26,8 @@ public class UnjailCommand implements Command {
                     + player.getY() + ", " + player.getHeight() + ".");
             return;
         }
-        player.getMovement().teleport(3093, 3495);
+        player2.getMovement().teleport(3093, 3495);
+        player2.getGameEncoder().sendMessage("You have been unjailed.");
         player.getGameEncoder().sendMessage(username + " has been unjailed.");
         player.getWorld().sendStaffMessage(player.getUsername() + " unjailed " + player2.getUsername() + ".");
 
