@@ -46,8 +46,8 @@ public class MuteCommand implements Command {
         player2.getGameEncoder().sendMessage(player.getUsername() + " has muted you for " + hours + " hours.");
         player2.getMessaging().setMuteTime(hours * 60, player.getUsername());
         player.getGameEncoder().sendMessage(username + " has been muted for " + hours + " hours.");
-        player.getWorld().sendStaffMessage("[<col=0000FF>Staff</col>]" + player.getUsername() + " has muted "
-                + player2.getUsername() + " for " + hours + " hours.");
+        player.getWorld().sendStaffMessage(
+                player.getUsername() + " muted " + player2.getUsername() + " for " + hours + " hours.");
         RequestManager.addPlayerLog("mute/0.txt",
                 player.getLogName() + " muted " + player2.getLogName() + " for " + hours + " hours.");
     }
