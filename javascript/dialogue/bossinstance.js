@@ -311,11 +311,11 @@ instance = new DialogueScript() {
             tile = new Tile(1356, 10258, 0);
             slayerId = NpcId.ALCHEMICAL_HYDRA_426;
         }
-        var requiresRoWI = true; //player.getSlayer().isTask(slayerId); // Enable to allow free instances on task
+        var requiresCost = true; //player.getSlayer().isTask(slayerId); // Enable to allow free instances on task
         if ((bossName.equals("boss_instance_kraken") || bossName.equals("boss_instance_hydra"))
                 && player.getSlayer().isAnyTask(slayerId) || player.isUsergroup(SqlRank.YOUTUBER)) {
             // Kraken/hydra only has one spawn
-            requiresRoWI = false;
+            requiresCost = false;
         }
         if (slot == enterSlot) {
             if (areaScript != null) {
@@ -330,8 +330,9 @@ instance = new DialogueScript() {
                 player.getMovement().ladderDownTeleport(tile);
             }
         } else if (slot == startSlot) {
-            if (requiresRoWI && !player.getCharges().hasRoWICharge(1)) {
-                player.getGameEncoder().sendMessage("You need a charged Ring of wealth (i) to do this.");
+            if (requiresCost && !player.getInventory().hasItem(ItemId.BOSS_INSTANCE_SCROLL_32313)
+                    && !player.getCharges().hasRoWICharge(1)) {
+                player.getGameEncoder().sendMessage("You need an instance creation item to do this.");
                 return;
             } else if (playerInstance != null) {
                 player.getGameEncoder().sendMessage("There is already a boss instance for this Clan Chat.");
@@ -344,8 +345,10 @@ instance = new DialogueScript() {
                 player.getArea().script(areaScript);
             }
             player.getInventory().deleteItem(deleteItemId, 1);
-            if (requiresRoWI) {
-                player.getCharges().depleteRoWICharge(1);
+            if (requiresCost) {
+                if (!player.getInventory().deleteItem(ItemId.BOSS_INSTANCE_SCROLL_32313).success()) {
+                    player.getCharges().depleteRoWICharge(1);
+                }
             }
             player.getCombat().setDamageInflicted(0);
             player.setController(new BossInstancePC());

@@ -25,10 +25,12 @@ import com.palidino.osrs.model.player.Runecrafting;
 import com.palidino.osrs.model.player.Skills;
 import com.palidino.osrs.model.player.Slayer;
 import com.palidino.osrs.model.player.combat.BountyHunter;
+import com.palidino.osrs.model.player.combat.DropRateBoost;
 import com.palidino.osrs.util.RequestManager;
 import com.palidino.osrs.world.WildernessEvent;
 import com.palidino.osrs.world.World;
 import com.palidino.setting.SqlRank;
+import com.palidino.util.Time;
 import com.palidino.util.Utils;
 import com.palidino.util.event.Event;
 
@@ -115,6 +117,42 @@ public class InventoryWidget {
         Item anItem = null;
         int[] ttLoot = null;
         switch (itemId) {
+        case ItemId._50_DROP_BOOST_SCROLL_1_HOUR_32314:
+            if (player.getCombat().getDropRateBoost() != null) {
+                player.getGameEncoder().sendMessage("You already have a drop rate boost active.");
+                break;
+            }
+            player.getInventory().deleteItem(itemId, 1, slot);
+            player.getCombat().setDropRateBoost(new DropRateBoost(1.5, (int) Time.hourToTick(1)));
+            player.getGameEncoder().sendMessage("A drop rate boost of 50% has been added for 1 hour.");
+            break;
+        case ItemId._50_DROP_BOOST_SCROLL_4_HOURS_32315:
+            if (player.getCombat().getDropRateBoost() != null) {
+                player.getGameEncoder().sendMessage("You already have a drop rate boost active.");
+                break;
+            }
+            player.getInventory().deleteItem(itemId, 1, slot);
+            player.getCombat().setDropRateBoost(new DropRateBoost(1.5, (int) Time.hourToTick(4)));
+            player.getGameEncoder().sendMessage("A drop rate boost of 50% has been added for 4 hours.");
+            break;
+        case ItemId._50_DROP_BOOST_SCROLL_8_HOURS_32316:
+            if (player.getCombat().getDropRateBoost() != null) {
+                player.getGameEncoder().sendMessage("You already have a drop rate boost active.");
+                break;
+            }
+            player.getInventory().deleteItem(itemId, 1, slot);
+            player.getCombat().setDropRateBoost(new DropRateBoost(1.5, (int) Time.hourToTick(8)));
+            player.getGameEncoder().sendMessage("A drop rate boost of 50% has been added for 8 hours.");
+            break;
+        case ItemId._50_DROP_BOOST_SCROLL_16_HOURS_32317:
+            if (player.getCombat().getDropRateBoost() != null) {
+                player.getGameEncoder().sendMessage("You already have a drop rate boost active.");
+                break;
+            }
+            player.getInventory().deleteItem(itemId, 1, slot);
+            player.getCombat().setDropRateBoost(new DropRateBoost(1.5, (int) Time.hourToTick(16)));
+            player.getGameEncoder().sendMessage("A drop rate boost of 50% has been added for 16 hours.");
+            break;
         case ItemId.VOID_KNIGHT_SET_32289:
             if (player.getInventory().getRemainingSlots() < 9 - 1) {
                 player.getInventory().notEnoughSpace();

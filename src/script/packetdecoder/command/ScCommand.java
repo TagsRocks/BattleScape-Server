@@ -3,7 +3,7 @@ package script.packetdecoder.command;
 import com.palidino.osrs.io.Command;
 import com.palidino.osrs.model.player.Player;
 
-public class SCCommand implements Command {
+public class ScCommand implements Command {
     @Override
     public String getExample() {
         return "message to staff";
