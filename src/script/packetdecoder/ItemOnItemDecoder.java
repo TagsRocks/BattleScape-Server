@@ -1,6 +1,7 @@
 package script.packetdecoder;
 
 import com.palidino.io.Stream;
+import com.palidino.osrs.Main;
 import com.palidino.osrs.io.PacketDecoder;
 import com.palidino.osrs.model.player.Player;
 import com.palidino.osrs.model.player.SkillContainer;
@@ -34,7 +35,7 @@ public class ItemOnItemDecoder extends PacketDecoder {
         var message = "[ItemOnItem] useWidgetId=" + useWidgetId + "; useChildId=" + useChildId + "; onWidgetId="
                 + onWidgetId + "; onChildId=" + onChildId + "; useSlot=" + useSlot + "; onSlot=" + onSlot
                 + "; useItemId=" + useItemId + "; onItemId=" + onItemId;
-        if (player.getRights() == Player.RIGHTS_ADMIN) {
+        if (Main.isLocal()) {
             Logger.println(message);
         }
         if (player.getOptions().getPrintPackets()) {

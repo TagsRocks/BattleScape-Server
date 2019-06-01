@@ -200,6 +200,9 @@ public class EdgevilleArea extends Area {
             player.getMovement().ladderUpTeleport(new Tile(3096, 9867));
             return true;
         case 12309: // Chest: Recipe for Disaster
+            if (Main.isSpawn()) {
+                return true;
+            }
             player.openDialogue("recipefordisaster", 0);
             return true;
         case 17385: // Ladder: Edgeville dungeon exit

@@ -1,6 +1,7 @@
 package script.packetdecoder;
 
 import com.palidino.io.Stream;
+import com.palidino.osrs.Main;
 import com.palidino.osrs.io.PacketDecoder;
 import com.palidino.osrs.io.cache.WidgetId;
 import com.palidino.osrs.model.map.route.Route;
@@ -104,7 +105,7 @@ public class UseWidgetDecoder extends PacketDecoder {
         var message = "[WidgetOnEntity(" + index + ")] widgetId=" + widgetId + "; childId=" + childId + "; itemId="
                 + itemId + "; slot=" + slot + "; id=" + id + "; moveType=" + moveType + "; entity="
                 + (entity instanceof Player ? ((Player) entity).getUsername() : entity.getId());
-        if (player.getRights() == Player.RIGHTS_ADMIN) {
+        if (Main.isLocal()) {
             Logger.println(message);
         }
         if (player.getOptions().getPrintPackets()) {
@@ -202,7 +203,7 @@ public class UseWidgetDecoder extends PacketDecoder {
         var message = "[WidgetOnWidget] useWidgetId=" + useWidgetId + "; useChildId=" + useChildId + "; onWidgetId="
                 + onWidgetId + "; onChildId=" + onChildId + "; useItemId=" + useItemId + "; onItemId=" + onItemId
                 + "; onSlot=" + onSlot;
-        if (player.getRights() == Player.RIGHTS_ADMIN) {
+        if (Main.isLocal()) {
             Logger.println(message);
         }
         if (player.getOptions().getPrintPackets()) {
@@ -303,7 +304,7 @@ public class UseWidgetDecoder extends PacketDecoder {
         }
         var message = "[WidgetOnMapObject] widgetId=" + widgetId + "; childId=" + childId + "; slot=" + slot
                 + "; itemId=" + itemId + "; id=" + id + "; x=" + x + "; y=" + y + "; moveType=" + moveType;
-        if (player.getRights() == Player.RIGHTS_ADMIN) {
+        if (Main.isLocal()) {
             Logger.println(message);
         }
         if (player.getOptions().getPrintPackets()) {

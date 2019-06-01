@@ -5,7 +5,7 @@ import com.palidino.osrs.model.player.Player;
 import com.palidino.osrs.util.RequestManager;
 import lombok.var;
 
-public class UnMuteCommand implements Command {
+public class UnmuteCommand implements Command {
     @Override
     public String getExample() {
         return "hours username_or_userid";

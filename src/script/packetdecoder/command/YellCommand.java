@@ -12,8 +12,6 @@ public class YellCommand implements Command {
         return "message";
     }
 
-
-
     @Override
     public boolean canUse(Player player) {
         return player.isUsergroup(SqlRank.DONATOR) || player.getRights() == Player.RIGHTS_MOD

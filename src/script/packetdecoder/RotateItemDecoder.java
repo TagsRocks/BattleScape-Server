@@ -1,6 +1,7 @@
 package script.packetdecoder;
 
 import com.palidino.io.Stream;
+import com.palidino.osrs.Main;
 import com.palidino.osrs.io.PacketDecoder;
 import com.palidino.osrs.io.cache.WidgetId;
 import com.palidino.osrs.model.player.Player;
@@ -55,7 +56,7 @@ public class RotateItemDecoder extends PacketDecoder {
         var message = "[RotateItems(" + index + ")] fromInterfaceId=" + fromInterfaceId + "; fromChildId=" + fromChildId
                 + "; toInterfaceId=" + toInterfaceId + "; toChildId=" + toChildId + "; fromSlot=" + fromSlot
                 + "; toSlot=" + toSlot + "; fromItemId=" + fromItemId + "; toItemId=" + toItemId;
-        if (player.getRights() == Player.RIGHTS_ADMIN) {
+        if (Main.isLocal()) {
             Logger.println(message);
         }
         if (player.getOptions().getPrintPackets()) {
