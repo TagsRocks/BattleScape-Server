@@ -17,6 +17,7 @@
     { "id": "ItemId._50_DROP_BOOST_SCROLL_1_HOUR_32314", "price": 1 },
     { "id": "ItemId._50_DROP_BOOST_SCROLL_4_HOURS_32315", "price": 3 },
     { "id": "ItemId._50_DROP_BOOST_SCROLL_8_HOURS_32316", "price": 6 },
-    { "id": "ItemId._50_DROP_BOOST_SCROLL_16_HOURS_32315", "price": 13 }
+    { "id": "ItemId._50_DROP_BOOST_SCROLL_16_HOURS_32315", "price": 13 },
+    { "id": "ItemId.PERMANENT_TZHAAR_WAVE_BOOST_32300", "price": 5 }
   ]
 }

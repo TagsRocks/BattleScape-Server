@@ -13,6 +13,6 @@ public class EdgePvPCommand implements Command {
 
     @Override
     public void execute(Player player, String message) {
-        player.getMovement().teleport(3096, 3513);
+        player.getMovement().teleport(3093, 3495, 20);
     }
 }
