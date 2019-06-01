@@ -29,8 +29,7 @@ public class UnjailCommand implements Command {
         player2.getMovement().teleport(3093, 3495);
         player2.getGameEncoder().sendMessage("You have been unjailed.");
         player.getGameEncoder().sendMessage(username + " has been unjailed.");
-        player.getWorld().sendStaffMessage(
-                "[<col=0000FF>Staff</col>] " + player.getUsername() + " has unjailed " + player2.getUsername() + ".");
+        player.getWorld().sendStaffMessage(player.getUsername() + " unjailed " + player2.getUsername() + ".");
 
     }
 }

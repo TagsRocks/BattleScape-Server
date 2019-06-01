@@ -29,10 +29,7 @@ public class KickCommand implements Command {
             return;
         }
         player2.getGameEncoder().sendMessage(player.getUsername() + " has kicked you.");
-        player2.getGameEncoder().sendLogout();
-        player2.setVisible(false);
         player.getGameEncoder().sendMessage(username + " has been kicked.");
-        player.getWorld().sendStaffMessage(
-                "[<col=0000FF>Staff</col>] " + player.getUsername() + " has kicked " + player2.getUsername() + ".");
+        player.getWorld().sendStaffMessage(player.getUsername() + " kicked " + player2.getUsername() + ".");
     }
 }
