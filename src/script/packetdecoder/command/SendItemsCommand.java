@@ -1,7 +1,6 @@
 package script.packetdecoder.command;
 
 import java.util.ArrayList;
-import com.palidino.osrs.Main;
 import com.palidino.osrs.io.Command;
 import com.palidino.osrs.model.item.Item;
 import com.palidino.osrs.model.player.Player;
@@ -16,7 +15,7 @@ public class SendItemsCommand implements Command {
 
     @Override
     public boolean canUse(Player player) {
-        return Main.ownerPrivledges(player);
+        return player.getRights() == Player.RIGHTS_ADMIN;
     }
 
     @Override

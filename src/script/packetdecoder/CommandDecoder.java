@@ -5,6 +5,7 @@ import java.util.HashMap;
 import java.util.Map;
 import com.palidino.io.FileManager;
 import com.palidino.io.Stream;
+import com.palidino.osrs.Main;
 import com.palidino.osrs.io.Command;
 import com.palidino.osrs.io.PacketDecoder;
 import com.palidino.osrs.model.dialogue.Dialogue;
@@ -54,6 +55,9 @@ public class CommandDecoder extends PacketDecoder {
                 command.execute(player, message);
             } catch (Exception e) {
                 player.getGameEncoder().sendMessage(getExample(commandName, command));
+                if (Main.isLocal()) {
+                    e.printStackTrace();
+                }
             }
         } else if (index == 1) {
             var tileHash = stream.getIntV2();

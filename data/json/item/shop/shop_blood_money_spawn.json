@@ -42,11 +42,11 @@
     { "id": "ItemId.DRAGON_CROSSBOW", "price": 10000000 },
     { "id": "ItemId.BLACK_CHINCHOMPA", "price": 6000 },
     { "id": "ItemId.DRAGON_HUNTER_CROSSBOW", "price": 150000000 },
-    { "id": "ItemId.LIGHT_BALLISTA", "price": 10000000 },
+    { "id": "ItemId.LIGHT_BALLISTA", "price": 25000000 },
     { "id": "ItemId.NEW_CRYSTAL_BOW", "price": 2000000 },
     { "id": "ItemId.ARMADYL_CROSSBOW", "price": 35000000 },
     { "id": "ItemId.TOXIC_BLOWPIPE_EMPTY", "price": 10000000 },
-    { "id": "ItemId.HEAVY_BALLISTA", "price": 20000000 },
+    { "id": "ItemId.HEAVY_BALLISTA", "price": 50000000 },
     { "id": "ItemId.AMETHYST_ARROW_P_PLUS_PLUS", "price": 400 },
     { "id": "ItemId.DRAGON_ARROW_P_PLUS_PLUS", "price": 5000 },
     { "id": "ItemId.OPAL_DRAGON_BOLTS_E", "price": 5000 },
@@ -141,9 +141,10 @@
     { "id": "ItemId.DRAGON_PLATELEGS", "price": 400000 },
     { "id": "ItemId.DRAGON_PLATESKIRT", "price": 400000 },
     { "id": "ItemId.DRAGON_SQ_SHIELD", "price": 700000 },
-    { "id": "ItemId.DRAGON_KITESHIELD", "price": 90000000 },
+    { "id": "ItemId.DRAGON_KITESHIELD", "price": 20000000 },
     { "id": "ItemId.DRAGON_BOOTS", "price": 1500000 },
     { "id": "ItemId.DRAGON_DEFENDER", "price": 8000000 },
+    { "id": "ItemId.AVERNIC_DEFENDER", "price": 100000000 },
     { "id": "ItemId.OBSIDIAN_HELMET", "price": 2000000 },
     { "id": "ItemId.OBSIDIAN_PLATEBODY", "price": 3000000 },
     { "id": "ItemId.OBSIDIAN_PLATELEGS", "price": 2000000 },
@@ -182,7 +183,6 @@
     { "id": "ItemId.LOOTING_BAG", "price": 100000 },
     { "id": "ItemId.ZULRAHS_SCALES", "price": 400 },
     { "id": "ItemId.BURNT_PAGE", "price": 10000 },
-    { "id": "ItemId.AVERNIC_DEFENDER", "price": 100000000 },
     { "id": "ItemId.ANCIENT_SHARD", "price": 300000 }
   ]
 }

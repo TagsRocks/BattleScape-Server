@@ -158,7 +158,20 @@ public class GodWarsArea extends Area {
                 player.getGameEncoder().sendMessage("You recharge your Prayer.");
                 altarDelay = (int) Time.minToTick(10);
             } else if (index == 1) {
-                player.getMagic().standardTeleport(player.getWidgetManager().getHomeTile());
+                switch (mapObject.getId()) {
+                case 26363: // Zamorak altar
+                    player.getMagic().standardTeleport(new Tile(2925, 5333, 2));
+                    break;
+                case 26364: // Saradomin altar
+                    player.getMagic().standardTeleport(new Tile(2909, 5265));
+                    break;
+                case 26365: // Armadyl altar
+                    player.getMagic().standardTeleport(new Tile(2839, 5294, 2));
+                    break;
+                case 26366: // Bandos altar
+                    player.getMagic().standardTeleport(new Tile(2862, 5354, 2));
+                    break;
+                }
             }
             return true;
         case 26502: // Big door: Armadyl

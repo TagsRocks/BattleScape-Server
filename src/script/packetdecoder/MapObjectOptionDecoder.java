@@ -5,6 +5,7 @@ import java.lang.reflect.Modifier;
 import java.util.HashMap;
 import java.util.Map;
 import com.palidino.io.Stream;
+import com.palidino.osrs.Main;
 import com.palidino.osrs.io.PacketDecoder;
 import com.palidino.osrs.model.map.MapObject;
 import com.palidino.osrs.model.map.Region;
@@ -70,7 +71,7 @@ public class MapObjectOptionDecoder extends PacketDecoder {
         }
         var message = "[ObjectOption(" + index + ")] id=" + id + "; x=" + x + "; y=" + y + "; moveType=" + moveType
                 + ", object type=" + mapObject.getType() + ", object direction=" + mapObject.getDirection();
-        if (player.getRights() == Player.RIGHTS_ADMIN) {
+        if (Main.isLocal()) {
             Logger.println(message);
         }
         if (player.getOptions().getPrintPackets()) {

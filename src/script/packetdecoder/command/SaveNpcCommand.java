@@ -14,7 +14,7 @@ import lombok.var;
 public class SaveNpcCommand implements Command {
     @Override
     public String getExample() {
-        return "id (distance) (direction";
+        return "id (distance) (direction)";
     }
 
     @Override
@@ -26,7 +26,7 @@ public class SaveNpcCommand implements Command {
     public void execute(Player player, String message) {
         var values = message.split(" ");
         var id = -1;
-        if (values[1].matches("[0-9]+")) {
+        if (values[0].matches("[0-9]+")) {
             id = Integer.parseInt(values[0]);
         } else {
             id = NpcId.valueOf(values[0].toUpperCase());

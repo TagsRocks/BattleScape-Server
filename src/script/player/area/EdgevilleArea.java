@@ -6,7 +6,6 @@ import com.palidino.osrs.io.cache.NpcId;
 import com.palidino.osrs.io.cache.WidgetId;
 import com.palidino.osrs.model.Tile;
 import com.palidino.osrs.model.guide.Guide;
-import com.palidino.osrs.model.item.Item;
 import com.palidino.osrs.model.item.MysteryBox;
 import com.palidino.osrs.model.item.RandomItem;
 import com.palidino.osrs.model.map.MapObject;
@@ -17,7 +16,6 @@ import com.palidino.osrs.model.player.PCombat;
 import com.palidino.osrs.model.player.Player;
 import com.palidino.osrs.model.player.SlayerMaster;
 import com.palidino.osrs.model.player.controller.ClanWarsFreeForAllPC;
-import com.palidino.osrs.util.RequestManager;
 import com.palidino.osrs.world.ClanWarsTournament;
 import com.palidino.setting.SqlRank;
 import com.palidino.util.Utils;
@@ -202,6 +200,9 @@ public class EdgevilleArea extends Area {
             player.getMovement().ladderUpTeleport(new Tile(3096, 9867));
             return true;
         case 12309: // Chest: Recipe for Disaster
+            if (Main.isSpawn()) {
+                return true;
+            }
             player.openDialogue("recipefordisaster", 0);
             return true;
         case 17385: // Ladder: Edgeville dungeon exit

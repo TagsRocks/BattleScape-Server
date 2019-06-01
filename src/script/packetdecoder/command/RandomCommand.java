@@ -6,7 +6,6 @@ import com.palidino.osrs.model.player.Player;
 import lombok.var;
 
 public class RandomCommand implements Command {
-
     @Override
     public String getExample() {
         return "username";

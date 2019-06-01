@@ -1,6 +1,7 @@
 package script.packetdecoder;
 
 import com.palidino.io.Stream;
+import com.palidino.osrs.Main;
 import com.palidino.osrs.io.PacketDecoder;
 import com.palidino.osrs.io.cache.ItemId;
 import com.palidino.osrs.model.Tile;
@@ -30,7 +31,7 @@ public class MapItemOptionDecoder extends PacketDecoder {
             id = stream.getUShortLE();
         }
         var message = "[MapItemOption(" + index + ")] id=" + id + "; x=" + x + "; y=" + y + "; moveType=" + moveType;
-        if (player.getRights() == Player.RIGHTS_ADMIN) {
+        if (Main.isLocal()) {
             Logger.println(message);
         }
         if (player.getOptions().getPrintPackets()) {

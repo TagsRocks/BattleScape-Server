@@ -1,6 +1,5 @@
 package script.packetdecoder.command;
 
-import com.palidino.osrs.Main;
 import com.palidino.osrs.io.Command;
 import com.palidino.osrs.model.Movement;
 import com.palidino.osrs.model.player.Player;
@@ -8,7 +7,7 @@ import com.palidino.osrs.model.player.Player;
 public class InvisibleCommand implements Command {
     @Override
     public boolean canUse(Player player) {
-        return Main.ownerPrivledges(player) || Main.isSpawn();
+        return player.getRights() == Player.RIGHTS_ADMIN;
     }
 
     @Override

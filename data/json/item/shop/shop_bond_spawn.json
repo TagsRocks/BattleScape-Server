@@ -4,6 +4,20 @@
   "items": [
     { "id": "ItemId.MYSTERY_BOX", "price": 1 },
     { "id": "ItemId.SUPER_MYSTERY_BOX_32286", "price": 2 },
-    { "id": "ItemId.COINS", "price": 1, "stack": 15000000 }
+    { "id": "ItemId.PET_MYSTERY_BOX_32311", "price": 2 },
+    { "id": "ItemId.COINS", "price": 1, "stack": 10000000 },
+    { "id": "ItemId.IMBUED_HEART", "price": 1 },
+    { "id": "ItemId.WARRIOR_RING_I", "price": 1 },
+    { "id": "ItemId.BERSERKER_RING_I", "price": 1 },
+    { "id": "ItemId.TYRANNICAL_RING_I", "price": 1 },
+    { "id": "ItemId.TREASONOUS_RING_I", "price": 1 },
+    { "id": "ItemId.ARCHERS_RING_I", "price": 1 },
+    { "id": "ItemId.SEERS_RING_I", "price": 1 },
+    { "id": "ItemId.BOSS_INSTANCE_SCROLL_32313", "price": 1, "stack": 5 },
+    { "id": "ItemId._50_DROP_BOOST_SCROLL_1_HOUR_32314", "price": 1 },
+    { "id": "ItemId._50_DROP_BOOST_SCROLL_4_HOURS_32315", "price": 3 },
+    { "id": "ItemId._50_DROP_BOOST_SCROLL_8_HOURS_32316", "price": 6 },
+    { "id": "ItemId._50_DROP_BOOST_SCROLL_16_HOURS_32315", "price": 13 },
+    { "id": "ItemId.PERMANENT_TZHAAR_WAVE_BOOST_32300", "price": 5 }
   ]
 }

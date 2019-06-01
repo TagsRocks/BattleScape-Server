@@ -27,6 +27,7 @@
     "[java]": { "editor.formatOnSave": true },
     "files.insertFinalNewline": true,
     "search.useIgnoreFiles": false,
+    "java.jdt.ls.vmargs": "-noverify -Xmx1G -XX:+UseG1GC -XX:+UseStringDeduplication -javaagent:data/lib/lombok.jar",
     "javascript.validate.enable": false,
-    "java.format.onType.enabled": true
+    "java.format.onType.enabled": true,
 }

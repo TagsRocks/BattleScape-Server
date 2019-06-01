@@ -5,6 +5,7 @@ import java.lang.reflect.Modifier;
 import java.util.HashMap;
 import java.util.Map;
 import com.palidino.io.Stream;
+import com.palidino.osrs.Main;
 import com.palidino.osrs.io.PacketDecoder;
 import com.palidino.osrs.model.npc.Npc;
 import com.palidino.osrs.model.player.AchievementDiary;
@@ -47,7 +48,7 @@ public class NpcOptionDecoder extends PacketDecoder {
             return;
         }
         var message = "[NpcOption(" + index + ")] id=" + id + "; moveType=" + moveType + "; NPC=" + npc.getId();
-        if (player.getRights() == Player.RIGHTS_ADMIN) {
+        if (Main.isLocal()) {
             Logger.println(message);
         }
         if (player.getOptions().getPrintPackets()) {

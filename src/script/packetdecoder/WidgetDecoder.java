@@ -6,6 +6,7 @@ import java.util.HashMap;
 import java.util.Map;
 import com.palidino.io.FileManager;
 import com.palidino.io.Stream;
+import com.palidino.osrs.Main;
 import com.palidino.osrs.io.PacketDecoder;
 import com.palidino.osrs.model.player.AchievementDiary;
 import com.palidino.osrs.model.player.Player;
@@ -50,7 +51,7 @@ public class WidgetDecoder extends PacketDecoder {
         }
         var message = "[Widget(" + index + ")] widgetId=" + widgetId + "; childId=" + childId + "; slot=" + slot
                 + "; itemId=" + itemId;
-        if (player.getRights() == Player.RIGHTS_ADMIN) {
+        if (Main.isLocal()) {
             Logger.println(message);
         }
         if (player.getOptions().getPrintPackets()) {

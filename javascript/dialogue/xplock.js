@@ -25,8 +25,10 @@ for (var i = 0; i < 7; i++) { // 7-13
     title = "Select an Option";
     lines.add("Set Level");
     actions.add("close|script");
-    lines.add("Nevermind");
-    actions.add("close");
+    lines.add("RS XP");
+    actions.add("close|script");
+    lines.add("XP Disabled");
+    actions.add("close|script");
     var obj = new DialogueEntry();
     entries.add(obj);
     obj.setSelection(title, Utils.toStringArray(lines, true), Utils.toStringArray(actions, true));
@@ -70,6 +72,12 @@ instance = new DialogueScript() {
                         player.getSkills().changeCombatXP(index, value);
                     }
                 });
+            } else if (slot == 1) {
+                player.getSkills().setXPLock(index, Skills.X1_XP);
+                player.getGameEncoder().sendMessage(Skills.SKILL_NAMES[index] + " XP rate x1.");
+            } else if (slot == 2) {
+                player.getSkills().setXPLock(index, Skills.DISABLED_XP);
+                player.getGameEncoder().sendMessage(Skills.SKILL_NAMES[index] + " XP rate disabled.");
             }
         }
     },

@@ -5,7 +5,6 @@ import com.palidino.osrs.model.player.Player;
 import lombok.var;
 
 public class MoveCommand implements Command {
-
     @Override
     public String getExample() {
         return "username";
