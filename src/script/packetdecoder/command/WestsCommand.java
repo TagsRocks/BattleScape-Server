@@ -14,7 +14,7 @@ public class WestsCommand implements Command {
     @Override
     public void execute(Player player, String message) {
         player.getMovement().teleport(2993, 3607);
-        player.getGameEncoder().sendMessage("You teleport to gorillas..");
+        player.getGameEncoder().sendMessage("You teleport to Wests..");
     }
 
 }
