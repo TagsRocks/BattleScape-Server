@@ -4,7 +4,7 @@ import com.palidino.osrs.io.Command;
 import com.palidino.osrs.model.player.Player;
 import lombok.var;
 
-public class TeletomeCommand implements Command {
+public class TeleToMeCommand implements Command {
     @Override
     public String getExample() {
         return "username";
