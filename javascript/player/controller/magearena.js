@@ -148,7 +148,7 @@ pc = new PController() {
         }
         if (spawnDelay > 0) {
             if (!paused && --spawnDelay == 0) {
-                player.getGameEncoder().sendMessage("<col=ff0000>Wave: " + arena2$1IdeId);
+                player.getGameEncoder().sendMessage("<col=ff0000>Wave: " + arena2WaveId);
                 this.spawnArena2Monsters();
             }
             return;
