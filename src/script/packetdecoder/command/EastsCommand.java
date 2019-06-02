@@ -13,7 +13,7 @@ public class EastsCommand implements Command {
 
     @Override
     public void execute(Player player, String message) {
-        player.getMovement().teleport(3326, 3667);
+        player.getMagic().standardTeleport(3326, 3667, 0);
         player.getGameEncoder().sendMessage("You teleport to Easts..");
     }
 

@@ -13,7 +13,7 @@ public class WestsCommand implements Command {
 
     @Override
     public void execute(Player player, String message) {
-        player.getMovement().teleport(2993, 3607);
+        player.getMagic().standardTeleport(2993, 3607, 0);
         player.getGameEncoder().sendMessage("You teleport to Wests..");
     }
 

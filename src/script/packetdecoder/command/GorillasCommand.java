@@ -13,7 +13,7 @@ public class GorillasCommand implements Command {
 
     @Override
     public void execute(Player player, String message) {
-        player.getMovement().teleport(2972, 3940);
+        player.getMagic().standardTeleport(2972, 3940, 0);
         player.getGameEncoder().sendMessage("You teleport to Gorillas..");
     }
 
