@@ -6,13 +6,6 @@
     "configurations": [
         {
             "type": "java",
-            "name": "CodeLens (Launch) - AccountScan",
-            "request": "launch",
-            "mainClass": "com.palidino.io.AccountScan",
-            "projectName": "Server"
-        },
-        {
-            "type": "java",
             "projectName": "Server",
             "cwd": "Server",
             "name": "Economy",
