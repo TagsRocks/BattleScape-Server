@@ -13,6 +13,7 @@ public class HomeCommand implements Command {
 
     @Override
     public void execute(Player player, String message) {
-        player.getMovement().teleport(3087, 3493);
+        player.getMagic().standardTeleport(3087, 3493, 0);
+        player.getGameEncoder().sendMessage("You teleport home..");
     }
 }

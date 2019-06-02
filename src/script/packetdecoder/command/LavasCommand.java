@@ -13,7 +13,7 @@ public class LavasCommand implements Command {
 
     @Override
     public void execute(Player player, String message) {
-        player.getMovement().teleport(3201, 3858);
+        player.getMagic().standardTeleport(3201, 3858, 0);
         player.getGameEncoder().sendMessage("You teleport to Lava dragons..");
     }
 

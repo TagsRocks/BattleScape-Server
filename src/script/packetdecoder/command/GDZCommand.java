@@ -13,7 +13,7 @@ public class GDZCommand implements Command {
 
     @Override
     public void execute(Player player, String message) {
-        player.getMovement().teleport(3287, 3884);
+        player.getMagic().standardTeleport(3287, 3884, 0);
         player.getGameEncoder().sendMessage("You teleport to Gdz..");
     }
 

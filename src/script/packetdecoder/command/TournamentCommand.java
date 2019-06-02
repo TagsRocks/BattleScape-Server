@@ -13,6 +13,7 @@ public class TournamentCommand implements Command {
 
     @Override
     public void execute(Player player, String message) {
-        player.getMovement().teleport(3085, 3485);
+        player.getMagic().standardTeleport(3085, 3485, 0);
+        player.getGameEncoder().sendMessage("You teleport to the Tournament..");
     }
 }

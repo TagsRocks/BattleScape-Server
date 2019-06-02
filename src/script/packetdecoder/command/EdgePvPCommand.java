@@ -2,6 +2,7 @@ package script.packetdecoder.command;
 
 import com.palidino.osrs.Main;
 import com.palidino.osrs.io.Command;
+import com.palidino.osrs.model.Tile;
 import com.palidino.osrs.model.player.Player;
 
 public class EdgePvPCommand implements Command {
@@ -13,6 +14,7 @@ public class EdgePvPCommand implements Command {
 
     @Override
     public void execute(Player player, String message) {
-        player.getMovement().teleport(3093, 3495, 20);
+        player.getMagic().standardTeleport(3093, 3495, 20);
+        player.getGameEncoder().sendMessage("You teleport to Edgepvp..");
     }
 }

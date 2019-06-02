@@ -13,7 +13,7 @@ public class RevsCommand implements Command {
 
     @Override
     public void execute(Player player, String message) {
-        player.getMovement().teleport(3128, 3832);
+        player.getMagic().standardTeleport(3128, 3832, 0);
         player.getGameEncoder().sendMessage("You teleport to revs..");
     }
 
