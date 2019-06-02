@@ -8,7 +8,7 @@ public class EastsCommand implements Command {
     @Override
     public boolean canUse(Player player) {
         return !player.getController().inWilderness() && !player.getController().inPvPWorld()
-                && player.getController().canTeleport(false);
+                && player.getController().canTeleport(false) && !player.inJail();
     }
 
     @Override
