@@ -29,7 +29,8 @@ public class JailCommand implements Command {
         player2.getMovement().teleport(2094, 4466);
         player2.getGameEncoder().sendMessage("You have been jailed by " + username);
         player.getGameEncoder().sendMessage(username + " has been jailed.");
-        player.getWorld().sendStaffMessage(player.getUsername() + " jailed " + player2.getUsername() + ".");
+        player.getWorld().sendStaffMessage(
+                "[<col=0000FF>Staff</col>] " + player.getUsername() + " has jailed " + player2.getUsername() + ".");
 
     }
 }

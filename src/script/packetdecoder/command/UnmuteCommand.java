@@ -26,7 +26,8 @@ public class UnmuteCommand implements Command {
         player2.getGameEncoder().sendMessage(player.getUsername() + " has unmuted you.");
         player2.getMessaging().setMuteTime(0, null);
         player.getGameEncoder().sendMessage(username + " has been unmuted.");
-        player.getWorld().sendStaffMessage(player.getUsername() + " unmuted " + player2.getUsername() + ".");
+        player.getWorld().sendStaffMessage(
+                "[<col=0000FF>Staff</col>] " + player.getUsername() + " has unmuted " + player2.getUsername() + ".");
         RequestManager.addPlayerLog("mute/0.txt", player.getLogName() + " unmuted " + player2.getLogName() + ".");
     }
 }

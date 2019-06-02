@@ -25,7 +25,7 @@ public class StaffCommand implements Command {
             } else if (player.isUsergroup(SqlRank.SUPPORT)) {
                 rank = "Support";
             }
-            lines.add(player.getMessaging().getIconImage() + staff.getUsername() + " - " + rank);
+            lines.add(staff.getMessaging().getIconImage() + staff.getUsername() + " - " + rank);
         }
         Dialogue.openScroll(player, "Staff Members Online", Utils.toStringArray(lines));
 
