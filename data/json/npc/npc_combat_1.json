@@ -19051,6 +19051,7 @@
   {
     "id": "NpcId.HOBGOBLIN_28",
     "hitpoints": 29,
+    "aggressive": true,
     "attackLevel": 22,
     "defenceLevel": 24,
     "deathAnimation": 167,

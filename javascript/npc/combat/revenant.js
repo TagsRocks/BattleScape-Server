@@ -133,7 +133,7 @@ cs = new NCombatScript() {
             player.getCombat().logNPCItem(npc.getDef().getKillCountName(), pvpItem.getId(), pvpItem.getAmount());
             npc.getWorld().sendItemDropNews(player, pvpItem.getId(), " a revenant");
         }
-        var etherCount = 1 + Utils.randomE(Math.sqrt(clampedLevel));
+        var etherCount = (1 + Utils.randomE(Math.sqrt(clampedLevel))) * 2;
         if (player.getCharges().getEthereumAutoAbsorb()
                 && (player.getEquipment().getHandId() == ItemId.BRACELET_OF_ETHEREUM
                 || player.getEquipment().getHandId() == ItemId.BRACELET_OF_ETHEREUM_UNCHARGED)) {

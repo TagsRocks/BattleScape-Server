@@ -235,6 +235,7 @@
     { "id": "ItemId.DEATH_RUNE" },
     { "id": "ItemId.BLOOD_RUNE" },
     { "id": "ItemId.SOUL_RUNE" },
+    { "id": "ItemId.WRATH_RUNE" },
     { "id": "ItemId.NATURE_RUNE" },
     { "id": "ItemId.LAW_RUNE" },
     { "id": "ItemId.ASTRAL_RUNE" },

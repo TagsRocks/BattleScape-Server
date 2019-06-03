@@ -1,15 +1,5 @@
 [
   {
-    "id": "ItemId.FIRE_CAPE_BROKEN",
-    "repairedId": "ItemId.FIRE_CAPE",
-    "repairCost": [ { "id": "ItemId.COINS", "amount": "50000" } ]
-  },
-  {
-    "id": "ItemId.FIRE_MAX_CAPE_BROKEN",
-    "repairedId": "ItemId.FIRE_MAX_CAPE",
-    "repairCost": [ { "id": "ItemId.COINS", "amount": "50000" } ]
-  },
-  {
     "id": "ItemId.DRAGON_DEFENDER_BROKEN",
     "repairedId": "ItemId.DRAGON_DEFENDER",
     "repairCost": [ { "id": "ItemId.COINS", "amount": "40000" } ]
@@ -73,11 +63,6 @@
     "id": "ItemId.HEALER_HAT_BROKEN",
     "repairedId": "ItemId.HEALER_HAT",
     "repairCost": [ { "id": "ItemId.COINS", "amount": "45000" } ]
-  },
-  {
-    "id": "ItemId.FIGHTER_TORSO_BROKEN",
-    "repairedId": "ItemId.FIGHTER_TORSO",
-    "repairCost": [ { "id": "ItemId.COINS", "amount": "50000" } ]
   },
   {
     "id": "ItemId.PENANCE_SKIRT_BROKEN",
