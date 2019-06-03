@@ -1,5 +1,15 @@
 [
   {
+    "id": "ItemId.FIRE_CAPE_BROKEN",
+    "repairedId": "ItemId.FIRE_CAPE",
+    "repairCost": [ { "id": "ItemId.COINS", "amount": "0" } ]
+  },
+  {
+    "id": "ItemId.FIGHTER_TORSO_BROKEN",
+    "repairedId": "ItemId.FIGHTER_TORSO",
+    "repairCost": [ { "id": "ItemId.COINS", "amount": "0" } ]
+  },
+  {
     "id": "ItemId.DRAGON_DEFENDER_BROKEN",
     "repairedId": "ItemId.DRAGON_DEFENDER",
     "repairCost": [ { "id": "ItemId.COINS", "amount": "40000" } ]
