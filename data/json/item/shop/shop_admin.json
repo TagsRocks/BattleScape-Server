@@ -85,7 +85,7 @@
     { "id": "ItemId.SANGUINESTI_STAFF" },
     { "id": "ItemId.JUSTICIAR_FACEGUARD" },
     { "id": "ItemId.JUSTICIAR_CHESTGUARD" },
-    { "id": "ItemId.OLD_SCHOOL_BOND" },
-    { "id": "ItemId.JUSTICIAR_LEGGUARDS" }
+    { "id": "ItemId.JUSTICIAR_LEGGUARDS" },
+    { "id": "ItemId.OLD_SCHOOL_BOND" }
   ]
 }

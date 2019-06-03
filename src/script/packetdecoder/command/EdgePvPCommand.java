@@ -8,7 +8,7 @@ public class EdgePvPCommand implements Command {
     @Override
     public boolean canUse(Player player) {
         return Main.isSpawn() && !player.getController().inWilderness() && !player.getController().inPvPWorld()
-                && player.getController().canTeleport(false);
+                && player.getController().canTeleport(false) && !player.inJail();
     }
 
     @Override
