@@ -1,5 +1,6 @@
 package script.packetdecoder.command;
 
+import com.palidino.osrs.Main;
 import com.palidino.osrs.io.Command;
 import com.palidino.osrs.model.player.Player;
 
@@ -7,8 +8,8 @@ public class RiskZoneCommand implements Command {
 
     @Override
     public boolean canUse(Player player) {
-        return !player.getController().inWilderness() && !player.getController().inPvPWorld()
-                && player.getController().canTeleport(false) && !player.inJail();
+        return Main.isSpawn() && !player.getController().inWilderness() && !player.getController().inPvPWorld()
+                && player.getController().canTeleport(false);
     }
 
     @Override

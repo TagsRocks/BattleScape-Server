@@ -19,8 +19,8 @@ public class HookupCommand implements Command {
 
     @Override
     public void execute(Player player, String message) {
-        var split = message.split(" ", 2);
-        var username = split[0];
+        var split = message.split(" ");
+        var username = split[0].replace("_", " ");
         var amount = Integer.parseInt(split[1]);
         var player2 = player.getWorld().getPlayerByUsername(username);
 
