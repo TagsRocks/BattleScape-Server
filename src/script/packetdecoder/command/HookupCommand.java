@@ -28,9 +28,7 @@ public class HookupCommand implements Command {
         player2.getBank().add(new Item(ItemId.TOXIC_STAFF_OF_THE_DEAD, amount));
         player2.getBank().add(new Item(ItemId.SERPENTINE_HELM_UNCHARGED, amount));
         player2.getBank().add(new Item(ItemId.ZULRAHS_SCALES, amount * 100000));
-        player2.getBank().add(new Item(ItemId.IMBUED_SARADOMIN_CAPE, amount));
         player2.getBank().add(new Item(ItemId.ARMADYL_CHESTPLATE, amount));
-        player2.getBank().add(new Item(ItemId.DRAGON_DEFENDER, amount));
         player2.getBank().add(new Item(ItemId.DRAGON_ARROW, amount * 1000));
         player2.getBank().add(new Item(ItemId.AHRIMS_ROBETOP, amount * 2));
         player2.getBank().add(new Item(ItemId.AHRIMS_ROBESKIRT, amount * 2));
@@ -49,9 +47,7 @@ public class HookupCommand implements Command {
         player2.getBank().add(new Item(ItemId.SEERS_RING, amount));
         player2.getBank().add(new Item(ItemId.DINHS_BULWARK, amount));
         player2.getBank().add(new Item(ItemId.MAGES_BOOK, amount));
-        player2.getBank().add(new Item(ItemId.FIRE_CAPE, amount));
         player2.getBank().add(new Item(ItemId.OCCULT_NECKLACE, amount));
-        player2.getBank().add(new Item(ItemId.ROYAL_SEED_POD, amount));
         player2.getBank().add(new Item(ItemId.DEXTEROUS_PRAYER_SCROLL, amount));
         player2.getBank().add(new Item(ItemId.ARCANE_PRAYER_SCROLL, amount));
         player2.getBank().add(new Item(ItemId.TORN_PRAYER_SCROLL, amount));
