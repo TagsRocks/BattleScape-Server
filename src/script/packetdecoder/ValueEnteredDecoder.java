@@ -1,6 +1,7 @@
 package script.packetdecoder;
 
 import com.palidino.io.Stream;
+import com.palidino.osrs.Main;
 import com.palidino.osrs.io.PacketDecoder;
 import com.palidino.osrs.io.ValueEnteredEvent;
 import com.palidino.osrs.model.player.Player;
@@ -17,7 +18,7 @@ public class ValueEnteredDecoder extends PacketDecoder {
         if (index == 0) {
             var value = stream.getInt();
             var message = "[ValueEnteredInt] value=" + value;
-            if (player.getRights() == Player.RIGHTS_ADMIN) {
+            if (Main.isLocal()) {
                 Logger.println(message);
             }
             if (player.getOptions().getPrintPackets()) {
@@ -59,7 +60,7 @@ public class ValueEnteredDecoder extends PacketDecoder {
                 id = -1;
             }
             var message = "[ItemEntered] id=" + id;
-            if (player.getRights() == Player.RIGHTS_ADMIN) {
+            if (Main.isLocal()) {
                 Logger.println(message);
             }
             if (player.getOptions().getPrintPackets()) {
