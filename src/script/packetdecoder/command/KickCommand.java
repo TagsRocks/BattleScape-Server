@@ -28,6 +28,8 @@ public class KickCommand implements Command {
             player.getGameEncoder().sendMessage("This player is in the PvP world.");
             return;
         }
+        player2.getGameEncoder().sendLogout();
+        player2.setVisible(false);
         player2.getGameEncoder().sendMessage(player.getUsername() + " has kicked you.");
         player.getGameEncoder().sendMessage(username + " has been kicked.");
         player.getWorld().sendStaffMessage(
