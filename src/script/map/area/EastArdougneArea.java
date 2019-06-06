@@ -1,8 +1,8 @@
-package script.player.area;
+package script.map.area;
 
 import com.palidino.osrs.model.Tile;
+import com.palidino.osrs.model.map.Area;
 import com.palidino.osrs.model.map.MapObject;
-import com.palidino.osrs.model.player.Area;
 import lombok.var;
 import script.player.skill.agility.AgilityObstacle;
 import script.player.skill.agility.MoveAgilityEvent;

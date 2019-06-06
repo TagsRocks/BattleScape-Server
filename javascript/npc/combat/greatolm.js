@@ -105,7 +105,7 @@ cs = new NCombatScript() {
         if (npc.getHitDelay() == 6 || npc.getHitDelay() == 2) {
             this.setAnimation(HEAD, DEFAULT_ANIMATIONS[HEAD], true);
         }
-        if (npc.getAttacking() && npc.getHitDelay() == 0) {
+        if (npc.isAttacking() && npc.getHitDelay() == 0) {
             if ((attackRotation == 0 || attackRotation == 2) && normalUniqueAttackDelay == 0
                     && Utils.randomE(4) == 0) {
                 var attack = Utils.randomI(2);
@@ -406,7 +406,7 @@ cs = new NCombatScript() {
                             }
                             var hitEvent = new HitEvent(0, player, new Hit(30 + Utils.randomI(15)));
                             player.addHit(hitEvent);
-                            player.setCombatDelay(Entity.COMBAT_DELAY);
+                            player.setInCombatDelay(Entity.COMBAT_DELAY);
                             player.getGameEncoder().sendMessage("The crystal beneath your feet grows rapidly and shunts you to the side.");
                         }
                         npc.getController().addMapObject(new MapObject(30034, crystal));
@@ -461,7 +461,7 @@ cs = new NCombatScript() {
                         }
                         var hitEvent = new HitEvent(0, player, new Hit(Utils.randomI(33)));
                         player.addHit(hitEvent);
-                        player.setCombatDelay(Entity.COMBAT_DELAY);
+                        player.setInCombatDelay(Entity.COMBAT_DELAY);
                         player.getPrayer().deactivate("protect from magic");
                         player.getPrayer().deactivate("protect from missiles");
                         player.getPrayer().deactivate("protect from melee");
@@ -531,13 +531,13 @@ cs = new NCombatScript() {
                             key.setGraphic(1039);
                             var hitEvent = new HitEvent(0, key, new Hit(key.getDistance(value) * 5));
                             key.addHit(hitEvent);
-                            key.setCombatDelay(Entity.COMBAT_DELAY);
+                            key.setInCombatDelay(Entity.COMBAT_DELAY);
                             if (value instanceof Player) {
                                 value.getMovement().teleport(key);
                                 value.setGraphic(1039);
                                 var hitEvent = new HitEvent(0, value, new Hit(value.getDistance(key) * 5));
                                 value.addHit(hitEvent);
-                                value.setCombatDelay(Entity.COMBAT_DELAY);
+                                value.setInCombatDelay(Entity.COMBAT_DELAY);
                                 key.getGameEncoder().sendMessage("Yourself and " + value.getUsername()
                                         + " have swapped places!");
                                 value.getGameEncoder().sendMessage("Yourself and " + key.getUsername()
@@ -613,7 +613,7 @@ cs = new NCombatScript() {
                     }
                     var hitEvent = new HitEvent(0, player, new Hit(player.getHitpoints() / 2));
                     player.addHit(hitEvent);
-                    player.setCombatDelay(Entity.COMBAT_DELAY);
+                    player.setInCombatDelay(Entity.COMBAT_DELAY);
                 }
             }
         };
@@ -653,7 +653,7 @@ cs = new NCombatScript() {
                             }
                             var hitEvent = new HitEvent(0, player, new Hit(3 + Utils.randomI(3), Hit.POISON_MARK));
                             player.addHit(hitEvent);
-                            player.setCombatDelay(Entity.COMBAT_DELAY);
+                            player.setInCombatDelay(Entity.COMBAT_DELAY);
                         }
                     }
                 } else {
@@ -725,7 +725,7 @@ cs = new NCombatScript() {
                         }
                         var hitEvent = new HitEvent(0, player, new Hit(3 + Utils.randomI(3), Hit.POISON_MARK));
                         player.addHit(hitEvent);
-                        player.setCombatDelay(Entity.COMBAT_DELAY);
+                        player.setInCombatDelay(Entity.COMBAT_DELAY);
                     }
                 }
                 if (event.getExecutions() == 34) {

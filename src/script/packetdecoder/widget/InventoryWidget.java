@@ -1099,8 +1099,17 @@ public class InventoryWidget {
         case 4566: // Rubber chicken
             player.setAnimation(1835);
             break;
+        case ItemId.TRIDENT_OF_THE_SEAS_FULL:
+            if (index == 3) {
+                player.getInventory().deleteItem(itemId, 1, slot);
+                player.getInventory().addItem(ItemId.UNCHARGED_TRIDENT, 1, slot);
+                player.getInventory().addOrDropItem(ItemId.DEATH_RUNE, 2500);
+                player.getInventory().addOrDropItem(ItemId.CHAOS_RUNE, 2500);
+                player.getInventory().addOrDropItem(ItemId.FIRE_RUNE, 12500);
+                player.getInventory().addOrDropItem(ItemId.COINS, 25000);
+            }
+            break;
         case 11908: // Uncharged trident
-        case 11905: // Trident of the seas (full)
         case 22290: // Uncharged trident (e)
             player.getGameEncoder()
                     .sendMessage("Each charge requires 1 death rune, 1 chaos rune, 5 fire runes and 10 coins.");

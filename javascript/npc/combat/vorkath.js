@@ -50,7 +50,7 @@ cs = new NCombatScript() {
         if (npc.getEngagingEntity() != null && npc.getController().getMapObject(32000, npc.getEngagingEntity())) {
             npc.getEngagingEntity().addHit(new HitEvent(0, npc.getEngagingEntity(), new Hit(Utils.randomI(10))));
         }
-        if (specialAttack == 0 && npc.getAttacking() && npc.getHitDelay() == 0 && autoAttacks == 0) {
+        if (specialAttack == 0 && npc.isAttacking() && npc.getHitDelay() == 0 && autoAttacks == 0) {
             autoAttacks = 6;
             specialAttack = 1;
             poisonTiles = [];

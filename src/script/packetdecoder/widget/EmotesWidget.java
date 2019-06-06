@@ -10,7 +10,7 @@ public class EmotesWidget {
         if (player.isLocked()) {
             return;
         }
-        if (player.getCombatDelay() > 0 || player.getAttacking()) {
+        if (player.getInCombatDelay() > 0 || player.isAttacking()) {
             return;
         }
         int animationId = -1;

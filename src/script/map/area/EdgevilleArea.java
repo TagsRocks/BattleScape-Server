@@ -1,4 +1,4 @@
-package script.player.area;
+package script.map.area;
 
 import com.palidino.osrs.Main;
 import com.palidino.osrs.io.cache.ItemId;
@@ -9,8 +9,8 @@ import com.palidino.osrs.model.guide.Guide;
 import com.palidino.osrs.model.item.MysteryBox;
 import com.palidino.osrs.model.item.RandomItem;
 import com.palidino.osrs.model.map.MapObject;
+import com.palidino.osrs.model.map.Area;
 import com.palidino.osrs.model.npc.Npc;
-import com.palidino.osrs.model.player.Area;
 import com.palidino.osrs.model.player.Magic;
 import com.palidino.osrs.model.player.PCombat;
 import com.palidino.osrs.model.player.Player;
@@ -181,6 +181,14 @@ public class EdgevilleArea extends Area {
             return true;
         case NpcId.ZEALOT:
             player.openDialogue("hauntedmine", 0);
+            return true;
+        case NpcId.SURGEON_GENERAL_TAFANI:
+            if (player.getX() != 3094 || player.getY() != 3498) {
+                return true;
+            }
+            player.setGraphic(436);
+            player.getGameEncoder().sendMessage(npc.getDef().getName() + " restores you.");
+            player.rejuvenate();
             return true;
         }
         return false;

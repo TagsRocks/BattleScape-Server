@@ -1,7 +1,7 @@
 {
   "name": "Emblem Trader",
   "currency": "ItemId.COINS",
-  "buybackMultiplier": 0.6,
+  "buybackMultiplier": 0.25,
   "items": [
     { "id": "ItemId.DARK_CRAB", "price": 3000 },
     { "id": "ItemId.ANGLERFISH", "price": 4000 },
@@ -115,7 +115,7 @@
     { "id": "ItemId.NEW_CRYSTAL_SHIELD", "price": 2000000 },
     { "id": "ItemId.TWISTED_BUCKLER", "price": 20000000 },
     { "id": "ItemId.FIRE_CAPE", "price": 1500000 },
-    { "id": "ItemId.INFERNAL_CAPE", "price": 500000000 },
+    { "id": "ItemId.INFERNAL_CAPE", "price": 250000000 },
     { "id": "ItemId.AVAS_ASSEMBLER", "price": 1500000 },
     { "id": "ItemId.IMBUED_SARADOMIN_CAPE", "price": 1500000 },
     { "id": "ItemId.IMBUED_GUTHIX_CAPE", "price": 1500000 },
@@ -181,6 +181,7 @@
     { "id": "ItemId.DEXTEROUS_PRAYER_SCROLL", "price": 80000000 },
     { "id": "ItemId.ARCANE_PRAYER_SCROLL", "price": 40000000 },
     { "id": "ItemId.LOOTING_BAG", "price": 100000 },
+    { "id": "ItemId.ROYAL_SEED_POD", "price": 5000000 },
     { "id": "ItemId.ZULRAHS_SCALES", "price": 400 },
     { "id": "ItemId.BURNT_PAGE", "price": 10000 },
     { "id": "ItemId.ANCIENT_SHARD", "price": 300000 },

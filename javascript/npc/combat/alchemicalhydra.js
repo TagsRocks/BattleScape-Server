@@ -234,7 +234,7 @@ cs = new NCombatScript() {
             }
             return false;
         }
-        if (npc.getAttacking() && npc.getLastHitByEntity() != null && player != npc.getLastHitByEntity()) {
+        if (npc.isAttacking() && npc.getLastHitByEntity() != null && player != npc.getLastHitByEntity()) {
             if (sendMessage) {
                 player.getGameEncoder().sendMessage("The Alchemical Hydra is busy attacking someone else.");
             }

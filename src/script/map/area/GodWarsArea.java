@@ -1,11 +1,11 @@
-package script.player.area;
+package script.map.area;
 
 import com.palidino.osrs.io.cache.ItemId;
 import com.palidino.osrs.io.cache.VarbitId;
 import com.palidino.osrs.io.cache.WidgetId;
 import com.palidino.osrs.model.Tile;
+import com.palidino.osrs.model.map.Area;
 import com.palidino.osrs.model.map.MapObject;
-import com.palidino.osrs.model.player.Area;
 import com.palidino.osrs.model.player.Prayer;
 import com.palidino.osrs.model.player.Skills;
 import com.palidino.util.Time;
@@ -71,7 +71,7 @@ public class GodWarsArea extends Area {
     }
 
     @Override
-    public void load() {
+    public void loadPlayer() {
         var player = getPlayer();
         player.getGameEncoder().setVarbit(VarbitId.GOD_WARS_ENTRANCE_ROPE, 1);
         player.getGameEncoder().setVarbit(VarbitId.GOD_WARS_SARADOMIN_FIRST_ROPE, 1);
@@ -79,13 +79,13 @@ public class GodWarsArea extends Area {
     }
 
     @Override
-    public void unload() {
+    public void unloadPlayer() {
         var player = getPlayer();
         player.getWidgetManager().removeFullOverlay();
     }
 
     @Override
-    public void tick() {
+    public void tickPlayer() {
         var player = getPlayer();
         if (player.getWidgetManager().getFullOverlay() != WidgetId.GOD_WARS_OVERLAY) {
             player.getWidgetManager().sendFullOverlay(WidgetId.GOD_WARS_OVERLAY);

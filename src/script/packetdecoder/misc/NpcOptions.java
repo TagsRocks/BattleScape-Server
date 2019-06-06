@@ -793,13 +793,6 @@ public class NpcOptions {
         }
     }
 
-    // Surgeon General Tafani
-    public static void npc3343(Player player, int index, Npc npc) {
-        player.setGraphic(436);
-        player.getGameEncoder().sendMessage("Surgeon General Tafani restores you.");
-        player.rejuvenate();
-    }
-
     // Innocent-looking key
     public static void npc3619(Player player, int index, Npc npc) {
         if (player.getCombat().getHauntedMine() < 2 || player.getWorld().getTargetNPC(3616, player) != null) {

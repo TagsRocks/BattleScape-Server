@@ -87,7 +87,7 @@ public class BondWidget {
             Guide.openEntry(player, "main", "bonds");
             break;
         case 71:
-            player.openDialogue("bond", 2);
+            // player.openDialogue("bond", 2);
             break;
         }
         player.getBonds().sendPouchCounts();

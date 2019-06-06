@@ -6,7 +6,11 @@
         {
             "label": "Update Script Helper",
             "type": "shell",
-            "command": "cd bin;rm ../data/lib/scripthelper.jar;zip -r ../data/lib/scripthelper.jar com -i \"*.class\";cd ../data/lib; java -cp emptymethods.jar Main scripthelper.jar scripthelper.jar"
+            "command": "cd bin;rm ../data/lib/scripthelper.jar;zip -r ../data/lib/scripthelper.jar com -i \"*.class\";cd ../data/lib; java -cp emptymethods.jar Main scripthelper.jar scripthelper.jar",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
         }
     ]
 }

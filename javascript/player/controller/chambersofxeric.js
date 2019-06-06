@@ -1021,7 +1021,7 @@ pc = new PController() {
                     && player.getY() != mapObject.getY() && player.getX() + 1 != mapObject.getX()
                     && player.getY() + 1 != mapObject.getY()) {
                 return true;
-            } else if (player.getCombatDelay() > 0) {
+            } else if (player.getInCombatDelay() > 0) {
                 player.getGameEncoder().sendMessage("You can't cross this while in combat.");
                 return true;
             }
@@ -1133,7 +1133,7 @@ pc = new PController() {
         for (var i = totalPoints; i >= 0 && totalUniques < 3; i -= 570000) {
             var selectedPlayer = Utils.listRandom(playerEntries);
             var percent = selectedPlayer.getCombat().getForcedDropRate(-1, Math.min(i / 4338, 99),
-                    NPCDef.getNPCDef(7554));
+                    NpcDef.getNpcDef(7554));
             selectedPlayer.getCharges().depleteRoWICharge(0);
             if (Utils.inRange(percent)) {
                 playersRewarded.push(selectedPlayer.getId());

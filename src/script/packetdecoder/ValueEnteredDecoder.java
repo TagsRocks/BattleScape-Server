@@ -38,7 +38,7 @@ public class ValueEnteredDecoder extends PacketDecoder {
         } else if (index == 1) {
             var value = stream.getString();
             var message = "[ValueEnteredString] value=" + value;
-            if (player.getRights() == Player.RIGHTS_ADMIN) {
+            if (Main.isLocal()) {
                 Logger.println(message);
             }
             if (player.getOptions().getPrintPackets()) {

@@ -138,7 +138,7 @@ cs = new NCombatScript() {
             var speed = cs.getSpeed(player);
             cs.sendMapProjectile(player, npc, player, 1568, 0, 0, speed.clientDelay, speed.clientSpeed, 0, 0);
             player.addHit(new HitEvent(speed.eventDelay, player, new Hit(npc, 10 + Utils.randomI(10))));
-            player.setCombatDelay(Entity.COMBAT_DELAY);
+            player.setInCombatDelay(Entity.COMBAT_DELAY);
             for (var i2 = 0; i2 < players.size(); i2++) {
                 var player2 = players.get(i2);
                 var lineOfSight = this.inNorth(player) && this.inNorth(player2) || this.inEast(player)
@@ -151,7 +151,7 @@ cs = new NCombatScript() {
                 cs.sendMapProjectile(player2, player, player2, 1568, 0, 0, speed.clientDelay, speed.clientSpeed,
                         0, 0);
                 player2.addHit(new HitEvent(speed.eventDelay, player2, new Hit(npc, 10 + Utils.randomI(10))));
-                player2.setCombatDelay(Entity.COMBAT_DELAY);
+                player2.setInCombatDelay(Entity.COMBAT_DELAY);
             }
         }
     },
@@ -162,7 +162,7 @@ cs = new NCombatScript() {
                 continue;
             }
             player.addHit(new HitEvent(0, player, new Hit(npc, player.getHitpoints() / 2)));
-            player.setCombatDelay(Entity.COMBAT_DELAY);
+            player.setInCombatDelay(Entity.COMBAT_DELAY);
         }
     },
 

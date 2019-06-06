@@ -9,7 +9,7 @@ cs = new NCombatScript() {
 
     /* @Override */
     tick: function() {
-        if (!npc.isLocked() && npc.getHitDelay() == 0 && npc.getAttacking()
+        if (!npc.isLocked() && npc.getHitDelay() == 0 && npc.isAttacking()
                 && npc.getEngagingEntity() instanceof Player && Utils.randomE(4) == 0
                 && npc.withinDistance(npc.getEngagingEntity(), 10)) {
             npc.setAnimation(81);

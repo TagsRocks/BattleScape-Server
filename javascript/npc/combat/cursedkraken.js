@@ -12,9 +12,9 @@ cs = new NCombatScript() {
         if (npc.isLocked()) {
             return;
         }
-        if (npc.getCombatDelay() == 0 && !npc.getAttacking() && npc.getId() != WHIRLPOOL_ID) {
+        if (npc.getInCombatDelay() == 0 && !npc.isAttacking() && npc.getId() != WHIRLPOOL_ID) {
             npc.setTransformationId(WHIRLPOOL_ID);
-        } else if (npc.getCombatDelay() > 0 || npc.getAttacking()) {
+        } else if (npc.getInCombatDelay() > 0 || npc.isAttacking()) {
             npc.getMovement().clear();
             if (npc.getId() != COMBAT_ID) {
                 npc.setTransformationId(COMBAT_ID);

@@ -726,7 +726,7 @@ public class MapObject1 {
                 player.getGameEncoder().sendMessage(
                         "You need to risk at least " + Utils.formatNumber(entryRequirement) + " to enter.");
                 return;
-            } else if (player.getCombatDelay() > 0) {
+            } else if (player.getInCombatDelay() > 0) {
                 player.getGameEncoder().sendMessage("You can't use this yet.");
                 return;
             }

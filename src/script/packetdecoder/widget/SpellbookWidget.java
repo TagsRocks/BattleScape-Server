@@ -51,7 +51,7 @@ public class SpellbookWidget {
         case LUMBRIDGE_HOME_TELEPORT:
             if (player.isLocked()) {
                 break;
-            } else if (player.getCombatDelay() != 0) {
+            } else if (player.getInCombatDelay() != 0) {
                 player.getGameEncoder().sendMessage("You can't use this while in combat.");
                 break;
             } else if (!player.getController().canTeleport(true)) {
@@ -380,7 +380,7 @@ public class SpellbookWidget {
         case EDGEVILLE_HOME_TELEPORT:
             if (player.isLocked()) {
                 break;
-            } else if (player.getCombatDelay() != 0) {
+            } else if (player.getInCombatDelay() != 0) {
                 player.getGameEncoder().sendMessage("You can't use this while in combat.");
                 break;
             } else if (!player.getController().canTeleport(true)) {
@@ -395,7 +395,7 @@ public class SpellbookWidget {
         case LUNAR_HOME_TELEPORT:
             if (player.isLocked()) {
                 break;
-            } else if (player.getCombatDelay() != 0) {
+            } else if (player.getInCombatDelay() != 0) {
                 player.getGameEncoder().sendMessage("You can't use this while in combat.");
                 break;
             } else if (!player.getController().canTeleport(true)) {
