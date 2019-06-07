@@ -83,7 +83,8 @@ public class InventoryWidget {
                 player.getGameEncoder().sendMessage("You can't drop this here.");
                 return;
             }
-            if (ItemDef.getUntradable(itemId) && player.getController().inWilderness()) {
+            if (ItemDef.getUntradable(itemId) && player.getController().inWilderness() && itemId != ItemId.BLOODY_KEY
+                    && itemId != ItemId.BLOODIER_KEY) {
                 player.getGameEncoder().sendMessage("You can't drop this right now.");
                 return;
             }

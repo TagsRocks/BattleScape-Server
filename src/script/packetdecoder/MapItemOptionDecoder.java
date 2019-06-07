@@ -86,7 +86,7 @@ public class MapItemOptionDecoder extends PacketDecoder {
                 player.getMovement().setEnergy(0);
                 player.getGameEncoder().sendMessage("<col=ff0000>Carrying the key prevents you from teleporting.");
                 if (id == ItemId.BLOODIER_KEY) {
-                    player.getWorld().sendNews("A " + ItemDef.getName(id) + " has been picked up by "
+                    player.getWorld().sendMessage("<col=ff0000>A " + ItemDef.getName(id) + " has been picked up by "
                             + player.getUsername() + " at level " + player.getWildernessLevel() + " wilderness!");
                 }
             } else if (result.partialSuccess() && result.getSlot() != -1 && !isStackableAndCarrying

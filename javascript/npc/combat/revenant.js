@@ -118,15 +118,15 @@ cs = new NCombatScript() {
             item = new Item(ItemId.COINS, 1000 + Utils.randomE(9000));
         }
         if (Main.isSpawn()) {
-            if (Utils.inRange(1, 5 * 15)) {
+            if (Utils.inRange(1, 5 * 20)) {
                 npc.getController().addMapItem(new Item(ItemId.MYSTERIOUS_EMBLEM), dropTile, player);
-            } else if (Utils.inRange(1, 128 * 15)) {
+            } else if (Utils.inRange(1, 108 * 50)) {
                 npc.getController().addMapItem(new Item(ItemId.DIAMOND_KEY_32309), dropTile, player);
-            } else if (Utils.inRange(1, 32 * 15)) {
+            } else if (Utils.inRange(1, 36 * 50)) {
                 npc.getController().addMapItem(new Item(ItemId.GOLD_KEY_32308), dropTile, player);
-            } else if (Utils.inRange(1, 8 * 15)) {
+            } else if (Utils.inRange(1, 12 * 50)) {
                 npc.getController().addMapItem(new Item(ItemId.SILVER_KEY_32307), dropTile, player);
-            } else if (Utils.inRange(1, 4 * 15)) {
+            } else if (Utils.inRange(1, 4 * 50)) {
                 npc.getController().addMapItem(new Item(ItemId.BRONZE_KEY_32306), dropTile, player);
             }
         }

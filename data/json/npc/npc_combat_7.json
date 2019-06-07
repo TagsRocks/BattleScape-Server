@@ -2005,7 +2005,7 @@
     "sendKillCount": true,
     "dropUnderKiller": true,
     "rareDropTableRate": 0.4,
-    "dropForAdditionalPlayers": 3,
+    "dropForAdditionalPlayers": 4,
     "drops": [
       {
         "chance": 0.33,
@@ -2014,6 +2014,64 @@
           [ { "id": "ItemId.PET_CHAOS_ELEMENTAL", "amount": 1 } ]
         ]
       },
+      {
+        "chance": 100,
+        "items": [
+          [ { "id": "ItemId.BLOODY_KEY", "amount": 1 } ]
+        ]
+      }
+    ]
+  },
+  {
+    "id": "NpcId.SOTETSEG_995_16017",
+    "respawnDelay": 36000,
+    "hitpoints": 4000,
+    "hitpointsBarId": 2,
+    "aggressive": true,
+    "aggressiveRange": 8,
+    "attackLevel": 250,
+    "magicLevel": 250,
+    "defenceLevel": 200,
+    "meleeDefenceBonus": 70,
+    "rangedDefenceBonus": 150,
+    "magicDefenceBonus": 30,
+    "poisonImmune": true,
+    "venomImmune": true,
+    "deathAnimation": 8140,
+    "blockAnimation": -1,
+    "combatStyles": [
+      {
+        "type": "RANGED",
+        "animation": 8138,
+        "maxHit": 50,
+        "attackSpeed": 5,
+        "projectileId": 1607,
+        "multiTarget": true,
+        "speedMinDistance": 14,
+        "projectileSpeedType": "MAGIC",
+        "delayedPrayerProtectable": true,
+        "damageProtectionPrayerBlock": 8
+      },
+      {
+        "type": "MAGIC",
+        "typeweight": 3,
+        "animation": 8138,
+        "maxHit": 50,
+        "attackSpeed": 5,
+        "projectileId": 1606,
+        "multiTarget": true,
+        "speedMinDistance": 14,
+        "projectileSpeedType": "MAGIC",
+        "delayedPrayerProtectable": true,
+        "damageProtectionPrayerBlock": 8
+      }
+    ],
+    "saveKillCount": true,
+    "sendKillCount": true,
+    "dropUnderKiller": true,
+    "rareDropTableRate": 0.4,
+    "dropForAdditionalPlayers": 4,
+    "drops": [
       {
         "chance": 100,
         "items": [

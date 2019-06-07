@@ -45,7 +45,9 @@ instance = new DialogueScript() {
             } else if (slot == 1) {
                 player.getGameEncoder().sendMessage("Please check the guide book in the quest tab for more information.");
             } else if (slot == 2) {
-                if (player.isGameModeNormal()) {
+                if (Main.isSpawn()) {
+                    player.openShop("vote_spawn");
+                } else if (player.isGameModeNormal()) {
                     player.openShop("vote");
                 } else {
                     player.openShop("vote_iron");
