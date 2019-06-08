@@ -26,6 +26,16 @@ public class YellCommand implements Command {
                     + Time.tickToSec(player.getMessaging().getYellDelay()) + " seconds before you can yell again.");
             return;
         }
+        if (player.inJail()) {
+            player.getGameEncoder().sendMessage("You can not yell while in jail..");
+            return;
+        }
+
+        if (player.getMessaging().isMuted()) {
+            player.getGameEncoder().sendMessage("You can not yell while muted.");
+            return;
+        }
+
         if (player.isUsergroup(SqlRank.SUPPORT) || player.isUsergroup(SqlRank.MODERATOR)
                 || player.isUsergroup(SqlRank.ADMINISTRATOR) || player.getUsername().equalsIgnoreCase("miika")) {
             yellDelay = Time.secToTick(5);
