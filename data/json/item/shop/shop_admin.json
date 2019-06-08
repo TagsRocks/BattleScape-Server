@@ -86,6 +86,6 @@
     { "id": "ItemId.JUSTICIAR_FACEGUARD" },
     { "id": "ItemId.JUSTICIAR_CHESTGUARD" },
     { "id": "ItemId.JUSTICIAR_LEGGUARDS" },
-    { "id": "ItemId.OLD_SCHOOL_BOND" }
+    { "id": "ItemId.BOND_32318" }
   ]
 }

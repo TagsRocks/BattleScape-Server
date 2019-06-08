@@ -67,14 +67,14 @@ public class BondWidget {
                 player.getInventory().addItem(ItemId.OLD_SCHOOL_BOND, maxWithdraw);
             }
             break;
-        case 65:
+        case 69:
             if (Main.isSpawn()) {
                 player.getGameEncoder().sendOpenURL("https://www.battlewild.com/store");
             } else {
                 player.getGameEncoder().sendOpenURL("https://www.battle-scape.com/store");
             }
             break;
-        case 67:
+        case 71:
             if (Main.isSpawn()) {
                 player.openShop("bond_spawn");
             } else if (player.isGameModeNormal() || player.isGameModeHard()) {
@@ -83,10 +83,10 @@ public class BondWidget {
                 player.openShop("bond_iron");
             }
             break;
-        case 69:
+        case 73:
             Guide.openEntry(player, "main", "bonds");
             break;
-        case 71:
+        case 75:
             // player.openDialogue("bond", 2);
             break;
         }

@@ -22,6 +22,7 @@ public class FKickCommand implements Command {
             player.getGameEncoder().sendMessage("Unable to find user " + username + ".");
             return;
         }
+        player2.unlock();
         player2.getGameEncoder().sendMessage(player.getUsername() + " has kicked you.");
         player2.getGameEncoder().sendLogout();
         player2.setVisible(false);

@@ -261,7 +261,7 @@ public class UseWidgetAction {
                     player.getGameEncoder().sendMessage("You can't alch blood money.");
                     break;
                 } else if (onItemId == ItemId.OLD_SCHOOL_BOND || onItemId == ItemId.OLD_SCHOOL_BOND_UNTRADEABLE
-                        || onItemId == ItemId._14_DAYS_GOLD_MEMBERSHIP_32303) {
+                        || onItemId == ItemId._14_DAYS_GOLD_MEMBERSHIP_32303 || onItemId == ItemId.BOND_32318) {
                     player.getGameEncoder().sendMessage("You can't alch bonds.");
                     break;
                 } else if (ItemDef.getUntradable(onItemId)) {
@@ -525,7 +525,7 @@ public class UseWidgetAction {
                     break;
                 }
                 player.openDialogue("wishingwell", 4);
-                if (itemId == ItemId.OLD_SCHOOL_BOND) {
+                if (itemId == ItemId.BOND_32318) {
                     Dialogue.setText(player,
                             item.getName() + " x" + Utils.formatNumber(item.getAmount()) + ": " + Utils.formatNumber(
                                     Utils.multiplyInt(WishingWell.BOND_VALUE, item.getAmount(), Item.MAX_AMOUNT)),

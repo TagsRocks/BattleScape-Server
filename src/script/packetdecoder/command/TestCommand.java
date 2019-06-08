@@ -16,5 +16,8 @@ public class TestCommand implements Command {
     }
 
     @Override
-    public void execute(Player player, String message) {}
+    public void execute(Player player, String message) {
+        player.getWorld()
+                .sendPvpNews("The wilderness hot zone has moved to Edgeville, where potential loot is improved!");
+    }
 }

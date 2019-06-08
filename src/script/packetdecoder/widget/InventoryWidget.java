@@ -1056,15 +1056,14 @@ public class InventoryWidget {
             }
             player.openDialogue("combatlamp", 1);
             break;
+        case ItemId.BOND_32318:
+            player.getBonds().setPouch(player.getBonds().getPouch() + item.getAmount());
+            player.getInventory().deleteItem(itemId, 1, slot);
+            player.getGameEncoder().sendMessage("Your bonds have been added to your pouch.");
+            break;
         case ItemId.OLD_SCHOOL_BOND:
-            if (index == 0) {
-                Guide.openEntry(player, "main", "bonds");
-                player.getGameEncoder().sendMessage("Deposit this bond in your pouch to use it.");
-            } else if (index == 2) {
-                player.getInventory().deleteItem(itemId, 1, slot);
-                player.getBonds().setPouch(player.getBonds().getPouch() + 1);
-                player.getGameEncoder().sendMessage("1 bond has been added to your pouch.");
-            }
+            player.getInventory().deleteItem(itemId, 1, slot);
+            player.getInventory().addItem(ItemId.BOND_32318, 50);
             break;
         case ItemId.OLD_SCHOOL_BOND_UNTRADEABLE:
             player.getInventory().deleteItem(itemId, 1, slot);

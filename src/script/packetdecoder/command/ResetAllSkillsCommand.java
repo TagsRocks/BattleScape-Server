@@ -20,7 +20,7 @@ public class ResetAllSkillsCommand implements Command {
                 player.getSkills().setXP(i, Skills.XP_TABLE[10]);
             }
             player.getGameEncoder().sendSkillLevel(i);
-            player.restore();
         }
+        player.restore();
     }
 }
