@@ -16,13 +16,13 @@ public class StaffCommand implements Command {
         var rank = "";
         List<String> lines = new ArrayList<>();
         for (Player staff : player.getWorld().getStaffPlayers()) {
-            if (player.isUsergroup(SqlRank.ADMINISTRATOR)) {
+            if (staff.isUsergroup(SqlRank.ADMINISTRATOR)) {
                 rank = "Administrator";
-            } else if (player.isUsergroup(SqlRank.HEAD_MODERATOR)) {
+            } else if (staff.isUsergroup(SqlRank.HEAD_MODERATOR)) {
                 rank = "Head Moderator";
-            } else if (player.isUsergroup(SqlRank.MODERATOR)) {
+            } else if (staff.isUsergroup(SqlRank.MODERATOR)) {
                 rank = "Moderator";
-            } else if (player.isUsergroup(SqlRank.SUPPORT)) {
+            } else if (staff.isUsergroup(SqlRank.SUPPORT)) {
                 rank = "Support";
             }
             lines.add(staff.getMessaging().getIconImage() + staff.getUsername() + " - " + rank);
