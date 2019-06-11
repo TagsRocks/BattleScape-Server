@@ -78,6 +78,10 @@ public class MapItemOptionDecoder extends PacketDecoder {
         }
         player.getMovement().clear();
         if (index == 2) {
+            if (id == ItemId.BLOODIER_KEY && player.getSkills().getCombatLevel() != 126) {
+                player.getGameEncoder().sendMessage("You need a combat level of 126 to pick this up.");
+                return true;
+            }
             var isStackableAndCarrying = ItemDef.getStackable(id) && player.getInventory().hasItem(id);
             var result = player.getWorld().pickupMapItem(player, id, x, y);
             if (result.partialSuccess() && (id == ItemId.BLOODY_KEY || id == ItemId.BLOODIER_KEY)

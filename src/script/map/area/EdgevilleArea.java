@@ -37,7 +37,9 @@ public class EdgevilleArea extends Area {
             if (index == 0) {
                 player.openDialogue("vote", 0);
             } else if (index == 3) {
-                if (player.isGameModeNormal()) {
+                if (Main.isSpawn()) {
+                    player.openShop("vote_spawn");
+                } else if (player.isGameModeNormal()) {
                     player.openShop("vote");
                 } else {
                     player.openShop("vote_iron");

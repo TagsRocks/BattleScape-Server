@@ -86,7 +86,8 @@ cs = new NCombatScript() {
         var clampedLevel = Math.min(Math.max(1, npc.getDef().getCombatLevel()), 144);
         var chanceA = 2200 / Math.sqrt(clampedLevel);
         var chanceB = 15 + (Math.pow(npc.getDef().getCombatLevel() + 60, 2) / 200);
-        chanceA = chanceA / 4 / player.getCombat().getDropRateMultiplier(-1, npc.getDef());
+        var multiplier = Main.isSpawn() ? 8 : 4;
+        chanceA = chanceA / multiplier / player.getCombat().getDropRateMultiplier(-1, npc.getDef());
         var selectedChanceA = Utils.randomE(chanceA);
         if (selectedChanceA == 1) {
             logDrop = true;
@@ -115,12 +116,10 @@ cs = new NCombatScript() {
         } else if (selectedChanceA < chanceB) {
             item = RandomItem.getItem(MEDIOCRE_DROP_TABLE);
         } else if (selectedChanceA < 3000) {
-            item = new Item(ItemId.COINS, 1000 + Utils.randomE(9000));
+            item = new Item(ItemId.COINS, 10000 + Utils.randomI(90000));
         }
         if (Main.isSpawn()) {
-            if (Utils.inRange(1, 5 * 20)) {
-                npc.getController().addMapItem(new Item(ItemId.MYSTERIOUS_EMBLEM), dropTile, player);
-            } else if (Utils.inRange(1, 108 * 50)) {
+            if (Utils.inRange(1, 108 * 50)) {
                 npc.getController().addMapItem(new Item(ItemId.DIAMOND_KEY_32309), dropTile, player);
             } else if (Utils.inRange(1, 36 * 50)) {
                 npc.getController().addMapItem(new Item(ItemId.GOLD_KEY_32308), dropTile, player);

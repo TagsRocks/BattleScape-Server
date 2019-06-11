@@ -1,5 +1,6 @@
 package script.map.area;
 
+import com.palidino.osrs.Main;
 import com.palidino.osrs.io.cache.ItemId;
 import com.palidino.osrs.io.cache.VarbitId;
 import com.palidino.osrs.io.cache.WidgetId;
@@ -26,13 +27,29 @@ public class GodWarsArea extends Area {
     public Object script(String identifier) {
         var player = getPlayer();
         if (identifier.equals("increase_armadyl_killcount")) {
-            armadylKillcount++;
+            if (Main.isSpawn()) {
+                armadylKillcount += 4;
+            } else {
+                armadylKillcount++;
+            }
         } else if (identifier.equals("increase_bandos_killcount")) {
-            bandosKillcount++;
+            if (Main.isSpawn()) {
+                bandosKillcount += 4;
+            } else {
+                bandosKillcount++;
+            }
         } else if (identifier.equals("increase_saradomin_killcount")) {
-            saradominKillcount++;
+            if (Main.isSpawn()) {
+                saradominKillcount += 4;
+            } else {
+                saradominKillcount++;
+            }
         } else if (identifier.equals("increase_zamorak_killcount")) {
-            zamorakKillcount++;
+            if (Main.isSpawn()) {
+                zamorakKillcount += 4;
+            } else {
+                zamorakKillcount++;
+            }
         } else if (identifier.equals("get_armadyl_killcount")) {
             return armadylKillcount;
         } else if (identifier.equals("get_bandos_killcount")) {

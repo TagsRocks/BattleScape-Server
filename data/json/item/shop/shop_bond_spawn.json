@@ -20,9 +20,9 @@
     { "id": "ItemId._50_DROP_BOOST_SCROLL_16_HOURS_32317", "price": 450 },
     { "id": "ItemId.PERMANENT_TZHAAR_WAVE_BOOST_32300", "price": 250 },
     { "id": "ItemId.INFERNAL_CAPE", "price": 500 },
-    { "id": "ItemId.ARMADYL_GODSWORD", "price": 100 },
+    { "id": "ItemId.ARMADYL_GODSWORD", "price": 80 },
     { "id": "ItemId.DRAGON_CLAWS", "price": 250 },
-    { "id": "ItemId.ELDER_MAUL", "price": 150 },
+    { "id": "ItemId.ELDER_MAUL", "price": 100 },
     { "id": "ItemId.KODAI_WAND", "price": 500 }
   ]
 }

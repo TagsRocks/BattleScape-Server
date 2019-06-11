@@ -1058,7 +1058,7 @@ public class InventoryWidget {
             break;
         case ItemId.BOND_32318:
             player.getBonds().setPouch(player.getBonds().getPouch() + item.getAmount());
-            player.getInventory().deleteItem(itemId, 1, slot);
+            player.getInventory().deleteItem(itemId, item.getAmount(), slot);
             player.getGameEncoder().sendMessage("Your bonds have been added to your pouch.");
             break;
         case ItemId.OLD_SCHOOL_BOND:
