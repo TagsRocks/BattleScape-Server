@@ -28,14 +28,9 @@ public class AgilityObstacle extends Event {
                 stop();
                 return;
             }
-            player.lock();
         }
         if (events.isEmpty()) {
-            player.unlock();
             stop();
-            if (experience > 0) {
-                player.getSkills().addXP(Skills.AGILITY, experience);
-            }
             return;
         }
         var event = events.peek();
@@ -49,6 +44,14 @@ public class AgilityObstacle extends Event {
         events.remove();
     }
 
+    @Override
+    public void stopHook() {
+        player.unlock();
+        if (events.isEmpty() && experience > 0) {
+            player.getSkills().addXP(Skills.AGILITY, experience);
+        }
+    }
+
     public AgilityObstacle add(AgilityEvent event) {
         return add(0, event);
     }
@@ -60,6 +63,7 @@ public class AgilityObstacle extends Event {
     }
 
     public void start(MapObject mapObject) {
+        player.lock();
         if (mapObject == null || mapObject.getType() != 0) {
             execute();
         }
