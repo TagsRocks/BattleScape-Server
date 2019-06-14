@@ -150,6 +150,8 @@ entries.add(obj13);
 obj13.setSelection(title, Utils.toStringArray(lines, true), Utils.toStringArray(actions, true));
 
 title = "Select an Option";
+lines.add("Enter Area");
+actions.add("close|script");
 lines.add("Create Instance");
 actions.add("close|script");
 lines.add("Join Instance");

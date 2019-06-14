@@ -747,7 +747,7 @@ public class MapObject1 {
 
     // Iron Winch
     public static void mapObject23104(Player player, int index, MapObject mapObject) {
-        if (!player.getSlayer().isAnyTask(5862) && !player.isUsergroup(SqlRank.YOUTUBER)) {
+        if (!Main.isSpawn() && !player.getSlayer().isAnyTask(5862) && !player.isUsergroup(SqlRank.YOUTUBER)) {
             player.getGameEncoder().sendMessage("You need an appropriate Slayer task of Cerberus to enter.");
             return;
         }

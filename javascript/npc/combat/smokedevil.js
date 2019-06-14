@@ -8,7 +8,7 @@ cs = new NCombatScript() {
 
     /* @Override */
     canBeAttackedHook: function(player, sendMessage, hitType) {
-        if (!player.getSlayer().isAnyTask(npc) && !player.isUsergroup(SqlRank.YOUTUBER)) {
+        if (!Main.isSpawn() && !player.getSlayer().isAnyTask(npc) && !player.isUsergroup(SqlRank.YOUTUBER)) {
             if (sendMessage) {
                 player.getGameEncoder().sendMessage("This can only be attacked on an appropriate Slayer task.");
             }

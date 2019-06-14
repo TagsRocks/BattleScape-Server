@@ -227,14 +227,15 @@ cs = new NCombatScript() {
     },
 
     canBeAttackedHook: function(player, sendMessage, hitType) {
-        if (!player.getSlayer().isAnyTask(npc) && !Main.ownerPrivledges(player)
+        if (!Main.isSpawn() && !player.getSlayer().isAnyTask(npc) && !Main.ownerPrivledges(player)
                 && !player.isUsergroup(SqlRank.YOUTUBER)) {
             if (sendMessage) {
                 player.getGameEncoder().sendMessage("This can only be attacked on an appropriate Slayer task.");
             }
             return false;
         }
-        if (npc.isAttacking() && npc.getLastHitByEntity() != null && player != npc.getLastHitByEntity()) {
+        if (npc.isAttacking() && (npc.getAttackingEntity() != null && npc.getAttackingEntity() != player
+                || npc.getLastHitByEntity() != null && player != npc.getLastHitByEntity())) {
             if (sendMessage) {
                 player.getGameEncoder().sendMessage("The Alchemical Hydra is busy attacking someone else.");
             }

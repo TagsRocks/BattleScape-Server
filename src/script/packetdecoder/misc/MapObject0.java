@@ -1,5 +1,6 @@
 package script.packetdecoder.misc;
 
+import com.palidino.osrs.Main;
 import com.palidino.osrs.io.cache.ItemId;
 import com.palidino.osrs.model.ForceMovement;
 import com.palidino.osrs.model.Movement;
@@ -75,7 +76,7 @@ public class MapObject0 {
     // Crevice
     public static void mapObject535(Player player, int index, MapObject mapObject) {
         // Stronghold Slayer Cave
-        if (!player.getSlayer().isAnyTask(499) && !player.isUsergroup(SqlRank.YOUTUBER)) {
+        if (!Main.isSpawn() && !player.getSlayer().isAnyTask(499) && !player.isUsergroup(SqlRank.YOUTUBER)) {
             player.getGameEncoder().sendMessage("You need an appropriate Slayer task of Smoke Devils to enter.");
             return;
         }
