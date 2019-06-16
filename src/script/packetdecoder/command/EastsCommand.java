@@ -5,7 +5,6 @@ import com.palidino.osrs.io.Command;
 import com.palidino.osrs.model.player.Player;
 
 public class EastsCommand implements Command {
-
     @Override
     public boolean canUse(Player player) {
         return Main.isSpawn() && !player.getController().inWilderness() && !player.getController().inPvPWorld()
@@ -14,8 +13,7 @@ public class EastsCommand implements Command {
 
     @Override
     public void execute(Player player, String message) {
-        player.getMagic().standardTeleport(3326, 3667, 0);
+        player.getMagic().standardTeleport(3304, 3656, 0);
         player.getGameEncoder().sendMessage("You teleport to Easts..");
     }
-
 }
