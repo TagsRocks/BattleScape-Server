@@ -152,6 +152,10 @@ cs = new NCombatScript() {
             etherCount -= player.getCharges().charge(ItemId.BRACELET_OF_ETHEREUM,
                     Equipment.Slot.HAND.ordinal() + 65536, etherCount, new Item(ItemId.REVENANT_ETHER, 1), 1);
         }
+        var globalItem = NpcDef.getRandomGlobalDrop();
+        if (globalItem != null) {
+            npc.getController().addMapItem(globalItem, dropTile, player);
+        }
         if (etherCount > 0) {
             npc.getController().addMapItem(new Item(ItemId.REVENANT_ETHER, etherCount), dropTile, player);
         }

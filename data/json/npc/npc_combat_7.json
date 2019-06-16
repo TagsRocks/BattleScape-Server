@@ -2012,6 +2012,7 @@
     "aggressive": true,
     "aggressiveRange": 8,
     "attackLevel": 250,
+    "rangedLevel": 250,
     "magicLevel": 250,
     "defenceLevel": 200,
     "meleeDefenceBonus": 70,
