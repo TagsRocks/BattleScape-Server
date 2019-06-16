@@ -19,6 +19,10 @@ public class OsrsKeyCommand implements Command {
             player.getGameEncoder().sendMessage("osrs key 25M: 1 in " + Main.osrsKey25MChance);
             player.getGameEncoder().sendMessage("osrs key 10M: 1 in " + Main.osrsKey10MChance);
             player.getGameEncoder().sendMessage("osrs key 5M: 1 in " + Main.osrsKey5MChance);
+            player.getGameEncoder()
+                    .sendMessage("50M: " + Main.getOsrsKeyCount("50m") + "; 25M: " + Main.getOsrsKeyCount("25m")
+                            + "; 10M: " + Main.getOsrsKeyCount("10M") + "; 5M: " + Main.getOsrsKeyCount("5m") + "; 1M: "
+                            + Main.getOsrsKeyCount("1m"));
             return;
         } else if (message.equals("disable")) {
             Main.osrsKeyTableChance = 0;
