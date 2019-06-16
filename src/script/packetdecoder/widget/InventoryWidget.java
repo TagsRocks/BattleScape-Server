@@ -118,6 +118,14 @@ public class InventoryWidget {
         Item anItem = null;
         int[] ttLoot = null;
         switch (itemId) {
+        case ItemId.COIN_POUCH_22521:
+            player.getInventory().deleteItem(itemId, 1, slot);
+            player.getInventory().addOrDropItem(ItemId.COINS, 100_000 + Utils.randomI(300_000));
+            break;
+        case ItemId.COIN_POUCH_22522:
+            player.getInventory().deleteItem(itemId, 1, slot);
+            player.getInventory().addOrDropItem(ItemId.COINS, 25_000 + Utils.randomI(75_000));
+            break;
         case ItemId._50_DROP_BOOST_SCROLL_1_HOUR_32314:
             if (player.getCombat().getDropRateBoost() != null) {
                 player.getGameEncoder().sendMessage("You already have a drop rate boost active.");

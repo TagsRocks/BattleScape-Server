@@ -38,7 +38,7 @@
     { "id": "ItemId.DRAGON_DART", "price": 6000 },
     { "id": "ItemId.DRAGON_DART_P_PLUS_PLUS", "price": 8000 },
     { "id": "ItemId.DRAGON_KNIFE_P_PLUS_PLUS", "price": 8000 },
-    { "id": "ItemId.DRAGON_THROWNAXE", "price": 3000 },
+    { "id": "ItemId.DRAGON_THROWNAXE", "price": 6000 },
     { "id": "ItemId.DRAGON_CROSSBOW", "price": 10000000 },
     { "id": "ItemId.BLACK_CHINCHOMPA", "price": 6000 },
     { "id": "ItemId.DRAGON_HUNTER_CROSSBOW", "price": 150000000 },
