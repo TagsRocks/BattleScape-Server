@@ -21,6 +21,7 @@
     { "id": "ItemId.ANTI_VENOM_4" },
     { "id": "ItemId.SARADOMIN_BREW_4" },
     { "id": "ItemId.ANTIFIRE_POTION_4" },
+    { "id": "ItemId.GUTHIX_REST_4" },
     { "id": "ItemId.TELEPORT_TO_HOUSE" },
     { "id": "ItemId.VARROCK_TELEPORT" },
     { "id": "ItemId.LUMBRIDGE_TELEPORT" },

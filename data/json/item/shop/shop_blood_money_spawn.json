@@ -13,6 +13,7 @@
     { "id": "ItemId.SANFEW_SERUM_4", "price": 30000 },
     { "id": "ItemId.ANTI_VENOM_PLUS_4", "price": 10000 },
     { "id": "ItemId.SUPER_ANTIFIRE_POTION_4", "price": 20000 },
+    { "id": "ItemId.PHOENIX_NECKLACE", "price": 10000 },
     { "id": "ItemId.ANCIENT_MACE", "price": 1000000 },
     { "id": "ItemId.GRANITE_MAUL", "price": 1000000 },
     { "id": "ItemId.GRANITE_HAMMER", "price": 4000000 },
