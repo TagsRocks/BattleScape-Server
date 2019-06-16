@@ -1853,7 +1853,6 @@
       },
       {
         "chance": 0.083,
-        "logLoot": true,
         "items": [
           [ { "id": "ItemId.CLUE_SCROLL_ELITE", "amount": 1 } ]
         ]
@@ -1867,7 +1866,6 @@
       },
       {
         "chance": 0.5,
-        "logLoot": true,
         "items": [
           [ { "id": "ItemId.CLUE_SCROLL_HARD", "amount": 1 } ]
         ]
@@ -1983,7 +1981,6 @@
       },
       {
         "chance": 0.39,
-        "logLoot": true,
         "items": [
           [ { "id": "ItemId.CLUE_SCROLL_ELITE", "amount": 1 } ]
         ]
@@ -2000,7 +1997,6 @@
       },
       {
         "chance": 0.78,
-        "logLoot": true,
         "items": [
           [ { "id": "ItemId.CLUE_SCROLL_HARD", "amount": 1 } ]
         ]
@@ -2517,7 +2513,6 @@
       },
       {
         "chance": 0.39,
-        "logLoot": true,
         "items": [
           [ { "id": "ItemId.CLUE_SCROLL_ELITE", "amount": 1 } ]
         ]
@@ -2552,7 +2547,6 @@
       },
       {
         "chance": 1,
-        "logLoot": true,
         "items": [
           [ { "id": "ItemId.CLUE_SCROLL_HARD", "amount": 1 } ]
         ]
@@ -2746,7 +2740,6 @@
       },
       {
         "chance": 0.39,
-        "logLoot": true,
         "items": [
           [ { "id": "ItemId.CLUE_SCROLL_ELITE", "amount": 1 } ]
         ]
@@ -2781,7 +2774,6 @@
       },
       {
         "chance": 1,
-        "logLoot": true,
         "items": [
           [ { "id": "ItemId.CLUE_SCROLL_HARD", "amount": 1 } ]
         ]
@@ -2944,7 +2936,6 @@
       },
       {
         "chance": 0.39,
-        "logLoot": true,
         "items": [
           [ { "id": "ItemId.CLUE_SCROLL_ELITE", "amount": 1 } ]
         ]
@@ -2979,7 +2970,6 @@
       },
       {
         "chance": 1,
-        "logLoot": true,
         "items": [
           [ { "id": "ItemId.CLUE_SCROLL_HARD", "amount": 1 } ]
         ]
@@ -3142,7 +3132,6 @@
       },
       {
         "chance": 0.39,
-        "logLoot": true,
         "items": [
           [ { "id": "ItemId.CLUE_SCROLL_ELITE", "amount": 1 } ]
         ]
@@ -3177,7 +3166,6 @@
       },
       {
         "chance": 1,
-        "logLoot": true,
         "items": [
           [ { "id": "ItemId.CLUE_SCROLL_HARD", "amount": 1 } ]
         ]

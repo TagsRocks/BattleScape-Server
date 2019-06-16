@@ -16620,7 +16620,6 @@
       },
       {
         "chance": 0.2,
-        "logLoot": true,
         "items": [
           [ { "id": "ItemId.CLUE_SCROLL_ELITE", "amount": 1 } ]
         ]
@@ -17740,7 +17739,6 @@
       },
       {
         "chance": 1,
-        "logLoot": true,
         "items": [
           [ { "id": "ItemId.CLUE_SCROLL_ELITE", "amount": 1 } ]
         ]
@@ -19043,7 +19041,6 @@
     "drops": [
       {
         "chance": 0.56,
-        "logLoot": true,
         "items": [
           [ { "id": "ItemId.CLUE_SCROLL_ELITE", "amount": 1 } ]
         ]

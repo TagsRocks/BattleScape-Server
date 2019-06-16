@@ -5411,7 +5411,6 @@
       },
       {
         "chance": 0.4,
-        "logLoot": true,
         "items": [
           [ { "id": "ItemId.CLUE_SCROLL_ELITE", "amount": 1 } ]
         ]
@@ -5537,7 +5536,6 @@
       },
       {
         "chance": 0.78,
-        "logLoot": true,
         "items": [
           [ { "id": "ItemId.CLUE_SCROLL_HARD", "amount": 1 } ]
         ]
@@ -5629,7 +5627,6 @@
       },
       {
         "chance": 0.78,
-        "logLoot": true,
         "items": [
           [ { "id": "ItemId.CLUE_SCROLL_HARD", "amount": 1 } ]
         ]
@@ -5717,7 +5714,6 @@
       },
       {
         "chance": 0.78,
-        "logLoot": true,
         "items": [
           [ { "id": "ItemId.CLUE_SCROLL_HARD", "amount": 1 } ]
         ]
@@ -5964,7 +5960,6 @@
     "drops": [
       {
         "chance": 0.78,
-        "logLoot": true,
         "items": [
           [ { "id": "ItemId.CLUE_SCROLL_HARD", "amount": 1 } ]
         ]
@@ -6163,7 +6158,6 @@
       },
       {
         "chance": 0.4,
-        "logLoot": true,
         "items": [
           [ { "id": "ItemId.CLUE_SCROLL_ELITE", "amount": 1 } ]
         ]
@@ -6268,7 +6262,6 @@
       },
       {
         "chance": 0.78,
-        "logLoot": true,
         "items": [
           [ { "id": "ItemId.CLUE_SCROLL_HARD", "amount": 1 } ]
         ]
@@ -6349,7 +6342,6 @@
       },
       {
         "chance": 0.78,
-        "logLoot": true,
         "items": [
           [ { "id": "ItemId.CLUE_SCROLL_HARD", "amount": 1 } ]
         ]
@@ -6428,7 +6420,6 @@
       },
       {
         "chance": 0.78,
-        "logLoot": true,
         "items": [
           [ { "id": "ItemId.CLUE_SCROLL_HARD", "amount": 1 } ]
         ]
@@ -7337,7 +7328,6 @@
     "drops": [
       {
         "chance": 0.78,
-        "logLoot": true,
         "items": [
           [ { "id": "ItemId.CLUE_SCROLL_HARD", "amount": 1 } ]
         ]
@@ -8107,14 +8097,12 @@
       },
       {
         "chance": 0.14,
-        "logLoot": true,
         "items": [
           [ { "id": "ItemId.CLUE_SCROLL_ELITE", "amount": 1 } ]
         ]
       },
       {
         "chance": 2.4,
-        "logLoot": true,
         "items": [
           [ { "id": "ItemId.CLUE_SCROLL_HARD", "amount": 1 } ]
         ]
@@ -8237,14 +8225,12 @@
       },
       {
         "chance": 0.14,
-        "logLoot": true,
         "items": [
           [ { "id": "ItemId.CLUE_SCROLL_ELITE", "amount": 1 } ]
         ]
       },
       {
         "chance": 2.4,
-        "logLoot": true,
         "items": [
           [ { "id": "ItemId.CLUE_SCROLL_HARD", "amount": 1 } ]
         ]
@@ -8358,14 +8344,12 @@
       },
       {
         "chance": 0.14,
-        "logLoot": true,
         "items": [
           [ { "id": "ItemId.CLUE_SCROLL_ELITE", "amount": 1 } ]
         ]
       },
       {
         "chance": 2.4,
-        "logLoot": true,
         "items": [
           [ { "id": "ItemId.CLUE_SCROLL_HARD", "amount": 1 } ]
         ]
@@ -16274,7 +16258,6 @@
       },
       {
         "chance": 0.29,
-        "logLoot": true,
         "items": [
           [ { "id": "ItemId.CLUE_SCROLL_ELITE", "amount": 1 } ]
         ]
@@ -23121,7 +23104,6 @@
       },
       {
         "chance": 0.4,
-        "logLoot": true,
         "items": [
           [ { "id": "ItemId.CLUE_SCROLL_ELITE", "amount": 1 } ]
         ]
@@ -23228,7 +23210,6 @@
       },
       {
         "chance": 0.78,
-        "logLoot": true,
         "items": [
           [ { "id": "ItemId.CLUE_SCROLL_HARD", "amount": 1 } ]
         ]
@@ -23313,7 +23294,6 @@
       },
       {
         "chance": 0.78,
-        "logLoot": true,
         "items": [
           [ { "id": "ItemId.CLUE_SCROLL_HARD", "amount": 1 } ]
         ]
@@ -23398,7 +23378,6 @@
       },
       {
         "chance": 0.78,
-        "logLoot": true,
         "items": [
           [ { "id": "ItemId.CLUE_SCROLL_HARD", "amount": 1 } ]
         ]
@@ -24219,7 +24198,6 @@
     "drops": [
       {
         "chance": 0.78,
-        "logLoot": true,
         "items": [
           [ { "id": "ItemId.CLUE_SCROLL_HARD", "amount": 1 } ]
         ]
@@ -24322,7 +24300,6 @@
       },
       {
         "chance": 0.4,
-        "logLoot": true,
         "items": [
           [ { "id": "ItemId.CLUE_SCROLL_ELITE", "amount": 1 } ]
         ]
@@ -24431,7 +24408,6 @@
       },
       {
         "chance": 0.78,
-        "logLoot": true,
         "items": [
           [ { "id": "ItemId.CLUE_SCROLL_HARD", "amount": 1 } ]
         ]
@@ -24507,7 +24483,6 @@
       },
       {
         "chance": 0.78,
-        "logLoot": true,
         "items": [
           [ { "id": "ItemId.CLUE_SCROLL_HARD", "amount": 1 } ]
         ]
@@ -24581,7 +24556,6 @@
       },
       {
         "chance": 0.78,
-        "logLoot": true,
         "items": [
           [ { "id": "ItemId.CLUE_SCROLL_HARD", "amount": 1 } ]
         ]
@@ -24777,7 +24751,6 @@
     "drops": [
       {
         "chance": 0.78,
-        "logLoot": true,
         "items": [
           [ { "id": "ItemId.CLUE_SCROLL_HARD", "amount": 1 } ]
         ]
@@ -25809,7 +25782,6 @@
       },
       {
         "chance": 0.78,
-        "logLoot": true,
         "items": [
           [ { "id": "ItemId.CLUE_SCROLL_HARD", "amount": 1 } ]
         ]
@@ -28435,7 +28407,6 @@
       },
       {
         "chance": 0.78,
-        "logLoot": true,
         "items": [
           [ { "id": "ItemId.CLUE_SCROLL_HARD", "amount": 1 } ]
         ]
@@ -28543,7 +28514,6 @@
       },
       {
         "chance": 0.78,
-        "logLoot": true,
         "items": [
           [ { "id": "ItemId.CLUE_SCROLL_HARD", "amount": 1 } ]
         ]
@@ -31590,7 +31560,6 @@
     "drops": [
       {
         "chance": 0.083,
-        "logLoot": true,
         "items": [
           [ { "id": "ItemId.CLUE_SCROLL_ELITE", "amount": 1 } ]
         ]
@@ -31604,7 +31573,6 @@
       },
       {
         "chance": 0.78,
-        "logLoot": true,
         "items": [
           [ { "id": "ItemId.CLUE_SCROLL_HARD", "amount": 1 } ]
         ]
