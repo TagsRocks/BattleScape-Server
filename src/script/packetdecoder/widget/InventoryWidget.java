@@ -109,6 +109,17 @@ public class InventoryWidget {
                     player.getLogName() + " dropped " + item.getLogName() + " located at " + player + ".");
             return;
         }
+        if (index == 0 && item.getDef().getExchangeSetIds() != null && item.getDef().isOption(index, "open")) {
+            if (player.getInventory().getRemainingSlots() < item.getDef().getExchangeSetIds().length) {
+                player.getInventory().notEnoughSpace();
+                return;
+            }
+            player.getInventory().deleteItem(itemId, 1, slot);
+            for (int exchangeSetId : item.getDef().getExchangeSetIds()) {
+                player.getInventory().addItem(exchangeSetId, 1);
+            }
+            return;
+        }
         int height = 0;
         Tile tile = null;
         int[] items = null;
