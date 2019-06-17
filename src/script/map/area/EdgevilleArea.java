@@ -17,7 +17,7 @@ import com.palidino.osrs.model.player.Player;
 import com.palidino.osrs.model.player.SlayerMaster;
 import com.palidino.osrs.model.player.controller.ClanWarsFreeForAllPC;
 import com.palidino.osrs.world.ClanWarsTournament;
-import com.palidino.setting.SqlRank;
+import com.palidino.setting.SqlUserRank;
 import com.palidino.util.Utils;
 import lombok.var;
 
@@ -287,7 +287,7 @@ public class EdgevilleArea extends Area {
             }
             return true;
         case 29087: // Coffer
-            if (player.getRights() == Player.RIGHTS_ADMIN || player.isUsergroup(SqlRank.ADVERTISEMENT_MANAGER)) {
+            if (player.getRights() == Player.RIGHTS_ADMIN || player.isUsergroup(SqlUserRank.ADVERTISEMENT_MANAGER)) {
                 player.openDialogue("clanwars", 6);
             } else {
                 ClanWarsTournament.viewDonatedItems(player);

@@ -8,6 +8,7 @@ import com.palidino.osrs.model.player.ClanWars;
 import com.palidino.osrs.model.player.Equipment;
 import com.palidino.osrs.model.player.Messaging;
 import com.palidino.osrs.model.player.Player;
+import com.palidino.osrs.util.RequestManager;
 import com.palidino.util.Logger;
 import lombok.var;
 
@@ -40,7 +41,7 @@ public class PlayerOptionDecoder extends PacketDecoder {
         if (player2 == null) {
             return;
         }
-        var message = "[PlayerOption(" + index + ")] id=" + id + "; moveType=" + moveType + "; Player Username="
+        var message = "[PlayerOption(" + index + ")] index=" + id + "; moveType=" + moveType + "; username="
                 + player2.getUsername();
         if (Main.isLocal()) {
             Logger.println(message);
@@ -48,6 +49,7 @@ public class PlayerOptionDecoder extends PacketDecoder {
         if (player.getOptions().getPrintPackets()) {
             player.getGameEncoder().sendMessage(message);
         }
+        RequestManager.addUserPacketLog(player, message);
         if (player.isLocked()) {
             return;
         }

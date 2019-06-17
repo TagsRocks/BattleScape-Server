@@ -3,12 +3,14 @@ package script.packetdecoder;
 import com.palidino.io.Stream;
 import com.palidino.osrs.Main;
 import com.palidino.osrs.io.PacketDecoder;
+import com.palidino.osrs.io.cache.ItemId;
 import com.palidino.osrs.io.cache.WidgetId;
 import com.palidino.osrs.model.map.route.Route;
 import com.palidino.osrs.model.npc.Npc;
 import com.palidino.osrs.model.player.Player;
 import com.palidino.osrs.model.player.Runecrafting;
 import com.palidino.osrs.model.player.SkillContainer;
+import com.palidino.osrs.util.RequestManager;
 import com.palidino.util.Logger;
 import lombok.var;
 import script.packetdecoder.misc.UseWidgetAction;
@@ -102,8 +104,9 @@ public class UseWidgetDecoder extends PacketDecoder {
         if (entity == null) {
             return;
         }
-        var message = "[WidgetOnEntity(" + index + ")] widgetId=" + widgetId + "; childId=" + childId + "; itemId="
-                + itemId + "; slot=" + slot + "; id=" + id + "; moveType=" + moveType + "; entity="
+        var message = "[WidgetOnEntity(" + index + ")] widgetId=" + widgetId + "/" + WidgetId.valueOf(widgetId)
+                + "; childId=" + childId + "; itemId=" + itemId + "/" + ItemId.valueOf(itemId) + "; slot=" + slot
+                + "; id=" + id + "; moveType=" + moveType + "; entity="
                 + (entity instanceof Player ? ((Player) entity).getUsername() : entity.getId());
         if (Main.isLocal()) {
             Logger.println(message);
@@ -111,6 +114,7 @@ public class UseWidgetDecoder extends PacketDecoder {
         if (player.getOptions().getPrintPackets()) {
             player.getGameEncoder().sendMessage(message);
         }
+        RequestManager.addUserPacketLog(player, message);
         if (player.isLocked()) {
             return;
         }
@@ -200,15 +204,17 @@ public class UseWidgetDecoder extends PacketDecoder {
         if (onSlot == 65535) {
             onSlot = -1;
         }
-        var message = "[WidgetOnWidget] useWidgetId=" + useWidgetId + "; useChildId=" + useChildId + "; onWidgetId="
-                + onWidgetId + "; onChildId=" + onChildId + "; useItemId=" + useItemId + "; onItemId=" + onItemId
-                + "; onSlot=" + onSlot;
+        var message = "[WidgetOnWidget] useWidgetId=" + useWidgetId + "/" + WidgetId.valueOf(useWidgetId)
+                + "; useChildId=" + useChildId + "; onWidgetId=" + onWidgetId + "/" + WidgetId.valueOf(onWidgetId)
+                + "; onChildId=" + onChildId + "; useItemId=" + useItemId + "/" + ItemId.valueOf(useItemId)
+                + "; onItemId=" + onItemId + "/" + ItemId.valueOf(onItemId) + "; onSlot=" + onSlot;
         if (Main.isLocal()) {
             Logger.println(message);
         }
         if (player.getOptions().getPrintPackets()) {
             player.getGameEncoder().sendMessage(message);
         }
+        RequestManager.addUserPacketLog(player, message);
         if (player.isLocked()) {
             return;
         }

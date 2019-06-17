@@ -7,12 +7,14 @@ import java.util.Map;
 import com.palidino.io.Stream;
 import com.palidino.osrs.Main;
 import com.palidino.osrs.io.PacketDecoder;
+import com.palidino.osrs.io.cache.NpcId;
 import com.palidino.osrs.model.npc.Npc;
 import com.palidino.osrs.model.player.AchievementDiary;
 import com.palidino.osrs.model.player.Familiar;
 import com.palidino.osrs.model.player.Hunter;
 import com.palidino.osrs.model.player.Player;
 import com.palidino.osrs.model.player.SkillContainer;
+import com.palidino.osrs.util.RequestManager;
 import com.palidino.util.Logger;
 import lombok.var;
 
@@ -47,13 +49,15 @@ public class NpcOptionDecoder extends PacketDecoder {
         if (npc == null) {
             return;
         }
-        var message = "[NpcOption(" + index + ")] id=" + id + "; moveType=" + moveType + "; NPC=" + npc.getId();
+        var message = "[NpcOption(" + index + ")] index=" + id + "; moveType=" + moveType + "; id=" + npc.getId() + "/"
+                + NpcId.valueOf(npc.getId());
         if (Main.isLocal()) {
             Logger.println(message);
         }
         if (player.getOptions().getPrintPackets()) {
             player.getGameEncoder().sendMessage(message);
         }
+        RequestManager.addUserPacketLog(player, message);
         if (player.isLocked()) {
             return;
         }

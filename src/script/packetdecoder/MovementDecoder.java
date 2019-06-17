@@ -4,6 +4,7 @@ import com.palidino.io.Stream;
 import com.palidino.osrs.io.PacketDecoder;
 import com.palidino.osrs.model.Movement;
 import com.palidino.osrs.model.player.Player;
+import com.palidino.osrs.util.RequestManager;
 import lombok.var;
 
 public class MovementDecoder extends PacketDecoder {
@@ -16,6 +17,8 @@ public class MovementDecoder extends PacketDecoder {
         var y = stream.getUShort128();
         var x = stream.getUShort128();
         var moveType = stream.getUByte128();
+        var message = "[Movement(" + index + ")] x=" + x + "; y=" + y + "; moveType=" + moveType;
+        RequestManager.addUserPacketLog(player, message);
         if (player.getGameMode() == 0 || player.isDead()) {
             return;
         }

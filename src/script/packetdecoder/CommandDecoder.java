@@ -10,6 +10,7 @@ import com.palidino.osrs.io.Command;
 import com.palidino.osrs.io.PacketDecoder;
 import com.palidino.osrs.model.dialogue.Dialogue;
 import com.palidino.osrs.model.player.Player;
+import com.palidino.osrs.util.RequestManager;
 import com.palidino.util.Logger;
 import lombok.var;
 
@@ -24,6 +25,7 @@ public class CommandDecoder extends PacketDecoder {
     public void execute(Player player, int index, int size, Stream stream) {
         if (index == 0) {
             var commandName = stream.getString();
+            RequestManager.addUserPacketLog(player, "[Command] commandName=" + commandName);
             if (commandName.equals("commands")) {
                 var examples = new ArrayList<String>();
                 for (var entry : commands.entrySet()) {

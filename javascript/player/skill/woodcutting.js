@@ -118,7 +118,8 @@ skill = new SkillContainer() {
         if (name.equals("farming_resources")) {
             return 8;
         } else if (name.equals("animation")) {
-            return getHatchet(args[0]).animation;
+            var hatchet = getHatchet(args[0]);
+            return hatchet != null ? hatchet.animation : -1;
         }
         return null;
     },

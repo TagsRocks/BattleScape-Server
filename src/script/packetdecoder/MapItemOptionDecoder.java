@@ -10,6 +10,7 @@ import com.palidino.osrs.model.item.ItemDef;
 import com.palidino.osrs.model.map.route.Route;
 import com.palidino.osrs.model.player.PCombat;
 import com.palidino.osrs.model.player.Player;
+import com.palidino.osrs.util.RequestManager;
 import com.palidino.util.Logger;
 import lombok.var;
 
@@ -30,13 +31,14 @@ public class MapItemOptionDecoder extends PacketDecoder {
             x = stream.getUShortLE();
             id = stream.getUShortLE();
         }
-        var message = "[MapItemOption(" + index + ")] id=" + id + "; x=" + x + "; y=" + y + "; moveType=" + moveType;
+        var message = "[MapItemOption(" + index + ")] id=" + id + "/" + ItemId.valueOf(id) + "; x=" + x + "; y=" + y + "; moveType=" + moveType;
         if (Main.isLocal()) {
             Logger.println(message);
         }
         if (player.getOptions().getPrintPackets()) {
             player.getGameEncoder().sendMessage(message);
         }
+        RequestManager.addUserPacketLog(player, message);
         if (player.isLocked()) {
             return;
         }

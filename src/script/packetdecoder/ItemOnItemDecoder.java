@@ -3,8 +3,11 @@ package script.packetdecoder;
 import com.palidino.io.Stream;
 import com.palidino.osrs.Main;
 import com.palidino.osrs.io.PacketDecoder;
+import com.palidino.osrs.io.cache.ItemId;
+import com.palidino.osrs.io.cache.WidgetId;
 import com.palidino.osrs.model.player.Player;
 import com.palidino.osrs.model.player.SkillContainer;
+import com.palidino.osrs.util.RequestManager;
 import com.palidino.util.Logger;
 import lombok.var;
 import script.packetdecoder.misc.ItemOnItemAction;
@@ -32,15 +35,17 @@ public class ItemOnItemDecoder extends PacketDecoder {
         if (onSlot == 65535) {
             onSlot = -1;
         }
-        var message = "[ItemOnItem] useWidgetId=" + useWidgetId + "; useChildId=" + useChildId + "; onWidgetId="
-                + onWidgetId + "; onChildId=" + onChildId + "; useSlot=" + useSlot + "; onSlot=" + onSlot
-                + "; useItemId=" + useItemId + "; onItemId=" + onItemId;
+        var message = "[ItemOnItem] useWidgetId=" + useWidgetId + "/" + WidgetId.valueOf(useWidgetId) + "; useChildId="
+                + useChildId + "; onWidgetId=" + onWidgetId + "/" + WidgetId.valueOf(onWidgetId) + "; onChildId="
+                + onChildId + "; useSlot=" + useSlot + "; onSlot=" + onSlot + "; useItemId=" + useItemId + "/"
+                + ItemId.valueOf(useItemId) + "; onItemId=" + onItemId + "/" + ItemId.valueOf(onItemId);
         if (Main.isLocal()) {
             Logger.println(message);
         }
         if (player.getOptions().getPrintPackets()) {
             player.getGameEncoder().sendMessage(message);
         }
+        RequestManager.addUserPacketLog(player, message);
         if (player.isLocked()) {
             return;
         }

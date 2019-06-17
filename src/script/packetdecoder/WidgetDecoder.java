@@ -8,9 +8,12 @@ import com.palidino.io.FileManager;
 import com.palidino.io.Stream;
 import com.palidino.osrs.Main;
 import com.palidino.osrs.io.PacketDecoder;
+import com.palidino.osrs.io.cache.ItemId;
+import com.palidino.osrs.io.cache.WidgetId;
 import com.palidino.osrs.model.player.AchievementDiary;
 import com.palidino.osrs.model.player.Player;
 import com.palidino.osrs.model.player.SkillContainer;
+import com.palidino.osrs.util.RequestManager;
 import com.palidino.util.Logger;
 import lombok.var;
 
@@ -49,14 +52,15 @@ public class WidgetDecoder extends PacketDecoder {
         if (itemId == 65535) {
             itemId = -1;
         }
-        var message = "[Widget(" + index + ")] widgetId=" + widgetId + "; childId=" + childId + "; slot=" + slot
-                + "; itemId=" + itemId;
+        var message = "[Widget(" + index + ")] widgetId=" + widgetId + "/" + WidgetId.valueOf(widgetId) + "; childId="
+                + childId + "; slot=" + slot + "; itemId=" + itemId + "/" + ItemId.valueOf(itemId);
         if (Main.isLocal()) {
             Logger.println(message);
         }
         if (player.getOptions().getPrintPackets()) {
             player.getGameEncoder().sendMessage(message);
         }
+        RequestManager.addUserPacketLog(player, message);
         if (!player.getWidgetManager().hasWidget(widgetId)) {
             return;
         }

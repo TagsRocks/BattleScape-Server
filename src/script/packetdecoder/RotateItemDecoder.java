@@ -3,8 +3,10 @@ package script.packetdecoder;
 import com.palidino.io.Stream;
 import com.palidino.osrs.Main;
 import com.palidino.osrs.io.PacketDecoder;
+import com.palidino.osrs.io.cache.ItemId;
 import com.palidino.osrs.io.cache.WidgetId;
 import com.palidino.osrs.model.player.Player;
+import com.palidino.osrs.util.RequestManager;
 import com.palidino.util.Logger;
 import lombok.var;
 
@@ -40,35 +42,38 @@ public class RotateItemDecoder extends PacketDecoder {
         if (toItemId == 65535) {
             toItemId = -1;
         }
-        var fromInterfaceId = fromWidgetHash >> 16;
+        var fromWidgetId = fromWidgetHash >> 16;
         var fromChildId = fromWidgetHash & 65535;
-        var toInterfaceId = toWidgetHash >> 16;
+        var toWidgetId = toWidgetHash >> 16;
         var toChildId = toWidgetHash & 65535;
         if (player.isLocked()) {
             return;
         }
-        if (fromInterfaceId != -1 && !player.getWidgetManager().hasWidget(fromInterfaceId)) {
+        if (fromWidgetId != -1 && !player.getWidgetManager().hasWidget(fromWidgetId)) {
             return;
         }
-        if (toInterfaceId != -1 && !player.getWidgetManager().hasWidget(toInterfaceId)) {
+        if (toWidgetId != -1 && !player.getWidgetManager().hasWidget(toWidgetId)) {
             return;
         }
-        var message = "[RotateItems(" + index + ")] fromInterfaceId=" + fromInterfaceId + "; fromChildId=" + fromChildId
-                + "; toInterfaceId=" + toInterfaceId + "; toChildId=" + toChildId + "; fromSlot=" + fromSlot
-                + "; toSlot=" + toSlot + "; fromItemId=" + fromItemId + "; toItemId=" + toItemId;
+        var message = "[RotateItems(" + index + ")] fromWidgetId=" + fromWidgetId + "/" + WidgetId.valueOf(fromWidgetId)
+                + "; fromChildId=" + fromChildId + "; toWidgetId=" + toWidgetId + "/" + WidgetId.valueOf(toWidgetId)
+                + "; toChildId=" + toChildId + "; fromSlot=" + fromSlot + "; toSlot=" + toSlot + "; fromItemId="
+                + fromItemId + "/" + ItemId.valueOf(fromItemId) + "; toItemId=" + toItemId + "/"
+                + ItemId.valueOf(toItemId);
         if (Main.isLocal()) {
             Logger.println(message);
         }
         if (player.getOptions().getPrintPackets()) {
             player.getGameEncoder().sendMessage(message);
         }
+        RequestManager.addUserPacketLog(player, message);
         player.clearIdleTime();
-        if (fromInterfaceId == WidgetId.INVENTORY && toInterfaceId == WidgetId.INVENTORY
-                || fromInterfaceId == WidgetId.BANK_INVENTORY && toInterfaceId == WidgetId.BANK_INVENTORY
-                || fromInterfaceId == WidgetId.EQUIPMENT_BONUSES_INVENTORY
-                        && toInterfaceId == WidgetId.EQUIPMENT_BONUSES_INVENTORY) {
+        if (fromWidgetId == WidgetId.INVENTORY && toWidgetId == WidgetId.INVENTORY
+                || fromWidgetId == WidgetId.BANK_INVENTORY && toWidgetId == WidgetId.BANK_INVENTORY
+                || fromWidgetId == WidgetId.EQUIPMENT_BONUSES_INVENTORY
+                        && toWidgetId == WidgetId.EQUIPMENT_BONUSES_INVENTORY) {
             player.getInventory().rotateItems(fromSlot, toSlot);
-        } else if (fromInterfaceId == WidgetId.BANK && toInterfaceId == WidgetId.BANK) {
+        } else if (fromWidgetId == WidgetId.BANK && toWidgetId == WidgetId.BANK) {
             if (fromChildId == 13 && toChildId == 11) {
                 player.getBank().moveItemToTab(toItemId, -1, fromSlot, toSlot - 10);
             } else if (fromChildId == 13 && toChildId == 13) {

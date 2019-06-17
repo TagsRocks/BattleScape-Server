@@ -15,6 +15,7 @@ import com.palidino.osrs.model.player.Player;
 import com.palidino.osrs.model.player.Prayer;
 import com.palidino.osrs.model.player.SkillContainer;
 import com.palidino.osrs.model.player.Skills;
+import com.palidino.osrs.util.RequestManager;
 import com.palidino.util.Logger;
 import lombok.var;
 
@@ -69,14 +70,16 @@ public class MapObjectOptionDecoder extends PacketDecoder {
                 return;
             }
         }
-        var message = "[ObjectOption(" + index + ")] id=" + id + "; x=" + x + "; y=" + y + "; moveType=" + moveType
-                + ", object type=" + mapObject.getType() + ", object direction=" + mapObject.getDirection();
+        var message = "[MapObjectOption(" + index + ")] id=" + id + "/" + mapObject.getName() + "; x=" + x + "; y=" + y
+                + "; moveType=" + moveType + ", type=" + mapObject.getType() + ", direction="
+                + mapObject.getDirection();
         if (Main.isLocal()) {
             Logger.println(message);
         }
         if (player.getOptions().getPrintPackets()) {
             player.getGameEncoder().sendMessage(message);
         }
+        RequestManager.addUserPacketLog(player, message);
         if (player.isLocked()) {
             return;
         }

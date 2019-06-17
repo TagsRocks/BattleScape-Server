@@ -225,7 +225,7 @@
     "y": 3495
   },
   {
-    "id": "NpcId.VOTE_MANAGER",
+    "id": "NpcId.LOYALTY_MANAGER",
     "direction": 6,
     "x": 3093,
     "y": 3488
@@ -249,7 +249,7 @@
     "y": 3499
   },
   {
-    "id": "NpcId.LOYALTY_MANAGER",
+    "id": "NpcId.VOTE_MANAGER",
     "direction": 4,
     "x": 3090,
     "y": 3496

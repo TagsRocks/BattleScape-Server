@@ -72,7 +72,7 @@ instance = new DialogueScript() {
             }
         } else if (index == 2) {
             if (slot == 0) {
-                if (!player.isUsergroup(SqlRank.DONATOR)) {
+                if (!player.isUsergroup(SqlUserRank.DONATOR)) {
                     player.getGameEncoder().sendMessage("Only 10+ bond donators can use this.");
                     return;
                 }
@@ -80,25 +80,25 @@ instance = new DialogueScript() {
             } else if (slot == 1) {
                 player.getAppearance().setColor(4, 1);
             } else if (slot == 2) {
-                if (!player.isUsergroup(SqlRank.DONATOR)) {
+                if (!player.isUsergroup(SqlUserRank.DONATOR)) {
                     player.getGameEncoder().sendMessage("Only 10+ bond donators can use this.");
                     return;
                 }
                 player.getAppearance().setColor(4, 16);
             } else if (slot == 3) {
-                if (!player.isUsergroup(SqlRank.SUPER_DONATOR)) {
+                if (!player.isUsergroup(SqlUserRank.SUPER_DONATOR)) {
                     player.getGameEncoder().sendMessage("Only 30+ bond donators can use this.");
                     return;
                 }
                 player.getAppearance().setColor(4, 17);
             } else if (slot == 4) {
-                if (!player.isUsergroup(SqlRank.EXTREME_DONATOR)) {
+                if (!player.isUsergroup(SqlUserRank.EXTREME_DONATOR)) {
                     player.getGameEncoder().sendMessage("Only 90+ bond donators can use this.");
                     return;
                 }
                 player.getAppearance().setColor(4, 18);
             } else if (slot == 5) {
-                if (!player.isUsergroup(SqlRank.LEGENDARY_DONATOR)) {
+                if (!player.isUsergroup(SqlUserRank.LEGENDARY_DONATOR)) {
                     player.getGameEncoder().sendMessage("Only 270+ bond donators can use this.");
                     return;
                 }

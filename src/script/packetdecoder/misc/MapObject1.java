@@ -26,7 +26,7 @@ import com.palidino.osrs.model.player.Slayer;
 import com.palidino.osrs.model.player.Smithing;
 import com.palidino.osrs.model.player.controller.BossInstancePC;
 import com.palidino.osrs.model.player.controller.ClanWarsFreeForAllPC;
-import com.palidino.setting.SqlRank;
+import com.palidino.setting.SqlUserRank;
 import com.palidino.util.Time;
 import com.palidino.util.Utils;
 import com.palidino.util.event.Event;
@@ -747,7 +747,7 @@ public class MapObject1 {
 
     // Iron Winch
     public static void mapObject23104(Player player, int index, MapObject mapObject) {
-        if (!Main.isSpawn() && !player.getSlayer().isAnyTask(5862) && !player.isUsergroup(SqlRank.YOUTUBER)) {
+        if (!Main.isSpawn() && !player.getSlayer().isAnyTask(5862) && !player.isUsergroup(SqlUserRank.YOUTUBER)) {
             player.getGameEncoder().sendMessage("You need an appropriate Slayer task of Cerberus to enter.");
             return;
         }
@@ -2837,7 +2837,7 @@ public class MapObject1 {
 
     // the cloister bell
     public static void mapObject31669(Player player, int index, MapObject mapObject) {
-        if (!Main.isSpawn() && !player.getSlayer().isAnyTask(7851) && !player.isUsergroup(SqlRank.YOUTUBER)) {
+        if (!Main.isSpawn() && !player.getSlayer().isAnyTask(7851) && !player.isUsergroup(SqlUserRank.YOUTUBER)) {
             player.getGameEncoder().sendMessage("This can only be killed on task.");
             return;
         } else if (player.getWorld().getNPC(7851, player) != null || player.getWorld().getNPC(7882, player) != null
@@ -2898,7 +2898,7 @@ public class MapObject1 {
             player.getSlayer().unlock(Slayer.GROTESQUE_GUARDIANS);
             return;
         }
-        if (!Main.isSpawn() && !player.getSlayer().isAnyTask(7851) && !player.isUsergroup(SqlRank.YOUTUBER)) {
+        if (!Main.isSpawn() && !player.getSlayer().isAnyTask(7851) && !player.isUsergroup(SqlUserRank.YOUTUBER)) {
             player.getGameEncoder().sendMessage("This can only be attacked on an appropriate Slayer task.");
             return;
         }
