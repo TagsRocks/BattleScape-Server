@@ -87,6 +87,10 @@ public class BondWidget {
         case 75:
             // player.openDialogue("bond", 2);
             break;
+        case 77:
+            player.getBonds().setHideRankIcon(!player.getBonds().isHideRankIcon());
+            player.getGameEncoder().sendMessage("Hide rank: " + player.getBonds().isHideRankIcon());
+            break;
         }
         player.getBonds().sendPouchCounts();
     }

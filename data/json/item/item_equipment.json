@@ -38170,5 +38170,86 @@
     "degradeId": "-1",
     "degradeTime": "300",
     "degradeCombat": "true"
+  },
+  {
+    "id": "ItemId.ARMADYL_GODSWORD_BEGINNER_32326",
+    "equipSlot": "WEAPON",
+    "weaponType": "TYPE_10",
+    "attackSpeed": "6",
+    "twoHanded": "true",
+    "stanceAnimations": [ "7053", "7044", "7052", "7052", "7047", "7048", "7043" ],
+    "levels": "Attack=75",
+    "bonuses": {
+      "ATTACK_SLASH": "132",
+      "ATTACK_CRUSH": "80",
+      "MELEE_STRENGTH": "132",
+      "PRAYER": "8"
+    }
+  },
+  {
+    "id": "ItemId.DRAGON_CLAWS_BEGINNER_32327",
+    "equipSlot": "WEAPON",
+    "weaponType": "TYPE_4",
+    "attackSpeed": "4",
+    "twoHanded": "true",
+    "stanceAnimations": [ "808", "823", "819", "820", "821", "822", "824" ],
+    "levels": "Attack=60",
+    "bonuses": {
+      "ATTACK_STAB": "41",
+      "ATTACK_SLASH": "57",
+      "ATTACK_CRUSH": "-4",
+      "DEFENCE_STAB": "13",
+      "DEFENCE_SLASH": "26",
+      "DEFENCE_CRUSH": "7",
+      "MELEE_STRENGTH": "56"
+    }
+  },
+  {
+    "id": "ItemId.HEAVY_BALLISTA_BEGINNER_32328",
+    "equipSlot": "WEAPON",
+    "weaponType": "TYPE_5",
+    "attackSpeed": "7",
+    "attackRange": "9",
+    "twoHanded": "true",
+    "ammo": [
+      "ItemId.BRONZE_JAVELIN",
+      "ItemId.BRONZE_JAVELIN_P",
+      "ItemId.BRONZE_JAVELIN_P_PLUS",
+      "ItemId.BRONZE_JAVELIN_P_PLUS_PLUS",
+      "ItemId.IRON_JAVELIN",
+      "ItemId.IRON_JAVELIN_P",
+      "ItemId.IRON_JAVELIN_P_PLUS",
+      "ItemId.IRON_JAVELIN_P_PLUS_PLUS",
+      "ItemId.STEEL_JAVELIN",
+      "ItemId.STEEL_JAVELIN_P",
+      "ItemId.STEEL_JAVELIN_P_PLUS",
+      "ItemId.STEEL_JAVELIN_P_PLUS_PLUS",
+      "ItemId.MITHRIL_JAVELIN",
+      "ItemId.MITHRIL_JAVELIN_P",
+      "ItemId.MITHRIL_JAVELIN_P_PLUS",
+      "ItemId.MITHRIL_JAVELIN_P_PLUS_PLUS",
+      "ItemId.ADAMANT_JAVELIN",
+      "ItemId.ADAMANT_JAVELIN_P",
+      "ItemId.ADAMANT_JAVELIN_P_PLUS",
+      "ItemId.ADAMANT_JAVELIN_P_PLUS_PLUS",
+      "ItemId.RUNE_JAVELIN",
+      "ItemId.RUNE_JAVELIN_P",
+      "ItemId.RUNE_JAVELIN_P_PLUS",
+      "ItemId.RUNE_JAVELIN_P_PLUS_PLUS",
+      "ItemId.DRAGON_JAVELIN",
+      "ItemId.DRAGON_JAVELIN_P",
+      "ItemId.DRAGON_JAVELIN_P_PLUS",
+      "ItemId.DRAGON_JAVELIN_P_PLUS_PLUS",
+      "ItemId.AMETHYST_JAVELIN",
+      "ItemId.AMETHYST_JAVELIN_P",
+      "ItemId.AMETHYST_JAVELIN_P_PLUS",
+      "ItemId.AMETHYST_JAVELIN_P_PLUS_PLUS"
+    ],
+    "stanceAnimations": [ "7220", "7223", "7223", "7223", "7223", "7223", "7221" ],
+    "levels": "Ranged=75,Defence=33",
+    "bonuses": {
+      "ATTACK_RANGED": "125",
+      "RANGED_STRENGTH": "15"
+    }
   }
 ]

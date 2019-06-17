@@ -32,7 +32,7 @@ instance = new DialogueScript() {
             } else if (slot == 1) {
                 player.openShop("loyalty");
             } else if (slot == 2) {
-                player.getGameEncoder().sendMessage("It's simple: every hour of time played builds your loyalty.");
+                player.getGameEncoder().sendMessage("Every hour of time played builds your loyalty. The only requirement is that you've voted.");
             }
         }
     },

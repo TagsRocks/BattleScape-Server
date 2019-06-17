@@ -152,7 +152,6 @@
     { "id": "ItemId.HOLY_SANDALS", "price": 1000000 },
     { "id": "ItemId.CLIMBING_BOOTS_G", "price": 200000 },
     { "id": "ItemId.RUNE_POUCH", "price": 5000000 },
-    { "id": "ItemId.BOUNTY_TELEPORT_SCROLL", "price": 100000000 },
     { "id": "ItemId.TORN_PRAYER_SCROLL", "price": 100000 },
     { "id": "ItemId.DEXTEROUS_PRAYER_SCROLL", "price": 80000000 },
     { "id": "ItemId.ARCANE_PRAYER_SCROLL", "price": 40000000 },

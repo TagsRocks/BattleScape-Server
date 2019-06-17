@@ -244,52 +244,60 @@ instance = new DialogueScript() {
                 player.getWorld().addEvent(event);
             }
         } else if (index == 7) {
-            var killcount = player.getArea().script("get_armadyl_killcount");
-            if (killcount == null) {
-                player.getGameEncoder().sendMessage("There was an error establishing your killcount.");
-                return;
-            } else if (killcount < 40 && !player.getInventory().hasItem(11942)) {
-                player.getGameEncoder().sendMessage("You need 40 killcount to enter.");
-                return;
+            if (!Main.isSpawn()) {
+                var killcount = player.getArea().script("get_armadyl_killcount");
+                if (killcount == null) {
+                    player.getGameEncoder().sendMessage("There was an error establishing your killcount.");
+                    return;
+                } else if (killcount < 40 && !player.getInventory().hasItem(11942)) {
+                    player.getGameEncoder().sendMessage("You need 40 killcount to enter.");
+                    return;
+                }
             }
             bossName = "boss_instance_kree'arra";
             tile = new Tile(2839, 5296, 2);
             areaScript = "clear_armadyl_killcount";
             deleteItemId = 11942;
         } else if (index == 8) {
+            if (!Main.isSpawn()) {
             var killcount = player.getArea().script("get_bandos_killcount");
-            if (killcount == null) {
-                player.getGameEncoder().sendMessage("There was an error establishing your killcount.");
-                return;
-            } else if (killcount < 40 && !player.getInventory().hasItem(11942)) {
-                player.getGameEncoder().sendMessage("You need 40 killcount to enter.");
-                return;
+                if (killcount == null) {
+                    player.getGameEncoder().sendMessage("There was an error establishing your killcount.");
+                    return;
+                } else if (killcount < 40 && !player.getInventory().hasItem(11942)) {
+                    player.getGameEncoder().sendMessage("You need 40 killcount to enter.");
+                    return;
+                }
             }
             bossName = "boss_instance_general_graardor";
             tile = new Tile(2864, 5354, 2);
             areaScript = "clear_bandos_killcount";
             deleteItemId = 11942;
         } else if (index == 9) {
-            var killcount = player.getArea().script("get_zamorak_killcount");
-            if (killcount == null) {
-                player.getGameEncoder().sendMessage("There was an error establishing your killcount.");
-                return;
-            } else if (killcount < 40 && !player.getInventory().hasItem(11942)) {
-                player.getGameEncoder().sendMessage("You need 40 killcount to enter.");
-                return;
+            if (!Main.isSpawn()) {
+                var killcount = player.getArea().script("get_zamorak_killcount");
+                if (killcount == null) {
+                    player.getGameEncoder().sendMessage("There was an error establishing your killcount.");
+                    return;
+                } else if (killcount < 40 && !player.getInventory().hasItem(11942)) {
+                    player.getGameEncoder().sendMessage("You need 40 killcount to enter.");
+                    return;
+                }
             }
             bossName = "boss_instance_k'ril_tsutsaroth";
             tile = new Tile(2925, 5331, 2);
             areaScript = "clear_zamorak_killcount";
             deleteItemId = 11942;
         } else if (index == 10) {
-            var killcount = player.getArea().script("get_saradomin_killcount");
-            if (killcount == null) {
-                player.getGameEncoder().sendMessage("There was an error establishing your killcount.");
-                return;
-            } else if (killcount < 40 && !player.getInventory().hasItem(11942)) {
-                player.getGameEncoder().sendMessage("You need 40 killcount to enter.");
-                return;
+            if (!Main.isSpawn()) {
+                var killcount = player.getArea().script("get_saradomin_killcount");
+                if (killcount == null) {
+                    player.getGameEncoder().sendMessage("There was an error establishing your killcount.");
+                    return;
+                } else if (killcount < 40 && !player.getInventory().hasItem(11942)) {
+                    player.getGameEncoder().sendMessage("You need 40 killcount to enter.");
+                    return;
+                }
             }
             bossName = "boss_instance_commander_zilyana";
             tile = new Tile(2907, 5265, 0);

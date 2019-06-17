@@ -108,7 +108,11 @@ public class EdgevilleArea extends Area {
             player.openDialogue("mac", 0);
             return true;
         case NpcId.SKILLING_SELLER:
-            player.openShop("skilling");
+            if (Main.isSpawn()) {
+                player.openShop("skilling_spawn");
+            } else {
+                player.openShop("skilling");
+            }
             return true;
         case NpcId.CAPN_IZZY_NO_BEARD:
             player.openShop("agility");

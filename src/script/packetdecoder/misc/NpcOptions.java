@@ -108,7 +108,11 @@ public class NpcOptions {
 
     // Sarah
     public static void npc501(Player player, int index, Npc npc) {
-        player.openShop("skilling");
+        if (Main.isSpawn()) {
+            player.openShop("skilling_spawn");
+        } else {
+            player.openShop("skilling");
+        }
     }
 
     // Shop keeper
@@ -214,7 +218,11 @@ public class NpcOptions {
             player.getMovement().animatedTeleport(new Tile(2720, 3781), Magic.NORMAL_MAGIC_ANIMATION_START,
                     Magic.NORMAL_MAGIC_ANIMATION_END, Magic.NORMAL_MAGIC_GRAPHIC, null, 2);
         } else {
-            player.openShop("skilling");
+            if (Main.isSpawn()) {
+                player.openShop("skilling_spawn");
+            } else {
+                player.openShop("skilling");
+            }
         }
     }
     /* 1536 - 1791 */
@@ -908,7 +916,11 @@ public class NpcOptions {
 
     // Elnock Inquisitor
     public static void npc5734(Player player, int index, Npc npc) {
-        player.openShop("skilling");
+        if (Main.isSpawn()) {
+            player.openShop("skilling_spawn");
+        } else {
+            player.openShop("skilling");
+        }
     }
 
     // <col=00ffff>Boulder</col>
@@ -954,7 +966,11 @@ public class NpcOptions {
 
     // Tynan
     public static void npc6964(Player player, int index, Npc npc) {
-        player.openShop("skilling");
+        if (Main.isSpawn()) {
+            player.openShop("skilling_spawn");
+        } else {
+            player.openShop("skilling");
+        }
     }
 
     // Tyss
@@ -981,7 +997,11 @@ public class NpcOptions {
 
     // Perry
     public static void npc7240(Player player, int index, Npc npc) {
-        player.openShop("skilling");
+        if (Main.isSpawn()) {
+            player.openShop("skilling_spawn");
+        } else {
+            player.openShop("skilling");
+        }
     }
 
     // Lisa
@@ -1023,7 +1043,11 @@ public class NpcOptions {
             player.getMovement().animatedTeleport(new Tile(3294, 3282), Magic.NORMAL_MAGIC_ANIMATION_START,
                     Magic.NORMAL_MAGIC_ANIMATION_END, Magic.NORMAL_MAGIC_GRAPHIC, null, 2);
         } else {
-            player.openShop("skilling");
+            if (Main.isSpawn()) {
+                player.openShop("skilling_spawn");
+            } else {
+                player.openShop("skilling");
+            }
         }
     }
 

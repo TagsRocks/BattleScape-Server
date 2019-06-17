@@ -1412,6 +1412,9 @@ public class InventoryWidget {
         case 32281: // C. statius's warhammer (deg)
         case 32282: // C. vesta's spear (deg)
         case 32285: // C. zuriel's staff (deg)
+        case ItemId.ARMADYL_GODSWORD_BEGINNER_32326:
+        case ItemId.DRAGON_CLAWS_BEGINNER_32327:
+        case ItemId.HEAVY_BALLISTA_BEGINNER_32328:
             player.getCharges().checkCharges(slot);
             break;
         case 22545: // Viggora's chainmace

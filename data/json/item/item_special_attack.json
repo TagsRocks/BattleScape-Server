@@ -47,7 +47,8 @@
   {
     "itemIds": [
       "ItemId.DRAGON_CLAWS",
-      "ItemId.DRAGON_CLAWS_20784"
+      "ItemId.DRAGON_CLAWS_20784",
+      "ItemId.DRAGON_CLAWS_BEGINNER_32327"
     ],
     "drain": 50,
     "animationId": 7514,
@@ -214,7 +215,8 @@
   {
     "itemIds": [
       "ItemId.ARMADYL_GODSWORD",
-      "ItemId.ARMADYL_GODSWORD_20593"
+      "ItemId.ARMADYL_GODSWORD_20593",
+      "ItemId.ARMADYL_GODSWORD_BEGINNER_32326"
     ],
     "drain": 50,
     "animationId": 7644,
@@ -368,7 +370,8 @@
   {
     "itemIds": [
       "ItemId.LIGHT_BALLISTA",
-      "ItemId.HEAVY_BALLISTA"
+      "ItemId.HEAVY_BALLISTA",
+      "ItemId.HEAVY_BALLISTA_BEGINNER_32328"
     ],
     "drain": 65,
     "animationId": 7222,

@@ -269,7 +269,11 @@ skill = new SkillContainer() {
                     player.getInventory().addOrDropItem(ItemId.GOLDEN_TENCH, 1);
                 }
             } else if (index == 2) {
-                player.openShop("skilling");
+                if (Main.isSpawn()) {
+                    player.openShop("skilling_spawn");
+                } else {
+                    player.openShop("skilling");
+                }
             }
             return true;
         }
