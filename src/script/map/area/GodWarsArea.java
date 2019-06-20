@@ -23,7 +23,7 @@ public class GodWarsArea extends Area {
     }
 
     @Override
-    public Object script(String identifier) {
+    public Object script(String identifier, Object... parameters) {
         var player = getPlayer();
         if (identifier.equals("increase_armadyl_killcount")) {
             armadylKillcount++;
