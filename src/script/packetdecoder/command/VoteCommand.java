@@ -7,8 +7,6 @@ import com.palidino.osrs.model.player.Player;
 public class VoteCommand implements Command {
     @Override
     public void execute(Player player, String message) {
-        if (Main.isSpawn()) {
-            player.getGameEncoder().sendOpenURL("https://www.battlewild.com/index.php?pages/vote/");
-        }
+        player.getGameEncoder().sendOpenURL(Main.getSettings().getVoteUrl());
     }
 }

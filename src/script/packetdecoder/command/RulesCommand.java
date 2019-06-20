@@ -8,8 +8,6 @@ import com.palidino.osrs.model.player.Player;
 public class RulesCommand implements Command {
     @Override
     public void execute(Player player, String message) {
-        if (Main.isSpawn()) {
-            player.getGameEncoder().sendOpenURL("https://www.battlewild.com/index.php?help/server_rules/");
-        }
+        player.getGameEncoder().sendOpenURL(Main.getSettings().getRulesUrl());
     }
 }

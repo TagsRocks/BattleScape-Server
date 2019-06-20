@@ -1,5 +1,6 @@
 package script.packetdecoder.widget;
 
+import com.palidino.osrs.Main;
 import com.palidino.osrs.io.cache.WidgetChild;
 import com.palidino.osrs.io.cache.WidgetId;
 import com.palidino.osrs.model.player.Player;
@@ -22,13 +23,13 @@ public class FriendsWidget {
         if (childId == 3 || childId == 8) {
             player.getBonds().sendPouch();
         } else if (childId == 15) {
-            player.getGameEncoder().sendOpenURL("https://www.battle-scape.com/private");
+            player.getGameEncoder().sendOpenURL(Main.getSettings().getWebsiteUrl());
         } else if (childId == 22) {
-            player.getGameEncoder().sendOpenURL("https://www.battle-scape.com/forms?do=form&fid=4");
+            player.getGameEncoder().sendOpenURL(Main.getSettings().getSupportUrl());
         } else if (childId == 29) {
-            player.getGameEncoder().sendOpenURL("https://www.battle-scape.com/");
+            player.getGameEncoder().sendOpenURL(Main.getSettings().getWebsiteUrl());
         } else if (childId == 32) {
-            player.getGameEncoder().sendOpenURL("https://www.battle-scape.com/forums/19-Support");
+            player.getGameEncoder().sendOpenURL(Main.getSettings().getSupportUrl());
         }
     }
 }

@@ -7,8 +7,6 @@ import com.palidino.osrs.model.player.Player;
 public class StoreCommand implements Command {
     @Override
     public void execute(Player player, String message) {
-        if (Main.isSpawn()) {
-            player.getGameEncoder().sendOpenURL("https://www.battlewild.com/store");
-        }
+        player.getGameEncoder().sendOpenURL(Main.getSettings().getStoreUrl());
     }
 }

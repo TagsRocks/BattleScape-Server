@@ -8,7 +8,7 @@ public class RiskZoneCommand implements Command {
 
     @Override
     public boolean canUse(Player player) {
-        return Main.isSpawn() && !player.getController().inWilderness() && !player.getController().inPvPWorld()
+        return Main.isSpawn() && player.inEdgeville() && !player.getController().inPvPWorld()
                 && player.getController().canTeleport(false);
     }
 

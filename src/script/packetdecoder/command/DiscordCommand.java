@@ -7,8 +7,6 @@ import com.palidino.osrs.model.player.Player;
 public class DiscordCommand implements Command {
     @Override
     public void execute(Player player, String message) {
-        if (Main.isSpawn()) {
-            player.getGameEncoder().sendOpenURL("https://discordapp.com/invite/FWdbsMy");
-        }
+        player.getGameEncoder().sendOpenURL(Main.getSettings().getDiscordUrl());
     }
 }

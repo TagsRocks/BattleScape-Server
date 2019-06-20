@@ -8,8 +8,7 @@ import com.palidino.osrs.model.player.Player;
 public class TbCommand implements Command {
     @Override
     public boolean canUse(Player player) {
-        return Main.isSpawn() && player.inEdgeville() && !player.getController().inWilderness()
-                && !player.getController().inPvPWorld() && player.getController().canTeleport(false);
+        return Main.isSpawn() && player.inEdgeville() && !player.getController().inPvPWorld();
     }
 
     @Override

@@ -66,13 +66,13 @@ public class BondWidget {
             }
             break;
         case 69:
-            if (Main.isSpawn()) {
-                player.getGameEncoder().sendOpenURL("https://www.battlewild.com/store");
-            } else {
-                player.getGameEncoder().sendOpenURL("https://www.battle-scape.com/store");
-            }
+            player.getGameEncoder().sendOpenURL(Main.getSettings().getStoreUrl());
             break;
         case 71:
+            if (Main.isBeta()) {
+                player.getGameEncoder().sendMessage("You can't do this right now.");
+                break;
+            }
             if (Main.isSpawn()) {
                 player.openShop("bond_spawn");
             } else if (player.isGameModeNormal() || player.isGameModeHard()) {

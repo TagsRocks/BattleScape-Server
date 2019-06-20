@@ -1,5 +1,6 @@
 package script.packetdecoder.widget;
 
+import com.palidino.osrs.Main;
 import com.palidino.osrs.io.cache.WidgetId;
 import com.palidino.osrs.model.player.Player;
 
@@ -41,7 +42,7 @@ public class OptionsWidget {
             player.getOptions().setLogNotificationTimeout(!player.getOptions().getLogNotificationTimeout());
             break;
         case 75:
-            player.getGameEncoder().sendOpenURL("https://www.battle-scape.com/forms.php?do=form&fid=4");
+            player.getGameEncoder().sendOpenURL(Main.getSettings().getSupportUrl());
             break;
         case 77:
             player.getOptions().setOneMouseButton(!player.getOptions().getOneMouseButton());

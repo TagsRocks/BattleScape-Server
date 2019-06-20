@@ -45,9 +45,9 @@ instance = new DialogueScript() {
             if (slot == 0) {
                 player.getMessaging().joinClan(Main.getName().toLowerCase());
             } else if (slot == 1) {
-                player.getGameEncoder().sendOpenURL("https://discord.gg/9UYUMaY");
+                player.getGameEncoder().sendOpenURL(Main.getSettings().getDiscordUrl());
             } else if (slot == 1) {
-                player.getGameEncoder().sendOpenURL("https://www.battle-scape.com/threads/115");
+                player.getGameEncoder().sendOpenURL(Main.getSettings().getRulesUrl());
             } else if (slot == 2) {
                 var lines = new ArrayList();
                 lines.add("You can set your combat levels by selecting them on the skills");
@@ -120,7 +120,7 @@ instance = new DialogueScript() {
                 lines.add("If you wish to vote, you can click on the Vote Button location");
                 lines.add("inside the main quest tab.");
                 lines.add("");
-                lines.add("Alternatively, please visit: https://www.battle-scape.com/vote");
+                lines.add("Alternatively, please visit: " + Main.getSettings().getVoteUrl());
                 Dialogue.openScroll(player, "Voting", Utils.toStringArray(lines));
             } else if (slot == 8) {
                 var lines = new ArrayList();

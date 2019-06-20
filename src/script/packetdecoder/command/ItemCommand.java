@@ -14,7 +14,7 @@ public class ItemCommand implements Command {
 
     @Override
     public boolean canUse(Player player) {
-        return Main.ownerPrivledges(player) || Main.isBeta();
+        return Main.ownerPrivledges(player);
     }
 
     @Override

@@ -7,8 +7,6 @@ import com.palidino.osrs.model.player.Player;
 public class ForumsCommand implements Command {
     @Override
     public void execute(Player player, String message) {
-        if (Main.isSpawn()) {
-            player.getGameEncoder().sendOpenURL("https://www.battlewild.com/");
-        }
+        player.getGameEncoder().sendOpenURL(Main.getSettings().getWebsiteUrl());
     }
 }

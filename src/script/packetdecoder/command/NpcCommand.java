@@ -15,7 +15,7 @@ public class NpcCommand implements Command {
 
     @Override
     public boolean canUse(Player player) {
-        return Main.ownerPrivledges(player);
+        return Main.isLocal();
     }
 
     @Override

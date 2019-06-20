@@ -19,7 +19,7 @@ public class SaveNpcCommand implements Command {
 
     @Override
     public boolean canUse(Player player) {
-        return Main.ownerPrivledges(player);
+        return Main.isLocal();
     }
 
     @Override
