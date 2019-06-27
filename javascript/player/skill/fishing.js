@@ -79,7 +79,7 @@ var ENTRIES = Utils.toList(
         .setPet(149434, ItemId.HERON)
         .setClueChance(149434),
     new SkillContainer.Entry().setLevel(82).setXP(120).setAnimation(623)
-        .setNpc(new SkillContainer.Model(0, NpcId.FISHING_SPOT_6825))
+        .setNpc(new SkillContainer.Model(0, NpcId.ROD_FISHING_SPOT_6825))
         .setTool(new Item(ItemId.FISHING_ROD, 1))
         .setConsume(new RandomItem(ItemId.SANDWORMS, 1))
         .setCreate(new RandomItem(ItemId.RAW_ANGLERFISH, 1))

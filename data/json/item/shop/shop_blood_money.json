@@ -2,11 +2,6 @@
   "name": "Blood Money Shop",
   "currency": "ItemId.BLOOD_MONEY",
   "items": [
-    {
-      "id": "ItemId.MYSTERIOUS_EMBLEM",
-      "price": 0,
-      "costItems": [ [ { "id": "ItemId.COINS",  "amount": 50000 } ] ]
-    },
     { "id": "ItemId.VOLCANIC_WHIP_MIX", "price": 50000 },
     { "id": "ItemId.FROZEN_WHIP_MIX", "price": 50000 },
     { "id": "ItemId.DRAGON_PICKAXE_UPGRADE_KIT", "price": 30000 },

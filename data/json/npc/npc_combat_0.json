@@ -35957,43 +35957,26 @@
   },
   {
     "id": "NpcId.GREATER_DEMON_92_2027",
-    "hitpoints": 0,
+    "hitpoints": 79,
+    "aggressive": true,
+    "attackLevel": 68,
+    "defenceLevel": 71,
     "magicDefenceBonus": -10,
-    "deathAnimation": -1,
-    "blockAnimation": -1,
+    "deathAnimation": 67,
+    "blockAnimation": 65,
     "combatStyles": [
       {
         "type": "MELEE",
-        "animation": -1,
-        "maxHit": 0,
-        "attackSpeed": -1
+        "meleeAttackStyle": "ATTACK_SLASH",
+        "animation": 64,
+        "maxHit": 8,
+        "attackSpeed": 4
       }
     ],
     "rareDropTableRate": 0.4,
     "drops": [
       {
-        "chance": 0.25,
-        "items": [
-          [ { "id": "ItemId.DARK_TOTEM_BASE", "amount": 1 } ],
-          [ { "id": "ItemId.DARK_TOTEM_MIDDLE", "amount": 1 } ],
-          [ { "id": "ItemId.DARK_TOTEM_TOP", "amount": 1 } ]
-        ]
-      },
-      {
-        "chance": 0.38,
-        "items": [
-          [ { "id": "ItemId.ANCIENT_SHARD", "amount": 1 } ]
-        ]
-      },
-      {
-        "chance": 0.78,
-        "items": [
-          [ { "id": "ItemId.MITHRIL_KITESHIELD", "amount": 1 } ],
-          [ { "id": "ItemId.CLUE_SCROLL_HARD", "amount": 1 } ]
-        ]
-      },
-      {
-        "chance": 2.5,
+        "chance": 2,
         "items": [
           [ { "id": "ItemId.ENSOULED_DEMON_HEAD_13502", "amount": 1 } ]
         ]
@@ -36001,25 +35984,40 @@
       {
         "chance": 5,
         "items": [
-          [ { "id": "ItemId.RUNE_FULL_HELM", "amount": 1 } ],
-          [ { "id": "ItemId.THREAD", "amount": 10 } ]
+          [ { "id": "ItemId.RUNE_MED_HELM", "amount": 1 } ],
+          [ { "id": "ItemId.BLACK_KITESHIELD", "amount": 1 } ],
+          [ { "id": "ItemId.DEATH_RUNE", "amount": 3 } ],
+          [ { "id": "ItemId.GRIMY_HARRALANDER", "amount": 1 } ],
+          [ { "id": "ItemId.GRIMY_RANARR_WEED", "amount": 1 } ],
+          [ { "id": "ItemId.GRIMY_IRIT_LEAF", "amount": 1 } ],
+          [ { "id": "ItemId.GRIMY_AVANTOE", "amount": 1 } ],
+          [ { "id": "ItemId.GRIMY_KWUARM", "amount": 1 } ],
+          [ { "id": "ItemId.GRIMY_CADANTINE", "amount": 1 } ],
+          [ { "id": "ItemId.GRIMY_LANTADYME", "amount": 1 } ],
+          [ { "id": "ItemId.GRIMY_DWARF_WEED", "amount": 1 } ]
         ]
       },
       {
         "chance": 20,
         "items": [
-          [ { "id": "ItemId.ADAMANT_PLATELEGS", "amount": 1 } ],
-          [ { "id": "ItemId.DEATH_RUNE", "amount": 5 } ],
-          [ { "id": "ItemId.GOLD_BAR", "amount": 1 } ],
-          [ { "id": "ItemId.TUNA", "amount": 1 } ]
+          [ { "id": "ItemId.BLACK_2H_SWORD", "amount": 1 } ],
+          [ { "id": "ItemId.MITHRIL_SQ_SHIELD", "amount": 1 } ],
+          [ { "id": "ItemId.MITHRIL_CHAINBODY", "amount": 1 } ],
+          [ { "id": "ItemId.CHAOS_RUNE", "amount": 12 } ],
+          [ { "id": "ItemId.GOLD_ORE", "amount": 1 } ],
+          [ { "id": "ItemId.JUG_OF_WINE", "amount": 1 } ]
         ]
       },
       {
         "chance": 99,
         "items": [
           [ { "id": "ItemId.STEEL_AXE", "amount": 1 } ],
-          [ { "id": "ItemId.STEEL_BATTLEAXE", "amount": 1 } ],
-          [ { "id": "ItemId.STEEL_2H_SWORD", "amount": 1 } ]
+          [ { "id": "ItemId.STEEL_SCIMITAR", "amount": 1 } ],
+          [ { "id": "ItemId.STEEL_FULL_HELM", "amount": 1 } ],
+          [ { "id": "ItemId.FIRE_RUNE", "amount": 30, "maxAmount": 60 } ],
+          [ { "id": "ItemId.GRIMY_GUAM_LEAF", "amount": 1 } ],
+          [ { "id": "ItemId.GRIMY_TARROMIN", "amount": 1 } ],
+          [ { "id": "ItemId.GRIMY_MARRENTILL", "amount": 1 } ]
         ]
       },
       {
@@ -36105,43 +36103,26 @@
   },
   {
     "id": "NpcId.GREATER_DEMON_92_2029",
-    "hitpoints": 0,
+    "hitpoints": 79,
+    "aggressive": true,
+    "attackLevel": 68,
+    "defenceLevel": 71,
     "magicDefenceBonus": -10,
-    "deathAnimation": -1,
-    "blockAnimation": -1,
+    "deathAnimation": 67,
+    "blockAnimation": 65,
     "combatStyles": [
       {
         "type": "MELEE",
-        "animation": -1,
-        "maxHit": 0,
-        "attackSpeed": -1
+        "meleeAttackStyle": "ATTACK_SLASH",
+        "animation": 64,
+        "maxHit": 8,
+        "attackSpeed": 4
       }
     ],
     "rareDropTableRate": 0.4,
     "drops": [
       {
-        "chance": 0.25,
-        "items": [
-          [ { "id": "ItemId.DARK_TOTEM_BASE", "amount": 1 } ],
-          [ { "id": "ItemId.DARK_TOTEM_MIDDLE", "amount": 1 } ],
-          [ { "id": "ItemId.DARK_TOTEM_TOP", "amount": 1 } ]
-        ]
-      },
-      {
-        "chance": 0.38,
-        "items": [
-          [ { "id": "ItemId.ANCIENT_SHARD", "amount": 1 } ]
-        ]
-      },
-      {
-        "chance": 0.78,
-        "items": [
-          [ { "id": "ItemId.MITHRIL_KITESHIELD", "amount": 1 } ],
-          [ { "id": "ItemId.CLUE_SCROLL_HARD", "amount": 1 } ]
-        ]
-      },
-      {
-        "chance": 2.5,
+        "chance": 2,
         "items": [
           [ { "id": "ItemId.ENSOULED_DEMON_HEAD_13502", "amount": 1 } ]
         ]
@@ -36149,25 +36130,40 @@
       {
         "chance": 5,
         "items": [
-          [ { "id": "ItemId.RUNE_FULL_HELM", "amount": 1 } ],
-          [ { "id": "ItemId.THREAD", "amount": 10 } ]
+          [ { "id": "ItemId.RUNE_MED_HELM", "amount": 1 } ],
+          [ { "id": "ItemId.BLACK_KITESHIELD", "amount": 1 } ],
+          [ { "id": "ItemId.DEATH_RUNE", "amount": 3 } ],
+          [ { "id": "ItemId.GRIMY_HARRALANDER", "amount": 1 } ],
+          [ { "id": "ItemId.GRIMY_RANARR_WEED", "amount": 1 } ],
+          [ { "id": "ItemId.GRIMY_IRIT_LEAF", "amount": 1 } ],
+          [ { "id": "ItemId.GRIMY_AVANTOE", "amount": 1 } ],
+          [ { "id": "ItemId.GRIMY_KWUARM", "amount": 1 } ],
+          [ { "id": "ItemId.GRIMY_CADANTINE", "amount": 1 } ],
+          [ { "id": "ItemId.GRIMY_LANTADYME", "amount": 1 } ],
+          [ { "id": "ItemId.GRIMY_DWARF_WEED", "amount": 1 } ]
         ]
       },
       {
         "chance": 20,
         "items": [
-          [ { "id": "ItemId.ADAMANT_PLATELEGS", "amount": 1 } ],
-          [ { "id": "ItemId.DEATH_RUNE", "amount": 5 } ],
-          [ { "id": "ItemId.GOLD_BAR", "amount": 1 } ],
-          [ { "id": "ItemId.TUNA", "amount": 1 } ]
+          [ { "id": "ItemId.BLACK_2H_SWORD", "amount": 1 } ],
+          [ { "id": "ItemId.MITHRIL_SQ_SHIELD", "amount": 1 } ],
+          [ { "id": "ItemId.MITHRIL_CHAINBODY", "amount": 1 } ],
+          [ { "id": "ItemId.CHAOS_RUNE", "amount": 12 } ],
+          [ { "id": "ItemId.GOLD_ORE", "amount": 1 } ],
+          [ { "id": "ItemId.JUG_OF_WINE", "amount": 1 } ]
         ]
       },
       {
         "chance": 99,
         "items": [
           [ { "id": "ItemId.STEEL_AXE", "amount": 1 } ],
-          [ { "id": "ItemId.STEEL_BATTLEAXE", "amount": 1 } ],
-          [ { "id": "ItemId.STEEL_2H_SWORD", "amount": 1 } ]
+          [ { "id": "ItemId.STEEL_SCIMITAR", "amount": 1 } ],
+          [ { "id": "ItemId.STEEL_FULL_HELM", "amount": 1 } ],
+          [ { "id": "ItemId.FIRE_RUNE", "amount": 30, "maxAmount": 60 } ],
+          [ { "id": "ItemId.GRIMY_GUAM_LEAF", "amount": 1 } ],
+          [ { "id": "ItemId.GRIMY_TARROMIN", "amount": 1 } ],
+          [ { "id": "ItemId.GRIMY_MARRENTILL", "amount": 1 } ]
         ]
       },
       {
@@ -36253,43 +36249,26 @@
   },
   {
     "id": "NpcId.GREATER_DEMON_92_2031",
-    "hitpoints": 0,
+    "hitpoints": 79,
+    "aggressive": true,
+    "attackLevel": 68,
+    "defenceLevel": 71,
     "magicDefenceBonus": -10,
-    "deathAnimation": -1,
-    "blockAnimation": -1,
+    "deathAnimation": 67,
+    "blockAnimation": 65,
     "combatStyles": [
       {
         "type": "MELEE",
-        "animation": -1,
-        "maxHit": 0,
-        "attackSpeed": -1
+        "meleeAttackStyle": "ATTACK_SLASH",
+        "animation": 64,
+        "maxHit": 8,
+        "attackSpeed": 4
       }
     ],
     "rareDropTableRate": 0.4,
     "drops": [
       {
-        "chance": 0.25,
-        "items": [
-          [ { "id": "ItemId.DARK_TOTEM_BASE", "amount": 1 } ],
-          [ { "id": "ItemId.DARK_TOTEM_MIDDLE", "amount": 1 } ],
-          [ { "id": "ItemId.DARK_TOTEM_TOP", "amount": 1 } ]
-        ]
-      },
-      {
-        "chance": 0.38,
-        "items": [
-          [ { "id": "ItemId.ANCIENT_SHARD", "amount": 1 } ]
-        ]
-      },
-      {
-        "chance": 0.78,
-        "items": [
-          [ { "id": "ItemId.MITHRIL_KITESHIELD", "amount": 1 } ],
-          [ { "id": "ItemId.CLUE_SCROLL_HARD", "amount": 1 } ]
-        ]
-      },
-      {
-        "chance": 2.5,
+        "chance": 2,
         "items": [
           [ { "id": "ItemId.ENSOULED_DEMON_HEAD_13502", "amount": 1 } ]
         ]
@@ -36297,25 +36276,40 @@
       {
         "chance": 5,
         "items": [
-          [ { "id": "ItemId.RUNE_FULL_HELM", "amount": 1 } ],
-          [ { "id": "ItemId.THREAD", "amount": 10 } ]
+          [ { "id": "ItemId.RUNE_MED_HELM", "amount": 1 } ],
+          [ { "id": "ItemId.BLACK_KITESHIELD", "amount": 1 } ],
+          [ { "id": "ItemId.DEATH_RUNE", "amount": 3 } ],
+          [ { "id": "ItemId.GRIMY_HARRALANDER", "amount": 1 } ],
+          [ { "id": "ItemId.GRIMY_RANARR_WEED", "amount": 1 } ],
+          [ { "id": "ItemId.GRIMY_IRIT_LEAF", "amount": 1 } ],
+          [ { "id": "ItemId.GRIMY_AVANTOE", "amount": 1 } ],
+          [ { "id": "ItemId.GRIMY_KWUARM", "amount": 1 } ],
+          [ { "id": "ItemId.GRIMY_CADANTINE", "amount": 1 } ],
+          [ { "id": "ItemId.GRIMY_LANTADYME", "amount": 1 } ],
+          [ { "id": "ItemId.GRIMY_DWARF_WEED", "amount": 1 } ]
         ]
       },
       {
         "chance": 20,
         "items": [
-          [ { "id": "ItemId.ADAMANT_PLATELEGS", "amount": 1 } ],
-          [ { "id": "ItemId.DEATH_RUNE", "amount": 5 } ],
-          [ { "id": "ItemId.GOLD_BAR", "amount": 1 } ],
-          [ { "id": "ItemId.TUNA", "amount": 1 } ]
+          [ { "id": "ItemId.BLACK_2H_SWORD", "amount": 1 } ],
+          [ { "id": "ItemId.MITHRIL_SQ_SHIELD", "amount": 1 } ],
+          [ { "id": "ItemId.MITHRIL_CHAINBODY", "amount": 1 } ],
+          [ { "id": "ItemId.CHAOS_RUNE", "amount": 12 } ],
+          [ { "id": "ItemId.GOLD_ORE", "amount": 1 } ],
+          [ { "id": "ItemId.JUG_OF_WINE", "amount": 1 } ]
         ]
       },
       {
         "chance": 99,
         "items": [
           [ { "id": "ItemId.STEEL_AXE", "amount": 1 } ],
-          [ { "id": "ItemId.STEEL_BATTLEAXE", "amount": 1 } ],
-          [ { "id": "ItemId.STEEL_2H_SWORD", "amount": 1 } ]
+          [ { "id": "ItemId.STEEL_SCIMITAR", "amount": 1 } ],
+          [ { "id": "ItemId.STEEL_FULL_HELM", "amount": 1 } ],
+          [ { "id": "ItemId.FIRE_RUNE", "amount": 30, "maxAmount": 60 } ],
+          [ { "id": "ItemId.GRIMY_GUAM_LEAF", "amount": 1 } ],
+          [ { "id": "ItemId.GRIMY_TARROMIN", "amount": 1 } ],
+          [ { "id": "ItemId.GRIMY_MARRENTILL", "amount": 1 } ]
         ]
       },
       {

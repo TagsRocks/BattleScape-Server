@@ -2,6 +2,7 @@ package script.packetdecoder.command;
 
 import com.palidino.osrs.io.Command;
 import com.palidino.osrs.model.player.Player;
+import com.palidino.osrs.world.LastManStandingEvent;
 import lombok.var;
 
 /*
@@ -17,7 +18,6 @@ public class TestCommand implements Command {
 
     @Override
     public void execute(Player player, String message) {
-        player.getWorld()
-                .sendPvpNews("The wilderness hot zone has moved to Edgeville, where potential loot is improved!");
+        LastManStandingEvent.getInstance().addPlayer(player);
     }
 }
