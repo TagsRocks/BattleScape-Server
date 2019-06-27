@@ -4434,8 +4434,8 @@
 				<config>107</config>
 				<name>revenant</name>
 				<location>Revenant Caves</location>
-				<minAmount>25</minAmount>
-				<maxAmount>50</maxAmount>
+				<minAmount>50</minAmount>
+				<maxAmount>100</maxAmount>
 				<weight>5</weight>
 				<ids>
 					<int>7881</int>
@@ -4677,8 +4677,8 @@
 				<config>200</config>
 				<name>barrows</name>
 				<location>The Forgotten Cemetery</location>
-				<minAmount>25</minAmount>
-				<maxAmount>50</maxAmount>
+				<minAmount>50</minAmount>
+				<maxAmount>100</maxAmount>
 				<weight>6</weight>
 				<ids>
 					<int>1672</int>
@@ -4693,8 +4693,8 @@
 				<config>201</config>
 				<name>battle mage</name>
 				<location>Mage Arena</location>
-				<minAmount>25</minAmount>
-				<maxAmount>50</maxAmount>
+				<minAmount>50</minAmount>
+				<maxAmount>100</maxAmount>
 				<weight>6</weight>
 				<ids>
 					<int>1610</int>

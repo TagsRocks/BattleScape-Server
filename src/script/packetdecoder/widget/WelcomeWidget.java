@@ -15,7 +15,7 @@ public class WelcomeWidget {
                 player.getWidgetManager().sendInteractiveOverlay(WidgetId.CHARACTER_DESIGN);
             } else if (!player.getGoldMember() && Utils.randomE(5) == 0 && !Main.isSpawn()) {
                 Dialogue.openChatboxMessage(player,
-                        "<col=ff0000>Bonds</col> can be purchased for $4 and can be used for: trading, membership, mystery box, 100K blood money, ring of wealth (i), herb sack, seed box, and skilling outfits.");
+                        "<col=ff0000>Bonds</col> can be purchased and used on: trading, membership, mystery boxes, blood money, and other items!");
             }
             break;
         }

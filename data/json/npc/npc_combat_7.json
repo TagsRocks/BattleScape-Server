@@ -2006,6 +2006,7 @@
   },
   {
     "id": "NpcId.SOTETSEG_995_16017",
+    "combatScript": "SotetsegCS",
     "respawnDelay": 36000,
     "hitpoints": 4000,
     "hitpointsBarId": 2,

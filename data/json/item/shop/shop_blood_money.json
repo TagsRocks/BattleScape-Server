@@ -15,7 +15,6 @@
     { "id": "ItemId.LOOTING_BAG", "price": 10000 },
     { "id": "ItemId.BAG_FULL_OF_GEMS", "price": 25000 },
     { "id": "ItemId.CLUE_BOX", "price": 25000 },
-    { "id": "ItemId.PERMANENT_TZHAAR_WAVE_BOOST_32300", "price": 300000 },
     { "id": "ItemId.TORN_PRAYER_SCROLL", "price": 25000 },
     { "id": "ItemId.DEXTEROUS_PRAYER_SCROLL", "price": 400000 },
     { "id": "ItemId.ARCANE_PRAYER_SCROLL", "price": 200000 },
