@@ -1,6 +1,6 @@
 {
   "name": "Warrior Guild Armoury",
-  "exchangePriceMultiplier": 1.0,
+  "sellExchangeMultiplier": 1.0,
   "ceilPrice": true,
   "items": [
     { "id": "ItemId.IRON_BATTLEAXE" },

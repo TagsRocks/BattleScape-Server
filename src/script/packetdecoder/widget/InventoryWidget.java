@@ -129,6 +129,29 @@ public class InventoryWidget {
         Item anItem = null;
         int[] ttLoot = null;
         switch (itemId) {
+        case ADAMANT_ARROW_PACK:
+            player.getInventory().deleteItem(itemId, 1, slot);
+            player.getInventory().addItem(ItemId.ADAMANT_ARROW, 50, slot);
+            break;
+        case RUNE_ARROW_PACK:
+            player.getInventory().deleteItem(itemId, 1, slot);
+            player.getInventory().addItem(ItemId.RUNE_ARROW, 50, slot);
+            break;
+        case CATALYTIC_RUNE_PACK:
+            player.getInventory().deleteItem(itemId, 1, slot);
+            player.getInventory().addOrDropItem(ItemId.CHAOS_RUNE, 50);
+            player.getInventory().addOrDropItem(ItemId.DEATH_RUNE, 50);
+            player.getInventory().addOrDropItem(ItemId.BLOOD_RUNE, 50);
+            player.getInventory().addOrDropItem(ItemId.WRATH_RUNE, 50);
+            player.getInventory().addOrDropItem(ItemId.NATURE_RUNE, 50);
+            break;
+        case ELEMENTAL_RUNE_PACK:
+            player.getInventory().deleteItem(itemId, 1, slot);
+            player.getInventory().addOrDropItem(ItemId.AIR_RUNE, 50);
+            player.getInventory().addOrDropItem(ItemId.WATER_RUNE, 50);
+            player.getInventory().addOrDropItem(ItemId.EARTH_RUNE, 50);
+            player.getInventory().addOrDropItem(ItemId.FIRE_RUNE, 50);
+            break;
         case ItemId.COIN_POUCH_22521:
             player.getInventory().deleteItem(itemId, 1, slot);
             player.getInventory().addOrDropItem(ItemId.COINS, 100_000 + Utils.randomI(300_000));

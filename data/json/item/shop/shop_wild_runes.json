@@ -1,6 +1,6 @@
 {
   "name": "Runes Shop",
-  "exchangePriceMultiplier": 1.5,
+  "sellExchangeMultiplier": 1.5,
   "ceilPrice": true,
   "items": [
     { "id": "ItemId.FIRE_RUNE" },

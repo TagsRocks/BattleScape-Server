@@ -1,6 +1,6 @@
 {
   "name": "Monkey Madness Shop",
-  "exchangePriceMultiplier": 1.5,
+  "sellExchangeMultiplier": 1.5,
   "ceilPrice": true,
   "items": [
     { "id": "ItemId.ROYAL_SEED_POD", "price": 250000 },

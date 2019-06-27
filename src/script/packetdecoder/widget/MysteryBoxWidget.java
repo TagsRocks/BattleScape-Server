@@ -49,12 +49,18 @@ public class MysteryBoxWidget {
                     player.getGameEncoder().sendItems(WidgetId.CUSTOM_MYSTERY_BOX, 41, 0, mysteryBoxItems);
                     player.getSession().write();
                     if (getExecutions() > 0 && (getExecutions() % 4) == 0) {
-                        if (++rollsComplete >= totalRolls) {
+                        boolean complete = ++rollsComplete >= totalRolls;
+                        if (complete) {
                             stop();
                             player.getGameEncoder().sendHideWidget(WidgetId.CUSTOM_MYSTERY_BOX, 59, false);
                         }
                         var boxItem = mysteryBoxItems.get(mysteryBoxItems.size() - 3);
                         player.getInventory().addOrDropItem(boxItem);
+                        if (complete && boxId == ItemId.BLOODY_KEY_32304) {
+                            player.getWorld().sendItemDropNews(player, boxItem.getId(), "a bloody key");
+                        } else if (complete && boxId == ItemId.BLOODIER_KEY_32305) {
+                            player.getWorld().sendItemDropNews(player, boxItem.getId(), "a bloodier key");
+                        }
                         RequestManager.addLootBoxLog(player, boxId, boxItem);
                         setTick(2);
                     }

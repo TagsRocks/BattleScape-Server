@@ -46,6 +46,11 @@ public class BondWidget {
             if (index == 0) {
                 int maxWithdraw = (int) Math.min(player.getBonds().getPouch(), Item.MAX_AMOUNT);
                 maxWithdraw = Math.min(1, maxWithdraw);
+                maxWithdraw = player.getInventory().canAddAmount(ItemId.BOND_32318, maxWithdraw);
+                if (maxWithdraw == 0) {
+                    player.getInventory().notEnoughSpace();
+                    break;
+                }
                 player.getBonds().setPouch(player.getBonds().getPouch() - maxWithdraw);
                 player.getInventory().addItem(ItemId.BOND_32318, maxWithdraw);
             } else if (index == 1) {
@@ -54,6 +59,11 @@ public class BondWidget {
                     public void execute(int value) {
                         int maxWithdraw = (int) Math.min(player.getBonds().getPouch(), Item.MAX_AMOUNT);
                         value = Math.min(value, maxWithdraw);
+                        maxWithdraw = player.getInventory().canAddAmount(ItemId.BOND_32318, maxWithdraw);
+                        if (maxWithdraw == 0) {
+                            player.getInventory().notEnoughSpace();
+                            return;
+                        }
                         player.getBonds().setPouch(player.getBonds().getPouch() - value);
                         player.getInventory().addItem(ItemId.BOND_32318, value);
                         player.getBonds().sendPouchCounts();
@@ -61,6 +71,11 @@ public class BondWidget {
                 });
             } else if (index == 2) {
                 int maxWithdraw = (int) Math.min(player.getBonds().getPouch(), Item.MAX_AMOUNT);
+                maxWithdraw = player.getInventory().canAddAmount(ItemId.BOND_32318, maxWithdraw);
+                if (maxWithdraw == 0) {
+                    player.getInventory().notEnoughSpace();
+                    break;
+                }
                 player.getBonds().setPouch(player.getBonds().getPouch() - maxWithdraw);
                 player.getInventory().addItem(ItemId.BOND_32318, maxWithdraw);
             }

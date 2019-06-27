@@ -1,6 +1,6 @@
 {
   "name": "Skilling Shop",
-  "exchangePriceMultiplier": 1.0,
+  "sellExchangeMultiplier": 1.0,
   "ceilPrice": true,
   "items": [
     { "id": "ItemId.BRONZE_AXE" },

@@ -1,6 +1,6 @@
 {
   "name": "General Store",
-  "exchangePriceMultiplier": 0.5,
+  "sellExchangeMultiplier": 0.5,
   "ceilPrice": true,
   "buysItems": true,
   "items": [
@@ -25,7 +25,7 @@
     { "id": "ItemId.SUPER_COMBAT_POTION_4" },
     { "id": "ItemId.BASTION_POTION_4" },
     { "id": "ItemId.BATTLEMAGE_POTION_4" },
-    { "id": "ItemId.PRAYER_POTION_4", "exchangePriceMultiplier": 0.25 },
+    { "id": "ItemId.PRAYER_POTION_4", "sellExchangeMultiplier": 0.25 },
     { "id": "ItemId.SUPER_ENERGY_4" },
     { "id": "ItemId.STAMINA_POTION_4" },
     { "id": "ItemId.SUPER_RESTORE_4" },

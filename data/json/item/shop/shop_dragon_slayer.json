@@ -1,6 +1,6 @@
 {
   "name": "Dragon Slayer Shop",
-  "exchangePriceMultiplier": 1.5,
+  "sellExchangeMultiplier": 1.5,
   "ceilPrice": true,
   "items": [
     { "id": "ItemId.RUNE_PLATEBODY" },

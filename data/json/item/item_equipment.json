@@ -32030,6 +32030,25 @@
     }
   },
   {
+    "id": "ItemId.SPEAR",
+    "equipSlot": "WEAPON",
+    "weaponType": "TYPE_12",
+    "attackSpeed": "7",
+    "attackRange": "2",
+    "twoHanded": "true",
+    "stanceAnimations": [ "813", "1209", "1205", "1206", "1207", "1208", "1210" ],
+    "levels": "Attack=5",
+    "bonuses": {
+      "ATTACK_STAB": "14",
+      "ATTACK_SLASH": "19",
+      "ATTACK_MAGIC": "-4",
+      "DEFENCE_STAB": "-1",
+      "DEFENCE_SLASH": "1",
+      "DEFENCE_CRUSH": "2",
+      "MELEE_STRENGTH": "20"
+    }
+  },
+  {
     "id": "ItemId.YEW_SHORTBOW_20401",
     "equipSlot": "WEAPON",
     "weaponType": "TYPE_3",

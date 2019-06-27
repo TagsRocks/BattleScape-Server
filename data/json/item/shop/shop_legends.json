@@ -1,6 +1,6 @@
 {
   "name": "Legends' Shop",
-  "exchangePriceMultiplier": 1.0,
+  "sellExchangeMultiplier": 1.0,
   "ceilPrice": true,
   "items": [
     { "id": "ItemId.CAPE_OF_LEGENDS", "price": 675 },
