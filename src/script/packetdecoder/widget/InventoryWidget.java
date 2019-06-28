@@ -382,14 +382,14 @@ public class InventoryWidget {
             break;
         case ItemId.RANDOM_PVP_WEAPON_32290:
             items = new int[] {
-                ItemId.VESTAS_LONGSWORD_DEG_32264, ItemId.STATIUSS_WARHAMMER_DEG_32265, ItemId.VESTAS_SPEAR_DEG_32266,
-                ItemId.MORRIGANS_JAVELIN_DEG_32267, ItemId.MORRIGANS_THROWING_AXE_DEG_32268,
-                ItemId.ZURIELS_STAFF_DEG_32269
+                ItemId.VESTAS_LONGSWORD, ItemId.STATIUSS_WARHAMMER, ItemId.VESTAS_SPEAR,
+                ItemId.MORRIGANS_JAVELIN, ItemId.MORRIGANS_THROWING_AXE,
+                ItemId.ZURIELS_STAFF
             };
             player.getInventory().deleteItem(itemId, 1, slot);
             anItem = new Item(items[Utils.randomE(items.length)], 1);
-            if (anItem.getId() == ItemId.MORRIGANS_JAVELIN_DEG_32267
-                    || anItem.getId() == ItemId.MORRIGANS_THROWING_AXE_DEG_32268) {
+            if (anItem.getId() == ItemId.MORRIGANS_JAVELIN
+                    || anItem.getId() == ItemId.MORRIGANS_THROWING_AXE) {
                 anItem.setAmount(50);
             }
             player.getInventory().addOrDropItem(anItem);
