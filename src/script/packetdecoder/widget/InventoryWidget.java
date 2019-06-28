@@ -391,7 +391,7 @@ public class InventoryWidget {
                     || anItem.getId() == ItemId.MORRIGANS_THROWING_AXE_32261) {
                 anItem.setAmount(50);
             }
-            player.getInventory().addOrDropItem(randomItem);
+            player.getInventory().addOrDropItem(anItem);
             RequestManager.addPlayerLog(player, "lootbox",
                     player.getLogName() + " received " + anItem.getLogName() + " from a random pvp weapon box.");
             break;
