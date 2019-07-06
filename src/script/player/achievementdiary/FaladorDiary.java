@@ -11,6 +11,7 @@ import com.palidino.osrs.io.cache.WidgetChild;
 import com.palidino.osrs.model.Entity;
 import com.palidino.osrs.model.Tile;
 import com.palidino.osrs.model.item.Item;
+import com.palidino.osrs.model.item.Shop;
 import com.palidino.osrs.model.item.ShopItem;
 import com.palidino.osrs.model.map.MapObject;
 import com.palidino.osrs.model.npc.Npc;
@@ -24,8 +25,9 @@ public class FaladorDiary extends AchievementDiary {
         super(AchievementDiary.Name.FALADOR);
     }
 
+    @Override
     public AchievementDiaryTask[] getTasks() {
-        return Arrays.stream(Task.values()).map(Task::getTask).toArray(AchievementDiaryTask[]::new);
+        return Arrays.stream(FaladorTask.values()).map(FaladorTask::getTask).toArray(AchievementDiaryTask[]::new);
     }
 
     @Override
@@ -35,7 +37,7 @@ public class FaladorDiary extends AchievementDiary {
                 || id == 4969 || id == 4977 || id == 4965 || id == 4967 || id == 4963 || id == 4947 || id == 5158
                 || id == 4953 || id == 7121) {
             if (player.getHeight() == 3 && player.within(2954, 3328, 2998, 3353)) {
-                addCompletedTask(player, Task.CAPE_EMOTE);
+                addCompletedTask(player, FaladorTask.CAPE_EMOTE);
             }
         }
     }
@@ -43,56 +45,56 @@ public class FaladorDiary extends AchievementDiary {
     @Override
     public void teleportedHook(Player player, Tile fromTile) {
         if (player.getRegionId() == 11316 && fromTile.getRegionId() == 12082) {
-            addCompletedTask(player, Task.ENTRANA);
+            addCompletedTask(player, FaladorTask.ENTRANA);
         }
     }
 
     @Override
     public void equipItemHook(Player player, Item item, int slot) {
         if (item.getId() == ItemId.DWARVEN_HELMET && player.within(2962, 9699, 3061, 9852)) {
-            addCompletedTask(player, Task.DWARVEN_HELMET);
+            addCompletedTask(player, FaladorTask.DWARVEN_HELMET);
         }
     }
 
     @Override
-    public void buyShopItemHook(Player player, ShopItem shopItem, Item item, int price) {
+    public void buyShopItemHook(Player player, Shop shop, ShopItem shopItem, Item item, int price) {
         if (item.getId() == ItemId.WHITE_2H_SWORD && item.getAmount() > 0 && shopItem.getMonsterKillCount() > 0) {
-            addCompletedTask(player, Task.WHITE_2H);
+            addCompletedTask(player, FaladorTask.WHITE_2H);
         }
     }
 
     @Override
     public void makeItemHook(Player player, int skillId, Item item, Npc npc, MapObject mapObject) {
         if (item.getId() == ItemId.BUCKET_OF_WATER && player.getRegionId() == 11828) {
-            addCompletedTask(player, Task.FILL_BUCKET);
+            addCompletedTask(player, FaladorTask.FILL_BUCKET);
         } else if (item.getId() == ItemId.MIND_TIARA) {
-            addCompletedTask(player, Task.MIND_TIARA);
+            addCompletedTask(player, FaladorTask.MIND_TIARA);
         } else if (item.getId() == ItemId.BLURITE_LIMBS) {
-            addCompletedTask(player, Task.BLURITE_LIMBS);
+            addCompletedTask(player, FaladorTask.BLURITE_LIMBS);
         } else if (item.getId() == ItemId.BULLSEYE_LANTERN_4550 && player.within(2925, 3205, 2941, 3215)) {
-            addCompletedTask(player, Task.BULLSEYE_LANTERN);
+            addCompletedTask(player, FaladorTask.BULLSEYE_LANTERN);
         } else if (npc != null
                 && (npc.getId() == NpcId.GUARD_21_3269 || npc.getId() == NpcId.GUARD_22_3270
                         || npc.getId() == NpcId.GUARD_19 || npc.getId() == NpcId.GUARD_22_3272)
                 && (player.getRegionId() == 11828 || player.getRegionId() == 12084)) {
-            addCompletedTask(player, Task.PICKPOCKET_GUARD);
+            addCompletedTask(player, FaladorTask.PICKPOCKET_GUARD);
         } else if (item.getId() == ItemId.GOLD_ORE && player.getRegionId() == 11571) {
-            addCompletedTask(player, Task.MINE_GOLD);
+            addCompletedTask(player, FaladorTask.MINE_GOLD);
         } else if (item.getId() == ItemId.MIND_RUNE && item.getAmount() >= 140) {
-            addCompletedTask(player, Task.CRAFT_MINDS);
+            addCompletedTask(player, FaladorTask.CRAFT_MINDS);
         } else if (item.getId() == ItemId.AIR_RUNE && item.getAmount() >= 252) {
-            addCompletedTask(player, Task.CRAFT_AIRS);
+            addCompletedTask(player, FaladorTask.CRAFT_AIRS);
         } else if (item.getId() == ItemId.MAGIC_ROOTS && item.getAmount() >= 3) {
-            addCompletedTask(player, Task.MAGIC_ROOTS);
+            addCompletedTask(player, FaladorTask.MAGIC_ROOTS);
         } else if (item.getId() == ItemId.SARADOMIN_BREW_3 && player.within(3009, 3355, 3019, 3358)) {
-            addCompletedTask(player, Task.SARADOMIN_BREW);
+            addCompletedTask(player, FaladorTask.SARADOMIN_BREW);
         }
     }
 
     @Override
     public void makeFireHook(Player player, Item item) {
         if (item.getId() == ItemId.WILLOW_LOGS && player.getRegionId() == 11573) {
-            addCompletedTask(player, Task.BURN_WILLOW);
+            addCompletedTask(player, FaladorTask.BURN_WILLOW);
         }
     }
 
@@ -100,43 +102,43 @@ public class FaladorDiary extends AchievementDiary {
     public void castSpellHook(Player player, WidgetChild.SpellBook spellbookChild, Item item, Entity entity,
             MapObject mapObject) {
         if (spellbookChild == WidgetChild.SpellBook.FALADOR_TELEPORT) {
-            addCompletedTask(player, Task.FALADOR_TELEPORT);
+            addCompletedTask(player, FaladorTask.FALADOR_TELEPORT);
         }
     }
 
     @Override
     public void agilityObstacleHook(Player player, MapObject mapObject) {
         if (mapObject.getId() == 24222 && player.getRegionId() == 11572) {
-            addCompletedTask(player, Task.CLIMB_WALL);
+            addCompletedTask(player, FaladorTask.CLIMB_WALL);
         } else if (mapObject.getId() == 16543 && player.getRegionId() == 12185) {
-            addCompletedTask(player, Task.DWARVERN_CREVICE);
+            addCompletedTask(player, FaladorTask.DWARVERN_CREVICE);
         } else if (mapObject.getId() == 16510 && (player.getRegionId() == 11673 || player.getRegionId() == 11417)) {
-            addCompletedTask(player, Task.TAVERLEY_FLOOR);
+            addCompletedTask(player, FaladorTask.TAVERLEY_FLOOR);
         }
     }
 
     @Override
     public void npcKilledHook(Player player, Npc npc) {
         if ((npc.getId() == NpcId.DUCK_1 || npc.getId() == NpcId.DUCK_1_1839) && player.getRegionId() == 12084) {
-            addCompletedTask(player, Task.KILL_DUCK);
+            addCompletedTask(player, FaladorTask.KILL_DUCK);
         } else if (npc.getId() == NpcId.MOGRE_60) {
-            addCompletedTask(player, Task.KILL_MOGRE);
+            addCompletedTask(player, FaladorTask.KILL_MOGRE);
         } else if (npc.getId() == NpcId.GIANT_MOLE_230
                 && (player.getRegionId() == 6992 || player.getRegionId() == 6993)) {
-            addCompletedTask(player, Task.KILL_GIANT_MOLE);
+            addCompletedTask(player, FaladorTask.KILL_GIANT_MOLE);
         } else if ((npc.getId() == NpcId.SKELETAL_WYVERN_140 || npc.getId() == NpcId.SKELETAL_WYVERN_140_466
                 || npc.getId() == NpcId.SKELETAL_WYVERN_140_467 || npc.getId() == NpcId.SKELETAL_WYVERN_140_468)
                 && (player.getRegionId() == 12181 || player.getRegionId() == 12437)) {
-            addCompletedTask(player, Task.KILL_SKELETAL_WYVERN);
+            addCompletedTask(player, FaladorTask.KILL_SKELETAL_WYVERN);
         } else if (npc.getId() == NpcId.BLUE_DRAGON_111 && player.getRegionId() == 11674) {
-            addCompletedTask(player, Task.KILL_BLUE_DRAGON);
+            addCompletedTask(player, FaladorTask.KILL_BLUE_DRAGON);
         }
     }
 
     @Override
     public void openShopHook(Player player, String referenceName) {
         if (referenceName != null && referenceName.equals("skilling") && player.getRegionId() == 12083) {
-            addCompletedTask(player, Task.SARAHS_SHOP);
+            addCompletedTask(player, FaladorTask.SARAHS_SHOP);
         }
     }
 
@@ -144,21 +146,21 @@ public class FaladorDiary extends AchievementDiary {
     public void mapObjectOptionHook(Player player, int index, MapObject mapObject) {
         if (mapObject.getId() == 172 && mapObject.getX() == 2914 && mapObject.getY() == 3452
                 && player.getInventory().hasItem(ItemId.CRYSTAL_KEY)) {
-            addCompletedTask(player, Task.CRYSTAL_CHEST);
+            addCompletedTask(player, FaladorTask.CRYSTAL_CHEST);
         } else if (mapObject.getId() == 410 && player.getEquipment().getHeadId() == ItemId.INITIATE_SALLET
                 && player.getEquipment().getChestId() == ItemId.INITIATE_HAUBERK
                 && player.getEquipment().getLegId() == ItemId.INITIATE_CUISSE) {
-            addCompletedTask(player, Task.GUTHIX_ALTAR);
+            addCompletedTask(player, FaladorTask.GUTHIX_ALTAR);
         } else if (mapObject.getId() == 409 && player.getEquipment().getHeadId() == ItemId.PROSELYTE_SALLET
                 && player.getEquipment().getChestId() == ItemId.PROSELYTE_HAUBERK
                 && player.getEquipment().getLegId() == ItemId.PROSELYTE_CUISSE) {
-            addCompletedTask(player, Task.SARIM_ALTAR);
+            addCompletedTask(player, FaladorTask.SARIM_ALTAR);
         } else if (mapObject.getId() == 24318) {
             if (player.getController().getLevelForXP(Skills.ATTACK) == 99
                     || player.getController().getLevelForXP(Skills.STRENGTH) == 99
                     || player.getController().getLevelForXP(Skills.ATTACK)
                             + player.getController().getLevelForXP(Skills.STRENGTH) >= 130) {
-                addCompletedTask(player, Task.WARRIORS_GUILD);
+                addCompletedTask(player, FaladorTask.WARRIORS_GUILD);
             }
         }
     }
@@ -166,17 +168,17 @@ public class FaladorDiary extends AchievementDiary {
     @Override
     public void npcOptionHook(Player player, int index, Npc npc) {
         if (npc.getId() == NpcId.SECURITY_GUARD) {
-            addCompletedTask(player, Task.SECURITY_BOOK);
+            addCompletedTask(player, FaladorTask.SECURITY_BOOK);
         }
     }
 
-    public void addCompletedTask(Player player, Task task) {
+    public void addCompletedTask(Player player, FaladorTask task) {
         super.addCompletedTask(player, task.getTask());
     }
 }
 
 
-enum Task {
+enum FaladorTask {
     CLIMB_WALL(new AchievementDiaryTask("Climb over the western Falador wall.", EASY)),
     SARAHS_SHOP(new AchievementDiaryTask("Browse Sarah's farm shop.", EASY)),
     FILL_BUCKET(new AchievementDiaryTask("Fill a bucket from the pump north of Falador west bank.", EASY)),
@@ -215,7 +217,7 @@ enum Task {
 
     private AchievementDiaryTask task;
 
-    private Task(AchievementDiaryTask task) {
+    private FaladorTask(AchievementDiaryTask task) {
         this.task = task;
     }
 

@@ -83,6 +83,9 @@ public class CommandDecoder extends PacketDecoder {
             var classes = FileManager.getClassScripts("packetdecoder.command");
             for (var className : classes) {
                 var classReference = Class.forName(className);
+                if (!Command.class.isAssignableFrom(classReference)) {
+                    continue;
+                }
                 if (!classReference.getName().endsWith("Command")) {
                     continue;
                 }
