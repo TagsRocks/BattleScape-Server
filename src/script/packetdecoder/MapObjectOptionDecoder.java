@@ -190,10 +190,14 @@ public class MapObjectOptionDecoder extends PacketDecoder {
         switch (mapObject.getName().toLowerCase()) {
         case "door":
         case "gate":
+        case "large door":
             if (mapObject.getDef().getOptions() == null) {
                 break;
             }
             if (!"Open".equals(mapObject.getDef().getOptions()[0])) {
+                break;
+            }
+            if (mapObject.getSizeX() != 1 || mapObject.getSizeY() != 1) {
                 break;
             }
             var hasOtherOptions = false;

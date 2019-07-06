@@ -18,16 +18,4 @@ public class WildernessArea extends Area {
     public boolean inWilderness() {
         return getTile().getRegionId() != 12442 || getTile().getY() > 9919;
     }
-
-    @Override
-    public boolean mapObjectOptionHook(int index, MapObject mapObject) {
-        var player = getPlayer();
-        switch (mapObject.getId()) {
-        case 1521: // Large door
-        case 1524: // Large door
-            Region.openDoors(player, mapObject);
-            return true;
-        }
-        return false;
-    }
 }
