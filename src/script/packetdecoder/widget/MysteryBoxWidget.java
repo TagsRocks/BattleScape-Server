@@ -58,7 +58,7 @@ public class MysteryBoxWidget {
                         var boxItem = mysteryBoxItems.get(mysteryBoxItems.size() - 3);
                         player.getInventory().addOrDropItem(boxItem);
                         if (complete && (boxId == ItemId.BLOODY_KEY_32304 || boxId == ItemId.BLOODIER_KEY_32305)) {
-                            player.getWorld().sendItemDropNews(player, boxItem.getId(), "a " + boxItem.getName());
+                            player.getWorld().sendItemDropNews(player, boxItem.getId(), "a " + ItemDef.getName(boxId));
                         }
                         RequestManager.addLootBoxLog(player, boxId, boxItem);
                         setTick(2);

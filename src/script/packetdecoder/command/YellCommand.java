@@ -1,6 +1,5 @@
 package script.packetdecoder.command;
 
-import com.palidino.osrs.Main;
 import com.palidino.osrs.io.Command;
 import com.palidino.osrs.model.player.Player;
 import com.palidino.setting.SqlUserRank;
@@ -15,7 +14,7 @@ public class YellCommand implements Command {
 
     @Override
     public boolean canUse(Player player) {
-        return Main.isSpawn() && player.isUsergroup(SqlUserRank.DONATOR) || player.getRights() == Player.RIGHTS_MOD
+        return player.isUsergroup(SqlUserRank.DONATOR) || player.getRights() == Player.RIGHTS_MOD
                 || player.getRights() == Player.RIGHTS_ADMIN;
     }
 
