@@ -33,7 +33,7 @@ instance = new NScript() {
             return;
         }
         if (!(mapObject.getAttachment() instanceof TempMapObject)
-                || !(mapObject.getAttachment().getAttachment() instanceof Player)) {
+                || !(mapObject.getAttachment().getAttachment() instanceof Integer)) {
             return;
         }
         var player = Main.getWorld().getPlayerById(mapObject.getAttachment().getAttachment());

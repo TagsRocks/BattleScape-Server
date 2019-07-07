@@ -1,9 +1,6 @@
 package script.map.area;
 
 import com.palidino.osrs.model.map.Area;
-import com.palidino.osrs.model.map.MapObject;
-import com.palidino.osrs.model.map.Region;
-import lombok.var;
 
 public class WildernessArea extends Area {
     public WildernessArea() {
