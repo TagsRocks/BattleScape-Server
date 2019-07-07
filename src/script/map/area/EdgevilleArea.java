@@ -138,7 +138,7 @@ public class EdgevilleArea extends Area {
         case NpcId.JOSSIK:
             player.openDialogue("horrorfromthedeep", 0);
             return true;
-        case NpcId.EVIL_DAVE:
+        case NpcId.EVIL_DAVE_4806:
             player.openDialogue("shadowofthestorm", 0);
             return true;
         case NpcId.RADIMUS_ERKLE:
