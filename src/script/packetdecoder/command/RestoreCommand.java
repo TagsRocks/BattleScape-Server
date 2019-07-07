@@ -11,7 +11,7 @@ public class RestoreCommand implements Command {
 
     @Override
     public void execute(Player player, String message) {
-        player.restore();
+        player.rejuvenate();
         player.getGameEncoder().sendMessage("You feel restored..");
     }
 }

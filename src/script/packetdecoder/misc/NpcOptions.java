@@ -27,18 +27,20 @@ public class NpcOptions {
     // Adam
     public static void npc311(Player player, int index, Npc npc) {
         if (index == 0) {
-            /*
-             * if (player.isGameModeIronman() || player.isGameModeGroupIronman()) {
-             * player.openDialogue("ironadam", 0); } else {
-             * player.getGameEncoder().sendMessage("Adam has no reason to talk to you btw."); }
-             */
+
+            if (player.isGameModeIronman() || player.isGameModeGroupIronman()) {
+                player.openDialogue("ironadam", 0);
+            } else {
+                player.getGameEncoder().sendMessage("Adam has no reason to talk to you.");
+            }
+
         } else if (index == 2) {
             if (player.isGameModeIronman() || player.isGameModeGroupIronman()) {
                 player.openShop("ironman");
             } else if (player.isGameModeHardcoreIronman()) {
                 player.openShop("hardcore_ironman");
             } else {
-                player.getGameEncoder().sendMessage("Adam has no reason to trade you btw.");
+                player.getGameEncoder().sendMessage("Adam has no reason to trade you.");
             }
         }
     }

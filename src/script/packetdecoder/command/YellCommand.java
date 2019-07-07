@@ -37,7 +37,7 @@ public class YellCommand implements Command {
         }
 
         if (player.isUsergroup(SqlUserRank.SUPPORT) || player.isUsergroup(SqlUserRank.MODERATOR)
-                || player.isUsergroup(SqlUserRank.ADMINISTRATOR) || player.getUsername().equalsIgnoreCase("miika")) {
+                || player.isUsergroup(SqlUserRank.ADMINISTRATOR)) {
             yellDelay = Time.secToTick(5);
         } else if (player.isUsergroup(SqlUserRank.UBER_DONATOR)) {
             yellDelay = Time.secToTick(5);
