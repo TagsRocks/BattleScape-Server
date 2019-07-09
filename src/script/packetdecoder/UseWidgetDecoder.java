@@ -374,6 +374,9 @@ public class UseWidgetDecoder extends PacketDecoder {
         if (player.getFarming().widgetOnMapObjectHook(widgetId, childId, slot, mapObject)) {
             return true;
         }
+        if (player.getOrbCharging().widgetOnMapObjectHook(player, widgetId, childId, slot, mapObject)) {
+            return true;
+        }
         if (Runecrafting.widgetOnMapObjectHook(player, widgetId, childId, slot, mapObject)) {
             return true;
         }
