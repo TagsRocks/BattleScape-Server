@@ -6,6 +6,12 @@ import com.palidino.osrs.model.player.Player;
 import lombok.var;
 
 public class EmptyCommand implements Command {
+
+    @Override
+    public String getExample() {
+        return "- Empties your inventory.";
+    }
+
     @Override
     public void execute(Player player, String message) {
         for (var i = 0; i < player.getInventory().size(); i++) {

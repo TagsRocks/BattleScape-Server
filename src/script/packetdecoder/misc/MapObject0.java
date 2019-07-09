@@ -66,6 +66,16 @@ public class MapObject0 {
         }
     }
 
+    // Port Sarim altar
+    public static void mapObject409(Player player, int index, MapObject mapObject) {
+        if (player.getController().inPvPWorldCombat()) {
+            player.getGameEncoder().sendMessage("You can't use this here.");
+            return;
+        }
+        player.getPrayer().adjustPoints(player.getController().getLevelForXP(Skills.PRAYER));
+        player.setAnimation(Prayer.PRAY_ANIMATION);
+    }
+
     // Crevice
     public static void mapObject534(Player player, int index, MapObject mapObject) {
         // Smoke Devil Dungeon
