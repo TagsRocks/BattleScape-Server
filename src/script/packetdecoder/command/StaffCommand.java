@@ -9,6 +9,12 @@ import com.palidino.util.Utils;
 import lombok.var;
 
 public class StaffCommand implements Command {
+
+    @Override
+    public String getExample() {
+        return "- Shows the current staff online.";
+    }
+
     @Override
     public void execute(Player player, String message) {
         var lines = new ArrayList<String>();
