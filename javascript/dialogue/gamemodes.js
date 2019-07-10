@@ -120,6 +120,7 @@ instance = new DialogueScript() {
                 player.getEquipment().setItem(Equipment.Slot.SHIELD, ItemId.UNHOLY_BOOK, 1);
                 player.getEquipment().setUpdate(true);
                 player.getAppearance().setUpdate(true);
+                player.getGameEncoder().sendMessage("If you're not sure where to start, begin with the Training Day achievement diary!", Messaging.CHAT_TYPE_BROADCAST);
             }
         }
     },

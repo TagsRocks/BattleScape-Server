@@ -9,7 +9,7 @@ import com.palidino.osrs.model.map.route.Route;
 import com.palidino.osrs.model.npc.Npc;
 import com.palidino.osrs.model.player.Player;
 import com.palidino.osrs.model.player.Runecrafting;
-import com.palidino.osrs.model.player.SkillContainer;
+import com.palidino.osrs.model.player.skill.SkillContainer;
 import com.palidino.osrs.util.RequestManager;
 import com.palidino.util.Logger;
 import lombok.var;

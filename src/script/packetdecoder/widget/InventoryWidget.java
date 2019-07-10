@@ -124,7 +124,6 @@ public class InventoryWidget {
         Tile tile = null;
         int[] items = null;
         RandomItem[] randomItems = null;
-        RandomItem randomItem = null;
         Event event = null;
         Item anItem = null;
         int[] ttLoot = null;

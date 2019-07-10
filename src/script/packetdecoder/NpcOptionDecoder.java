@@ -13,7 +13,7 @@ import com.palidino.osrs.model.player.AchievementDiary;
 import com.palidino.osrs.model.player.Familiar;
 import com.palidino.osrs.model.player.Hunter;
 import com.palidino.osrs.model.player.Player;
-import com.palidino.osrs.model.player.SkillContainer;
+import com.palidino.osrs.model.player.skill.SkillContainer;
 import com.palidino.osrs.util.RequestManager;
 import com.palidino.util.Logger;
 import lombok.var;
