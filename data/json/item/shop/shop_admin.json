@@ -86,6 +86,7 @@
     { "id": "ItemId.JUSTICIAR_FACEGUARD" },
     { "id": "ItemId.JUSTICIAR_CHESTGUARD" },
     { "id": "ItemId.JUSTICIAR_LEGGUARDS" },
+    { "id": "ItemId.MITHRIL_SEEDS" },
     { "id": "ItemId.BOND_32318" }
   ]
 }
