@@ -88,7 +88,7 @@ instance = new DialogueScript() {
                     player.setGameMode(RSPlayer.GAME_MODE_GROUP_IRONMAN);
                     player.getGameEncoder().sendMessage("<col=ff0000>Choose your group through your Clan Chat settings.");
                 }
-                player.getInventory().addItem(ItemId.COINS, 100000);
+                player.getInventory().addItem(ItemId.COINS, 250000);
                 player.getInventory().addItem(ItemId.MONKFISH_NOTED, 50);
                 player.getInventory().addItem(ItemId.SUPER_ATTACK_4_NOTED, 5);
                 player.getInventory().addItem(ItemId.SUPER_STRENGTH_4_NOTED, 5);
@@ -113,6 +113,7 @@ instance = new DialogueScript() {
                 } else {
                     player.getEquipment().setItem(Equipment.Slot.CHEST, ItemId.MONKS_ROBE_TOP, 1);
                     player.getEquipment().setItem(Equipment.Slot.LEG, ItemId.MONKS_ROBE, 1);
+                    player.getEquipment().setItem(Equipment.Slot.NECK, ItemId.AMULET_OF_GLORY_4, 1);
                 }
                 player.getEquipment().setItem(Equipment.Slot.CAPE, ItemId.AVAS_ATTRACTOR, 1);
                 player.getEquipment().setItem(Equipment.Slot.HAND, ItemId.MITHRIL_GLOVES, 1);

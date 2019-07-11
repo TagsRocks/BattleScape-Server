@@ -313,33 +313,33 @@ public class InventoryWidget {
             break;
         case ItemId.STARTER_PACK_32288:
             if (!player.hasVoted()) {
-                player.getGameEncoder().sendMessage("To open this, you first need to vote on the main websites.");
+                player.getGameEncoder().sendMessage("To open this, you first need to vote.");
                 break;
             }
             player.getInventory().deleteItem(itemId, 1, slot);
             if (player.isGameModeNormal()) {
-                player.getInventory().addOrDropItem(ItemId.DRAGON_SCIMITAR, 1);
-                player.getInventory().addOrDropItem(ItemId.RUNE_FULL_HELM, 1);
-                player.getInventory().addOrDropItem(ItemId.RUNE_PLATEBODY, 1);
-                player.getInventory().addOrDropItem(ItemId.RUNE_PLATELEGS, 1);
-                player.getInventory().addOrDropItem(ItemId.RUNE_KITESHIELD, 1);
-                player.getInventory().addOrDropItem(ItemId.RUNE_BOOTS, 1);
-                player.getInventory().addOrDropItem(ItemId.RUNE_CROSSBOW, 1);
+                player.getInventory().addOrDropItem(ItemId.DRAGON_SCIMITAR);
+                player.getInventory().addOrDropItem(ItemId.RUNE_FULL_HELM);
+                player.getInventory().addOrDropItem(ItemId.RUNE_PLATEBODY);
+                player.getInventory().addOrDropItem(ItemId.RUNE_PLATELEGS);
+                player.getInventory().addOrDropItem(ItemId.RUNE_KITESHIELD);
+                player.getInventory().addOrDropItem(ItemId.RUNE_BOOTS);
+                player.getInventory().addOrDropItem(ItemId.RUNE_CROSSBOW);
                 player.getInventory().addOrDropItem(ItemId.DIAMOND_BOLTS_E, 100);
-                player.getInventory().addOrDropItem(ItemId.BLACK_DHIDE_BODY, 1);
-                player.getInventory().addOrDropItem(ItemId.BLACK_DHIDE_CHAPS, 1);
-                player.getInventory().addOrDropItem(ItemId.BLACK_DHIDE_VAMB, 1);
-                player.getInventory().addOrDropItem(ItemId.BLACK_DHIDE_SHIELD, 1);
-                player.getInventory().addOrDropItem(ItemId.MYSTIC_AIR_STAFF, 1);
+                player.getInventory().addOrDropItem(ItemId.BLACK_DHIDE_BODY);
+                player.getInventory().addOrDropItem(ItemId.BLACK_DHIDE_CHAPS);
+                player.getInventory().addOrDropItem(ItemId.BLACK_DHIDE_VAMB);
+                player.getInventory().addOrDropItem(ItemId.BLACK_DHIDE_SHIELD);
+                player.getInventory().addOrDropItem(ItemId.MYSTIC_AIR_STAFF);
                 player.getInventory().addOrDropItem(ItemId.DEATH_RUNE, 100);
                 player.getInventory().addOrDropItem(ItemId.BLOOD_RUNE, 100);
-                player.getInventory().addOrDropItem(ItemId.MYSTIC_HAT, 1);
-                player.getInventory().addOrDropItem(ItemId.MYSTIC_ROBE_TOP, 1);
-                player.getInventory().addOrDropItem(ItemId.MYSTIC_ROBE_BOTTOM, 1);
-                player.getInventory().addOrDropItem(ItemId.MYSTIC_GLOVES, 1);
-                player.getInventory().addOrDropItem(ItemId.MYSTIC_BOOTS, 1);
+                player.getInventory().addOrDropItem(ItemId.MYSTIC_HAT);
+                player.getInventory().addOrDropItem(ItemId.MYSTIC_ROBE_TOP);
+                player.getInventory().addOrDropItem(ItemId.MYSTIC_ROBE_BOTTOM);
+                player.getInventory().addOrDropItem(ItemId.MYSTIC_GLOVES);
+                player.getInventory().addOrDropItem(ItemId.MYSTIC_BOOTS);
             }
-            player.getInventory().addOrDropItem(ItemId.COINS, 400000);
+            player.getInventory().addOrDropItem(ItemId.COINS, 250000);
             player.getInventory().addOrDropItem(ItemId.MONKFISH_NOTED, 150);
             player.getInventory().addOrDropItem(ItemId.SUPER_ATTACK_4_NOTED, 15);
             player.getInventory().addOrDropItem(ItemId.SUPER_STRENGTH_4_NOTED, 15);
@@ -381,14 +381,12 @@ public class InventoryWidget {
             break;
         case ItemId.RANDOM_PVP_WEAPON_32290:
             items = new int[] {
-                ItemId.VESTAS_LONGSWORD, ItemId.STATIUSS_WARHAMMER, ItemId.VESTAS_SPEAR,
-                ItemId.MORRIGANS_JAVELIN, ItemId.MORRIGANS_THROWING_AXE,
-                ItemId.ZURIELS_STAFF
+                ItemId.VESTAS_LONGSWORD, ItemId.STATIUSS_WARHAMMER, ItemId.VESTAS_SPEAR, ItemId.MORRIGANS_JAVELIN,
+                ItemId.MORRIGANS_THROWING_AXE, ItemId.ZURIELS_STAFF
             };
             player.getInventory().deleteItem(itemId, 1, slot);
             anItem = new Item(items[Utils.randomE(items.length)], 1);
-            if (anItem.getId() == ItemId.MORRIGANS_JAVELIN
-                    || anItem.getId() == ItemId.MORRIGANS_THROWING_AXE) {
+            if (anItem.getId() == ItemId.MORRIGANS_JAVELIN || anItem.getId() == ItemId.MORRIGANS_THROWING_AXE) {
                 anItem.setAmount(50);
             }
             player.getInventory().addOrDropItem(anItem);

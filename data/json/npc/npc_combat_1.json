@@ -31579,7 +31579,6 @@
       },
       {
         "chance": 1.17,
-        "logLoot": true,
         "items": [
           [ { "id": "ItemId.DEATH_TALISMAN", "amount": 1 } ]
         ]
@@ -31594,11 +31593,16 @@
         ]
       },
       {
+        "chance": 10,
+        "items": [
+          [ { "id": "ItemId.DRAGON_ARROWTIPS", "amount": 5, "maxAmount": 25 } ],
+          [ { "id": "ItemId.DRAGON_DART_TIP", "amount": 5, "maxAmount": 25 } ],
+          [ { "id": "ItemId.DRAGON_JAVELIN_HEADS", "amount": 1, "maxAmount": 10 } ]
+        ]
+      },
+      {
         "chance": 20,
         "items": [
-          [ { "id": "ItemId.DRAGON_ARROWTIPS", "amount": 1, "maxAmount": 100 } ],
-          [ { "id": "ItemId.DRAGON_DART_TIP", "amount": 1, "maxAmount": 100 } ],
-          [ { "id": "ItemId.DRAGON_JAVELIN_HEADS", "amount": 1, "maxAmount": 25 } ],
           [ { "id": "ItemId.BLACK_AXE", "amount": 1 } ],
           [ { "id": "ItemId.RUNE_2H_SWORD", "amount": 1 } ],
           [ { "id": "ItemId.RUNE_BATTLEAXE", "amount": 1 } ],

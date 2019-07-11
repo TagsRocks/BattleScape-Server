@@ -696,7 +696,7 @@ pc = new PController() {
 
     /* @Override */
     setInstanceHook: function(instance) {
-        if (instance.getVariable("raid_instance")) {
+        if (Boolean.TRUE.equals(instance.getVariable("raid_instance"))) {
             spawnRoom = myRoom = instance.getVariable("spawn_room");
             rooms = instance.getVariable("rooms");
             sharedStorage = instance.getVariable("shared_storage");
