@@ -38,9 +38,6 @@ public class LvlCommand implements Command {
             if (userID != -1) {
                 player2 = player.getWorld().getPlayerById(userID);
             }
-            if (player2 == null) {
-                player2 = player;
-            }
         }
         if (player2 == null) {
             player.getGameEncoder().sendMessage("Unable to find user " + username);

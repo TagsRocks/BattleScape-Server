@@ -118,8 +118,8 @@ public class YoutuberCommand implements Command {
         for (var i = 0; i < Skills.SKILL_COUNT; i++) {
             player2.getSkills().setXP(i, Skills.XP_TABLE[99]);
             player2.getGameEncoder().sendSkillLevel(i);
-            player2.restore();
         }
+        player2.restore();
 
         player.getGameEncoder().sendMessage("Hooked up " + username + " with youtuber-gear..");
         player2.getGameEncoder().sendMessage("Your bank and stats have been set..");

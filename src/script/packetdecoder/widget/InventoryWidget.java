@@ -13,6 +13,9 @@ import com.palidino.osrs.model.item.ItemDef;
 import com.palidino.osrs.model.item.MysteryBox;
 import com.palidino.osrs.model.item.RandomItem;
 import com.palidino.osrs.model.map.MapItem;
+import com.palidino.osrs.model.map.MapObject;
+import com.palidino.osrs.model.map.TempMapObject;
+import com.palidino.osrs.model.map.route.Route;
 import com.palidino.osrs.model.npc.Npc;
 import com.palidino.osrs.model.player.Familiar;
 import com.palidino.osrs.model.player.Farming;
@@ -33,6 +36,7 @@ import com.palidino.setting.SqlUserRank;
 import com.palidino.util.Time;
 import com.palidino.util.Utils;
 import com.palidino.util.event.Event;
+import lombok.var;
 
 // No longer JS woohoo! Need a better solution than a 2K line file and growing.
 // One file per item id sucks, that's a hard no.
@@ -128,6 +132,21 @@ public class InventoryWidget {
         Item anItem = null;
         int[] ttLoot = null;
         switch (itemId) {
+        case ItemId.MITHRIL_SEEDS:
+            if (player.getController().hasSolidMapObject(player)) {
+                player.getGameEncoder().sendMessage("You can't do this here.");
+                break;
+            }
+            int[] flowerIds = new int[] {
+                2980, 2981, 2982, 2983, 2984, 2985, 2986, 2987, 2988
+            };
+            int flowerId = flowerIds[Utils.randomE(flowerIds.length)];
+            player.getInventory().deleteItem(itemId, 1, slot);
+            var flower = new MapObject(flowerId, player, 10, MapObject.getRandomDirection());
+            player.getWorld().addEvent(new TempMapObject(100, player.getController(), flower));
+            Route.moveOffTile(player);
+            player.setAnimation(645);
+            break;
         case ItemId.ADAMANT_ARROW_PACK:
             player.getInventory().deleteItem(itemId, 1, slot);
             player.getInventory().addItem(ItemId.ADAMANT_ARROW, 50, slot);
